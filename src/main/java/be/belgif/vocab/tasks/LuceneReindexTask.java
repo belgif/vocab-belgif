@@ -23,56 +23,29 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.helpers.RDFMediaType;
+import com.google.common.collect.ImmutableMultimap;
 
-import com.codahale.metrics.annotation.ExceptionMetered;
+import io.dropwizard.servlets.tasks.Task;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
+import java.io.PrintWriter;
 
 /**
- * Storage for controlled vocabularies
- * 
+ *
  * @author Bart.Hanssens
  */
-@Path("/{type}")
-@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-public class VocabResource extends RdfResource {
-	public final static String PREFIX = "http://vocab.belgif.be/";
-	private final static String PREF_GRAPH = "http://vocab.belgif.be/graph/";
-	
-	
-	@GET
-	@Path("/")
-	@ExceptionMetered
-	public Model getVocab(@PathParam("type") String type) {
-		return getAll(PREF_GRAPH + type);
+public class LuceneReindexTask extends Task {
+
+	@Override
+	public void execute(ImmutableMultimap<String, String> im, PrintWriter writer) throws Exception {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-	
-	@GET
-	@Path("/{id}")
-	@ExceptionMetered
-	public Model getVocabTerm(@PathParam("type") String type, @PathParam("id") String id) {
-		return getById(PREFIX, type, id);
-	}
-	
-	/*	
-	@GET
-	@Path("/_search")
-	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, PREF_GRAPH + type);
-	}
-	*/
-	public VocabResource(Repository repo) {
-		super(repo);
+
+	/**
+	 * Constructor
+	 */
+	public LuceneReindexTask() {
+		super("lucene-reindex");
 	}
 }

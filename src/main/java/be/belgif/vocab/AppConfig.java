@@ -36,7 +36,9 @@ import io.dropwizard.Configuration;
  */
 public class AppConfig extends Configuration {
 	private String dataDir;
+	private String importDir;
 	private String luceneDir;
+	
 	private String username;
 	private String password;
 	
@@ -51,6 +53,15 @@ public class AppConfig extends Configuration {
 		this.dataDir = dataDir;
 	}
 
+	@JsonProperty
+	public String getImportDir() {
+		return importDir;
+	}
+	
+	@JsonProperty
+	public void setImportDir(String importDir) {
+		this.importDir = importDir;
+	}
 	@JsonProperty
 	public String getLuceneDir() {
 		return luceneDir;

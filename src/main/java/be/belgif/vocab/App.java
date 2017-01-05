@@ -30,6 +30,7 @@ import be.belgif.vocab.helpers.RDFMessageBodyReader;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 
 import be.belgif.vocab.resources.VocabResource;
+import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
@@ -55,12 +56,13 @@ public class App extends Application<AppConfig> {
 	 * @return repository 
 	 */
 	private Repository configRepo(AppConfig config) {
+		// native disk-based store
 		File dataDir = new File(config.getDataDir());
-		
 		NativeStore store = new NativeStore(dataDir);
+		
 		// full text search
 		LuceneSail fts = new LuceneSail();
-		fts.setDataDir(dataDir);
+		fts.setParameter(LuceneSail.LUCENE_DIR_KEY, config.getLuceneDir());
 		fts.setBaseSail(store);
 		
 		return new SailRepository(fts);
@@ -74,7 +76,7 @@ public class App extends Application<AppConfig> {
 	@Override
     public void run(AppConfig config, Environment env) {
 		Repository repo = configRepo(config);
-		repo.initialize();
+		//repo.initialize();
 	
 		// Managed resource
 		env.lifecycle().manage(new ManagedRepository(repo));
@@ -84,8 +86,12 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new RDFMessageBodyReader());
 		//env.jersey().register(new HTMLMessageBodyWriter());
 		
+		// Resources
 		env.jersey().register(new VocabResource(repo));
 		
+		// Tasks
+		env.admin().addTask(new VocabImportTask(repo, config.getImportDir()));
+				
 		// Monitoring
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
 		env.healthChecks().register("triplestore", check);

@@ -39,6 +39,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
@@ -64,30 +65,12 @@ import org.eclipse.rdf4j.repository.RepositoryException;
 
 @Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 public abstract class RdfResource {
+	private final ValueFactory fac = SimpleValueFactory.getInstance();
 	private final Repository repo;
-	private final ValueFactory fac;
 	
 	private final static String Q_IRI = 
 			"CONSTRUCT { ?s ?p ?o }"
 			+ " WHERE { ?s ?p ?o }";
-	
-	private final static String Q_FTS = 
-			"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-			+ "PREFIX luc: <http://www.ontotext.com/owlim/lucene#> "
-			+ "CONSTRUCT { ?s rdfs:label ?o }  "
-			+ "WHERE { ?o luc:myIndex ?fts . "
-			+		"?s ?p ?o } "
-			+ "LIMIT 1000";
-	
-	private final static String Q_FILTER =
-			"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-			+ "CONSTRUCT { ?s rdfs:label ?o } "
-			+ "WHERE { ?s rdfs:label ?o ."
-			+		" ?s ?filter ?val }";
-	
-	private final static String INCR_INDEX = 
-			"PREFIX luc: <http://www.ontotext.com/owlim/lucene#> "
-			+ "INSERT DATA { luc:myIndex luc:updateIndex _:b1 . }";
 	
 	/**
 	 * Get string as URI
@@ -188,20 +171,20 @@ public abstract class RdfResource {
 	/**
 	 * Incremental update for Lucene FTS
 	 */
-	protected void incrementFTS() {
+/*	protected void incrementFTS() {
 		update(INCR_INDEX);
 	}
-	
+*/	
 	/**
 	 * Full text search
 	 * 
 	 * @param text text to search for
 	 * @return RDF model 
 	 */
-	protected Model getFTS(String text) {
+/*	protected Model getFTS(String text) {
 		return getFTS(text, null);
 	}
-
+*/
 	/**
 	 * Full text search
 	 * 
@@ -209,7 +192,7 @@ public abstract class RdfResource {
 	 * @param from named graph
 	 * @return RDF model 
 	 */
-	protected Model getFTS(String text, String from) {
+	/*protected Model getFTS(String text, String from) {
 		String qry = Q_FTS;
 		Map<String,Value> map = new HashMap();
 		map.put("fts", asLiteral(text + "*"));
@@ -217,40 +200,7 @@ public abstract class RdfResource {
 			qry = qry.replaceFirst("WHERE", "FROM <" + from + "> WHERE");
 		}
 		return query(qry, map);
-	}
-	
-	/**
-	 * Filter on property
-	 * 
-	 * @param prop property URI as string
-	 * @param prefix value prefix
-	 * @param id value id
-	 * @return RDF model
-	 */
-	protected Model getFiltered(String prop, String prefix, String id) {
-		return getFiltered(prop, prefix, id, null);
-	}
-	
-	/**
-	 * Filter on property
-	 * 
-	 * @param prop property URI as string
-	 * @param prefix value prefix
-	 * @param id value id
-	 * @param from named graph
-	 * @return RDF model
-	 */
-	protected Model getFiltered(String prop, String prefix, String id, String from) {
-		String qry = Q_FILTER;
-		Map<String,Value> map = new HashMap();
-		map.put("filter", asURI(prop));
-		map.put("val", asURI(prefix + id));
-		if (from != null) {
-			qry = qry.replaceFirst("WHERE", "FROM <" + from + "> WHERE");
-		}
-		return query(qry , map);
-	}
-	
+	}*/
 	
 	/**
 	 * Put statements in the store
@@ -285,7 +235,6 @@ public abstract class RdfResource {
 	 */
 	public RdfResource(Repository repo) {
 		this.repo = repo;
-		this.fac = repo.getValueFactory();
 	}
 }
 

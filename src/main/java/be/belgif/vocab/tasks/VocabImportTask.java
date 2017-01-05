@@ -25,18 +25,36 @@
  */
 package be.belgif.vocab.tasks;
 
+import com.codahale.metrics.annotation.Timed;
+import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
 
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import java.util.Optional;
+
+import javax.ws.rs.WebApplicationException;
+
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.Rio;
 
 /**
  *
  * @author Bart.Hanssens
  */
 public class VocabImportTask extends Task {
-
+	private final String dir;
+	private final Repository repo;
+	
 	/**
 	 * Execute task
 	 * 
@@ -45,11 +63,44 @@ public class VocabImportTask extends Task {
 	 * @throws Exception
 	 */
 	@Override
+	@Timed
 	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		ImmutableCollection<String> name = param.get("name");
+		if (name == null || name.isEmpty()) {
+			throw new WebApplicationException("Param name empty");
+		}
+		
+		Path infile = Paths.get(dir, name.asList().get(0));
+		if (! Files.isReadable(infile)) {
+			throw new WebApplicationException("File not readable");
+		}	
+		Optional<RDFFormat> format = Rio.getParserFormatForFileName(infile.toString());
+		if (! format.isPresent()) {
+			throw new WebApplicationException("File type not supported");
+		}
+		
+		
+		try (RepositoryConnection conn = repo.getConnection()) {
+			Resource ctx = repo.getValueFactory().createIRI("http://vocab.belgif.be/graph/", dir);
+			conn.begin();
+			conn.remove((Resource) null, null, null, ctx);
+			conn.add(infile.toFile(), null, format.get());
+			conn.commit();
+		} catch (RepositoryException rex) {
+			// will be rolled back automatically
+			throw new WebApplicationException("Error adding statements");
+		}
 	}
 	
-	public VocabImportTask() {
+	/**
+	 * Constructor
+	 * 
+	 * @param repo triple store
+	 * @param dir import dir
+	 */
+	public VocabImportTask(Repository repo, String dir) {
 		super("vocab-import");
+		this.repo = repo;
+		this.dir = dir;
 	}
 }
