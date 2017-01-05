@@ -28,15 +28,16 @@ package be.belgif.vocab;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMessageBodyReader;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
-
 import be.belgif.vocab.resources.VocabResource;
+import be.belgif.vocab.tasks.LuceneReindexTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
-import java.io.File;
-import org.eclipse.rdf4j.repository.Repository;
 
+import java.io.File;
+
+import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
@@ -91,6 +92,7 @@ public class App extends Application<AppConfig> {
 		
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir()));
+		env.admin().addTask(new LuceneReindexTask());
 				
 		// Monitoring
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
