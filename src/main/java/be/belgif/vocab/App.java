@@ -33,10 +33,13 @@ import be.belgif.vocab.resources.VocabResource;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
+import java.io.File;
 import org.eclipse.rdf4j.repository.Repository;
 
-import org.eclipse.rdf4j.repository.manager.RemoteRepositoryManager;
-import org.eclipse.rdf4j.repository.manager.RepositoryProvider;
+import org.eclipse.rdf4j.repository.sail.SailRepository;
+import org.eclipse.rdf4j.sail.lucene.LuceneSail;
+import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
+
 
 /**
  * Main Dropwizard web application
@@ -44,6 +47,25 @@ import org.eclipse.rdf4j.repository.manager.RepositoryProvider;
  * @author Bart.Hanssens
  */
 public class App extends Application<AppConfig> {
+	
+	/**
+	 * Configure a triple store repository
+	 * 
+	 * @param config configuration object
+	 * @return repository 
+	 */
+	private Repository configRepo(AppConfig config) {
+		File dataDir = new File(config.getDataDir());
+		
+		NativeStore store = new NativeStore(dataDir);
+		// full text search
+		LuceneSail fts = new LuceneSail();
+		fts.setDataDir(dataDir);
+		fts.setBaseSail(store);
+		
+		return new SailRepository(fts);
+	}
+
 	@Override
 	public String getName() {
 		return "lod-vocab";
@@ -51,25 +73,21 @@ public class App extends Application<AppConfig> {
 	
 	@Override
     public void run(AppConfig config, Environment env) {
+		Repository repo = configRepo(config);
+		repo.initialize();
+	
+		// Managed resource
+		env.lifecycle().manage(new ManagedRepository(repo));
 		
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
 		env.jersey().register(new RDFMessageBodyReader());
 		//env.jersey().register(new HTMLMessageBodyWriter());
 		
-		// Managed resource
-		String endpoint = config.getSparqlPoint();
-		RemoteRepositoryManager mgr = 
-				(RemoteRepositoryManager) RepositoryProvider.getRepositoryManager(endpoint);
-		if (config.getUsername() != null) {
-			mgr.setUsernameAndPassword(config.getUsername(), config.getPassword());
-		}
-		mgr.initialize();
-		Repository repo = mgr.getRepository("VOCAB");
 		env.jersey().register(new VocabResource(repo));
 		
 		// Monitoring
-		RdfStoreHealthCheck check = new RdfStoreHealthCheck(mgr.getSystemRepository());
+		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
 		env.healthChecks().register("triplestore", check);
 	}
 	

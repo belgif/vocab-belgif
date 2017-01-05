@@ -23,61 +23,33 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab;
+package be.belgif.vocab.tasks;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.collect.ImmutableMultimap;
 
-import io.dropwizard.Configuration;
+import io.dropwizard.servlets.tasks.Task;
 
+import java.io.PrintWriter;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class AppConfig extends Configuration {
-	private String dataDir;
-	private String luceneDir;
-	private String username;
-	private String password;
-	
+public class VocabImportTask extends Task {
 
-	@JsonProperty
-	public String getDataDir() {
-		return dataDir;
-	}
-	
-	@JsonProperty
-	public void setDataDir(String dataDir) {
-		this.dataDir = dataDir;
-	}
-
-	@JsonProperty
-	public String getLuceneDir() {
-		return luceneDir;
+	/**
+	 * Execute task
+	 * 
+	 * @param param parameters
+	 * @param w output writer
+	 * @throws Exception
+	 */
+	@Override
+	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 	
-	@JsonProperty
-	public void setLuceneDir(String luceneDir) {
-		this.luceneDir = luceneDir;
-	}	
-
-	@JsonProperty
-	public String getUsername() {
-		return username;
-	}
-	
-	@JsonProperty
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	@JsonProperty
-	public String getPassword() {
-		return password;
-	}
-
-	@JsonProperty
-	public void setPassword(String password) {
-		this.password = password;
+	public VocabImportTask() {
+		super("vocab-import");
 	}
 }

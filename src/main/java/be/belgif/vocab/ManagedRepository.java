@@ -25,59 +25,27 @@
  */
 package be.belgif.vocab;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import io.dropwizard.Configuration;
-
+import io.dropwizard.lifecycle.Managed;
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class AppConfig extends Configuration {
-	private String dataDir;
-	private String luceneDir;
-	private String username;
-	private String password;
+public class ManagedRepository implements Managed {
+	private final Repository repo;
 	
-
-	@JsonProperty
-	public String getDataDir() {
-		return dataDir;
-	}
-	
-	@JsonProperty
-	public void setDataDir(String dataDir) {
-		this.dataDir = dataDir;
+	@Override
+	public void start() throws Exception {
+		repo.initialize();
 	}
 
-	@JsonProperty
-	public String getLuceneDir() {
-		return luceneDir;
+	@Override
+	public void stop() throws Exception {
+		repo.shutDown();
 	}
 	
-	@JsonProperty
-	public void setLuceneDir(String luceneDir) {
-		this.luceneDir = luceneDir;
-	}	
-
-	@JsonProperty
-	public String getUsername() {
-		return username;
-	}
-	
-	@JsonProperty
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	@JsonProperty
-	public String getPassword() {
-		return password;
-	}
-
-	@JsonProperty
-	public void setPassword(String password) {
-		this.password = password;
+	public ManagedRepository(Repository repo) {
+		this.repo = repo;
 	}
 }
