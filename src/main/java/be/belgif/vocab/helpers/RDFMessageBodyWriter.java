@@ -61,7 +61,7 @@ public class RDFMessageBodyWriter implements MessageBodyWriter<Model> {
 
 	@Override
 	public long getSize(Model m, Class<?> type, Type generic, Annotation[] antns, MediaType mt) {
-		return 0; // ignored by Jersey 2.0 anyway
+		return -1; // ignored by Jersey 2.0 anyway
 	}
 
 	@Override

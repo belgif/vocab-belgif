@@ -29,16 +29,22 @@ import be.belgif.vocab.helpers.RDFMediaType;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 
+import org.eclipse.rdf4j.common.iteration.Iterations;
+
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
@@ -52,9 +58,11 @@ import org.eclipse.rdf4j.query.QueryEvaluationException;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.QueryResults;
 import org.eclipse.rdf4j.query.Update;
+
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
+import org.eclipse.rdf4j.repository.RepositoryResult;
 
 
 /**
@@ -94,6 +102,7 @@ public abstract class RdfResource {
 	
 	/**
 	 * Prepare and run a SPARQL update
+	 * 
 	 * @param upd update string
 	 */
 	protected void update(String upd) {
@@ -107,6 +116,7 @@ public abstract class RdfResource {
 	
 	/**
 	 * Prepare and run a SPARQL query
+	 *
 	 * @param qry query string
 	 * @param bindings bindings (if any)
 	 * @return results in triple model
@@ -140,6 +150,21 @@ public abstract class RdfResource {
 	 */
 	protected Model getById(String prefix, String type, String id) {
 		return getById(prefix + type + "/" + id + "#id");
+	}
+	
+	/**
+	 * Get all contexts a.k.a. vocabularies
+	 * 
+	 * @return list of graphs
+	 */
+	protected Model getAllVocabs() {
+		Model m = new LinkedHashModel();
+
+		try (RepositoryConnection conn = this.repo.getConnection()) {
+			RepositoryResult<Statement> vocabs = 
+					conn.getStatements(null, SKOS.CONCEPT_SCHEME, null);
+		}
+		return m;
 	}
 	
 	/**

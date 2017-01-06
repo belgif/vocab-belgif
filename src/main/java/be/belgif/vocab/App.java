@@ -49,6 +49,9 @@ import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
  * @author Bart.Hanssens
  */
 public class App extends Application<AppConfig> {
+
+	public final static String PREFIX = "http://vocab.belgif.be/";
+	public final static String PREFIX_GRAPH = "http://vocab.belgif.be/graph/";
 	
 	/**
 	 * Configure a triple store repository

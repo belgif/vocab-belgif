@@ -30,7 +30,6 @@ import java.io.OutputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.Iterator;
-import java.util.Optional;
 import java.util.Set;
 
 import javax.ws.rs.Produces;
@@ -39,17 +38,15 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
-import org.apache.commons.io.Charsets;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.apache.commons.io.Charsets;
+
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Namespace;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.RDFHandlerException;
-import org.eclipse.rdf4j.rio.Rio;
 
 /**
  * HTML Writer
@@ -66,7 +63,7 @@ public class HTMLMessageBodyWriter implements MessageBodyWriter<Model> {
 
 	@Override
 	public long getSize(Model m, Class<?> type, Type generic, Annotation[] antns, MediaType mt) {
-		return 0; // ignored by Jersey 2.0 anyway
+		return -1; // ignored by Jersey 2.0 anyway
 	}
 
 	private String shorten(Set<Namespace> ns, IRI pred) {

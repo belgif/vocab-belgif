@@ -34,7 +34,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.Model;
@@ -45,39 +44,23 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/{type}")
+@Path("/")
 @Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL, MediaType.TEXT_HTML})
-public class VocabResource extends RdfResource {
+public class OverviewResource extends RdfResource {
 
 	@GET
 	@Path("/")
 	@ExceptionMetered
-	public Model getVocab(@PathParam("type") String type) {
-		return getAll(App.PREFIX_GRAPH + type);
+	public Model getVocabList() {
+		return getAllContexts();
 	}
-	
-	@GET
-	@Path("/{id}")
-	@ExceptionMetered
-	public Model getVocabTerm(@PathParam("type") String type, @PathParam("id") String id) {
-		return getById(App.PREFIX, type, id);
-	}
-	
-	/*	
-	@GET
-	@Path("/_search")
-	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, PREF_GRAPH + type);
-	}
-	*/
-	
+		
 	/**
 	 * Constructor
 	 * 
 	 * @param repo RDF triple store
 	 */
-	public VocabResource(Repository repo) {
+	public OverviewResource(Repository repo) {
 		super(repo);
 	}
 }
