@@ -25,14 +25,13 @@
  */
 package be.belgif.vocab.resources;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VocabListView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -45,14 +44,18 @@ import org.eclipse.rdf4j.repository.Repository;
  * @author Bart.Hanssens
  */
 @Path("/")
-@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL, MediaType.TEXT_HTML})
 public class OverviewResource extends RdfResource {
-
 	@GET
-	@Path("/")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabList() {
-		return getAllContexts();
+		return getAllVocabs();
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public VocabListView getVocabListView() {
+		return new VocabListView(getAllVocabs());
 	}
 		
 	/**

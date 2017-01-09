@@ -28,12 +28,15 @@ package be.belgif.vocab;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMessageBodyReader;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
+import be.belgif.vocab.resources.OverviewResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
+import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import io.dropwizard.views.ViewBundle;
 
 import java.io.File;
 
@@ -78,6 +81,11 @@ public class App extends Application<AppConfig> {
 	}
 	
 	@Override
+	public void initialize(Bootstrap<AppConfig> config) {
+		config.addBundle(new ViewBundle<>());
+	}
+	
+	@Override
     public void run(AppConfig config, Environment env) {
 		Repository repo = configRepo(config);
 		//repo.initialize();
@@ -88,9 +96,11 @@ public class App extends Application<AppConfig> {
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
 		env.jersey().register(new RDFMessageBodyReader());
+
 		//env.jersey().register(new HTMLMessageBodyWriter());
 		
-		// Resources
+		// Resources / "web pages"
+		env.jersey().register(new OverviewResource(repo));
 		env.jersey().register(new VocabResource(repo));
 		
 		// Tasks

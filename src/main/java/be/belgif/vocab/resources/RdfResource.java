@@ -162,7 +162,12 @@ public abstract class RdfResource {
 
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			RepositoryResult<Statement> vocabs = 
-					conn.getStatements(null, SKOS.CONCEPT_SCHEME, null);
+					conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME);
+			while(vocabs.hasNext()) {
+				Resource iri = vocabs.next().getSubject();
+				m.add(iri, DCTERMS.TITLE, null);
+				m.add(iri, DCTERMS.DESCRIPTION, null);
+			}
 		}
 		return m;
 	}
