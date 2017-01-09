@@ -44,15 +44,14 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/{type}/")
+@Path("/{type}")
 @Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL, MediaType.TEXT_HTML})
 public class VocabResource extends RdfResource {
 
 	@GET
-	@Path("/")
 	@ExceptionMetered
 	public Model getVocab(@PathParam("type") String type) {
-		return getAll(App.PREFIX_GRAPH + type);
+		return getAll(type);
 	}
 	
 	@GET

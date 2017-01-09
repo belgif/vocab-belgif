@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
 
 import java.util.Collections;
@@ -57,7 +58,6 @@ import org.eclipse.rdf4j.query.MalformedQueryException;
 import org.eclipse.rdf4j.query.QueryEvaluationException;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.QueryResults;
-import org.eclipse.rdf4j.query.Update;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
@@ -105,14 +105,14 @@ public abstract class RdfResource {
 	 * 
 	 * @param upd update string
 	 */
-	protected void update(String upd) {
+	/*protected void update(String upd) {
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			Update uq = conn.prepareUpdate(QueryLanguage.SPARQL, upd);
 			uq.execute();
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);
 		}
-	}
+	}*/
 	
 	/**
 	 * Prepare and run a SPARQL query
@@ -159,15 +159,17 @@ public abstract class RdfResource {
 	 */
 	protected Model getAllVocabs() {
 		Model m = new LinkedHashModel();
-
+		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			RepositoryResult<Statement> vocabs = 
 					conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME);
 			while(vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
-				m.add(iri, DCTERMS.TITLE, null);
-				m.add(iri, DCTERMS.DESCRIPTION, null);
+				Iterations.addAll(conn.getStatements(iri, DCTERMS.TITLE, null), m);
+				Iterations.addAll(conn.getStatements(iri, DCTERMS.DESCRIPTION, null), m);
 			}
+		} catch (RepositoryException e) {
+			throw new WebApplicationException(e);
 		}
 		return m;
 	}
@@ -179,11 +181,17 @@ public abstract class RdfResource {
 	 * @return all triples in a graph
 	 */
 	protected Model getAll(String from) {
-		String qry = Q_IRI;
-		if (from != null) {
-			qry = qry.replaceFirst("WHERE", "FROM <" + from + "> WHERE");
+		Model m = new LinkedHashModel();
+		
+		IRI vocab = fac.createIRI(App.PREFIX + from + "#id");
+		IRI ctx = fac.createIRI(App.PREFIX_GRAPH + from);
+		
+		try (RepositoryConnection conn = this.repo.getConnection()) {
+			Iterations.addAll(conn.getStatements(vocab, null, null, ctx), m);
+		} catch (RepositoryException e) {
+			throw new WebApplicationException(e);
 		}
-		return query(qry, Collections.EMPTY_MAP);
+		return m;
 	}
 	
 	/**

@@ -26,7 +26,6 @@
 package be.belgif.vocab;
 
 import be.belgif.vocab.health.RdfStoreHealthCheck;
-import be.belgif.vocab.helpers.RDFMessageBodyReader;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 import be.belgif.vocab.resources.OverviewResource;
 import be.belgif.vocab.resources.VocabResource;
@@ -95,9 +94,6 @@ public class App extends Application<AppConfig> {
 		
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
-		env.jersey().register(new RDFMessageBodyReader());
-
-		//env.jersey().register(new HTMLMessageBodyWriter());
 		
 		// Resources / "web pages"
 		env.jersey().register(new OverviewResource(repo));

@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.tasks;
 
+import be.belgif.vocab.App;
 import com.codahale.metrics.annotation.Timed;
 import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
@@ -46,6 +47,8 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
@@ -54,6 +57,8 @@ import org.eclipse.rdf4j.rio.Rio;
 public class VocabImportTask extends Task {
 	private final String dir;
 	private final Repository repo;
+	
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
 	/**
 	 * Execute task
@@ -65,12 +70,16 @@ public class VocabImportTask extends Task {
 	@Override
 	@Timed
 	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		ImmutableCollection<String> name = param.get("name");
-		if (name == null || name.isEmpty()) {
+		ImmutableCollection<String> names = param.get("name");
+		if (names == null || names.isEmpty()) {
 			throw new WebApplicationException("Param name empty");
 		}
 		
-		Path infile = Paths.get(dir, name.asList().get(0));
+		String name = names.asList().get(0);
+		Path infile = Paths.get(dir, name);
+		
+		LOG.info("Trying to parse {}", infile);
+		
 		if (! Files.isReadable(infile)) {
 			throw new WebApplicationException("File not readable");
 		}	
@@ -79,9 +88,9 @@ public class VocabImportTask extends Task {
 			throw new WebApplicationException("File type not supported");
 		}
 		
-		
 		try (RepositoryConnection conn = repo.getConnection()) {
-			Resource ctx = repo.getValueFactory().createIRI("http://vocab.belgif.be/graph/", dir);
+			String vocab = name.split("\\.")[0];
+			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
 			conn.begin();
 			conn.remove((Resource) null, null, null, ctx);
 			conn.add(infile.toFile(), null, format.get());
