@@ -51,7 +51,7 @@ public class VocabResource extends RdfResource {
 	@GET
 	@ExceptionMetered
 	public Model getVocab(@PathParam("type") String type) {
-		return getAll(type);
+		return getById(App.PREFIX, type, "");
 	}
 	
 	@GET

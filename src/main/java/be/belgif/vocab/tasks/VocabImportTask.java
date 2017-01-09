@@ -26,6 +26,7 @@
 package be.belgif.vocab.tasks;
 
 import be.belgif.vocab.App;
+
 import com.codahale.metrics.annotation.Timed;
 import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
@@ -47,15 +48,18 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * Import a SKOS file and create full (static) download files in various
+ * 
  * @author Bart.Hanssens
  */
 public class VocabImportTask extends Task {
-	private final String dir;
+	private final String importDir;
+	private final String downloadDir;
 	private final Repository repo;
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
@@ -76,7 +80,7 @@ public class VocabImportTask extends Task {
 		}
 		
 		String name = names.asList().get(0);
-		Path infile = Paths.get(dir, name);
+		Path infile = Paths.get(importDir, name);
 		
 		LOG.info("Trying to parse {}", infile);
 		
@@ -99,17 +103,22 @@ public class VocabImportTask extends Task {
 			// will be rolled back automatically
 			throw new WebApplicationException("Error adding statements");
 		}
+		
+		LOG.info("Deleting import file {}", infile);
+		Files.deleteIfExists(infile);
 	}
 	
 	/**
 	 * Constructor
 	 * 
 	 * @param repo triple store
-	 * @param dir import dir
+	 * @param inDir import directory
+	 * @param outDir download directory
 	 */
-	public VocabImportTask(Repository repo, String dir) {
+	public VocabImportTask(Repository repo, String inDir, String outDir) {
 		super("vocab-import");
 		this.repo = repo;
-		this.dir = dir;
+		this.importDir = inDir;
+		this.downloadDir = outDir;
 	}
 }

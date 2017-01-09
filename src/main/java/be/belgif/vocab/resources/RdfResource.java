@@ -149,7 +149,9 @@ public abstract class RdfResource {
 	 * @return RDF model 
 	 */
 	protected Model getById(String prefix, String type, String id) {
-		return getById(prefix + type + "/" + id + "#id");
+		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
+									: prefix + type + "#id";
+		return getById(url);
 	}
 	
 	/**
