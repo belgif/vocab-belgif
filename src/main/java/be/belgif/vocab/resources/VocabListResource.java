@@ -25,57 +25,47 @@
  */
 package be.belgif.vocab.resources;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VocabListView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
+import java.util.Optional;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Vocabulary term of a SKOS thesaurus.
+ * List available SKOS thesauri
  * 
  * @author Bart.Hanssens
  */
-@Path("/{type}")
-@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL, MediaType.TEXT_HTML})
-public class VocabResource extends RdfResource {
-
+@Path("/")
+public class VocabListResource extends RdfResource {
 	@GET
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVocab(@PathParam("type") String type) {
-		return getById(App.PREFIX, type, "");
+	public Model getVocabList() {
+		return getAllVocabs();
 	}
 	
 	@GET
-	@Path("/{id}")
-	@ExceptionMetered
-	public Model getVocabTerm(@PathParam("type") String type, @PathParam("id") String id) {
-		return getById(App.PREFIX, type, id);
+	@Produces(MediaType.TEXT_HTML)
+	public VocabListView getVocabListView(@QueryParam("lang") Optional<String> lang) {
+		return new VocabListView(getAllVocabs(), lang.orElse("en"));
 	}
-	
-	/*	
-	@GET
-	@Path("/_search")
-	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, PREF_GRAPH + type);
-	}
-	*/
-	
+		
 	/**
 	 * Constructor
 	 * 
 	 * @param repo RDF triple store
 	 */
-	public VocabResource(Repository repo) {
+	public VocabListResource(Repository repo) {
 		super(repo);
 	}
 }

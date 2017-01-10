@@ -25,34 +25,16 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.helpers.*;
 import io.dropwizard.views.View;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Type;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
-import javax.ws.rs.Produces;
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
-import org.apache.commons.io.Charsets;
-
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Namespace;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.Statement;
-import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 
 /**
@@ -101,9 +83,10 @@ public class VocabListView extends View {
 	/** 
 	 * Constructor
 	 * 
-	 * @param m
+	 * @param m triples
+	 * @param lang language
 	 */
-	public VocabListView(Model m) {
+	public VocabListView(Model m, String lang) {
 		super("vocablist.ftl");
 		
 		m.subjects().forEach(s -> {

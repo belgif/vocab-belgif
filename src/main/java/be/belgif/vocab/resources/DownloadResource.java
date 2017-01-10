@@ -26,44 +26,26 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.VocabListView;
-
-import com.codahale.metrics.annotation.ExceptionMetered;
-
-import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
-import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Storage for controlled vocabularies
+ * Download complete thesaurus
  * 
  * @author Bart.Hanssens
  */
-@Path("/")
-public class OverviewResource extends RdfResource {
-	@GET
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVocabList() {
-		return getAllVocabs();
-	}
+@Path("/{type}")
+@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+public class DownloadResource extends RdfResource {
 	
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public VocabListView getVocabListView() {
-		return new VocabListView(getAllVocabs());
-	}
-		
 	/**
 	 * Constructor
 	 * 
 	 * @param repo RDF triple store
 	 */
-	public OverviewResource(Repository repo) {
+	public DownloadResource(Repository repo) {
 		super(repo);
 	}
 }

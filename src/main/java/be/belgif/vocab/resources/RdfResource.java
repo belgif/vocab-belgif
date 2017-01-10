@@ -28,9 +28,7 @@ package be.belgif.vocab.resources;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
 
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.ws.rs.Produces;
@@ -205,7 +203,7 @@ public abstract class RdfResource {
 	protected Model getById(String url) {
 		Map<String,Value> map = new HashMap();
 		map.put("s", asURI(url));
-		return query(Q_IRI, map);		
+		return query(Q_IRI, map);
 	}
 	
 	/**
