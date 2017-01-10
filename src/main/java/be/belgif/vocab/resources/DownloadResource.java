@@ -26,9 +26,11 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.RDFMediaType;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
@@ -36,10 +38,17 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/{type}")
+@Path("/download")
 @Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 public class DownloadResource extends RdfResource {
 	
+	@GET
+	@Path("/graph")
+	public Model getGraphs() {
+		return getAllGraphs();
+	}
+			
+			
 	/**
 	 * Constructor
 	 * 

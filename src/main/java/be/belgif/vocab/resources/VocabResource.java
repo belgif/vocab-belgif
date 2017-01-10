@@ -34,6 +34,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.Model;
@@ -61,14 +62,14 @@ public class VocabResource extends RdfResource {
 		return getById(App.PREFIX, type, id);
 	}
 	
-	/*	
+		
 	@GET
 	@Path("/_search")
 	@ExceptionMetered
 	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, PREF_GRAPH + type);
+		return getFTS(text, type);
 	}
-	*/
+	
 	
 	/**
 	 * Constructor

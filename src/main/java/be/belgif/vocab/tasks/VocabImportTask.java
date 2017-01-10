@@ -97,7 +97,7 @@ public class VocabImportTask extends Task {
 			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
 			conn.begin();
 			conn.remove((Resource) null, null, null, ctx);
-			conn.add(infile.toFile(), null, format.get());
+			conn.add(infile.toFile(), null, format.get(), ctx);
 			conn.commit();
 		} catch (RepositoryException rex) {
 			// will be rolled back automatically

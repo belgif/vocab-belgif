@@ -62,6 +62,9 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.RepositoryResult;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * Abstract resource querying the RDF triple store.
@@ -71,13 +74,25 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
 
 @Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 public abstract class RdfResource {
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfResource.class);
+	
 	private final ValueFactory fac = SimpleValueFactory.getInstance();
 	private final Repository repo;
 	
 	private final static String Q_IRI = 
-			"CONSTRUCT { ?s ?p ?o }"
-			+ " WHERE { ?s ?p ?o }";
+			"CONSTRUCT { ?s ?p ?o }" +
+			" WHERE { ?s ?p ?o }";
 	
+	private final static String Q_FTS = 
+			"PREFIX search: <http://www.openrdf.org/contrib/lucenesail#> " + "\n" +
+			"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n" +
+			"CONSTRUCT { ?s skos:prefLabel ?o }" +
+			" WHERE { " +
+				" GRAPH ?graph { " +
+					" ?s search:matches [ search:query ?query ] ." +
+					" ?s skos:prefLabel ?o } . " +
+				"}";
+
 	/**
 	 * Get string as URI
 	 * 
@@ -86,6 +101,16 @@ public abstract class RdfResource {
 	 */
 	protected IRI asURI(String uri) {
 		return fac.createIRI(uri);
+	}
+	
+	/**
+	 * Get name graph + context id from name
+	 * 
+	 * @param name
+	 * @return context URI 
+	 */
+	protected IRI asGraph(String name) {
+		return fac.createIRI(App.PREFIX_GRAPH + name);
 	}
 	
 	/**
@@ -174,6 +199,18 @@ public abstract class RdfResource {
 		return m;
 	}
 	
+	protected Model getAllGraphs() {
+		Model m = new LinkedHashModel();
+		
+		try (RepositoryConnection conn = this.repo.getConnection()) {
+			RepositoryResult<Resource> ctxs = conn.getContextIDs();
+			while (ctxs.hasNext()) {
+				m.add(ctxs.next(), DCTERMS.TITLE, fac.createLiteral("Context", ""));
+			}
+		}
+		return m;
+	}
+	
 	/**
 	 * Get all triples
 	 * 
@@ -184,7 +221,7 @@ public abstract class RdfResource {
 		Model m = new LinkedHashModel();
 		
 		IRI vocab = fac.createIRI(App.PREFIX + from + "#id");
-		IRI ctx = fac.createIRI(App.PREFIX_GRAPH + from);
+		IRI ctx = asGraph(from);
 		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			Iterations.addAll(conn.getStatements(vocab, null, null, ctx), m);
@@ -230,15 +267,17 @@ public abstract class RdfResource {
 	 * @param from named graph
 	 * @return RDF model 
 	 */
-	/*protected Model getFTS(String text, String from) {
+	protected Model getFTS(String text, String from) {
 		String qry = Q_FTS;
 		Map<String,Value> map = new HashMap();
-		map.put("fts", asLiteral(text + "*"));
+		map.put("query", asLiteral(text + "*"));
+		map.put("graph", asGraph(from));
+		/*
 		if (from != null) {
-			qry = qry.replaceFirst("WHERE", "FROM <" + from + "> WHERE");
-		}
+			qry = qry.replaceFirst("WHERE", "FROM <" + asGraph(from).toString() + "> WHERE");
+		}*/
 		return query(qry, map);
-	}*/
+	}
 	
 	/**
 	 * Put statements in the store
