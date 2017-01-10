@@ -220,11 +220,8 @@ public abstract class RdfResource {
 	protected Model getAll(String from) {
 		Model m = new LinkedHashModel();
 		
-		IRI vocab = fac.createIRI(App.PREFIX + from + "#id");
-		IRI ctx = asGraph(from);
-		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
-			Iterations.addAll(conn.getStatements(vocab, null, null, ctx), m);
+			Iterations.addAll(conn.getStatements(null, null, null, asGraph(from)), m);
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}

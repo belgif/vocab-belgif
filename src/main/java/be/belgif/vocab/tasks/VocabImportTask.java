@@ -101,11 +101,9 @@ public class VocabImportTask extends Task {
 			conn.commit();
 		} catch (RepositoryException rex) {
 			// will be rolled back automatically
-			throw new WebApplicationException("Error adding statements");
+			throw new WebApplicationException("Error adding statements", rex);
 		}
-		
-		LOG.info("Deleting import file {}", infile);
-		Files.deleteIfExists(infile);
+
 	}
 	
 	/**
