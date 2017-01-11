@@ -33,9 +33,12 @@
     <div id="container">
     <section class="panel">
 	<table>
-	<tr><th>Name</th><th>Description</th><th>Download (TTL)</th><th>Download (JSON)</th></tr>
+	<tr><th>Name</th>
+	    <th>Description</th><th>Download (TTL)</th>
+	    <th>Download (JSON)</th></tr>
 	<#list vocabs as v>
-	<tr><td><a href="${v.name}">${v.title}</a></td><td>${v.desc}</td><td></td></tr>
+	<tr><td><a href="${v.id}">${v.literal("dcterms","title", "nl")}</a></td>
+	    <td>${v.literal("dcterms","description", "nl")}</td><td></td></tr>
 	</#list>
 	</table>
     </section>

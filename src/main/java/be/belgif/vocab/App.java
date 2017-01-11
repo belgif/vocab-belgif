@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab;
 
+import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 import be.belgif.vocab.resources.VocabListResource;

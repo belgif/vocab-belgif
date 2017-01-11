@@ -25,47 +25,52 @@
  */
 package be.belgif.vocab.views;
 
-import io.dropwizard.views.View;
+import java.util.Collections;
+import java.util.Optional;
+import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
-
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.Namespace;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 
 /**
- * HTML Writer
- * 
+ *
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabListView extends View {
-	private final ArrayList<DAO> vocabs = new ArrayList();
+public class DAO {
+	private final ValueFactory f = SimpleValueFactory.getInstance();
+	private final Model m;
+	private final IRI id;
 	
-	/**
-	 * Get the list  of vocabularies
-	 * 
-	 * @return 
-	 */
-	public List<DAO> getVocabs() {
-		return this.vocabs;
+	public Set objs(String prefix, String term) {
+		Optional<Namespace> ns = m.getNamespace(prefix);
+		if (! ns.isPresent()) {
+			return Collections.EMPTY_SET;
+		}
+		return m.filter(id, f.createIRI(ns.get().getName(), term), null).objects();
 	}
 	
-	/** 
-	 * Constructor
-	 * 
-	 * @param m triples
-	 * @param lang language
-	 */
-	public VocabListView(Model m, String lang) {
-		super("vocablist.ftl");
-		
-		m.subjects().forEach(s -> vocabs.add(new DAO(m, (IRI) s)));
+	public Value literal(String prefix, String term, String lang) {
+		Set<Value> vals = literals(prefix, term, lang);
+		return vals.iterator().next();
+	}
+	
+	public Set literals(String prefix, String term, String lang) {
+		Set<Value> vals = objs(prefix, term);
+		vals.removeIf(v -> !((Literal) v).getLanguage().orElse("").equals(lang));
+		return vals;
+	}
+	
+	public IRI getId() {
+		return id;
+	}
+	public DAO(Model m, IRI id) {
+		this.id = id;
+		this.m = m;
 	}
 }
-

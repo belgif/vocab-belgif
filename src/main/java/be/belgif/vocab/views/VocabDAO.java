@@ -25,47 +25,56 @@
  */
 package be.belgif.vocab.views;
 
-import io.dropwizard.views.View;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-
-import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
-
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.Resource;
 
 /**
- * HTML Writer
- * 
+ *
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabListView extends View {
-	private final ArrayList<DAO> vocabs = new ArrayList();
-	
-	/**
-	 * Get the list  of vocabularies
-	 * 
-	 * @return 
-	 */
-	public List<DAO> getVocabs() {
-		return this.vocabs;
-	}
-	
-	/** 
-	 * Constructor
-	 * 
-	 * @param m triples
-	 * @param lang language
-	 */
-	public VocabListView(Model m, String lang) {
-		super("vocablist.ftl");
-		
-		m.subjects().forEach(s -> vocabs.add(new DAO(m, (IRI) s)));
-	}
-}
+public class VocabDAO extends DAO {
 
+	//private final String name; 
+	private final HashMap<String,String> title = new HashMap();
+	private final HashMap<String,String> desc = new HashMap(); 
+
+	public VocabDAO(Model m, IRI id) {
+		super(m, id);
+	}
+
+	
+//	public String getName() {
+//		return name;
+//	}
+
+	public String getTitle(String lang) {
+		return title.getOrDefault(lang, "");
+	}
+
+	public void addTitle(String title, String lang) {
+		this.title.put(lang, title);
+	}
+
+	public String getDesc(String lang) {
+		return desc.getOrDefault(lang, "");
+	}
+
+	public void addDesc(String desc, String lang) {
+		this.desc.put(lang, desc);
+	}
+/*
+	public VocabDAO(Model m, IRI ) {
+		this.name = name;
+*/	/*	
+		m.filter(s, DCTERMS.TITLE, null).forEach(t -> {
+				Literal l = (Literal) t.getObject();
+				v.addTitle(l.getLabel(), l.getLanguage().orElse(""));
+			});
+			m.filter(s, DCTERMS.DESCRIPTION, null).forEach(d -> {
+				Literal l = (Literal) d.getObject();
+				v.addDesc(l.getLabel(), l.getLanguage().orElse(""));
+			});
+	}*/
+}

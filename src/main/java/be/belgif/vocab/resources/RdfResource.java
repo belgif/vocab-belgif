@@ -137,6 +137,17 @@ public abstract class RdfResource {
 		}
 	}*/
 	
+	protected Model setNamespaces(Model m) {
+		if (! m.isEmpty()) {
+			m.setNamespace(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
+			m.setNamespace(FOAF.PREFIX, FOAF.NAMESPACE);
+			m.setNamespace(OWL.PREFIX, OWL.NAMESPACE);
+			m.setNamespace(RDF.PREFIX, RDF.NAMESPACE);
+			m.setNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
+		}
+		return m;
+	}
+			
 	/**
 	 * Prepare and run a SPARQL query
 	 *
@@ -149,15 +160,7 @@ public abstract class RdfResource {
 			GraphQuery gq = conn.prepareGraphQuery(QueryLanguage.SPARQL, qry);
 			bindings.forEach((k,v) -> gq.setBinding(k, v));
 			
-			Model m = QueryResults.asModel(gq.evaluate());
-			if (! m.isEmpty()) {
-				m.setNamespace(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
-				m.setNamespace(FOAF.PREFIX, FOAF.NAMESPACE);
-				m.setNamespace(OWL.PREFIX, OWL.NAMESPACE);
-				m.setNamespace(RDF.PREFIX, RDF.NAMESPACE);
-				m.setNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
-			}
-			return m;
+			return setNamespaces(QueryResults.asModel(gq.evaluate()));
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);
 		}
@@ -196,7 +199,7 @@ public abstract class RdfResource {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
-		return m;
+		return setNamespaces(m);
 	}
 	
 	/**
@@ -213,7 +216,7 @@ public abstract class RdfResource {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
-		return m;
+		return setNamespaces(m);
 	}
 	
 	/**
