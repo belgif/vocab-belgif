@@ -38,10 +38,6 @@ public class AppConfig extends Configuration {
 	private String dataDir;
 	private String importDir;
 	private String luceneDir;
-	
-	private String username;
-	private String password;
-	
 
 	@JsonProperty
 	public String getDataDir() {
@@ -70,25 +66,5 @@ public class AppConfig extends Configuration {
 	@JsonProperty
 	public void setLuceneDir(String luceneDir) {
 		this.luceneDir = luceneDir;
-	}	
-
-	@JsonProperty
-	public String getUsername() {
-		return username;
-	}
-	
-	@JsonProperty
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	@JsonProperty
-	public String getPassword() {
-		return password;
-	}
-
-	@JsonProperty
-	public void setPassword(String password) {
-		this.password = password;
 	}
 }

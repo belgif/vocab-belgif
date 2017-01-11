@@ -180,9 +180,9 @@ public abstract class RdfResource {
 	/**
 	 * Get all contexts a.k.a. vocabularies
 	 * 
-	 * @return list of graphs
+	 * @return list of vocabularies
 	 */
-	protected Model getAllVocabs() {
+	protected Model getVocabList() {
 		Model m = new LinkedHashModel();
 		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
@@ -195,18 +195,6 @@ public abstract class RdfResource {
 			}
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
-		}
-		return m;
-	}
-	
-	protected Model getAllGraphs() {
-		Model m = new LinkedHashModel();
-		
-		try (RepositoryConnection conn = this.repo.getConnection()) {
-			RepositoryResult<Resource> ctxs = conn.getContextIDs();
-			while (ctxs.hasNext()) {
-				m.add(ctxs.next(), DCTERMS.TITLE, fac.createLiteral("Context", ""));
-			}
 		}
 		return m;
 	}
@@ -269,10 +257,6 @@ public abstract class RdfResource {
 		Map<String,Value> map = new HashMap();
 		map.put("query", asLiteral(text + "*"));
 		map.put("graph", asGraph(from));
-		/*
-		if (from != null) {
-			qry = qry.replaceFirst("WHERE", "FROM <" + asGraph(from).toString() + "> WHERE");
-		}*/
 		return query(qry, map);
 	}
 	

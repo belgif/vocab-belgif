@@ -104,5 +104,10 @@
             <artifactId>dropwizard-views-freemarker</artifactId>
             <version>1.0.5</version>
         </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-assets</artifactId>
+            <version>1.0.5</version>
+        </dependency>
     </dependencies>
 </project>

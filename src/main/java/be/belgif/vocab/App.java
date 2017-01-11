@@ -27,18 +27,19 @@ package be.belgif.vocab;
 
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
-import be.belgif.vocab.resources.DownloadResource;
 import be.belgif.vocab.resources.VocabListResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 
 import java.io.File;
+import java.util.Map;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
@@ -82,6 +83,7 @@ public class App extends Application<AppConfig> {
 	
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
+		config.addBundle(new AssetsBundle("/assets", "/static"));
 		config.addBundle(new ViewBundle<>());
 	}
 	
@@ -99,8 +101,7 @@ public class App extends Application<AppConfig> {
 		// Resources / "web pages"
 		env.jersey().register(new VocabListResource(repo));
 		env.jersey().register(new VocabResource(repo));
-		env.jersey().register(new DownloadResource(repo));
-		
+
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getImportDir()));
 		env.admin().addTask(new LuceneReindexTask());

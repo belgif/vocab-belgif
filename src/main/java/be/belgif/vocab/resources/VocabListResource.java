@@ -50,16 +50,16 @@ public class VocabListResource extends RdfResource {
 	@GET
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVocabList() {
-		return getAllVocabs();
+	public Model getVocabListRDF() {
+		return getVocabList();
 	}
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
-	public VocabListView getVocabListView(@QueryParam("lang") Optional<String> lang) {
-		return new VocabListView(getAllVocabs(), lang.orElse("en"));
+	public VocabListView getVocabListHTML(@QueryParam("lang") Optional<String> lang) {
+		return new VocabListView(super.getVocabList(), lang.orElse("en"));
 	}
-		
+
 	/**
 	 * Constructor
 	 * 

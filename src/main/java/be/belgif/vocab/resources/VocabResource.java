@@ -70,6 +70,13 @@ public class VocabResource extends RdfResource {
 		return getFTS(text, type);
 	}
 	
+	@GET
+	@Path("/_download")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
+	@ExceptionMetered
+	public Model getGraphs(@PathParam("type") String type) {
+		return getAll(type);
+	}
 	
 	/**
 	 * Constructor
