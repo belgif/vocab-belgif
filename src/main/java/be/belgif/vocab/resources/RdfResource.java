@@ -50,6 +50,7 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.MalformedQueryException;
@@ -78,11 +79,11 @@ public abstract class RdfResource {
 	
 	private final ValueFactory fac = SimpleValueFactory.getInstance();
 	private final Repository repo;
-	
+	/*
 	private final static String Q_IRI = 
 			"CONSTRUCT { ?s ?p ?o }" +
 			" WHERE { ?s ?p ?o }";
-	
+	*/
 	private final static String Q_FTS = 
 			"PREFIX search: <http://www.openrdf.org/contrib/lucenesail#> " + "\n" +
 			"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n" +
@@ -123,26 +124,20 @@ public abstract class RdfResource {
 		return fac.createLiteral(lit);
 	}
 	
-	/**
-	 * Prepare and run a SPARQL update
-	 * 
-	 * @param upd update string
-	 */
-	/*protected void update(String upd) {
-		try (RepositoryConnection conn = this.repo.getConnection()) {
-			Update uq = conn.prepareUpdate(QueryLanguage.SPARQL, upd);
-			uq.execute();
-		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
-			throw new WebApplicationException(e);
-		}
-	}*/
 	
+	/**
+	 * Add namespaces to triple model
+	 * 
+	 * @param m model
+	 * @return model with namespaces
+	 */
 	protected Model setNamespaces(Model m) {
 		if (! m.isEmpty()) {
 			m.setNamespace(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
 			m.setNamespace(FOAF.PREFIX, FOAF.NAMESPACE);
 			m.setNamespace(OWL.PREFIX, OWL.NAMESPACE);
 			m.setNamespace(RDF.PREFIX, RDF.NAMESPACE);
+			m.setNamespace(RDFS.PREFIX, RDFS.NAMESPACE);
 			m.setNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
 		}
 		return m;
@@ -159,7 +154,7 @@ public abstract class RdfResource {
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			GraphQuery gq = conn.prepareGraphQuery(QueryLanguage.SPARQL, qry);
 			bindings.forEach((k,v) -> gq.setBinding(k, v));
-			
+
 			return setNamespaces(QueryResults.asModel(gq.evaluate()));
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);
@@ -177,7 +172,7 @@ public abstract class RdfResource {
 	protected Model getById(String prefix, String type, String id) {
 		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
 									: prefix + type + "#id";
-		return getById(url);
+		return get(asURI(url), type);
 	}
 	
 	/**
@@ -205,14 +200,15 @@ public abstract class RdfResource {
 	/**
 	 * Get all triples
 	 * 
+	 * @param subj subject IRI or null
 	 * @param from named graph
 	 * @return all triples in a graph
 	 */
-	protected Model getAll(String from) {
+	protected Model get(IRI subj, String from) {
 		Model m = new LinkedHashModel();
 		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
-			Iterations.addAll(conn.getStatements(null, null, null, asGraph(from)), m);
+			Iterations.addAll(conn.getStatements(subj, null, null, asGraph(from)), m);
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
@@ -225,12 +221,12 @@ public abstract class RdfResource {
 	 * @param url
 	 * @return RDF model 
 	 */
-	protected Model getById(String url) {
+	/*protected Model getById(String url) {
 		Map<String,Value> map = new HashMap();
 		map.put("s", asURI(url));
 		return query(Q_IRI, map);
 	}
-	
+	*/
 	/**
 	 * Incremental update for Lucene FTS
 	 */

@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.views;
 
+import be.belgif.vocab.resources.RdfResource;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
@@ -33,20 +34,30 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Namespace;
-import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author Bart.Hanssens
  */
 public class DAO {
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfResource.class);
+	
 	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final Model m;
 	private final IRI id;
 	
+	/**
+	 * Get set of triple objects
+	 * 
+	 * @param prefix property namespace prefix
+	 * @param term property term
+	 * @return set of objects (IRI or literal)
+	 */
 	public Set objs(String prefix, String term) {
 		Optional<Namespace> ns = m.getNamespace(prefix);
 		if (! ns.isPresent()) {
@@ -55,20 +66,48 @@ public class DAO {
 		return m.filter(id, f.createIRI(ns.get().getName(), term), null).objects();
 	}
 	
+	/**
+	 * Get one literal
+	 * 
+	 * @param prefix property namespace prefi
+	 * @param term property term
+	 * @param lang language code
+	 * @return literals (IRI or literal)
+	 */
 	public Value literal(String prefix, String term, String lang) {
 		Set<Value> vals = literals(prefix, term, lang);
 		return vals.iterator().next();
 	}
 	
+	/**
+	 * Get a set of literals
+	 * 
+	 * @param prefix property namespace prefi
+	 * @param term property term
+	 * @param lang language code
+	 * @return literals (IRI or literal)
+	 */
 	public Set literals(String prefix, String term, String lang) {
 		Set<Value> vals = objs(prefix, term);
 		vals.removeIf(v -> !((Literal) v).getLanguage().orElse("").equals(lang));
 		return vals;
 	}
 	
+	/**
+	 * Get the triple subject ID
+	 * 
+	 * @return subject IRI 
+	 */
 	public IRI getId() {
 		return id;
 	}
+	
+	/**
+	 * Constructor
+	 * 
+	 * @param m triple model
+	 * @param id  subject IRI
+	 */
 	public DAO(Model m, IRI id) {
 		this.id = id;
 		this.m = m;

@@ -75,7 +75,7 @@ public class VocabResource extends RdfResource {
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
 	@ExceptionMetered
 	public Model getGraphs(@PathParam("type") String type) {
-		return getAll(type);
+		return get(null, type);
 	}
 	
 	/**
