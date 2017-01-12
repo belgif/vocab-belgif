@@ -27,8 +27,10 @@ package be.belgif.vocab.resources;
 
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VocabTermView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
+import java.util.Optional;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -46,25 +48,46 @@ import org.eclipse.rdf4j.repository.Repository;
  * @author Bart.Hanssens
  */
 @Path("/{type}")
-@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL, MediaType.TEXT_HTML})
 public class VocabResource extends RdfResource {
 
 	@GET
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVocab(@PathParam("type") String type) {
+	public Model getVocabRDF(@PathParam("type") String type) {
 		return getById(App.PREFIX, type, "");
 	}
 	
 	@GET
-	@Path("/{id}")
+	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public Model getVocabTerm(@PathParam("type") String type, @PathParam("id") String id) {
+	public VocabTermView getVocabListHTML(@PathParam("type") String type, 
+											@QueryParam("lang") Optional<String> lang) {
+		return new VocabTermView(getById(App.PREFIX, type, ""), lang.orElse("en"));
+	}
+	
+	@GET
+	@Path("/{id}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model getVocabTermRDF(@PathParam("type") String type, 
+												@PathParam("id") String id) {
 		return getById(App.PREFIX, type, id);
+	}
+	
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.TEXT_HTML)
+	@ExceptionMetered
+	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
+											@PathParam("id") String id, 
+											@QueryParam("lang") Optional<String> lang) {
+		return new VocabTermView(getById(App.PREFIX, type, id), lang.orElse("en"));
 	}
 	
 		
 	@GET
 	@Path("/_search")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
 		return getFTS(text, type);

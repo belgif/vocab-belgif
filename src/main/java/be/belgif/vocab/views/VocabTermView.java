@@ -28,16 +28,11 @@ package be.belgif.vocab.views;
 import be.belgif.vocab.helpers.RdfDAO;
 import io.dropwizard.views.View;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 
 /**
  * HTML Writer
@@ -45,16 +40,16 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
  * @author Bart.Hanssens
  */
 @Provider
-public class VocabListView extends View {
-	private final ArrayList<RdfDAO> vocabs = new ArrayList();
+public class VocabTermView extends View {
+	private final RdfDAO term;
 	
 	/**
-	 * Get the list  of vocabularies
+	 * Get the properties of a term
 	 * 
 	 * @return 
 	 */
-	public List<RdfDAO> getVocabs() {
-		return this.vocabs;
+	public RdfDAO getTerm() {
+		return this.term;
 	}
 	
 	/** 
@@ -63,10 +58,11 @@ public class VocabListView extends View {
 	 * @param m triples
 	 * @param lang language
 	 */
-	public VocabListView(Model m, String lang) {
-		super("vocablist.ftl");
+	public VocabTermView(Model m, String lang) {
+		super("vocabterm.ftl");
 		
-		m.subjects().forEach(s -> vocabs.add(new RdfDAO(m, (IRI) s)));
+		IRI subj = (IRI) m.subjects().iterator().next();
+		term = new RdfDAO(m, subj);
 	}
 }
 

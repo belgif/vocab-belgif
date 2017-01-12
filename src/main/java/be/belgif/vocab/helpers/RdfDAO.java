@@ -23,10 +23,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.resources.RdfResource;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Optional;
 import java.util.Set;
 
@@ -37,6 +41,7 @@ import org.eclipse.rdf4j.model.Namespace;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,8 +49,8 @@ import org.slf4j.LoggerFactory;
  *
  * @author Bart.Hanssens
  */
-public class DAO {
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfResource.class);
+public class RdfDAO {
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
 	
 	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final Model m;
@@ -58,12 +63,15 @@ public class DAO {
 	 * @param term property term
 	 * @return set of objects (IRI or literal)
 	 */
-	public Set objs(String prefix, String term) {
+	public Set<Value> objs(String prefix, String term) {
+		Set objs = null;
 		Optional<Namespace> ns = m.getNamespace(prefix);
-		if (! ns.isPresent()) {
-			return Collections.EMPTY_SET;
+		if (ns.isPresent()) {
+			objs = m.filter(id, f.createIRI(ns.get().getName(), term), null).objects();
+		} else {
+			LOG.error("Namespace for prefix {} not found", prefix);
 		}
-		return m.filter(id, f.createIRI(ns.get().getName(), term), null).objects();
+		return (objs == null ? Collections.EMPTY_SET : objs);
 	}
 	
 	/**
@@ -74,9 +82,9 @@ public class DAO {
 	 * @param lang language code
 	 * @return literals (IRI or literal)
 	 */
-	public Value literal(String prefix, String term, String lang) {
-		Set<Value> vals = literals(prefix, term, lang);
-		return vals.iterator().next();
+	public String literal(String prefix, String term, String lang) {
+		Iterator<String> i = literals(prefix, term, lang).iterator();
+		return (i.hasNext() ? i.next() : null);
 	}
 	
 	/**
@@ -87,9 +95,14 @@ public class DAO {
 	 * @param lang language code
 	 * @return literals (IRI or literal)
 	 */
-	public Set literals(String prefix, String term, String lang) {
-		Set<Value> vals = objs(prefix, term);
-		vals.removeIf(v -> !((Literal) v).getLanguage().orElse("").equals(lang));
+	public Set<String> literals(String prefix, String term, String lang) {
+		Set<String> vals = new HashSet<>();
+		for (Value obj: objs(prefix, term)) {
+			Literal l = (Literal) obj;
+			if (l.getLanguage().orElse("").equals(lang)) {
+				vals.add(l.stringValue());
+			}
+		}
 		return vals;
 	}
 	
@@ -102,13 +115,23 @@ public class DAO {
 		return id;
 	}
 	
+	public String getUrl() {
+		String url = "";
+		try {
+			url = new URL(id.toString()).getFile();
+		} catch (MalformedURLException mfu) {
+			// do nothing;
+		}
+		return url;
+	}
+	
 	/**
 	 * Constructor
 	 * 
 	 * @param m triple model
 	 * @param id  subject IRI
 	 */
-	public DAO(Model m, IRI id) {
+	public RdfDAO(Model m, IRI id) {
 		this.id = id;
 		this.m = m;
 	}

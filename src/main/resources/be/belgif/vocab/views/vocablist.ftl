@@ -37,7 +37,7 @@
 	    <th>Description</th><th>Download (TTL)</th>
 	    <th>Download (JSON)</th></tr>
 	<#list vocabs as v>
-	<tr><td><a href="${v.id}">${v.literal("dcterms","title", "nl")}</a></td>
+	<tr><td><a href="${v.url}">${v.literal("dcterms","title", "nl")}</a></td>
 	    <td>${v.literal("dcterms","description", "nl")}</td><td></td></tr>
 	</#list>
 	</table>
