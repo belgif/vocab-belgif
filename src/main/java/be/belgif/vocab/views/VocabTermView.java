@@ -27,12 +27,14 @@ package be.belgif.vocab.views;
 
 import be.belgif.vocab.helpers.RdfDAO;
 import io.dropwizard.views.View;
+import java.util.Iterator;
 
 
 import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 
 /**
  * HTML Writer
@@ -61,8 +63,8 @@ public class VocabTermView extends View {
 	public VocabTermView(Model m, String lang) {
 		super("vocabterm.ftl");
 		
-		IRI subj = (IRI) m.subjects().iterator().next();
-		term = new RdfDAO(m, subj);
+		Iterator<Resource> i = m.subjects().iterator();
+		term = i.hasNext() ? new RdfDAO(m, (IRI) i.next()) : null;
 	}
 }
 

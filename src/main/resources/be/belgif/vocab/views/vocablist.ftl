@@ -34,11 +34,16 @@
     <section class="panel">
 	<table>
 	<tr><th>Name</th>
-	    <th>Description</th><th>Download (TTL)</th>
-	    <th>Download (JSON)</th></tr>
+	    <th>Description</th>
+	    <th>Download (TTL)</th>
+	    <th>Download (JSON)</th>
+	</tr>
 	<#list vocabs as v>
 	<tr><td><a href="${v.url}">${v.literal("dcterms","title", "nl")}</a></td>
-	    <td>${v.literal("dcterms","description", "nl")}</td><td></td></tr>
+	    <td>${v.literal("dcterms","description", "nl")}</td>
+	    <td><a href="${v.url}.ttl">${v.url}.ttl</td>
+	    <td><a href="${v.url}.json">${v.url}.json</td>
+	</tr>
 	</#list>
 	</table>
     </section>

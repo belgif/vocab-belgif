@@ -27,6 +27,7 @@ package be.belgif.vocab;
 
 import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
+import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 import be.belgif.vocab.resources.VocabListResource;
 import be.belgif.vocab.resources.VocabResource;
@@ -40,12 +41,15 @@ import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.Map;
+import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
+import org.glassfish.jersey.server.filter.UriConnegFilter;
 
 
 /**
@@ -57,6 +61,21 @@ public class App extends Application<AppConfig> {
 
 	public final static String PREFIX = "http://vocab.belgif.be/";
 	public final static String PREFIX_GRAPH = "http://vocab.belgif.be/graph/";
+
+	public final static Map<String,MediaType> FTYPES = new HashMap<>();
+	static {
+		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
+		FTYPES.put("json", MediaType.valueOf(RDFMediaType.JSONLD));
+		FTYPES.put("nt", MediaType.valueOf(RDFMediaType.NTRIPLES));
+	}
+	
+	public final static Map<String,String> LANGS = new HashMap<>();
+	static {
+		LANGS.put("nl", "nl");
+		LANGS.put("fr", "fr");
+		LANGS.put("de", "de");
+		LANGS.put("en", "en");
+	}
 	
 	/**
 	 * Configure a triple store repository
@@ -96,6 +115,10 @@ public class App extends Application<AppConfig> {
 		// Managed resource
 		env.lifecycle().manage(new ManagedRepository(repo));
 		
+		// Override content negotiation for URLs with file type extensions
+
+		env.jersey().register(new UriConnegFilter(FTYPES, LANGS));
+
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
 		
