@@ -48,6 +48,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/")
 public class VocabListResource extends RdfResource {
 	@GET
+	@Path("/")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabListRDF() {
@@ -55,20 +56,21 @@ public class VocabListResource extends RdfResource {
 	}
 	
 	@GET
-	@Produces(MediaType.TEXT_HTML)
+	@Path("/void")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model getVocabListVOID() {
+		return getVocabList();
+	}
+	
+	@GET
+	@Path("/")
+	@Produces({MediaType.TEXT_HTML})
 	@ExceptionMetered
 	public VocabListView getVocabListHTML(@QueryParam("lang") Optional<String> lang) {
 		return new VocabListView(getVocabList(), lang.orElse("en"));
 	}
 
-	@GET
-	@Path("/void")
-	@Produces(RDFMediaType.TTL)
-	@ExceptionMetered
-	public Model getVocabListVOID() {
-		System.err.println("void");
-		return getVocabList();
-	}
 
 	/**
 	 * Constructor

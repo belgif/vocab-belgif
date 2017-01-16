@@ -63,7 +63,6 @@ import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.RepositoryResult;
-import org.eclipse.rdf4j.repository.util.Repositories;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -208,7 +207,7 @@ public abstract class RdfResource {
 	 */
 	protected Model get(IRI subj, String from) {
 		Model m = new LinkedHashModel();
-		System.err.println("vocab term");
+	
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			Iterations.addAll(conn.getStatements(subj, null, null, asGraph(from)), m);
 		} catch (RepositoryException e) {
