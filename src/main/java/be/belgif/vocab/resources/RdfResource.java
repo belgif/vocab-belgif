@@ -51,6 +51,7 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.MalformedQueryException;
@@ -139,6 +140,7 @@ public abstract class RdfResource {
 			m.setNamespace(RDF.PREFIX, RDF.NAMESPACE);
 			m.setNamespace(RDFS.PREFIX, RDFS.NAMESPACE);
 			m.setNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
+			m.setNamespace(VOID.PREFIX, VOID.NAMESPACE);
 		}
 		return m;
 	}
@@ -185,7 +187,7 @@ public abstract class RdfResource {
 		
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			RepositoryResult<Statement> vocabs = 
-					conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME);
+					conn.getStatements(null, RDF.TYPE, VOID.DATASET);
 			while(vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, DCTERMS.TITLE, null), m);

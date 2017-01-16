@@ -32,17 +32,32 @@ import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
+import java.io.IOException;
 
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
 
 import java.util.Optional;
 
 import javax.ws.rs.WebApplicationException;
+import org.eclipse.rdf4j.common.iteration.Iterations;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
 
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
@@ -63,6 +78,45 @@ public class VocabImportTask extends Task {
 	private final Repository repo;
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
+	
+	
+	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
+		Model m = new LinkedHashModel();
+		ValueFactory f = conn.getValueFactory();
+		IRI voidID  = f.createIRI("#" + name);
+		
+		m.add(voidID, RDF.TYPE, VOID.DATASET);
+		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
+		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(App.PREFIX));
+		m.add(voidID, VOID.DATASET, f.createIRI(App.PREFIX + "dataset/" + name));
+		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
+		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
+		m.add(voidID, VOID.URI_SPACE, f.createLiteral(App.PREFIX + name));
+		
+		return m;
+	}
+	
+	/**
+	 * Import triples from file into RDF store, using name as vocabulary name.
+	 * 
+	 * @param file input file path
+	 * @param name short name
+	 * @param format RDF format
+	 */
+	private void importFile(Path file, String name, RDFFormat format) {
+		try (RepositoryConnection conn = repo.getConnection()) {
+			String vocab = name.split("\\.")[0];
+			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
+			conn.begin();
+			conn.remove((Resource) null, null, null, ctx);
+			conn.add(file.toFile(), null, format, ctx);
+			conn.add(addVOID(conn, name, ctx), ctx);
+			conn.commit();
+		} catch (RepositoryException|IOException rex) {
+			// will be rolled back automatically
+			throw new WebApplicationException("Error adding statements", rex);
+		}
+	}
 	
 	/**
 	 * Execute task
@@ -92,17 +146,7 @@ public class VocabImportTask extends Task {
 			throw new WebApplicationException("File type not supported");
 		}
 		
-		try (RepositoryConnection conn = repo.getConnection()) {
-			String vocab = name.split("\\.")[0];
-			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
-			conn.begin();
-			conn.remove((Resource) null, null, null, ctx);
-			conn.add(infile.toFile(), null, format.get(), ctx);
-			conn.commit();
-		} catch (RepositoryException rex) {
-			// will be rolled back automatically
-			throw new WebApplicationException("Error adding statements", rex);
-		}
+		importFile(infile, name, format.get());
 
 	}
 	
