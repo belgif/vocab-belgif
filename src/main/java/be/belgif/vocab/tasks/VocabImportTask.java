@@ -81,14 +81,22 @@ public class VocabImportTask extends Task {
 	
 	
 	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
+		LOG.info("Adding VOID metadata for {}", name);
+		
 		Model m = new LinkedHashModel();
 		ValueFactory f = conn.getValueFactory();
-		IRI voidID  = f.createIRI("#" + name);
-		
+		IRI voidID  = f.createIRI(App.PREFIX + "void#" + name);
+
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
 		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
+		
+		Iterations.asList(conn.getStatements(null, DCTERMS.TITLE, null, ctx)).forEach(
+				s -> m.add(voidID, DCTERMS.TITLE, s.getObject()));
+		Iterations.asList(conn.getStatements(null, DCTERMS.DESCRIPTION, null, ctx)).forEach(
+				s -> m.add(voidID, DCTERMS.DESCRIPTION, s.getObject()));
+				
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(App.PREFIX));
-		m.add(voidID, VOID.DATASET, f.createIRI(App.PREFIX + "dataset/" + name));
+		m.add(voidID, VOID.DATA_DUMP, f.createIRI(App.PREFIX + "dataset/" + name));
 		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
 		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
 		m.add(voidID, VOID.URI_SPACE, f.createLiteral(App.PREFIX + name));
@@ -110,7 +118,8 @@ public class VocabImportTask extends Task {
 			conn.begin();
 			conn.remove((Resource) null, null, null, ctx);
 			conn.add(file.toFile(), null, format, ctx);
-			conn.add(addVOID(conn, name, ctx), ctx);
+			Model voidM = addVOID(conn, vocab, ctx);
+			conn.add(voidM, ctx);
 			conn.commit();
 		} catch (RepositoryException|IOException rex) {
 			// will be rolled back automatically

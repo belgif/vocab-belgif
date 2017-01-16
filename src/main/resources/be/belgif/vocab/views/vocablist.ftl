@@ -39,7 +39,7 @@
 	    <th>Download (JSON)</th>
 	</tr>
 	<#list vocabs as v>
-	<tr><td><a href="${v.url}">${v.literal("void","title", "nl")}</a></td>
+	<tr><td><a href="${v.url}">${v.literal("dcterms","title", "nl")}</a></td>
 	    <td>${v.literal("dcterms","description", "nl")}</td>
 	    <td><a href="${v.url}.ttl">${v.url}.ttl</td>
 	    <td><a href="${v.url}.json">${v.url}.json</td>

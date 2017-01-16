@@ -63,6 +63,7 @@ import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.RepositoryResult;
+import org.eclipse.rdf4j.repository.util.Repositories;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -184,14 +185,13 @@ public abstract class RdfResource {
 	 */
 	protected Model getVocabList() {
 		Model m = new LinkedHashModel();
-		
+
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			RepositoryResult<Statement> vocabs = 
 					conn.getStatements(null, RDF.TYPE, VOID.DATASET);
 			while(vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
-				Iterations.addAll(conn.getStatements(iri, DCTERMS.TITLE, null), m);
-				Iterations.addAll(conn.getStatements(iri, DCTERMS.DESCRIPTION, null), m);
+				Iterations.addAll(conn.getStatements(iri, null, null), m);
 			}
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
@@ -208,7 +208,7 @@ public abstract class RdfResource {
 	 */
 	protected Model get(IRI subj, String from) {
 		Model m = new LinkedHashModel();
-		
+		System.err.println("vocab term");
 		try (RepositoryConnection conn = this.repo.getConnection()) {
 			Iterations.addAll(conn.getStatements(subj, null, null, asGraph(from)), m);
 		} catch (RepositoryException e) {

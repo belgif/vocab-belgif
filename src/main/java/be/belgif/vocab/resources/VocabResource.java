@@ -54,6 +54,7 @@ public class VocabResource extends RdfResource {
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("type") String type) {
+		System.err.println("get type");
 		return getById(App.PREFIX, type, "");
 	}
 	
@@ -62,6 +63,7 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public VocabTermView getVocabListHTML(@PathParam("type") String type, 
 											@QueryParam("lang") Optional<String> lang) {
+		System.err.println("get type html");
 		return new VocabTermView(getById(App.PREFIX, type, ""), lang.orElse("en"));
 	}
 	
@@ -71,6 +73,8 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public Model getVocabTermRDF(@PathParam("type") String type, 
 												@PathParam("id") String id) {
+				System.err.println("get type / id RDF" );
+
 		return getById(App.PREFIX, type, id);
 	}
 	
@@ -81,6 +85,7 @@ public class VocabResource extends RdfResource {
 	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
 											@PathParam("id") String id, 
 											@QueryParam("lang") Optional<String> lang) {
+		System.err.println("get type / id");
 		return new VocabTermView(getById(App.PREFIX, type, id), lang.orElse("en"));
 	}
 	
