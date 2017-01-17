@@ -217,35 +217,6 @@ public abstract class RdfResource {
 	}
 	
 	/**
-	 * Get by ID (URI)
-	 * 
-	 * @param url
-	 * @return RDF model 
-	 */
-	/*protected Model getById(String url) {
-		Map<String,Value> map = new HashMap();
-		map.put("s", asURI(url));
-		return query(Q_IRI, map);
-	}
-	*/
-	/**
-	 * Incremental update for Lucene FTS
-	 */
-/*	protected void incrementFTS() {
-		update(INCR_INDEX);
-	}
-*/	
-	/**
-	 * Full text search
-	 * 
-	 * @param text text to search for
-	 * @return RDF model 
-	 */
-/*	protected Model getFTS(String text) {
-		return getFTS(text, null);
-	}
-*/
-	/**
 	 * Full text search
 	 * 
 	 * @param text text to search for
@@ -263,7 +234,7 @@ public abstract class RdfResource {
 	/**
 	 * Put statements in the store
 	 * 
-	 * @param m 
+	 * @param m triples
 	 */
 	protected void putStatements(Model m) {
 		try (RepositoryConnection conn = this.repo.getConnection()) {

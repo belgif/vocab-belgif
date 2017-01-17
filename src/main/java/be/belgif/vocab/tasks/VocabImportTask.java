@@ -32,25 +32,21 @@ import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
-import java.io.IOException;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.List;
-
 import java.util.Optional;
 
 import javax.ws.rs.WebApplicationException;
+
 import org.eclipse.rdf4j.common.iteration.Iterations;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-
 import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
@@ -156,7 +152,6 @@ public class VocabImportTask extends Task {
 		}
 		
 		importFile(infile, name, format.get());
-
 	}
 	
 	/**

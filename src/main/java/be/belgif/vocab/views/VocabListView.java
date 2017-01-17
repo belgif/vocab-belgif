@@ -29,15 +29,12 @@ import be.belgif.vocab.helpers.RdfDAO;
 import io.dropwizard.views.View;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 
 /**
  * HTML Writer

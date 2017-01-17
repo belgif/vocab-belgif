@@ -26,8 +26,10 @@
 package be.belgif.vocab;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.common.collect.ImmutableMap;
 
 import io.dropwizard.Configuration;
+import java.util.Map;
 
 
 /**
@@ -38,6 +40,7 @@ public class AppConfig extends Configuration {
 	private String dataDir;
 	private String importDir;
 	private String luceneDir;
+	private ImmutableMap<String, Map<String, String>> views;
 
 	@JsonProperty
 	public String getDataDir() {
@@ -67,4 +70,18 @@ public class AppConfig extends Configuration {
 	public void setLuceneDir(String luceneDir) {
 		this.luceneDir = luceneDir;
 	}
+	
+	@JsonProperty
+    public Map<String, Map<String, String>> getViews() {
+        return views;
+    }
+
+    @JsonProperty
+    public void setViews(Map<String, Map<String, String>> views) {
+        final ImmutableMap.Builder<String, Map<String, String>> builder = ImmutableMap.builder();
+        for (Map.Entry<String, Map<String, String>> entry : views.entrySet()) {
+            builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
+        }
+        this.views = builder.build();
+    }
 }

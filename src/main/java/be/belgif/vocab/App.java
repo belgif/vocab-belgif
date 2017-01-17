@@ -104,7 +104,12 @@ public class App extends Application<AppConfig> {
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
 		config.addBundle(new AssetsBundle("/assets", "/static"));
-		config.addBundle(new ViewBundle<>());
+		config.addBundle(new ViewBundle<AppConfig>() { 
+			@Override
+			public Map<String, Map<String, String>> getViewConfiguration(AppConfig config) {
+				return config.getViews();
+        }
+		});
 	}
 	
 	@Override

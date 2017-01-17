@@ -56,19 +56,19 @@ public class VocabListResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("/void")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVocabListVOID() {
-		return getVocabList();
-	}
-	
-	@GET
 	@Path("/")
 	@Produces({MediaType.TEXT_HTML})
 	@ExceptionMetered
 	public VocabListView getVocabListHTML(@QueryParam("lang") Optional<String> lang) {
 		return new VocabListView(getVocabList(), lang.orElse("en"));
+	}
+	
+	@GET
+	@Path("/void")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model getVocabListVOID() {
+		return getVocabList();
 	}
 
 
