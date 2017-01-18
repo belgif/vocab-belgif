@@ -25,7 +25,7 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.helpers.RdfDAO;
+import be.belgif.vocab.dao.RdfDAO;
 import io.dropwizard.views.View;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
 @Provider
 public class VOIDView extends View {
 	
-	private class VOIDDAO extends RdfDAO {
+	public class VOIDDAO extends RdfDAO {
 		public String getRoot() {
 			return obj(VOID.ROOT_RESOURCE).toString();
 		}

@@ -25,7 +25,7 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.helpers.RdfDAO;
+import be.belgif.vocab.dao.RdfDAO;
 import io.dropwizard.views.View;
 import java.util.Iterator;
 

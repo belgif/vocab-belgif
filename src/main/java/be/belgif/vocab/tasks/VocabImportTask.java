@@ -104,6 +104,7 @@ public class VocabImportTask extends Task {
 		
 		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
 				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));
+
 		Iterations.asList(conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx)).forEach(
 				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
 		

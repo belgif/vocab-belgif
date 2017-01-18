@@ -1,4 +1,3 @@
-<#-- @ftlvariable name="" type="be.belgif.vocab.views.VocabTermView" -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,7 +37,7 @@
 	    <h4>General</h4>
 	    <table>
 	    <#list langs as lang>
-		<#assign val = v.literals("dcterms", "description", lang)!>
+		<#assign val = v.literal("dcterms", "description", lang)!"">
 		<#if val?has_content>
 		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
 		 </#if>
@@ -47,10 +46,18 @@
 	    <#if l?has_content>
 		<tr><td>SKOS notation</td><td>${l}</td></tr>
 	    </#if>
-	    <#assign l = v.literal("skos", "prefLabel", "en")!"">
-	    <#if l?has_content>
-		<tr><td>SKOS prefLabel</td><td>${l}</td></tr>
-	    </#if>
+	    <#list langs as lang>
+		<#assign l = v.literal("skos", "prefLabel", lang)!"">
+		<#if l?has_content>
+		    <tr><td>SKOS prefLabel (${lang})</td><td>${val}</td></tr>
+		</#if>
+	    </#list>
+	    <#list langs as lang>
+		<#assign l = v.literal("skos", "altLabel", lang)!"">
+		<#if l?has_content>
+		    <tr><td>SKOS prefLabel (${lang})</td><td>${val}</td></tr>
+		</#if>
+	    </#list>
 	    </table>
 	</section>
 	<#assign tc = v.objs("skos", "hasTopConcept")>

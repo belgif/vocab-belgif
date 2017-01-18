@@ -78,7 +78,6 @@ public class VocabResource extends RdfResource {
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("type") String type) {
-		System.err.println("/type");
 		return getById(App.PREFIX, type, "");
 	}
 	
@@ -97,7 +96,6 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public Model getVocabTermRDF(@PathParam("type") String type, 
 												@PathParam("id") String id) {
-		System.err.println("/type/id");
 		return getById(App.PREFIX, type, id);
 	}
 	
@@ -121,7 +119,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}/_download")
+	@Path("dataset/{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
 	@ExceptionMetered
 	public Model getGraphs(@PathParam("type") String type) {

@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.helpers;
+package be.belgif.vocab.dao;
 
 import be.belgif.vocab.resources.RdfResource;
 import java.net.MalformedURLException;
@@ -77,7 +77,7 @@ public class RdfDAO {
 	public Set<Value> objs(String prefix, String term) {
 		Optional<Namespace> ns = m.getNamespace(prefix);
 		if (ns.isPresent()) {
-			return objs(f.createIRI(ns.get().getName()));
+			return objs(f.createIRI(ns.get().getName(), term));
 		} else { 
 			LOG.error("Namespace for prefix {} not found", prefix);
 			return Collections.EMPTY_SET;
@@ -110,7 +110,7 @@ public class RdfDAO {
 	/**
 	 * Get one literal
 	 * 
-	 * @param prefix property namespace prefi
+	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code
 	 * @return literals (IRI or literal)
@@ -123,7 +123,7 @@ public class RdfDAO {
 	/**
 	 * Get a set of literals
 	 * 
-	 * @param prefix property namespace prefi
+	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code
 	 * @return literals (IRI or literal)

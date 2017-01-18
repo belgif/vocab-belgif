@@ -1,4 +1,3 @@
-<#-- @ftlvariable name="" type="be.belgif.vocab.views.VocabListView" -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +38,7 @@
 	    <th>Download (JSON)</th>
 	</tr>
 	<#list vocabs as v>
-	<tr><td><a href="${v.root!""}">${v.literal("dcterms", "title", "en")!""}</a></td>
+	<tr><td><a href="${v.root}">${v.literal("dcterms", "title", "en")!""}</a></td>
 	    <td>${v.literal("dcterms", "description", "en")!""}</td>
 	    <td><a href="${v.download!""}.ttl">${v.url!""}.ttl</td>
 	    <td><a href="${v.download!""}.json">${v.url!""}.json</td>
