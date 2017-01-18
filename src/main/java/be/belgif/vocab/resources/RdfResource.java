@@ -74,7 +74,6 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 
-@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 public abstract class RdfResource {
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfResource.class);
 	

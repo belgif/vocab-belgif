@@ -35,6 +35,7 @@ import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
  * HTML Writer
@@ -42,15 +43,30 @@ import org.eclipse.rdf4j.model.Model;
  * @author Bart.Hanssens
  */
 @Provider
-public class VocabListView extends View {
-	private final ArrayList<RdfDAO> vocabs = new ArrayList();
+public class VOIDView extends View {
+	
+	private class VOIDDAO extends RdfDAO {
+		public String getRoot() {
+			return obj(VOID.ROOT_RESOURCE).toString();
+		}
+		
+		public String getDownload() {
+			return obj(VOID.DATA_DUMP).toString();
+		}
+		
+		public VOIDDAO(Model m, IRI id) {
+			super(m, id);
+		}
+	}
+	
+	private final ArrayList<VOIDDAO> vocabs = new ArrayList();
 	
 	/**
 	 * Get the list  of vocabularies
 	 * 
 	 * @return 
 	 */
-	public List<RdfDAO> getVocabs() {
+	public List<VOIDDAO> getVocabs() {
 		return this.vocabs;
 	}
 	
@@ -60,10 +76,10 @@ public class VocabListView extends View {
 	 * @param m triples
 	 * @param lang language
 	 */
-	public VocabListView(Model m, String lang) {
-		super("vocablist.ftl");
+	public VOIDView(Model m, String lang) {
+		super("void.ftl");
 		
-		m.subjects().forEach(s -> vocabs.add(new RdfDAO(m, (IRI) s)));
+		m.subjects().forEach(s -> vocabs.add(new VOIDDAO(m, (IRI) s)));
 	}
 }
 

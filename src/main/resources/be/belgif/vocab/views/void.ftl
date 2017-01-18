@@ -9,16 +9,16 @@
 <body>
 <header>
     <div id="logo-wrapper">
-    <a href="index.html">
+    <a href=".">
 	<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
     </a>
     </div>
     <div id="lang-wrapper">
     <div id="languages">
     <ul>
-	<li><a href="?lang=nl">nl</a></li>
-	<li><a href="?lang=fr">fr</a></li>
-	<li><a href="?lang=de">de</a></li>
+	<li><a href="index.nl">nl</a></li>
+	<li><a href="index.fr">fr</a></li>
+	<li><a href="index.de">de</a></li>
 	<li class="disabled">en</li>
     </ul>
     </div>
@@ -39,10 +39,10 @@
 	    <th>Download (JSON)</th>
 	</tr>
 	<#list vocabs as v>
-	<tr><td><a href="${v.url}">${v.literal("dcterms","title", "nl")}</a></td>
-	    <td>${v.literal("dcterms","description", "nl")}</td>
-	    <td><a href="${v.url}.ttl">${v.url}.ttl</td>
-	    <td><a href="${v.url}.json">${v.url}.json</td>
+	<tr><td><a href="${v.root!""}">${v.literal("dcterms", "title", "en")!""}</a></td>
+	    <td>${v.literal("dcterms", "description", "en")!""}</td>
+	    <td><a href="${v.download!""}.ttl">${v.url!""}.ttl</td>
+	    <td><a href="${v.download!""}.json">${v.url!""}.json</td>
 	</tr>
 	</#list>
 	</table>

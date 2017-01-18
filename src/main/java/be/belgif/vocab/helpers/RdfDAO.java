@@ -59,19 +59,52 @@ public class RdfDAO {
 	/**
 	 * Get set of triple objects
 	 * 
+	 * @param prop property URI
+	 * @return set of objects (IRI or literal)
+	 */
+	public Set<Value> objs(IRI prop) {
+		Set objs = m.filter(id, prop, null).objects();
+		return (objs == null ? Collections.EMPTY_SET : objs);
+	}
+	
+	/**
+	 * Get set of triple objects
+	 * 
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @return set of objects (IRI or literal)
 	 */
 	public Set<Value> objs(String prefix, String term) {
-		Set objs = null;
 		Optional<Namespace> ns = m.getNamespace(prefix);
 		if (ns.isPresent()) {
-			objs = m.filter(id, f.createIRI(ns.get().getName(), term), null).objects();
-		} else {
+			return objs(f.createIRI(ns.get().getName()));
+		} else { 
 			LOG.error("Namespace for prefix {} not found", prefix);
+			return Collections.EMPTY_SET;
 		}
-		return (objs == null ? Collections.EMPTY_SET : objs);
+	}
+
+	/**
+	 * Get one triple
+	 * 
+	 * @param prop property URI
+	 * @return set of objects (IRI or literal)
+	 */
+	public Value obj(IRI prop) {
+		Iterator<Value> i = objs(prop).iterator();
+		return (i.hasNext() ? i.next() : null);
+	}
+	
+	/**
+	 * Get one triple
+	 * 
+	 * @param prefix property namespace prefix
+	 * @param term property term
+	 * @return set of objects (IRI or literal)
+	 */
+	public Value obj(String prefix, String term) {
+		Iterator<Value> i = objs(prefix, term).iterator();
+		return (i.hasNext() ? i.next() : null);
 	}
 	
 	/**

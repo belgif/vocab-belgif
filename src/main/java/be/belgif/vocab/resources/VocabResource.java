@@ -27,6 +27,7 @@ package be.belgif.vocab.resources;
 
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VOIDView;
 import be.belgif.vocab.views.VocabTermView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
@@ -47,17 +48,42 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/{type}")
+@Path("/")
 public class VocabResource extends RdfResource {
-
 	@GET
+	@Path("{file:^$|void}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model getVOIDvoid() {
+		return getVocabList();
+	}	
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	@ExceptionMetered
+	public VOIDView getVOIDHTML(@QueryParam("lang") Optional<String> lang) {
+		return new VOIDView(getVocabList(), lang.orElse("en"));
+	}
+	
+	@GET
+	@Path("{file:^$|void}")
+	@Produces(MediaType.TEXT_HTML)
+	@ExceptionMetered
+	public VOIDView getVOIDHTMLvoid(@QueryParam("lang") Optional<String> lang) {
+		return new VOIDView(getVocabList(), lang.orElse("en"));
+	}
+	
+	@GET
+	@Path("{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("type") String type) {
+		System.err.println("/type");
 		return getById(App.PREFIX, type, "");
 	}
 	
 	@GET
+	@Path("{type}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VocabTermView getVocabListHTML(@PathParam("type") String type, 
@@ -66,16 +92,17 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("/{id}")
+	@Path("{type}/{id}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabTermRDF(@PathParam("type") String type, 
 												@PathParam("id") String id) {
+		System.err.println("/type/id");
 		return getById(App.PREFIX, type, id);
 	}
 	
 	@GET
-	@Path("/{id}")
+	@Path("{type}/{id}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
@@ -86,7 +113,7 @@ public class VocabResource extends RdfResource {
 	
 		
 	@GET
-	@Path("/_search")
+	@Path("{type}/_search")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
@@ -94,7 +121,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("/_download")
+	@Path("{type}/_download")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
 	@ExceptionMetered
 	public Model getGraphs(@PathParam("type") String type) {

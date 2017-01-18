@@ -23,61 +23,23 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.views;
 
-import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.VocabListView;
+import freemarker.template.TemplateException;
 
-import com.codahale.metrics.annotation.ExceptionMetered;
-import java.util.Optional;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.ExceptionMapper;
+import javax.ws.rs.ext.Provider;
 
 /**
- * List available SKOS thesauri
- * 
+ *
  * @author Bart.Hanssens
  */
-@Path("/")
-public class VocabListResource extends RdfResource {
-	@GET
-	@Path("/")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVocabListRDF() {
-		return getVocabList();
-	}
-	
-	@GET
-	@Path("/")
-	@Produces({MediaType.TEXT_HTML})
-	@ExceptionMetered
-	public VocabListView getVocabListHTML(@QueryParam("lang") Optional<String> lang) {
-		return new VocabListView(getVocabList(), lang.orElse("en"));
-	}
-	
-	@GET
-	@Path("/void")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVocabListVOID() {
-		return getVocabList();
-	}
+@Provider
+public class ViewsExceptionMapper implements ExceptionMapper<TemplateException> {
 
-
-	/**
-	 * Constructor
-	 * 
-	 * @param repo RDF triple store
-	 */
-	public VocabListResource(Repository repo) {
-		super(repo);
+	@Override
+	public Response toResponse(TemplateException e) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 }

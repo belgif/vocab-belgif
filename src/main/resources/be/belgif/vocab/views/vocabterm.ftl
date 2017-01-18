@@ -31,20 +31,23 @@
 </header>
 <main>
     <#assign v = term>
+    <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>${v.id}</h3>
 	<section>
 	    <h4>General</h4>
 	    <table>
-	    <#assign l = v.literal("dcterms", "description", "en")!>
-	    <#if l?has_content>
-		<tr><td>DCTERMS description</td><td>${l}</td></tr>
-	    </#if>
-	    <#assign l = v.literal("skos", "notation", "")!>
+	    <#list langs as lang>
+		<#assign val = v.literals("dcterms", "description", lang)!>
+		<#if val?has_content>
+		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
+		 </#if>
+	    </#list>
+	    <#assign l = v.literal("skos", "notation", "")!"">
 	    <#if l?has_content>
 		<tr><td>SKOS notation</td><td>${l}</td></tr>
 	    </#if>
-	    <#assign l = v.literal("skos", "prefLabel", "en")!>
+	    <#assign l = v.literal("skos", "prefLabel", "en")!"">
 	    <#if l?has_content>
 		<tr><td>SKOS prefLabel</td><td>${l}</td></tr>
 	    </#if>

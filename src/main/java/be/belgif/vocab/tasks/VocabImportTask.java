@@ -75,7 +75,15 @@ public class VocabImportTask extends Task {
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
-	
+
+	/**
+	 * Add VoID metadata about the thesaurus
+	 * 
+	 * @param conn triple store repository connection
+	 * @param name name of the thesaurus
+	 * @param ctx context / named graph
+	 * @return 
+	 */	
 	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
 		LOG.info("Adding VOID metadata for {}", name);
 		
@@ -93,10 +101,16 @@ public class VocabImportTask extends Task {
 				
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(App.PREFIX));
 		m.add(voidID, VOID.DATA_DUMP, f.createIRI(App.PREFIX + "dataset/" + name));
-		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
-		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
-		m.add(voidID, VOID.URI_SPACE, f.createLiteral(App.PREFIX + name));
 		
+		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
+				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));
+		Iterations.asList(conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx)).forEach(
+				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
+		
+		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
+		m.add(voidID, VOID.URI_SPACE, f.createLiteral(App.PREFIX + name));
+		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
+
 		return m;
 	}
 	
@@ -152,6 +166,8 @@ public class VocabImportTask extends Task {
 		}
 		
 		importFile(infile, name, format.get());
+		
+		LOG.info("Done");
 	}
 	
 	/**
