@@ -31,7 +31,6 @@ import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.tasks.VocabImportTask;
-import be.belgif.vocab.views.ViewsExceptionMapper;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -128,7 +127,6 @@ public class App extends Application<AppConfig> {
 		
 		// Resources / "web pages"
 		env.jersey().register(new VocabResource(repo));
-		env.jersey().register(new ViewsExceptionMapper());
 
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getImportDir()));

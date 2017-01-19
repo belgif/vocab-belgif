@@ -45,7 +45,7 @@ public class VoidDAO extends RdfDAO {
 	/**
 	 * Get download URL
 	 * 
-	 * @return donwload URL
+	 * @return download URL
 	 */
 	public String getDownload() {
 		return obj(VOID.DATA_DUMP).toString();

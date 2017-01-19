@@ -15,9 +15,9 @@
     <div id="lang-wrapper">
     <div id="languages">
     <ul>
-	<li><a href="?lang=nl">nl</a></li>
-	<li><a href="?lang=fr">fr</a></li>
-	<li><a href="?lang=de">de</a></li>
+	<li class="disabled">nl</li>
+	<li class="disabled">fr</li>
+	<li class="disabled">de</li>
 	<li class="disabled">en</li>
     </ul>
     </div>
@@ -29,17 +29,14 @@
     </div>
 </header>
 <main>
-    <#assign v = results>
+
     <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>Search results</h3>
 	<section>
 	    <table>
-	    <#list langs as lang>
-		<#assign val = v.literal("skos", "prefLabel", lang)!"">
-		<#if val?has_content>
-		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
-		 </#if>
+	    <#list results as r>
+		<tr><td>${r.id}</td><td></tr>
 	    </#list>
 	    </table>
 	</section>

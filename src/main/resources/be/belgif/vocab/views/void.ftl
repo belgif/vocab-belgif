@@ -15,9 +15,9 @@
     <div id="lang-wrapper">
     <div id="languages">
     <ul>
-	<li><a href="index.nl">nl</a></li>
-	<li><a href="index.fr">fr</a></li>
-	<li><a href="index.de">de</a></li>
+	<li class="disabled">nl</li>
+	<li class="disabled">fr</li>
+	<li class="disabled">de</li>
 	<li class="disabled">en</li>
     </ul>
     </div>

@@ -148,16 +148,6 @@ public class RdfDAO {
 		return id;
 	}
 	
-	public String getUrl() {
-		String url = "";
-		try {
-			url = new URL(id.toString()).getFile();
-		} catch (MalformedURLException mfu) {
-			// do nothing;
-		}
-		return url;
-	}
-	
 	/**
 	 * Constructor
 	 * 
@@ -166,6 +156,6 @@ public class RdfDAO {
 	 */
 	public RdfDAO(Model m, IRI id) {
 		this.id = id;
-		this.m = m;
+		this.m = m.filter(id, null, null);
 	}
 }
