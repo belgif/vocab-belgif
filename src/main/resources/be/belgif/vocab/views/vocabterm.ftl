@@ -35,7 +35,7 @@
 	<h3>${v.id}</h3>
 	<section>
 	    <h4>Search</h4>
-	    <form method="get" action="${vocab}/_search">
+	    <form method="get" action="/${vocab}/_search">
 		<input name="q" type="search"/>
 		<input name="search" type="submit"/>
 	    </form>
