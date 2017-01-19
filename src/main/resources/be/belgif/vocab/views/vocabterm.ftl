@@ -34,6 +34,13 @@
     <section>
 	<h3>${v.id}</h3>
 	<section>
+	    <h4>Search</h4>
+	    <form method="get" action="${vocab}/_search">
+		<input name="q" type="search"/>
+		<input name="search" type="submit"/>
+	    </form>
+	</section>
+	<section>
 	    <h4>General</h4>
 	    <table>
 	    <#list langs as lang>
@@ -47,15 +54,15 @@
 		<tr><td>SKOS notation</td><td>${l}</td></tr>
 	    </#if>
 	    <#list langs as lang>
-		<#assign l = v.literal("skos", "prefLabel", lang)!"">
-		<#if l?has_content>
+		<#assign val = v.literal("skos", "prefLabel", lang)!"">
+		<#if val?has_content>
 		    <tr><td>SKOS prefLabel (${lang})</td><td>${val}</td></tr>
 		</#if>
 	    </#list>
 	    <#list langs as lang>
-		<#assign l = v.literal("skos", "altLabel", lang)!"">
-		<#if l?has_content>
-		    <tr><td>SKOS prefLabel (${lang})</td><td>${val}</td></tr>
+		<#assign val = v.literal("skos", "altLabel", lang)!"">
+		<#if val?has_content>
+		    <tr><td>SKOS altLabel (${lang})</td><td>${val}</td></tr>
 		</#if>
 	    </#list>
 	    </table>

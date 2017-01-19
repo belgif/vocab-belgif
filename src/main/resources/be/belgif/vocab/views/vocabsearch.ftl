@@ -8,16 +8,16 @@
 <body>
 <header>
     <div id="logo-wrapper">
-    <a href=".">
+    <a href="index.html">
 	<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
     </a>
     </div>
     <div id="lang-wrapper">
     <div id="languages">
     <ul>
-	<li><a href="index.nl">nl</a></li>
-	<li><a href="index.fr">fr</a></li>
-	<li><a href="index.de">de</a></li>
+	<li><a href="?lang=nl">nl</a></li>
+	<li><a href="?lang=fr">fr</a></li>
+	<li><a href="?lang=de">de</a></li>
 	<li class="disabled">en</li>
     </ul>
     </div>
@@ -29,23 +29,21 @@
     </div>
 </header>
 <main>
-    <div id="container">
-    <section class="panel">
-	<table>
-	<tr><th>Name</th>
-	    <th>Description</th>
-	    <th>Download</th>
-	</tr>
-	<#list vocabs as v>
-	<tr><td><a href="${v.root}">${v.literal("dcterms", "title", "en")!""}</a></td>
-	    <td>${v.literal("dcterms", "description", "en")!""}</td>
-	    <td><a href="${v.download!""}.ttl">TTL</a>
-		<a href="${v.download!""}.json">JSON</a></td>
-	</tr>
-	</#list>
-	</table>
+    <#assign v = results>
+    <#assign langs = ['nl', 'fr', 'en', 'de']>
+    <section>
+	<h3>Search results</h3>
+	<section>
+	    <table>
+	    <#list langs as lang>
+		<#assign val = v.literal("skos", "prefLabel", lang)!"">
+		<#if val?has_content>
+		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
+		 </#if>
+	    </#list>
+	    </table>
+	</section>
     </section>
-    </div>
 </main>
 <footer>
 	&copy; 2017 <a href="http://www.fedict.belgium.be">Fedict</a>

@@ -23,49 +23,54 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.dao;
 
-import be.belgif.vocab.dao.VoidDAO;
-
-import io.dropwizard.views.View;
-
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.ws.rs.ext.Provider;
-
+import java.net.MalformedURLException;
+import java.net.URL;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
- * HTML Writer
+ * DAO helper class for VoID.
  * 
  * @author Bart.Hanssens
  */
-@Provider
-public class VOIDView extends View {
-	private final List<VoidDAO> vocabs = new ArrayList();
-	
+public class VoidDAO extends RdfDAO {
+
+	public String getRoot() {
+		return obj(VOID.ROOT_RESOURCE).toString();
+	}
+
 	/**
-	 * Get the list  of vocabularies
+	 * Get download URL
+	 * 
+	 * @return donwload URL
+	 */
+	public String getDownload() {
+		return obj(VOID.DATA_DUMP).toString();
+	}
+
+	/**
+	 * Get name of the vocabulary
 	 * 
 	 * @return 
 	 */
-	public List<VoidDAO> getVocabs() {
-		return this.vocabs;
+	public String getName() {
+		try {
+			return new URL(getRoot()).getFile();
+		} catch (MalformedURLException mfe) {
+			return "";
+		}
 	}
 	
-	/** 
+	/**
 	 * Constructor
 	 * 
 	 * @param m triples
-	 * @param lang language
+	 * @param id subject ID
 	 */
-	public VOIDView(Model m, String lang) {
-		super("void.ftl", StandardCharsets.UTF_8);
-		
-		m.subjects().forEach(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
+	public VoidDAO(Model m, IRI id) {
+		super(m, id);
 	}
 }
-

@@ -25,17 +25,16 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.VoidDAO;
-
+import be.belgif.vocab.dao.RdfDAO;
 import io.dropwizard.views.View;
-
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.ext.Provider;
 
+import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
+
 import org.eclipse.rdf4j.model.Model;
 
 /**
@@ -44,28 +43,29 @@ import org.eclipse.rdf4j.model.Model;
  * @author Bart.Hanssens
  */
 @Provider
-public class VOIDView extends View {
-	private final List<VoidDAO> vocabs = new ArrayList();
+public class VocabSearchView extends View {
+	private final List<RdfDAO> results = new ArrayList<>();
 	
 	/**
-	 * Get the list  of vocabularies
+	 * Get the properties of a term
 	 * 
 	 * @return 
 	 */
-	public List<VoidDAO> getVocabs() {
-		return this.vocabs;
+	public List<RdfDAO> getResults() {
+		return this.results;
 	}
 	
 	/** 
 	 * Constructor
 	 * 
+	 * @param vocab vocabulary name
 	 * @param m triples
 	 * @param lang language
 	 */
-	public VOIDView(Model m, String lang) {
-		super("void.ftl", StandardCharsets.UTF_8);
+	public VocabSearchView(String vocab, Model m, String lang) {
+		super("vocabsearch.ftl", StandardCharsets.UTF_8);
 		
-		m.subjects().forEach(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
+		m.subjects().forEach(s -> results.add(new RdfDAO(m, (IRI) s)));
 	}
 }
 

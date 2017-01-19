@@ -27,6 +27,7 @@ package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.RdfDAO;
 import io.dropwizard.views.View;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 
 
@@ -44,6 +45,7 @@ import org.eclipse.rdf4j.model.Resource;
 @Provider
 public class VocabTermView extends View {
 	private final RdfDAO term;
+	private final String vocab;
 	
 	/**
 	 * Get the properties of a term
@@ -54,17 +56,28 @@ public class VocabTermView extends View {
 		return this.term;
 	}
 	
+	/**
+	 * Get the name of the vocabulary
+	 * 
+	 * @return 
+	 */
+	public String getVocab() {
+		return this.vocab;
+	}
+	
 	/** 
 	 * Constructor
 	 * 
+	 * @param vocab vocabulary name
 	 * @param m triples
 	 * @param lang language
 	 */
-	public VocabTermView(Model m, String lang) {
-		super("vocabterm.ftl");
+	public VocabTermView(String vocab, Model m, String lang) {
+		super("vocabterm.ftl", StandardCharsets.UTF_8);
 		
 		Iterator<Resource> i = m.subjects().iterator();
-		term = i.hasNext() ? new RdfDAO(m, (IRI) i.next()) : null;
+		this.term = i.hasNext() ? new RdfDAO(m, (IRI) i.next()) : null;
+		this.vocab = vocab;
 	}
 }
 

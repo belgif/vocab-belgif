@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.dao;
 
-import be.belgif.vocab.resources.RdfResource;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
@@ -46,7 +45,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * DAO helper class for RDF triples
+ * 
  * @author Bart.Hanssens
  */
 public class RdfDAO {

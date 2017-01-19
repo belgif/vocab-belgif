@@ -28,6 +28,7 @@ package be.belgif.vocab.resources;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VOIDView;
+import be.belgif.vocab.views.VocabSearchView;
 import be.belgif.vocab.views.VocabTermView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
@@ -87,7 +88,7 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public VocabTermView getVocabListHTML(@PathParam("type") String type, 
 											@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(getById(App.PREFIX, type, ""), lang.orElse("en"));
+		return new VocabTermView(type, getById(App.PREFIX, type, ""), lang.orElse("en"));
 	}
 	
 	@GET
@@ -106,7 +107,7 @@ public class VocabResource extends RdfResource {
 	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
 											@PathParam("id") String id, 
 											@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(getById(App.PREFIX, type, id), lang.orElse("en"));
+		return new VocabTermView(type, getById(App.PREFIX, type, id), lang.orElse("en"));
 	}
 	
 		
@@ -116,6 +117,14 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
 		return getFTS(text, type);
+	}
+	@GET
+	@Path("{type}/_search")
+	@Produces({MediaType.TEXT_HTML})
+	@ExceptionMetered
+	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,
+											@QueryParam("lang") Optional<String> lang) {
+		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
 	}
 	
 	@GET
