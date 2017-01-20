@@ -6,21 +6,29 @@ luceneDir: c:/data/vocab/lucene
 
 logging:
     level: INFO
-    
-assets:
-    mappings:
-        /assets/belgif.png: /favicon.ico
-        /assets:  /static
-        /dataset: /dataset
-    overrides:
-        /dataset: /c://data/vocab/download
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: /home/dropwizard/logs/vocab.log
 
 server:
   requestLog:
     appenders:
       - type: file
         archive: false
-        currentLogFilename: ./vocab-request.log
+        currentLogFilename: /home/dropwizard/logs/vocab-request.log
+
+assets:
+    mappings:
+        /assets/belgif.png: /favicon.ico
+        /assets:  /static
+        /dataset: /dataset
+    overrides:
+        /dataset: /home/dropwizard/download
+    mimeTypes:
+        ttl: text/turtle
+        nt: application/n-triples
+        jsonld: application/ld+json
 
 views:
     .ftl:
