@@ -1,0 +1,29 @@
+
+dataDir: c:/data/vocab/store
+downloadDir: c:/data/vocab/download
+importDir: c:/data/vocab/import
+luceneDir: c:/data/vocab/lucene
+
+logging:
+    level: INFO
+    
+assets:
+    mappings:
+        /assets/belgif.png: /favicon.ico
+        /assets:  /static
+        /dataset: /dataset
+    overrides:
+        /dataset: /c://data/vocab/download
+
+server:
+  requestLog:
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: ./vocab-request.log
+
+views:
+    .ftl:
+        template_exception_handler: rethrow
+        output_encoding: utf-8
+   
