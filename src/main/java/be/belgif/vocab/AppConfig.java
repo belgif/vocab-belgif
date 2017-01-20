@@ -29,18 +29,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.ImmutableMap;
 
 import io.dropwizard.Configuration;
+import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
+import io.dropwizard.bundles.assets.AssetsConfiguration;
 import java.util.Map;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.NotEmpty;
 
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class AppConfig extends Configuration {
+public class AppConfig extends Configuration implements AssetsBundleConfiguration {
+	@NotEmpty
 	private String dataDir;
+	
+	@NotEmpty
 	private String importDir;
+	
+	@NotEmpty
+	private String downloadDir;
+	
+	@NotEmpty
 	private String luceneDir;
+	
 	private ImmutableMap<String, Map<String, String>> views;
+
+	@Valid
+    @NotNull
+    @JsonProperty
+    private final AssetsConfiguration assets = AssetsConfiguration.builder().build();;
 
 	@JsonProperty
 	public String getDataDir() {
@@ -61,6 +80,17 @@ public class AppConfig extends Configuration {
 	public void setImportDir(String importDir) {
 		this.importDir = importDir;
 	}
+	
+	@JsonProperty
+	public String getDownloadDir() {
+		return downloadDir;
+	}
+	
+	@JsonProperty
+	public void setDownloadDir(String downloadDir) {
+		this.downloadDir = downloadDir;
+	}
+
 	@JsonProperty
 	public String getLuceneDir() {
 		return luceneDir;
@@ -83,5 +113,11 @@ public class AppConfig extends Configuration {
             builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
         }
         this.views = builder.build();
+    }
+	
+
+    @Override
+    public AssetsConfiguration getAssetsConfiguration() {
+        return assets;
     }
 }

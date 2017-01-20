@@ -23,71 +23,63 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.helpers.QueryHelper;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
+import com.google.common.collect.ImmutableMultimap;
+import io.dropwizard.servlets.tasks.Task;
+
+import java.io.PrintWriter;
+import javax.ws.rs.WebApplicationException;
+
 import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.sail.SailRepository;
+import org.eclipse.rdf4j.sail.Sail;
+import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Abstract resource querying the RDF triple store.
+ * Import a SKOS file and create full (static) download files in various
  * 
  * @author Bart.Hanssens
  */
-
-public abstract class RdfResource {
+public class LuceneReindexTask extends Task {
 	private final Repository repo;
-
-	protected Model getVocabList() {
-		return QueryHelper.getVocabList(repo);
-	}
 	
-	/**
-	 * Get by ID (URI)
-	 * 
-	 * @param prefix
-	 * @param type
-	 * @param id
-	 * @return RDF model 
-	 */
-	protected Model getById(String prefix, String type, String id) {
-		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
-									: prefix + type + "#id";
-		return QueryHelper.get(repo, QueryHelper.asURI(url), type);
-	}
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(LuceneReindexTask.class);
+	
 
 	/**
-	 * Get all triples
+	 * Execute task
 	 * 
-	 * @param subj subject IRI or null
-	 * @param from named graph
-	 * @return all triples in a graph
+	 * @param param parameters
+	 * @param w output writer
+	 * @throws Exception
 	 */
-	public Model get(IRI subj, String from) {
-		return QueryHelper.get(repo, subj, from);
-	}
-	
-	/**
-	 * Search full text
-	 * 
-	 * @param text text to search for
-	 * @param type vocabulary
-	 * @return 
-	 */
-	protected Model getFTS(String text, String type) {
-		return QueryHelper.getFTS(repo, text, type);
+	@Override
+	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
+		if (repo instanceof SailRepository) {
+			Sail sail = ((SailRepository) repo).getSail();
+			if (sail instanceof LuceneSail) {
+				LOG.info("Reindexing lucene sail");
+				((LuceneSail) sail).reindex();
+				LOG.info("Done");
+			}
+		} else {
+			throw new WebApplicationException("Not a Sail repository");
+		}
 	}
 	
 	/**
 	 * Constructor
 	 * 
-	 * @param repo 
+	 * @param repo triple store
 	 */
-	public RdfResource(Repository repo) {
+	public LuceneReindexTask(Repository repo) {
+		super("lucene-reindex");
 		this.repo = repo;
 	}
-}
 
+}

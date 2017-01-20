@@ -32,12 +32,14 @@ import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
+import java.io.BufferedWriter;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Date;
 import java.util.Optional;
 
@@ -58,6 +60,7 @@ import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
 
 import org.slf4j.Logger;
@@ -74,15 +77,42 @@ public class VocabImportTask extends Task {
 	private final Repository repo;
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
-	
 
+	/**
+	 * Export the triples to data dump files of various formats
+	 * 
+	 * @param conn triple store repository connection
+	 * @param name name of the thesaurus
+	 * @param ctx context / named graph
+	 * @return 
+	 */	
+	private void writeDumps(RepositoryConnection conn, String name, Resource ctx) throws IOException {
+		LOG.info("Writing data dumps for {}", name);
+			
+		for(String ftype: App.FTYPES.keySet()) {
+			Path p = Paths.get(downloadDir, name + "." + ftype);
+			try (BufferedWriter w = Files.newBufferedWriter(p, StandardOpenOption.WRITE, 
+															StandardOpenOption.CREATE)) {
+				Optional<RDFFormat> fmt  =
+						Rio.getWriterFormatForFileName(name + "." + ftype);
+				if (fmt.isPresent()) {
+					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
+					LOG.info("Writing file {}", p);
+					conn.export(rdfh, ctx);
+				} else {
+					throw new IOException("No RDF writer found for " + ftype);
+				}
+			}
+		}
+	}
+	
 	/**
 	 * Add VoID metadata about the thesaurus
 	 * 
 	 * @param conn triple store repository connection
 	 * @param name name of the thesaurus
 	 * @param ctx context / named graph
-	 * @return 
+	 * @return VoID triples
 	 */	
 	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
 		LOG.info("Adding VOID metadata for {}", name);
@@ -127,14 +157,18 @@ public class VocabImportTask extends Task {
 			String vocab = name.split("\\.")[0];
 			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
 			conn.begin();
+			
 			conn.remove((Resource) null, null, null, ctx);
 			conn.add(file.toFile(), null, format, ctx);
 			Model voidM = addVOID(conn, vocab, ctx);
 			conn.add(voidM, ctx);
+			
+			writeDumps(conn, vocab, ctx);
+			
 			conn.commit();
 		} catch (RepositoryException|IOException rex) {
 			// will be rolled back automatically
-			throw new WebApplicationException("Error adding statements", rex);
+			throw new WebApplicationException("Error importing vocabulary", rex);
 		}
 	}
 	

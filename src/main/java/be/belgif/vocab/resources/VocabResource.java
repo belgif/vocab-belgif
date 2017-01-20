@@ -126,7 +126,7 @@ public class VocabResource extends RdfResource {
 											@QueryParam("lang") Optional<String> lang) {
 		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
 	}
-	
+/*	
 	@GET
 	@Path("dataset/{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
@@ -134,7 +134,7 @@ public class VocabResource extends RdfResource {
 	public Model getGraphs(@PathParam("type") String type) {
 		return get(null, type);
 	}
-	
+*/	
 	/**
 	 * Constructor
 	 * 

@@ -31,9 +31,10 @@ import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.tasks.VocabImportTask;
+import be.belgif.vocab.tasks.LuceneReindexTask;
 
 import io.dropwizard.Application;
-import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
@@ -63,7 +64,7 @@ public class App extends Application<AppConfig> {
 	public final static Map<String,MediaType> FTYPES = new HashMap<>();
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
-		FTYPES.put("json", MediaType.valueOf(RDFMediaType.JSONLD));
+		FTYPES.put("jsonld", MediaType.valueOf(RDFMediaType.JSONLD));
 		FTYPES.put("nt", MediaType.valueOf(RDFMediaType.NTRIPLES));
 	}
 	
@@ -101,7 +102,7 @@ public class App extends Application<AppConfig> {
 	
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
-		config.addBundle(new AssetsBundle("/assets", "/static"));
+		config.addBundle(new ConfiguredAssetsBundle());
 		config.addBundle(new ViewBundle<AppConfig>() { 
 			@Override
 			public Map<String, Map<String, String>> getViewConfiguration(AppConfig config) {
@@ -129,7 +130,8 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new VocabResource(repo));
 
 		// Tasks
-		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getImportDir()));
+		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getDownloadDir()));
+		env.admin().addTask(new LuceneReindexTask(repo));
 				
 		// Monitoring
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
