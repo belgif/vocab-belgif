@@ -70,13 +70,12 @@
 		<#list sa as s>
 		    <tr><td>SKOS exactMatch</td><td><a href="${s}">${s}</a></td></tr>
 		</#list>
-	    </section>
+	    </#if>
 	    <#assign sa = v.sameAs>
 	    <#if sa?size gt 0>
 		<#list sa as s>
 		    <tr><td>OWL sameAs</td><td><a href="${s}">${s}</a></td></tr>
 		</#list>
-	    </section>
 	    </#if>
 	    </table>
 	</section>
