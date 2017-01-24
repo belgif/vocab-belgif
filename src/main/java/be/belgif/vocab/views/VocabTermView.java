@@ -73,7 +73,7 @@ public class VocabTermView extends View {
 	 * @param lang language
 	 */
 	public VocabTermView(String vocab, Model m, String lang) {
-		super("vocabterm.ftl", StandardCharsets.UTF_8);
+		super(m.isEmpty() ? "notfound.ftl" : "vocabterm.ftl", StandardCharsets.UTF_8);
 		
 		Iterator<Resource> i = m.subjects().iterator();
 		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;

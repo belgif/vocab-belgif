@@ -64,7 +64,7 @@ public class VocabSearchView extends View {
 	 */
 	public VocabSearchView(String vocab, Model m, String lang) {
 		super("vocabsearch.ftl", StandardCharsets.UTF_8);
-
+		
 		m.subjects().forEach(s -> results.add(new RdfDAO(m, (IRI) s)));
 	}
 }
