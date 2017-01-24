@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
-<title>Belgif - Vocabularies</title>
+<title>Belgif - Vocabularies DEMO</title>
 </head>
 <body>
 <header>
@@ -25,7 +25,7 @@
     </div>
     <div id="site-name">
 	<h1 class="site-name">Belgif</h1>
-	<h2 class="slogan">Linked Open Data Thesauri</h2>
+	<h2 class="slogan">Linked Open Data Thesauri DEMO</h2>
     </div>
 </header>
 <main>

@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
-<title>Belgif - Vocabularies</title>
+<title>Belgif - Vocabularies DEMO</title>
 </head>
 <body>
 <header>
@@ -25,7 +25,7 @@
     </div>
     <div id="site-name">
 	<h1 class="site-name">Belgif</h1>
-	<h2 class="slogan">Linked Open Data Thesauri</h2>
+	<h2 class="slogan">Linked Open Data Thesauri DEMO</h2>
     </div>
 </header>
 <main>
@@ -65,6 +65,13 @@
 		    <tr><td>SKOS altLabel (${lang})</td><td>${val}</td></tr>
 		</#if>
 	    </#list>
+	    <#assign sa = v.sameAs>
+	    <#if sa?size gt 0>
+		<#list sa as s>
+		    <tr><td>OWL sameAs</td><td><a href="${s}">${s}</a></td></tr>
+		</#list>
+	    </section>
+	    </#if>
 	    </table>
 	</section>
 	<#assign tc = v.objs("skos", "hasTopConcept")>
@@ -78,7 +85,7 @@
 	    </table>
 	</section>
 	</#if>
-	<#assign tc = v.objs("skos", "narrower")>
+	<#assign tc = v.narrower>
 	<#if tc?size gt 0>
 	<section>
 	    <h4>SKOS narrower</h4>
@@ -89,7 +96,7 @@
 	    </table>
 	</section>
 	</#if>
-	<#assign tc = v.objs("skos", "broader")>
+	<#assign tc = v.broader>
 	<#if tc?size gt 0>
 	<section>
 	    <h4>SKOS broader</h4>

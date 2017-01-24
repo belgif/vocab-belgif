@@ -109,7 +109,6 @@ public class VocabResource extends RdfResource {
 											@QueryParam("lang") Optional<String> lang) {
 		return new VocabTermView(type, getById(App.PREFIX, type, id), lang.orElse("en"));
 	}
-	
 		
 	@GET
 	@Path("{type}/_search")

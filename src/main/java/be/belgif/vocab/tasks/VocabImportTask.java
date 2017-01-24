@@ -122,15 +122,19 @@ public class VocabImportTask extends Task {
 		IRI voidID  = f.createIRI(App.PREFIX + "void#" + name);
 
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
-		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
-		
+
 		Iterations.asList(conn.getStatements(null, DCTERMS.TITLE, null, ctx)).forEach(
 				s -> m.add(voidID, DCTERMS.TITLE, s.getObject()));
 		Iterations.asList(conn.getStatements(null, DCTERMS.DESCRIPTION, null, ctx)).forEach(
 				s -> m.add(voidID, DCTERMS.DESCRIPTION, s.getObject()));
-				
+
+		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));		
+		m.add(voidID, DCTERMS.LICENSE, f.createIRI("http://creativecommons.org/publicdomain/zero/1.0/"));
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(App.PREFIX));
 		m.add(voidID, VOID.DATA_DUMP, f.createIRI(App.PREFIX + "dataset/" + name));
+		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/N-Triples"));
+		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/Turtle"));
+		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/JSON-LD"));
 		
 		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
 				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));

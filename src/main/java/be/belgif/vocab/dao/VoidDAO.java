@@ -38,6 +38,11 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
  */
 public class VoidDAO extends RdfDAO {
 
+	/**
+	 * Get SKOS root resource
+	 * 
+	 * @return uri as string 
+	 */
 	public String getRoot() {
 		return obj(VOID.ROOT_RESOURCE).toString();
 	}

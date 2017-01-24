@@ -23,61 +23,58 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.dao;
 
-import be.belgif.vocab.dao.SkosDAO;
-import io.dropwizard.views.View;
-import java.nio.charset.StandardCharsets;
-import java.util.Iterator;
+import java.util.Set;
 
-
-import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
-
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
- * HTML Writer
+ * DAO helper class for VoID.
  * 
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabTermView extends View {
-	private final SkosDAO term;
-	private final String vocab;
+public class SkosDAO extends RdfDAO {
+
+	/**
+	 * Get list of SKOS broader
+	 * 
+	 * @return uri as string 
+	 */
+	public Set<Value> getBroader() {
+		return objs(SKOS.BROADER);
+	}
+
+	/**
+	 * Get list of SKOS narrower
+	 * 
+	 * @return uri as string 
+	 */
+	public Set<Value> getNarrower() {
+		return objs(SKOS.NARROWER);
+	}
+	
 	
 	/**
-	 * Get the properties of a term
+	 * Get download URL
 	 * 
-	 * @return 
+	 * @return download URL
 	 */
-	public SkosDAO getTerm() {
-		return this.term;
+	public String getDownload() {
+		return obj(VOID.DATA_DUMP).toString();
 	}
 	
 	/**
-	 * Get the name of the vocabulary
-	 * 
-	 * @return 
-	 */
-	public String getVocab() {
-		return this.vocab;
-	}
-	
-	/** 
 	 * Constructor
 	 * 
-	 * @param vocab vocabulary name
 	 * @param m triples
-	 * @param lang language
+	 * @param id subject ID
 	 */
-	public VocabTermView(String vocab, Model m, String lang) {
-		super("vocabterm.ftl", StandardCharsets.UTF_8);
-		
-		Iterator<Resource> i = m.subjects().iterator();
-		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
-		this.vocab = vocab;
+	public SkosDAO(Model m, IRI id) {
+		super(m, id);
 	}
 }
-

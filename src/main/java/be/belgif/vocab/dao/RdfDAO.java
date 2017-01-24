@@ -40,6 +40,7 @@ import org.eclipse.rdf4j.model.Namespace;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -137,6 +138,15 @@ public class RdfDAO {
 			}
 		}
 		return vals;
+	}
+	
+	/**
+	 * Get sameAs URI
+	 * 
+	 * @return set of uri
+	 */
+	public Set<Value> getSameAs() {
+		return objs(OWL.SAMEAS);
 	}
 	
 	/**

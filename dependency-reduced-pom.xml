@@ -21,7 +21,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>be.fedict.vocab.App</mainClass>
+                  <mainClass>be.belgif.vocab.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>
