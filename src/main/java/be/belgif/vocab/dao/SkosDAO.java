@@ -46,7 +46,7 @@ public class SkosDAO extends RdfDAO {
 	 * @return string 
 	 */
 	public String getNotation() {
-		return obj(SKOS.NOTATION).toString();
+		return literal(SKOS.NOTATION);
 	}
 	
 	/**

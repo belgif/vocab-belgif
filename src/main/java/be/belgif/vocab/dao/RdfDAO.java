@@ -111,6 +111,28 @@ public class RdfDAO {
 	/**
 	 * Get one literal
 	 * 
+	 * @param prop property uri
+	 * @return literals (IRI or literal)
+	 */
+	public Set<Literal> literals(IRI prop) {
+		Set objs = m.filter(id, prop, null).objects();
+		return (objs == null ? Collections.EMPTY_SET : objs);
+	}
+	
+	/**
+	 * Get one literal
+	 * 
+	 * @param prop property URI
+	 * @return literal
+	 */
+	public String literal(IRI prop) {
+		Iterator<Literal> i = literals(prop).iterator();
+		return (i.hasNext() ? i.next().stringValue() : null);
+	}
+	
+	/**
+	 * Get one literal
+	 * 
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code

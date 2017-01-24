@@ -65,6 +65,12 @@
 		    <tr><td>SKOS altLabel (${lang})</td><td>${val}</td></tr>
 		</#if>
 	    </#list>
+	    <#assign sa = v.exactMatch>
+	    <#if sa?size gt 0>
+		<#list sa as s>
+		    <tr><td>SKOS exactMatch</td><td><a href="${s}">${s}</a></td></tr>
+		</#list>
+	    </section>
 	    <#assign sa = v.sameAs>
 	    <#if sa?size gt 0>
 		<#list sa as s>
