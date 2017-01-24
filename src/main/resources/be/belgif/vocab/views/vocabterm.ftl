@@ -49,7 +49,7 @@
 		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
 		 </#if>
 	    </#list>
-	    <#assign l = v.literal("skos", "notation", "")!"">
+	    <#assign l = v.notation!"">
 	    <#if l?has_content>
 		<tr><td>SKOS notation</td><td>${l}</td></tr>
 	    </#if>

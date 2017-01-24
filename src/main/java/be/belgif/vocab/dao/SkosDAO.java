@@ -41,6 +41,15 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
 public class SkosDAO extends RdfDAO {
 
 	/**
+	 * Get SKOS notation
+	 * 
+	 * @return string 
+	 */
+	public String getNotation() {
+		return obj(SKOS.NOTATION).toString();
+	}
+	
+	/**
 	 * Get list of SKOS broader
 	 * 
 	 * @return uri as string 
@@ -56,6 +65,15 @@ public class SkosDAO extends RdfDAO {
 	 */
 	public Set<Value> getNarrower() {
 		return objs(SKOS.NARROWER);
+	}
+	
+	/**
+	 * Get list of SKOS exactMatches
+	 * 
+	 * @return set of uri
+	 */
+	public Set<Value> getExactMatch() {
+		return objs(SKOS.EXACT_MATCH);
 	}
 	
 	
