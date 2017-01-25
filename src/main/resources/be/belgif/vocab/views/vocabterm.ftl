@@ -72,27 +72,14 @@
 	    </#list>
 	    </table>
 	</section>
-
-	<#assign tc = v.objs("skos", "hasTopConcept")>
-	<#if tc?size gt 0>
-	<section>
-	    <h4>SKOS TopConcepts</h4>
-	    <table>
-	    <#list tc as t>
-		<tr><td><a href="${t}">${t}</a></td></tr>
-	    </#list>
-	    </table>
-	</section>
-	</#if>
-
 	<#list [ "narrower", "broader" ] as bn>
-	    <#assign x = v.objs("skos", bn)>
-	    <#if x?has_content>
+	    <#assign rels = v.objs("skos", bn)>
+	    <#if rels?has_content>
 	    <section>
-		<h4>SKOS {bn}</h4>
+		<h4>SKOS ${bn}</h4>
 		<table>
-		<#list tc as t>
-		    <tr><td><a href="${x.stringValue}">${x}</a></td></tr>
+		<#list rels as rel>
+		    <tr><td><a href="${rel}">${rel}</a></td></tr>
 		</#list>
 		</table>
 	    </section>
