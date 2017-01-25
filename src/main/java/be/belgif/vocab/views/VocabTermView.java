@@ -38,7 +38,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 
 /**
- * HTML Writer
+ * HTML View for SKOS term
  * 
  * @author Bart.Hanssens
  */

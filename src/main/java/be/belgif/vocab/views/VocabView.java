@@ -25,34 +25,44 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.RdfDAO;
+import be.belgif.vocab.dao.SkosDAO;
 import io.dropwizard.views.View;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
 
 import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 
 /**
- * HTML view for search across vocabulary
+ * HTML view for SKOS concept schema
  * 
  * @author Bart.Hanssens
  */
 @Provider
-public class VocabSearchView extends View {
-	private final List<RdfDAO> results = new ArrayList<>();
+public class VocabView extends View {
+	private final SkosDAO term;
+	private final String vocab;
 	
 	/**
 	 * Get the properties of a term
 	 * 
 	 * @return 
 	 */
-	public List<RdfDAO> getResults() {
-		return this.results;
+	public SkosDAO getTerm() {
+		return this.term;
+	}
+	
+	/**
+	 * Get the name of the vocabulary
+	 * 
+	 * @return 
+	 */
+	public String getVocab() {
+		return this.vocab;
 	}
 	
 	/** 
@@ -62,10 +72,12 @@ public class VocabSearchView extends View {
 	 * @param m triples
 	 * @param lang language
 	 */
-	public VocabSearchView(String vocab, Model m, String lang) {
-		super("vocabsearch.ftl", StandardCharsets.UTF_8);
+	public VocabView(String vocab, Model m, String lang) {
+		super(m.isEmpty() ? "notfound.ftl" : "vocab.ftl", StandardCharsets.UTF_8);
 		
-		m.subjects().forEach(s -> results.add(new RdfDAO(m, (IRI) s)));
+		Iterator<Resource> i = m.subjects().iterator();
+		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
+		this.vocab = vocab;
 	}
 }
 

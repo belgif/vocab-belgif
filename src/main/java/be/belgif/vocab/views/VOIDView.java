@@ -39,7 +39,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
 /**
- * HTML Writer
+ * HTML view for VoID descriptions
  * 
  * @author Bart.Hanssens
  */

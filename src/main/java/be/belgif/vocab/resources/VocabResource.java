@@ -30,6 +30,7 @@ import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VOIDView;
 import be.belgif.vocab.views.VocabSearchView;
 import be.belgif.vocab.views.VocabTermView;
+import be.belgif.vocab.views.VocabView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
 import java.util.Optional;
@@ -86,9 +87,9 @@ public class VocabResource extends RdfResource {
 	@Path("{type}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VocabTermView getVocabListHTML(@PathParam("type") String type, 
-											@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(type, getById(App.PREFIX, type, ""), lang.orElse("en"));
+	public VocabView getVocabListHTML(@PathParam("type") String type, 
+										@QueryParam("lang") Optional<String> lang) {
+		return new VocabView(type, getById(App.PREFIX, type, ""), lang.orElse("en"));
 	}
 	
 	@GET

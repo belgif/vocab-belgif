@@ -50,34 +50,6 @@ public class SkosDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Get list of SKOS broader
-	 * 
-	 * @return uri as string 
-	 */
-	public Set<Value> getBroader() {
-		return objs(SKOS.BROADER);
-	}
-
-	/**
-	 * Get list of SKOS narrower
-	 * 
-	 * @return uri as string 
-	 */
-	public Set<Value> getNarrower() {
-		return objs(SKOS.NARROWER);
-	}
-	
-	/**
-	 * Get list of SKOS exactMatches
-	 * 
-	 * @return set of uri
-	 */
-	public Set<Value> getExactMatch() {
-		return objs(SKOS.EXACT_MATCH);
-	}
-	
-	
-	/**
 	 * Get download URL
 	 * 
 	 * @return download URL
