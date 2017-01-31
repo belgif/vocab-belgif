@@ -67,7 +67,7 @@
 	    <#assign refs = [ "exactMatch", "closeMatch", "broadMatch", "narrowMatch" ]>
 	    <#list refs as ref>
 		<#list v.objs("skos", ref)!"" as val>
-		    <tr><td>SKOS {ref}</td><td><a href="${val}">${val}</a></td></tr>
+		    <tr><td>SKOS {$ref}</td><td><a href="${val}">${val}</a></td></tr>
 		</#list>
 	    </#list>
 	    </table>

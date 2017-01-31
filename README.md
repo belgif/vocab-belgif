@@ -32,7 +32,7 @@ The `name` parameter must contain the file name of the SKOS file to be imported.
 curl -X POST --data="name=newthes.nt" http://localhost:8081/tasks/vocab-import
 ```
 
-Note that the file name will be used to construct an RDF4j Context / named graph
+The file name will be used to construct an RDF4j Context / named graph
 
 The import task will add some VoID statistics and metadata,
 and generate dump files in several formats (JSON-LD, N-Triples and Turtle)
