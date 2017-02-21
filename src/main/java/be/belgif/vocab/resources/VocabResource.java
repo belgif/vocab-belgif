@@ -50,33 +50,10 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/")
+@Path("/auth")
 public class VocabResource extends RdfResource {
 	@GET
-	@Path("{file:^$|void}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVOIDvoid() {
-		return getVocabList();
-	}	
-	
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	@ExceptionMetered
-	public VOIDView getVOIDHTML(@QueryParam("lang") Optional<String> lang) {
-		return new VOIDView(getVocabList(), lang.orElse("en"));
-	}
-	
-	@GET
-	@Path("{file:^$|void}")
-	@Produces(MediaType.TEXT_HTML)
-	@ExceptionMetered
-	public VOIDView getVOIDHTMLvoid(@QueryParam("lang") Optional<String> lang) {
-		return new VOIDView(getVocabList(), lang.orElse("en"));
-	}
-	
-	@GET
-	@Path("{type}")
+	@Path("{type}/")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("type") String type) {
@@ -84,7 +61,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}")
+	@Path("{type}/")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VocabView getVocabListHTML(@PathParam("type") String type, 
@@ -111,30 +88,7 @@ public class VocabResource extends RdfResource {
 		return new VocabTermView(type, getById(App.PREFIX, type, id), lang.orElse("en"));
 	}
 		
-	@GET
-	@Path("{type}/_search")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, type);
-	}
-	@GET
-	@Path("{type}/_search")
-	@Produces({MediaType.TEXT_HTML})
-	@ExceptionMetered
-	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,
-											@QueryParam("lang") Optional<String> lang) {
-		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
-	}
-/*	
-	@GET
-	@Path("dataset/{type}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL}) 
-	@ExceptionMetered
-	public Model getGraphs(@PathParam("type") String type) {
-		return get(null, type);
-	}
-*/	
+
 	/**
 	 * Constructor
 	 * 

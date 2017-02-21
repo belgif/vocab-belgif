@@ -26,15 +26,13 @@
 package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.RdfDAO;
-import io.dropwizard.views.View;
-import java.nio.charset.StandardCharsets;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
 import javax.ws.rs.ext.Provider;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
 /**
@@ -43,7 +41,7 @@ import org.eclipse.rdf4j.model.Model;
  * @author Bart.Hanssens
  */
 @Provider
-public class VocabSearchView extends View {
+public class VocabSearchView extends RdfView {
 	private final List<RdfDAO> results = new ArrayList<>();
 	
 	/**
@@ -63,7 +61,7 @@ public class VocabSearchView extends View {
 	 * @param lang language
 	 */
 	public VocabSearchView(String vocab, Model m, String lang) {
-		super("vocabsearch.ftl", StandardCharsets.UTF_8);
+		super("vocabsearch.ftl", lang);
 		
 		m.subjects().forEach(s -> results.add(new RdfDAO(m, (IRI) s)));
 	}

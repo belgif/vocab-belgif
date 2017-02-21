@@ -25,56 +25,53 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.SkosDAO;
+import io.dropwizard.views.View;
 
-import java.util.Iterator;
+import java.nio.charset.StandardCharsets;
 
-import javax.ws.rs.ext.Provider;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 
 /**
- * HTML View for SKOS term
+ * HTML view for SKOS concept schema
  * 
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabTermView extends RdfView {
-	private final SkosDAO term;
-	private final String vocab;
+public abstract class RdfView extends View {
+	private final String lang;
+	private final ResourceBundle msgs;
 	
 	/**
-	 * Get the properties of a term
+	 * Get the language code
 	 * 
-	 * @return 
+	 * @return language code
 	 */
-	public SkosDAO getTerm() {
-		return this.term;
+	public String getLang() {
+		return this.lang;
 	}
 	
 	/**
-	 * Get the name of the vocabulary
+	 * Get the message bundle
 	 * 
-	 * @return 
+	 * @return resource bundle
 	 */
-	public String getVocab() {
-		return this.vocab;
+	public ResourceBundle getMessages() {
+		return this.msgs;
 	}
+	
 	
 	/** 
 	 * Constructor
 	 * 
-	 * @param vocab vocabulary name
-	 * @param m triples
+	 * @param template template file
 	 * @param lang language
 	 */
-	public VocabTermView(String vocab, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "vocabterm.ftl", lang);
-		
-		Iterator<Resource> i = m.subjects().iterator();
-		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
-		this.vocab = vocab;
+	public RdfView(String template, String lang) {
+		super(template, StandardCharsets.UTF_8);
+		this.lang = (lang == null || lang.isEmpty()) ? "en" : lang;
+		this.msgs = ResourceBundle.getBundle("be.belgif.vocab.views.MessageBundle", new Locale(this.lang));
 	}
 }
+

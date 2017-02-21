@@ -23,58 +23,58 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.resources;
 
-import be.belgif.vocab.dao.SkosDAO;
+import be.belgif.vocab.App;
+import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VOIDView;
+import be.belgif.vocab.views.VocabSearchView;
+import be.belgif.vocab.views.VocabTermView;
+import be.belgif.vocab.views.VocabView;
 
-import java.util.Iterator;
+import com.codahale.metrics.annotation.ExceptionMetered;
+import java.util.Optional;
 
-import javax.ws.rs.ext.Provider;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * HTML View for SKOS term
+ * Vocabulary term of a SKOS thesaurus.
  * 
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabTermView extends RdfView {
-	private final SkosDAO term;
-	private final String vocab;
-	
-	/**
-	 * Get the properties of a term
-	 * 
-	 * @return 
-	 */
-	public SkosDAO getTerm() {
-		return this.term;
+@Path("/search")
+public class SearchResource extends RdfResource {
+	@GET
+	@Path("{type}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
+		return getFTS(text, type);
 	}
 	
-	/**
-	 * Get the name of the vocabulary
-	 * 
-	 * @return 
-	 */
-	public String getVocab() {
-		return this.vocab;
+	@GET
+	@Path("{type}")
+	@Produces({MediaType.TEXT_HTML})
+	@ExceptionMetered
+	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,
+											@QueryParam("lang") Optional<String> lang) {
+		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
 	}
-	
-	/** 
+
+	/**
 	 * Constructor
 	 * 
-	 * @param vocab vocabulary name
-	 * @param m triples
-	 * @param lang language
+	 * @param repo RDF triple store
 	 */
-	public VocabTermView(String vocab, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "vocabterm.ftl", lang);
-		
-		Iterator<Resource> i = m.subjects().iterator();
-		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
-		this.vocab = vocab;
+	public SearchResource(Repository repo) {
+		super(repo);
 	}
 }

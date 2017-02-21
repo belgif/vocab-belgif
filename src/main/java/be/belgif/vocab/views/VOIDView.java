@@ -27,9 +27,6 @@ package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.VoidDAO;
 
-import io.dropwizard.views.View;
-
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +41,7 @@ import org.eclipse.rdf4j.model.Model;
  * @author Bart.Hanssens
  */
 @Provider
-public class VOIDView extends View {
+public class VOIDView extends RdfView {
 	private final List<VoidDAO> vocabs = new ArrayList();
 	
 	/**
@@ -63,8 +60,7 @@ public class VOIDView extends View {
 	 * @param lang language
 	 */
 	public VOIDView(Model m, String lang) {
-		super("void.ftl", StandardCharsets.UTF_8);
-		
+		super("void.ftl", lang);
 		m.subjects().forEach(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
 	}
 }

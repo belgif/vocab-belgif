@@ -29,7 +29,9 @@ import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
+import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
+import be.belgif.vocab.resources.VoidResource;
 import be.belgif.vocab.tasks.VocabImportTask;
 import be.belgif.vocab.tasks.LuceneReindexTask;
 
@@ -127,7 +129,9 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new RDFMessageBodyWriter());
 		
 		// Resources / "web pages"
+		env.jersey().register(new VoidResource(repo));
 		env.jersey().register(new VocabResource(repo));
+		env.jersey().register(new SearchResource(repo));
 
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getDownloadDir()));

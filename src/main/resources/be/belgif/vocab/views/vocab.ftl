@@ -6,42 +6,22 @@
 <title>Belgif - Vocabularies DEMO</title>
 </head>
 <body>
-<header>
-    <div id="logo-wrapper">
-    <a href="index.html">
-	<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
-    </a>
-    </div>
-    <div id="lang-wrapper">
-    <div id="languages">
-    <ul>
-	<li class="disabled">nl</li>
-	<li class="disabled">fr</li>
-	<li class="disabled">de</li>
-	<li class="disabled">en</li>
-    </ul>
-    </div>
-    <div id="flag"></div>
-    </div>
-    <div id="site-name">
-	<h1 class="site-name">Belgif</h1>
-	<h2 class="slogan">Linked Open Data Thesauri DEMO</h2>
-    </div>
-</header>
+<#include "header.ftl">
+<#assign m = messages>
+<#assign v = term>
+<#assign langs = ['nl', 'fr', 'en', 'de']>
 <main>
-    <#assign v = term>
-    <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>${v.id}</h3>
 	<section>
-	    <h4>Search</h4>
+	    <h4>${msg.getString("msg.search")}</h4>
 	    <form method="get" action="/${vocab}/_search">
 		<input name="q" type="search"/>
 		<input name="search" type="submit"/>
 	    </form>
 	</section>
 	<section>
-	    <h4>General</h4>
+	    <h4>${msg.getString("msg.general")}</h4>
 	    <table>
 	    <#assign n = v.notation!"">
 	    <#list langs as lang>
@@ -65,8 +45,6 @@
 	</#if>
     </section>
 </main>
-<footer>
-	&copy; 2017 <a href="http://www.fedict.belgium.be">Fedict</a>
-</footer>
+<#include "footer.ftl">
 </body>
 </html>

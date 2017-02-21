@@ -6,42 +6,23 @@
 <title>Belgif - Vocabularies DEMO</title>
 </head>
 <body>
-<header>
-    <div id="logo-wrapper">
-    <a href=".">
-	<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
-    </a>
-    </div>
-    <div id="lang-wrapper">
-    <div id="languages">
-    <ul>
-	<li class="disabled">nl</li>
-	<li class="disabled">fr</li>
-	<li class="disabled">de</li>
-	<li class="disabled">en</li>
-    </ul>
-    </div>
-    <div id="flag"></div>
-    </div>
-    <div id="site-name">
-	<h1 class="site-name">Belgif</h1>
-	<h2 class="slogan">Linked Open Data Thesauri DEMO</h2>
-    </div>
-</header>
+<#include "header.ftl">
+<#assign m = messages>
 <main>
     <div id="container">
     <section>
 	<h3>Thesauri</h3>
 	<section>
-	    <h4>Overview</h4>
+	    <h4>${m.getString("msg.overview")}</h4>
 	    <table>
 	    <tr><th>Name</th>
 		<th>Description</th>
 		<th>Download</th>
 	    </tr>
+	    <#assign l = lang>
 	    <#list vocabs as v>
-	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", "en")!""}</a></td>
-		<td>${v.literal("dcterms", "description", "en")!""}</td>
+	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", l)!""}</a></td>
+		<td>${v.literal("dcterms", "description", l)!""}</td>
 		<td><a href="${v.download!""}.ttl">TTL</a>
 		    <a href="${v.download!""}.jsonld">JSON-LD</a>
 		    <a href="${v.download!""}.nt">N-Triples</a></td>
@@ -62,8 +43,6 @@
     </section>
     </div>
 </main>
-<footer>
-	&copy; 2017 <a href="http://www.fedict.belgium.be">Fedict</a>
-</footer>
+<#include "footer.ftl">
 </body>
 </html>

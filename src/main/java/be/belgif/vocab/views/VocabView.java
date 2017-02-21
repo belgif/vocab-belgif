@@ -26,14 +26,12 @@
 package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.SkosDAO;
-import io.dropwizard.views.View;
-import java.nio.charset.StandardCharsets;
+
 import java.util.Iterator;
 
-
 import javax.ws.rs.ext.Provider;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 
@@ -43,7 +41,7 @@ import org.eclipse.rdf4j.model.Resource;
  * @author Bart.Hanssens
  */
 @Provider
-public class VocabView extends View {
+public class VocabView extends RdfView {
 	private final SkosDAO term;
 	private final String vocab;
 	
@@ -73,7 +71,7 @@ public class VocabView extends View {
 	 * @param lang language
 	 */
 	public VocabView(String vocab, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "vocab.ftl", StandardCharsets.UTF_8);
+		super(m.isEmpty() ? "notfound.ftl" : "vocab.ftl", lang);
 		
 		Iterator<Resource> i = m.subjects().iterator();
 		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
