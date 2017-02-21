@@ -7,20 +7,21 @@
 </head>
 <body>
 <#include "header.ftl">
+<#assign m = messages>
 <main>
     <#assign v = term>
     <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>${v.id}</h3>
 	<section>
-	    <h4>Search</h4>
+	    <h4>${m.getString("msg.search")}</h4>
 	    <form method="get" action="/_search/${vocab}">
 		<input name="q" type="search"/>
 		<input name="search" type="submit"/>
 	    </form>
 	</section>
 	<section>
-	    <h4>General</h4>
+	    <h4>${m.getString("msg.general")}</h4>
 	    <table>
 	    <#assign n = v.notation!"">
 	    <#if n?has_content>

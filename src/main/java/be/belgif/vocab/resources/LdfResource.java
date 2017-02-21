@@ -43,35 +43,28 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Full text search
+ * Linked Data Fragments search.
  * 
  * @author Bart.Hanssens
  */
-@Path("/_search")
-public class SearchResource extends RdfResource {
+@Path("/_ldf")
+public class LdfResource extends RdfResource {
 	@GET
-	@Path("{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, type);
+	public Model search(@QueryParam("s") String s, 
+						@QueryParam("p") String p, 
+						@QueryParam("o") String o) {
+		return null;
 	}
 	
-	@GET
-	@Path("{type}")
-	@Produces({MediaType.TEXT_HTML})
-	@ExceptionMetered
-	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,
-											@QueryParam("lang") Optional<String> lang) {
-		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
-	}
 
 	/**
 	 * Constructor
 	 * 
 	 * @param repo RDF triple store
 	 */
-	public SearchResource(Repository repo) {
+	public LdfResource(Repository repo) {
 		super(repo);
 	}
 }
