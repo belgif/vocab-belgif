@@ -26,6 +26,7 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.QueryHelper;
+import be.belgif.vocab.helpers.QueryHelperFTS;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -78,7 +79,7 @@ public abstract class RdfResource {
 	 * @return 
 	 */
 	protected Model getFTS(String text, String type) {
-		return QueryHelper.getFTS(repo, text, type);
+		return QueryHelperFTS.getFTS(repo, text, type);
 	}
 	
 	/**

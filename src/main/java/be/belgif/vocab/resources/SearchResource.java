@@ -50,7 +50,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/_search")
 public class SearchResource extends RdfResource {
 	@GET
-	@Path("{type}")
+	@Path("/{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
@@ -58,7 +58,7 @@ public class SearchResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}")
+	@Path("/{type}")
 	@Produces({MediaType.TEXT_HTML})
 	@ExceptionMetered
 	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,

@@ -53,7 +53,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/auth")
 public class VocabResource extends RdfResource {
 	@GET
-	@Path("{type}/")
+	@Path("/{type}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("type") String type) {
@@ -61,7 +61,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}/")
+	@Path("/{type}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VocabView getVocabListHTML(@PathParam("type") String type, 
@@ -70,7 +70,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}/{id}")
+	@Path("/{type}/{id}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabTermRDF(@PathParam("type") String type, 
@@ -79,7 +79,7 @@ public class VocabResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("{type}/{id}")
+	@Path("/{type}/{id}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 

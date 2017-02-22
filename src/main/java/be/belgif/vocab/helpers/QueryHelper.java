@@ -6,20 +6,18 @@
 package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.App;
-import java.util.HashMap;
-import java.util.Map;
 import javax.ws.rs.WebApplicationException;
+
 import org.eclipse.rdf4j.common.iteration.Iterations;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
-
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Statement;
-import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
@@ -28,13 +26,8 @@ import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 
-import org.eclipse.rdf4j.query.GraphQuery;
-import org.eclipse.rdf4j.query.MalformedQueryException;
-import org.eclipse.rdf4j.query.QueryEvaluationException;
-import org.eclipse.rdf4j.query.QueryLanguage;
-import org.eclipse.rdf4j.query.QueryResults;
-import org.eclipse.rdf4j.repository.Repository;
 
+import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
 import org.eclipse.rdf4j.repository.RepositoryResult;
@@ -47,16 +40,6 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
 public class QueryHelper {
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
 	
-	private final static String Q_FTS = 
-		"PREFIX search: <http://www.openrdf.org/contrib/lucenesail#> " + "\n" +
-		"PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n" +
-		"CONSTRUCT { ?s skos:prefLabel ?o }" +
-		" WHERE { " +
-			" GRAPH ?graph { " +
-				" ?s search:matches [ search:query ?query ] ." +
-				" ?s skos:prefLabel ?o } . " +
-		"}";
-
 	/**
 	 * Get string as URI
 	 * 
@@ -105,9 +88,10 @@ public class QueryHelper {
 		}
 		return m;
 	}
+	 
 	
 	/**
-	 * Get all triples
+	 * Get all triples from a graph
 	 * 
 	 * @param repo RDF store
 	 * @param subj subject IRI or null
@@ -125,41 +109,7 @@ public class QueryHelper {
 		return setNamespaces(m);
 	}
 	
-	/**
-	 * Prepare and run a SPARQL query
-	 *
-	 * @param repo repository
-	 * @param qry query string
-	 * @param bindings bindings (if any)
-	 * @return results in triple model
-	 */
-	public static Model query(Repository repo, String qry, Map<String,Value> bindings) {
-		try (RepositoryConnection conn = repo.getConnection()) {
-			GraphQuery gq = conn.prepareGraphQuery(QueryLanguage.SPARQL, qry);
-			bindings.forEach((k,v) -> gq.setBinding(k, v));
 
-			return setNamespaces(QueryResults.asModel(gq.evaluate()));
-		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
-			throw new WebApplicationException(e);
-		}
-	}
-
-	/**
-	 * Full text search
-	 *
-	 * @param repo RDF store 
-	 * @param text text to search for
-	 * @param from named graph
-	 * @return RDF model 
-	 */
-	public static Model getFTS(Repository repo, String text, String from) {
-		String qry = Q_FTS;
-		Map<String,Value> map = new HashMap();
-		map.put("query", asLiteral(text + "*"));
-		map.put("graph", asGraph(from));
-		return QueryHelper.query(repo, qry, map);
-	}
-	
 	/**
 	 * Get all contexts a.k.a. vocabularies
 	 *

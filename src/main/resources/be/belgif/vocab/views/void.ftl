@@ -3,6 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
+<link rel="alternate" type="text/turtle" href="/void" />
 <title>Belgif - Vocabularies DEMO</title>
 </head>
 <body>
@@ -15,9 +16,9 @@
 	<section>
 	    <h4>${m.getString("msg.overview")}</h4>
 	    <table>
-	    <tr><th>Name</th>
-		<th>Description</th>
-		<th>Download</th>
+	    <tr><th>${m.getString("msg.name")}</th>
+		<th>${m.getString("msg.description")}</th>
+		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#assign l = lang>
 	    <#list vocabs as v>
@@ -33,7 +34,7 @@
 	<section>
 	    <h4>Content Negotiation</h4>
 	    <table>
-	    <tr><th>Format</th><th>HTTP Accept:</th></tr>
+	    <tr><th>${m.getString("msg.format")}</th><th>HTTP Accept:</th></tr>
 	    <tr><td>HTML</td><td>text/html</td></tr>
 	    <tr><td>JSON-LD</td><td>application/ld+json</td></tr>
 	    <tr><td>N-Triples</td><td>application/n-triples</td></tr>

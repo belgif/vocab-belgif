@@ -25,19 +25,14 @@
  */
 package be.belgif.vocab.resources;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VOIDView;
-import be.belgif.vocab.views.VocabSearchView;
-import be.belgif.vocab.views.VocabTermView;
-import be.belgif.vocab.views.VocabView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
 import java.util.Optional;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -53,20 +48,21 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/")
 public class VoidResource extends RdfResource {
 	@GET
-	@Path("{file:^$|void}")
+	@Path("{file:void|\\.well_known/void}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVOIDvoid() {
+	public Model getVoid() {
 		return getVocabList();
 	}	
 	
+	
 	@GET
-	@Path("{file:^$|void}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VOIDView getVOIDHTML(@QueryParam("lang") Optional<String> lang) {
+	public VOIDView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
 		return new VOIDView(getVocabList(), lang.orElse("en"));
 	}
+	
 	
 	/**
 	 * Constructor
