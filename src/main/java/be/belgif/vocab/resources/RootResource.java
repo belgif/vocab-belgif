@@ -25,50 +25,35 @@
  */
 package be.belgif.vocab.resources;
 
-import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.VOIDView;
-
-import com.codahale.metrics.annotation.ExceptionMetered;
-import java.util.Optional;
-
+import java.net.URI;
+import java.net.URISyntaxException;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Vocabulary term of a SKOS thesaurus.
+ * Abstract resource querying the RDF triple store.
  * 
  * @author Bart.Hanssens
  */
-@Path("/void")
-public class VoidResource extends RdfResource {
+@Path("/")
+public class RootResource {
 	@GET
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVoid() {
-		return getVocabList();
-	}	
-	
-	
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	@ExceptionMetered
-	public VOIDView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new VOIDView(getVocabList(), lang.orElse("en"));
+	@Path("/.well_known/void")
+	public Response getVoid() throws URISyntaxException {
+		return Response.seeOther(new URI("/void")).build();
 	}
 	
+	@GET
+	public Response getRoot() throws URISyntaxException {
+		return Response.seeOther(new URI("/void")).build();
+	}
 	
 	/**
 	 * Constructor
-	 * 
-	 * @param repo RDF triple store
 	 */
-	public VoidResource(Repository repo) {
-		super(repo);
+	public RootResource() {
 	}
 }
+

@@ -7,8 +7,9 @@
 </head>
 <body>
 <#include "header.ftl">
+<#assign m = messages>
+<#assign langs = ['nl', 'fr', 'en', 'de']>
 <main>
-    <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>Search results</h3>
 	<section>

@@ -8,9 +8,9 @@
 <body>
 <#include "header.ftl">
 <#assign m = messages>
+<#assign v = term>
+<#assign langs = ['nl', 'fr', 'en', 'de']>
 <main>
-    <#assign v = term>
-    <#assign langs = ['nl', 'fr', 'en', 'de']>
     <section>
 	<h3>${v.id}</h3>
 	<section>
