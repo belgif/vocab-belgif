@@ -53,20 +53,20 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/auth")
 public class VocabResource extends RdfResource {
 	@GET
-	@Path("/{type}")
+	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVocabRDF(@PathParam("type") String type) {
-		return getById(App.PREFIX, type, "");
+	public Model getVocabRDF(@PathParam("vocab") String vocab) {
+		return getById(App.PREFIX, vocab, "");
 	}
 	
 	@GET
-	@Path("/{type}")
+	@Path("/{vocab}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VocabView getVocabListHTML(@PathParam("type") String type, 
+	public VocabView getVocabListHTML(@PathParam("vocab") String vocab, 
 										@QueryParam("lang") Optional<String> lang) {
-		return new VocabView(type, getById(App.PREFIX, type, ""), lang.orElse("en"));
+		return new VocabView(vocab, getById(App.PREFIX, vocab, ""), lang.orElse("en"));
 	}
 	
 	@GET

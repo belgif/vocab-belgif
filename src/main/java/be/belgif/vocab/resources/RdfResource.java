@@ -26,7 +26,6 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.QueryHelper;
-import be.belgif.vocab.helpers.QueryHelperFTS;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -42,8 +41,22 @@ import org.eclipse.rdf4j.repository.Repository;
 public abstract class RdfResource {
 	private final Repository repo;
 
+	/**
+	 * Get list of vocabularies as RDF triple
+	 * 
+	 * @return triple 
+	 */
 	protected Model getVocabList() {
 		return QueryHelper.getVocabList(repo);
+	}
+	
+	/**
+	 * Get repository
+	 * 
+	 * @return repository 
+	 */
+	protected Repository getRepository() {
+		return repo;
 	}
 	
 	/**
@@ -71,16 +84,6 @@ public abstract class RdfResource {
 		return QueryHelper.get(repo, subj, from);
 	}
 	
-	/**
-	 * Search full text
-	 * 
-	 * @param text text to search for
-	 * @param type vocabulary
-	 * @return 
-	 */
-	protected Model getFTS(String text, String type) {
-		return QueryHelperFTS.getFTS(repo, text, type);
-	}
 	
 	/**
 	 * Constructor

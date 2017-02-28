@@ -14,14 +14,14 @@
     <section>
 	<h3>${v.id}</h3>
 	<section>
-	    <h4>${msg.getString("msg.search")}</h4>
+	    <h4>${m.getString("msg.search")}</h4>
 	    <form method="get" action="/${vocab}/_search">
 		<input name="q" type="search"/>
 		<input name="search" type="submit"/>
 	    </form>
 	</section>
 	<section>
-	    <h4>${msg.getString("msg.general")}</h4>
+	    <h4>${m.getString("msg.general")}</h4>
 	    <table>
 	    <#assign n = v.notation!"">
 	    <#list langs as lang>

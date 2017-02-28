@@ -29,6 +29,7 @@ import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
+import be.belgif.vocab.resources.LdfResource;
 import be.belgif.vocab.resources.RootResource;
 import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
@@ -134,6 +135,8 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new VoidResource(repo));
 		env.jersey().register(new VocabResource(repo));
 		env.jersey().register(new SearchResource(repo));
+		env.jersey().register(new LdfResource(repo));
+		
 
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getDownloadDir()));

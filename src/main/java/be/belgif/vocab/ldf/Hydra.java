@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2016, Bart Hanssens <bart.hanssens@fedict.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,45 +23,39 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.ldf;
 
-import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.ldf.QueryHelperLDF;
 
-import com.codahale.metrics.annotation.ExceptionMetered;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Linked Data Fragments search.
+ * vCard RDF helper class
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens <bart.hanssens@fedict.be>
  */
-@Path("/ldf")
-public class LdfResource extends RdfResource {
-	@GET
-	@Path("{vocab}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model search(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
-						@QueryParam("p") String p, @QueryParam("o") String o) {
-		return QueryHelperLDF.getLDF(getRepository(), s, p, o, vocab, 0);
-	}
-	
-
-	/**
-	 * Constructor
-	 * 
-	 * @param repo RDF triple store
-	 */
-	public LdfResource(Repository repo) {
-		super(repo);
+public class Hydra {
+	public final static String NAMESPACE = "http://www.w3.org/ns/hydra/core#";
+	public final static String PREFIX = "hydra";
+		
+	public final static IRI MAPPING;
+	public final static IRI NEXT;
+	public final static IRI PREVIOUS;
+	public final static IRI PROPERTY;
+	public final static IRI SEARCH;
+	public final static IRI TEMPLATE;	
+	public final static IRI VARIABLE;
+		
+	static {
+		ValueFactory f = SimpleValueFactory.getInstance();
+		MAPPING = f.createIRI(NAMESPACE, "mapping");
+		NEXT = f.createIRI(NAMESPACE, "next");
+		PREVIOUS = f.createIRI(NAMESPACE, "previous");
+		PROPERTY = f.createIRI(NAMESPACE, "property");
+		SEARCH = f.createIRI(NAMESPACE, "search");
+		TEMPLATE = f.createIRI(NAMESPACE, "template");
+		VARIABLE = f.createIRI(NAMESPACE, "variable");
 	}
 }

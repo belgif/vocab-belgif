@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.QueryHelperFTS;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VocabSearchView;
 
@@ -50,20 +51,20 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/_search")
 public class SearchResource extends RdfResource {
 	@GET
-	@Path("/{type}")
+	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model search(@PathParam("type") String type, @QueryParam("q") String text) {
-		return getFTS(text, type);
+	public Model search(@PathParam("type") String vocab, @QueryParam("q") String text) {
+		return QueryHelperFTS.getFTS(getRepository(), text, vocab);
 	}
 	
 	@GET
-	@Path("/{type}")
+	@Path("/{vocab}")
 	@Produces({MediaType.TEXT_HTML})
 	@ExceptionMetered
-	public VocabSearchView searchHTML(@PathParam("type") String type, @QueryParam("q") String text,
-											@QueryParam("lang") Optional<String> lang) {
-		return new VocabSearchView(type, getFTS(text, type), lang.orElse("en"));
+	public VocabSearchView searchHTML(@PathParam("vocab") String vocab, 
+			@QueryParam("q") String text, @QueryParam("lang") Optional<String> lang) {
+		return new VocabSearchView(vocab, search(vocab, text), lang.orElse("en"));
 	}
 
 	/**
