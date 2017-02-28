@@ -40,22 +40,28 @@ public class Hydra {
 	public final static String NAMESPACE = "http://www.w3.org/ns/hydra/core#";
 	public final static String PREFIX = "hydra";
 		
+	public final static IRI COLLECTION;
+	public final static IRI ITEMS;
 	public final static IRI MAPPING;
 	public final static IRI NEXT;
 	public final static IRI PREVIOUS;
 	public final static IRI PROPERTY;
 	public final static IRI SEARCH;
-	public final static IRI TEMPLATE;	
+	public final static IRI TEMPLATE;
+	public final static IRI TOTAL;
 	public final static IRI VARIABLE;
 		
 	static {
 		ValueFactory f = SimpleValueFactory.getInstance();
+		COLLECTION = f.createIRI(NAMESPACE, "Collection");
+		ITEMS = f.createIRI(NAMESPACE, "itemsPerPage");
 		MAPPING = f.createIRI(NAMESPACE, "mapping");
 		NEXT = f.createIRI(NAMESPACE, "next");
 		PREVIOUS = f.createIRI(NAMESPACE, "previous");
 		PROPERTY = f.createIRI(NAMESPACE, "property");
 		SEARCH = f.createIRI(NAMESPACE, "search");
 		TEMPLATE = f.createIRI(NAMESPACE, "template");
+		TOTAL = f.createIRI(NAMESPACE, "totalItems");
 		VARIABLE = f.createIRI(NAMESPACE, "variable");
 	}
 }
