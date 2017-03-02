@@ -161,7 +161,8 @@ public class VocabImportTask extends Task {
 	private void importFile(Path file, String name, RDFFormat format) {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			String vocab = name.split("\\.")[0];
-			Resource ctx = repo.getValueFactory().createIRI(App.PREFIX_GRAPH + vocab);
+			Resource ctx = repo.getValueFactory().createIRI(App.getPrefixGraph() + vocab);
+			
 			conn.begin();
 			
 			conn.remove((Resource) null, null, null, ctx);

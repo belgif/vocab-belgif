@@ -68,7 +68,7 @@ public class QueryHelperLDF {
 	
 	private final static String PREFIX = App.getPrefix();
 	
-	private final static IRI LDF_GRAPH = F.createIRI(App.PREFIX_GRAPH + "ldf");
+	private final static IRI LDF_GRAPH = F.createIRI(App.getPrefixGraph() + "ldf");
 	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "ldf#search");		
 	private final static IRI LDF_MAPPING = F.createIRI(PREFIX + "ldf#mapping");
 	

@@ -62,9 +62,10 @@ import org.glassfish.jersey.server.filter.UriConnegFilter;
  */
 public class App extends Application<AppConfig> {
 
-	public final static String PREFIX = "http://vocab.belgif.be/";
-	public final static String PREFIX_GRAPH = "http://vocab.belgif.be/graph/";
-
+	//public final static String PREFIX = "http://vocab.belgif.be/";
+	private static String PREFIX;
+	private static String PREFIX_GRAPH;
+	
 	public final static Map<String,MediaType> FTYPES = new HashMap<>();
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
@@ -108,6 +109,15 @@ public class App extends Application<AppConfig> {
 		return App.PREFIX;
 	}
 	
+	/**
+	 * Get graph IRI as string
+	 * 
+	 * @return prefix
+	 */
+	public static String getPrefixGraph() {
+		return App.PREFIX_GRAPH;
+	}
+	
 	@Override
 	public String getName() {
 		return "lod-vocab";
@@ -126,8 +136,10 @@ public class App extends Application<AppConfig> {
 	
 	@Override
     public void run(AppConfig config, Environment env) {
+		PREFIX = config.getSitePrefix();
+		PREFIX_GRAPH = PREFIX + "graph";
+		
 		Repository repo = configRepo(config);
-		//repo.initialize();
 	
 		// Managed resource
 		env.lifecycle().manage(new ManagedRepository(repo));

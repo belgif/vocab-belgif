@@ -31,9 +31,11 @@ import com.google.common.collect.ImmutableMap;
 import io.dropwizard.Configuration;
 import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
 import io.dropwizard.bundles.assets.AssetsConfiguration;
+
 import java.util.Map;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -53,6 +55,9 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	
 	@NotEmpty
 	private String luceneDir;
+	
+	@NotEmpty
+	private String sitePrefix;
 	
 	private ImmutableMap<String, Map<String, String>> views;
 
@@ -99,6 +104,16 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	@JsonProperty
 	public void setLuceneDir(String luceneDir) {
 		this.luceneDir = luceneDir;
+	}
+	
+	@JsonProperty
+	public String getSitePrefix() {
+		return sitePrefix;
+	}
+	
+	@JsonProperty
+	public void setSitePrefixDir(String sitePrefix) {
+		this.sitePrefix = sitePrefix.endsWith("/") ? sitePrefix : sitePrefix + "/";
 	}
 	
 	@JsonProperty

@@ -3,6 +3,7 @@ dataDir: c:/data/vocab/store
 downloadDir: c:/data/vocab/download
 importDir: c:/data/vocab/import
 luceneDir: c:/data/vocab/lucene
+sitePrefix: http://vocab.belgif.be/
 
 logging:
     level: INFO

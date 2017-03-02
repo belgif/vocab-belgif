@@ -50,12 +50,14 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/auth")
 public class VocabResource extends RdfResource {
+	private final static String PREFIX = App.getPrefix();
+	
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("vocab") String vocab) {
-		return getById(App.PREFIX, vocab, "");
+		return getById(PREFIX, vocab, "");
 	}
 	
 	@GET
@@ -64,7 +66,7 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public VocabView getVocabListHTML(@PathParam("vocab") String vocab, 
 										@QueryParam("lang") Optional<String> lang) {
-		return new VocabView(vocab, getById(App.PREFIX, vocab, ""), lang.orElse("en"));
+		return new VocabView(vocab, getById(PREFIX, vocab, ""), lang.orElse("en"));
 	}
 	
 	@GET
@@ -73,7 +75,7 @@ public class VocabResource extends RdfResource {
 	@ExceptionMetered
 	public Model getVocabTermRDF(@PathParam("type") String type, 
 												@PathParam("id") String id) {
-		return getById(App.PREFIX, type, id);
+		return getById(PREFIX, type, id);
 	}
 	
 	@GET
@@ -83,7 +85,7 @@ public class VocabResource extends RdfResource {
 	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
 											@PathParam("id") String id, 
 											@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(type, getById(App.PREFIX, type, id), lang.orElse("en"));
+		return new VocabTermView(type, getById(PREFIX, type, id), lang.orElse("en"));
 	}
 		
 
