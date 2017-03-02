@@ -93,20 +93,19 @@ public class QueryHelperLDF {
 		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, o, LDF_GRAPH);
 	}
 	
-	private final static long PAGE = 50;
-	private final static Value PAGE_VAL = F.createLiteral(PAGE);	
+	private final static long PAGING = 50;
+	private final static Value PAGING_VAL = F.createLiteral(PAGING);	
 
 	
 	private final static String Q_COUNT =
-		"SELECT COUNT(*) AS ?cnt " + 
+		"SELECT (COUNT(*) AS ?cnt) " + 
 		"WHERE { GRAPH ?graph { ?s ?p ?o } } ";
 	
 	private final static String Q_LDF = 
 		"CONSTRUCT { ?s ?p?o } " +
 		"WHERE { GRAPH ?graph { ?s ?p ?o } } " +
 		"ORDER BY ?s " +
-		"OFFSET ?offset " +
-		"LIMIT " + PAGE;
+		"LIMIT " + PAGING;
 	
 	
 	/**
@@ -167,7 +166,7 @@ public class QueryHelperLDF {
 		
 		Value total = F.createLiteral(count);
 		// as per spec two properties with same value
-		m.add(page, Hydra.ITEMS, PAGE_VAL, LDF_GRAPH);
+		m.add(page, Hydra.ITEMS, PAGING_VAL, LDF_GRAPH);
 		m.add(page, VOID.TRIPLES, total, LDF_GRAPH);
 		m.add(page, Hydra.TOTAL, total, LDF_GRAPH);
 		m.add(page, Hydra.VIEW, fragment, LDF_GRAPH);
@@ -196,16 +195,16 @@ public class QueryHelperLDF {
 		m.add(dataset, VOID.SUBSET, fragment, LDF_GRAPH);
 
 		// page count starts at 1
-		long current = (offset % PAGE) + 1;
+		long current = (offset % PAGING) + 1;
 		builder.queryParam("page", "{page}");
 		IRI page = F.createIRI(builder.build("page", current).toString());
 		
 		// previous and next pages, if any
-		if (offset >= PAGE) {
+		if (offset >= PAGING) {
 			URI prevPage = builder.build("page", current - 1);
 			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), LDF_GRAPH);
 		}
-		if (offset + PAGE < count) {
+		if (offset + PAGING < count) {
 			URI nextPage = builder.build("page", current + 1);
 			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), LDF_GRAPH);
 		}
@@ -220,7 +219,7 @@ public class QueryHelperLDF {
 		m.addAll(HYDRA_MAPPING);
 		
 		m.addAll(meta(page, fragment, count));
-		m.add(fragment, Hydra.ITEMS, PAGE_VAL);
+		m.add(fragment, Hydra.ITEMS, PAGING_VAL);
 		
 		return m;
 	}
@@ -244,13 +243,17 @@ public class QueryHelperLDF {
 			return new LinkedHashModel();
 		}
 				
-		GraphQuery gq = conn.prepareGraphQuery(Q_LDF);
-		gq.setBinding("s", subj);
-		gq.setBinding("p", pred);
-		gq.setBinding("o", obj);
+		GraphQuery gq = conn.prepareGraphQuery(Q_LDF + " OFFSET " + offset);
+		if (subj != null) {
+			gq.setBinding("s", subj);
+		}
+		if (pred != null) {
+			gq.setBinding("p", pred);
+		}
+		if (obj != null) {
+			gq.setBinding("o", obj);
+		}
 		gq.setBinding("graph", graph);
-		gq.setBinding("offset", F.createLiteral(offset));
-		
 		return QueryResults.asModel(gq.evaluate());
 	}
 	
@@ -267,9 +270,15 @@ public class QueryHelperLDF {
 	private static long getCount(RepositoryConnection conn, 
 									IRI subj, IRI pred, Value obj, IRI graph) {
 		TupleQuery tq = conn.prepareTupleQuery(Q_COUNT);
-		tq.setBinding("s", subj);
-		tq.setBinding("p", pred);
-		tq.setBinding("o", obj);
+		if (subj != null) {
+			tq.setBinding("s", subj);
+		}
+		if (pred != null) {
+			tq.setBinding("p", pred);
+		}
+		if (obj != null) {
+			tq.setBinding("o", obj);
+		}
 		tq.setBinding("graph", graph);
 		
 		BindingSet res = QueryResults.singleResult(tq.evaluate());
@@ -306,20 +315,28 @@ public class QueryHelperLDF {
 		if (page < 1) {
 			throw new WebApplicationException("Invalid (zero or negative) page number");
 		}
-		long offset = (page - 1) * PAGE;
+		long offset = (page - 1) * PAGING;
 		
 		// speedup: vocabularies are stored in separate graphs
 		IRI graph = QueryHelper.asGraph(vocab);
 		
+		IRI dataset = F.createIRI(PREFIX + "ldf/" + vocab + "#dataset");
+		
+		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("ldf").path(vocab);
+		if (s != null) {
+			builder = builder.queryParam("s", s);
+		}
+		if (p != null) {
+			builder = builder.queryParam("p", p);
+		}
+		if (o != null) {
+			builder = builder.queryParam("o", o);
+		}
+
 		IRI subj = (s != null) ? createIRI(s) : null;
 		IRI pred = (p != null) ? createIRI(p) : null;
 		Value obj = (o != null) ? createLiteralOrUri(o) : null;
 		
-		IRI dataset = F.createIRI(PREFIX + "ldf/" + vocab + "#dataset");
-		
-		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("ldf").path(vocab).
-					queryParam("s", s).queryParam("p", p).queryParam("o", o);
-
 		try (RepositoryConnection conn = repo.getConnection()) {
 			long count = getCount(conn, subj, pred, obj, graph);
 			
