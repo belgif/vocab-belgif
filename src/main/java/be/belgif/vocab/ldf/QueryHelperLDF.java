@@ -133,18 +133,18 @@ public class QueryHelperLDF {
 		if (s.startsWith("\"")) {
 			// test for simple literal
 			if (s.endsWith("\"")) {
-				return F.createLiteral(s);
+				return F.createLiteral(s.substring(1, s.length() - 2));
 			}
 			// test for language tag
 			int l = s.lastIndexOf("\"@");
 			if (l > 0) {
-				return F.createLiteral(s.substring(0, l), s.substring(l+1));
+				return F.createLiteral(s.substring(1, l), s.substring(l + 2));
 			}
 			// test for data type
 			// test for language tag
 			int t = s.lastIndexOf("\"^^");
 			if (l > 0) {
-				return F.createLiteral(s.substring(0, l), s.substring(l+2));
+				return F.createLiteral(s.substring(1, l), s.substring(l + 3));
 			}
 			// malformed
 			LOG.warn("Malformed object value");
