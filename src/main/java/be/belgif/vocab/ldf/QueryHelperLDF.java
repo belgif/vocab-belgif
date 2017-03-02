@@ -197,15 +197,15 @@ public class QueryHelperLDF {
 		// page count starts at 1
 		long current = (offset % PAGING) + 1;
 		builder.queryParam("page", "{page}");
-		IRI page = F.createIRI(builder.build("page", current).toString());
+		IRI page = F.createIRI(builder.build(current, "page").toString());
 		
 		// previous and next pages, if any
 		if (offset >= PAGING) {
-			URI prevPage = builder.build("page", current - 1);
+			URI prevPage = builder.build(current - 1, "page");
 			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), LDF_GRAPH);
 		}
 		if (offset + PAGING < count) {
-			URI nextPage = builder.build("page", current + 1);
+			URI nextPage = builder.build(current + 1, "page");
 			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), LDF_GRAPH);
 		}
 	
