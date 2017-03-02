@@ -27,8 +27,6 @@ package be.belgif.vocab.resources;
 
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.VOIDView;
-import be.belgif.vocab.views.VocabSearchView;
 import be.belgif.vocab.views.VocabTermView;
 import be.belgif.vocab.views.VocabView;
 

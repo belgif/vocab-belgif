@@ -117,9 +117,11 @@ public class VocabImportTask extends Task {
 	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
 		LOG.info("Adding VOID metadata for {}", name);
 		
+		String prefix = App.getPrefix();
+		
 		Model m = new LinkedHashModel();
 		ValueFactory f = conn.getValueFactory();
-		IRI voidID  = f.createIRI(App.PREFIX + "void#" + name);
+		IRI voidID  = f.createIRI(prefix + "void#" + name);
 
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
 
@@ -130,8 +132,8 @@ public class VocabImportTask extends Task {
 
 		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));		
 		m.add(voidID, DCTERMS.LICENSE, f.createIRI("http://creativecommons.org/publicdomain/zero/1.0/"));
-		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(App.PREFIX));
-		m.add(voidID, VOID.DATA_DUMP, f.createIRI(App.PREFIX + "dataset/" + name));
+		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(prefix));
+		m.add(voidID, VOID.DATA_DUMP, f.createIRI(prefix + "dataset/" + name));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/N-Triples"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/Turtle"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/JSON-LD"));
@@ -143,7 +145,7 @@ public class VocabImportTask extends Task {
 				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
 		
 		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
-		m.add(voidID, VOID.URI_SPACE, f.createLiteral(App.PREFIX + name));
+		m.add(voidID, VOID.URI_SPACE, f.createLiteral(prefix + name));
 		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
 
 		return m;

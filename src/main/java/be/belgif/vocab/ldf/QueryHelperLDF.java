@@ -27,8 +27,10 @@ package be.belgif.vocab.ldf;
 
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
+import java.net.URI;
 
 import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.UriBuilder;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -44,7 +46,6 @@ import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.GraphQuery;
 import org.eclipse.rdf4j.query.MalformedQueryException;
 import org.eclipse.rdf4j.query.QueryEvaluationException;
-import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.QueryResults;
 import org.eclipse.rdf4j.query.TupleQuery;
 
@@ -65,33 +66,36 @@ public class QueryHelperLDF {
 	
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
 	
+	private final static String PREFIX = App.getPrefix();
+	
+	private final static IRI LDF_GRAPH = F.createIRI(App.PREFIX_GRAPH + "ldf");
+	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "ldf#search");		
+	private final static IRI LDF_MAPPING = F.createIRI(PREFIX + "ldf#mapping");
+	
 	// Hydra mapping, does not change
 	private final static Model HYDRA_MAPPING = new LinkedHashModel();
 	static {
-		IRI s = F.createIRI(App.PREFIX + "ldf#s");
-		HYDRA_MAPPING.add(s, Hydra.VARIABLE, F.createLiteral("s"));
-		HYDRA_MAPPING.add(s, Hydra.PROPERTY, RDF.SUBJECT);
+		IRI s = F.createIRI(PREFIX + "ldf#s");
+		HYDRA_MAPPING.add(s, Hydra.VARIABLE, F.createLiteral("s"), LDF_GRAPH);
+		HYDRA_MAPPING.add(s, Hydra.PROPERTY, RDF.SUBJECT, LDF_GRAPH);
 		
-		IRI p = F.createIRI(App.PREFIX + "ldf#p");
-		HYDRA_MAPPING.add(p, Hydra.VARIABLE, F.createLiteral("p"));
-		HYDRA_MAPPING.add(p, Hydra.PROPERTY, RDF.PREDICATE);
+		IRI p = F.createIRI(PREFIX + "ldf#p");
+		HYDRA_MAPPING.add(p, Hydra.VARIABLE, F.createLiteral("p"), LDF_GRAPH);
+		HYDRA_MAPPING.add(p, Hydra.PROPERTY, RDF.PREDICATE, LDF_GRAPH);
 		
-		IRI o = F.createIRI(App.PREFIX + "ldf#o");
-		HYDRA_MAPPING.add(o, Hydra.VARIABLE, F.createLiteral("o"));
-		HYDRA_MAPPING.add(o, Hydra.PROPERTY, RDF.OBJECT);
+		IRI o = F.createIRI(PREFIX + "ldf#o");
+		HYDRA_MAPPING.add(o, Hydra.VARIABLE, F.createLiteral("o"), LDF_GRAPH);
+		HYDRA_MAPPING.add(o, Hydra.PROPERTY, RDF.OBJECT, LDF_GRAPH);
 		
-		IRI mapping = F.createIRI(App.PREFIX + "ldf#mapping");
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, s);
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, p);
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, o);
+		IRI mapping = F.createIRI(PREFIX + "ldf#mapping");
+		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, s, LDF_GRAPH);
+		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, p, LDF_GRAPH);
+		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, o, LDF_GRAPH);
 	}
 	
 	private final static long PAGE = 50;
-	private final static Value PAGE_VAL = F.createLiteral(TPF.PAGE);
-	
-	private final static IRI LDF_GRAPH = F.createIRI(App.PREFIX_GRAPH + "ldf");
-	private final static IRI LDF_SEARCH = F.createIRI(App.PREFIX + "ldf#search");		
-	private final static IRI LDF_MAPPING = F.createIRI(App.PREFIX + "ldf#mapping");
+	private final static Value PAGE_VAL = F.createLiteral(PAGE);	
+
 	
 	private final static String Q_COUNT =
 		"SELECT COUNT(*) AS ?cnt " + 
@@ -101,7 +105,7 @@ public class QueryHelperLDF {
 		"CONSTRUCT { ?s ?p?o } " +
 		"WHERE { GRAPH ?graph { ?s ?p ?o } } " +
 		"ORDER BY ?s " +
-		"OFFSET ?off " +
+		"OFFSET ?offset " +
 		"LIMIT " + PAGE;
 	
 	
@@ -151,90 +155,79 @@ public class QueryHelperLDF {
 	}
 	
 	/**
-	 * Get the number of the previous page, if any.
-	 * Numbering starts with 1, so the current page is (offset / PAGE + 1)
-	 * 
-	 * @param offset current offset
-	 * @return number of previous page
-	 */
-	private static String prevPage(long offset) {
-		// already on first page
-		if (offset < TPF.PAGE) {
-			return "";
-		}
-		return String.valueOf(offset % TPF.PAGE);
-	}
-	
-	/**
-	 * Get the next page, if any
-	 * Numbering starts with 1, so the current page is (offset / PAGE + 1)
-	 * 
-	 * @param offset current offset
-	 * @param count number of results
-	 * @return
-	 */
-	private static String nextPage(long offset, long count) {
-		// already on last page
-		if (offset + TPF.PAGE >= count) {
-			return "";
-		}
-		return String.valueOf((offset % TPF.PAGE) + 2);
-	}
-	
-	/**
 	 * Metadata of the fragment
 	 * 
-	 * @param fragment page of the fragment
+	 * @param fragment fragment IRI
+	 * @param page page of the fragment
 	 * @param count total number of results
 	 * @return RDF triples
 	 */
-	private static Model meta(IRI fragment, Value total) {
+	private static Model meta(IRI page, IRI fragment, long count) {
 		Model m = new LinkedHashModel();
 		
+		Value total = F.createLiteral(count);
 		// as per spec two properties with same value
-		m.add(fragment, Hydra.ITEMS, PAGE_VAL, LDF_GRAPH);
-		m.add(fragment, VOID.TRIPLES, total, LDF_GRAPH);
-		m.add(fragment, Hydra.TOTAL, total, LDF_GRAPH);
-		
-		m.add(LDF_GRAPH, FOAF.PRIMARY_TOPIC, fragment);
+		m.add(page, Hydra.ITEMS, PAGE_VAL, LDF_GRAPH);
+		m.add(page, VOID.TRIPLES, total, LDF_GRAPH);
+		m.add(page, Hydra.TOTAL, total, LDF_GRAPH);
+		m.add(page, Hydra.VIEW, fragment, LDF_GRAPH);
+		//m.add(LDF_GRAPH, FOAF.PRIMARY_TOPIC, fragment);
 		return m;
 	}
 	
 	/**
-	 * Hydra Hypermedia controls
+	 * Hydra hypermedia controls
 	 * 
+	 * @param vocab vocabulary name
 	 * @param dataset dataset IRI
-	 * @param fragment fragment subset IRI
-	 * @param prev previous page
-	 * @param next next page
-	 * @param count number of triples in total
+	 * @param builder URI Builder
+	 * @param offset offset
+	 * @param count total number of triples
 	 * @return RDF triples
 	 */
-	private Model hyperControls(String vocab, IRI dataset, IRI fragment, 
-											String prev, String next, Value total) {
+	private static Model hyperControls(String vocab, IRI dataset, UriBuilder builder, 
+										long offset, long count) {
 		Model m = new LinkedHashModel();
 	
-		m.add(dataset, RDF.TYPE, VOID.DATASET);
-		m.add(dataset, RDF.TYPE, Hydra.COLLECTION);
-		m.add(dataset, VOID.SUBSET, fragment);
-		m.add(dataset, Hydra.SEARCH, LDF_SEARCH);
-		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
-				F.createIRI(App.PREFIX + "ldf/" + vocab + "{?s, ?p, ?o}"));
-		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAPPING);
+		m.add(dataset, RDF.TYPE, VOID.DATASET, LDF_GRAPH);
+		m.add(dataset, RDF.TYPE, Hydra.COLLECTION, LDF_GRAPH);
 		
+		IRI fragment = F.createIRI(builder.build().toString());
+		m.add(dataset, VOID.SUBSET, fragment, LDF_GRAPH);
+
+		// page count starts at 1
+		long current = (offset % PAGE) + 1;
+		builder.queryParam("page", "{page}");
+		IRI page = F.createIRI(builder.build("page", current).toString());
+		
+		// previous and next pages, if any
+		if (offset >= PAGE) {
+			URI prevPage = builder.build("page", current - 1);
+			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), LDF_GRAPH);
+		}
+		if (offset + PAGE < count) {
+			URI nextPage = builder.build("page", current + 1);
+			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), LDF_GRAPH);
+		}
+	
+		// search template
+		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, LDF_GRAPH);
+		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
+				F.createIRI(PREFIX + "ldf/" + vocab + "{?s, ?p, ?o}"), LDF_GRAPH);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAPPING, LDF_GRAPH);
+		
+		// generic mapping
 		m.addAll(HYDRA_MAPPING);
 		
+		m.addAll(meta(page, fragment, count));
 		m.add(fragment, Hydra.ITEMS, PAGE_VAL);
-				
-		m.setNamespace(Hydra.PREFIX, Hydra.NAMESPACE);
-		m.setNamespace(VOID.PREFIX, VOID.NAMESPACE);
 		
 		return m;
 	}
 
 	
 	/**
-	 * Get paged results
+	 * Get fragment / one page of results
 	 * 
 	 * @param conn repository
 	 * @param subj subject IRI
@@ -244,8 +237,13 @@ public class QueryHelperLDF {
 	 * @param offset
 	 * @return RDF triples
 	 */
-	private static Model getPage(RepositoryConnection conn, 
-						IRI subj, IRI pred, Value obj, IRI graph, long offset) {	
+	private static Model getFragment(RepositoryConnection conn, IRI subj, IRI pred, 
+								Value obj, IRI graph, long offset, long count) {	
+		// nothing (more) to show
+		if ((count <= 0) || (offset >= count)) { 
+			return new LinkedHashModel();
+		}
+				
 		GraphQuery gq = conn.prepareGraphQuery(Q_LDF);
 		gq.setBinding("s", subj);
 		gq.setBinding("p", pred);
@@ -253,7 +251,7 @@ public class QueryHelperLDF {
 		gq.setBinding("graph", graph);
 		gq.setBinding("offset", F.createLiteral(offset));
 		
-		return QueryHelper.setNamespaces(QueryResults.asModel(gq.evaluate()));
+		return QueryResults.asModel(gq.evaluate());
 	}
 	
 	/**
@@ -280,6 +278,19 @@ public class QueryHelperLDF {
 	}
 	
 	/**
+	 * Set namespaces
+	 * 
+	 * @param m
+	 * @return 
+	 */
+	private static Model setNamespaces(Model m) {
+		Model ns = QueryHelper.setNamespaces(m);
+		ns.setNamespace(Hydra.PREFIX, Hydra.NAMESPACE);
+		ns.setNamespace(VOID.PREFIX, VOID.NAMESPACE);
+		return ns;
+	}
+	
+	/**
 	 * Get linked data fragment
 	 *
 	 * @param repo RDF store 
@@ -287,37 +298,37 @@ public class QueryHelperLDF {
 	 * @param p predicate to search for or null
 	 * @param o object to search for or null
 	 * @param vocab named graph
-	 * @param offset offset number
+	 * @param page page number
 	 * @return RDF model 
 	 */
 	public static Model getLDF(Repository repo, String s, String p, String o, 
 													String vocab, long page) {
+		if (page < 1) {
+			throw new WebApplicationException("Invalid (zero or negative) page number");
+		}
+		long offset = (page - 1) * PAGE;
+		
+		// speedup: vocabularies are stored in separate graphs
+		IRI graph = QueryHelper.asGraph(vocab);
+		
+		IRI subj = (s != null) ? createIRI(s) : null;
+		IRI pred = (p != null) ? createIRI(p) : null;
+		Value obj = (o != null) ? createLiteralOrUri(o) : null;
+		
+		IRI dataset = F.createIRI(PREFIX + "ldf/" + vocab + "#dataset");
+		
+		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("ldf").path(vocab).
+					queryParam("s", s).queryParam("p", p).queryParam("o", o);
+
 		try (RepositoryConnection conn = repo.getConnection()) {
-			// speedup: vocabularies are stored in separate graphs
-			IRI graph = QueryHelper.asGraph(vocab);
-			
-			IRI subj = (s != null) ? createIRI(s) : null;
-			IRI pred = (p != null) ? createIRI(p) : null;
-			Value obj = (o != null) ? createLiteralOrUri(o) : null;
-			
-			long offset = (page - 1) * TPF.PAGE;
 			long count = getCount(conn, subj, pred, obj, graph);
-			Value total = F.createLiteral(count);
 			
-			// data itself
-			Model data = ((count > 0) && (offset < count)) 
-								? getPage(conn, subj, pred, obj, graph, offset) 
-								: new LinkedHashModel();
-			
-			Model metadata = meta(fragment, total);
-			
-			Model controls = hyperControls(vocab, dataset, fragment, 
-								prevPage(offset), nextPage(offset, count), total);
-										
 			Model m = new LinkedHashModel();
-			m.addAll(metadata);
-			m.addAll(controls);
-			m.addAll(data);
+			m = setNamespaces(m);
+			
+			m.addAll(hyperControls(vocab, dataset, builder, offset, count));
+			m.addAll(getFragment(conn, subj, pred, obj, graph, offset, count));
+			
 			return m;
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);

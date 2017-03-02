@@ -99,6 +99,15 @@ public class App extends Application<AppConfig> {
 		return new SailRepository(fts);
 	}
 
+	/**
+	 * Get domain / prefix as string
+	 * 
+	 * @return prefix
+	 */
+	public static String getPrefix() {
+		return App.PREFIX;
+	}
+	
 	@Override
 	public String getName() {
 		return "lod-vocab";

@@ -50,6 +50,8 @@ public class Hydra {
 	public final static IRI TEMPLATE;
 	public final static IRI TOTAL;
 	public final static IRI VARIABLE;
+	public final static IRI VIEW;
+	
 		
 	static {
 		ValueFactory f = SimpleValueFactory.getInstance();
@@ -63,5 +65,6 @@ public class Hydra {
 		TEMPLATE = f.createIRI(NAMESPACE, "template");
 		TOTAL = f.createIRI(NAMESPACE, "totalItems");
 		VARIABLE = f.createIRI(NAMESPACE, "variable");
+		VIEW = f.createIRI(NAMESPACE, "view");
 	}
 }
