@@ -150,7 +150,6 @@ public class QueryHelperLDF {
 				return F.createLiteral(s.substring(1, l), s.substring(l + 2));
 			}
 			// test for data type
-			// test for language tag
 			int t = s.lastIndexOf("\"^^");
 			if (l > 0) {
 				return F.createLiteral(s.substring(1, l), s.substring(l + 3));
