@@ -96,15 +96,24 @@ public class QueryHelperLDF {
 	private final static long PAGING = 50;
 	private final static Value PAGING_VAL = F.createLiteral(PAGING);	
 
-	
 	private final static String Q_COUNT =
+		"SELECT (COUNT(*) AS ?cnt) " + 
+		"WHERE { ?s ?p ?o } ";
+	
+	private final static String Q_COUNT_GRAPH =
 		"SELECT (COUNT(*) AS ?cnt) " + 
 		"WHERE { GRAPH ?graph { ?s ?p ?o } } ";
 	
 	private final static String Q_LDF = 
-		"CONSTRUCT { ?s ?p?o } " +
+		"CONSTRUCT { ?s ?p ?o } " +
+		"WHERE { ?s ?p ?o } " +
+		//"ORDER BY ?s ?p ?o " +
+		"LIMIT " + PAGING;
+	
+	private final static String Q_LDF_GRAPH = 
+		"CONSTRUCT { ?s ?p ?o } " +
 		"WHERE { GRAPH ?graph { ?s ?p ?o } } " +
-		"ORDER BY ?s " +
+		//"ORDER BY ?s ?p ?o " +
 		"LIMIT " + PAGING;
 	
 	
@@ -242,8 +251,10 @@ public class QueryHelperLDF {
 		if ((count <= 0) || (offset >= count)) { 
 			return new LinkedHashModel();
 		}
-				
-		GraphQuery gq = conn.prepareGraphQuery(Q_LDF + " OFFSET " + offset);
+		
+		String qry = (graph != null) ? Q_LDF_GRAPH : Q_LDF;
+		GraphQuery gq = conn.prepareGraphQuery(qry  + " OFFSET " + offset);
+		
 		if (subj != null) {
 			gq.setBinding("s", subj);
 		}
@@ -253,7 +264,9 @@ public class QueryHelperLDF {
 		if (obj != null) {
 			gq.setBinding("o", obj);
 		}
-		gq.setBinding("graph", graph);
+		if (graph != null) {
+			gq.setBinding("graph", graph);
+		}
 		return QueryResults.asModel(gq.evaluate());
 	}
 	
@@ -269,7 +282,7 @@ public class QueryHelperLDF {
 	 */
 	private static long getCount(RepositoryConnection conn, 
 									IRI subj, IRI pred, Value obj, IRI graph) {
-		TupleQuery tq = conn.prepareTupleQuery(Q_COUNT);
+		TupleQuery tq = conn.prepareTupleQuery((graph != null) ? Q_COUNT_GRAPH : Q_COUNT);
 		if (subj != null) {
 			tq.setBinding("s", subj);
 		}
@@ -279,8 +292,9 @@ public class QueryHelperLDF {
 		if (obj != null) {
 			tq.setBinding("o", obj);
 		}
-		tq.setBinding("graph", graph);
-		
+		if (graph != null) {
+			tq.setBinding("graph", graph);
+		}
 		BindingSet res = QueryResults.singleResult(tq.evaluate());
 		String val = res.getValue("cnt").stringValue();
 		return Long.valueOf(val);
@@ -318,7 +332,7 @@ public class QueryHelperLDF {
 		long offset = (page - 1) * PAGING;
 		
 		// speedup: vocabularies are stored in separate graphs
-		IRI graph = QueryHelper.asGraph(vocab);
+		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
 		
 		IRI dataset = F.createIRI(PREFIX + "ldf/" + vocab + "#dataset");
 		

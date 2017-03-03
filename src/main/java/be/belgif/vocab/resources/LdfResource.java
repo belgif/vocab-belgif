@@ -48,10 +48,19 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/ldf")
 public class LdfResource extends RdfResource {
 	@GET
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@ExceptionMetered
+	public Model searchAll(@QueryParam("s") String s, 
+						@QueryParam("p") String p, @QueryParam("o") String o,
+						@DefaultValue("1") @QueryParam("page") long page) {
+		return QueryHelperLDF.getLDF(getRepository(), s, p, o, "", page);
+	}
+	
+	@GET
 	@Path("{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model search(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
+	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,
 						@DefaultValue("1") @QueryParam("page") long page) {
 		return QueryHelperLDF.getLDF(getRepository(), s, p, o, vocab, page);
