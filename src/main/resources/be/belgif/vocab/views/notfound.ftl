@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
-<title>Belgif - Vocabularies DEMO</title>
+<title>Vocab Belgif - DEMO</title>
 </head>
 <body>
 <#include "header.ftl">

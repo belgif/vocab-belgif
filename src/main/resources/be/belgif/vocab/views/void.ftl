@@ -4,13 +4,14 @@
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
 <link rel="alternate" type="text/turtle" href="/void" />
-<title>Belgif - Vocabularies DEMO</title>
+<title>Vocab Belgif - DEMO</title>
 </head>
 <body>
 <#include "header.ftl">
 <#assign m = messages>
 <main>
     <div id="container">
+    <#include "message.ftl">
     <section>
 	<h3>Thesauri</h3>
 	<section>

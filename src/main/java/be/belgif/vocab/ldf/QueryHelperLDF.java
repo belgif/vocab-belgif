@@ -69,25 +69,25 @@ public class QueryHelperLDF {
 	private final static String PREFIX = App.getPrefix();
 	
 	private final static IRI LDF_GRAPH = F.createIRI(App.getPrefixGraph() + "ldf");
-	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "ldf#search");		
-	private final static IRI LDF_MAPPING = F.createIRI(PREFIX + "ldf#mapping");
+	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "_ldf#search");		
+	private final static IRI LDF_MAPPING = F.createIRI(PREFIX + "_ldf#mapping");
 	
 	// Hydra mapping, does not change
 	private final static Model HYDRA_MAPPING = new LinkedHashModel();
 	static {
-		IRI s = F.createIRI(PREFIX + "ldf#s");
+		IRI s = F.createIRI(PREFIX + "_ldf#s");
 		HYDRA_MAPPING.add(s, Hydra.VARIABLE, F.createLiteral("s"), LDF_GRAPH);
 		HYDRA_MAPPING.add(s, Hydra.PROPERTY, RDF.SUBJECT, LDF_GRAPH);
 		
-		IRI p = F.createIRI(PREFIX + "ldf#p");
+		IRI p = F.createIRI(PREFIX + "_ldf#p");
 		HYDRA_MAPPING.add(p, Hydra.VARIABLE, F.createLiteral("p"), LDF_GRAPH);
 		HYDRA_MAPPING.add(p, Hydra.PROPERTY, RDF.PREDICATE, LDF_GRAPH);
 		
-		IRI o = F.createIRI(PREFIX + "ldf#o");
+		IRI o = F.createIRI(PREFIX + "_ldf#o");
 		HYDRA_MAPPING.add(o, Hydra.VARIABLE, F.createLiteral("o"), LDF_GRAPH);
 		HYDRA_MAPPING.add(o, Hydra.PROPERTY, RDF.OBJECT, LDF_GRAPH);
 		
-		IRI mapping = F.createIRI(PREFIX + "ldf#mapping");
+		IRI mapping = F.createIRI(PREFIX + "_ldf#mapping");
 		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, s, LDF_GRAPH);
 		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, p, LDF_GRAPH);
 		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, o, LDF_GRAPH);
@@ -220,7 +220,7 @@ public class QueryHelperLDF {
 		// search template
 		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, LDF_GRAPH);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
-				F.createIRI(PREFIX + "ldf/" + vocab + "{?s, ?p, ?o}"), LDF_GRAPH);
+				F.createIRI(PREFIX + "_ldf/" + vocab + "{?s, ?p, ?o}"), LDF_GRAPH);
 		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAPPING, LDF_GRAPH);
 		
 		// generic mapping
@@ -333,9 +333,9 @@ public class QueryHelperLDF {
 		// speedup: vocabularies are stored in separate graphs
 		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
 		
-		IRI dataset = F.createIRI(PREFIX + "ldf/" + vocab + "#dataset");
+		IRI dataset = F.createIRI(PREFIX + "_ldf/" + vocab + "#dataset");
 		
-		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("ldf").path(vocab);
+		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("_ldf").path(vocab);
 		if (s != null) {
 			builder = builder.queryParam("s", s);
 		}

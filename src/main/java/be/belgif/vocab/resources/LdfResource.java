@@ -45,7 +45,7 @@ import org.eclipse.rdf4j.repository.Repository;
  * 
  * @author Bart.Hanssens
  */
-@Path("/ldf")
+@Path("/_ldf")
 public class LdfResource extends RdfResource {
 	@GET
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
