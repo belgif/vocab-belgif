@@ -58,7 +58,7 @@ public class LdfResource extends RdfResource {
 	
 	@GET
 	@Path("{vocab}")
-	@Produces({RDFMediaType.NTRIPLES, RDFMediaType.TTL, RDFMediaType.JSONLD, })
+	@Produces({RDFMediaType.NTRIPLES, RDFMediaType.TTL, RDFMediaType.JSONLD})
 	@ExceptionMetered
 	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,

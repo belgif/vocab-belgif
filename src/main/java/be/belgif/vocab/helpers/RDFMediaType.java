@@ -47,8 +47,9 @@ public class RDFMediaType {
 	 */
 	public static RDFFormat getRDFFormat(MediaType mt) {
 		RDFFormat fmt;
-		
-		switch(mt.toString()) {
+	
+		// check for content type, ignoring the charset
+		switch(mt.getType() + "/" + mt.getSubtype()) {
 			case RDFMediaType.NTRIPLES: fmt = RDFFormat.NTRIPLES; break;
 			case RDFMediaType.TTL: fmt = RDFFormat.TURTLE; break;
 			default: fmt = RDFFormat.JSONLD; break;

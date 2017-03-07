@@ -73,9 +73,9 @@ public class RDFMessageBodyWriter implements MessageBodyWriter<Model> {
 		if (m.isEmpty()) {
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}
-		
+	
 		RDFFormat fmt = RDFMediaType.getRDFFormat(mt);
-		
+
 		try {
 			if (m.contains(null, Hydra.MAPPING, null)) {
 				headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
