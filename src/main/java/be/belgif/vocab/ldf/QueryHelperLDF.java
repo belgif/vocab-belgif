@@ -70,27 +70,22 @@ public class QueryHelperLDF {
 	
 	private final static IRI LDF_GRAPH = F.createIRI(App.getPrefixGraph() + "/ldf");
 	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "_ldf#search");		
-	private final static IRI LDF_MAPPING = F.createIRI(PREFIX + "_ldf#mapping");
+	
+	private final static IRI LDF_MAP_S = F.createIRI(PREFIX + "_ldf#s");
+	private final static IRI LDF_MAP_P = F.createIRI(PREFIX + "_ldf#p");
+	private final static IRI LDF_MAP_O = F.createIRI(PREFIX + "_ldf#o");
 	
 	// Hydra mapping, does not change
 	private final static Model HYDRA_MAPPING = new LinkedHashModel();
 	static {
-		IRI s = F.createIRI(PREFIX + "_ldf#s");
-		HYDRA_MAPPING.add(s, Hydra.VARIABLE, F.createLiteral("s"), LDF_GRAPH);
-		HYDRA_MAPPING.add(s, Hydra.PROPERTY, RDF.SUBJECT, LDF_GRAPH);
+		HYDRA_MAPPING.add(LDF_MAP_S, Hydra.VARIABLE, F.createLiteral("s"), LDF_GRAPH);
+		HYDRA_MAPPING.add(LDF_MAP_S, Hydra.PROPERTY, RDF.SUBJECT, LDF_GRAPH);
+
+		HYDRA_MAPPING.add(LDF_MAP_P, Hydra.VARIABLE, F.createLiteral("p"), LDF_GRAPH);
+		HYDRA_MAPPING.add(LDF_MAP_P, Hydra.PROPERTY, RDF.PREDICATE, LDF_GRAPH);
 		
-		IRI p = F.createIRI(PREFIX + "_ldf#p");
-		HYDRA_MAPPING.add(p, Hydra.VARIABLE, F.createLiteral("p"), LDF_GRAPH);
-		HYDRA_MAPPING.add(p, Hydra.PROPERTY, RDF.PREDICATE, LDF_GRAPH);
-		
-		IRI o = F.createIRI(PREFIX + "_ldf#o");
-		HYDRA_MAPPING.add(o, Hydra.VARIABLE, F.createLiteral("o"), LDF_GRAPH);
-		HYDRA_MAPPING.add(o, Hydra.PROPERTY, RDF.OBJECT, LDF_GRAPH);
-		
-		IRI mapping = F.createIRI(PREFIX + "_ldf#mapping");
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, s, LDF_GRAPH);
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, p, LDF_GRAPH);
-		HYDRA_MAPPING.add(mapping, Hydra.MAPPING, o, LDF_GRAPH);
+		HYDRA_MAPPING.add(LDF_MAP_O, Hydra.VARIABLE, F.createLiteral("o"), LDF_GRAPH);
+		HYDRA_MAPPING.add(LDF_MAP_O, Hydra.PROPERTY, RDF.OBJECT, LDF_GRAPH);
 	}
 	
 	private final static long PAGING = 50;
@@ -221,7 +216,9 @@ public class QueryHelperLDF {
 		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, LDF_GRAPH);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
 				F.createLiteral(PREFIX + "_ldf/" + vocab + "{?s,p,o}"), LDF_GRAPH);
-		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAPPING, LDF_GRAPH);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_S, LDF_GRAPH);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_P, LDF_GRAPH);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_O, LDF_GRAPH);
 		
 		// generic mapping
 		m.addAll(HYDRA_MAPPING);
