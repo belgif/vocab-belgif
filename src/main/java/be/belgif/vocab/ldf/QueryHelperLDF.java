@@ -220,7 +220,7 @@ public class QueryHelperLDF {
 		// search template
 		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, LDF_GRAPH);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
-				F.createIRI(PREFIX + "_ldf/" + vocab + "{?s,p,o}"), LDF_GRAPH);
+				F.createLiteral(PREFIX + "_ldf/" + vocab + "{?s,p,o}"), LDF_GRAPH);
 		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAPPING, LDF_GRAPH);
 		
 		// generic mapping
