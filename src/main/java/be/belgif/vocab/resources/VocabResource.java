@@ -50,7 +50,7 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/auth")
 public class VocabResource extends RdfResource {
-	private final static String PREFIX = App.getPrefix();
+	private final static String PREFIX = App.getPrefix() + "auth/";
 	
 	@GET
 	@Path("/{vocab}")
