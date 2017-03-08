@@ -48,7 +48,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/_ldf")
 public class LdfResource extends RdfResource {
 	@GET
-	@Produces({RDFMediaType.TRIG})
+	@Produces({RDFMediaType.TRIG, RDFMediaType.JSONLD})
 	@ExceptionMetered
 	public Model searchAll(@QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,
@@ -58,7 +58,7 @@ public class LdfResource extends RdfResource {
 	
 	@GET
 	@Path("{vocab}")
-	@Produces({RDFMediaType.TRIG})
+	@Produces({RDFMediaType.TRIG, RDFMediaType.JSONLD})
 	@ExceptionMetered
 	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,

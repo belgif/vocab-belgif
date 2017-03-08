@@ -308,7 +308,6 @@ public class QueryHelperLDF {
 	private static Model setNamespaces(Model m) {
 		Model ns = QueryHelper.setNamespaces(m);
 		ns.setNamespace(Hydra.PREFIX, Hydra.NAMESPACE);
-		ns.setNamespace(VOID.PREFIX, VOID.NAMESPACE);
 		return ns;
 	}
 	
@@ -332,8 +331,9 @@ public class QueryHelperLDF {
 		
 		// speedup: vocabularies are stored in separate graphs
 		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
-		
-		IRI dataset = F.createIRI(PREFIX + LDF + "/" + vocab + "#dataset");
+		//
+		//IRI dataset = F.createIRI(PREFIX + LDF + "/" + vocab + "#dataset");
+		IRI dataset = F.createIRI(PREFIX + "void#" + vocab);
 		
 		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path(LDF).path(vocab);
 		if (s != null) {
@@ -354,12 +354,11 @@ public class QueryHelperLDF {
 			long count = getCount(conn, subj, pred, obj, graph);
 			
 			Model m = new LinkedHashModel();
-			m = setNamespaces(m);
 			
 			m.addAll(hyperControls(vocab, dataset, builder, offset, count));
 			m.addAll(getFragment(conn, subj, pred, obj, graph, offset, count));
 			
-			return m;
+			return setNamespaces(m);
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);
 		}
