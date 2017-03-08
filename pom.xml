@@ -110,5 +110,10 @@
             <artifactId>dropwizard-configurable-assets-bundle</artifactId>
             <version>1.0.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.rdf4j</groupId>
+            <artifactId>rdf4j-rio-trig</artifactId>
+            <version>2.2</version>
+        </dependency>
     </dependencies>
 </project>

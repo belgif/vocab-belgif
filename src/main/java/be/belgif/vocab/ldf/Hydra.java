@@ -43,6 +43,7 @@ public class Hydra {
 	public final static IRI COLLECTION;
 	public final static IRI ITEMS;
 	public final static IRI MAPPING;
+	public final static IRI MEMBER;
 	public final static IRI NEXT;
 	public final static IRI PREVIOUS;
 	public final static IRI PROPERTY;
@@ -58,6 +59,7 @@ public class Hydra {
 		COLLECTION = f.createIRI(NAMESPACE, "Collection");
 		ITEMS = f.createIRI(NAMESPACE, "itemsPerPage");
 		MAPPING = f.createIRI(NAMESPACE, "mapping");
+		MEMBER = f.createIRI(NAMESPACE, "member");
 		NEXT = f.createIRI(NAMESPACE, "next");
 		PREVIOUS = f.createIRI(NAMESPACE, "previous");
 		PROPERTY = f.createIRI(NAMESPACE, "property");

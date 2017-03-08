@@ -31,6 +31,7 @@ import java.net.URI;
 
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.UriBuilder;
+import org.eclipse.rdf4j.model.BNode;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -64,29 +65,20 @@ import org.slf4j.LoggerFactory;
 public class QueryHelperLDF {
 	private final static Logger LOG = (Logger) LoggerFactory.getLogger(QueryHelperLDF.class);
 	
+	public final static String LDF = "_ldf";
+	
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
 	
 	private final static String PREFIX = App.getPrefix();
+	private final static BNode LDF_SEARCH = F.createBNode("search");
 	
-	private final static IRI LDF_GRAPH = F.createIRI(App.getPrefixGraph() + "/ldf");
-	private final static IRI LDF_SEARCH = F.createIRI(PREFIX + "_ldf#search");		
+	private final static Value S = F.createLiteral("s");
+	private final static Value P = F.createLiteral("p");
+	private final static Value O = F.createLiteral("o");
 	
-	private final static IRI LDF_MAP_S = F.createIRI(PREFIX + "_ldf#s");
-	private final static IRI LDF_MAP_P = F.createIRI(PREFIX + "_ldf#p");
-	private final static IRI LDF_MAP_O = F.createIRI(PREFIX + "_ldf#o");
-	
-	// Hydra mapping, does not change
-	private final static Model HYDRA_MAPPING = new LinkedHashModel();
-	static {
-		HYDRA_MAPPING.add(LDF_MAP_S, Hydra.VARIABLE, F.createLiteral("s"), LDF_GRAPH);
-		HYDRA_MAPPING.add(LDF_MAP_S, Hydra.PROPERTY, RDF.SUBJECT, LDF_GRAPH);
-
-		HYDRA_MAPPING.add(LDF_MAP_P, Hydra.VARIABLE, F.createLiteral("p"), LDF_GRAPH);
-		HYDRA_MAPPING.add(LDF_MAP_P, Hydra.PROPERTY, RDF.PREDICATE, LDF_GRAPH);
-		
-		HYDRA_MAPPING.add(LDF_MAP_O, Hydra.VARIABLE, F.createLiteral("o"), LDF_GRAPH);
-		HYDRA_MAPPING.add(LDF_MAP_O, Hydra.PROPERTY, RDF.OBJECT, LDF_GRAPH);
-	}
+	private final static BNode LDF_MAP_S = F.createBNode("s");
+	private final static BNode LDF_MAP_P = F.createBNode("p");
+	private final static BNode LDF_MAP_O = F.createBNode("o");
 	
 	private final static long PAGING = 50;
 	private final static Value PAGING_VAL = F.createLiteral(PAGING);	
@@ -164,16 +156,19 @@ public class QueryHelperLDF {
 	 * @param count total number of results
 	 * @return RDF triples
 	 */
-	private static Model meta(IRI page, IRI fragment, long count) {
+	private static Model meta(String vocab, IRI page, IRI fragment, long count) {
 		Model m = new LinkedHashModel();
 		
+		IRI graph = QueryHelper.asGraph(vocab + "#metadata");
 		Value total = F.createLiteral(count);
+		
+		m.add(page, Hydra.ITEMS, PAGING_VAL, graph);
 		// as per spec two properties with same value
-		m.add(page, Hydra.ITEMS, PAGING_VAL, LDF_GRAPH);
-		m.add(page, VOID.TRIPLES, total, LDF_GRAPH);
-		m.add(page, Hydra.TOTAL, total, LDF_GRAPH);
-		m.add(page, Hydra.VIEW, fragment, LDF_GRAPH);
-		//m.add(LDF_GRAPH, FOAF.PRIMARY_TOPIC, fragment);
+		m.add(page, VOID.TRIPLES, total, graph);
+		m.add(page, Hydra.TOTAL, total, graph);
+		
+		m.add(page, Hydra.VIEW, fragment, graph);
+		m.add(graph, FOAF.PRIMARY_TOPIC, fragment, graph);
 		return m;
 	}
 	
@@ -191,11 +186,13 @@ public class QueryHelperLDF {
 										long offset, long count) {
 		Model m = new LinkedHashModel();
 	
-		m.add(dataset, RDF.TYPE, VOID.DATASET, LDF_GRAPH);
-		m.add(dataset, RDF.TYPE, Hydra.COLLECTION, LDF_GRAPH);
+		IRI graph = QueryHelper.asGraph(vocab + "#controls");
+		
+		m.add(dataset, RDF.TYPE, VOID.DATASET, graph);
+		m.add(dataset, RDF.TYPE, Hydra.COLLECTION, graph);
 		
 		IRI fragment = F.createIRI(builder.build().toString());
-		m.add(dataset, VOID.SUBSET, fragment, LDF_GRAPH);
+		m.add(dataset, VOID.SUBSET, fragment, graph);
 
 		// page count starts at 1
 		long current = (offset % PAGING) + 1;
@@ -205,26 +202,32 @@ public class QueryHelperLDF {
 		// previous and next pages, if any
 		if (offset >= PAGING) {
 			URI prevPage = builder.build(current - 1, "page");
-			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), LDF_GRAPH);
+			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), graph);
 		}
 		if (offset + PAGING < count) {
 			URI nextPage = builder.build(current + 1, "page");
-			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), LDF_GRAPH);
+			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), graph);
 		}
 	
 		// search template
-		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, LDF_GRAPH);
+		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, graph);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
-				F.createLiteral(PREFIX + "_ldf/" + vocab + "{?s,p,o}"), LDF_GRAPH);
-		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_S, LDF_GRAPH);
-		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_P, LDF_GRAPH);
-		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_O, LDF_GRAPH);
+				F.createLiteral(PREFIX + LDF + "/" + vocab + "{?s,p,o}"), graph);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_S, graph);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_P, graph);
+		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_O, graph);
 		
 		// generic mapping
-		m.addAll(HYDRA_MAPPING);
-		
-		m.addAll(meta(page, fragment, count));
-		m.add(fragment, Hydra.ITEMS, PAGING_VAL);
+		m.add(LDF_MAP_S, Hydra.VARIABLE, S, graph);
+		m.add(LDF_MAP_S, Hydra.PROPERTY, RDF.SUBJECT, graph);
+		m.add(LDF_MAP_P, Hydra.VARIABLE, P, graph);
+		m.add(LDF_MAP_P, Hydra.PROPERTY, RDF.PREDICATE, graph);
+		m.add(LDF_MAP_O, Hydra.VARIABLE, O, graph);
+		m.add(LDF_MAP_O, Hydra.PROPERTY, RDF.OBJECT, graph);
+	
+		m.add(fragment, Hydra.ITEMS, PAGING_VAL, graph);
+	
+		m.addAll(meta(vocab, page, fragment, count));
 		
 		return m;
 	}
@@ -330,9 +333,9 @@ public class QueryHelperLDF {
 		// speedup: vocabularies are stored in separate graphs
 		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
 		
-		IRI dataset = F.createIRI(PREFIX + "_ldf/" + vocab + "#dataset");
+		IRI dataset = F.createIRI(PREFIX + LDF + "/" + vocab + "#dataset");
 		
-		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path("_ldf").path(vocab);
+		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path(LDF).path(vocab);
 		if (s != null) {
 			builder = builder.queryParam("s", s);
 		}
