@@ -132,16 +132,19 @@ public class VocabImportTask extends Task {
 		Iterations.asList(conn.getStatements(null, DCTERMS.DESCRIPTION, null, ctx)).forEach(
 				s -> m.add(voidID, DCTERMS.DESCRIPTION, s.getObject()));
 
-		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));		
+		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
 		m.add(voidID, DCTERMS.LICENSE, f.createIRI("http://creativecommons.org/publicdomain/zero/1.0/"));
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(prefix));
+		
 		// information about downloadable file
 		m.add(voidID, VOID.DATA_DUMP, f.createIRI(prefix + "dataset/" + name));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/N-Triples"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/Turtle"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/JSON-LD"));
+		
 		// linked data query service
 		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF + name));
+		
 		// top level and examples
 		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
 				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));

@@ -34,7 +34,7 @@ and running `POST`ing the data to the import URL.
 The `name` parameter must contain the file name of the SKOS file to be imported.
 
 ```
-curl -X POST --data="name=newthes.nt" http://localhost:8081/tasks/vocab-import
+curl -X POST --data "name=newthes.nt" http://localhost:8081/tasks/vocab-import
 ```
 
 The file name will be used to construct an RDF4j Context / named graph

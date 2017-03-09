@@ -61,7 +61,8 @@ public class VOIDView extends RdfView {
 	 */
 	public VOIDView(Model m, String lang) {
 		super("void.ftl", lang);
-		m.subjects().forEach(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
+		m.subjects().stream()
+					.forEachOrdered(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
 	}
 }
 

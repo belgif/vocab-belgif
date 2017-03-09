@@ -32,8 +32,11 @@
 	    </#list>
 	    </table>
 	</section>
+    </section>
+    <section>
+	<h3>${m.getString("msg.techinfo")}</h3>
 	<section>
-	    <h4>Content Negotiation</h4>
+	    <h4>Content Negotiation (De-referencing)</h4>
 	    <table>
 	    <tr><th>${m.getString("msg.format")}</th><th>HTTP Accept:</th></tr>
 	    <tr><td>HTML</td><td>text/html</td></tr>
@@ -41,6 +44,10 @@
 	    <tr><td>N-Triples</td><td>application/n-triples</td></tr>
 	    <tr><td>Turtle</td><td>text/turtle</td></tr>
 	    </table>
+	</section>
+	<section>
+	    <h4>Linked Data Fragments</h4>
+	    <p>http://vocab.belgif.be/_ldf</p>
 	</section>
     </section>
     </div>
