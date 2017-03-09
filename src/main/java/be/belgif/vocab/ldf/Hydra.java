@@ -41,10 +41,12 @@ public class Hydra {
 	public final static String PREFIX = "hydra";
 		
 	public final static IRI COLLECTION;
+	public final static IRI FIRST;
 	public final static IRI ITEMS;
 	public final static IRI MAPPING;
 	public final static IRI MEMBER;
 	public final static IRI NEXT;
+	public final static IRI PARTIAL;
 	public final static IRI PREVIOUS;
 	public final static IRI PROPERTY;
 	public final static IRI SEARCH;
@@ -57,10 +59,12 @@ public class Hydra {
 	static {
 		ValueFactory f = SimpleValueFactory.getInstance();
 		COLLECTION = f.createIRI(NAMESPACE, "Collection");
+		FIRST = f.createIRI(NAMESPACE, "first");
 		ITEMS = f.createIRI(NAMESPACE, "itemsPerPage");
 		MAPPING = f.createIRI(NAMESPACE, "mapping");
 		MEMBER = f.createIRI(NAMESPACE, "member");
 		NEXT = f.createIRI(NAMESPACE, "next");
+		PARTIAL = f.createIRI(NAMESPACE, "PartialCollectionView");
 		PREVIOUS = f.createIRI(NAMESPACE, "previous");
 		PROPERTY = f.createIRI(NAMESPACE, "property");
 		SEARCH = f.createIRI(NAMESPACE, "search");

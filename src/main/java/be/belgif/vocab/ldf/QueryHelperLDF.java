@@ -42,6 +42,7 @@ import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
+import org.eclipse.rdf4j.model.vocabulary.XMLSchema;
 import org.eclipse.rdf4j.query.BindingSet;
 
 import org.eclipse.rdf4j.query.GraphQuery;
@@ -80,8 +81,11 @@ public class QueryHelperLDF {
 	private final static BNode LDF_MAP_P = F.createBNode("p");
 	private final static BNode LDF_MAP_O = F.createBNode("o");
 	
-	private final static long PAGING = 50;
-	private final static Value PAGING_VAL = F.createLiteral(PAGING);	
+	private final static String PAGE = "page";
+	
+	private final static int PAGING = 50;
+	private final static Value PAGING_VAL = F.createLiteral("50", XMLSchema.INTEGER);
+	
 
 	private final static String Q_COUNT =
 		"SELECT (COUNT(*) AS ?cnt) " + 
@@ -149,66 +153,33 @@ public class QueryHelperLDF {
 	}
 	
 	/**
-	 * Metadata of the fragment
+	 * Hydra counters and other metadata
 	 * 
-	 * @param fragment fragment IRI
-	 * @param page page of the fragment
+	 * @param m triples
+	 * @param graph hydra named graph
+	 * @param part page or fragment IRI
 	 * @param count total number of results
 	 * @return RDF triples
 	 */
-	private static Model meta(String vocab, IRI page, IRI fragment, long count) {
-		Model m = new LinkedHashModel();
+	private static void meta(Model m, IRI graph, IRI part, int count) {
+		m.add(graph, FOAF.PRIMARY_TOPIC, part, graph);
 		
-		IRI graph = QueryHelper.asGraph(vocab + "#metadata");
-		Value total = F.createLiteral(count);
-		
-		m.add(page, Hydra.ITEMS, PAGING_VAL, graph);
+		Value total = F.createLiteral(String.valueOf(count), XMLSchema.INTEGER);
+		m.add(part, Hydra.ITEMS, PAGING_VAL, graph);
 		// as per spec two properties with same value
-		m.add(page, VOID.TRIPLES, total, graph);
-		m.add(page, Hydra.TOTAL, total, graph);
-		
-		m.add(page, Hydra.VIEW, fragment, graph);
-		m.add(graph, FOAF.PRIMARY_TOPIC, fragment, graph);
-		return m;
+		m.add(part, VOID.TRIPLES, total, graph);
+		m.add(part, Hydra.TOTAL, total, graph);
 	}
 	
 	/**
-	 * Hydra hypermedia controls
+	 * Hydra search template mappings
 	 * 
-	 * @param vocab vocabulary name
+	 * @param m triples
+	 * @param graph hydra graph
+	 * @param vocab name of the vocabulary
 	 * @param dataset dataset IRI
-	 * @param builder URI Builder
-	 * @param offset offset
-	 * @param count total number of triples
-	 * @return RDF triples
 	 */
-	private static Model hyperControls(String vocab, IRI dataset, UriBuilder builder, 
-										long offset, long count) {
-		Model m = new LinkedHashModel();
-	
-		IRI graph = QueryHelper.asGraph(vocab + "#controls");
-		
-		m.add(dataset, RDF.TYPE, VOID.DATASET, graph);
-		m.add(dataset, RDF.TYPE, Hydra.COLLECTION, graph);
-		
-		IRI fragment = F.createIRI(builder.build().toString());
-		m.add(dataset, VOID.SUBSET, fragment, graph);
-
-		// page count starts at 1
-		long current = (offset % PAGING) + 1;
-		builder.queryParam("page", "{page}");
-		IRI page = F.createIRI(builder.build(current, "page").toString());
-		
-		// previous and next pages, if any
-		if (offset >= PAGING) {
-			URI prevPage = builder.build(current - 1, "page");
-			m.add(dataset, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), graph);
-		}
-		if (offset + PAGING < count) {
-			URI nextPage = builder.build(current + 1, "page");
-			m.add(dataset, Hydra.NEXT, F.createIRI(nextPage.toString()), graph);
-		}
-	
+	private static void template(Model m, IRI graph, String vocab, IRI dataset) {
 		// search template
 		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, graph);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
@@ -224,31 +195,81 @@ public class QueryHelperLDF {
 		m.add(LDF_MAP_P, Hydra.PROPERTY, RDF.PREDICATE, graph);
 		m.add(LDF_MAP_O, Hydra.VARIABLE, O, graph);
 		m.add(LDF_MAP_O, Hydra.PROPERTY, RDF.OBJECT, graph);
-	
-		m.add(fragment, Hydra.ITEMS, PAGING_VAL, graph);
-	
-		m.addAll(meta(vocab, page, fragment, count));
+	}
 		
-		return m;
+	/**
+	 * Hydra pagination
+	 * 
+	 * @param m triples
+	 * @param graph hydra named graph
+	 * @param part page or fragment
+	 * @param builder URI Builder
+	 * @param current current page number
+	 * @param count total number of results
+	 * @param offset offset
+	 */
+	private static void page(Model m, IRI graph, IRI part, int current, int count, 
+											int offset, UriBuilder builder) {
+		// pagination, page count starts at 1		
+		
+		if (offset >= PAGING) {
+			URI prevPage = builder.build(current - 1, PAGE);
+			m.add(part, Hydra.PREVIOUS, F.createIRI(prevPage.toString()), graph);
+		}
+		if (offset + PAGING < count) {
+			URI nextPage = builder.build(current + 1, PAGE);
+			m.add(part, Hydra.NEXT, F.createIRI(nextPage.toString()), graph);
+		}
+		
+	}
+	
+	/**
+	 * Hydra hypermedia controls
+	 * 
+	 * @param m triples
+	 * @param vocab vocabulary name
+	 * @param dataset dataset IRI
+	 * @param builder URI Builder
+	 * @param offset offset
+	 * @param count total number of triples
+	 * @param isFrag true if fragment was requested (true if page)
+	 */
+	private static void hyperControls(Model m, String vocab, IRI dataset,
+						UriBuilder builder, int offset, int count, boolean isFrag) {
+		IRI graph = QueryHelper.asGraph("/" + vocab + "#hydra");
+		IRI fragment = F.createIRI(builder.build().toString());
+	
+		builder.queryParam(PAGE, "{page}");
+		int current = (offset / PAGING) + 1;
+		IRI page = F.createIRI(builder.build(current, PAGE).toString());
+			
+		m.add(dataset, RDF.TYPE, VOID.DATASET, graph);
+		m.add(dataset, RDF.TYPE, Hydra.COLLECTION, graph);
+		m.add(dataset, VOID.SUBSET, fragment, graph);
+		m.add(fragment, VOID.SUBSET, page, graph);
+
+		template(m, graph, vocab, dataset);
+		meta(m, graph, isFrag ? fragment : page, count);
+		page(m, graph, isFrag ? fragment : page, current, count, offset, builder); 
 	}
 
 	
 	/**
 	 * Get fragment / one page of results
 	 * 
+	 * @param m triples
 	 * @param conn repository
 	 * @param subj subject IRI
 	 * @param pred predicate IRI
 	 * @param obj object value
 	 * @param graph named graph
 	 * @param offset
-	 * @return RDF triples
 	 */
-	private static Model getFragment(RepositoryConnection conn, IRI subj, IRI pred, 
+	private static void getFragment(Model m, RepositoryConnection conn, IRI subj, IRI pred, 
 								Value obj, IRI graph, long offset, long count) {	
 		// nothing (more) to show
 		if ((count <= 0) || (offset >= count)) { 
-			return new LinkedHashModel();
+			return;
 		}
 		
 		String qry = (graph != null) ? Q_LDF_GRAPH : Q_LDF;
@@ -266,7 +287,7 @@ public class QueryHelperLDF {
 		if (graph != null) {
 			gq.setBinding("graph", graph);
 		}
-		return QueryResults.asModel(gq.evaluate());
+		m.addAll(QueryResults.asModel(gq.evaluate()));
 	}
 	
 	/**
@@ -279,7 +300,7 @@ public class QueryHelperLDF {
 	 * @param graph named graph
 	 * @return number of results
 	 */
-	private static long getCount(RepositoryConnection conn, 
+	private static int getCount(RepositoryConnection conn, 
 									IRI subj, IRI pred, Value obj, IRI graph) {
 		TupleQuery tq = conn.prepareTupleQuery((graph != null) ? Q_COUNT_GRAPH : Q_COUNT);
 		if (subj != null) {
@@ -296,7 +317,7 @@ public class QueryHelperLDF {
 		}
 		BindingSet res = QueryResults.singleResult(tq.evaluate());
 		String val = res.getValue("cnt").stringValue();
-		return Long.valueOf(val);
+		return Integer.valueOf(val);
 	}
 	
 	/**
@@ -323,17 +344,19 @@ public class QueryHelperLDF {
 	 * @return RDF model 
 	 */
 	public static Model getLDF(Repository repo, String s, String p, String o, 
-													String vocab, long page) {
-		if (page < 1) {
+													String vocab, String page) {
+		boolean isFrag = (page == null || page.isEmpty());
+
+		// check parameters
+		int pageVal = isFrag ? 1 : Integer.valueOf(page);
+		if (pageVal < 1) {
 			throw new WebApplicationException("Invalid (zero or negative) page number");
 		}
-		long offset = (page - 1) * PAGING;
 		
-		// speedup: vocabularies are stored in separate graphs
-		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
-		//
-		//IRI dataset = F.createIRI(PREFIX + LDF + "/" + vocab + "#dataset");
-		IRI dataset = F.createIRI(PREFIX + "void#" + vocab);
+		IRI subj = (s != null) ? createIRI(s) : null;
+		IRI pred = (p != null) ? createIRI(p) : null;
+		Value obj = (o != null) ? createLiteralOrUri(o) : null;
+	
 		
 		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path(LDF).path(vocab);
 		if (s != null) {
@@ -346,18 +369,20 @@ public class QueryHelperLDF {
 			builder = builder.queryParam("o", o);
 		}
 
-		IRI subj = (s != null) ? createIRI(s) : null;
-		IRI pred = (p != null) ? createIRI(p) : null;
-		Value obj = (o != null) ? createLiteralOrUri(o) : null;
+		int offset = (pageVal - 1) * PAGING;
+		
+		// speedup: vocabularies are stored in separate graphs
+		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
+		IRI dataset = F.createIRI(PREFIX + "void#" + vocab);
 		
 		try (RepositoryConnection conn = repo.getConnection()) {
-			long count = getCount(conn, subj, pred, obj, graph);
+			int count = getCount(conn, subj, pred, obj, graph);
 			
 			Model m = new LinkedHashModel();
 			
-			m.addAll(hyperControls(vocab, dataset, builder, offset, count));
-			m.addAll(getFragment(conn, subj, pred, obj, graph, offset, count));
-			
+			hyperControls(m, vocab, dataset, builder, offset, count, isFrag);
+			getFragment(m, conn, subj, pred, obj, graph, offset, count);
+
 			return setNamespaces(m);
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);

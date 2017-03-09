@@ -52,7 +52,7 @@ public class LdfResource extends RdfResource {
 	@ExceptionMetered
 	public Model searchAll(@QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,
-						@DefaultValue("1") @QueryParam("page") long page) {
+						@QueryParam("page") String page) {
 		return QueryHelperLDF.getLDF(getRepository(), s, p, o, "", page);
 	}
 	
@@ -62,7 +62,7 @@ public class LdfResource extends RdfResource {
 	@ExceptionMetered
 	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
 						@QueryParam("p") String p, @QueryParam("o") String o,
-						@DefaultValue("1") @QueryParam("page") long page) {
+						@QueryParam("page") String page) {
 		return QueryHelperLDF.getLDF(getRepository(), s, p, o, vocab, page);
 	}
 	
