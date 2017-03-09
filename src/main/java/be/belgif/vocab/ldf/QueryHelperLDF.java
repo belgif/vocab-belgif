@@ -165,6 +165,7 @@ public class QueryHelperLDF {
 		m.add(graph, FOAF.PRIMARY_TOPIC, part, graph);
 		
 		Value total = F.createLiteral(String.valueOf(count), XMLSchema.INTEGER);
+		m.add(part, RDF.TYPE, Hydra.PARTIAL, graph);
 		m.add(part, Hydra.ITEMS, PAGING_VAL, graph);
 		// as per spec two properties with same value
 		m.add(part, VOID.TRIPLES, total, graph);
