@@ -26,6 +26,7 @@
 package be.belgif.vocab.tasks;
 
 import be.belgif.vocab.App;
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
 
 import com.codahale.metrics.annotation.Timed;
@@ -41,7 +42,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import javax.ws.rs.WebApplicationException;
@@ -122,18 +125,19 @@ public class VocabImportTask extends Task {
 		
 		Model m = new LinkedHashModel();
 		ValueFactory f = conn.getValueFactory();
-		IRI voidID  = f.createIRI(prefix + "void#" + name);
+		IRI voidID  = QueryHelper.asDataset(name);
 
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
 
-		// multi-lingual titles and descriptions
-		Iterations.asList(conn.getStatements(null, DCTERMS.TITLE, null, ctx)).forEach(
-				s -> m.add(voidID, DCTERMS.TITLE, s.getObject()));
-		Iterations.asList(conn.getStatements(null, DCTERMS.DESCRIPTION, null, ctx)).forEach(
-				s -> m.add(voidID, DCTERMS.DESCRIPTION, s.getObject()));
-
+		// multi-lingual titles, descriptions etc
+		List<IRI> props = Arrays.asList(DCTERMS.TITLE, DCTERMS.DESCRIPTION, 
+										DCTERMS.LICENSE, DCTERMS.SOURCE);
+		props.forEach( p -> 
+			Iterations.asList(conn.getStatements(null, p, null, ctx)).forEach(
+								s -> m.add(voidID, p, s.getObject()))
+		);
+		
 		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
-		m.add(voidID, DCTERMS.LICENSE, f.createIRI("http://creativecommons.org/publicdomain/zero/1.0/"));
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(prefix));
 		
 		// information about downloadable file
@@ -142,8 +146,9 @@ public class VocabImportTask extends Task {
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/Turtle"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/JSON-LD"));
 		
-		// linked data query service
+		// linked data query service(s)
 		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF + name));
+		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF));
 		
 		// top level and examples
 		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(

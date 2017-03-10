@@ -374,7 +374,7 @@ public class QueryHelperLDF {
 		
 		// speedup: vocabularies are stored in separate graphs
 		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
-		IRI dataset = F.createIRI(PREFIX + "void#" + vocab);
+		IRI dataset = QueryHelper.asDataset(vocab);
 		
 		try (RepositoryConnection conn = repo.getConnection()) {
 			int count = getCount(conn, subj, pred, obj, graph);

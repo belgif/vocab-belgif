@@ -58,6 +58,7 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
  * @author Bart.Hanssens
  */
 public class QueryHelper {
+	private final static String PREFIX = App.getPrefix();
 	private final static String PREFIX_GRAPH = App.getPrefixGraph();
 	
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
@@ -79,7 +80,17 @@ public class QueryHelper {
 	 * @return context URI 
 	 */
 	public static IRI asGraph(String name) {
-		return F.createIRI(PREFIX_GRAPH + name);
+		return F.createIRI(PREFIX_GRAPH + "void#" + name);
+	}
+	
+	/**
+	 * Get name graph + context id from name
+	 * 
+	 * @param name
+	 * @return context URI 
+	 */
+	public static IRI asDataset(String name) {
+		return F.createIRI(PREFIX + name);
 	}
 	
 	/**
