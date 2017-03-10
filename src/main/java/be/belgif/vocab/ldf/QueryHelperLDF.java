@@ -181,10 +181,11 @@ public class QueryHelperLDF {
 	 * @param dataset dataset IRI
 	 */
 	private static void template(Model m, IRI graph, String vocab, IRI dataset) {
+		String path = vocab.isEmpty() ? "" : "/" + vocab;
 		// search template
 		m.add(dataset, Hydra.SEARCH, LDF_SEARCH, graph);
 		m.add(LDF_SEARCH, Hydra.TEMPLATE, 
-				F.createLiteral(PREFIX + LDF + "/" + vocab + "{?s,p,o}"), graph);
+				F.createLiteral(PREFIX + LDF + path + "{?s,p,o}"), graph);
 		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_S, graph);
 		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_P, graph);
 		m.add(LDF_SEARCH, Hydra.MAPPING, LDF_MAP_O, graph);
