@@ -62,7 +62,6 @@ import org.glassfish.jersey.server.filter.UriConnegFilter;
  */
 public class App extends Application<AppConfig> {
 
-	//public final static String PREFIX = "http://vocab.belgif.be/";
 	private static String PREFIX;
 	private static String PREFIX_GRAPH;
 	

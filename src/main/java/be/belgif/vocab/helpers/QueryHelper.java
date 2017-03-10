@@ -26,6 +26,10 @@
 package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.App;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.common.iteration.Iterations;
@@ -58,6 +62,19 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
  * @author Bart.Hanssens
  */
 public class QueryHelper {
+	// namespace mappings
+	public final static Map<String, String> NS_MAP = new HashMap();
+	static {
+		NS_MAP.put(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
+		NS_MAP.put(FOAF.PREFIX, FOAF.NAMESPACE);
+		NS_MAP.put(OWL.PREFIX, OWL.NAMESPACE);
+		NS_MAP.put(RDF.PREFIX, RDF.NAMESPACE);
+		NS_MAP.put(RDFS.PREFIX, RDFS.NAMESPACE);
+		NS_MAP.put(SKOS.PREFIX, SKOS.NAMESPACE);
+		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
+		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
+	}
+	
 	private final static String PREFIX = App.getPrefix();
 	private final static String PREFIX_GRAPH = App.getPrefixGraph();
 	
@@ -111,14 +128,7 @@ public class QueryHelper {
 	 */
 	public static Model setNamespaces(Model m) {
 		if (! m.isEmpty()) {
-			m.setNamespace(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
-			m.setNamespace(FOAF.PREFIX, FOAF.NAMESPACE);
-			m.setNamespace(OWL.PREFIX, OWL.NAMESPACE);
-			m.setNamespace(RDF.PREFIX, RDF.NAMESPACE);
-			m.setNamespace(RDFS.PREFIX, RDFS.NAMESPACE);
-			m.setNamespace(SKOS.PREFIX, SKOS.NAMESPACE);
-			m.setNamespace(VOID.PREFIX, VOID.NAMESPACE);
-			m.setNamespace(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
+			NS_MAP.forEach((p, n) -> m.setNamespace(p,n));
 		}
 		return m;
 	}

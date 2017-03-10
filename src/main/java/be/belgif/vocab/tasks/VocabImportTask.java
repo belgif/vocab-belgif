@@ -94,14 +94,15 @@ public class VocabImportTask extends Task {
 		LOG.info("Writing data dumps for {}", name);
 			
 		for(String ftype: App.FTYPES.keySet()) {
-			Path p = Paths.get(downloadDir, name + "." + ftype);
-			try (BufferedWriter w = Files.newBufferedWriter(p, StandardOpenOption.WRITE, 
+			Path f = Paths.get(downloadDir, name + "." + ftype);
+			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE, 
 															StandardOpenOption.CREATE)) {
 				Optional<RDFFormat> fmt  =
 						Rio.getWriterFormatForFileName(name + "." + ftype);
 				if (fmt.isPresent()) {
 					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
-					LOG.info("Writing file {}", p);
+					LOG.info("Writing file {}", f);
+					QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p,n));
 					conn.export(rdfh, ctx);
 				} else {
 					throw new IOException("No RDF writer found for " + ftype);
