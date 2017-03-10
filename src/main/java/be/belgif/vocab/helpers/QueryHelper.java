@@ -80,7 +80,7 @@ public class QueryHelper {
 	 * @return context URI 
 	 */
 	public static IRI asGraph(String name) {
-		return F.createIRI(PREFIX_GRAPH + "void#" + name);
+		return F.createIRI(PREFIX_GRAPH + name);
 	}
 	
 	/**
@@ -90,7 +90,7 @@ public class QueryHelper {
 	 * @return context URI 
 	 */
 	public static IRI asDataset(String name) {
-		return F.createIRI(PREFIX + name);
+		return F.createIRI(PREFIX + "void#" + name);
 	}
 	
 	/**
