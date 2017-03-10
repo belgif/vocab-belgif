@@ -157,7 +157,7 @@ public class VocabImportTask extends Task {
 				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
 		
 		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
-		m.add(voidID, VOID.URI_SPACE, f.createLiteral(prefix + name));
+		m.add(voidID, VOID.URI_SPACE, f.createLiteral(prefix + "auth/" + name));
 		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
 
 		return m;
