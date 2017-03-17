@@ -103,7 +103,7 @@ public class QueryHelper {
 	}
 
 	/**
-	 * Get name graph + context id from name
+	 * Get named graph / context id from name
 	 *
 	 * @param name
 	 * @return context URI

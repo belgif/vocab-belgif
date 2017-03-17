@@ -71,7 +71,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Import a SKOS file and create full (static) download files in various
+ * Import a SKOS file and create full (static) download files in various formats.
  *
  * @author Bart.Hanssens
  */
