@@ -31,52 +31,51 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
-
 /**
  * Abstract resource querying the RDF triple store.
- * 
+ *
  * @author Bart.Hanssens
  */
-
 public abstract class RdfResource {
+
 	private final Repository repo;
 
 	/**
 	 * Get list of vocabularies as RDF triple
-	 * 
-	 * @return triple 
+	 *
+	 * @return triple
 	 */
 	protected Model getVocabList() {
 		return QueryHelper.getVocabList(repo);
 	}
-	
+
 	/**
 	 * Get repository
-	 * 
-	 * @return repository 
+	 *
+	 * @return repository
 	 */
 	protected Repository getRepository() {
 		return repo;
 	}
-	
+
 	/**
 	 * Get by ID (URI)
-	 * 
+	 *
 	 * @param prefix
 	 * @param type
 	 * @param id
-	 * @return RDF model 
+	 * @return RDF model
 	 */
 	protected Model getById(String prefix, String type, String id) {
 		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
-									: prefix + type + "#id";
+				: prefix + type + "#id";
 		System.err.println(url);
 		return QueryHelper.get(repo, QueryHelper.asURI(url), type);
 	}
 
 	/**
 	 * Get all triples
-	 * 
+	 *
 	 * @param subj subject IRI or null
 	 * @param from named graph
 	 * @return all triples in a graph
@@ -84,15 +83,13 @@ public abstract class RdfResource {
 	public Model get(IRI subj, String from) {
 		return QueryHelper.get(repo, subj, from);
 	}
-	
-	
+
 	/**
 	 * Constructor
-	 * 
-	 * @param repo 
+	 *
+	 * @param repo
 	 */
 	public RdfResource(Repository repo) {
 		this.repo = repo;
 	}
 }
-

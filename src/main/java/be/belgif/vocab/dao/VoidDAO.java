@@ -33,15 +33,15 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
  * DAO helper class for VoID.
- * 
+ *
  * @author Bart.Hanssens
  */
 public class VoidDAO extends RdfDAO {
 
 	/**
 	 * Get SKOS root resource
-	 * 
-	 * @return uri as string 
+	 *
+	 * @return uri as string
 	 */
 	public String getRoot() {
 		return obj(VOID.ROOT_RESOURCE).toString();
@@ -49,7 +49,7 @@ public class VoidDAO extends RdfDAO {
 
 	/**
 	 * Get download URL
-	 * 
+	 *
 	 * @return download URL
 	 */
 	public String getDownload() {
@@ -58,8 +58,8 @@ public class VoidDAO extends RdfDAO {
 
 	/**
 	 * Get name of the vocabulary
-	 * 
-	 * @return 
+	 *
+	 * @return
 	 */
 	public String getName() {
 		try {
@@ -68,10 +68,10 @@ public class VoidDAO extends RdfDAO {
 			return "";
 		}
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param m triples
 	 * @param id subject ID
 	 */

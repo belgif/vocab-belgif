@@ -47,19 +47,20 @@ import org.slf4j.LoggerFactory;
 
 /**
  * DAO helper class for RDF triples
- * 
+ *
  * @author Bart.Hanssens
  */
 public class RdfDAO {
+
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
-	
+
 	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final Model m;
 	private final IRI id;
-	
+
 	/**
 	 * Get set of triple objects
-	 * 
+	 *
 	 * @param prop property URI
 	 * @return set of objects (IRI or literal)
 	 */
@@ -67,10 +68,10 @@ public class RdfDAO {
 		Set objs = m.filter(id, prop, null).objects();
 		return (objs == null ? Collections.EMPTY_SET : objs);
 	}
-	
+
 	/**
 	 * Get set of triple objects
-	 * 
+	 *
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @return set of objects (IRI or literal)
@@ -79,7 +80,7 @@ public class RdfDAO {
 		Optional<Namespace> ns = m.getNamespace(prefix);
 		if (ns.isPresent()) {
 			return objs(f.createIRI(ns.get().getName(), term));
-		} else { 
+		} else {
 			LOG.error("Namespace for prefix {} not found", prefix);
 			return Collections.EMPTY_SET;
 		}
@@ -87,7 +88,7 @@ public class RdfDAO {
 
 	/**
 	 * Get one triple
-	 * 
+	 *
 	 * @param prop property URI
 	 * @return set of objects (IRI or literal)
 	 */
@@ -95,10 +96,10 @@ public class RdfDAO {
 		Iterator<Value> i = objs(prop).iterator();
 		return (i.hasNext() ? i.next() : null);
 	}
-	
+
 	/**
 	 * Get one triple
-	 * 
+	 *
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @return set of objects (IRI or literal)
@@ -107,10 +108,10 @@ public class RdfDAO {
 		Iterator<Value> i = objs(prefix, term).iterator();
 		return (i.hasNext() ? i.next() : null);
 	}
-	
+
 	/**
 	 * Get one literal
-	 * 
+	 *
 	 * @param prop property uri
 	 * @return literals (IRI or literal)
 	 */
@@ -118,10 +119,10 @@ public class RdfDAO {
 		Set objs = m.filter(id, prop, null).objects();
 		return (objs == null ? Collections.EMPTY_SET : objs);
 	}
-	
+
 	/**
 	 * Get one literal
-	 * 
+	 *
 	 * @param prop property URI
 	 * @return literal
 	 */
@@ -129,10 +130,10 @@ public class RdfDAO {
 		Iterator<Literal> i = literals(prop).iterator();
 		return (i.hasNext() ? i.next().stringValue() : null);
 	}
-	
+
 	/**
 	 * Get one literal
-	 * 
+	 *
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code
@@ -142,10 +143,10 @@ public class RdfDAO {
 		Iterator<String> i = literals(prefix, term, lang).iterator();
 		return (i.hasNext() ? i.next() : null);
 	}
-	
+
 	/**
 	 * Get a set of literals
-	 * 
+	 *
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code
@@ -153,7 +154,7 @@ public class RdfDAO {
 	 */
 	public Set<String> literals(String prefix, String term, String lang) {
 		Set<String> vals = new HashSet<>();
-		for (Value obj: objs(prefix, term)) {
+		for (Value obj : objs(prefix, term)) {
 			Literal l = (Literal) obj;
 			if (l.getLanguage().orElse("").equals(lang)) {
 				vals.add(l.stringValue());
@@ -161,30 +162,30 @@ public class RdfDAO {
 		}
 		return vals;
 	}
-	
+
 	/**
 	 * Get sameAs URI
-	 * 
+	 *
 	 * @return set of uri
 	 */
 	public Set<Value> getSameAs() {
 		return objs(OWL.SAMEAS);
 	}
-	
+
 	/**
 	 * Get the triple subject ID
-	 * 
-	 * @return subject IRI 
+	 *
+	 * @return subject IRI
 	 */
 	public IRI getId() {
 		return id;
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param m triple model
-	 * @param id  subject IRI
+	 * @param id subject IRI
 	 */
 	public RdfDAO(Model m, IRI id) {
 		this.id = id;

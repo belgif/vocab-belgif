@@ -31,29 +31,28 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-
 /**
  * Abstract resource querying the RDF triple store.
- * 
+ *
  * @author Bart.Hanssens
  */
 @Path("/")
 public class RootResource {
+
 	@GET
 	@Path("/.well_known/void")
 	public Response getVoid() throws URISyntaxException {
 		return Response.seeOther(new URI("/void")).build();
 	}
-	
+
 	@GET
 	public Response getRoot() throws URISyntaxException {
 		return Response.seeOther(new URI("/void")).build();
 	}
-	
+
 	/**
 	 * Constructor
 	 */
 	public RootResource() {
 	}
 }
-

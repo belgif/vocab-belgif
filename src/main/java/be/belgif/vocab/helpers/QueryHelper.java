@@ -58,12 +58,14 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
 
 /**
  * Helper class for querying the triple store
- * 
+ *
  * @author Bart.Hanssens
  */
 public class QueryHelper {
+
 	// namespace mappings
 	public final static Map<String, String> NS_MAP = new HashMap();
+
 	static {
 		NS_MAP.put(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
 		NS_MAP.put(FOAF.PREFIX, FOAF.NAMESPACE);
@@ -74,47 +76,47 @@ public class QueryHelper {
 		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
 		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
 	}
-	
+
 	private final static String PREFIX = App.getPrefix();
 	private final static String PREFIX_GRAPH = App.getPrefixGraph();
-	
+
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
-	
+
 	/**
 	 * Get string as URI
-	 * 
+	 *
 	 * @param uri
 	 * @return URI representation
 	 */
 	public static IRI asURI(String uri) {
 		return F.createIRI(uri);
 	}
-	
+
 	/**
 	 * Get name graph + context id from name
-	 * 
+	 *
 	 * @param name
-	 * @return context URI 
+	 * @return context URI
 	 */
 	public static IRI asGraph(String name) {
 		return F.createIRI(PREFIX_GRAPH + name);
 	}
-	
+
 	/**
 	 * Get name graph + context id from name
-	 * 
+	 *
 	 * @param name
-	 * @return context URI 
+	 * @return context URI
 	 */
 	public static IRI asDataset(String name) {
 		return F.createIRI(PREFIX + "void#" + name);
 	}
-	
+
 	/**
 	 * Get string as RDF literal
-	 * 
+	 *
 	 * @param lit
-	 * @return literal 
+	 * @return literal
 	 */
 	public static Literal asLiteral(String lit) {
 		return F.createLiteral(lit);
@@ -122,21 +124,20 @@ public class QueryHelper {
 
 	/**
 	 * Add namespaces to triple model
-	 * 
+	 *
 	 * @param m model
 	 * @return model with namespaces
 	 */
 	public static Model setNamespaces(Model m) {
-		if (! m.isEmpty()) {
-			NS_MAP.forEach((p, n) -> m.setNamespace(p,n));
+		if (!m.isEmpty()) {
+			NS_MAP.forEach((p, n) -> m.setNamespace(p, n));
 		}
 		return m;
 	}
-	 
-	
+
 	/**
 	 * Get all triples from a graph
-	 * 
+	 *
 	 * @param repo RDF store
 	 * @param subj subject IRI or null
 	 * @param from named graph
@@ -144,7 +145,7 @@ public class QueryHelper {
 	 */
 	public static Model get(Repository repo, IRI subj, String from) {
 		Model m = new LinkedHashModel();
-	
+
 		try (RepositoryConnection conn = repo.getConnection()) {
 			Iterations.addAll(conn.getStatements(subj, null, null, asGraph(from)), m);
 		} catch (RepositoryException e) {
@@ -152,21 +153,20 @@ public class QueryHelper {
 		}
 		return setNamespaces(m);
 	}
-	
 
 	/**
 	 * Get all contexts a.k.a. vocabularies
 	 *
-	 * @param repo RDF store 
+	 * @param repo RDF store
 	 * @return list of vocabularies
 	 */
 	public static Model getVocabList(Repository repo) {
 		Model m = new LinkedHashModel();
 
-		try (RepositoryConnection conn = repo.getConnection(); 
-			RepositoryResult<Statement> vocabs = 
-					conn.getStatements(null, RDF.TYPE, VOID.DATASET)) {
-			while(vocabs.hasNext()) {
+		try (RepositoryConnection conn = repo.getConnection();
+				RepositoryResult<Statement> vocabs
+				= conn.getStatements(null, RDF.TYPE, VOID.DATASET)) {
+			while (vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, null, null), m);
 			}
@@ -175,7 +175,7 @@ public class QueryHelper {
 		}
 		return setNamespaces(m);
 	}
-	
+
 	/**
 	 * Put statements in the store
 	 *
@@ -189,10 +189,10 @@ public class QueryHelper {
 			throw new WebApplicationException(e);
 		}
 	}
-	
+
 	/**
 	 * Delete all triples for subject URL
-	 * 
+	 *
 	 * @param repo RDF store
 	 * @param url subject to delete
 	 */

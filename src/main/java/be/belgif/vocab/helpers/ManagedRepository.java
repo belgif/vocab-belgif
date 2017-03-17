@@ -33,8 +33,9 @@ import org.eclipse.rdf4j.repository.Repository;
  * @author Bart.Hanssens
  */
 public class ManagedRepository implements Managed {
+
 	private final Repository repo;
-	
+
 	@Override
 	public void start() throws Exception {
 		repo.initialize();
@@ -44,7 +45,7 @@ public class ManagedRepository implements Managed {
 	public void stop() throws Exception {
 		repo.shutDown();
 	}
-	
+
 	public ManagedRepository(Repository repo) {
 		this.repo = repo;
 	}

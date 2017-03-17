@@ -42,34 +42,34 @@ import org.eclipse.rdf4j.repository.Repository;
 
 /**
  * Linked Data Fragments search.
- * 
+ *
  * @author Bart.Hanssens
  */
 @Path("/_ldf")
 public class LdfResource extends RdfResource {
+
 	@GET
 	@Produces({RDFMediaType.TRIG, RDFMediaType.JSONLD})
 	@ExceptionMetered
-	public Model searchAll(@QueryParam("s") String s, 
-						@QueryParam("p") String p, @QueryParam("o") String o,
-						@QueryParam("page") String page) {
+	public Model searchAll(@QueryParam("s") String s,
+			@QueryParam("p") String p, @QueryParam("o") String o,
+			@QueryParam("page") String page) {
 		return QueryHelperLDF.getLDF(getRepository(), s, p, o, "", page);
 	}
-	
+
 	@GET
 	@Path("{vocab}")
 	@Produces({RDFMediaType.TRIG, RDFMediaType.JSONLD})
 	@ExceptionMetered
-	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s, 
-						@QueryParam("p") String p, @QueryParam("o") String o,
-						@QueryParam("page") String page) {
+	public Model searchVocab(@PathParam("vocab") String vocab, @QueryParam("s") String s,
+			@QueryParam("p") String p, @QueryParam("o") String o,
+			@QueryParam("page") String page) {
 		return QueryHelperLDF.getLDF(getRepository(), s, p, o, vocab, page);
 	}
-	
 
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo RDF triple store
 	 */
 	public LdfResource(Repository repo) {

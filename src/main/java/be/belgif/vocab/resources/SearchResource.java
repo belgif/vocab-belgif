@@ -45,11 +45,12 @@ import org.eclipse.rdf4j.repository.Repository;
 
 /**
  * Full text search
- * 
+ *
  * @author Bart.Hanssens
  */
 @Path("/_search")
 public class SearchResource extends RdfResource {
+
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
@@ -57,19 +58,19 @@ public class SearchResource extends RdfResource {
 	public Model search(@PathParam("type") String vocab, @QueryParam("q") String text) {
 		return QueryHelperFTS.getFTS(getRepository(), text, vocab);
 	}
-	
+
 	@GET
 	@Path("/{vocab}")
 	@Produces({MediaType.TEXT_HTML})
 	@ExceptionMetered
-	public VocabSearchView searchHTML(@PathParam("vocab") String vocab, 
+	public VocabSearchView searchHTML(@PathParam("vocab") String vocab,
 			@QueryParam("q") String text, @QueryParam("lang") Optional<String> lang) {
 		return new VocabSearchView(vocab, search(vocab, text), lang.orElse("en"));
 	}
 
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo RDF triple store
 	 */
 	public SearchResource(Repository repo) {

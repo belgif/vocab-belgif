@@ -30,22 +30,23 @@ import org.eclipse.rdf4j.repository.Repository;
 
 /**
  * Check if triple store can be reached
- * 
+ *
  * @author Bart.Hanssens
  */
 public class RdfStoreHealthCheck extends HealthCheck {
+
 	private final Repository repo;
-	
+
 	@Override
 	protected Result check() throws Exception {
-		return repo.getConnection().isOpen() 
-								? Result.healthy() 
-								: Result.unhealthy("Triplestore unreachable");
+		return repo.getConnection().isOpen()
+				? Result.healthy()
+				: Result.unhealthy("Triplestore unreachable");
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo (remote) repository
 	 */
 	public RdfStoreHealthCheck(Repository repo) {

@@ -38,39 +38,41 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-
 /**
  *
  * @author Bart.Hanssens
  */
 public class AppConfig extends Configuration implements AssetsBundleConfiguration {
+
 	@NotEmpty
 	private String dataDir;
-	
+
 	@NotEmpty
 	private String importDir;
-	
+
 	@NotEmpty
 	private String downloadDir;
-	
+
 	@NotEmpty
 	private String luceneDir;
-	
+
 	@NotEmpty
 	private String sitePrefix;
-	
+
 	private ImmutableMap<String, Map<String, String>> views;
 
 	@Valid
-    @NotNull
-    @JsonProperty
-    private final AssetsConfiguration assets = AssetsConfiguration.builder().build();;
+	@NotNull
+	@JsonProperty
+	private final AssetsConfiguration assets = AssetsConfiguration.builder().build();
+
+	;
 
 	@JsonProperty
 	public String getDataDir() {
 		return dataDir;
 	}
-	
+
 	@JsonProperty
 	public void setDataDir(String dataDir) {
 		this.dataDir = dataDir;
@@ -80,17 +82,17 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public String getImportDir() {
 		return importDir;
 	}
-	
+
 	@JsonProperty
 	public void setImportDir(String importDir) {
 		this.importDir = importDir;
 	}
-	
+
 	@JsonProperty
 	public String getDownloadDir() {
 		return downloadDir;
 	}
-	
+
 	@JsonProperty
 	public void setDownloadDir(String downloadDir) {
 		this.downloadDir = downloadDir;
@@ -100,39 +102,38 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public String getLuceneDir() {
 		return luceneDir;
 	}
-	
+
 	@JsonProperty
 	public void setLuceneDir(String luceneDir) {
 		this.luceneDir = luceneDir;
 	}
-	
+
 	@JsonProperty
 	public String getSitePrefix() {
 		return sitePrefix;
 	}
-	
+
 	@JsonProperty
 	public void setSitePrefixDir(String sitePrefix) {
 		this.sitePrefix = sitePrefix.endsWith("/") ? sitePrefix : sitePrefix + "/";
 	}
-	
+
 	@JsonProperty
-    public Map<String, Map<String, String>> getViews() {
-        return views;
-    }
+	public Map<String, Map<String, String>> getViews() {
+		return views;
+	}
 
-    @JsonProperty
-    public void setViews(Map<String, Map<String, String>> views) {
-        final ImmutableMap.Builder<String, Map<String, String>> builder = ImmutableMap.builder();
-        for (Map.Entry<String, Map<String, String>> entry : views.entrySet()) {
-            builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
-        }
-        this.views = builder.build();
-    }
-	
+	@JsonProperty
+	public void setViews(Map<String, Map<String, String>> views) {
+		final ImmutableMap.Builder<String, Map<String, String>> builder = ImmutableMap.builder();
+		for (Map.Entry<String, Map<String, String>> entry : views.entrySet()) {
+			builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
+		}
+		this.views = builder.build();
+	}
 
-    @Override
-    public AssetsConfiguration getAssetsConfiguration() {
-        return assets;
-    }
+	@Override
+	public AssetsConfiguration getAssetsConfiguration() {
+		return assets;
+	}
 }

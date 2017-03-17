@@ -35,32 +35,32 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
  * DAO helper class for VoID.
- * 
+ *
  * @author Bart.Hanssens
  */
 public class SkosDAO extends RdfDAO {
 
 	/**
 	 * Get SKOS notation
-	 * 
-	 * @return string 
+	 *
+	 * @return string
 	 */
 	public String getNotation() {
 		return literal(SKOS.NOTATION);
 	}
-	
+
 	/**
 	 * Get download URL
-	 * 
+	 *
 	 * @return download URL
 	 */
 	public String getDownload() {
 		return obj(VOID.DATA_DUMP).toString();
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param m triples
 	 * @param id subject ID
 	 */

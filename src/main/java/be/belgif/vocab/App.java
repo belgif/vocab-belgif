@@ -54,124 +54,123 @@ import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 import org.glassfish.jersey.server.filter.UriConnegFilter;
 
-
 /**
  * Main Dropwizard web application
- * 
+ *
  * @author Bart.Hanssens
  */
 public class App extends Application<AppConfig> {
 
 	private static String PREFIX;
 	private static String PREFIX_GRAPH;
-	
-	public final static Map<String,MediaType> FTYPES = new HashMap<>();
+
+	public final static Map<String, MediaType> FTYPES = new HashMap<>();
+
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
 		FTYPES.put("jsonld", MediaType.valueOf(RDFMediaType.JSONLD));
 		FTYPES.put("nt", MediaType.valueOf(RDFMediaType.NTRIPLES));
 	}
-	
-	public final static Map<String,String> LANGS = new HashMap<>();
+
+	public final static Map<String, String> LANGS = new HashMap<>();
+
 	static {
 		LANGS.put("nl", "nl");
 		LANGS.put("fr", "fr");
 		LANGS.put("de", "de");
 		LANGS.put("en", "en");
 	}
-	
+
 	/**
 	 * Configure a triple store repository
-	 * 
+	 *
 	 * @param config configuration object
-	 * @return repository 
+	 * @return repository
 	 */
 	private Repository configRepo(AppConfig config) {
 		// native disk-based store
 		File dataDir = new File(config.getDataDir());
 		NativeStore store = new NativeStore(dataDir);
-		
+
 		// full text search
 		LuceneSail fts = new LuceneSail();
 		fts.setParameter(LuceneSail.LUCENE_DIR_KEY, config.getLuceneDir());
 		fts.setBaseSail(store);
-		
+
 		return new SailRepository(fts);
 	}
 
 	/**
 	 * Get domain / prefix as string
-	 * 
+	 *
 	 * @return prefix
 	 */
 	public static String getPrefix() {
 		return App.PREFIX;
 	}
-	
+
 	/**
 	 * Get graph IRI as string
-	 * 
+	 *
 	 * @return prefix
 	 */
 	public static String getPrefixGraph() {
 		return App.PREFIX_GRAPH;
 	}
-	
+
 	@Override
 	public String getName() {
 		return "lod-vocab";
 	}
-	
+
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
 		config.addBundle(new ConfiguredAssetsBundle());
-		config.addBundle(new ViewBundle<AppConfig>() { 
+		config.addBundle(new ViewBundle<AppConfig>() {
 			@Override
 			public Map<String, Map<String, String>> getViewConfiguration(AppConfig config) {
 				return config.getViews();
-        }
+			}
 		});
 	}
-	
+
 	@Override
-    public void run(AppConfig config, Environment env) {
+	public void run(AppConfig config, Environment env) {
 		PREFIX = config.getSitePrefix();
 		PREFIX_GRAPH = PREFIX + "graph";
-		
+
 		Repository repo = configRepo(config);
-	
+
 		// Managed resource
 		env.lifecycle().manage(new ManagedRepository(repo));
-		
-		// Override content negotiation for URLs with file type extensions
 
+		// Override content negotiation for URLs with file type extensions
 		env.jersey().register(new UriConnegFilter(FTYPES, LANGS));
 
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
-		
+
 		// Resources / "web pages"
 		env.jersey().register(new RootResource());
 		env.jersey().register(new VoidResource(repo));
 		env.jersey().register(new VocabResource(repo));
 		env.jersey().register(new SearchResource(repo));
 		env.jersey().register(new LdfResource(repo));
-		
 
 		// Tasks
 		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getDownloadDir()));
 		env.admin().addTask(new LuceneReindexTask(repo));
-				
+
 		// Monitoring
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
 		env.healthChecks().register("triplestore", check);
 	}
-	
+
 	/**
-	 * Main 
-	 * 
+	 * Main
+	 *
 	 * @param args
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		new App().run(args);

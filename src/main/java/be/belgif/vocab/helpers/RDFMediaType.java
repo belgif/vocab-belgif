@@ -30,31 +30,40 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * Helper class for RDF serialization types
- * 
+ *
  * @author Bart.Hanssens
  */
 public class RDFMediaType {
+
 	// can't use RDFFormat.xyz.toString(): not constant
 	public final static String JSONLD = "application/ld+json";
 	public final static String NTRIPLES = "application/n-triples";
 	public final static String TRIG = "application/trig";
 	public final static String TTL = "text/turtle";
-	
+
 	/**
 	 * Get RDF Format from mediatype
-	 * 
+	 *
 	 * @param mt Jersey media type
-	 * @return RDF4J rdf format 
+	 * @return RDF4J rdf format
 	 */
 	public static RDFFormat getRDFFormat(MediaType mt) {
 		RDFFormat fmt;
-	
+
 		// check for content type, ignoring the charset
-		switch(mt.getType() + "/" + mt.getSubtype()) {
-			case RDFMediaType.NTRIPLES: fmt = RDFFormat.NTRIPLES; break;
-			case RDFMediaType.TTL: fmt = RDFFormat.TURTLE; break;
-			case RDFMediaType.TRIG: fmt = RDFFormat.TRIG; break;
-			default: fmt = RDFFormat.JSONLD; break;
+		switch (mt.getType() + "/" + mt.getSubtype()) {
+			case RDFMediaType.NTRIPLES:
+				fmt = RDFFormat.NTRIPLES;
+				break;
+			case RDFMediaType.TTL:
+				fmt = RDFFormat.TURTLE;
+				break;
+			case RDFMediaType.TRIG:
+				fmt = RDFFormat.TRIG;
+				break;
+			default:
+				fmt = RDFFormat.JSONLD;
+				break;
 		}
 		return fmt;
 	}

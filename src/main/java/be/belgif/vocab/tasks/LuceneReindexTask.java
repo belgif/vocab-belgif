@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.tasks;
 
-
 import com.google.common.collect.ImmutableMultimap;
 import io.dropwizard.servlets.tasks.Task;
 
@@ -41,19 +40,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Import a SKOS file and create full (static) download files in various
- * 
+ * Re-index Lucene
+ *
  * @author Bart.Hanssens
  */
 public class LuceneReindexTask extends Task {
+
 	private final Repository repo;
-	
+
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(LuceneReindexTask.class);
-	
 
 	/**
 	 * Execute task
-	 * 
+	 *
 	 * @param param parameters
 	 * @param w output writer
 	 * @throws Exception
@@ -71,10 +70,10 @@ public class LuceneReindexTask extends Task {
 			throw new WebApplicationException("Not a Sail repository");
 		}
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo triple store
 	 */
 	public LuceneReindexTask(Repository repo) {

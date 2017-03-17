@@ -45,13 +45,14 @@ import org.eclipse.rdf4j.repository.Repository;
 
 /**
  * Vocabulary term of a SKOS thesaurus.
- * 
+ *
  * @author Bart.Hanssens
  */
 @Path("/auth")
 public class VocabResource extends RdfResource {
+
 	private final static String PREFIX = App.getPrefix() + "auth/";
-	
+
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
@@ -59,39 +60,38 @@ public class VocabResource extends RdfResource {
 	public Model getVocabRDF(@PathParam("vocab") String vocab) {
 		return getById(PREFIX, vocab, "");
 	}
-	
+
 	@GET
 	@Path("/{vocab}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VocabView getVocabListHTML(@PathParam("vocab") String vocab, 
-										@QueryParam("lang") Optional<String> lang) {
+	public VocabView getVocabListHTML(@PathParam("vocab") String vocab,
+			@QueryParam("lang") Optional<String> lang) {
 		return new VocabView(vocab, getById(PREFIX, vocab, ""), lang.orElse("en"));
 	}
-	
+
 	@GET
 	@Path("/{type}/{id}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	@ExceptionMetered
-	public Model getVocabTermRDF(@PathParam("type") String type, 
-												@PathParam("id") String id) {
+	public Model getVocabTermRDF(@PathParam("type") String type,
+			@PathParam("id") String id) {
 		return getById(PREFIX, type, id);
 	}
-	
+
 	@GET
 	@Path("/{type}/{id}")
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VocabTermView getVocabTermHTML(@PathParam("type") String type, 
-											@PathParam("id") String id, 
-											@QueryParam("lang") Optional<String> lang) {
+	public VocabTermView getVocabTermHTML(@PathParam("type") String type,
+			@PathParam("id") String id,
+			@QueryParam("lang") Optional<String> lang) {
 		return new VocabTermView(type, getById(PREFIX, type, id), lang.orElse("en"));
 	}
-		
 
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo RDF triple store
 	 */
 	public VocabResource(Repository repo) {

@@ -72,37 +72,38 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Import a SKOS file and create full (static) download files in various
- * 
+ *
  * @author Bart.Hanssens
  */
 public class VocabImportTask extends Task {
+
 	private final String importDir;
 	private final String downloadDir;
 	private final Repository repo;
-	
+
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 
 	/**
 	 * Export the triples to data dump files of various formats
-	 * 
+	 *
 	 * @param conn triple store repository connection
 	 * @param name name of the thesaurus
 	 * @param ctx context / named graph
-	 * @return 
-	 */	
+	 * @return
+	 */
 	private void writeDumps(RepositoryConnection conn, String name, Resource ctx) throws IOException {
 		LOG.info("Writing data dumps for {}", name);
-			
-		for(String ftype: App.FTYPES.keySet()) {
+
+		for (String ftype : App.FTYPES.keySet()) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);
-			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE, 
-															StandardOpenOption.CREATE)) {
-				Optional<RDFFormat> fmt  =
-						Rio.getWriterFormatForFileName(name + "." + ftype);
+			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE,
+					StandardOpenOption.CREATE)) {
+				Optional<RDFFormat> fmt
+						= Rio.getWriterFormatForFileName(name + "." + ftype);
 				if (fmt.isPresent()) {
 					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
 					LOG.info("Writing file {}", f);
-					QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p,n));
+					QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p, n));
 					conn.export(rdfh, ctx);
 				} else {
 					throw new IOException("No RDF writer found for " + ftype);
@@ -110,63 +111,63 @@ public class VocabImportTask extends Task {
 			}
 		}
 	}
-	
+
 	/**
 	 * Add VoID metadata about the thesaurus
-	 * 
+	 *
 	 * @param conn triple store repository connection
 	 * @param name name of the thesaurus
 	 * @param ctx context / named graph
 	 * @return VoID triples
-	 */	
+	 */
 	private Model addVOID(RepositoryConnection conn, String name, Resource ctx) {
 		LOG.info("Adding VOID metadata for {}", name);
-		
+
 		String prefix = App.getPrefix();
-		
+
 		Model m = new LinkedHashModel();
 		ValueFactory f = conn.getValueFactory();
-		IRI voidID  = QueryHelper.asDataset(name);
+		IRI voidID = QueryHelper.asDataset(name);
 
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
 
 		// multi-lingual titles, descriptions etc
-		List<IRI> props = Arrays.asList(DCTERMS.TITLE, DCTERMS.DESCRIPTION, 
-										DCTERMS.LICENSE, DCTERMS.SOURCE);
-		props.forEach( p -> 
-			Iterations.asList(conn.getStatements(null, p, null, ctx)).forEach(
-								s -> m.add(voidID, p, s.getObject()))
+		List<IRI> props = Arrays.asList(DCTERMS.TITLE, DCTERMS.DESCRIPTION,
+				DCTERMS.LICENSE, DCTERMS.SOURCE);
+		props.forEach(p
+				-> Iterations.asList(conn.getStatements(null, p, null, ctx)).forEach(
+						s -> m.add(voidID, p, s.getObject()))
 		);
-		
+
 		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
 		m.add(voidID, FOAF.HOMEPAGE, f.createIRI(prefix));
-		
+
 		// information about downloadable file
 		m.add(voidID, VOID.DATA_DUMP, f.createIRI(prefix + "dataset/" + name));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/N-Triples"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/Turtle"));
 		m.add(voidID, VOID.FEATURE, f.createIRI("http://www.w3.org/ns/formats/JSON-LD"));
-		
+
 		// linked data query service(s)
 		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF + "/" + name));
 		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF));
-		
+
 		// top level and examples
 		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
 				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));
 		Iterations.asList(conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx)).forEach(
 				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
-		
+
 		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
 		m.add(voidID, VOID.URI_SPACE, f.createLiteral(prefix + "auth/" + name));
 		m.add(voidID, VOID.VOCABULARY, f.createIRI(SKOS.NAMESPACE));
 
 		return m;
 	}
-	
+
 	/**
 	 * Import triples from file into RDF store, using name as vocabulary name.
-	 * 
+	 *
 	 * @param file input file path
 	 * @param name short name
 	 * @param format RDF format
@@ -175,26 +176,26 @@ public class VocabImportTask extends Task {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			String vocab = name.split("\\.")[0];
 			Resource ctx = repo.getValueFactory().createIRI(App.getPrefixGraph() + vocab);
-			
+
 			conn.begin();
-			
+
 			conn.remove((Resource) null, null, null, ctx);
 			conn.add(file.toFile(), null, format, ctx);
 			Model voidM = addVOID(conn, vocab, ctx);
 			conn.add(voidM, ctx);
-			
+
 			writeDumps(conn, vocab, ctx);
-			
+
 			conn.commit();
-		} catch (RepositoryException|IOException rex) {
+		} catch (RepositoryException | IOException rex) {
 			// will be rolled back automatically
 			throw new WebApplicationException("Error importing vocabulary", rex);
 		}
 	}
-	
+
 	/**
 	 * Execute task
-	 * 
+	 *
 	 * @param param parameters
 	 * @param w output writer
 	 * @throws Exception
@@ -206,28 +207,28 @@ public class VocabImportTask extends Task {
 		if (names == null || names.isEmpty()) {
 			throw new WebApplicationException("Param name empty");
 		}
-		
+
 		String name = names.asList().get(0);
 		Path infile = Paths.get(importDir, name);
-		
+
 		LOG.info("Trying to parse {}", infile);
-		
-		if (! Files.isReadable(infile)) {
+
+		if (!Files.isReadable(infile)) {
 			throw new WebApplicationException("File not readable");
-		}	
+		}
 		Optional<RDFFormat> format = Rio.getParserFormatForFileName(infile.toString());
-		if (! format.isPresent()) {
+		if (!format.isPresent()) {
 			throw new WebApplicationException("File type not supported");
 		}
-		
+
 		importFile(infile, name, format.get());
-		
+
 		LOG.info("Done");
 	}
-	
+
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param repo triple store
 	 * @param inDir import directory
 	 * @param outDir download directory
