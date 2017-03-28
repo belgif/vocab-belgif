@@ -29,7 +29,6 @@ import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.ldf.QueryHelperLDF;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
-import javax.ws.rs.DefaultValue;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
