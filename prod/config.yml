@@ -1,0 +1,41 @@
+dataDir: /home/dropwizard/store
+vocabDownloadDir: /home/dropwizard/download
+vocabImportDir: /home/dropwizard/import
+xsdDownloadDir: /home/dropwizard/download-ns
+xsdImportDir: /home/dropwizard/import-ns
+luceneDir: /home/dropwizard/lucene
+sitePrefix: http://vocab.belgif.be/
+
+logging:
+    level: INFO
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: /home/dropwizard/logs/vocab.log
+    
+assets:
+    mappings:
+        /assets/belgif.png: /favicon.ico
+        /assets:  /static
+        /dataset: /dataset
+        /ns: /ns
+    overrides:
+        /dataset: /home/dropwizard/download
+        /ns: /home/dropwizard/download-ns
+    mimeTypes:
+        ttl: text/turtle
+        nt: application/n-triples
+        jsonld: application/ld+json
+
+server:
+  requestLog:
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: /home/dropwizard/logs/vocab-request.log
+
+views:
+    .ftl:
+        template_exception_handler: rethrow
+        output_encoding: utf-8
+   

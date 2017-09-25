@@ -1,0 +1,111 @@
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/title> "My Be themes"@en .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/title> "My Be thema's"@nl .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/title> "My Be thèmes"@fr .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/title> "My Be Themas"@de .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/description> "My.belgium.be themes"@en .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/description> "My.belgium.be thema's"@nl .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/description> "My.belgium.be thèmes"@fr .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://purl.org/dc/terms/description> "My.belgium.be Themas"@de .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/FAMI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#notation> "FAMI" .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Familie"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ma Famille"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/FAMI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://stad.gent/id/ns/themas/burgerzaken> .
+<http://vocab.belgif.be/auth/mybe-theme/FAMI#id> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://stad.gent/id/ns/themas/onderwijs-kinderopvang> .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/TAXE#id> .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#notation> "TAXE" .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Belastingen"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mes Imp\u00F4ts"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/TAXE#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/TAXE#id> .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/SECU#id> .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#notation> "SECU" .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Veiligheid"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ma S\u00E9curit\u00E9"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/be-theme/JUST#id> .
+<http://vocab.belgif.be/auth/mybe-theme/SECU#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/JUST> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/HEAL#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#notation> "HEAL" .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Gezondheid"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ma Sant\u00E9"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/HEAL#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/HEAL> .
+<http://vocab.belgif.be/auth/mybe-theme/HEAL#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://stad.gent/id/ns/themas/welzijn-gezondheid> .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/WORK#id> .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#notation> "WORK" .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Werk"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mon Emploi"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/WORK#id> .
+<http://vocab.belgif.be/auth/mybe-theme/WORK#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://stad.gent/id/ns/themas/werken-ondernemen> .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/MOBI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#notation> "MOBI" .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Mobiliteit"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ma Mobilit\u00E9"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/MOBI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/MOBI#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://stad.gent/id/ns/themas/mobiliteit-openbare-werken> .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/JUST#id> .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#notation> "JUST" .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justitie"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/be-theme/JUST#id> .
+<http://vocab.belgif.be/auth/mybe-theme/JUST#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/JUST> .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/ECON#id> .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#notation> "ECON" .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Economie"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Economie"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+<http://vocab.belgif.be/auth/mybe-theme/ECON#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/be-theme/ECON#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/HOUS#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#notation> "HOUS" .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Huisvesting"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mon Logement"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/HOUS#id> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+<http://vocab.belgif.be/auth/mybe-theme/HOUS#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://stad.gent/id/ns/themas/wonen-bouwen> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/ENVI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#notation> "ENVI" .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mijn Leefmilieu"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mon Environnement"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/be-theme/ENVI#id> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/ENVI> .
+<http://vocab.belgif.be/auth/mybe-theme/ENVI#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://stad.gent/id/ns/themas/natuur-milieu> .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/mybe-theme/FINA#id> .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/mybe-theme#id> .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#notation> "FINA" .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financi\u00EBn"@nl .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#prefLabel> " Finance"@fr .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/be-theme/ECON#id> .

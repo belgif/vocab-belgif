@@ -1,0 +1,284 @@
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://localhost:8080/void#be-theme> dcterms:description "Belgium.be themen"@de .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:description "Belgium.be themen"@de .
+
+<http://localhost:8080/void#be-theme> dcterms:description "Belgium.be themes"@en .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:description "Belgium.be themes"@en .
+
+<http://localhost:8080/void#be-theme> dcterms:description "Belgium.be thèmes"@fr .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:description "Belgium.be thèmes"@fr .
+
+<http://localhost:8080/void#be-theme> dcterms:description "Belgium.be thema's"@nl .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:description "Belgium.be thema's"@nl .
+
+<http://localhost:8080/void#be-theme> dcterms:modified "2017-09-25T20:52:25.592+01:00"^^xsd:dateTime ;
+	dcterms:title "Be themen"@de .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:title "Be themen"@de .
+
+<http://localhost:8080/void#be-theme> dcterms:title "Be themes"@en .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:title "Be themes"@en .
+
+<http://localhost:8080/void#be-theme> dcterms:title "Be themes"@fr .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:title "Be themes"@fr .
+
+<http://localhost:8080/void#be-theme> dcterms:title "Be themes"@nl .
+
+<http://vocab.belgif.be/auth/be-theme#id> dcterms:title "Be themes"@nl .
+
+<http://localhost:8080/void#be-theme> void:dataDump <http://localhost:8080/dataset/be-theme> ;
+	void:exampleResource <http://vocab.belgif.be/auth/be-theme/BELG#id> , <http://vocab.belgif.be/auth/be-theme/ECON#id> , <http://vocab.belgif.be/auth/be-theme/EDUC#id> , <http://vocab.belgif.be/auth/be-theme/ENVI#id> , <http://vocab.belgif.be/auth/be-theme/FAMI#id> , <http://vocab.belgif.be/auth/be-theme/HEAL#id> , <http://vocab.belgif.be/auth/be-theme/HOUS#id> , <http://vocab.belgif.be/auth/be-theme/JUST#id> , <http://vocab.belgif.be/auth/be-theme/MOBI#id> , <http://vocab.belgif.be/auth/be-theme/TAXE#id> , <http://vocab.belgif.be/auth/be-theme/WORK#id> ;
+	void:feature <http://www.w3.org/ns/formats/JSON-LD> , <http://www.w3.org/ns/formats/N-Triples> , <http://www.w3.org/ns/formats/Turtle> ;
+	void:rootResource <http://vocab.belgif.be/auth/be-theme#id> ;
+	void:triples "137"^^xsd:long ;
+	void:uriLookupEndpoint <http://localhost:8080/_ldf> , <http://localhost:8080/_ldf/be-theme> ;
+	void:uriSpace "http://localhost:8080/auth/be-theme" ;
+	void:vocabulary <http://www.w3.org/2004/02/skos/core#> ;
+	a void:Dataset .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> a skos:Concept .
+
+<http://vocab.belgif.be/auth/be-theme#id> a skos:ConceptScheme .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/EDUC> .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:broadMatch <http://stad.gent/id/ns/themas/burgerzaken> .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:broadMatch <http://stad.gent/id/ns/themas/mobiliteit-openbare-werken> .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:broadMatch <http://stad.gent/id/ns/themas/onderwijs-kinderopvang> .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:exactMatch <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:exactMatch <http://publications.europa.eu/resource/authority/data-theme/ENVI> .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:exactMatch <http://publications.europa.eu/resource/authority/data-theme/HEAL> .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:exactMatch <http://publications.europa.eu/resource/authority/data-theme/JUST> .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:exactMatch <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:exactMatch <http://stad.gent/id/ns/themas/natuur-milieu> .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:exactMatch <http://stad.gent/id/ns/themas/welzijn-gezondheid> .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:exactMatch <http://stad.gent/id/ns/themas/werken-ondernemen> .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:exactMatch <http://stad.gent/id/ns/themas/wonen-bouwen> .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/ENVI#id> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/FAMI#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/HEAL#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/HOUS#id> .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/MOBI#id> .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/TAXE#id> .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:exactMatch <http://vocab.belgif.be/mybe-theme/WORK#id> .
+
+<http://vocab.belgif.be/auth/be-theme#id> skos:hasTopConcept <http://vocab.belgif.be/auth/be-theme/BELG#id> , <http://vocab.belgif.be/auth/be-theme/ECON#id> , <http://vocab.belgif.be/auth/be-theme/EDUC#id> , <http://vocab.belgif.be/auth/be-theme/ENVI#id> , <http://vocab.belgif.be/auth/be-theme/FAMI#id> , <http://vocab.belgif.be/auth/be-theme/HEAL#id> , <http://vocab.belgif.be/auth/be-theme/HOUS#id> , <http://vocab.belgif.be/auth/be-theme/JUST#id> , <http://vocab.belgif.be/auth/be-theme/MOBI#id> , <http://vocab.belgif.be/auth/be-theme/TAXE#id> , <http://vocab.belgif.be/auth/be-theme/WORK#id> .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:inScheme <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:narrowMatch <http://stad.gent/id/ns/themas/onderwijs-kinderopvang> .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:narrowMatch <http://stad.gent/id/ns/themas/stad-beleid-bestuur> .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:narrowMatch <http://vocab.belgif.be/mybe-theme/ECON#id> , <http://vocab.belgif.be/mybe-theme/FINA#id> .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:narrowMatch <http://vocab.belgif.be/mybe-theme/JUST#id> , <http://vocab.belgif.be/mybe-theme/SECU#id> .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:notation "BELG" .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:notation "ECON" .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:notation "EDUC" .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:notation "ENVI" .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:notation "FAMI" .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:notation "HEAL" .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:notation "HOUS" .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:notation "JUST" .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:notation "MOBI" .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:notation "TAXE" .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:notation "WORK" ;
+	skos:prefLabel "Arbeit"@de .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:prefLabel "Ausbilding"@de .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:prefLabel "Familie"@de .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:prefLabel "Gesundheit"@de .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:prefLabel "Justiz"@de .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:prefLabel "Steuern"@de .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:prefLabel "Umwelt"@de .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:prefLabel "Verkehr"@de .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:prefLabel "Wirtschaft"@de .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:prefLabel "Wohnen"@de .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:prefLabel "über Belgien"@de , "About Belgium"@en .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:prefLabel "Economy"@en .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:prefLabel "Education"@en .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:prefLabel "Environment"@en .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:prefLabel "Family"@en .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:prefLabel "Health"@en .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:prefLabel "Housing"@en .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:prefLabel "Justice"@en .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:prefLabel "Mobility"@en .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:prefLabel "Taxes"@en .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:prefLabel "Work"@en .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:prefLabel "Economie"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:prefLabel "Emploi"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:prefLabel "Environnement"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:prefLabel "Famille"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:prefLabel "Formation"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:prefLabel "Impôts"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:prefLabel "Justice"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:prefLabel "La Belgique"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:prefLabel "Logement"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:prefLabel "Mobilité"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:prefLabel "Santé"@fr .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:prefLabel "Belastingen"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:prefLabel "Economie"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:prefLabel "Familie"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:prefLabel "Gezondheid"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:prefLabel "Huisvesting"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:prefLabel "Justitie"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:prefLabel "Leefmilieu"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:prefLabel "Leren"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:prefLabel "Mobiliteit"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:prefLabel "Over België"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:prefLabel "Werk"@nl .
+
+<http://vocab.belgif.be/auth/be-theme/BELG#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/ECON#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/EDUC#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/ENVI#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/FAMI#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HEAL#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/HOUS#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/JUST#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/MOBI#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/TAXE#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://vocab.belgif.be/auth/be-theme/WORK#id> skos:topConceptOf <http://vocab.belgif.be/auth/be-theme#id> .
+
+<http://localhost:8080/void#be-theme> foaf:homepage <http://localhost:8080/> .
