@@ -12,6 +12,7 @@
 <main>
     <div id="container">
     <#include "message.ftl">
+    <#if ns??>
     <section>
 	<h3>Namespaces</h3>
 	<section>
@@ -31,6 +32,8 @@
 	    </table>
 	</section>
     </section>
+    </#if>
+    <#if vocabs??>
     <section>
 	<h3>Thesauri</h3>
 	<section>
@@ -66,6 +69,7 @@
 	    <p>http://vocab.belgif.be/_ldf</p>
 	</section>
     </section>
+    </#if>
     </div>
 </main>
 <#include "footer.ftl">

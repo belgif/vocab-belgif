@@ -54,6 +54,7 @@ import java.util.Map;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.repository.Repository;
@@ -202,15 +203,16 @@ public class App extends Application<AppConfig> {
 			Files.list(Paths.get(config.getVocabImportDir())).forEach(f -> {
 				cl.target(localhost).path("tasks/vocab-import")
 					.queryParam("file", f.getFileName())
-					.request().get();
+					.request().post(Entity.text(""));
 			});
 		
-			cl.target(localhost).path("tasks/lucene-reindex").request().get();
+			cl.target(localhost).path("tasks/lucene-reindex")
+				.request().post(Entity.text(""));
 		
 			Files.list(Paths.get(config.getXsdImportDir())).forEach(f -> {
 				cl.target(localhost).path("tasks/register-ns")
 					.queryParam("file", f.getFileName())
-					.request().get();
+					.request().post(Entity.text(""));
 			});
 		} catch (IOException ioe) {
 			//
