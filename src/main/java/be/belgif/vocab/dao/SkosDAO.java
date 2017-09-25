@@ -25,11 +25,8 @@
  */
 package be.belgif.vocab.dao;
 
-import java.util.Set;
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 

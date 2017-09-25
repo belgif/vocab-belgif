@@ -78,7 +78,6 @@ public abstract class RdfResource {
 	protected Model getById(String prefix, String type, String id) {
 		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
 				: prefix + type + "#id";
-		System.err.println(url);
 		return QueryHelper.get(repo, QueryHelper.asURI(url), type);
 	}
 
