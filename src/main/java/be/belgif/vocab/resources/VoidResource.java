@@ -59,7 +59,7 @@ public class VoidResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
 	public VOIDView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new VOIDView(getVocabList(), lang.orElse("en"));
+		return new VOIDView(getVocabList(), getNsList(), lang.orElse("en"));
 	}
 	
 	

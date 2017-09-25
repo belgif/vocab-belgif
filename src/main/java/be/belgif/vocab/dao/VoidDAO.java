@@ -27,6 +27,7 @@ package be.belgif.vocab.dao;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.VOID;

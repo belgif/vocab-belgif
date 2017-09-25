@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.views;
 
+import be.belgif.vocab.dao.NsDAO;
 import be.belgif.vocab.dao.VoidDAO;
 
 import java.util.ArrayList;
@@ -42,27 +43,43 @@ import org.eclipse.rdf4j.model.Model;
  */
 @Provider
 public class VOIDView extends RdfView {
+	private final List<NsDAO> ns = new ArrayList();
 	private final List<VoidDAO> vocabs = new ArrayList();
 	
+
 	/**
-	 * Get the list  of vocabularies
+	 * Get the list of XSD namespaces
 	 * 
-	 * @return 
+	 * @return list
+	 */
+	public List<NsDAO> getNs() {
+		return this.ns;
+	}
+	
+	/**
+	 * Get the list of vocabularies
+	 * 
+	 * @return list
 	 */
 	public List<VoidDAO> getVocabs() {
 		return this.vocabs;
 	}
 	
+	
 	/** 
 	 * Constructor
 	 * 
-	 * @param m triples
+	 * @param v vocabularies as triples
+	 * @param n XSD namespaces as triples
 	 * @param lang language
 	 */
-	public VOIDView(Model m, String lang) {
+	public VOIDView(Model v, Model n, String lang) {
 		super("void.ftl", lang);
-		m.subjects().stream()
-					.forEachOrdered(s -> vocabs.add(new VoidDAO(m, (IRI) s)));
+		v.subjects().stream()
+					.forEachOrdered(s -> vocabs.add(new VoidDAO(v, (IRI) s)));
+		n.subjects().stream()
+					.forEachOrdered(s -> ns.add(new NsDAO(n, (IRI) s)));
+		
 	}
 }
 

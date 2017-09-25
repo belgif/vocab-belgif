@@ -43,12 +43,21 @@ public abstract class RdfResource {
 	/**
 	 * Get list of vocabularies as RDF triple
 	 *
-	 * @return triple
+	 * @return triples
 	 */
 	protected Model getVocabList() {
 		return QueryHelper.getVocabList(repo);
 	}
 
+	/**
+	 * Get list of XSD namespaces as RDF triple
+	 *
+	 * @return triples
+	 */
+	protected Model getNsList() {
+		return QueryHelper.getNsList(repo);
+	}
+	
 	/**
 	 * Get repository
 	 *

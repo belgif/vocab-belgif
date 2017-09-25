@@ -24,9 +24,9 @@
 	    </tr>
 	    <#assign l = lang>
 	    <#list ns as n>
-	    <tr><td>${n.literal("dcterms", "title", n)!""}</td>
-		<td>${n.literal("dcterms", "description", n)!""}</td>
-		<td><a href="${n.download!""}.xsd">XSD</a></td>
+	    <tr><td>${n.literal("dcterms", "title", l)!""}</td>
+		<td>${n.literal("dcterms", "description", l)!""}</td>
+		<td><a href="${n.download!""}">XSD</a></td>
 	    </tr>
 	    </#list>
 	    </table>
