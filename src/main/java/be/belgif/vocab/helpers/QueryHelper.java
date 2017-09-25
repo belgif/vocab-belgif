@@ -189,7 +189,7 @@ public class QueryHelper {
 
 		try (RepositoryConnection conn = repo.getConnection();
 			RepositoryResult<Statement> ns
-				= conn.getStatements(null, RDF.TYPE, DCAT.DATASET)) {
+				= conn.getStatements(null, RDF.TYPE, DCAT.DISTRIBUTION)) {
 			while (ns.hasNext()) {
 				Resource iri = ns.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, null, null), m);
