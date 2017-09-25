@@ -27,6 +27,7 @@ package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.ldf.Hydra;
 import com.google.common.net.HttpHeaders;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.annotation.Annotation;
