@@ -203,13 +203,13 @@ public class VocabImportTask extends Task {
 	@Override
 	@Timed
 	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		ImmutableCollection<String> names = param.get("name");
-		if (names == null || names.isEmpty()) {
+		ImmutableCollection<String> files = param.get("file");
+		if (files == null || files.isEmpty()) {
 			throw new WebApplicationException("Param name empty");
 		}
 
-		String name = names.asList().get(0);
-		Path infile = Paths.get(importDir, name);
+		String file = files.asList().get(0);
+		Path infile = Paths.get(importDir, file);
 
 		LOG.info("Trying to parse {}", infile);
 
@@ -221,7 +221,7 @@ public class VocabImportTask extends Task {
 			throw new WebApplicationException("File type not supported");
 		}
 
-		importFile(infile, name, format.get());
+		importFile(infile, file, format.get());
 
 		LOG.info("Done");
 	}

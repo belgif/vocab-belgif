@@ -43,18 +43,29 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author Bart.Hanssens
  */
 public class AppConfig extends Configuration implements AssetsBundleConfiguration {
-
+/*	@NotEmpty
+	private String server;
+	
+	@NotEmpty
+	private String repo;
+*/
 	@NotEmpty
 	private String dataDir;
-
-	@NotEmpty
-	private String importDir;
-
-	@NotEmpty
-	private String downloadDir;
-
+	
 	@NotEmpty
 	private String luceneDir;
+			
+	@NotEmpty
+	private String vocabImportDir;
+
+	@NotEmpty
+	private String vocabDownloadDir;
+
+	@NotEmpty
+	private String xsdImportDir;
+
+	@NotEmpty
+	private String xsdDownloadDir;
 
 	@NotEmpty
 	private String sitePrefix;
@@ -66,8 +77,6 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	@JsonProperty
 	private final AssetsConfiguration assets = AssetsConfiguration.builder().build();
 
-	;
-
 	@JsonProperty
 	public String getDataDir() {
 		return dataDir;
@@ -77,27 +86,7 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public void setDataDir(String dataDir) {
 		this.dataDir = dataDir;
 	}
-
-	@JsonProperty
-	public String getImportDir() {
-		return importDir;
-	}
-
-	@JsonProperty
-	public void setImportDir(String importDir) {
-		this.importDir = importDir;
-	}
-
-	@JsonProperty
-	public String getDownloadDir() {
-		return downloadDir;
-	}
-
-	@JsonProperty
-	public void setDownloadDir(String downloadDir) {
-		this.downloadDir = downloadDir;
-	}
-
+	
 	@JsonProperty
 	public String getLuceneDir() {
 		return luceneDir;
@@ -107,7 +96,68 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public void setLuceneDir(String luceneDir) {
 		this.luceneDir = luceneDir;
 	}
+	
+	@JsonProperty
+	public String getXsdImportDir() {
+		return xsdImportDir;
+	}
 
+	@JsonProperty
+	public void setXsdImportDir(String xsdImportDir) {
+		this.xsdImportDir = xsdImportDir;
+	}
+
+	@JsonProperty
+	public String getXsdDownloadDir() {
+		return xsdDownloadDir;
+	}
+
+	@JsonProperty
+	public void setXsdDownloadDir(String xsdDownloadDir) {
+		this.xsdDownloadDir = xsdDownloadDir;
+	}
+
+	@JsonProperty
+	public String getVocabDownloadDir() {
+		return vocabDownloadDir;
+	}
+
+	@JsonProperty
+	public void setVocabDownloadDir(String vocabDownloadDir) {
+		this.vocabDownloadDir = vocabDownloadDir;
+	}
+	
+
+	@JsonProperty
+	public String getVocabImportDir() {
+		return vocabImportDir;
+	}
+
+	@JsonProperty
+	public void setVocabImportDir(String vocabImportDir) {
+		this.vocabImportDir = vocabImportDir;
+	}
+/*	
+	@JsonProperty
+	public String getServer() {
+		return server;
+	}
+
+	@JsonProperty
+	public void setServer(String server) {
+		this.server = server;
+	}
+	
+	@JsonProperty
+	public String getRepo() {
+		return this.repo;
+	}
+
+	@JsonProperty
+	public void setRepo(String repo) {
+		this.repo = repo;
+	}	
+*/	
 	@JsonProperty
 	public String getSitePrefix() {
 		return sitePrefix;
@@ -136,4 +186,5 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public AssetsConfiguration getAssetsConfiguration() {
 		return assets;
 	}
+	
 }

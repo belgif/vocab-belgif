@@ -41,6 +41,7 @@ import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
@@ -164,7 +165,7 @@ public class QueryHelper {
 		Model m = new LinkedHashModel();
 
 		try (RepositoryConnection conn = repo.getConnection();
-				RepositoryResult<Statement> vocabs
+			RepositoryResult<Statement> vocabs
 				= conn.getStatements(null, RDF.TYPE, VOID.DATASET)) {
 			while (vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
@@ -173,9 +174,33 @@ public class QueryHelper {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
+		
 		return setNamespaces(m);
 	}
 
+	/**
+	 * Get all contexts a.k.a. vocabularies
+	 *
+	 * @param repo RDF store
+	 * @return list of vocabularies
+	 */
+	public static Model getNsList(Repository repo) {
+		Model m = new LinkedHashModel();
+
+		try (RepositoryConnection conn = repo.getConnection();
+			RepositoryResult<Statement> ns
+				= conn.getStatements(null, RDF.TYPE, DCAT.DATASET)) {
+			while (ns.hasNext()) {
+				Resource iri = ns.next().getSubject();
+				Iterations.addAll(conn.getStatements(iri, null, null), m);
+			}
+		} catch (RepositoryException e) {
+			throw new WebApplicationException(e);
+		}
+		
+		return setNamespaces(m);
+	}
+	
 	/**
 	 * Put statements in the store
 	 *

@@ -23,62 +23,34 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.tasks;
+package be.belgif.vocab.dao;
 
-import com.google.common.collect.ImmutableMultimap;
-import io.dropwizard.servlets.tasks.Task;
-
-import java.io.PrintWriter;
-import javax.ws.rs.WebApplicationException;
-
-import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.sail.SailRepository;
-import org.eclipse.rdf4j.sail.Sail;
-import org.eclipse.rdf4j.sail.lucene.LuceneSail;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
- * Re-index Lucene
+ * DAO helper class for NS.
  *
  * @author Bart.Hanssens
  */
-public class LuceneReindexTask extends Task {
-
-	private final Repository repo;
-
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(LuceneReindexTask.class);
-
+public class NsDAO extends RdfDAO {
 	/**
-	 * Execute task
+	 * Get download URL
 	 *
-	 * @param param parameters
-	 * @param w output writer
-	 * @throws Exception
+	 * @return download URL
 	 */
-	@Override
-	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		if (repo instanceof SailRepository) {
-			Sail sail = ((SailRepository) repo).getSail();
-			if (sail instanceof LuceneSail) {
-				LOG.info("Reindexing lucene sail");
-				((LuceneSail) sail).reindex();
-				LOG.info("Done");
-			}
-		} else {
-			throw new WebApplicationException("Not a Sail repository");
-		}
+	public String getDownload() {
+		return obj(DCAT.DOWNLOAD_URL).toString();
 	}
 
 	/**
 	 * Constructor
 	 *
-	 * @param repo triple store
+	 * @param m triples
+	 * @param id subject ID
 	 */
-	public LuceneReindexTask(Repository repo) {
-		super("lucene-reindex");
-		this.repo = repo;
+	public NsDAO(Model m, IRI id) {
+		super(m, id);
 	}
-
 }

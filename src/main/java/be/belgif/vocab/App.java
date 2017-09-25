@@ -34,8 +34,9 @@ import be.belgif.vocab.resources.RootResource;
 import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
-import be.belgif.vocab.tasks.VocabImportTask;
 import be.belgif.vocab.tasks.LuceneReindexTask;
+import be.belgif.vocab.tasks.NSRegisterTask;
+import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
@@ -44,14 +45,22 @@ import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
+
 import org.glassfish.jersey.server.filter.UriConnegFilter;
 
 /**
@@ -98,6 +107,9 @@ public class App extends Application<AppConfig> {
 		fts.setBaseSail(store);
 
 		return new SailRepository(fts);
+	/*
+		RepositoryManager mgr = new RemoteRepositoryManager(config.getServer());
+		return mgr.getRepository(config.getRepo()); */
 	}
 
 	/**
@@ -158,14 +170,54 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new LdfResource(repo));
 
 		// Tasks
-		env.admin().addTask(new VocabImportTask(repo, config.getImportDir(), config.getDownloadDir()));
+		env.admin().addTask(
+			new VocabImportTask(repo, config.getVocabImportDir(), config.getVocabDownloadDir()));
+		env.admin().addTask(
+			new NSRegisterTask(repo, config.getXsdImportDir()));
 		env.admin().addTask(new LuceneReindexTask(repo));
+		
 
 		// Monitoring
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
 		env.healthChecks().register("triplestore", check);
+		
+		env.lifecycle().addServerLifecycleListener(server -> {
+			if (repo.getConnection().isEmpty()) {
+				importAll(config);
+			}
+		});
+		
 	}
 
+	/**
+	 * Register all XSD namespace files and import all thesauri files.
+	 * 
+	 * @param config
+	 * @throws IOException 
+	 */
+	private void importAll(AppConfig config) {
+		String localhost = "http://localhost:8081";
+		try {
+			Client cl = ClientBuilder.newClient();
+			Files.list(Paths.get(config.getVocabImportDir())).forEach(f -> {
+				cl.target(localhost).path("tasks/vocab-import")
+					.queryParam("file", f.getFileName())
+					.request().get();
+			});
+		
+			cl.target(localhost).path("tasks/lucene-reindex").request().get();
+		
+			Files.list(Paths.get(config.getXsdImportDir())).forEach(f -> {
+				cl.target(localhost).path("tasks/register-ns")
+					.queryParam("file", f.getFileName())
+					.request().get();
+			});
+		} catch (IOException ioe) {
+			//
+		}
+	}
+	
+	
 	/**
 	 * Main
 	 *

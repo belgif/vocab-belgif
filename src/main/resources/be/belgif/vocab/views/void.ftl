@@ -13,6 +13,25 @@
     <div id="container">
     <#include "message.ftl">
     <section>
+	<h3>Namespaces</h3>
+	<section>
+	    <h4>${m.getString("msg.overview")}</h4>
+	    <table>
+	    <tr><th>${m.getString("msg.name")}</th>
+		<th>${m.getString("msg.description")}</th>
+		<th>${m.getString("msg.downloads")}</th>
+	    </tr>
+	    <#assign l = lang>
+	    <#list ns as n>
+	    <tr><td>${n.literal("dcterms", "title", n)!""}</td>
+		<td>${n.literal("dcterms", "description", n)!""}</td>
+		<td><a href="${n.download!""}.xsd">XSD</a></td>
+	    </tr>
+	    </#list>
+	    </table>
+	</section>
+    </section>
+    <section>
 	<h3>Thesauri</h3>
 	<section>
 	    <h4>${m.getString("msg.overview")}</h4>
@@ -32,9 +51,6 @@
 	    </#list>
 	    </table>
 	</section>
-    </section>
-    <section>
-	<h3>${m.getString("msg.techinfo")}</h3>
 	<section>
 	    <h4>Content Negotiation (De-referencing)</h4>
 	    <table>
