@@ -44,7 +44,7 @@ import org.eclipse.rdf4j.repository.RepositoryException;
  * @author Bart.Hanssens
  */
 public class QueryHelperFTS {
-
+    /* GraphDB
 	private final static String Q_FTS
 			= "PREFIX luc: <http://www.ontotext.com/owlim/lucene#> " + "\n"
 			+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n"
@@ -54,7 +54,18 @@ public class QueryHelperFTS {
 			+ "    ?s luc:myIndex ?query . " + "\n"
 			+ "	   ?s skos:prefLabel ?o } " + "\n"
 			+ " }";
+	*/
 
+	private final static String Q_FTS 
+		= "PREFIX search: <http://www.openrdf.org/contrib/lucenesail#> " + "\n"
+		+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n"
+		+ "CONSTRUCT { ?s skos:prefLabel ?o }"
+		+ " WHERE { "
+		+ " GRAPH ?graph { "
+		+ " ?s search:matches [ search:query ?query ] ."
+		+ " ?s skos:prefLabel ?o } . "
+		+ "}";
+	
 	/**
 	 * Full text search
 	 *
