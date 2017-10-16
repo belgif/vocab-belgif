@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.belgif</groupId>
     <artifactId>lod-vocab</artifactId>
-    <version>1.1</version>
+    <version>1.1.4</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 	<rdf4j.version>2.2.2</rdf4j.version>
-	<dw.version>1.0.6</dw.version>
+	<dw.version>1.1.4</dw.version>
     </properties>
     <name>Vocab Belgif</name>
     <description>Belgif.be vocabulary server</description>
@@ -98,7 +98,7 @@
         <dependency>
             <groupId>io.dropwizard-bundles</groupId>
             <artifactId>dropwizard-configurable-assets-bundle</artifactId>
-            <version>1.0.5</version>
+            <version>${dw.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.rdf4j</groupId>
