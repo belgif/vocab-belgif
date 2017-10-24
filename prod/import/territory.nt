@@ -1703,7 +1703,7 @@
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Guam"@en .
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Guam"@nl .
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Guam"@fr .
-<http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/4043542/ > .
+<http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/4043542/> .
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.wikidata.org/ontology#P299> "316" .
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/country/GUM> .
 <http://vocab.belgif.be/auth/territory/681#id> <http://www.wikidata.org/ontology#P298> "GUM" .
@@ -3143,7 +3143,7 @@
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Pitcairn"@en .
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Pitcairn"@nl .
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Pitcairn"@fr .
-<http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/4030699/ > .
+<http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/4030699/> .
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.wikidata.org/ontology#P299> "612" .
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/country/PCN> .
 <http://vocab.belgif.be/auth/territory/692#id> <http://www.wikidata.org/ontology#P298> "PCN" .
@@ -3203,7 +3203,7 @@
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Republic of Palau"@en .
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#altLabel> "R\u00E9publique des Palaos"@nl .
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#altLabel> "Republiek Palau"@fr .
-<http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/1559582/ > .
+<http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/1559582/> .
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.wikidata.org/ontology#P299> "585" .
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/country/PLW> .
 <http://vocab.belgif.be/auth/territory/679#id> <http://www.wikidata.org/ontology#P298> "PLW" .
