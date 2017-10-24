@@ -17,6 +17,7 @@
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Belgique"@fr .
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Belgi\u00EB"@nl .
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/2802361/> .
+<http://vocab.belgif.be/auth/refnis1995/1000#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/territory/150#id> .
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <https://schema.org/startDate> "1995-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis1995/1000#id> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE> .
