@@ -32,8 +32,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import org.eclipse.rdf4j.model.Resource;
-
 /**
  * HTML view for SKOS concept schema
  * 

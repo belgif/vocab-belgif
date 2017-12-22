@@ -4,10 +4,22 @@
   <groupId>be.belgif</groupId>
   <artifactId>lod-vocab</artifactId>
   <name>Vocab Belgif</name>
-  <version>1.1.4</version>
+  <version>1.2</version>
   <description>Belgif.be vocabulary server</description>
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>2.4.3</version>
@@ -60,7 +72,7 @@
     </dependency>
   </dependencies>
   <properties>
-    <dw.version>1.1.4</dw.version>
+    <dw.version>1.2.2</dw.version>
     <rdf4j.version>2.2.4</rdf4j.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

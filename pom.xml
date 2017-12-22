@@ -3,19 +3,32 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.belgif</groupId>
     <artifactId>lod-vocab</artifactId>
-    <version>1.1.4</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 	<rdf4j.version>2.2.4</rdf4j.version>
-	<dw.version>1.1.4</dw.version>
+	<dw.version>1.2.2</dw.version>
     </properties>
     <name>Vocab Belgif</name>
     <description>Belgif.be vocabulary server</description>
     <build>
 	<plugins>
+	    <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jar-plugin</artifactId>
+		<version>3.0.2</version>
+		<configuration>
+		    <archive>
+			<manifest>
+			    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+			    <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+			</manifest>
+		    </archive>
+		</configuration>
+	    </plugin>
 	    <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-shade-plugin</artifactId>
