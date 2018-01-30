@@ -15,8 +15,9 @@ Publishing re-usable thesauri as Linked Open Data
 
 ## Thesauri
 
-- Searchable HTML view on taxonomies, controlled lists
-- Multiple download formats (JSON-LD, TTL...)
+- Searchable HTML view
+  - NACEbel, NIS, Territories, Be themes
+- SKOS in multiple download formats (JSON-LD, TTL...)
 - Linked Data Fragments API for machines
 
 ---
@@ -24,7 +25,7 @@ Publishing re-usable thesauri as Linked Open Data
 
 - [Simple Knowledge Organization System](https://www.w3.org/2004/02/skos/)
 - RDF-based W3C Recommendation
-- For taxonomies, thesauri, code lists
+- Describing taxonomies, thesauri, code lists
 
 +++
 
@@ -40,6 +41,12 @@ Publishing re-usable thesauri as Linked Open Data
 ## Example
 
 ```
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://vocab.belgif.be/auth/mybe-theme/FINA#id> a skos:Concept;
+    skos:notation "FINA" ;
+    skos:prefLabel "Financiën"@nl, "Finance"@fr ;
+    skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/ECON> .
 
 ```
 
@@ -105,7 +112,7 @@ Publishing re-usable thesauri as Linked Open Data
 ## Adding a new thesauri
 
 - Create a new SKOS file
-  - With dcterms:title, dcterms:description in NL-FR-DE-EN
+  - dcterms:title, dcterms:description (NL-FR-DE-EN)
 - Add it to the github repository
 - Build and deploy docker image
   - Files will be indexed on start-up
