@@ -65,13 +65,18 @@
 - Embedded RDF4J triple store
 - Deployed as 1 docker container
 
+![Docker logo](https://www.docker.com/sites/default/files/vertical.png)
+![RDF4J logo](http://rdf4j.org/wp-content/uploads/2016/04/rdf4j-logo-orange-114.png)
+
 +++
 
 ## What is DropWizard ?
 
-- Open source Java [REST framework](http://www.dropwizard.io)
-  - Jetty server, Jersey annotations, Freemarker templates
+- Open source Java [REST framework](http://www.dropwizard.io) by Yammer
+  - Jersey annotations, Freemarker templates
 - Stand-alone micro-services
+
+![Docker logo](https://www.docker.com/sites/default/files/vertical.png)
 
 +++
 
