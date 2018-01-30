@@ -49,6 +49,27 @@ Publishing SKOS vocabularies
   - Jetty server, Jersey annotations, Freemarker templates
 - Stand-alone micro-services
 
++++
+
+## What is RDF4J ?
+
+- Eclipse [open source library](http://rdf4j.org/)
+- RDF API, library, tools and triple store
+- OntoText [GraphDB](https://ontotext.com/products/graphdb/), 
+[Halyard](https://github.com/Merck/Halyard)
+
+---
+
+## Linked Data Fragments API
+
+- [Triple Pattern Fragments](http://linkeddatafragments.org/) "web-scale" queries
+- Client-side SPARQL queries
+- Paginated results
+- Very basic queries on the server
+  - Less server load, but more network traffic
+
+---
+
 ---
 
 ## Thank you
