@@ -65,7 +65,7 @@
 - Embedded RDF4J triple store
 - Deployed as 1 docker container
 
-![Docker logo](https://www.docker.com/sites/default/files/vertical.png?height=10%)
+![Docker logo](https://www.docker.com/sites/default/files/vertical.png?height=10%&classes=shadow)
 ![RDF4J logo](http://rdf4j.org/wp-content/uploads/2016/04/rdf4j-logo-orange-114.png){ height=10% }
 
 +++
