@@ -1,8 +1,7 @@
 # Vocab.belgif.be
 
-```
-Publishing re-usable thesauri as Linked Open Data
-```
+
+> Publishing re-usable thesauri as Linked Open Data
 
 ---
 
