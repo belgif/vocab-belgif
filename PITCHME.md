@@ -97,8 +97,9 @@
 ## Creating SKOS files
 
 - Manually in a text editor
-- Quick and dirty conversion
-- Special tools
+- Quick and dirty [Excel-to-SKOS](https://github.com/Fedict/lod-skosifier) conversion
+- Specialized tools
+  - [Skosmos](http://skosmos.org/), [Vocbench](http://vocbench.uniroma2.it/)
 
 +++
 
