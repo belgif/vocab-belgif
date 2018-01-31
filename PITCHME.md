@@ -47,7 +47,6 @@
     skos:notation "FINA" ;
     skos:prefLabel "Financiën"@nl, "Finance"@fr ;
     skos:broadMatch <http://publications.europa.eu/resource/authority/data-theme/ECON> .
-
 ```
 
 +++
@@ -60,7 +59,7 @@
 
 ---
 
-## Published
+## Already published
 
 - NACEbel economic activities
 - Territories recognized by Belgium
