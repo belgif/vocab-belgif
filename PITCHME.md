@@ -15,11 +15,11 @@
 ## Thesauri
 
 - Searchable HTML view
-  - NACEbel, NIS, Territories, Be themes
 - SKOS in multiple download formats (JSON-LD, TTL...)
 - Linked Data Fragments API for machines
 
 ---
+
 ## What is SKOS ?
 
 - [Simple Knowledge Organization System](https://www.w3.org/2004/02/skos/)
@@ -39,7 +39,7 @@
 
 ## Example
 
-```
+```xml
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://vocab.belgif.be/auth/mybe-theme/FINA#id> a skos:Concept;
@@ -59,14 +59,49 @@
 
 ---
 
+## Published
+
+- NACEbel economic activities
+- Territories recognized by Belgium
+   - linked to GeoNames, EU country codes
+- NIS regions and municipalities
+  - linked to GeoNames
+- ...
+
+---
+
+## Adding a new thesauri
+
+- Create a new SKOS file
+  - dcterms:title, dcterms:description (NL-FR-DE-EN)
+- Add it to the github repository
+- Build and deploy new instance
+  - Files will be indexed and converted on start-up
+
+---
+
+## Creating SKOS files
+
+- Manually in a text editor (Turtle syntax)
+- Basic [Excel-to-SKOS](https://github.com/Fedict/lod-skosifier) conversion
+- Specialized tools
+  - [Skosmos](http://skosmos.org/), [Vocbench](http://vocbench.uniroma2.it/)
+
++++
+
+## Why conversion
+
+- Taxonomies often maintained in other systems
+- No need for yet another input tool
+
+---
+
 ## Technology
 
 - DropWizard server
 - Embedded RDF4J triple store
 - Deployed as 1 docker container
-
-![Docker logo](https://www.docker.com/sites/default/files/vertical.png?height=10%&size=auto 10%)
-![RDF4J logo](http://rdf4j.org/wp-content/uploads/2016/04/rdf4j-logo-orange-114.png&size=auto 10% }
+  - Read-only, scalable
 
 +++
 
@@ -76,18 +111,16 @@
   - Jersey annotations, Freemarker templates
 - Stand-alone micro-services
 
-![Docker logo](https://www.docker.com/sites/default/files/vertical.png)
-
 +++
 
 ## What is RDF4J ?
 
-- Eclipse [open source library](http://rdf4j.org/)
+- Java [open source library](http://rdf4j.org/)
 - RDF API, library, tools and triple store
-- OntoText [GraphDB](https://ontotext.com/products/graphdb/), 
+- Used by OntoText [GraphDB](https://ontotext.com/products/graphdb/), 
 [Halyard](https://github.com/Merck/Halyard)
 
-+++
+---
 
 ## Linked Data Fragments API
 
@@ -95,32 +128,7 @@
 - Client-side SPARQL queries
 - Paginated results
 - Very basic queries on the server
-  - Less server load, but more network traffic
-
----
-
-## Creating SKOS files
-
-- Manually in a text editor
-- Quick and dirty [Excel-to-SKOS](https://github.com/Fedict/lod-skosifier) conversion
-- Specialized tools
-  - [Skosmos](http://skosmos.org/), [Vocbench](http://vocbench.uniroma2.it/)
-
-+++
-
-## Why not
-
-- Taxonomies often already maintained in other systems
-
----
-
-## Adding a new thesauri
-
-- Create a new SKOS file
-  - dcterms:title, dcterms:description (NL-FR-DE-EN)
-- Add it to the github repository
-- Build and deploy docker image
-  - Files will be indexed on start-up
+  - Less server load, more network traffic
 
 ---
 
