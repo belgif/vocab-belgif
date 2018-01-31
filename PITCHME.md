@@ -15,7 +15,8 @@
 ## Thesauri
 
 - Searchable HTML view
-- SKOS in multiple download formats (JSON-LD, TTL...)
+- SKOS in multiple download formats
+  - JSON-LD, TTL...
 - Linked Data Fragments API for machines
 
 ---
@@ -99,7 +100,7 @@
 ## Technology
 
 - DropWizard server
-- Embedded RDF4J triple store
+- Embedded RDF4J triple store / Lucene
 - Deployed as 1 docker container
   - Read-only, scalable
 
@@ -110,6 +111,7 @@
 - Open source Java [REST framework](http://www.dropwizard.io) by Yammer
   - Jersey annotations, Freemarker templates
 - Stand-alone micro-services
+  - Similar to Spring Boot etc
 
 +++
 
