@@ -44,7 +44,7 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#assign l = lang>
-	    <#list vocabs as v>
+	    <#list vocabs?sort_by("root") as v>
 	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", l)!""}</a></td>
 		<td>${v.literal("dcterms", "description", l)!""}</td>
 		<td><a href="${v.download!""}.ttl">TTL</a>
