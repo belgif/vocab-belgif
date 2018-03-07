@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,7 +26,7 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.VOIDView;
+import be.belgif.vocab.views.HomepageView;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
 import java.util.Optional;
@@ -43,7 +43,7 @@ import org.eclipse.rdf4j.repository.Repository;
 /**
  * Vocabulary term of a SKOS thesaurus.
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 @Path("/void")
 public class VoidResource extends RdfResource {
@@ -58,8 +58,9 @@ public class VoidResource extends RdfResource {
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	@ExceptionMetered
-	public VOIDView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new VOIDView(getVocabList(), getNsList(), lang.orElse("en"));
+	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
+		return new HomepageView(getVocabList(), getXmlnsList(), getOntologyList(), 
+									lang.orElse("en"));
 	}
 	
 	

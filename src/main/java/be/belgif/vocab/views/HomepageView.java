@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,34 +23,66 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.views;
+
+import be.belgif.vocab.dao.OntoDAO;
+import be.belgif.vocab.dao.XmlnsDAO;
+import be.belgif.vocab.dao.VoidDAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.ext.Provider;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
- * DAO helper class for NS.
- *
- * @author Bart.Hanssens
+ * HTML view for homepage / VoID descriptions
+ * 
+ * @author Bart Hanssens
  */
-public class NsDAO extends RdfDAO {
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		return obj(DCAT.DOWNLOAD_URL).toString();
-	}
+@Provider
+public class HomepageView extends RdfView {
+	private final List<XmlnsDAO> xmlns = new ArrayList();
+	private final List<VoidDAO> vocabs = new ArrayList();
+	private final List<OntoDAO> ontos = new ArrayList();	
 
 	/**
-	 * Constructor
-	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * Get the list of XSD namespaces
+	 * 
+	 * @return list
 	 */
-	public NsDAO(Model m, IRI id) {
-		super(m, id);
+	public List<XmlnsDAO> getXmlns() {
+		return this.xmlns;
+	}
+	
+	/**
+	 * Get the list of vocabularies
+	 * 
+	 * @return list
+	 */
+	public List<VoidDAO> getVocabs() {
+		return this.vocabs;
+	}
+	
+	
+	/** 
+	 * Constructor
+	 * 
+	 * @param vocs vocabularies as triples
+	 * @param xmls XSD namespaces as triples
+	 * @param onts ontologies as triples
+	 * @param lang language
+	 */
+	public HomepageView(Model vocs, Model xmls, Model onts, String lang) {
+		super("homepage.ftl", lang);
+		vocs.subjects().stream()
+			.forEachOrdered(s -> vocabs.add(new VoidDAO(vocs, (IRI) s)));
+		xmls.subjects().stream()
+			.forEachOrdered(s -> xmlns.add(new XmlnsDAO(xmls, (IRI) s)));
+		onts.subjects().stream()
+			.forEachOrdered(s -> ontos.add(new OntoDAO(onts, (IRI) s)));		
 	}
 }
+

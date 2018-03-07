@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,63 +23,34 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
-
-import be.belgif.vocab.dao.NsDAO;
-import be.belgif.vocab.dao.VoidDAO;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.ws.rs.ext.Provider;
+package be.belgif.vocab.dao;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
- * HTML view for VoID descriptions
- * 
+ * DAO helper class for NS.
+ *
  * @author Bart.Hanssens
  */
-@Provider
-public class VOIDView extends RdfView {
-	private final List<NsDAO> ns = new ArrayList();
-	private final List<VoidDAO> vocabs = new ArrayList();
-	
+public class XmlnsDAO extends RdfDAO {
+	/**
+	 * Get download URL
+	 *
+	 * @return download URL
+	 */
+	public String getDownload() {
+		return obj(DCAT.DOWNLOAD_URL).toString();
+	}
 
 	/**
-	 * Get the list of XSD namespaces
-	 * 
-	 * @return list
-	 */
-	public List<NsDAO> getNs() {
-		return this.ns;
-	}
-	
-	/**
-	 * Get the list of vocabularies
-	 * 
-	 * @return list
-	 */
-	public List<VoidDAO> getVocabs() {
-		return this.vocabs;
-	}
-	
-	
-	/** 
 	 * Constructor
-	 * 
-	 * @param v vocabularies as triples
-	 * @param n XSD namespaces as triples
-	 * @param lang language
+	 *
+	 * @param m triples
+	 * @param id subject ID
 	 */
-	public VOIDView(Model v, Model n, String lang) {
-		super("void.ftl", lang);
-		v.subjects().stream()
-					.forEachOrdered(s -> vocabs.add(new VoidDAO(v, (IRI) s)));
-		n.subjects().stream()
-					.forEachOrdered(s -> ns.add(new NsDAO(n, (IRI) s)));
-		
+	public XmlnsDAO(Model m, IRI id) {
+		super(m, id);
 	}
 }
-

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -41,7 +41,7 @@ public abstract class RdfResource {
 	private final Repository repo;
 
 	/**
-	 * Get list of vocabularies as RDF triple
+	 * Get list of vocabularies as RDF triples
 	 *
 	 * @return triples
 	 */
@@ -50,12 +50,21 @@ public abstract class RdfResource {
 	}
 
 	/**
-	 * Get list of XSD namespaces as RDF triple
+	 * Get list of XSD namespaces as RDF triples
 	 *
 	 * @return triples
 	 */
-	protected Model getNsList() {
-		return QueryHelper.getNsList(repo);
+	protected Model getXmlnsList() {
+		return QueryHelper.getXmlnsList(repo);
+	}
+	
+	/**
+	 * Get list of ontologies as RDF triples
+	 *
+	 * @return triples
+	 */
+	protected Model getOntologyList() {
+		return QueryHelper.getOntologyList(repo);
 	}
 	
 	/**

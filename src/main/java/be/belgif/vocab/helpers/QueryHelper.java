@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -155,18 +155,13 @@ public class QueryHelper {
 		return setNamespaces(m);
 	}
 
-	/**
-	 * Get all contexts a.k.a. vocabularies
-	 *
-	 * @param repo RDF store
-	 * @return list of vocabularies
-	 */
-	public static Model getVocabList(Repository repo) {
+	
+	public static Model getType(Repository repo, IRI obj) {
 		Model m = new LinkedHashModel();
 
 		try (RepositoryConnection conn = repo.getConnection();
 			RepositoryResult<Statement> vocabs
-				= conn.getStatements(null, RDF.TYPE, VOID.DATASET)) {
+				= conn.getStatements(null, RDF.TYPE, obj)) {
 			while (vocabs.hasNext()) {
 				Resource iri = vocabs.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, null, null), m);
@@ -176,30 +171,39 @@ public class QueryHelper {
 		}
 		
 		return setNamespaces(m);
+	
 	}
-
+	
 	/**
 	 * Get all contexts a.k.a. vocabularies
 	 *
 	 * @param repo RDF store
 	 * @return list of vocabularies
 	 */
-	public static Model getNsList(Repository repo) {
-		Model m = new LinkedHashModel();
-
-		try (RepositoryConnection conn = repo.getConnection();
-			RepositoryResult<Statement> ns
-				= conn.getStatements(null, RDF.TYPE, DCAT.DISTRIBUTION)) {
-			while (ns.hasNext()) {
-				Resource iri = ns.next().getSubject();
-				Iterations.addAll(conn.getStatements(iri, null, null), m);
-			}
-		} catch (RepositoryException e) {
-			throw new WebApplicationException(e);
-		}
-		
-		return setNamespaces(m);
+	public static Model getVocabList(Repository repo) {
+		return getType(repo, VOID.DATASET);
 	}
+
+	/**
+	 * Get all xml namespaces
+	 *
+	 * @param repo RDF store
+	 * @return list of xml namespaces
+	 */
+	public static Model getXmlnsList(Repository repo) {
+		return getType(repo, DCAT.DISTRIBUTION);
+	}
+	
+	/**
+	 * Get all ontologies
+	 *
+	 * @param repo RDF store
+	 * @return list of xml namespaces
+	 */
+	public static Model getOntologyList(Repository repo) {
+		return getType(repo, OWL.ONTOLOGY);
+	}
+	
 	
 	/**
 	 * Put statements in the store

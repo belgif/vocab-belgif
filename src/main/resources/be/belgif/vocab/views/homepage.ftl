@@ -12,6 +12,27 @@
 <main>
     <div id="container">
     <#include "message.ftl">
+    <#if onto??>
+    <section>
+	<h3>Ontologies</h3>
+	<section>
+	    <h4>${m.getString("msg.overview")}</h4>
+	    <table>
+	    <tr><th>${m.getString("msg.name")}</th>
+		<th>${m.getString("msg.description")}</th>
+		<th>${m.getString("msg.downloads")}</th>
+	    </tr>
+	    <#assign l = lang>
+	    <#list onto as o>
+	    <tr><td><a href="${o.root}">${v.literal("dcterms", "title", l)!""}</a></td>
+		<td>${o.literal("dcterms", "description", l)!""}</td>
+		<td><a href="${o.shacl!""}">SHACL</a></td>
+	    </tr>
+	    </#list>
+	    </table>
+	</section>
+    </section>
+    </#if>
     <#if ns??>
     <section>
 	<h3>Namespaces</h3>

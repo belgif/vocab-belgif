@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,58 +23,34 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
-
-import be.belgif.vocab.dao.SkosDAO;
-
-import java.util.Iterator;
-
-import javax.ws.rs.ext.Provider;
+package be.belgif.vocab.dao;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
- * HTML View for SKOS term
- * 
+ * DAO helper class for NS.
+ *
  * @author Bart.Hanssens
  */
-@Provider
-public class VocabTermView extends RdfView {
-	private final SkosDAO term;
-	private final String vocab;
-	
+public class OntoDAO extends RdfDAO {
 	/**
-	 * Get the properties of a term
-	 * 
-	 * @return 
+	 * Get download URL
+	 *
+	 * @return download URL
 	 */
-	public SkosDAO getTerm() {
-		return this.term;
+	public String getDownload() {
+		return obj(DCAT.DOWNLOAD_URL).toString();
 	}
-	
+
 	/**
-	 * Get the name of the vocabulary
-	 * 
-	 * @return 
-	 */
-	public String getVocab() {
-		return this.vocab;
-	}
-	
-	/** 
 	 * Constructor
-	 * 
-	 * @param vocab vocabulary name
+	 *
 	 * @param m triples
-	 * @param lang language
+	 * @param id subject ID
 	 */
-	public VocabTermView(String vocab, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "vocabterm.ftl", lang);
-		
-		Iterator<Resource> i = m.subjects().iterator();
-		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
-		this.vocab = vocab;
+	public OntoDAO(Model m, IRI id) {
+		super(m, id);
 	}
 }

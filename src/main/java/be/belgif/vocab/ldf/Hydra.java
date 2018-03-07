@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016, Bart Hanssens <bart.hanssens@fedict.be>
+ * Copyright (c) 2016, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,7 +34,7 @@ import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 /**
  * vCard RDF helper class
  * 
- * @author Bart Hanssens <bart.hanssens@fedict.be>
+ * @author Bart Hanssens <bart.hanssens@bosa.fgov.be>
  */
 public class Hydra {
 	public final static String NAMESPACE = "http://www.w3.org/ns/hydra/core#";
