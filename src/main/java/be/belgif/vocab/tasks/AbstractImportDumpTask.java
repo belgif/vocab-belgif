@@ -52,6 +52,10 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public abstract class AbstractImportDumpTask extends AbstractImportTask {
+	private final String[] ftypes = 
+		new String[] { RDFFormat.TURTLE.getDefaultFileExtension(), 
+				RDFFormat.JSONLD.getDefaultFileExtension(), 
+				RDFFormat.NTRIPLES.getDefaultFileExtension() };
 	private final String downloadDir;
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportDumpTask.class);
@@ -69,7 +73,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 									throws IOException {
 		LOG.info("Writing data dumps for {}", name);
 
-		for (String ftype : App.FTYPES.keySet()) {
+		for (String ftype : ftypes) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);
 			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE,
 					StandardOpenOption.CREATE)) {
@@ -85,20 +89,6 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 				}
 			}
 		}
-	}
-
-	/**
-	 * Process and write dumps
-	 * 
-	 * @param conn
-	 * @param name
-	 * @param ctx
-	 * @throws IOException 
-	 */
-	protected void processAndWrite(RepositoryConnection conn, String name, Resource ctx) 
-								throws IOException {
-		process(conn, name, ctx);
-		writeDumps(conn, name, ctx);
 	}
 	
 	/**

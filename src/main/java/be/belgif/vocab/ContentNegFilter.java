@@ -23,47 +23,47 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.tasks;
+package be.belgif.vocab;
 
-import be.belgif.vocab.App;
 import java.io.IOException;
-import java.util.stream.Stream;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
-import org.eclipse.rdf4j.rio.RDFFormat;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MediaType;
 
 /**
- * Import an ontology file and create (static) download files in various formats.
  *
  * @author Bart.Hanssens
  */
-public class OntologyImportTask extends AbstractImportDumpTask {
-	
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntologyImportTask.class);
-
+public class ContentNegFilter implements Filter {
 
 	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
-		writeDumps(conn, name, ctx);
-		
-		conn.remove((Resource) null, null, null, ctx);
-	}
-	
-	/**
-	 * Constructor
-	 *
-	 * @param repo triple store
-	 * @param inDir import directory
-	 * @param outDir download directory
-	 */
-	public OntologyImportTask(Repository repo, String inDir, String outDir) {
-		super("import-onto", repo, inDir, outDir);
+	public void init(FilterConfig fc) throws ServletException {}
+
+	@Override
+	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) 
+						throws IOException, ServletException {
+		if (req instanceof HttpServletRequest) {
+			HttpServletRequest httpReq = (HttpServletRequest) req;
+			String uri = httpReq.getRequestURI();
+						
+			String ctype = httpReq.getHeader(HttpHeaders.CONTENT_TYPE);
+			if (ctype.equals(MediaType.TEXT_HTML)) {
+				RequestDispatcher dispatcher = 
+					req.getRequestDispatcher(uri + "." + "html");
+				dispatcher.forward(req, resp); 
+			}
+		}
 	}
 
+	@Override
+	public void destroy() {}
+	
 }

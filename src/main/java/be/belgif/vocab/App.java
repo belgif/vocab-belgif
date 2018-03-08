@@ -48,9 +48,11 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.EnumSet;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.servlet.DispatcherType;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -78,9 +80,6 @@ public class App extends Application<AppConfig> {
 	private static String PREFIX_GRAPH;
 
 	public final static Map<String, MediaType> FTYPES = new HashMap<>();
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
-
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
 		FTYPES.put("jsonld", MediaType.valueOf(RDFMediaType.JSONLD));
@@ -88,13 +87,14 @@ public class App extends Application<AppConfig> {
 	}
 
 	public final static Map<String, String> LANGS = new HashMap<>();
-
 	static {
 		LANGS.put("nl", "nl");
 		LANGS.put("fr", "fr");
 		LANGS.put("de", "de");
 		LANGS.put("en", "en");
 	}
+	
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
 
 	/**
 	 * Configure a triple store repository
@@ -162,6 +162,14 @@ public class App extends Application<AppConfig> {
 		// Override content negotiation for URLs with file type extensions
 		env.jersey().register(new UriConnegFilter(FTYPES, LANGS));
 
+		// The opposite, for static files
+		// Add file type extension 
+		env.servlets().addFilter("ContentNegFilter", new ContentNegFilter())
+				.addMappingForUrlPatterns(
+					EnumSet.of(DispatcherType.REQUEST), 
+					true, "(?!.*xsd)/ns/.*");
+		
+		
 		// RDF Serialization formats
 		env.jersey().register(new RDFMessageBodyWriter());
 

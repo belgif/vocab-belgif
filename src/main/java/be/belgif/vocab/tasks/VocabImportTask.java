@@ -28,6 +28,7 @@ package be.belgif.vocab.tasks;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
+import java.io.IOException;
 
 import java.util.Arrays;
 import java.util.Date;
@@ -113,9 +114,11 @@ public class VocabImportTask extends AbstractImportDumpTask {
 	
 
 	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) {
+	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
 		Model voidM = addVOID(conn, name, ctx);
 		conn.add(voidM, ctx);
+		
+		writeDumps(conn, name, ctx);
 	}
 
 	/**

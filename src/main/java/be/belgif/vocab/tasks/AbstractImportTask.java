@@ -68,8 +68,10 @@ public abstract class AbstractImportTask extends Task {
 	 * @param conn
 	 * @param name
 	 * @param ctx 
+	 * @throws java.io.IOException 
 	 */
-	protected void process(RepositoryConnection conn, String name, Resource ctx) {
+	protected void process(RepositoryConnection conn, String name, Resource ctx) 
+								throws IOException {
 	}
 		
 	/**
