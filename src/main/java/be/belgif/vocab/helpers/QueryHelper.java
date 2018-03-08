@@ -156,6 +156,13 @@ public class QueryHelper {
 	}
 
 	
+	/**
+	 * Get list of 
+	 * 
+	 * @param repo RDF store
+	 * @param obj type (RDF object) to retrieve
+	 * @return list as triples
+	 */
 	public static Model getType(Repository repo, IRI obj) {
 		Model m = new LinkedHashModel();
 

@@ -53,7 +53,7 @@ public class OntologyImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public OntologyImportTask(Repository repo, String inDir, String outDir) {
-		super("ontology-import", repo, inDir, outDir);
+		super("import-onto", repo, inDir, outDir);
 	}
 
 }

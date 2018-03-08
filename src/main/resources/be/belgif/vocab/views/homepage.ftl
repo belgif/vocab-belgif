@@ -33,7 +33,7 @@
 	</section>
     </section>
     </#if>
-    <#if ns??>
+    <#if xmlns??>
     <section>
 	<h3>Namespaces</h3>
 	<section>
@@ -44,7 +44,7 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#assign l = lang>
-	    <#list ns as n>
+	    <#list xmlns as n>
 	    <tr><td>${n.literal("dcterms", "title", l)!""}</td>
 		<td>${n.literal("dcterms", "description", l)!""}</td>
 		<td><a href="${n.download!""}">XSD</a></td>

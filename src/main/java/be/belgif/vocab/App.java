@@ -64,6 +64,8 @@ import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 
 import org.glassfish.jersey.server.filter.UriConnegFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Main Dropwizard web application
@@ -76,6 +78,8 @@ public class App extends Application<AppConfig> {
 	private static String PREFIX_GRAPH;
 
 	public final static Map<String, MediaType> FTYPES = new HashMap<>();
+	
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
 
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
@@ -169,8 +173,7 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new LdfResource(repo));
 
 		// Tasks
-		env.admin().addTask(
-			new VocabImportTask(repo, config.getVocabs().getImportDir(), 
+		env.admin().addTask(new VocabImportTask(repo, config.getVocabs().getImportDir(), 
 						config.getVocabs().getDownloadDir()));
 		env.admin().addTask(new XmlnsRegisterTask(repo, config.getXsds().getImportDir()));
 		env.admin().addTask(new LuceneReindexTask(repo));
@@ -188,6 +191,13 @@ public class App extends Application<AppConfig> {
 		
 	}
 
+	/**
+	 * Import files from a directory
+	 * 
+	 * @param dir directory containing the files
+	 * @param target webclient
+	 * @throws IOException 
+	 */
 	private void importFiles(String dir, WebTarget target) throws IOException {
 		Files.list(Paths.get(dir)).forEach(f -> {
 				target.queryParam("file", f.getFileName())
@@ -206,12 +216,12 @@ public class App extends Application<AppConfig> {
 		try {
 			Client cl = ClientBuilder.newClient();
 			WebTarget target = cl.target(localhost);
-/*
-			importFiles(config.getOntoImportDir(),
-					target.path("tasks/register-xmlns"));
-*/			
+
+			importFiles(config.getOntos().getImportDir(),
+					target.path("tasks/onto-register"));
+			
 			importFiles(config.getXsds().getImportDir(),
-					target.path("tasks/register-xmlns"));
+					target.path("tasks/xmlns-register"));
 					
 			importFiles(config.getVocabs().getImportDir(),
 					target.path("tasks/vocab-import"));
@@ -219,7 +229,7 @@ public class App extends Application<AppConfig> {
 			cl.target(localhost).path("tasks/lucene-reindex")
 				.request().post(Entity.text(""));
 		} catch (IOException ioe) {
-			//
+			LOG.error("Could not import on startup", ioe);
 		}
 	}
 	

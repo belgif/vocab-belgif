@@ -25,41 +25,18 @@
  */
 package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.App;
-
-import com.codahale.metrics.annotation.Timed;
-import com.google.common.collect.ImmutableCollection;
-import com.google.common.collect.ImmutableMultimap;
-
-import io.dropwizard.servlets.tasks.Task;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Optional;
-
-import javax.ws.rs.WebApplicationException;
-
-import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
-import org.eclipse.rdf4j.repository.RepositoryException;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.Rio;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Import a SKOS file and create full (static) download files in various formats.
+ * Register XML namespace / XSD file
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class XmlnsRegisterTask extends AbstractImportTask {
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(XmlnsRegisterTask.class);
-
 
 	
 	/**
@@ -69,6 +46,6 @@ public class XmlnsRegisterTask extends AbstractImportTask {
 	 * @param inDir import directory
 	 */
 	public XmlnsRegisterTask(Repository repo, String inDir) {
-		super("register-xmlns", repo, inDir);
+		super("xmlns-register", repo, inDir);
 	}
 }

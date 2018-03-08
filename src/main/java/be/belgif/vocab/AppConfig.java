@@ -26,7 +26,6 @@
 package be.belgif.vocab;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.google.common.collect.ImmutableMap;
 
 import io.dropwizard.Configuration;
 import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
@@ -84,16 +83,15 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	@NotEmpty
 	private Map<String, Map<String, String>> views;
 
-	@Valid
 	@NotNull
 	@JsonProperty("vocabularies")
 	private ImportDownloadFactory vocabs = new ImportDownloadFactory();
 
-	@Valid
 	@NotNull
 	@JsonProperty("xmlnamespaces")
 	private ImportDownloadFactory xsds = new ImportDownloadFactory();
 	
+	@NotNull
 	@JsonProperty("ontologies")
 	private ImportDownloadFactory ontos = new ImportDownloadFactory();
 	
@@ -142,6 +140,15 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 		this.views = views;
 	}
 
+	@JsonProperty
+	public ImportDownloadFactory getOntos() {
+		return ontos;
+	}
+	
+	@JsonProperty
+	public void setOntos(ImportDownloadFactory ontos) {
+		this.ontos = ontos;
+	}
 	
 	@JsonProperty
 	public ImportDownloadFactory getVocabs() {

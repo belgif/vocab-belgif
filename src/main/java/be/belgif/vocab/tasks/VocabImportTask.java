@@ -29,24 +29,9 @@ import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
 
-import com.google.common.collect.ImmutableCollection;
-import com.google.common.collect.ImmutableMultimap;
-
-import io.dropwizard.servlets.tasks.Task;
-
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
-
-import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.common.iteration.Iterations;
 import org.eclipse.rdf4j.model.IRI;
@@ -61,10 +46,6 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
-import org.eclipse.rdf4j.repository.RepositoryException;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.RDFWriter;
-import org.eclipse.rdf4j.rio.Rio;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,43 +55,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author Bart.Hanssens
  */
-public class VocabImportTask extends Task {
-
-	private final String importDir;
-	private final String downloadDir;
-	private final Repository repo;
-
+public class VocabImportTask extends AbstractImportDumpTask {
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
-
-	/**
-	 * Export the triples to data dump files of various formats
-	 *
-	 * @param conn triple store repository connection
-	 * @param name name of the thesaurus
-	 * @param ctx context / named graph
-	 * @return
-	 */
-	private void writeDumps(RepositoryConnection conn, String name, Resource ctx) throws IOException {
-		LOG.info("Writing data dumps for {}", name);
-
-		for (String ftype : App.FTYPES.keySet()) {
-			Path f = Paths.get(downloadDir, name + "." + ftype);
-			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE,
-					StandardOpenOption.CREATE)) {
-				Optional<RDFFormat> fmt
-						= Rio.getWriterFormatForFileName(name + "." + ftype);
-				if (fmt.isPresent()) {
-					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
-					LOG.info("Writing file {}", f);
-					QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p, n));
-					conn.export(rdfh, ctx);
-				} else {
-					throw new IOException("No RDF writer found for " + ftype);
-				}
-			}
-		}
-	}
-
+	
 	/**
 	 * Add VoID metadata about the thesaurus
 	 *
@@ -163,65 +110,12 @@ public class VocabImportTask extends Task {
 
 		return m;
 	}
+	
 
-	/**
-	 * Import triples from file into RDF store, using name as vocabulary name.
-	 *
-	 * @param file input file path
-	 * @param name short name
-	 * @param format RDF format
-	 */
-	private void importFile(Path file, String name, RDFFormat format) {
-		try (RepositoryConnection conn = repo.getConnection()) {
-			String vocab = name.split("\\.")[0];
-			Resource ctx = repo.getValueFactory().createIRI(App.getPrefixGraph() + vocab);
-
-			conn.begin();
-
-			conn.remove((Resource) null, null, null, ctx);
-			conn.add(file.toFile(), null, format, ctx);
-			Model voidM = addVOID(conn, vocab, ctx);
-			conn.add(voidM, ctx);
-
-			writeDumps(conn, vocab, ctx);
-
-			conn.commit();
-		} catch (RepositoryException | IOException rex) {
-			// will be rolled back automatically
-			throw new WebApplicationException("Error importing vocabulary", rex);
-		}
-	}
-
-	/**
-	 * Execute task
-	 *
-	 * @param param parameters
-	 * @param w output writer
-	 * @throws Exception
-	 */
 	@Override
-	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		ImmutableCollection<String> files = param.get("file");
-		if (files == null || files.isEmpty()) {
-			throw new WebApplicationException("Param name empty");
-		}
-
-		String file = files.asList().get(0);
-		Path infile = Paths.get(importDir, file);
-
-		LOG.info("Trying to parse {}", infile);
-
-		if (!Files.isReadable(infile)) {
-			throw new WebApplicationException("File not readable");
-		}
-		Optional<RDFFormat> format = Rio.getParserFormatForFileName(infile.toString());
-		if (!format.isPresent()) {
-			throw new WebApplicationException("File type not supported");
-		}
-
-		importFile(infile, file, format.get());
-
-		LOG.info("Done");
+	protected void process(RepositoryConnection conn, String name, Resource ctx) {
+		Model voidM = addVOID(conn, name, ctx);
+		conn.add(voidM, ctx);
 	}
 
 	/**
@@ -232,9 +126,6 @@ public class VocabImportTask extends Task {
 	 * @param outDir download directory
 	 */
 	public VocabImportTask(Repository repo, String inDir, String outDir) {
-		super("vocab-import");
-		this.repo = repo;
-		this.importDir = inDir;
-		this.downloadDir = outDir;
+		super("vocab-import", repo, inDir, outDir);
 	}
 }
