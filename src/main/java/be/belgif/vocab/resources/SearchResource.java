@@ -29,8 +29,6 @@ import be.belgif.vocab.helpers.QueryHelperFTS;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VocabSearchView;
 
-import com.codahale.metrics.annotation.ExceptionMetered;
-
 import java.util.Optional;
 
 import javax.ws.rs.GET;
@@ -54,7 +52,6 @@ public class SearchResource extends RdfResource {
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
 	public Model search(@PathParam("type") String vocab, @QueryParam("q") String text) {
 		return QueryHelperFTS.getFTS(getRepository(), text, vocab);
 	}
@@ -62,7 +59,6 @@ public class SearchResource extends RdfResource {
 	@GET
 	@Path("/{vocab}")
 	@Produces({MediaType.TEXT_HTML})
-	@ExceptionMetered
 	public VocabSearchView searchHTML(@PathParam("vocab") String vocab,
 			@QueryParam("q") String text, @QueryParam("lang") Optional<String> lang) {
 		return new VocabSearchView(vocab, search(vocab, text), lang.orElse("en"));

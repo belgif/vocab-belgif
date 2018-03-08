@@ -57,78 +57,18 @@ import org.slf4j.LoggerFactory;
  *
  * @author Bart.Hanssens
  */
-public class NSRegisterTask extends Task {
-	private final String importDir;
-	private final Repository repo;
+public class XmlnsRegisterTask extends AbstractImportTask {
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(XmlnsRegisterTask.class);
 
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(NSRegisterTask.class);
 
-	/**
-	 * Import triples from file into RDF store, using name as namespace name.
-	 *
-	 * @param file input file path
-	 * @param name short name
-	 * @param format RDF format
-	 */
-	private void importFile(Path file, String name, RDFFormat format) {
-		try (RepositoryConnection conn = repo.getConnection()) {
-			String ns = name.split("\\.")[0];
-			Resource ctx = repo.getValueFactory().createIRI(App.getPrefixGraph() + ns);
-
-			conn.begin();
-
-			conn.remove((Resource) null, null, null, ctx);
-			conn.add(file.toFile(), null, format, ctx);
-
-			conn.commit();
-		} catch (RepositoryException | IOException rex) {
-			// will be rolled back automatically
-			throw new WebApplicationException("Error importing namespace", rex);
-		}
-	}
-
-	/**
-	 * Execute task
-	 *
-	 * @param param parameters
-	 * @param w output writer
-	 * @throws Exception
-	 */
-	@Override
-	@Timed
-	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		ImmutableCollection<String> files = param.get("file");
-		if (files == null || files.isEmpty()) {
-			throw new WebApplicationException("Param file empty");
-		}
-
-		String file = files.asList().get(0);
-		Path infile = Paths.get(importDir, file);
-
-		LOG.info("Trying to parse {}", infile);
-
-		if (!Files.isReadable(infile)) {
-			throw new WebApplicationException("File not readable");
-		}
-		Optional<RDFFormat> format = Rio.getParserFormatForFileName(infile.toString());
-		if (!format.isPresent()) {
-			throw new WebApplicationException("File type not supported");
-		}
-
-		importFile(infile, file, format.get());
-
-		LOG.info("Done");
-	}
-
+	
 	/**
 	 * Constructor
 	 *
 	 * @param repo triple store
 	 * @param inDir import directory
 	 */
-	public NSRegisterTask(Repository repo, String inDir) {
-		super("register-ns");
-		this.repo = repo;
-		this.importDir = inDir;
+	public XmlnsRegisterTask(Repository repo, String inDir) {
+		super("register-xmlns", repo, inDir);
 	}
 }

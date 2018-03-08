@@ -35,7 +35,7 @@ import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
-import be.belgif.vocab.tasks.NSRegisterTask;
+import be.belgif.vocab.tasks.XmlnsRegisterTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
@@ -55,6 +55,7 @@ import java.util.Map;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.repository.Repository;
@@ -108,9 +109,6 @@ public class App extends Application<AppConfig> {
 		fts.setBaseSail(store);
 
 		return new SailRepository(fts);
-	/*
-		RepositoryManager mgr = new RemoteRepositoryManager(config.getServer());
-		return mgr.getRepository(config.getRepo()); */
 	}
 
 	/**
@@ -172,9 +170,9 @@ public class App extends Application<AppConfig> {
 
 		// Tasks
 		env.admin().addTask(
-			new VocabImportTask(repo, config.getVocabImportDir(), config.getVocabDownloadDir()));
-		env.admin().addTask(
-			new NSRegisterTask(repo, config.getXsdImportDir()));
+			new VocabImportTask(repo, config.getVocabs().getImportDir(), 
+						config.getVocabs().getDownloadDir()));
+		env.admin().addTask(new XmlnsRegisterTask(repo, config.getXsds().getImportDir()));
 		env.admin().addTask(new LuceneReindexTask(repo));
 		
 
@@ -190,6 +188,13 @@ public class App extends Application<AppConfig> {
 		
 	}
 
+	private void importFiles(String dir, WebTarget target) throws IOException {
+		Files.list(Paths.get(dir)).forEach(f -> {
+				target.queryParam("file", f.getFileName())
+					.request().post(Entity.text(""));
+		});
+	}
+
 	/**
 	 * Register all XSD namespace files and import all thesauri files.
 	 * 
@@ -200,20 +205,19 @@ public class App extends Application<AppConfig> {
 		String localhost = "http://localhost:8081";
 		try {
 			Client cl = ClientBuilder.newClient();
-			Files.list(Paths.get(config.getVocabImportDir())).forEach(f -> {
-				cl.target(localhost).path("tasks/vocab-import")
-					.queryParam("file", f.getFileName())
-					.request().post(Entity.text(""));
-			});
+			WebTarget target = cl.target(localhost);
+/*
+			importFiles(config.getOntoImportDir(),
+					target.path("tasks/register-xmlns"));
+*/			
+			importFiles(config.getXsds().getImportDir(),
+					target.path("tasks/register-xmlns"));
+					
+			importFiles(config.getVocabs().getImportDir(),
+					target.path("tasks/vocab-import"));
 		
 			cl.target(localhost).path("tasks/lucene-reindex")
 				.request().post(Entity.text(""));
-		
-			Files.list(Paths.get(config.getXsdImportDir())).forEach(f -> {
-				cl.target(localhost).path("tasks/register-ns")
-					.queryParam("file", f.getFileName())
-					.request().post(Entity.text(""));
-			});
 		} catch (IOException ioe) {
 			//
 		}

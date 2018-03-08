@@ -43,35 +43,62 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author Bart.Hanssens
  */
 public class AppConfig extends Configuration implements AssetsBundleConfiguration {
-/*	@NotEmpty
-	private String server;
-	
-	@NotEmpty
-	private String repo;
-*/
+	public class ImportDownloadFactory {
+		@NotEmpty
+		private String importDir;
+
+		@NotEmpty
+		private String downloadDir;
+
+		
+		@JsonProperty
+		public String getDownloadDir() {
+			return downloadDir;
+		}
+
+		@JsonProperty
+		public void setDownloadDir(String downloadDir) {
+			this.downloadDir = downloadDir;
+		}
+		
+		@JsonProperty
+		public String getImportDir() {
+			return importDir;
+		}
+
+		@JsonProperty
+		public void setImmportDir(String importDir) {
+			this.importDir = importDir;
+		}
+	}
+
 	@NotEmpty
 	private String dataDir;
 	
 	@NotEmpty
 	private String luceneDir;
-			
-	@NotEmpty
-	private String vocabImportDir;
-
-	@NotEmpty
-	private String vocabDownloadDir;
-
-	@NotEmpty
-	private String xsdImportDir;
-
-	@NotEmpty
-	private String xsdDownloadDir;
 
 	@NotEmpty
 	private String sitePrefix;
 
-	private ImmutableMap<String, Map<String, String>> views;
+	@NotEmpty
+	private Map<String, Map<String, String>> views;
 
+	@Valid
+	@NotNull
+	@JsonProperty("vocabularies")
+	private ImportDownloadFactory vocabs = new ImportDownloadFactory();
+
+	@Valid
+	@NotNull
+	@JsonProperty("xmlnamespaces")
+	private ImportDownloadFactory xsds = new ImportDownloadFactory();
+	
+	@Valid
+	@NotNull
+	@JsonProperty("ontologies")
+	private ImportDownloadFactory ontos = new ImportDownloadFactory();
+	
 	@Valid
 	@NotNull
 	@JsonProperty
@@ -98,67 +125,6 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	}
 	
 	@JsonProperty
-	public String getXsdImportDir() {
-		return xsdImportDir;
-	}
-
-	@JsonProperty
-	public void setXsdImportDir(String xsdImportDir) {
-		this.xsdImportDir = xsdImportDir;
-	}
-
-	@JsonProperty
-	public String getXsdDownloadDir() {
-		return xsdDownloadDir;
-	}
-
-	@JsonProperty
-	public void setXsdDownloadDir(String xsdDownloadDir) {
-		this.xsdDownloadDir = xsdDownloadDir;
-	}
-
-	@JsonProperty
-	public String getVocabDownloadDir() {
-		return vocabDownloadDir;
-	}
-
-	@JsonProperty
-	public void setVocabDownloadDir(String vocabDownloadDir) {
-		this.vocabDownloadDir = vocabDownloadDir;
-	}
-	
-
-	@JsonProperty
-	public String getVocabImportDir() {
-		return vocabImportDir;
-	}
-
-	@JsonProperty
-	public void setVocabImportDir(String vocabImportDir) {
-		this.vocabImportDir = vocabImportDir;
-	}
-/*	
-	@JsonProperty
-	public String getServer() {
-		return server;
-	}
-
-	@JsonProperty
-	public void setServer(String server) {
-		this.server = server;
-	}
-	
-	@JsonProperty
-	public String getRepo() {
-		return this.repo;
-	}
-
-	@JsonProperty
-	public void setRepo(String repo) {
-		this.repo = repo;
-	}	
-*/	
-	@JsonProperty
 	public String getSitePrefix() {
 		return sitePrefix;
 	}
@@ -167,7 +133,7 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	public void setSitePrefixDir(String sitePrefix) {
 		this.sitePrefix = sitePrefix.endsWith("/") ? sitePrefix : sitePrefix + "/";
 	}
-
+		
 	@JsonProperty
 	public Map<String, Map<String, String>> getViews() {
 		return views;
@@ -175,16 +141,32 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 
 	@JsonProperty
 	public void setViews(Map<String, Map<String, String>> views) {
-		final ImmutableMap.Builder<String, Map<String, String>> builder = ImmutableMap.builder();
-		for (Map.Entry<String, Map<String, String>> entry : views.entrySet()) {
-			builder.put(entry.getKey(), ImmutableMap.copyOf(entry.getValue()));
-		}
-		this.views = builder.build();
+		this.views = views;
+	}
+
+	
+	@JsonProperty
+	public ImportDownloadFactory getVocabs() {
+		return vocabs;
+	}
+	
+	@JsonProperty
+	public void setVocabs(ImportDownloadFactory vocabs) {
+		this.vocabs = vocabs;
+	}
+
+	@JsonProperty
+	public ImportDownloadFactory getXsds() {
+		return xsds;
+	}
+	
+	@JsonProperty
+	public void setXsds(ImportDownloadFactory xsds) {
+		this.xsds = xsds;
 	}
 
 	@Override
 	public AssetsConfiguration getAssetsConfiguration() {
 		return assets;
 	}
-	
 }

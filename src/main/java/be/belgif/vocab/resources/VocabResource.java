@@ -30,7 +30,6 @@ import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VocabTermView;
 import be.belgif.vocab.views.VocabView;
 
-import com.codahale.metrics.annotation.ExceptionMetered;
 import java.util.Optional;
 
 import javax.ws.rs.GET;
@@ -56,7 +55,6 @@ public class VocabResource extends RdfResource {
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
 	public Model getVocabRDF(@PathParam("vocab") String vocab) {
 		return getById(PREFIX, vocab, "");
 	}
@@ -64,29 +62,26 @@ public class VocabResource extends RdfResource {
 	@GET
 	@Path("/{vocab}")
 	@Produces(MediaType.TEXT_HTML)
-	@ExceptionMetered
 	public VocabView getVocabListHTML(@PathParam("vocab") String vocab,
 			@QueryParam("lang") Optional<String> lang) {
 		return new VocabView(vocab, getById(PREFIX, vocab, ""), lang.orElse("en"));
 	}
 
 	@GET
-	@Path("/{type}/{id}")
+	@Path("/{vocab}/{term}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	@ExceptionMetered
-	public Model getVocabTermRDF(@PathParam("type") String type,
-			@PathParam("id") String id) {
-		return getById(PREFIX, type, id);
+	public Model getVocabTermRDF(@PathParam("vocab") String vocab,
+			@PathParam("term") String term) {
+		return getById(PREFIX, vocab, term);
 	}
 
 	@GET
-	@Path("/{type}/{id}")
+	@Path("/{vocab}/{term}")
 	@Produces(MediaType.TEXT_HTML)
-	@ExceptionMetered
-	public VocabTermView getVocabTermHTML(@PathParam("type") String type,
-			@PathParam("id") String id,
+	public VocabTermView getVocabTermHTML(@PathParam("vocab") String vocab,
+			@PathParam("term") String term,
 			@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(type, getById(PREFIX, type, id), lang.orElse("en"));
+		return new VocabTermView(vocab, getById(PREFIX, vocab, term), lang.orElse("en"));
 	}
 
 	/**

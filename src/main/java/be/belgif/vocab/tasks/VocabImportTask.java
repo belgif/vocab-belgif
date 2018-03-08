@@ -29,13 +29,12 @@ import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
 
-import com.codahale.metrics.annotation.Timed;
 import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
 
 import io.dropwizard.servlets.tasks.Task;
-import java.io.BufferedWriter;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
@@ -201,7 +200,6 @@ public class VocabImportTask extends Task {
 	 * @throws Exception
 	 */
 	@Override
-	@Timed
 	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
 		ImmutableCollection<String> files = param.get("file");
 		if (files == null || files.isEmpty()) {

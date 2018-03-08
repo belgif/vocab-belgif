@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,50 +23,37 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.HomepageView;
-
-import java.util.Optional;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
-import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Vocabulary term of a SKOS thesaurus.
- * 
- * @author Bart Hanssens
+ * Import an ontology file and create (static) download files in various formats.
+ *
+ * @author Bart.Hanssens
  */
-@Path("/void")
-public class VoidResource extends RdfResource {
-	@GET
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
-	public Model getVoid() {
-		return getVocabList();
-	}	
-	
-	
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getVocabList(), getXmlnsList(), getOntologyList(), 
-									lang.orElse("en"));
+public class OntologyImportTask extends AbstractImportDumpTask {
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntologyImportTask.class);
+
+
+	@Override
+	protected void process(RepositoryConnection conn, String name, Resource ctx) {
 	}
-	
 	
 	/**
 	 * Constructor
-	 * 
-	 * @param repo RDF triple store
+	 *
+	 * @param repo triple store
+	 * @param inDir import directory
+	 * @param outDir download directory
 	 */
-	public VoidResource(Repository repo) {
-		super(repo);
+	public OntologyImportTask(Repository repo, String inDir, String outDir) {
+		super("ontology-import", repo, inDir, outDir);
 	}
+
 }
