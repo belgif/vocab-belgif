@@ -94,8 +94,6 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	@JsonProperty("xmlnamespaces")
 	private ImportDownloadFactory xsds = new ImportDownloadFactory();
 	
-	@Valid
-	@NotNull
 	@JsonProperty("ontologies")
 	private ImportDownloadFactory ontos = new ImportDownloadFactory();
 	
