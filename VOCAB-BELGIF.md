@@ -9,12 +9,14 @@ In order to be published on vocab.belgif.be, the following requirements must be 
  
 ## SKOS Concept Scheme
  * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]#id
-    * where short name is all-lowercase, alphanumeric characters and hyphens are permitted
+    * where short name is all-lowercase, only alphanumeric characters and hyphens are permitted
  * skos:ConceptScheme must have a dcterms:title in Dutch, French, English and German (will be used in the HTML overview)
  * skos:ConceptScheme must have a dcterms:description in Dutch, French, English and German (will be used in the HTML overview)
 
 ## SKOS Concept
  * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]/[term-code]#id
+   * where short name is all-lowercase, only alphanumeric characters and hyphens are permitted
+   * term-code can contain lowercase and uppercase characters, digits, hyphens and underscores
  * skos:Concepts must have skos:prefLabel in 4 languages
  * skos:Concepts should have one skos:notation
  * skos:Concepts may have multiple skos:altLabel, skos:note and/or skos:definition
