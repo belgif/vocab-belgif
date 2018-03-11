@@ -1,6 +1,8 @@
 # lod-vocab
 
-SKOS publication tool for publishing demo thesauri on Vocab.belgif.be
+SKOS publication tool for publishing demo thesauri on Vocab.belgif.be.
+
+Best practices and guidelines can be found in [VOCAB-BELGIF.md](VOCAB-BELGIF.md)
 
 # Description
 
