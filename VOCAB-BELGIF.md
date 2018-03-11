@@ -18,6 +18,7 @@ In order to be published on vocab.belgif.be, the following requirements must be 
  * skos:Concepts must have skos:prefLabel in 4 languages
  * skos:Concepts should have one skos:notation
  * skos:Concepts may have multiple skos:altLabel, skos:note and/or skos:definition
+ * skos:Concepts may have a schema:startDate and schema:endDate to indicate the validity of the term throughout time
 
 ## SKOS hierarchy and relations
  * skos:hasTopConcept and its inverse skos:topConceptOf must be used to explicitly link the Concept Scheme to the top level terms
