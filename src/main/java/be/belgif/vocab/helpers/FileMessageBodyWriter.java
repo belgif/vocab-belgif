@@ -23,43 +23,58 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.tasks;
+package be.belgif.vocab.helpers;
 
+import java.io.File;
 import java.io.IOException;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
+import java.io.OutputStream;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.MessageBodyWriter;
+import javax.ws.rs.ext.Provider;
 
 /**
- * Import an ontology file and create (static) download files in various formats.
+ * Static file Writer
  *
  * @author Bart.Hanssens
  */
-public class OntologyImportTask extends AbstractImportDumpTask {
-	
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntologyImportTask.class);
-
+@Provider
+@Produces({MediaType.APPLICATION_XML + ";charset=utf-8", 
+	MediaType.TEXT_XML + ";charset=utf-8",
+	RDFMediaType.JSONLD + ";charset=utf-8",
+	RDFMediaType.NTRIPLES + ";charset=utf-8",
+	RDFMediaType.TTL + ";charset=utf-8"})
+public class FileMessageBodyWriter implements MessageBodyWriter<File> {
 
 	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
-		writeDumps(conn, name, ctx);
-		
-		//conn.remove((Resource) null, null, null, ctx);
-	}
-	
-	/**
-	 * Constructor
-	 *
-	 * @param repo triple store
-	 * @param inDir import directory
-	 * @param outDir download directory
-	 */
-	public OntologyImportTask(Repository repo, String inDir, String outDir) {
-		super("import-onto", repo, inDir, outDir);
+	public boolean isWriteable(Class<?> type, Type generic, Annotation[] antns, MediaType mt) {
+		return generic == File.class;
 	}
 
+	@Override
+	public long getSize(File f, Class<?> type, Type generic, Annotation[] antns, MediaType mt) {
+		return -1; // ignored by Jersey 2.0 anyway
+	}
+
+	@Override
+	public void writeTo(File f, Class<?> type, Type generic, Annotation[] antns, MediaType mt,
+			MultivaluedMap<String, Object> headers, OutputStream out)
+			throws IOException, WebApplicationException {
+
+		if (! Files.isRegularFile(f.toPath())){
+			throw new WebApplicationException(Response.Status.NOT_FOUND);
+		}
+		try {
+			Files.copy(f.toPath(), out);
+		} catch (IOException ex) {
+			throw new WebApplicationException(ex);
+		}
+	}
 }

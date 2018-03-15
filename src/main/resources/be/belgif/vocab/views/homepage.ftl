@@ -12,7 +12,7 @@
 <main>
     <div id="container">
     <#include "message.ftl">
-    <#if onto??>
+    <#if onto?has_content>
     <section>
 	<h3>Ontologies</h3>
 	<section>
@@ -33,7 +33,7 @@
 	</section>
     </section>
     </#if>
-    <#if xmlns??>
+    <#if xmlns?has_content>
     <section>
 	<h3>Namespaces</h3>
 	<section>
@@ -54,7 +54,7 @@
 	</section>
     </section>
     </#if>
-    <#if vocabs??>
+    <#if vocabs?has_content>
     <section>
 	<h3>Thesauri</h3>
 	<section>

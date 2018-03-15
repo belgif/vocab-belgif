@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,63 +23,56 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.resources;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import be.belgif.vocab.helpers.RDFMediaType;
+import java.io.File;
+import java.nio.file.Paths;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.VOID;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * DAO helper class for VoID.
+ * Namespaces
  *
  * @author Bart.Hanssens
  */
-public class VoidDAO extends RdfDAO {
+@Path("/dataset")
+public class DatasetResource {
+	private final String vocabDir;
 
-	/**
-	 * Get SKOS root resource
-	 *
-	 * @return uri as string
-	 */
-	public String getRoot() {
-		Value v = obj(VOID.ROOT_RESOURCE);
-		return (v != null) ? v.toString() : "";
+	@GET
+	@Path("{file: .+\\.jsonld}")
+	@Produces({RDFMediaType.JSONLD})
+	public File getJsonFile(@PathParam("file") String file) {
+		return Paths.get(vocabDir, file).toFile();
 	}
 
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value v = obj(VOID.DATA_DUMP);
-		return (v != null) ? v.toString() : "";
+	@GET
+	@Path("{file: .+\\.nt}")
+	@Produces({RDFMediaType.NTRIPLES})
+	public File getTriplesFile(@PathParam("file") String file) {
+		return Paths.get(vocabDir, file).toFile();
 	}
-
-	/**
-	 * Get name of the vocabulary
-	 *
-	 * @return
-	 */
-	public String getName() {
-		try {
-			return new URL(getRoot()).getFile();
-		} catch (MalformedURLException mfe) {
-			return "";
-		}
+		
+	@GET
+	@Path("{file: .+\\.ttl}")
+	@Produces({RDFMediaType.TTL})
+	public File getTtlFile(@PathParam("file") String file) {
+		return Paths.get(vocabDir, file).toFile();
 	}
-
+	
 	/**
 	 * Constructor
 	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * @param vocabDir
 	 */
-	public VoidDAO(Model m, IRI id) {
-		super(m, id);
+	public DatasetResource(String vocabDir) {
+		this.vocabDir = vocabDir;
 	}
 }

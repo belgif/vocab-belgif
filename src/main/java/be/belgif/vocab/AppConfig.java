@@ -28,8 +28,8 @@ package be.belgif.vocab;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.dropwizard.Configuration;
-import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
-import io.dropwizard.bundles.assets.AssetsConfiguration;
+//import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
+//import io.dropwizard.bundles.assets.AssetsConfiguration;
 
 import java.util.Map;
 import javax.validation.Valid;
@@ -41,7 +41,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  *
  * @author Bart.Hanssens
  */
-public class AppConfig extends Configuration implements AssetsBundleConfiguration {
+public class AppConfig extends Configuration { // implements AssetsBundleConfiguration {
 	public class ImportDownloadFactory {
 		@NotEmpty
 		private String importDir;
@@ -66,7 +66,7 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 		}
 
 		@JsonProperty
-		public void setImmportDir(String importDir) {
+		public void setImportDir(String importDir) {
 			this.importDir = importDir;
 		}
 	}
@@ -95,11 +95,11 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 	@JsonProperty("ontologies")
 	private ImportDownloadFactory ontos = new ImportDownloadFactory();
 	
-	@Valid
+/*	@Valid
 	@NotNull
 	@JsonProperty
 	private final AssetsConfiguration assets = AssetsConfiguration.builder().build();
-
+*/
 	@JsonProperty
 	public String getDataDir() {
 		return dataDir;
@@ -170,8 +170,8 @@ public class AppConfig extends Configuration implements AssetsBundleConfiguratio
 		this.xsds = xsds;
 	}
 
-	@Override
+/*	@Override
 	public AssetsConfiguration getAssetsConfiguration() {
 		return assets;
-	}
+	} */
 }

@@ -27,9 +27,11 @@ package be.belgif.vocab;
 
 import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
-import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.helpers.FileMessageBodyWriter;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
+import be.belgif.vocab.resources.DatasetResource;
 import be.belgif.vocab.resources.LdfResource;
+import be.belgif.vocab.resources.NsResource;
 import be.belgif.vocab.resources.RootResource;
 import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
@@ -39,7 +41,8 @@ import be.belgif.vocab.tasks.XmlnsRegisterTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
-import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
+import io.dropwizard.assets.AssetsBundle;
+//import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
@@ -48,24 +51,19 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.EnumSet;
 
-import java.util.HashMap;
 import java.util.Map;
-import javax.servlet.DispatcherType;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.lucene.LuceneSail;
 import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 
-import org.glassfish.jersey.server.filter.UriConnegFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -78,14 +76,14 @@ public class App extends Application<AppConfig> {
 
 	private static String PREFIX;
 	private static String PREFIX_GRAPH;
-
+/*
 	public final static Map<String, MediaType> FTYPES = new HashMap<>();
 	static {
 		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
 		FTYPES.put("jsonld", MediaType.valueOf(RDFMediaType.JSONLD));
 		FTYPES.put("nt", MediaType.valueOf(RDFMediaType.NTRIPLES));
 	}
-
+*//*
 	public final static Map<String, String> LANGS = new HashMap<>();
 	static {
 		LANGS.put("nl", "nl");
@@ -93,7 +91,7 @@ public class App extends Application<AppConfig> {
 		LANGS.put("de", "de");
 		LANGS.put("en", "en");
 	}
-	
+*/	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
 
 	/**
@@ -140,7 +138,10 @@ public class App extends Application<AppConfig> {
 
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
-		config.addBundle(new ConfiguredAssetsBundle());
+		config.addBundle(new AssetsBundle("/assets/belgif.png", "/favicon.ico", null, "index"));
+		config.addBundle(new AssetsBundle("/assets", "/static", null, "index"));
+	//	config.addBundle(new AssetsBundle("file://download", "/dataset", null, null));
+		
 		config.addBundle(new ViewBundle<AppConfig>() {
 			@Override
 			public Map<String, Map<String, String>> getViewConfiguration(AppConfig config) {
@@ -159,24 +160,18 @@ public class App extends Application<AppConfig> {
 		// Managed resource
 		env.lifecycle().manage(new ManagedRepository(repo));
 
-		// Override content negotiation for URLs with file type extensions
-		env.jersey().register(new UriConnegFilter(FTYPES, LANGS));
 
-		// The opposite, for static files
-		// Add file type extension 
-		env.servlets().addFilter("ContentNegFilter", new ContentNegFilter())
-				.addMappingForUrlPatterns(
-					EnumSet.of(DispatcherType.REQUEST), 
-					true, "(?!.*xsd)/ns/.*");
-		
-		
 		// RDF Serialization formats
+		env.jersey().register(new FileMessageBodyWriter());
 		env.jersey().register(new RDFMessageBodyWriter());
 
 		// Resources / "web pages"
 		env.jersey().register(new RootResource());
 		env.jersey().register(new VoidResource(repo));
 		env.jersey().register(new VocabResource(repo));
+		env.jersey().register(new DatasetResource(config.getVocabs().getDownloadDir()));
+		env.jersey().register(new NsResource(repo, config.getXsds().getDownloadDir()));
+		
 		env.jersey().register(new SearchResource(repo));
 		env.jersey().register(new LdfResource(repo));
 

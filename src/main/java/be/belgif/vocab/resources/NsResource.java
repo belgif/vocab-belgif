@@ -23,63 +23,43 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.resources;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.File;
+import java.nio.file.Paths;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.VOID;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * DAO helper class for VoID.
+ * Namespaces
  *
  * @author Bart.Hanssens
  */
-public class VoidDAO extends RdfDAO {
+@Path("/ns")
+public class NsResource extends RdfResource {
+	private final String xsdDir;
 
-	/**
-	 * Get SKOS root resource
-	 *
-	 * @return uri as string
-	 */
-	public String getRoot() {
-		Value v = obj(VOID.ROOT_RESOURCE);
-		return (v != null) ? v.toString() : "";
-	}
-
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value v = obj(VOID.DATA_DUMP);
-		return (v != null) ? v.toString() : "";
-	}
-
-	/**
-	 * Get name of the vocabulary
-	 *
-	 * @return
-	 */
-	public String getName() {
-		try {
-			return new URL(getRoot()).getFile();
-		} catch (MalformedURLException mfe) {
-			return "";
-		}
+	@GET
+	@Path("{file: .+\\.xsd}")
+	@Produces({MediaType.APPLICATION_XML, MediaType.TEXT_XML})
+	public File getFile(@PathParam("file") String file) {
+		return Paths.get(this.xsdDir, file).toFile();
 	}
 
 	/**
 	 * Constructor
 	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * @param repo RDF triple store
+	 * @param xsdDir
 	 */
-	public VoidDAO(Model m, IRI id) {
-		super(m, id);
+	public NsResource(Repository repo, String xsdDir) {
+		super(repo);
+		this.xsdDir = xsdDir;
 	}
 }
