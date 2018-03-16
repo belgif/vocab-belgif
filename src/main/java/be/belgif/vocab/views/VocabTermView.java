@@ -48,7 +48,7 @@ public class VocabTermView extends RdfView {
 	/**
 	 * Get the properties of a term
 	 * 
-	 * @return 
+	 * @return SKOS concept
 	 */
 	public SkosDAO getTerm() {
 		return this.term;
@@ -57,12 +57,12 @@ public class VocabTermView extends RdfView {
 	/**
 	 * Get the name of the vocabulary
 	 * 
-	 * @return 
+	 * @return vocabulary name
 	 */
-/*	public String getVocabName() {
+	public String getVocabName() {
 		return this.vocabName;
 	}
-*/	
+	
 	/** 
 	 * Constructor
 	 * 

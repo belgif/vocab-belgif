@@ -17,7 +17,7 @@
 	<h3>${v.id}</h3>
 	<section>
 	    <h4>${m.getString("msg.search")}</h4>
-	    <form method="get" action="/_search/${vocab}">
+	    <form method="get" action="/_search/${vocabName}">
 		<input name="q" type="search"/>
 		<input name="search" type="submit"/>
 	    </form>

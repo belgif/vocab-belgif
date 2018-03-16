@@ -25,15 +25,20 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.OntoView;
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.eclipse.rdf4j.model.Model;
 
 import org.eclipse.rdf4j.repository.Repository;
 
@@ -44,9 +49,10 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/ns")
 public class NsResource extends RdfResource {
+	private final static String PREFIX = App.getPrefix() + "ns/";
+	
 	private final String ontoDir;
 	private final String xsdDir;
-	
 	
 	@GET
 	@Path("{file: .+\\.jsonld}")
@@ -54,27 +60,54 @@ public class NsResource extends RdfResource {
 	public File getJsonFile(@PathParam("file") String file) {
 		return Paths.get(this.ontoDir, file).toFile();
 	}
-	
 	@GET
-	@Path("{file: .+\\.nt}")
+	@Path("{file: [^\\.]+}")
+	@Produces({RDFMediaType.JSONLD})
+	public File getJsonDefFile(@PathParam("file") String file) {
+		return getJsonFile(file + ".jsonld");
+	}
+
+	@GET
+	@Path("{file: .+\\.nt|[^\\.]+}")
 	@Produces({RDFMediaType.NTRIPLES})
 	public File getNtFile(@PathParam("file") String file) {
 		return Paths.get(this.ontoDir, file).toFile();
+	}
+	@GET
+	@Path("{file: [^\\.]+}")
+	@Produces({RDFMediaType.NTRIPLES})
+	public File getNtDefFile(@PathParam("file") String file) {
+		return getNtFile(file + ".nt");
 	}
 	
 	@GET
 	@Path("{file: .+\\.ttl}")
 	@Produces({RDFMediaType.TTL})
 	public File getTtlFile(@PathParam("file") String file) {
-		return Paths.get(this.ontoDir, file).toFile();
+		return Paths.get(this.ontoDir,
+			file.endsWith(".ttl") ? file : file + ".ttl").toFile();
 	}
-	
+	@GET
+	@Path("{file: [^\\.]+}")
+	@Produces({RDFMediaType.TTL})
+	public File getTtlDefFile(@PathParam("file") String file) {
+		return getNtFile(file + ".ttl");
+	}	
 	@GET
 	@Path("{file: .+\\.xsd}")
 	@Produces({MediaType.APPLICATION_XML, MediaType.TEXT_XML})
 	public File getXsdFile(@PathParam("file") String file) {
 		return Paths.get(this.xsdDir, file).toFile();
 	}
+
+	/*@GET
+	@Path("/{onto}")
+	@Produces(MediaType.TEXT_HTML)
+	/*public File getOntoHTML(@PathParam("onto") String onto,
+				@QueryParam("lang") Optional<String> lang) {
+		return new OntoView(onto, getById(PREFIX, onto, ""), lang.orElse("en"));
+	}
+	*/
 
 	/**
 	 * Constructor

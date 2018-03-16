@@ -49,7 +49,6 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/auth")
 public class VocabResource extends RdfResource {
-
 	private final static String PREFIX = App.getPrefix() + "auth/";
 
 	@GET
@@ -62,7 +61,7 @@ public class VocabResource extends RdfResource {
 	@GET
 	@Path("/{vocab}")
 	@Produces(MediaType.TEXT_HTML)
-	public VocabView getVocabListHTML(@PathParam("vocab") String vocab,
+	public VocabView getVocabHTML(@PathParam("vocab") String vocab,
 			@QueryParam("lang") Optional<String> lang) {
 		return new VocabView(vocab, getById(PREFIX, vocab, ""), lang.orElse("en"));
 	}

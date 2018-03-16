@@ -59,10 +59,10 @@ public class VocabView extends RdfView {
 	 * 
 	 * @return 
 	 */
-/*	public String getVocabName() {
+	public String getVocabName() {
 		return this.vocabName;
 	}
-*/	
+	
 	/** 
 	 * Constructor
 	 * 
