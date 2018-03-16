@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.HomepageView;
 
@@ -37,6 +38,9 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
@@ -49,15 +53,16 @@ public class VoidResource extends RdfResource {
 	@GET
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	public Model getVoid() {
-		return getVocabList();
+		return getByClass(SKOS.CONCEPT_SCHEME);
 	}	
 	
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getVocabList(), getXmlnsList(), getOntoList(), 
-									lang.orElse("en"));
+		return new HomepageView(getByClass(SKOS.CONCEPT_SCHEME), 
+					getByClass(VOID.DATASET), 
+					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
 	
 	

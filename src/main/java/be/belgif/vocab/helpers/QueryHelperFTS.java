@@ -41,21 +41,9 @@ import org.eclipse.rdf4j.repository.RepositoryException;
 /**
  * Helper class for querying the triple store
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class QueryHelperFTS {
-    /* GraphDB
-	private final static String Q_FTS
-			= "PREFIX luc: <http://www.ontotext.com/owlim/lucene#> " + "\n"
-			+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n"
- 			+ "CONSTRUCT { ?s skos:prefLabel ?o } " + "\n"
-			+ " WHERE { " + "\n"
-			+ "	 GRAPH ?graph { " + "\n"
-			+ "    ?s luc:myIndex ?query . " + "\n"
-			+ "	   ?s skos:prefLabel ?o } " + "\n"
-			+ " }";
-	*/
-
 	private final static String Q_FTS 
 		= "PREFIX search: <http://www.openrdf.org/contrib/lucenesail#> " + "\n"
 		+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " + "\n"
@@ -74,11 +62,11 @@ public class QueryHelperFTS {
 	 * @param from named graph
 	 * @return RDF model
 	 */
-	public static Model getFTS(Repository repo, String text, String from) {
+	public static Model getFTS(Repository repo, String text, String type, String from) {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			GraphQuery gq = conn.prepareGraphQuery(Q_FTS);
 			gq.setBinding("query", QueryHelper.asLiteral(text + "*"));
-			gq.setBinding("graph", QueryHelper.asGraph(from));
+			gq.setBinding("graph", QueryHelper.getGraphName(type, from));
 
 			return QueryHelper.setNamespaces(QueryResults.asModel(gq.evaluate()));
 		} catch (RepositoryException | MalformedQueryException | QueryEvaluationException e) {

@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.QueryHelperFTS;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VocabSearchView;
@@ -53,7 +54,7 @@ public class SearchResource extends RdfResource {
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	public Model search(@PathParam("type") String vocab, @QueryParam("q") String text) {
-		return QueryHelperFTS.getFTS(getRepository(), text, vocab);
+		return QueryHelperFTS.getFTS(getRepository(), text, QueryHelper.VOCAB, vocab);
 	}
 
 	@GET

@@ -41,33 +41,6 @@ public abstract class RdfResource {
 	private final Repository repo;
 
 	/**
-	 * Get list of ontologies as RDF triples
-	 *
-	 * @return triples
-	 */
-	protected Model getOntoList() {
-		return QueryHelper.getOntoList(repo);
-	}
-	
-	/**
-	 * Get list of vocabularies as RDF triples
-	 *
-	 * @return triples
-	 */
-	protected Model getVocabList() {
-		return QueryHelper.getVocabList(repo);
-	}
-
-	/**
-	 * Get list of XSD namespaces as RDF triples
-	 *
-	 * @return triples
-	 */
-	protected Model getXmlnsList() {
-		return QueryHelper.getXmlnsList(repo);
-	}
-	
-	/**
 	 * Get repository
 	 *
 	 * @return repository
@@ -77,30 +50,26 @@ public abstract class RdfResource {
 	}
 
 	/**
-	 * Get by ID (URI), adding "#id" at the end
+	 * Get triples by ID from a specific context
 	 *
-	 * @param prefix
-	 * @param type
-	 * @param id
+	 * @param url
+	 * @param ctx
 	 * @return RDF model
 	 */
-	protected Model getById(String prefix, String type, String id) {
-		String url = (!id.isEmpty()) ? prefix + type + "/" + id + "#id"
-				: prefix + type + "#id";
-		return QueryHelper.get(repo, QueryHelper.asURI(url), type);
+	protected Model getById(String url, IRI ctx) {
+		return QueryHelper.getByID(repo, QueryHelper.asURI(url), ctx);
 	}
-
 
 	/**
-	 * Get all triples
+	 * Get triples of a specific class (RDF type) across all contexts
 	 *
-	 * @param subj subject IRI or null
-	 * @param from named graph
-	 * @return all triples in a graph
+	 * @param type IRI
+	 * @return triples
 	 */
-	public Model get(IRI subj, String from) {
-		return QueryHelper.get(repo, subj, from);
+	protected Model getByClass(IRI type) {
+		return QueryHelper.getByClass(repo, type);
 	}
+	
 
 	/**
 	 * Constructor

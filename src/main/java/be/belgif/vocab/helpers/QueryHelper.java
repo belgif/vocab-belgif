@@ -65,7 +65,11 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
  * @author Bart.Hanssens
  */
 public class QueryHelper {
-
+	public final static String DATASET = "datast";
+	public final static String ONTO = "onto";
+	public final static String VOCAB = "vocab";
+	public final static String XMLNS = "xmlns";
+	
 	// namespace mappings
 	public final static Map<String, String> NS_MAP = new HashMap();
 
@@ -98,14 +102,25 @@ public class QueryHelper {
 	}
 
 	/**
+	 * Get named graph / RDF4J context
+	 * 
+	 * @param type
+	 * @param name
+	 * @return context IRI 
+	 */
+	public static IRI getGraphName(String type, String name) {
+		return F.createIRI(PREFIX + "graph/" + type + "/" + name);
+	}
+	
+	/**
 	 * Get name graph + context id from name
 	 *
 	 * @param name
 	 * @return context URI
 	 */
-	public static IRI asGraph(String name) {
+	/*public static IRI asGraph(String name) {
 		return F.createIRI(PREFIX_GRAPH + name);
-	}
+	}*/
 
 	/**
 	 * Get named graph / context id from name
@@ -113,7 +128,7 @@ public class QueryHelper {
 	 * @param name
 	 * @return context URI
 	 */
-	public static IRI asDataset(String name) {
+	public static IRI getDatasetName(String name) {
 		return F.createIRI(PREFIX + "void#" + name);
 	}
 
@@ -141,18 +156,19 @@ public class QueryHelper {
 	}
 
 	/**
-	 * Get all triples from a graph
+	 * Get all triples for a given subject from a named graph
 	 *
 	 * @param repo RDF store
 	 * @param subj subject IRI or null
-	 * @param from named graph
-	 * @return all triples in a graph
+	 * @param ctx named graph
+	 * @return list of triples
 	 */
-	public static Model get(Repository repo, IRI subj, String from) {
+	public static Model getByID(Repository repo, IRI subj, IRI ctx) {
 		Model m = new LinkedHashModel();
 
 		try (RepositoryConnection conn = repo.getConnection()) {
-			Iterations.addAll(conn.getStatements(subj, null, null, asGraph(from)), m);
+			Iterations.addAll(
+				conn.getStatements(subj, null, null, ctx), m);
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
@@ -161,18 +177,18 @@ public class QueryHelper {
 
 	
 	/**
-	 * Get list of 
+	 * Get list of all instances of a specific class
 	 * 
 	 * @param repo RDF store
-	 * @param obj type (RDF object) to retrieve
+	 * @param type type (RDF class) to retrieve
 	 * @return list as triples
 	 */
-	public static Model getType(Repository repo, IRI obj) {
+	public static Model getByClass(Repository repo, IRI type) {
 		Model m = new LinkedHashModel();
 
 		try (RepositoryConnection conn = repo.getConnection();
 			RepositoryResult<Statement> res
-				= conn.getStatements(null, RDF.TYPE, obj)) {
+				= conn.getStatements(null, RDF.TYPE, type)) {
 			while (res.hasNext()) {
 				Resource iri = res.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, null, null), m);
@@ -184,48 +200,6 @@ public class QueryHelper {
 		return setNamespaces(m);
 	
 	}
-	
-	
-	/**
-	 * Get all contexts with ontologies
-	 *
-	 * @param repo RDF store
-	 * @return list of ontologies
-	 */
-	public static Model getOntoList(Repository repo) {
-		return getType(repo, OWL.ONTOLOGY);
-	}
-	
-	/**
-	 * Get all contexts with vocabularies
-	 *
-	 * @param repo RDF store
-	 * @return list of vocabularies
-	 */
-	public static Model getVocabList(Repository repo) {
-		return getType(repo, VOID.DATASET);
-	}
-
-	/**
-	 * Get all contexts with xml namespaces
-	 *
-	 * @param repo RDF store
-	 * @return list of xml namespaces
-	 */
-	public static Model getXmlnsList(Repository repo) {
-		return getType(repo, DCAT.DISTRIBUTION);
-	}
-	
-	/**
-	 * Get all ontologies
-	 *
-	 * @param repo RDF store
-	 * @return list of xml namespaces
-	 */
-	public static Model getOntologyList(Repository repo) {
-		return getType(repo, OWL.ONTOLOGY);
-	}
-	
 	
 	/**
 	 * Put statements in the store

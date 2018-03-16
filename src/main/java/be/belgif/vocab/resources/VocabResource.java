@@ -26,6 +26,7 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.App;
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.VocabTermView;
 import be.belgif.vocab.views.VocabView;
@@ -38,6 +39,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
@@ -51,11 +53,27 @@ import org.eclipse.rdf4j.repository.Repository;
 public class VocabResource extends RdfResource {
 	private final static String PREFIX = App.getPrefix() + "auth/";
 
+	/**
+	 * Get URI for the term.
+	 * Remember, HTTP request does NOT contain '#' or anything after that
+	 * 
+	 * @param vocab vocabulary name
+	 * @param term term name
+	 * @return 
+	 */
+	private Model get(String vocab, String term) {
+		String url = (!term.isEmpty()) 
+				? PREFIX + vocab + "/" + term + "#id"
+				: PREFIX + vocab + "#id";
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
+		return getById(url, ctx);
+	}
+	
 	@GET
 	@Path("/{vocab}")
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	public Model getVocabRDF(@PathParam("vocab") String vocab) {
-		return getById(PREFIX, vocab, "");
+		return get(vocab, "");
 	}
 
 	@GET
@@ -63,7 +81,7 @@ public class VocabResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	public VocabView getVocabHTML(@PathParam("vocab") String vocab,
 			@QueryParam("lang") Optional<String> lang) {
-		return new VocabView(vocab, getById(PREFIX, vocab, ""), lang.orElse("en"));
+		return new VocabView(vocab, get(vocab, "") , lang.orElse("en"));
 	}
 
 	@GET
@@ -71,7 +89,7 @@ public class VocabResource extends RdfResource {
 	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
 	public Model getVocabTermRDF(@PathParam("vocab") String vocab,
 			@PathParam("term") String term) {
-		return getById(PREFIX, vocab, term);
+		return get(vocab, term);
 	}
 
 	@GET
@@ -80,7 +98,7 @@ public class VocabResource extends RdfResource {
 	public VocabTermView getVocabTermHTML(@PathParam("vocab") String vocab,
 			@PathParam("term") String term,
 			@QueryParam("lang") Optional<String> lang) {
-		return new VocabTermView(vocab, getById(PREFIX, vocab, term), lang.orElse("en"));
+		return new VocabTermView(vocab, get(vocab, term), lang.orElse("en"));
 	}
 
 	/**

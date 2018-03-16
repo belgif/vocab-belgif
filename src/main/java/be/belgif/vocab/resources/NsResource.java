@@ -26,6 +26,7 @@
 package be.belgif.vocab.resources;
 
 import be.belgif.vocab.App;
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.OntoView;
 import java.io.File;
@@ -38,6 +39,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
 import org.eclipse.rdf4j.repository.Repository;
@@ -105,7 +107,10 @@ public class NsResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	public OntoView getOntoHTML(@PathParam("onto") String onto,
 				@QueryParam("lang") Optional<String> lang) {
-		return new OntoView(onto, get(null, PREFIX + onto + "#"), lang.orElse("en"));
+		String subj = PREFIX + onto + "#";
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
+		Model m = getById(subj, ctx);
+		return new OntoView(onto, m, lang.orElse("en"));
 	}
 
 	/**

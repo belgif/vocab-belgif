@@ -28,8 +28,8 @@ package be.belgif.vocab.tasks;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
-import java.io.IOException;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -74,7 +74,7 @@ public class VocabImportTask extends AbstractImportDumpTask {
 
 		Model m = new LinkedHashModel();
 		ValueFactory f = conn.getValueFactory();
-		IRI voidID = QueryHelper.asDataset(name);
+		IRI voidID = QueryHelper.getDatasetName(name);
 
 		m.add(voidID, RDF.TYPE, VOID.DATASET);
 
@@ -129,6 +129,6 @@ public class VocabImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public VocabImportTask(Repository repo, String inDir, String outDir) {
-		super("vocab-import", repo, inDir, outDir, "vocab");
+		super("vocab-import", repo, inDir, outDir, QueryHelper.VOCAB);
 	}
 }

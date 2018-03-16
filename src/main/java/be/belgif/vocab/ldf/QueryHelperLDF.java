@@ -211,7 +211,7 @@ public class QueryHelperLDF {
 	 * @param offset offset
 	 */
 	private static void page(Model m, IRI graph, IRI part, int current, int count, 
-											int offset, UriBuilder builder) {
+							int offset, UriBuilder builder) {
 		// pagination, page count starts at 1		
 		
 		if (offset >= PAGING) {
@@ -237,8 +237,9 @@ public class QueryHelperLDF {
 	 * @param isFrag true if fragment was requested (true if page)
 	 */
 	private static void hyperControls(Model m, String vocab, IRI dataset,
-						UriBuilder builder, int offset, int count, boolean isFrag) {
-		IRI graph = QueryHelper.asGraph("/" + vocab + "#hydra");
+					UriBuilder builder, int offset, int count, 
+					boolean isFrag) {
+		IRI graph = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab + "#hydra");
 		IRI fragment = F.createIRI(builder.build().toString());
 	
 		builder.queryParam(PAGE, "{page}");
@@ -268,7 +269,7 @@ public class QueryHelperLDF {
 	 * @param offset
 	 */
 	private static void getFragment(Model m, RepositoryConnection conn, IRI subj, IRI pred, 
-								Value obj, IRI graph, long offset, long count) {	
+					Value obj, IRI graph, long offset, long count) {	
 		// nothing (more) to show
 		if ((count <= 0) || (offset >= count)) { 
 			return;
@@ -303,7 +304,7 @@ public class QueryHelperLDF {
 	 * @return number of results
 	 */
 	private static int getCount(RepositoryConnection conn, 
-									IRI subj, IRI pred, Value obj, IRI graph) {
+					IRI subj, IRI pred, Value obj, IRI graph) {
 		TupleQuery tq = conn.prepareTupleQuery((graph != null) ? Q_COUNT_GRAPH : Q_COUNT);
 		if (subj != null) {
 			tq.setBinding("s", subj);
@@ -374,8 +375,10 @@ public class QueryHelperLDF {
 		int offset = (pageVal - 1) * PAGING;
 		
 		// speedup: vocabularies are stored in separate graphs
-		IRI graph = (!vocab.isEmpty()) ? QueryHelper.asGraph(vocab) : null;
-		IRI dataset = QueryHelper.asDataset(vocab);
+		IRI graph = (!vocab.isEmpty()) 
+				? QueryHelper.getGraphName(QueryHelper.VOCAB, vocab) 
+				: null;
+		IRI dataset = QueryHelper.getDatasetName(vocab);
 		
 		try (RepositoryConnection conn = repo.getConnection()) {
 			int count = getCount(conn, subj, pred, obj, graph);

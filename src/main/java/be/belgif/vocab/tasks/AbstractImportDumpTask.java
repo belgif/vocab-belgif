@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 
 import java.io.BufferedWriter;

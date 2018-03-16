@@ -25,6 +25,8 @@
  */
 package be.belgif.vocab.tasks;
 
+import be.belgif.vocab.helpers.QueryHelper;
+
 import org.eclipse.rdf4j.repository.Repository;
 
 import org.slf4j.Logger;
@@ -46,6 +48,6 @@ public class XmlnsRegisterTask extends AbstractImportTask {
 	 * @param inDir import directory
 	 */
 	public XmlnsRegisterTask(Repository repo, String inDir) {
-		super("xmlns-register", repo, inDir, "xmlns");
+		super("xmlns-register", repo, inDir, QueryHelper.XMLNS);
 	}
 }
