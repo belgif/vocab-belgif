@@ -35,7 +35,7 @@
 	</table>
         </section>
 	<#assign tc = v.objs("skos", "hasTopConcept")>
-	<#if tc?size gt 0>
+	<#if tc?has_content>
 	<section>
 	    <h4>SKOS TopConcepts</h4>
 	    <table>

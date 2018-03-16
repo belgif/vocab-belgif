@@ -48,7 +48,9 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
+import org.eclipse.rdf4j.model.vocabulary.SHACL;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.VCARD4;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.model.vocabulary.XMLSchema;
 
@@ -73,7 +75,9 @@ public class QueryHelper {
 		NS_MAP.put(OWL.PREFIX, OWL.NAMESPACE);
 		NS_MAP.put(RDF.PREFIX, RDF.NAMESPACE);
 		NS_MAP.put(RDFS.PREFIX, RDFS.NAMESPACE);
+		NS_MAP.put(SHACL.PREFIX, SHACL.NAMESPACE);
 		NS_MAP.put(SKOS.PREFIX, SKOS.NAMESPACE);
+		NS_MAP.put(VCARD4.PREFIX, VCARD4.NAMESPACE);
 		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
 		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
 	}
@@ -181,8 +185,19 @@ public class QueryHelper {
 	
 	}
 	
+	
 	/**
-	 * Get all contexts a.k.a. vocabularies
+	 * Get all contexts with ontologies
+	 *
+	 * @param repo RDF store
+	 * @return list of ontologies
+	 */
+	public static Model getOntoList(Repository repo) {
+		return getType(repo, OWL.ONTOLOGY);
+	}
+	
+	/**
+	 * Get all contexts with vocabularies
 	 *
 	 * @param repo RDF store
 	 * @return list of vocabularies
@@ -192,7 +207,7 @@ public class QueryHelper {
 	}
 
 	/**
-	 * Get all xml namespaces
+	 * Get all contexts with xml namespaces
 	 *
 	 * @param repo RDF store
 	 * @return list of xml namespaces

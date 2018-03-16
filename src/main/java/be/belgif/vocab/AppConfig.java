@@ -32,7 +32,6 @@ import io.dropwizard.Configuration;
 //import io.dropwizard.bundles.assets.AssetsConfiguration;
 
 import java.util.Map;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;

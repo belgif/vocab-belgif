@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.RDFMediaType;
 import java.io.File;
 import java.nio.file.Paths;
 
@@ -43,12 +44,35 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/ns")
 public class NsResource extends RdfResource {
+	private final String ontoDir;
 	private final String xsdDir;
-
+	
+	
+	@GET
+	@Path("{file: .+\\.jsonld}")
+	@Produces({RDFMediaType.JSONLD})
+	public File getJsonFile(@PathParam("file") String file) {
+		return Paths.get(this.ontoDir, file).toFile();
+	}
+	
+	@GET
+	@Path("{file: .+\\.nt}")
+	@Produces({RDFMediaType.NTRIPLES})
+	public File getNtFile(@PathParam("file") String file) {
+		return Paths.get(this.ontoDir, file).toFile();
+	}
+	
+	@GET
+	@Path("{file: .+\\.ttl}")
+	@Produces({RDFMediaType.TTL})
+	public File getTtlFile(@PathParam("file") String file) {
+		return Paths.get(this.ontoDir, file).toFile();
+	}
+	
 	@GET
 	@Path("{file: .+\\.xsd}")
 	@Produces({MediaType.APPLICATION_XML, MediaType.TEXT_XML})
-	public File getFile(@PathParam("file") String file) {
+	public File getXsdFile(@PathParam("file") String file) {
 		return Paths.get(this.xsdDir, file).toFile();
 	}
 
@@ -56,10 +80,12 @@ public class NsResource extends RdfResource {
 	 * Constructor
 	 *
 	 * @param repo RDF triple store
+	 * @param ontoDir
 	 * @param xsdDir
 	 */
-	public NsResource(Repository repo, String xsdDir) {
+	public NsResource(Repository repo, String ontoDir, String xsdDir) {
 		super(repo);
+		this.ontoDir = ontoDir;
 		this.xsdDir = xsdDir;
 	}
 }

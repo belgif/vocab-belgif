@@ -56,7 +56,7 @@ public class VoidResource extends RdfResource {
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getVocabList(), getXmlnsList(), getOntologyList(), 
+		return new HomepageView(getVocabList(), getXmlnsList(), getOntoList(), 
 									lang.orElse("en"));
 	}
 	

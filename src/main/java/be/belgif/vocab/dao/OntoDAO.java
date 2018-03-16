@@ -25,9 +25,13 @@
  */
 package be.belgif.vocab.dao;
 
+import java.util.List;
+import java.util.Set;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 /**
  * DAO helper class for NS.
@@ -41,9 +45,10 @@ public class OntoDAO extends RdfDAO {
 	 * @return download URL
 	 */
 	public String getDownload() {
-		return obj(DCAT.DOWNLOAD_URL).toString();
+		return getId().toString();
 	}
 
+		
 	/**
 	 * Constructor
 	 *

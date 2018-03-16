@@ -37,6 +37,7 @@ import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
+import be.belgif.vocab.tasks.OntoImportTask;
 import be.belgif.vocab.tasks.XmlnsRegisterTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
@@ -76,22 +77,7 @@ public class App extends Application<AppConfig> {
 
 	private static String PREFIX;
 	private static String PREFIX_GRAPH;
-/*
-	public final static Map<String, MediaType> FTYPES = new HashMap<>();
-	static {
-		FTYPES.put("ttl", MediaType.valueOf(RDFMediaType.TTL));
-		FTYPES.put("jsonld", MediaType.valueOf(RDFMediaType.JSONLD));
-		FTYPES.put("nt", MediaType.valueOf(RDFMediaType.NTRIPLES));
-	}
-*//*
-	public final static Map<String, String> LANGS = new HashMap<>();
-	static {
-		LANGS.put("nl", "nl");
-		LANGS.put("fr", "fr");
-		LANGS.put("de", "de");
-		LANGS.put("en", "en");
-	}
-*/	
+
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
 
 	/**
@@ -140,7 +126,6 @@ public class App extends Application<AppConfig> {
 	public void initialize(Bootstrap<AppConfig> config) {
 		config.addBundle(new AssetsBundle("/assets/belgif.png", "/favicon.ico", null, "index"));
 		config.addBundle(new AssetsBundle("/assets", "/static", null, "index"));
-	//	config.addBundle(new AssetsBundle("file://download", "/dataset", null, null));
 		
 		config.addBundle(new ViewBundle<AppConfig>() {
 			@Override
@@ -170,12 +155,15 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new VoidResource(repo));
 		env.jersey().register(new VocabResource(repo));
 		env.jersey().register(new DatasetResource(config.getVocabs().getDownloadDir()));
-		env.jersey().register(new NsResource(repo, config.getXsds().getDownloadDir()));
+		env.jersey().register(new NsResource(repo, config.getOntos().getDownloadDir(),
+							config.getXsds().getDownloadDir()));
 		
 		env.jersey().register(new SearchResource(repo));
 		env.jersey().register(new LdfResource(repo));
 
 		// Tasks
+		env.admin().addTask(new OntoImportTask(repo, config.getOntos().getImportDir(),
+						config.getOntos().getDownloadDir()));
 		env.admin().addTask(new VocabImportTask(repo, config.getVocabs().getImportDir(), 
 						config.getVocabs().getDownloadDir()));
 		env.admin().addTask(new XmlnsRegisterTask(repo, config.getXsds().getImportDir()));
@@ -221,7 +209,7 @@ public class App extends Application<AppConfig> {
 			WebTarget target = cl.target(localhost);
 
 			importFiles(config.getOntos().getImportDir(),
-					target.path("tasks/onto-register"));
+					target.path("tasks/onto-import"));
 			
 			importFiles(config.getXsds().getImportDir(),
 					target.path("tasks/xmlns-register"));

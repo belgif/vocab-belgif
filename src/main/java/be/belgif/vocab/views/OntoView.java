@@ -23,43 +23,40 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.tasks;
+package be.belgif.vocab.views;
 
-import java.io.IOException;
+import be.belgif.vocab.dao.OntoDAO;
+import be.belgif.vocab.dao.SkosDAO;
+
+import java.util.Iterator;
+
+import javax.ws.rs.ext.Provider;
+
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
- * Import an ontology file and create (static) download files in various formats.
- *
+ * HTML view for SKOS concept schema
+ * 
  * @author Bart.Hanssens
  */
-public class OntologyImportTask extends AbstractImportDumpTask {
+@Provider
+public class OntoView extends RdfView {
+	private final OntoDAO onto;
 	
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntologyImportTask.class);
-
-
-	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
-		writeDumps(conn, name, ctx);
-		
-		//conn.remove((Resource) null, null, null, ctx);
-	}
-	
-	/**
+	/** 
 	 * Constructor
-	 *
-	 * @param repo triple store
-	 * @param inDir import directory
-	 * @param outDir download directory
+	 * 
+	 * @param onto ontology name name
+	 * @param m triples
+	 * @param lang language
 	 */
-	public OntologyImportTask(Repository repo, String inDir, String outDir) {
-		super("import-onto", repo, inDir, outDir);
+	public OntoView(String onto, Model m, String lang) {
+		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
+		
+		Iterator<Resource> i = m.subjects().iterator();
+		this.onto = i.hasNext() ? new OntoDAO(m, (IRI) i.next()) : null;
 	}
-
 }
+

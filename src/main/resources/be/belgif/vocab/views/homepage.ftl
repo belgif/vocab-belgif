@@ -12,7 +12,7 @@
 <main>
     <div id="container">
     <#include "message.ftl">
-    <#if onto?has_content>
+    <#if ontos?has_content>
     <section>
 	<h3>Ontologies</h3>
 	<section>
@@ -23,10 +23,17 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#assign l = lang>
-	    <#list onto as o>
-	    <tr><td><a href="${o.root}">${v.literal("dcterms", "title", l)!""}</a></td>
-		<td>${o.literal("dcterms", "description", l)!""}</td>
-		<td><a href="${o.shacl!""}">SHACL</a></td>
+	    <#list ontos as o>
+	    <tr><td><a href="${o.id}">${o.literal("rdfs", "label", l)!""}</a></td>
+		<td>${o.literal("rdfs", "comment", l)!""}</td>
+                <#assign download = o.download?remove_ending("#")>
+                <td>OWL: <a href="${download}.ttl">TTL</a>
+                        <a href="${download}.jsonld">JSON-LD</a>
+                        <a href="${download}.nt">N-Triples</a><br/>
+                    SHACL: <a href="${download}-shacl.ttl">TTL</a>
+                        <a href="${download}-shacl.jsonld">JSON-LD</a>
+                        <a href="${download}-shacl.nt">N-Triples</a>
+                    </td>
 	    </tr>
 	    </#list>
 	    </table>
@@ -68,9 +75,10 @@
 	    <#list vocabs?sort_by("root") as v>
 	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", l)!""}</a></td>
 		<td>${v.literal("dcterms", "description", l)!""}</td>
-		<td><a href="${v.download!""}.ttl">TTL</a>
-		    <a href="${v.download!""}.jsonld">JSON-LD</a>
-		    <a href="${v.download!""}.nt">N-Triples</a></td>
+                <#assign download = v.download!"">
+		<td><a href="${download}.ttl">TTL</a>
+		    <a href="${download}.jsonld">JSON-LD</a>
+		    <a href="${download}.nt">N-Triples</a></td>
 	    </tr>
 	    </#list>
 	    </table>

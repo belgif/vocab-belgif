@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,54 +23,43 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.tasks;
 
-import io.dropwizard.views.View;
+import java.io.IOException;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.repository.RepositoryConnection;
 
-import java.nio.charset.StandardCharsets;
-
-import java.util.Locale;
-import java.util.ResourceBundle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * HTML view for SKOS concept schema
- * 
+ * Import an ontology file and create (static) download files in various formats.
+ *
  * @author Bart.Hanssens
  */
-public abstract class RdfView extends View {
-	private final String lang;
-	private final ResourceBundle msgs;
-	
-	/**
-	 * Get the language code
-	 * 
-	 * @return language code
-	 */
-	public String getLang() {
-		return this.lang;
-	}
-	
-	/**
-	 * Get the message bundle
-	 * 
-	 * @return resource bundle
-	 */
-	public ResourceBundle getMessages() {
-		return this.msgs;
-	}
+public class ShaclImportTask extends AbstractImportDumpTask {
 	
 	
-	/** 
-	 * Constructor
-	 * 
-	 * @param template template file
-	 * @param lang language
-	 */
-	public RdfView(String template, String lang) {
-		super(template, StandardCharsets.UTF_8);
-		this.lang = (lang == null || lang.isEmpty()) ? "en" : lang;
-		this.msgs = ResourceBundle.getBundle("be.belgif.vocab.views.MessageBundle", 
-							new Locale(this.lang));
-	}
-}
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(ShaclImportTask.class);
 
+
+	@Override
+	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
+		writeDumps(conn, name, ctx);
+		
+		//conn.remove((Resource) null, null, null, ctx);
+	}
+	
+	/**
+	 * Constructor
+	 *
+	 * @param repo triple store
+	 * @param inDir import directory
+	 * @param outDir download directory
+	 */
+	public ShaclImportTask(Repository repo, String inDir, String outDir) {
+		super("import-shacl", repo, inDir, outDir);
+	}
+
+}

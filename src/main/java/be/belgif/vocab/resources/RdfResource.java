@@ -41,6 +41,15 @@ public abstract class RdfResource {
 	private final Repository repo;
 
 	/**
+	 * Get list of ontologies as RDF triples
+	 *
+	 * @return triples
+	 */
+	protected Model getOntoList() {
+		return QueryHelper.getOntoList(repo);
+	}
+	
+	/**
 	 * Get list of vocabularies as RDF triples
 	 *
 	 * @return triples
@@ -56,15 +65,6 @@ public abstract class RdfResource {
 	 */
 	protected Model getXmlnsList() {
 		return QueryHelper.getXmlnsList(repo);
-	}
-	
-	/**
-	 * Get list of ontologies as RDF triples
-	 *
-	 * @return triples
-	 */
-	protected Model getOntologyList() {
-		return QueryHelper.getOntologyList(repo);
 	}
 	
 	/**

@@ -49,6 +49,15 @@ public class HomepageView extends RdfView {
 	private final List<OntoDAO> ontos = new ArrayList();	
 
 	/**
+	 * Get the list of ontologies
+	 * 
+	 * @return list
+	 */
+	public List<OntoDAO> getOntos() {
+		return this.ontos;
+	}
+	
+	/**
 	 * Get the list of XSD namespaces
 	 * 
 	 * @return list
@@ -85,4 +94,3 @@ public class HomepageView extends RdfView {
 			.forEachOrdered(s -> ontos.add(new OntoDAO(onts, (IRI) s)));		
 	}
 }
-

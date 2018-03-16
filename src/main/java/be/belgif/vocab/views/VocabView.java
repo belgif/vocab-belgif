@@ -43,7 +43,7 @@ import org.eclipse.rdf4j.model.Resource;
 @Provider
 public class VocabView extends RdfView {
 	private final SkosDAO term;
-	private final String vocab;
+	private final String vocabName;
 	
 	/**
 	 * Get the properties of a term
@@ -59,10 +59,10 @@ public class VocabView extends RdfView {
 	 * 
 	 * @return 
 	 */
-	public String getVocab() {
-		return this.vocab;
+/*	public String getVocabName() {
+		return this.vocabName;
 	}
-	
+*/	
 	/** 
 	 * Constructor
 	 * 
@@ -75,7 +75,7 @@ public class VocabView extends RdfView {
 		
 		Iterator<Resource> i = m.subjects().iterator();
 		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;
-		this.vocab = vocab;
+		this.vocabName = vocab;
 	}
 }
 
