@@ -70,7 +70,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 	 */
 	protected void writeDumps(RepositoryConnection conn, String name, Resource ctx) 
 									throws IOException {
-		LOG.info("Writing data dumps for {} into {}", name, ctx);
+		LOG.info("Writing data dumps for {} from {}", name, ctx);
 
 		for (String ftype : ftypes) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);

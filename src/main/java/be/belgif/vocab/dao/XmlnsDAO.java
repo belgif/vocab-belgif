@@ -27,6 +27,7 @@ package be.belgif.vocab.dao;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
@@ -41,7 +42,8 @@ public class XmlnsDAO extends RdfDAO {
 	 * @return download URL
 	 */
 	public String getDownload() {
-		return obj(DCAT.DOWNLOAD_URL).toString();
+		Value url = obj(DCAT.DOWNLOAD_URL);
+		return (url != null) ? url.toString() : "";
 	}
 
 	/**

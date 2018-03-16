@@ -26,6 +26,7 @@
 package be.belgif.vocab.tasks;
 
 import be.belgif.vocab.App;
+import be.belgif.vocab.helpers.QueryHelper;
 
 import com.google.common.collect.ImmutableCollection;
 import com.google.common.collect.ImmutableMultimap;
@@ -76,18 +77,7 @@ public abstract class AbstractImportTask extends Task {
 	protected void process(RepositoryConnection conn, String name, Resource ctx) 
 								throws IOException {
 	}
-	
-	/**
-	 * Get a named graph / RDF4J context
-	 * 
-	 * @param suffix
-	 * @return context IRI 
-	 */
-	protected Resource getContext(String suffix) {
-		return repo.getValueFactory().createIRI(
-				App.getPrefixGraph() + "/" + type + "/" + suffix);
-	}
-	
+
 	/**
 	 * Import triples from file into RDF store, using name as vocabulary name.
 	 *
@@ -99,7 +89,9 @@ public abstract class AbstractImportTask extends Task {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			String imp = name.split("\\.")[0];
 			// load into separate context
-			Resource ctx = getContext(imp);
+			Resource ctx = QueryHelper.getGraphName(type, imp);
+			
+			LOG.info("Loading data dumps from {} into {}", name, ctx);	
 			
 			conn.begin();
 
