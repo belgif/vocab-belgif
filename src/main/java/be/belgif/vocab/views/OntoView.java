@@ -35,6 +35,8 @@ import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
 
 /**
  * HTML view for SKOS concept schema
@@ -45,6 +47,10 @@ import org.eclipse.rdf4j.model.Resource;
 public class OntoView extends RdfView {
 	private final OntoDAO onto;
 	
+	public OntoDAO getOnto() {
+		return this.onto;
+	}
+	
 	/** 
 	 * Constructor
 	 * 
@@ -54,7 +60,7 @@ public class OntoView extends RdfView {
 	 */
 	public OntoView(String onto, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
-		
+		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
 		Iterator<Resource> i = m.subjects().iterator();
 		this.onto = i.hasNext() ? new OntoDAO(m, (IRI) i.next()) : null;
 	}

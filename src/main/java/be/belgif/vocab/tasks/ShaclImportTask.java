@@ -59,7 +59,7 @@ public class ShaclImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public ShaclImportTask(Repository repo, String inDir, String outDir) {
-		super("import-shacl", repo, inDir, outDir);
+		super("import-shacl", repo, inDir, outDir, "shacl");
 	}
 
 }

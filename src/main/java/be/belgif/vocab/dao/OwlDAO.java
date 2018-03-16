@@ -23,43 +23,57 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.tasks;
+package be.belgif.vocab.dao;
 
-import java.io.IOException;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.repository.RepositoryConnection;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.List;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 /**
- * Import an ontology file and create (static) download files in various formats.
+ * DAO helper class for ontology overview.
  *
  * @author Bart.Hanssens
  */
-public class OntoImportTask extends AbstractImportDumpTask {
+public class OwlDAO extends RdfDAO {
+	private final List<RdfDAO> classes = new ArrayList<>();
+	private final List<RdfDAO> properties = new ArrayList<>();
 	
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntoImportTask.class);
-
-
-	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
-		writeDumps(conn, name, ctx);
+	/**
+	 * Initialize classes
+	 * 
+	 * @param m 
+	 */
+	private void initClasses(Model m) {
+		Model mc = m.filter(null, RDF.TYPE, RDFS.CLASS);
+		mc.addAll(m.filter(null, RDF.TYPE, RDFS.SUBCLASSOF));
 		
-		//conn.remove((Resource) null, null, null, ctx);
+		mc.subjects().forEach(c -> classes.add(new RdfDAO(mc, (IRI) c)));
 	}
 	
 	/**
+	 * Initialize properties
+	 * 
+	 * @param m 
+	 */
+	private void initProperties(Model m) {
+		Model mp = m.filter(null, RDF.TYPE, RDF.PROPERTY);
+		mp.addAll(m.filter(null, RDF.TYPE, RDFS.SUBPROPERTYOF));
+
+		mp.subjects().forEach(p -> properties.add(new RdfDAO(mp, (IRI) p)));
+	}
+	
+ 	/**
 	 * Constructor
 	 *
-	 * @param repo triple store
-	 * @param inDir import directory
-	 * @param outDir download directory
+	 * @param m triples
+	 * @param id subject ID
 	 */
-	public OntoImportTask(Repository repo, String inDir, String outDir) {
-		super("onto-import", repo, inDir, outDir, "onto");
+	public OwlDAO(Model m, IRI id) {
+		super(m, id);
+		initClasses(m);
+		initProperties(m);
 	}
-
 }

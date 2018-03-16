@@ -129,6 +129,6 @@ public class VocabImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public VocabImportTask(Repository repo, String inDir, String outDir) {
-		super("vocab-import", repo, inDir, outDir);
+		super("vocab-import", repo, inDir, outDir, "vocab");
 	}
 }

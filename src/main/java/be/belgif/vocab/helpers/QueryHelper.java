@@ -171,10 +171,10 @@ public class QueryHelper {
 		Model m = new LinkedHashModel();
 
 		try (RepositoryConnection conn = repo.getConnection();
-			RepositoryResult<Statement> vocabs
+			RepositoryResult<Statement> res
 				= conn.getStatements(null, RDF.TYPE, obj)) {
-			while (vocabs.hasNext()) {
-				Resource iri = vocabs.next().getSubject();
+			while (res.hasNext()) {
+				Resource iri = res.next().getSubject();
 				Iterations.addAll(conn.getStatements(iri, null, null), m);
 			}
 		} catch (RepositoryException e) {

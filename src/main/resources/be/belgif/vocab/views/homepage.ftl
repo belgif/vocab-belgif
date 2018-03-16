@@ -8,6 +8,7 @@
 </head>
 <body>
 <#include "header.ftl">
+<#assign l = lang>
 <#assign m = messages>
 <main>
     <div id="container">
@@ -22,7 +23,6 @@
 		<th>${m.getString("msg.description")}</th>
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
-	    <#assign l = lang>
 	    <#list ontos as o>
 	    <tr><td><a href="${o.id}">${o.literal("rdfs", "label", l)!""}</a></td>
 		<td>${o.literal("rdfs", "comment", l)!""}</td>
@@ -50,7 +50,6 @@
 		<th>${m.getString("msg.description")}</th>
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
-	    <#assign l = lang>
 	    <#list xmlns as n>
 	    <tr><td>${n.literal("dcterms", "title", l)!""}</td>
 		<td>${n.literal("dcterms", "description", l)!""}</td>
@@ -71,7 +70,6 @@
 		<th>${m.getString("msg.description")}</th>
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
-	    <#assign l = lang>
 	    <#list vocabs?sort_by("root") as v>
 	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", l)!""}</a></td>
 		<td>${v.literal("dcterms", "description", l)!""}</td>
@@ -83,6 +81,8 @@
 	    </#list>
 	    </table>
 	</section>
+    </section>
+    <section>
 	<section>
 	    <h4>Content Negotiation (De-referencing)</h4>
 	    <table>

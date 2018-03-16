@@ -77,7 +77,7 @@ public abstract class RdfResource {
 	}
 
 	/**
-	 * Get by ID (URI)
+	 * Get by ID (URI), adding "#id" at the end
 	 *
 	 * @param prefix
 	 * @param type
@@ -89,6 +89,7 @@ public abstract class RdfResource {
 				: prefix + type + "#id";
 		return QueryHelper.get(repo, QueryHelper.asURI(url), type);
 	}
+
 
 	/**
 	 * Get all triples

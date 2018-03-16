@@ -25,20 +25,16 @@
  */
 package be.belgif.vocab.dao;
 
-import java.util.List;
-import java.util.Set;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
-import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 /**
- * DAO helper class for NS.
+ * DAO helper class for ontology overview.
  *
  * @author Bart.Hanssens
  */
 public class OntoDAO extends RdfDAO {
+	
 	/**
 	 * Get download URL
 	 *

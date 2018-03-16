@@ -71,7 +71,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 	 */
 	protected void writeDumps(RepositoryConnection conn, String name, Resource ctx) 
 									throws IOException {
-		LOG.info("Writing data dumps for {}", name);
+		LOG.info("Writing data dumps for {} into {}", name, ctx);
 
 		for (String ftype : ftypes) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);
@@ -98,9 +98,11 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 	 * @param repo triple store
 	 * @param inDir import directory
 	 * @param outDir download directory
+	 * @param type type of file to import
 	 */
-	public AbstractImportDumpTask(String task, Repository repo, String inDir, String outDir) {
-		super(task, repo,inDir);
+	public AbstractImportDumpTask(String task, Repository repo, 
+					String inDir, String outDir, String type) {
+		super(task, repo, inDir, type);
 		this.downloadDir = outDir;
 	}
 }

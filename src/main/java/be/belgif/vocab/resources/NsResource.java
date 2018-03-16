@@ -61,23 +61,23 @@ public class NsResource extends RdfResource {
 		return Paths.get(this.ontoDir, file).toFile();
 	}
 	@GET
-	@Path("{file: [^\\.]+}")
+	@Path("/{onto}")
 	@Produces({RDFMediaType.JSONLD})
-	public File getJsonDefFile(@PathParam("file") String file) {
-		return getJsonFile(file + ".jsonld");
+	public File getJsonDefFile(@PathParam("onto") String onto) {
+		return getJsonFile(onto + ".jsonld");
 	}
 
 	@GET
-	@Path("{file: .+\\.nt|[^\\.]+}")
+	@Path("{file: .+\\.nt}")
 	@Produces({RDFMediaType.NTRIPLES})
 	public File getNtFile(@PathParam("file") String file) {
 		return Paths.get(this.ontoDir, file).toFile();
 	}
 	@GET
-	@Path("{file: [^\\.]+}")
+	@Path("/{onto}")
 	@Produces({RDFMediaType.NTRIPLES})
-	public File getNtDefFile(@PathParam("file") String file) {
-		return getNtFile(file + ".nt");
+	public File getNtDefFile(@PathParam("onto") String onto) {
+		return getNtFile(onto + ".nt");
 	}
 	
 	@GET
@@ -88,10 +88,10 @@ public class NsResource extends RdfResource {
 			file.endsWith(".ttl") ? file : file + ".ttl").toFile();
 	}
 	@GET
-	@Path("{file: [^\\.]+}")
+	@Path("/{onto}")
 	@Produces({RDFMediaType.TTL})
-	public File getTtlDefFile(@PathParam("file") String file) {
-		return getNtFile(file + ".ttl");
+	public File getTtlDefFile(@PathParam("onto") String onto) {
+		return getNtFile(onto + ".ttl");
 	}	
 	@GET
 	@Path("{file: .+\\.xsd}")
@@ -100,14 +100,13 @@ public class NsResource extends RdfResource {
 		return Paths.get(this.xsdDir, file).toFile();
 	}
 
-	/*@GET
+	@GET
 	@Path("/{onto}")
 	@Produces(MediaType.TEXT_HTML)
-	/*public File getOntoHTML(@PathParam("onto") String onto,
+	public OntoView getOntoHTML(@PathParam("onto") String onto,
 				@QueryParam("lang") Optional<String> lang) {
-		return new OntoView(onto, getById(PREFIX, onto, ""), lang.orElse("en"));
+		return new OntoView(onto, get(null, PREFIX + onto + "#"), lang.orElse("en"));
 	}
-	*/
 
 	/**
 	 * Constructor

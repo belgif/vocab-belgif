@@ -46,6 +46,6 @@ public class XmlnsRegisterTask extends AbstractImportTask {
 	 * @param inDir import directory
 	 */
 	public XmlnsRegisterTask(Repository repo, String inDir) {
-		super("xmlns-register", repo, inDir);
+		super("xmlns-register", repo, inDir, "xmlns");
 	}
 }

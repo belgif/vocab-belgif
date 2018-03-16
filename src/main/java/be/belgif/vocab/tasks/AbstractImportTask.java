@@ -42,6 +42,8 @@ import java.util.Optional;
 import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;
@@ -59,7 +61,8 @@ import org.slf4j.LoggerFactory;
 public abstract class AbstractImportTask extends Task {
 	private final String importDir;
 	private final Repository repo;
-
+	private final String type;
+	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportTask.class);
 
 	/**
@@ -73,7 +76,18 @@ public abstract class AbstractImportTask extends Task {
 	protected void process(RepositoryConnection conn, String name, Resource ctx) 
 								throws IOException {
 	}
-		
+	
+	/**
+	 * Get a named graph / RDF4J context
+	 * 
+	 * @param suffix
+	 * @return context IRI 
+	 */
+	protected Resource getContext(String suffix) {
+		return repo.getValueFactory().createIRI(
+				App.getPrefixGraph() + "/" + type + "/" + suffix);
+	}
+	
 	/**
 	 * Import triples from file into RDF store, using name as vocabulary name.
 	 *
@@ -84,8 +98,9 @@ public abstract class AbstractImportTask extends Task {
 	protected void importFile(Path file, String name, RDFFormat format) {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			String imp = name.split("\\.")[0];
-			Resource ctx = repo.getValueFactory().createIRI(App.getPrefixGraph() + imp);
-
+			// load into separate context
+			Resource ctx = getContext(imp);
+			
 			conn.begin();
 
 			conn.remove((Resource) null, null, null, ctx);
@@ -138,10 +153,12 @@ public abstract class AbstractImportTask extends Task {
 	 * @param task task name
 	 * @param repo triple store
 	 * @param inDir import directory
+	 * @param type type of file to import
 	 */
-	public AbstractImportTask(String task, Repository repo, String inDir) {
+	public AbstractImportTask(String task, Repository repo, String inDir, String type) {
 		super(task);
 		this.repo = repo;
 		this.importDir = inDir;
+		this.type = type;
 	}
 }

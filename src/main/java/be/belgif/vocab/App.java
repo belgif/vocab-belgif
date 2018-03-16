@@ -43,7 +43,6 @@ import be.belgif.vocab.tasks.VocabImportTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
-//import io.dropwizard.bundles.assets.ConfiguredAssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
