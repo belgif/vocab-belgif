@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +25,8 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.VoidDAO;
+import be.belgif.vocab.dao.OntoDAO;
+import be.belgif.vocab.dao.XmlnsDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,28 +42,40 @@ import org.eclipse.rdf4j.model.Model;
  * @author Bart Hanssens
  */
 @Provider
-public class HomepageView extends RdfView {
-	private final List<VoidDAO> vocabs = new ArrayList();
+public class OntoListView extends RdfView {
+	private final List<XmlnsDAO> xmlns = new ArrayList();
+	private final List<OntoDAO> ontos = new ArrayList();	
 
 	/**
-	 * Get the list of vocabularies
+	 * Get the list of ontologies
 	 * 
 	 * @return list
 	 */
-	public List<VoidDAO> getVocabs() {
-		return this.vocabs;
+	public List<OntoDAO> getOntos() {
+		return this.ontos;
 	}
 	
+	/**
+	 * Get the list of XSD namespaces
+	 * 
+	 * @return list
+	 */
+	public List<XmlnsDAO> getXmlns() {
+		return this.xmlns;
+	}
 	
 	/** 
 	 * Constructor
 	 * 
-	 * @param vocs vocabularies as triples
+	 * @param xmls XSD namespaces as triples
+	 * @param onts ontologies as triples
 	 * @param lang language
 	 */
-	public HomepageView(Model vocs, String lang) {
-		super("homepage.ftl", lang);
-		vocs.subjects().stream()
-			.forEachOrdered(s -> vocabs.add(new VoidDAO(vocs, (IRI) s)));		
+	public OntoListView(Model xmls, Model onts, String lang) {
+		super("ontolist.ftl", lang);
+		xmls.subjects().stream()
+			.forEachOrdered(s -> xmlns.add(new XmlnsDAO(xmls, (IRI) s)));
+		onts.subjects().stream()
+			.forEachOrdered(s -> ontos.add(new OntoDAO(onts, (IRI) s)));		
 	}
 }

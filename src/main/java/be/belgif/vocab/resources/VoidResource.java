@@ -37,8 +37,6 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
-import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.repository.Repository;
@@ -56,13 +54,10 @@ public class VoidResource extends RdfResource {
 		return getByClass(SKOS.CONCEPT_SCHEME);
 	}	
 	
-	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getByClass(VOID.DATASET), 
-					getByClass(DCAT.DISTRIBUTION), 
-					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
+		return new HomepageView(getByClass(VOID.DATASET), lang.orElse("en"));
 	}
 	
 	

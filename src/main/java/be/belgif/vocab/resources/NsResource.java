@@ -25,10 +25,11 @@
  */
 package be.belgif.vocab.resources;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.OntoListView;
 import be.belgif.vocab.views.OntoView;
+
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.Optional;
@@ -39,9 +40,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
@@ -51,11 +54,17 @@ import org.eclipse.rdf4j.repository.Repository;
  */
 @Path("/ns")
 public class NsResource extends RdfResource {
-	private final static String PREFIX = App.getPrefix() + "ns/";
-	
 	private final String ontoDir;
 	private final String xsdDir;
 	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public OntoListView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
+		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
+					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
+	}
+	
+		
 	@GET
 	@Path("{file: .+\\.jsonld}")
 	@Produces({RDFMediaType.JSONLD})

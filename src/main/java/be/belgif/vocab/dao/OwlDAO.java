@@ -27,9 +27,12 @@ package be.belgif.vocab.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
@@ -56,10 +59,11 @@ public class OwlDAO extends RdfDAO {
 	 * @param m 
 	 */
 	private void initClasses(Model m) {
-		Model mc = m.filter(null, RDF.TYPE, RDFS.CLASS);
-		mc.addAll(m.filter(null, RDF.TYPE, RDFS.SUBCLASSOF));
+		Model mc = new LinkedHashModel();
+		Set<Resource> s = m.filter(null, RDF.TYPE, RDFS.CLASS).subjects();
+		s.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
-		mc.subjects().forEach(c -> classes.add(new RdfDAO(mc, (IRI) c)));
+		s.forEach(c -> classes.add(new RdfDAO(mc, (IRI) c)));
 	}
 	
 	/**
@@ -68,10 +72,11 @@ public class OwlDAO extends RdfDAO {
 	 * @param m 
 	 */
 	private void initProperties(Model m) {
-		Model mp = m.filter(null, RDF.TYPE, RDF.PROPERTY);
-		mp.addAll(m.filter(null, RDF.TYPE, RDFS.SUBPROPERTYOF));
+		Model mp = new LinkedHashModel();
+		Set<Resource> s = m.filter(null, RDF.TYPE, RDF.PROPERTY).subjects();
+		s.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
 
-		mp.subjects().forEach(p -> properties.add(new RdfDAO(mp, (IRI) p)));
+		s.forEach(p -> properties.add(new RdfDAO(mp, (IRI) p)));
 	}
 	
  	/**
