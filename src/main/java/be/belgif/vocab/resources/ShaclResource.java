@@ -25,51 +25,105 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.OntoListView;
+import be.belgif.vocab.views.OntoView;
+
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.Optional;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Full downloads of vocabularies
+ * SHACL validation rules
  *
  * @author Bart Hanssens
  */
-@Path("/dataset")
-public class DatasetResource {
-	private final String vocabDir;
+@Path("/shacl")
+public class ShaclResource extends RdfResource {
+	private final String shaclDir;
 	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public OntoListView getShaclHTML(@QueryParam("lang") Optional<String> lang) {
+		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
+					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
+	}
+	
+		
 	@GET
 	@Path("{file: .+\\.jsonld}")
 	@Produces({RDFMediaType.JSONLD})
 	public File getJsonFile(@PathParam("file") String file) {
-		return Paths.get(vocabDir, file).toFile();
+		return Paths.get(this.shaclDir, file).toFile();
+	}
+	@GET
+	@Path("/{onto}")
+	@Produces({RDFMediaType.JSONLD})
+	public File getJsonDefFile(@PathParam("onto") String onto) {
+		return getJsonFile(onto + ".jsonld");
 	}
 
 	@GET
 	@Path("{file: .+\\.nt}")
 	@Produces({RDFMediaType.NTRIPLES})
-	public File getTriplesFile(@PathParam("file") String file) {
-		return Paths.get(vocabDir, file).toFile();
+	public File getNtFile(@PathParam("file") String file) {
+		return Paths.get(this.shaclDir, file).toFile();
 	}
-		
+	@GET
+	@Path("/{onto}")
+	@Produces({RDFMediaType.NTRIPLES})
+	public File getNtDefFile(@PathParam("onto") String onto) {
+		return getNtFile(onto + ".nt");
+	}
+	
 	@GET
 	@Path("{file: .+\\.ttl}")
 	@Produces({RDFMediaType.TTL})
 	public File getTtlFile(@PathParam("file") String file) {
-		return Paths.get(vocabDir, file).toFile();
+		return Paths.get(this.shaclDir,
+			file.endsWith(".ttl") ? file : file + ".ttl").toFile();
+	}
+	@GET
+	@Path("/{onto}")
+	@Produces({RDFMediaType.TTL})
+	public File getTtlDefFile(@PathParam("onto") String onto) {
+		return getNtFile(onto + ".ttl");
+	}	
+	
+
+	@GET
+	@Path("/{onto}")
+	@Produces(MediaType.TEXT_HTML)
+	public OntoView getOntoHTML(@PathParam("onto") String onto,
+				@QueryParam("lang") Optional<String> lang) {
+		//String subj = PREFIX + onto + "#";
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
+		Model m = getById(null, ctx);
+		return new OntoView(onto, m, lang.orElse("en"));
 	}
 
 	/**
 	 * Constructor
 	 *
-	 * @param vocabDir
+	 * @param repo RDF triple store
+	 * @param shaclDir
 	 */
-	public DatasetResource(String vocabDir) {
-		this.vocabDir = vocabDir;
+	public ShaclResource(Repository repo, String shaclDir) {
+		super(repo);
+		this.shaclDir = shaclDir;
 	}
 }

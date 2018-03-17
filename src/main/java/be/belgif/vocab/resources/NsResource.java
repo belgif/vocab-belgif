@@ -48,7 +48,7 @@ import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Namespaces
+ * XML namespaces and RDFS/OWL ontologies
  *
  * @author Bart.Hanssens
  */
@@ -59,11 +59,10 @@ public class NsResource extends RdfResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
-	public OntoListView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
+	public OntoListView getListHTML(@QueryParam("lang") Optional<String> lang) {
 		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
 					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
-	
 		
 	@GET
 	@Path("{file: .+\\.jsonld}")
@@ -95,14 +94,13 @@ public class NsResource extends RdfResource {
 	@Path("{file: .+\\.ttl}")
 	@Produces({RDFMediaType.TTL})
 	public File getTtlFile(@PathParam("file") String file) {
-		return Paths.get(this.ontoDir,
-			file.endsWith(".ttl") ? file : file + ".ttl").toFile();
+		return Paths.get(this.ontoDir, file).toFile();
 	}
 	@GET
 	@Path("/{onto}")
 	@Produces({RDFMediaType.TTL})
 	public File getTtlDefFile(@PathParam("onto") String onto) {
-		return getNtFile(onto + ".ttl");
+		return getTtlFile(onto + ".ttl");
 	}	
 	@GET
 	@Path("{file: .+\\.xsd}")

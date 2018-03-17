@@ -71,6 +71,7 @@ public class FileMessageBodyWriter implements MessageBodyWriter<File> {
 		if (! Files.isRegularFile(f.toPath())){
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}
+
 		try {
 			Files.copy(f.toPath(), out);
 		} catch (IOException ex) {

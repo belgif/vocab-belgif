@@ -64,6 +64,7 @@ public class OwlDAO extends RdfDAO {
 		s.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
 		s.forEach(c -> classes.add(new RdfDAO(mc, (IRI) c)));
+		m.removeAll(mc);
 	}
 	
 	/**
@@ -77,6 +78,7 @@ public class OwlDAO extends RdfDAO {
 		s.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
 
 		s.forEach(p -> properties.add(new RdfDAO(mp, (IRI) p)));
+		m.removeAll(mp);
 	}
 	
  	/**

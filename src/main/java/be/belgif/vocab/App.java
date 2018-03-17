@@ -152,11 +152,14 @@ public class App extends Application<AppConfig> {
 		// Resources / "web pages"
 		env.jersey().register(new RootResource());
 		env.jersey().register(new VoidResource(repo));
+		
+		
 		env.jersey().register(new VocabResource(repo));
 		env.jersey().register(new DatasetResource(config.getVocabs().getDownloadDir()));
 		env.jersey().register(new NsResource(repo, config.getOntos().getDownloadDir(),
 							config.getXsds().getDownloadDir()));
 		
+		// Services
 		env.jersey().register(new SearchResource(repo));
 		env.jersey().register(new LdfResource(repo));
 
