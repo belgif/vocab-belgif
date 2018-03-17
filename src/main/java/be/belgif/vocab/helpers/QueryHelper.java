@@ -98,7 +98,7 @@ public class QueryHelper {
 	 * @return URI representation
 	 */
 	public static IRI asURI(String uri) {
-		return F.createIRI(uri);
+		return (uri != null) ?  F.createIRI(uri) : null;
 	}
 
 	/**

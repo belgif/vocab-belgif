@@ -107,9 +107,9 @@ public class NsResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	public OntoView getOntoHTML(@PathParam("onto") String onto,
 				@QueryParam("lang") Optional<String> lang) {
-		String subj = PREFIX + onto + "#";
+		//String subj = PREFIX + onto + "#";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
-		Model m = getById(subj, ctx);
+		Model m = getById(null, ctx);
 		return new OntoView(onto, m, lang.orElse("en"));
 	}
 
