@@ -26,7 +26,7 @@
 package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.OntoDAO;
-import be.belgif.vocab.dao.SkosDAO;
+import be.belgif.vocab.dao.OwlDAO;
 
 import java.util.Iterator;
 
@@ -45,9 +45,9 @@ import org.eclipse.rdf4j.model.vocabulary.RDF;
  */
 @Provider
 public class OntoView extends RdfView {
-	private final OntoDAO onto;
+	private final OwlDAO onto;
 	
-	public OntoDAO getOnto() {
+	public OwlDAO getOnto() {
 		return this.onto;
 	}
 	
@@ -62,7 +62,7 @@ public class OntoView extends RdfView {
 		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
 		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
 		Iterator<Resource> i = m.subjects().iterator();
-		this.onto = i.hasNext() ? new OntoDAO(m, (IRI) i.next()) : null;
+		this.onto = i.hasNext() ? new OwlDAO(m, (IRI) i.next()) : null;
 	}
 }
 

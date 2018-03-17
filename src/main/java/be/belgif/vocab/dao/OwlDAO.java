@@ -27,6 +27,7 @@ package be.belgif.vocab.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -40,6 +41,14 @@ import org.eclipse.rdf4j.model.vocabulary.RDFS;
 public class OwlDAO extends RdfDAO {
 	private final List<RdfDAO> classes = new ArrayList<>();
 	private final List<RdfDAO> properties = new ArrayList<>();
+	
+	public List<RdfDAO> getClasses() {
+		return this.classes;
+	}
+	
+	public List<RdfDAO> getProperties() {
+		return this.properties;
+	}
 	
 	/**
 	 * Initialize classes

@@ -60,7 +60,7 @@ public class VoidResource extends RdfResource {
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getByClass(SKOS.CONCEPT_SCHEME), 
+		return new HomepageView(getByClass(VOID.DATASET), 
 					getByClass(DCAT.DISTRIBUTION), 
 					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
