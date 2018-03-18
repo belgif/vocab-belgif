@@ -16,11 +16,11 @@
     <section>
         <h3>${m.getString("msg.general")}</h3>
         <table>
-        <#assign val = o.literal("rdfs", "label", l)!"">
+        <#assign val = o.lit("rdfs:label", l)!"">
         <#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
         </#if>
-        <#assign val = o.literal("rdfs", "comment", l)!"">
+        <#assign val = o.lit("rdfs:comment", l)!"">
         <#if val?has_content>
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>

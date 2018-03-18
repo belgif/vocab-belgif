@@ -24,8 +24,8 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list vocabs?sort_by("root") as v>
-	    <tr><td><a href="${v.root}">${v.literal("dcterms", "title", l)!""}</a></td>
-		<td>${v.literal("dcterms", "description", l)!""}</td>
+	    <tr><td><a href="${v.root}">${v.lit("dcterms:title", l)!""}</a></td>
+		<td>${v.lit("dcterms:description", l)!""}</td>
                 <#assign download = v.download!"">
 		<td><a href="${download}.ttl">TTL</a>
 		    <a href="${download}.jsonld">JSON-LD</a>

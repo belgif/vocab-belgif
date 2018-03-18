@@ -24,8 +24,8 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list ontos as o>
-	    <tr><td><a href="${o.id}">${o.literal("rdfs", "label", l)!""}</a></td>
-		<td>${o.literal("rdfs", "comment", l)!""}</td>
+	    <tr><td><a href="${o.id}">${o.lit("rdfs:label", l)!""}</a></td>
+		<td>${o.lit("rdfs:comment", l)!""}</td>
                 <#assign download = o.download?remove_ending("#")>
                 <td><a href="${download}.ttl">TTL</a>
                     <a href="${download}.jsonld">JSON-LD</a>
@@ -47,8 +47,8 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list xmlns as n>
-	    <tr><td>${n.literal("dcterms", "title", l)!""}</td>
-		<td>${n.literal("dcterms", "description", l)!""}</td>
+	    <tr><td>${n.lit("dcterms:title", l)!""}</td>
+		<td>${n.lit("dcterms:description", l)!""}</td>
 		<td><a href="${n.download!""}">XSD</a></td>
 	    </tr>
 	    </#list>

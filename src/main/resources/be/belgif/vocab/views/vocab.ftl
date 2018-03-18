@@ -27,7 +27,7 @@
 	    <table>
 	    <#assign n = v.notation!"">
 	    <#list langs as lang>
-		<#assign val = v.literal("dcterms", "description", lang)!"">
+		<#assign val = v.lit("dcterms:description", lang)!"">
 		<#if val?has_content>
 		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
 		 </#if>

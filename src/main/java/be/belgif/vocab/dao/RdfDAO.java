@@ -135,13 +135,25 @@ public class RdfDAO {
 	 * @param prefix property namespace prefix
 	 * @param term property term
 	 * @param lang language code
-	 * @return literals (IRI or literal)
+	 * @return literal (IRI or value)
 	 */
 	public String literal(String prefix, String term, String lang) {
 		Iterator<String> i = literals(prefix, term, lang).iterator();
 		return (i.hasNext() ? i.next() : null);
 	}
 
+	/**
+	 * Shortcut for getting one literal
+	 * 
+	 * @param term prefixed term
+	 * @param lang language code
+	 * @return literal (IRI or value) 
+	 */
+	public String lit(String term, String lang) {
+		String parts[] = term.split(":");
+		return literal(parts[0], parts[1], lang);
+	}
+	
 	/**
 	 * Get a set of literals
 	 *
@@ -161,6 +173,18 @@ public class RdfDAO {
 		return vals;
 	}
 
+	/**
+	 * Shortcut for getting a set of literals
+	 * 
+	 * @param term prefixed term
+	 * @param lang language code
+	 * @return literals (IRI or value) 
+	 */
+	public Set<String> lits(String term, String lang) {
+		String parts[] = term.split(":");
+		return literals(parts[0], parts[1], lang);
+	}
+	
 	/**
 	 * Get sameAs URI
 	 *
