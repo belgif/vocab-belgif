@@ -217,6 +217,9 @@ public class App extends Application<AppConfig> {
 
 			importFiles(config.getOntos().getImportDir(),
 					target.path("tasks/onto-import"));
+
+			importFiles(config.getShacls().getImportDir(),
+					target.path("tasks/shacls-import"));
 			
 			importFiles(config.getXsds().getImportDir(),
 					target.path("tasks/xmlns-register"));

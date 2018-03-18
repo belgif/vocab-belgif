@@ -39,16 +39,13 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class OntoImportTask extends AbstractImportDumpTask {
-	
-	
+		
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntoImportTask.class);
 
-
 	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
+	protected void process(RepositoryConnection conn, String name, Resource ctx) 
+								throws IOException {
 		writeDumps(conn, name, ctx);
-		
-		//conn.remove((Resource) null, null, null, ctx);
 	}
 	
 	/**

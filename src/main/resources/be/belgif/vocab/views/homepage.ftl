@@ -4,7 +4,7 @@
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
 <link rel="alternate" type="text/turtle" href="/void" />
-<title>Vocab Belgif - DEMO</title>
+<#include "title.ftl">
 </head>
 <body>
 <#include "header.ftl">

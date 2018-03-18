@@ -4,7 +4,7 @@
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
 <link rel="alternate" type="text/turtle" href="/ns" />
-<title>Vocab Belgif - DEMO</title>
+<#include "title.ftl">
 </head>
 <body>
 <#include "header.ftl">
@@ -27,13 +27,9 @@
 	    <tr><td><a href="${o.id}">${o.literal("rdfs", "label", l)!""}</a></td>
 		<td>${o.literal("rdfs", "comment", l)!""}</td>
                 <#assign download = o.download?remove_ending("#")>
-                <td>OWL: <a href="${download}.ttl">TTL</a>
-                        <a href="${download}.jsonld">JSON-LD</a>
-                        <a href="${download}.nt">N-Triples</a><br/>
-                    SHACL: <a href="${download}-shacl.ttl">TTL</a>
-                        <a href="${download}-shacl.jsonld">JSON-LD</a>
-                        <a href="${download}-shacl.nt">N-Triples</a>
-                    </td>
+                <td><a href="${download}.ttl">TTL</a>
+                    <a href="${download}.jsonld">JSON-LD</a>
+                    <a href="${download}.nt">N-Triples</a></td>
 	    </tr>
 	    </#list>
 	    </table>

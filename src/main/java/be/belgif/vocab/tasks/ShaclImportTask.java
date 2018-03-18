@@ -34,21 +34,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Import an ontology file and create (static) download files in various formats.
+ * Import a SHACL file and create (static) download files in various formats.
  *
  * @author Bart.Hanssens
  */
 public class ShaclImportTask extends AbstractImportDumpTask {
 	
-	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(ShaclImportTask.class);
 
 
 	@Override
-	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
+	protected void process(RepositoryConnection conn, String name, Resource ctx) 
+							throws IOException {
 		writeDumps(conn, name, ctx);
-		
-		//conn.remove((Resource) null, null, null, ctx);
 	}
 	
 	/**
