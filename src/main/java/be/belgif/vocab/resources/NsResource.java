@@ -46,6 +46,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * XML namespaces and RDFS/OWL ontologies
@@ -63,52 +64,7 @@ public class NsResource extends RdfResource {
 		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
 					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
-		
-	@GET
-	@Path("{file: .+\\.jsonld}")
-	@Produces({RDFMediaType.JSONLD})
-	public File getJsonFile(@PathParam("file") String file) {
-		return Paths.get(this.ontoDir, file).toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.JSONLD})
-	public File getJsonDefFile(@PathParam("onto") String onto) {
-		return getJsonFile(onto + ".jsonld");
-	}
-
-	@GET
-	@Path("{file: .+\\.nt}")
-	@Produces({RDFMediaType.NTRIPLES})
-	public File getNtFile(@PathParam("file") String file) {
-		return Paths.get(this.ontoDir, file).toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.NTRIPLES})
-	public File getNtDefFile(@PathParam("onto") String onto) {
-		return getNtFile(onto + ".nt");
-	}
 	
-	@GET
-	@Path("{file: .+\\.ttl}")
-	@Produces({RDFMediaType.TTL})
-	public File getTtlFile(@PathParam("file") String file) {
-		return Paths.get(this.ontoDir, file).toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.TTL})
-	public File getTtlDefFile(@PathParam("onto") String onto) {
-		return getTtlFile(onto + ".ttl");
-	}	
-	@GET
-	@Path("{file: .+\\.xsd}")
-	@Produces({MediaType.APPLICATION_XML, MediaType.TEXT_XML})
-	public File getXsdFile(@PathParam("file") String file) {
-		return Paths.get(this.xsdDir, file).toFile();
-	}
-
 	@GET
 	@Path("/{onto}")
 	@Produces(MediaType.TEXT_HTML)
@@ -119,7 +75,30 @@ public class NsResource extends RdfResource {
 		Model m = getById(null, ctx);
 		return new OntoView(onto, m, lang.orElse("en"));
 	}
+	
+	@GET
+	@Path("{file: .+\\.(jsonld|nt|ttl)}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
+	public File getOntoFile(@PathParam("file") String file) {
+		return Paths.get(this.ontoDir, file).toFile();
+	}
+	
+	@GET
+	@Path("/{onto}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
+	public File getOntoAsFile(@PathParam("onto") String onto) {
+		return Paths.get(this.ontoDir, onto).toFile();
+	}
 
+
+	@GET
+	@Path("{file: .+\\.xsd}")
+	@Produces({MediaType.APPLICATION_XML, MediaType.TEXT_XML})
+	public File getXsdFile(@PathParam("file") String file) {
+		return Paths.get(this.xsdDir, file).toFile();
+	}
+
+	
 	/**
 	 * Constructor
 	 *

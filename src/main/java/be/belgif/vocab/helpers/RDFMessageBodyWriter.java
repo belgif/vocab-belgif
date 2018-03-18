@@ -54,7 +54,7 @@ import org.eclipse.rdf4j.rio.Rio;
 @Provider
 @Produces({RDFMediaType.JSONLD + ";charset=utf-8",
 	RDFMediaType.NTRIPLES + ";charset=utf-8",
-	RDFMediaType.TTL + ";charset=utf-8",
+	RDFMediaType.TURTLE + ";charset=utf-8",
 	RDFMediaType.TRIG + ";charset=utf-8"})
 public class RDFMessageBodyWriter implements MessageBodyWriter<Model> {
 

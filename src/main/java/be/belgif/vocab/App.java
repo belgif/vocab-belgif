@@ -34,6 +34,7 @@ import be.belgif.vocab.resources.LdfResource;
 import be.belgif.vocab.resources.NsResource;
 import be.belgif.vocab.resources.RootResource;
 import be.belgif.vocab.resources.SearchResource;
+import be.belgif.vocab.resources.ShaclResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
@@ -155,9 +156,13 @@ public class App extends Application<AppConfig> {
 		
 		
 		env.jersey().register(new VocabResource(repo));
-		env.jersey().register(new DatasetResource(config.getVocabs().getDownloadDir()));
-		env.jersey().register(new NsResource(repo, config.getOntos().getDownloadDir(),
-							config.getXsds().getDownloadDir()));
+		env.jersey().register(new DatasetResource(
+						config.getVocabs().getDownloadDir()));
+		env.jersey().register(new NsResource(repo, 
+						config.getOntos().getDownloadDir(),
+						config.getXsds().getDownloadDir()));
+		env.jersey().register(new ShaclResource(repo, 
+						config.getShacls().getDownloadDir()));
 		
 		// Services
 		env.jersey().register(new SearchResource(repo));

@@ -28,8 +28,6 @@ package be.belgif.vocab;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.dropwizard.Configuration;
-//import io.dropwizard.bundles.assets.AssetsBundleConfiguration;
-//import io.dropwizard.bundles.assets.AssetsConfiguration;
 
 import java.util.Map;
 import javax.validation.constraints.NotNull;
@@ -83,22 +81,22 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	private Map<String, Map<String, String>> views;
 
 	@NotNull
+	@JsonProperty("ontologies")
+	private ImportDownloadFactory ontos = new ImportDownloadFactory();
+
+	@NotNull
 	@JsonProperty("vocabularies")
 	private ImportDownloadFactory vocabs = new ImportDownloadFactory();
+	
+	@NotNull
+	@JsonProperty("shacls")
+	private ImportDownloadFactory shacls = new ImportDownloadFactory();
 
 	@NotNull
 	@JsonProperty("xmlnamespaces")
 	private ImportDownloadFactory xsds = new ImportDownloadFactory();
+
 	
-	@NotNull
-	@JsonProperty("ontologies")
-	private ImportDownloadFactory ontos = new ImportDownloadFactory();
-	
-/*	@Valid
-	@NotNull
-	@JsonProperty
-	private final AssetsConfiguration assets = AssetsConfiguration.builder().build();
-*/
 	@JsonProperty
 	public String getDataDir() {
 		return dataDir;
@@ -148,6 +146,16 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	public void setOntos(ImportDownloadFactory ontos) {
 		this.ontos = ontos;
 	}
+
+	@JsonProperty
+	public ImportDownloadFactory getShacls() {
+		return shacls;
+	}
+	
+	@JsonProperty
+	public void setShacls(ImportDownloadFactory shacls) {
+		this.shacls = shacls;
+	}
 	
 	@JsonProperty
 	public ImportDownloadFactory getVocabs() {
@@ -168,9 +176,4 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	public void setXsds(ImportDownloadFactory xsds) {
 		this.xsds = xsds;
 	}
-
-/*	@Override
-	public AssetsConfiguration getAssetsConfiguration() {
-		return assets;
-	} */
 }

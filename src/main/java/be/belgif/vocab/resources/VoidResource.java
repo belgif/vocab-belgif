@@ -49,7 +49,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/void")
 public class VoidResource extends RdfResource {
 	@GET
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
 	public Model getVoid() {
 		return getByClass(SKOS.CONCEPT_SCHEME);
 	}	

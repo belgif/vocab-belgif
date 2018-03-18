@@ -52,7 +52,7 @@ public class SearchResource extends RdfResource {
 
 	@GET
 	@Path("/{vocab}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
 	public Model search(@PathParam("type") String vocab, @QueryParam("q") String text) {
 		return QueryHelperFTS.getFTS(getRepository(), text, QueryHelper.VOCAB, vocab);
 	}

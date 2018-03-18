@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,62 +23,57 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.helpers;
+package be.belgif.vocab.dao;
 
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
-import javax.ws.rs.core.MediaType;
-
-import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
+import org.eclipse.rdf4j.model.vocabulary.SHACL;
 
 /**
- * Helper class for RDF serialization types
+ * DAO helper class for SHACL overview.
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
-public class RDFMediaType {
-	// can't use RDFFormat.xyz.toString(): not constant
-	public final static String JSONLD = "application/ld+json";
-	public final static String NTRIPLES = "application/n-triples";
-	public final static String TRIG = "application/trig";
-	public final static String TURTLE = "text/turtle";
+public class ShaclDAO extends RdfDAO {
+	private final List<RdfDAO> shapes = new ArrayList<>();
 
-	private final static Set<RDFFormat> FMTS = new HashSet<>();
-	static {
-		FMTS.add(RDFFormat.JSONLD);
-		FMTS.add(RDFFormat.NTRIPLES);
-		FMTS.add(RDFFormat.TRIG);
-		FMTS.add(RDFFormat.TURTLE);
-	}
-		
 	/**
-	 * Get RDF format from file extension
-	 * @param ext file extension
-	 * @return RDFFormat or null
+	 * Get list of SHACL property shapes
+	 * @return 
 	 */
-	public static RDFFormat getRDFFormat(String ext) {
-		for(RDFFormat fmt: FMTS) {
-			if (fmt.hasFileExtension(ext)) {
-				return fmt;
-			}
-		}
-		return null;
+	public List<RdfDAO> getShapes() {
+		return this.shapes;
 	}
 	
 	/**
-	 * Get RDF Format from mediatype
-	 *
-	 * @param mt Jersey media type
-	 * @return RDFFormat or null
+	 * Initialize SHACL property shapes
+	 * 
+	 * @param m 
 	 */
-	public static RDFFormat getRDFFormat(MediaType mt) {
-		String mime = mt.getType() + "/" + mt.getSubtype();
-		for (RDFFormat fmt: FMTS) {
-			if (fmt.hasMIMEType(mime)) {
-				return fmt;
-			}
-		}
-		return null;
+	private void initPropShapes(Model m) {
+		Model mp = new LinkedHashModel();
+		Set<Resource> s = m.filter(null, RDF.TYPE, SHACL.PROPERTY).subjects();
+
+		s.forEach(p -> shapes.add(new RdfDAO(mp, (IRI) p)));
+		m.removeAll(mp);
+	}
+	
+ 	/**
+	 * Constructor
+	 *
+	 * @param m triples
+	 * @param id subject ID
+	 */
+	public ShaclDAO(Model m, IRI id) {
+		super(m, id);
+		initPropShapes(m);
 	}
 }

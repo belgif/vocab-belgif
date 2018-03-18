@@ -39,8 +39,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.repository.Repository;
 
@@ -71,7 +71,7 @@ public class VocabResource extends RdfResource {
 	
 	@GET
 	@Path("/{vocab}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
 	public Model getVocabRDF(@PathParam("vocab") String vocab) {
 		return get(vocab, "");
 	}
@@ -86,7 +86,7 @@ public class VocabResource extends RdfResource {
 
 	@GET
 	@Path("/{vocab}/{term}")
-	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TTL})
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
 	public Model getVocabTermRDF(@PathParam("vocab") String vocab,
 			@PathParam("term") String term) {
 		return get(vocab, term);

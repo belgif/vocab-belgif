@@ -45,10 +45,20 @@ public class OwlDAO extends RdfDAO {
 	private final List<RdfDAO> classes = new ArrayList<>();
 	private final List<RdfDAO> properties = new ArrayList<>();
 	
+	/**
+	 * Get RDFS/OWL classes
+	 * 
+	 * @return 
+	 */
 	public List<RdfDAO> getClasses() {
 		return this.classes;
 	}
 	
+	/**
+	 * Get RDFS/OWL properties
+	 * 
+	 * @return 
+	 */
 	public List<RdfDAO> getProperties() {
 		return this.properties;
 	}

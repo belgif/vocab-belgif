@@ -39,18 +39,19 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * Static file Writer
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 @Provider
 @Produces({MediaType.APPLICATION_XML + ";charset=utf-8", 
 	MediaType.TEXT_XML + ";charset=utf-8",
 	RDFMediaType.JSONLD + ";charset=utf-8",
 	RDFMediaType.NTRIPLES + ";charset=utf-8",
-	RDFMediaType.TTL + ";charset=utf-8"})
+	RDFMediaType.TURTLE + ";charset=utf-8"})
 public class FileMessageBodyWriter implements MessageBodyWriter<File> {
 
 	@Override
@@ -68,6 +69,15 @@ public class FileMessageBodyWriter implements MessageBodyWriter<File> {
 			MultivaluedMap<String, Object> headers, OutputStream out)
 			throws IOException, WebApplicationException {
 
+		// check if there is a file extension
+		if (! f.getName().contains(".")) {
+			RDFFormat fmt = RDFMediaType.getRDFFormat(mt);
+			if (fmt == null) {
+				throw new WebApplicationException(Response.Status.NOT_ACCEPTABLE);
+			}
+			f = new File(f.toString() + "." + fmt.getDefaultFileExtension());
+		}
+		
 		if (! Files.isRegularFile(f.toPath())){
 			throw new WebApplicationException(Response.Status.NOT_FOUND);
 		}

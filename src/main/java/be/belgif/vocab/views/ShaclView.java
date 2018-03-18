@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2018, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,62 +23,45 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.helpers;
+package be.belgif.vocab.views;
 
-import java.util.HashSet;
-import java.util.Set;
+import be.belgif.vocab.dao.OwlDAO;
 
-import javax.ws.rs.core.MediaType;
+import java.util.Iterator;
 
-import org.eclipse.rdf4j.rio.RDFFormat;
+import javax.ws.rs.ext.Provider;
+
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
+import org.eclipse.rdf4j.model.vocabulary.RDF;
 
 /**
- * Helper class for RDF serialization types
- *
+ * HTML view for SKOS concept schema
+ * 
  * @author Bart.Hanssens
  */
-public class RDFMediaType {
-	// can't use RDFFormat.xyz.toString(): not constant
-	public final static String JSONLD = "application/ld+json";
-	public final static String NTRIPLES = "application/n-triples";
-	public final static String TRIG = "application/trig";
-	public final static String TURTLE = "text/turtle";
-
-	private final static Set<RDFFormat> FMTS = new HashSet<>();
-	static {
-		FMTS.add(RDFFormat.JSONLD);
-		FMTS.add(RDFFormat.NTRIPLES);
-		FMTS.add(RDFFormat.TRIG);
-		FMTS.add(RDFFormat.TURTLE);
-	}
-		
-	/**
-	 * Get RDF format from file extension
-	 * @param ext file extension
-	 * @return RDFFormat or null
-	 */
-	public static RDFFormat getRDFFormat(String ext) {
-		for(RDFFormat fmt: FMTS) {
-			if (fmt.hasFileExtension(ext)) {
-				return fmt;
-			}
-		}
-		return null;
+@Provider
+public class ShaclView extends RdfView {
+	private final OwlDAO onto;
+	
+	public OwlDAO getOnto() {
+		return this.onto;
 	}
 	
-	/**
-	 * Get RDF Format from mediatype
-	 *
-	 * @param mt Jersey media type
-	 * @return RDFFormat or null
+	/** 
+	 * Constructor
+	 * 
+	 * @param onto ontology name name
+	 * @param m triples
+	 * @param lang language
 	 */
-	public static RDFFormat getRDFFormat(MediaType mt) {
-		String mime = mt.getType() + "/" + mt.getSubtype();
-		for (RDFFormat fmt: FMTS) {
-			if (fmt.hasMIMEType(mime)) {
-				return fmt;
-			}
-		}
-		return null;
+	public ShaclView(String onto, Model m, String lang) {
+		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
+		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
+		Iterator<Resource> i = m.subjects().iterator();
+		this.onto = i.hasNext() ? new OwlDAO(m, (IRI) i.next()) : null;
 	}
 }
+

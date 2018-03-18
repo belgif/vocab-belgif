@@ -44,23 +44,9 @@ public class DatasetResource {
 	private final String vocabDir;
 	
 	@GET
-	@Path("{file: .+\\.jsonld}")
-	@Produces({RDFMediaType.JSONLD})
+	@Path("{file: .+\\.(nt|jsonld|ttl)}")
+	@Produces({RDFMediaType.NTRIPLES, RDFMediaType.JSONLD, RDFMediaType.TURTLE})
 	public File getJsonFile(@PathParam("file") String file) {
-		return Paths.get(vocabDir, file).toFile();
-	}
-
-	@GET
-	@Path("{file: .+\\.nt}")
-	@Produces({RDFMediaType.NTRIPLES})
-	public File getTriplesFile(@PathParam("file") String file) {
-		return Paths.get(vocabDir, file).toFile();
-	}
-		
-	@GET
-	@Path("{file: .+\\.ttl}")
-	@Produces({RDFMediaType.TTL})
-	public File getTtlFile(@PathParam("file") String file) {
 		return Paths.get(vocabDir, file).toFile();
 	}
 

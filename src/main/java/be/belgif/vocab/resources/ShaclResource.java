@@ -46,9 +46,10 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
- * SHACL validation rules
+ * SHACL shapes
  *
  * @author Bart Hanssens
  */
@@ -58,64 +59,36 @@ public class ShaclResource extends RdfResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
-	public OntoListView getShaclHTML(@QueryParam("lang") Optional<String> lang) {
+	public OntoListView getListHTML(@QueryParam("lang") Optional<String> lang) {
 		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
 					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
 	
-		
 	@GET
-	@Path("{file: .+\\.jsonld}")
-	@Produces({RDFMediaType.JSONLD})
-	public File getJsonFile(@PathParam("file") String file) {
-		return Paths.get(this.shaclDir, file).toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.JSONLD})
-	public File getJsonDefFile(@PathParam("onto") String onto) {
-		return getJsonFile(onto + ".jsonld");
-	}
-
-	@GET
-	@Path("{file: .+\\.nt}")
-	@Produces({RDFMediaType.NTRIPLES})
-	public File getNtFile(@PathParam("file") String file) {
-		return Paths.get(this.shaclDir, file).toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.NTRIPLES})
-	public File getNtDefFile(@PathParam("onto") String onto) {
-		return getNtFile(onto + ".nt");
-	}
-	
-	@GET
-	@Path("{file: .+\\.ttl}")
-	@Produces({RDFMediaType.TTL})
-	public File getTtlFile(@PathParam("file") String file) {
-		return Paths.get(this.shaclDir,
-			file.endsWith(".ttl") ? file : file + ".ttl").toFile();
-	}
-	@GET
-	@Path("/{onto}")
-	@Produces({RDFMediaType.TTL})
-	public File getTtlDefFile(@PathParam("onto") String onto) {
-		return getNtFile(onto + ".ttl");
-	}	
-	
-
-	@GET
-	@Path("/{onto}")
+	@Path("/{shacl}")
 	@Produces(MediaType.TEXT_HTML)
-	public OntoView getOntoHTML(@PathParam("onto") String onto,
+	public OntoView getShaclHTML(@PathParam("shacl") String shacl,
 				@QueryParam("lang") Optional<String> lang) {
 		//String subj = PREFIX + onto + "#";
-		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, shacl);
 		Model m = getById(null, ctx);
-		return new OntoView(onto, m, lang.orElse("en"));
+		return new OntoView(shacl, m, lang.orElse("en"));
 	}
-
+	
+	@GET
+	@Path("{file: .+\\.(jsonld|nt|ttl)}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
+	public File getShaclFile(@PathParam("file") String file) {
+		return Paths.get(this.shaclDir, file).toFile();
+	}
+	
+	@GET
+	@Path("/{shacl}")
+	@Produces({RDFMediaType.JSONLD, RDFMediaType.NTRIPLES, RDFMediaType.TURTLE})
+	public File getShaclAsFile(@PathParam("shacl") String shacl) {
+		return Paths.get(this.shaclDir, shacl).toFile();
+	}
+	
 	/**
 	 * Constructor
 	 *
