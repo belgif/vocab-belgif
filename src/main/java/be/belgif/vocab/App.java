@@ -39,6 +39,7 @@ import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
 import be.belgif.vocab.tasks.LuceneReindexTask;
 import be.belgif.vocab.tasks.OntoImportTask;
+import be.belgif.vocab.tasks.ShaclImportTask;
 import be.belgif.vocab.tasks.XmlnsRegisterTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 
@@ -172,6 +173,8 @@ public class App extends Application<AppConfig> {
 		// Tasks
 		env.admin().addTask(new OntoImportTask(repo, config.getOntos().getImportDir(),
 						config.getOntos().getDownloadDir()));
+		env.admin().addTask(new ShaclImportTask(repo, config.getShacls().getImportDir(),
+						config.getShacls().getDownloadDir()));
 		env.admin().addTask(new VocabImportTask(repo, config.getVocabs().getImportDir(), 
 						config.getVocabs().getDownloadDir()));
 		env.admin().addTask(new XmlnsRegisterTask(repo, config.getXsds().getImportDir()));
