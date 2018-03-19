@@ -35,8 +35,6 @@ import javax.ws.rs.ext.Provider;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.vocabulary.OWL;
-import org.eclipse.rdf4j.model.vocabulary.RDF;
 
 /**
  * HTML view for the list of SHACLs

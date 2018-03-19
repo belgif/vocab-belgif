@@ -25,9 +25,7 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.OntoDAO;
-import be.belgif.vocab.dao.ShaclDAO;
-import be.belgif.vocab.dao.XmlnsDAO;
+import be.belgif.vocab.dao.RdfDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +43,7 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  */
 @Provider
 public class ShaclListView extends RdfView {
-	private final List<OntoDAO> shacls = new ArrayList();
+	private final List<RdfDAO> shacls = new ArrayList();
 
 
 	/**
@@ -53,7 +51,7 @@ public class ShaclListView extends RdfView {
 	 * 
 	 * @return list
 	 */
-	public List<OntoDAO> getShacls() {
+	public List<RdfDAO> getShacls() {
 		return this.shacls;
 	}
 	
@@ -66,11 +64,12 @@ public class ShaclListView extends RdfView {
 	public ShaclListView(Model ms, String lang) {
 		super("shacllist.ftl", lang);
 		
-		ms.subjects().stream().forEachOrdered(subj -> {
+		ms.subjects().stream().filter(s -> s.toString().contains("shacl"))
+							.forEachOrdered(subj -> {
 			Model m = new LinkedHashModel();
 			ms.getNamespaces().forEach(m::setNamespace);
 			m.addAll(ms.filter(subj, null, null));
-			shacls.add(new OntoDAO(m, (IRI) subj));
+			shacls.add(new RdfDAO(m, (IRI) subj));
 		});	
 	}
 }

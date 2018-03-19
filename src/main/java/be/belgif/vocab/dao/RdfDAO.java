@@ -55,14 +55,6 @@ public class RdfDAO {
 	private final Model m;
 	private final IRI id;
 
-	/**
-	 * GET subject ID
-	 * 
-	 * @return 
-	 */
-	protected IRI getID() {
-		return this.id;
-	}
 	
 	/**
 	 * Get model

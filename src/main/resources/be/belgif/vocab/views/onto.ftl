@@ -121,7 +121,7 @@
 		</#if>
                 <#assign val = pr.obj("rdfs", "range")!"">
 		<#if val?has_content>
-		    <tr><td>Range</td><td>${val}</td></tr>
+		    <tr><td>Range</td><td><a href="${val}">${val}</a></td></tr>
 		</#if>
             </table>
 	</#list>

@@ -3,7 +3,6 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
-<link rel="alternate" type="text/turtle" href="/ns" />
 <#include "title.ftl">
 </head>
 <body>
@@ -26,7 +25,7 @@
 	    <#list ontos as o>
 	    <tr><td><a href="${o.id}">${o.lit("rdfs:label", l)!""}</a></td>
 		<td>${o.lit("rdfs:comment", l)!""}</td>
-                <#assign download = o.download?remove_ending("#")>
+                <#assign download = o.id?remove_ending("#")>
                 <td><a href="${download}.ttl">TTL</a>
                     <a href="${download}.jsonld">JSON-LD</a>
                     <a href="${download}.nt">N-Triples</a></td>

@@ -3,7 +3,6 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
-<link rel="alternate" type="text/turtle" href="/shacl" />
 <#include "title.ftl">
 </head>
 <body>
@@ -26,7 +25,7 @@
 	    <#list shacls as s>
 	    <tr><td><a href="${s.id}">${s.literal("rdfs", "label", l)!""}</a></td>
 		<td>${s.literal("rdfs", "comment", l)!""}</td>
-                <#assign download = s.download?remove_ending("#")>
+                <#assign download = s.id?remove_ending("#")>
                 <td><a href="${download}.ttl">TTL</a>
                     <a href="${download}.jsonld">JSON-LD</a>
                     <a href="${download}.nt">N-Triples</a></td>

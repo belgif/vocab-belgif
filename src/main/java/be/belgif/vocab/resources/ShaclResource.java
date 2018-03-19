@@ -29,6 +29,8 @@ import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.OntoListView;
 import be.belgif.vocab.views.OwlView;
+import be.belgif.vocab.views.ShaclListView;
+import be.belgif.vocab.views.ShaclView;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -43,10 +45,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * SHACL shapes
@@ -59,20 +59,18 @@ public class ShaclResource extends RdfResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
-	public OntoListView getListHTML(@QueryParam("lang") Optional<String> lang) {
-		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
-					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
+	public ShaclListView getListHTML(@QueryParam("lang") Optional<String> lang) {
+		return new ShaclListView(getByClass(OWL.ONTOLOGY), lang.orElse("en"));
 	}
 	
 	@GET
 	@Path("/{shacl}")
 	@Produces(MediaType.TEXT_HTML)
-	public OwlView getShaclHTML(@PathParam("shacl") String shacl,
+	public ShaclView getShaclHTML(@PathParam("shacl") String shacl,
 				@QueryParam("lang") Optional<String> lang) {
-		//String subj = PREFIX + onto + "#";
-		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, shacl);
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.SHACLS, shacl);
 		Model m = getById(null, ctx);
-		return new OwlView(shacl, m, lang.orElse("en"));
+		return new ShaclView(shacl, m, lang.orElse("en"));
 	}
 	
 	@GET

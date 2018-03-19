@@ -59,5 +59,4 @@ public class ShaclImportTask extends AbstractImportDumpTask {
 	public ShaclImportTask(Repository repo, String inDir, String outDir) {
 		super("import-shacl", repo, inDir, outDir, "shacl");
 	}
-
 }
