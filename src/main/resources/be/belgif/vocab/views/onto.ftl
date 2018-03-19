@@ -19,6 +19,7 @@
     <section>
         <h3>${m.getString("msg.general")}</h3>
         <table>
+        <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
         <#assign val = o.lit("rdfs:label", l)!"">
         <#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
@@ -33,7 +34,8 @@
 	    <h4>Classes</h4>
 	    <table>
 	    <#list c?sort_by("id") as cl>
-		<tr><td><a href="${cl.id}">${cl.id}</a></td></tr>
+                <#assign name = cl.id.localName>
+		<tr><td><a href="#${name}">${name}</a></td></tr>
 	    </#list>
 	    </table>
 	</section>
@@ -43,7 +45,8 @@
 	    <h4>Properties</h4>
 	    <table>
 	    <#list p?sort_by("id") as pr>
-		<tr><td><a href="${pr.id}">${pr.id}</a></td></tr>
+                <#assign name = pr.id.localName>
+		<tr><td><a href="#${name}">${name}</a></td></tr>
 	    </#list>
 	    </table>
 	</section>
@@ -51,11 +54,12 @@
     </section>
     <#if c?has_content>
     <section>
-	<h3>Classes</h3>
+        <h3>Classes</h3>
 	<#list c?sort_by("id") as cl>
-            <a name="${cl.id}">
+            <#assign name = cl.id.localName>
+            <a name="#${name}">
             <table>
-                <tr><th colspan="2">${cl.id}</th></tr>
+                <tr><th colspan="2">${name}</th></tr>
                 <#assign val = cl.objs("rdfs", "subClassOf")>
                 <#if val?has_content>
                     <#list val as subc>
@@ -88,9 +92,10 @@
     <section>
 	<h3>Properties</h3>
 	<#list p?sort_by("id") as pr>
-            <a name="${pr.id}">
+            <#assign name = pr.id.localName>
+            <a name="${name}">
             <table>
-                <tr><th colspan="2">${pr.id}</th></tr>
+                <tr><th colspan="2">${name}</th></tr>
                 <#assign val = pr.objs("rdfs", "subPropertyOf")>
                 <#if val?has_content>
                     <#list val as subp>

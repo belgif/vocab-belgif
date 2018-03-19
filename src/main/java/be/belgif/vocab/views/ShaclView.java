@@ -25,16 +25,13 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.OwlDAO;
 import be.belgif.vocab.dao.ShaclDAO;
 
-import java.util.Iterator;
 
 import javax.ws.rs.ext.Provider;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
 
 /**
  * HTML view for the list of SHACLs
@@ -58,8 +55,7 @@ public class ShaclView extends RdfView {
 	 */
 	public ShaclView(String shacl, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "shacl.ftl", lang);
-		Iterator<Resource> i = m.subjects().iterator();
-		this.shacl = i.hasNext() ? new ShaclDAO(m, (IRI) i.next()) : null;
+		this.shacl = new ShaclDAO(m, (IRI) null);
 	}
 }
 

@@ -240,7 +240,7 @@ public class App extends Application<AppConfig> {
 			importFiles(config.getVocabs().getImportDir(),
 					target.path("tasks/" + VocabImportTask.NAME));
 		
-			cl.target(localhost).path("tasks/lucene-reindex")
+			cl.target(localhost).path("tasks/" + LuceneReindexTask.NAME)
 				.request().post(Entity.text(""));
 		} catch (IOException ioe) {
 			LOG.error("Could not import on startup", ioe);
