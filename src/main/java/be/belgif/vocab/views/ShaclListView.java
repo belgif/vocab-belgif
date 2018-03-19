@@ -26,6 +26,7 @@
 package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.OntoDAO;
+import be.belgif.vocab.dao.ShaclDAO;
 import be.belgif.vocab.dao.XmlnsDAO;
 
 import java.util.ArrayList;
@@ -38,55 +39,38 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
- * HTML view for the list of RDFS/OWL ontologies
+ * HTML view for the list of SHACL ontologies
  * 
  * @author Bart Hanssens
  */
 @Provider
-public class OntoListView extends RdfView {
-	private final List<XmlnsDAO> xmlns = new ArrayList();
-	private final List<OntoDAO> ontos = new ArrayList();	
+public class ShaclListView extends RdfView {
+	private final List<OntoDAO> shacls = new ArrayList();
+
 
 	/**
-	 * Get the list of ontologies
+	 * Get the list of SHACLs
 	 * 
 	 * @return list
 	 */
-	public List<OntoDAO> getOntos() {
-		return this.ontos;
-	}
-	
-	/**
-	 * Get the list of XSD namespaces
-	 * 
-	 * @return list
-	 */
-	public List<XmlnsDAO> getXmlns() {
-		return this.xmlns;
+	public List<OntoDAO> getShacls() {
+		return this.shacls;
 	}
 	
 	/** 
 	 * Constructor
 	 * 
-	 * @param mx XSD namespaces as triples
-	 * @param mo ontologies as triples
+	 * @param ms SHACLs as triples
 	 * @param lang language
 	 */
-	public OntoListView(Model mx, Model mo, String lang) {
-		super("ontolist.ftl", lang);
+	public ShaclListView(Model ms, String lang) {
+		super("shacllist.ftl", lang);
 		
-		mx.subjects().stream().forEachOrdered(subj -> {
+		ms.subjects().stream().forEachOrdered(subj -> {
 			Model m = new LinkedHashModel();
-			mx.getNamespaces().forEach(m::setNamespace);
-			m.addAll(mx.filter(subj, null, null));
-			xmlns.add(new XmlnsDAO(m, (IRI) subj));
-		});
-		
-		mo.subjects().stream().forEachOrdered(subj -> {
-			Model m = new LinkedHashModel();
-			mo.getNamespaces().forEach(m::setNamespace);
-			m.addAll(mo.filter(subj, null, null));
-			ontos.add(new OntoDAO(m, (IRI) subj));
-		});
+			ms.getNamespaces().forEach(m::setNamespace);
+			m.addAll(ms.filter(subj, null, null));
+			shacls.add(new OntoDAO(m, (IRI) subj));
+		});	
 	}
 }

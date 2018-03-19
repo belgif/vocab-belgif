@@ -51,6 +51,7 @@ import io.dropwizard.views.ViewBundle;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import java.util.Map;
@@ -197,9 +198,18 @@ public class App extends Application<AppConfig> {
 	 * @throws IOException 
 	 */
 	private void importFiles(String dir, WebTarget target) throws IOException {
-		Files.list(Paths.get(dir)).forEach(f -> {
+		Path p = Paths.get(dir);
+		
+		File d = p.toFile();
+		if (! (d.exists() && d.isDirectory() && d.canRead())) {
+			LOG.error("Cannot read import files from {}", dir);
+			return;
+		}
+
+		Files.list(p).forEach(f -> {
 				target.queryParam("file", f.getFileName())
-					.request().post(Entity.text(""));
+					.request()
+					.post(Entity.text(""));
 		});
 	}
 

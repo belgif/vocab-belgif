@@ -59,8 +59,7 @@ public class ShaclView extends RdfView {
 	 * @param lang language
 	 */
 	public ShaclView(String shacl, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
-		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
+		super(m.isEmpty() ? "notfound.ftl" : "shacl.ftl", lang);
 		Iterator<Resource> i = m.subjects().iterator();
 		this.shacl = i.hasNext() ? new ShaclDAO(m, (IRI) i.next()) : null;
 	}

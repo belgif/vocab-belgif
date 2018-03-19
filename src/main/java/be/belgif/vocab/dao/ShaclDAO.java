@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.dao;
 
-import be.belgif.vocab.helpers.QueryHelper;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -34,20 +33,73 @@ import java.util.Set;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SHACL;
 
 /**
- * DAO helper class for SHACL overview.
+ * DAO helper class for SHACL shapes.
  *
  * @author Bart Hanssens
  */
 public class ShaclDAO extends RdfDAO {
+	/**
+	 * SHACL node shape
+	 */
+	public class ShaclNodeDAO extends RdfDAO {
+		private final List<RdfDAO> shapes = new ArrayList<>();
+		
+		/**
+		 * Initialize SHACL property shapes
+		 * 
+		 * @param m triples
+		 * @param node parent node shape
+		 */
+		private void initPropertyShapes(Model m, IRI node) {
+			Set<Value> subjs = new HashSet<>();
+			subjs.addAll(m.filter(node, SHACL.PROPERTY_SHAPE, null).objects());
+		
+			for(Value subj: subjs) {
+				if (! (subj instanceof Resource)) {
+					continue;
+				}
+				Model mp = new LinkedHashModel();
+				m.getNamespaces().forEach(mp::setNamespace);
+				mp.addAll(m.filter((Resource) subj, null, null));
+				shapes.add(new RdfDAO(mp, (IRI) subj));
+				m.removeAll(mp);
+			}
+		}
+
+	
+		/**
+		 * Get list of propertyshapes
+		 * 
+		 * @return 
+		 */
+		public List<RdfDAO> getPropertyShapes() {
+			return shapes;
+		}
+
+		/**
+		 * Constructor
+		 * 
+		 * @param m triples
+		 * @param id
+		 * @param fullm complete model 
+		 */
+		public ShaclNodeDAO(Model m, IRI id, Model fullm) {
+			super(m, id);
+			initPropertyShapes(m, id);
+		}
+	}
+
 	private final List<RdfDAO> shapes = new ArrayList<>();
 
 	/**
-	 * Get list of SHACL property shapes
+	 * Get list of SHACL node shapes
+	 * 
 	 * @return 
 	 */
 	public List<RdfDAO> getShapes() {
@@ -59,15 +111,15 @@ public class ShaclDAO extends RdfDAO {
 	 * 
 	 * @param m 
 	 */
-	private void initPropShapes(Model m) {
+	private void initNodeShapes(Model m) {
 		Set<Resource> subjs = new HashSet<>();
-		subjs.addAll(m.filter(null, RDF.TYPE, SHACL.PROPERTY).subjects());
+		subjs.addAll(m.filter(null, RDF.TYPE, SHACL.NODE_SHAPE).subjects());
 		
 		for(Resource subj: subjs) {
 			Model mp = new LinkedHashModel();
 			m.getNamespaces().forEach(mp::setNamespace);
 			mp.addAll(m.filter(subj, null, null));
-			shapes.add(new RdfDAO(mp, (IRI) subj));
+			shapes.add(new ShaclNodeDAO(mp, (IRI) subj, m));
 			m.removeAll(mp);
 		}
 	}
@@ -80,6 +132,6 @@ public class ShaclDAO extends RdfDAO {
 	 */
 	public ShaclDAO(Model m, IRI id) {
 		super(m, id);
-		initPropShapes(m);
+		initNodeShapes(m);
 	}
 }

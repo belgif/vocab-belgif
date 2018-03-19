@@ -115,14 +115,6 @@
 		    <tr><td>Comment</td><td>${val}</td></tr>
                     </#if>
 		</#if>
-                <#assign val = pr.obj("rdfs", "domain")!"">
-		<#if val?has_content>
-		    <tr><td>Domain</td><td><a href="${val}">${val}</a></td></tr>
-		</#if>
-                <#assign val = pr.obj("rdfs", "range")!"">
-		<#if val?has_content>
-		    <tr><td>Range</td><td>${val}</td></tr>
-		</#if>
             </table>
 	</#list>
     </section>

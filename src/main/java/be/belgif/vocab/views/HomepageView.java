@@ -34,6 +34,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
  * HTML view for homepage / VoID descriptions
@@ -62,7 +63,11 @@ public class HomepageView extends RdfView {
 	 */
 	public HomepageView(Model vocs, String lang) {
 		super("homepage.ftl", lang);
-		vocs.subjects().stream()
-			.forEachOrdered(s -> vocabs.add(new VoidDAO(vocs, (IRI) s)));		
+		vocs.subjects().stream().forEachOrdered(subj -> {
+			Model m = new LinkedHashModel();
+			vocs.getNamespaces().forEach(m::setNamespace);
+			m.addAll(vocs.filter(subj, null, null));
+			vocabs.add(new VoidDAO(m, (IRI) subj));
+		});		
 	}
 }
