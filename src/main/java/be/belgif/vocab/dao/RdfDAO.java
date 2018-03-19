@@ -49,7 +49,6 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class RdfDAO {
-
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
 
 	private final ValueFactory f = SimpleValueFactory.getInstance();

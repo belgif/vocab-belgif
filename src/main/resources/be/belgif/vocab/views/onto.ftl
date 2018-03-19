@@ -32,7 +32,7 @@
 	<section>
 	    <h4>Classes</h4>
 	    <table>
-	    <#list c as cl>
+	    <#list c?sort_by("id") as cl>
 		<tr><td><a href="${cl.id}">${cl.id}</a></td></tr>
 	    </#list>
 	    </table>
@@ -42,7 +42,7 @@
 	<section>
 	    <h4>Properties</h4>
 	    <table>
-	    <#list p as pr>
+	    <#list p?sort_by("id") as pr>
 		<tr><td><a href="${pr.id}">${pr.id}</a></td></tr>
 	    </#list>
 	    </table>
@@ -52,14 +52,14 @@
     <#if c?has_content>
     <section>
 	<h3>Classes</h3>
-	<#list c as cl>
+	<#list c?sort_by("id") as cl>
             <a name="${cl.id}">
             <table>
                 <tr><th colspan="2">${cl.id}</th></tr>
                 <#assign val = cl.objs("rdfs", "subClassOf")>
                 <#if val?has_content>
                     <#list val as subc>
-                        <tr><td>SubClassOf</td><td><td><a href="${subc}">${subc}</a></td></tr>
+                        <tr><td>SubClassOf</td><td><a href="${subc}">${subc}</a></td></tr>
                     </#list>
 		</#if>
                 <#assign val = cl.lit("rdfs:label", lang)!"">
@@ -87,7 +87,7 @@
     <#if p?has_content>
     <section>
 	<h3>Properties</h3>
-	<#list p as pr>
+	<#list p?sort_by("id") as pr>
             <a name="${pr.id}">
             <table>
                 <tr><th colspan="2">${pr.id}</th></tr>

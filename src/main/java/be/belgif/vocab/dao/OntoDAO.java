@@ -43,7 +43,6 @@ public class OntoDAO extends RdfDAO {
 	public String getDownload() {
 		return getId().toString();
 	}
-
 		
 	/**
 	 * Constructor
