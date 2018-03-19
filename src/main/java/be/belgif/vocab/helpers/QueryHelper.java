@@ -65,7 +65,7 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
  * @author Bart.Hanssens
  */
 public class QueryHelper {
-	public final static String DATASET = "datast";
+	public final static String DATASET = "dataset";
 	public final static String ONTO = "onto";
 	public final static String VOCAB = "vocab";
 	public final static String XMLNS = "xmlns";
@@ -87,7 +87,6 @@ public class QueryHelper {
 	}
 
 	private final static String PREFIX = App.getPrefix();
-	private final static String PREFIX_GRAPH = App.getPrefixGraph();
 
 	private final static ValueFactory F = SimpleValueFactory.getInstance();
 

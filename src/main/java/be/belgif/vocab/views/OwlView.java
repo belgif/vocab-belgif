@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.OntoDAO;
 import be.belgif.vocab.dao.OwlDAO;
 
 import java.util.Iterator;
@@ -65,7 +64,6 @@ public class OwlView extends RdfView {
 	 */
 	public OwlView(String onto, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
-		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
 		Iterator<Resource> i = m.subjects().iterator();
 		this.onto = i.hasNext() ? new OwlDAO(m, (IRI) i.next()) : null;
 	}

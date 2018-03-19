@@ -37,7 +37,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
 /**
- * HTML view for homepage / VoID descriptions
+ * HTML view for the list of RDFS/OWL ontologies
  * 
  * @author Bart Hanssens
  */

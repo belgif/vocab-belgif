@@ -78,6 +78,7 @@ public class OwlDAO extends RdfDAO {
 		for(Resource subj: subjs) {
 			// First copy the results to a new model, otherwise remove will fail
 			Model mc = new LinkedHashModel();
+			m.getNamespaces().forEach(mc::setNamespace);
 			mc.addAll(m.filter(subj, null, null));
 			classes.add(new RdfDAO(mc, (IRI) subj));
 			m.removeAll(mc);
@@ -97,6 +98,7 @@ public class OwlDAO extends RdfDAO {
 
 		for(Resource subj: subjs) {
 			Model mp = new LinkedHashModel();
+			m.getNamespaces().forEach(mp::setNamespace);
 			mp.addAll(m.filter(subj, null, null));
 			properties.add(new RdfDAO(mp, (IRI) subj));
 			m.removeAll(mp);

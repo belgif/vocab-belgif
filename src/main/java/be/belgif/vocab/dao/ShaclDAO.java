@@ -25,7 +25,9 @@
  */
 package be.belgif.vocab.dao;
 
+import be.belgif.vocab.helpers.QueryHelper;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -34,7 +36,6 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
-import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.model.vocabulary.SHACL;
 
 /**
@@ -59,11 +60,16 @@ public class ShaclDAO extends RdfDAO {
 	 * @param m 
 	 */
 	private void initPropShapes(Model m) {
-		Model mp = new LinkedHashModel();
-		Set<Resource> s = m.filter(null, RDF.TYPE, SHACL.PROPERTY).subjects();
-
-		s.forEach(p -> shapes.add(new RdfDAO(mp, (IRI) p)));
-		m.removeAll(mp);
+		Set<Resource> subjs = new HashSet<>();
+		subjs.addAll(m.filter(null, RDF.TYPE, SHACL.PROPERTY).subjects());
+		
+		for(Resource subj: subjs) {
+			Model mp = new LinkedHashModel();
+			m.getNamespaces().forEach(mp::setNamespace);
+			mp.addAll(m.filter(subj, null, null));
+			shapes.add(new RdfDAO(mp, (IRI) subj));
+			m.removeAll(mp);
+		}
 	}
 	
  	/**
