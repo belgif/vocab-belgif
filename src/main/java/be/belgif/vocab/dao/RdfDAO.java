@@ -56,6 +56,10 @@ public class RdfDAO {
 	private final Model m;
 	private final IRI id;
 
+	protected Model getModel() {
+		return this.m;
+	}
+	
 	/**
 	 * Get set of triple objects
 	 *

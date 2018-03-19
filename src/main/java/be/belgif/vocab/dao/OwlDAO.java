@@ -26,6 +26,7 @@
 package be.belgif.vocab.dao;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -70,13 +71,16 @@ public class OwlDAO extends RdfDAO {
 	 */
 	private void initClasses(Model m) {
 		// Get all classes and subclasses, without duplicates
-		Set<Resource> subjs = m.filter(null, RDF.TYPE, RDFS.CLASS).subjects();
+		Set<Resource> subjs = new HashSet<>();
+		subjs.addAll(m.filter(null, RDF.TYPE, RDFS.CLASS).subjects());
 		subjs.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
 		for(Resource subj: subjs) {
-			Model mc = m.filter(subj, null, null);
+			// First copy the results to a new model, otherwise remove will fail
+			Model mc = new LinkedHashModel();
+			mc.addAll(m.filter(subj, null, null));
 			classes.add(new RdfDAO(mc, (IRI) subj));
-	//		m.removeAll(mc);
+			m.removeAll(mc);
 		}
 	}
 	
@@ -87,13 +91,15 @@ public class OwlDAO extends RdfDAO {
 	 */
 	private void initProperties(Model m) {
 		// Get all properties and subproperies, without duplicates
-		Set<Resource> subjs = m.filter(null, RDF.TYPE, RDF.PROPERTY).subjects();
+		Set<Resource> subjs = new HashSet<>();
+		subjs.addAll(m.filter(null, RDF.TYPE, RDF.PROPERTY).subjects());
 		subjs.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
-		
+
 		for(Resource subj: subjs) {
-			Model mp = m.filter(subj, null, null);
+			Model mp = new LinkedHashModel();
+			mp.addAll(m.filter(subj, null, null));
 			properties.add(new RdfDAO(mp, (IRI) subj));
-	//		m.removeAll(mp);
+			m.removeAll(mp);
 		}
 	}
 	
