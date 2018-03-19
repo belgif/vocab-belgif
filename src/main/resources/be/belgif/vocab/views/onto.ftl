@@ -8,8 +8,11 @@
 <body>
 <#include "header.ftl">
 <#assign l = lang>
+<#assign langs = ['nl', 'fr', 'en', 'de', '']>
 <#assign m = messages>
 <#assign o = onto>
+<#assign c = o.classes>
+<#assign p = o.properties> 
 <main>
     <div id="container">
     <#include "message.ftl">
@@ -25,7 +28,6 @@
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>
 	</table>
-	<#assign c = o.classes>
 	<#if c?has_content>
 	<section>
 	    <h4>Classes</h4>
@@ -36,7 +38,6 @@
 	    </table>
 	</section>
 	</#if>
-        <#assign p = o.properties>
 	<#if p?has_content>
 	<section>
 	    <h4>Properties</h4>
@@ -48,6 +49,77 @@
 	</section>
 	</#if>
     </section>
+    <#if c?has_content>
+    <section>
+	<h3>Classes</h3>
+	<#list c as cl>
+            <a name="${cl.id}">
+            <table>
+                <tr><th colspan="2">${cl.id}</th></tr>
+                <#assign val = cl.objs("rdfs", "subClassOf")>
+                <#if val?has_content>
+                    <#list val as subc>
+                        <tr><td>SubClassOf</td><td><td><a href="${subc}">${subc}</a></td></tr>
+                    </#list>
+		</#if>
+                <#assign val = cl.lit("rdfs:label", lang)!"">
+		<#if val?has_content>
+		    <tr><td>Label (${lang})</td><td>${val}</td></tr>
+                <#else>
+                    <#assign val = cl.lit("rdfs:label", "")!"">
+                    <#if val?has_content>
+		    <tr><td>Label</td><td>${val}</td></tr>
+                    </#if>
+		</#if>
+                <#assign val = cl.lit("rdfs:comment", lang)!"">
+		<#if val?has_content>
+		    <tr><td>Comment (${lang})</td><td>${val}</td></tr>
+                <#else>
+                    <#assign val = cl.lit("rdfs:label", "")!"">
+                    <#if val?has_content>
+		    <tr><td>RDFS Comment</td><td>${val}</td></tr>
+                    </#if>
+		</#if>
+            </table>
+	</#list>
+    </section>
+    </#if>
+    <#if p?has_content>
+    <section>
+	<h3>Properties</h3>
+	<#list p as pr>
+            <a name="${pr.id}">
+            <table>
+                <tr><th colspan="2">${pr.id}</th></tr>
+                <#assign val = pr.objs("rdfs", "subPropertyOf")>
+                <#if val?has_content>
+                    <#list val as subp>
+                        <tr><td>SubPropertyOf</td><td><a href="${subp}">${subp}</a></td></tr>
+                    </#list>
+		</#if>
+                <#assign val = pr.lit("rdfs:label", lang)!"">
+		<#if val?has_content>
+		    <tr><td>Label (${lang})</td><td>${val}</td></tr>
+                <#else>
+                    <#assign val = pr.lit("rdfs:label", "")!"">
+                    <#if val?has_content>
+		    <tr><td>Label</td><td>${val}</td></tr>
+                    </#if>
+		</#if>
+                <#assign val = pr.lit("rdfs:comment", lang)!"">
+		<#if val?has_content>
+		    <tr><td>Comment (${lang})</td><td>${val}</td></tr>
+                <#else>
+                    <#assign val = pr.lit("rdfs:comment", "")!"">
+                    <#if val?has_content>
+		    <tr><td>Comment</td><td>${val}</td></tr>
+                    </#if>
+		</#if>
+            </table>
+	</#list>
+    </section>
+    </#if>
+    </div>
 </main>
 <#include "footer.ftl">
 </body>

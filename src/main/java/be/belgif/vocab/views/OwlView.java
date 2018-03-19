@@ -44,9 +44,14 @@ import org.eclipse.rdf4j.model.vocabulary.RDF;
  * @author Bart.Hanssens
  */
 @Provider
-public class OntoView extends RdfView {
+public class OwlView extends RdfView {
 	private final OwlDAO onto;
 	
+	/**
+	 * Get ontology
+	 * 
+	 * @return 
+	 */
 	public OwlDAO getOnto() {
 		return this.onto;
 	}
@@ -58,7 +63,7 @@ public class OntoView extends RdfView {
 	 * @param m triples
 	 * @param lang language
 	 */
-	public OntoView(String onto, Model m, String lang) {
+	public OwlView(String onto, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
 		m.filter(null, RDF.TYPE, OWL.ONTOLOGY);
 		Iterator<Resource> i = m.subjects().iterator();

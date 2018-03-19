@@ -28,7 +28,7 @@ package be.belgif.vocab.resources;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.OntoListView;
-import be.belgif.vocab.views.OntoView;
+import be.belgif.vocab.views.OwlView;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -46,7 +46,6 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
-import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
  * XML namespaces and RDFS/OWL ontologies
@@ -68,12 +67,12 @@ public class NsResource extends RdfResource {
 	@GET
 	@Path("/{onto}")
 	@Produces(MediaType.TEXT_HTML)
-	public OntoView getOntoHTML(@PathParam("onto") String onto,
+	public OwlView getOntoHTML(@PathParam("onto") String onto,
 				@QueryParam("lang") Optional<String> lang) {
 		//String subj = PREFIX + onto + "#";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
 		Model m = getById(null, ctx);
-		return new OntoView(onto, m, lang.orElse("en"));
+		return new OwlView(onto, m, lang.orElse("en"));
 	}
 	
 	@GET

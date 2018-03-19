@@ -64,31 +64,37 @@ public class OwlDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Initialize classes
+	 * Initialize RDF/OWL classes
 	 * 
 	 * @param m 
 	 */
 	private void initClasses(Model m) {
-		Model mc = new LinkedHashModel();
-		Set<Resource> s = m.filter(null, RDF.TYPE, RDFS.CLASS).subjects();
-		s.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
+		// Get all classes and subclasses, without duplicates
+		Set<Resource> subjs = m.filter(null, RDF.TYPE, RDFS.CLASS).subjects();
+		subjs.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
-		s.forEach(c -> classes.add(new RdfDAO(mc, (IRI) c)));
-		m.removeAll(mc);
+		for(Resource subj: subjs) {
+			Model mc = m.filter(subj, null, null);
+			classes.add(new RdfDAO(mc, (IRI) subj));
+	//		m.removeAll(mc);
+		}
 	}
 	
 	/**
-	 * Initialize properties
+	 * Initialize RDF/OWL properties
 	 * 
 	 * @param m 
 	 */
 	private void initProperties(Model m) {
-		Model mp = new LinkedHashModel();
-		Set<Resource> s = m.filter(null, RDF.TYPE, RDF.PROPERTY).subjects();
-		s.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
-
-		s.forEach(p -> properties.add(new RdfDAO(mp, (IRI) p)));
-		m.removeAll(mp);
+		// Get all properties and subproperies, without duplicates
+		Set<Resource> subjs = m.filter(null, RDF.TYPE, RDF.PROPERTY).subjects();
+		subjs.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
+		
+		for(Resource subj: subjs) {
+			Model mp = m.filter(subj, null, null);
+			properties.add(new RdfDAO(mp, (IRI) subj));
+	//		m.removeAll(mp);
+		}
 	}
 	
  	/**

@@ -28,7 +28,7 @@ package be.belgif.vocab.resources;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.OntoListView;
-import be.belgif.vocab.views.OntoView;
+import be.belgif.vocab.views.OwlView;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -67,12 +67,12 @@ public class ShaclResource extends RdfResource {
 	@GET
 	@Path("/{shacl}")
 	@Produces(MediaType.TEXT_HTML)
-	public OntoView getShaclHTML(@PathParam("shacl") String shacl,
+	public OwlView getShaclHTML(@PathParam("shacl") String shacl,
 				@QueryParam("lang") Optional<String> lang) {
 		//String subj = PREFIX + onto + "#";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, shacl);
 		Model m = getById(null, ctx);
-		return new OntoView(shacl, m, lang.orElse("en"));
+		return new OwlView(shacl, m, lang.orElse("en"));
 	}
 	
 	@GET
