@@ -45,6 +45,7 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class LuceneReindexTask extends Task {
+	public final static String NAME = "lucene-reindex";
 
 	private final Repository repo;
 
@@ -77,7 +78,7 @@ public class LuceneReindexTask extends Task {
 	 * @param repo triple store
 	 */
 	public LuceneReindexTask(Repository repo) {
-		super("lucene-reindex");
+		super(NAME);
 		this.repo = repo;
 	}
 

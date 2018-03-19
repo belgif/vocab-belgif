@@ -229,16 +229,16 @@ public class App extends Application<AppConfig> {
 			WebTarget target = cl.target(localhost);
 
 			importFiles(config.getOntos().getImportDir(),
-					target.path("tasks/onto-import"));
+					target.path("tasks/" + OntoImportTask.NAME));
 
 			importFiles(config.getShacls().getImportDir(),
-					target.path("tasks/shacls-import"));
+					target.path("tasks/" + ShaclImportTask.NAME));
 			
 			importFiles(config.getXsds().getImportDir(),
-					target.path("tasks/xmlns-register"));
+					target.path("tasks/" + XmlnsRegisterTask.NAME));
 					
 			importFiles(config.getVocabs().getImportDir(),
-					target.path("tasks/vocab-import"));
+					target.path("tasks/" + VocabImportTask.NAME));
 		
 			cl.target(localhost).path("tasks/lucene-reindex")
 				.request().post(Entity.text(""));

@@ -39,6 +39,7 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class OntoImportTask extends AbstractImportDumpTask {
+	public final static String NAME = "onto-import";
 		
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(OntoImportTask.class);
 
@@ -56,7 +57,7 @@ public class OntoImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public OntoImportTask(Repository repo, String inDir, String outDir) {
-		super("onto-import", repo, inDir, outDir, "onto");
+		super(NAME, repo, inDir, outDir, "onto");
 	}
 
 }

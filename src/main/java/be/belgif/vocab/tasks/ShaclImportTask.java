@@ -39,6 +39,7 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class ShaclImportTask extends AbstractImportDumpTask {
+	public final static String NAME = "shacl-import";
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(ShaclImportTask.class);
 
@@ -57,6 +58,6 @@ public class ShaclImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public ShaclImportTask(Repository repo, String inDir, String outDir) {
-		super("shacl-import", repo, inDir, outDir, "shacl");
+		super(NAME, repo, inDir, outDir, "shacl");
 	}
 }

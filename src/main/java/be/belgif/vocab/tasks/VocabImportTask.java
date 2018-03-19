@@ -57,6 +57,8 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public class VocabImportTask extends AbstractImportDumpTask {
+	public final static String NAME = "vocab-import";
+	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
 	/**
@@ -129,6 +131,6 @@ public class VocabImportTask extends AbstractImportDumpTask {
 	 * @param outDir download directory
 	 */
 	public VocabImportTask(Repository repo, String inDir, String outDir) {
-		super("vocab-import", repo, inDir, outDir, QueryHelper.VOCAB);
+		super(NAME, repo, inDir, outDir, QueryHelper.VOCAB);
 	}
 }

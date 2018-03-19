@@ -38,6 +38,8 @@ import org.slf4j.LoggerFactory;
  * @author Bart Hanssens
  */
 public class XmlnsRegisterTask extends AbstractImportTask {
+	public final static String NAME = "xmlns-register";
+	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(XmlnsRegisterTask.class);
 
 	
@@ -48,6 +50,6 @@ public class XmlnsRegisterTask extends AbstractImportTask {
 	 * @param inDir import directory
 	 */
 	public XmlnsRegisterTask(Repository repo, String inDir) {
-		super("xmlns-register", repo, inDir, QueryHelper.XMLNS);
+		super(NAME, repo, inDir, QueryHelper.XMLNS);
 	}
 }
