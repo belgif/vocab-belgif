@@ -28,6 +28,8 @@ package be.belgif.vocab.tasks;
 import be.belgif.vocab.helpers.QueryHelper;
 
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -41,6 +43,7 @@ import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
+import org.eclipse.rdf4j.rio.helpers.BasicWriterSettings;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,7 +74,10 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 	protected void writeDumps(RepositoryConnection conn, String name, Resource ctx) 
 									throws IOException {
 		LOG.info("Writing data dumps for {} from {}", name, ctx);
-
+		
+		conn.clearNamespaces();
+		QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p, n));
+				
 		for (String ftype : ftypes) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);
 			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE,
@@ -80,8 +86,9 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 						= Rio.getWriterFormatForFileName(name + "." + ftype);
 				if (fmt.isPresent()) {
 					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
+					rdfh.set(BasicWriterSettings.PRETTY_PRINT, true);
+					//rdfh.set(BasicWriterSettings.INLINE_BLANK_NODES, false);
 					LOG.info("Writing file {}", f);
-					QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p, n));
 					conn.export(rdfh, ctx);
 				} else {
 					throw new IOException("No RDF writer found for " + ftype);

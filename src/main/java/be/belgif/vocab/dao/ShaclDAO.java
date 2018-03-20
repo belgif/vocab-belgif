@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.dao;
 
+import be.belgif.vocab.helpers.SHACL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -36,7 +37,8 @@ import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
-import org.eclipse.rdf4j.model.vocabulary.SHACL;
+
+
 
 /**
  * DAO helper class for SHACL shapes.

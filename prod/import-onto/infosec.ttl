@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix be-infosec: <http://vocab.belgif.be/ns/infosec#> .
+
+<http://vocab.belgif.be/ns/infosec#> a owl:Ontology ;
+	rdfs:label "InfoSec"@nl, "InfoSec"@fr, "InfoSec"@de, "InfoSec"@en ;
+	rdfs:comment "Information security ontology"@en, "Information security ontology"@fr, "Information security ontology"@nl,"Information security ontology"@de .
+	
+be-infosec:Rating a rdfs:Class, owl:Class ;
+	rdfs:label "Rating"@nl, "Rating"@fr, "Rating"@de, "Rating"@en .
+
+be-infosec:genericRating a rdf:Property, owl:DataProperty ;
+	rdfs:range xsd:nonNegativeInteger .
+
+be-infosec:confidentiality rdfs:subPropertyOf be-infosec:genericRating ;
+	rdfs:label "Confidentiality" .
+
+be-infosec:integrity rdfs:subPropertyOf be-infosec:genericRating ;
+	rdfs:label "Integrity" .
+	
+be-infosec:availability rdfs:subPropertyOf be-infosec:genericRating ;
+	rdfs:label "Availability" .
+	
+be-infosec:nonrepudiation rdfs:subPropertyOf be-infosec:genericRating ;
+	rdfs:label "Non-repudiation" .

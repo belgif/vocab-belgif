@@ -1,0 +1,50 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix be-gdpr: <http://vocab.belgif.be/ns/gdpr#> .
+@prefix be-infosec: <http://vocab.belgif.be/ns/infosec#> .
+@prefix shbe-gdpr: <http://vocab.belgif.be/shacl/gdpr#> .
+
+<http://vocab.belgif.be/shacl/gdpr#> a owl:Ontology ;
+	rdfs:label "GDPR model"@nl, "GDPR model"@fr, "GDPR model"@de, "GDPR model"@en ;
+	rdfs:comment "GDPR SHACL rules"@en, "GDPR SHACL rules"@fr, "GDPR SHACL rules"@nl, "GDPR SHACL rules"@de .
+
+shbe-gdpr:RegisterShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:Register ;
+	sh:property [
+		sh:path dcterms:title ;
+		sh:minCount 1 ;
+		sh:datatype rdfs:Literal ;
+	] ;
+	sh:property [
+		sh:path cv:isOwnedBy ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:IRI ;
+		sh:class rov:RegisteredOrganization ;
+	] .
+
+
+shbe-gdpr:DataTreatmentPartShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:DataTreatmentPart ;
+	sh:property [
+		sh:path gdpr:category ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+		sh:nodeKind sh:IRI ;
+		sh:class skos:Concept ;
+	] ;
+	sh:property [
+		sh:path gdpr:duration
+	
+	
+	
+	
+shbe-gdpr:RegisteredOrganizationShape a sh:NodeShape ;
+	sh:targetClass rov:RegisteredOrganization ;
+	sh:property [
+		sh:path rov:legalName ;
+		sh:minCount 1;
+		sh:datatype rdfs:Literal ;
+	] .

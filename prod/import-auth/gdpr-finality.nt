@@ -1,0 +1,944 @@
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/description> "Endgültigkeit"@de .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/title> "GDPR finality"@de .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/description> "Finalité"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/title> "GDPR finality"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/description> "Finaliteit"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/title> "GDPR finality"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/description> "Finality"@en .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://purl.org/dc/terms/title> "GDPR finality"@en .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/D#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/E#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/F#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/J#id> .
+<http://vocab.belgif.be/auth/gdpr-finality#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-finality/Z#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#notation> "A" .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Algemene doeleinden"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Allgemeine Zwecke"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finalités générales"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "General purposes"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#note> "De aanwerving en selectie van het personeel en de tussenpersonen (makelaars, zelfstandige vertegenwoordigers,...). De administratie van de salarissen, vergoedingen, commissies en lonen. De toepassing van de sociale wetgeving."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Einstellung und Auswahl von Mitarbeitern und Vermittlern (Makler, unabhängige Vertreter, ...). Die Verwaltung von Gehältern, Zulagen, Provisionen und Löhnen. Die Anwendung der Sozialgesetzgebung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le recrutement et la sélection du personnel et des intermédiaires (courtiers, représentants autonomes, ...). L’administration des salaires, rémunérations, commissions et traitements. L’application de la législation sociale."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The recruitment and selection of staff and intermediaries (brokers, independent representatives, ...). The administration of salaries, allowances, commissions and wages. The application of social legislation."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administratie van het personeel en de tussenpersonen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration du personnel et des intermédiaires"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration of staff and intermediaries"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltung von Personal und Vermittlern"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Bewertung und Überwachung von Personal und Vermittlern. Die Planung von Ausbildung und Karriere."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Evaluatie en opvolging van het personeel en de tussenpersonen. De planning van opleiding en loopbaan."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Evaluation and monitoring of staff and intermediaries. The planning of training and career."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#note> "L’évaluation et le suivi du personnel et des intermédiaires. La planification de la formation et de la carrière."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "A1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van het personeel en de tussenpersonen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion du personnel et des intermédiaires"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management of staff and intermediaries"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management von Mitarbeitern und Vermittlern"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#note> "De planning en opvolging van de taken, de werkbelasting en de prestaties."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#note> "La planification et le suivi des tâches, de la charge de travail et des prestations."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Planning and monitoring of tasks, workload and performance."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Planung und Überwachung von Aufgaben, Workload und Performance."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#notation> "A1_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeitsplanung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Planification des activités"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Werkplanning"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Work planning"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#note> "Control of professional activity in the workplace via camera or computer systems such as checking e-mails, internet usage, telephone, etc."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#note> "Controle van de professionele activiteit op de werkplaats via camera of informaticasystemen zoals bv. controle van e-mails, internetgebruik, telefoon,..."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#note> "Kontrolle der beruflichen Tätigkeit am Arbeitsplatz über Kamera- oder Computersysteme wie E-Mails, Internetnutzung, Telefon etc."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#note> "Le contrôle de l’activité professionnelle sur le lieu de travail à l’aide de caméras ou de systèmes informatiques, comme par exemple le contrôle des e-mails, de l’utilisation d’Internet, du téléphone, …"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#notation> "A1_04" .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Control of the workplace"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Controle op de werkplaats"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contrôle sur le lieu de travail"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A1_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontrolle des Arbeitsplatzes"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Customer administration, order management, deliveries, invoicing of tangible and intangible services. Monitoring solvency. Personalized marketing and advertising. The registration of the clientele of a business and the profiling of it on the basis of purchases."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#note> "De administratie van het cliënteel, het beheer van de bestellingen, de leveringen, de facturatie van materiële en immateriële diensten. Het opvolgen van de solvabiliteit. Gepersonaliseerde marketing en reclame. Het registreren van het cliënteel van een handelszaak en de profilering ervan op basis van aankopen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Kundenverwaltung, Auftragsverwaltung, Lieferungen, Fakturierung von materiellen und immateriellen Dienstleistungen. Überwachung der Zahlungsfähigkeit Personalisiertes Marketing und Werbung. Die Registrierung der Kundschaft eines Unternehmens und dessen Profilierung anhand von Käufen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’administration de la clientèle, la gestion des commandes, les livraisons, la facturation des services matériels et immatériels. Le suivi de la solvabilité. Marketing et publicité personnalisés. L’enregistrement de la clientèle d’un commerce et le profil de cette clientèle sur la base des achats."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Customer management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de la clientèle"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Klantenbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kundenverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Dies sind Aktivitäten, durch die solche Aktionen verhindert und erkannt werden können."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het gaat hier om activiteiten waardoor zulke handelingen kunnen worden voorkomen en opgespoord."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Il s’agit d’activités permettant de prévenir et de détecter de tels agissements."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#note> "These are activities through which such actions can be prevented and detected."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#notation> "A2_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bekämpfung von Betrug und Kundenverstößen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bestrijding van fraude en inbreuken van het cliënteel"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Combating fraud and breaches of customers"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lutte contre la fraude et infractions de la clientèle"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verwaltung der Streitigkeiten, einschließlich der Rückzahlung der zu beanspruchenden Beträge."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#note> "Het beheer van de betwistingen, met inbegrip van de terugbetaling van de te vorderen bedragen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#note> "La gestion du contentieux, y compris le recouvrement de créances."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#note> "The management of the disputes, including the repayment of the amounts to be claimed."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#notation> "A2_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van de betwistingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion du contentieux"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management of the disputes"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A2_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltung der Streitigkeiten"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#note> "De leveranciersadministratie. Het beheer van de opgegeven bestellingen, de betaling van de leveranciers. De prospectie van mogelijke leveranciers en hun evaluatie."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Lieferantenverwaltung. Die Verwaltung der angegebenen Aufträge, die Bezahlung der Lieferanten. Die Prospektion möglicher Lieferanten und deren Bewertung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’administration des fournisseurs. La gestion des commandes émises, le paiement des fournisseurs. La prospection de fournisseurs potentiels et leur évaluation."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#note> "The supplier administration. The management of the specified orders, the payment of the suppliers. The prospection of possible suppliers and their evaluation."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion des fournisseurs"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leveranciersbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lieferantenmanagement"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Supplier management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#note> "De administratie van de schenkers van een vereniging. De prospectie van nieuwe schenkers."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verwaltung der Spender eines Vereins. Die Suche nach neuen Spendern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#note> "L’administration des donateurs d’une association. La prospection de nouveaux donateurs."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#note> "The administration of the donors of an association. The prospecting of new donors."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#notation> "A3_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Collecte de dons"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Collecting gifts"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geschenke sammeln"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A3_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verzamelen van giften"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Cela comprend la création de 'goodwill' pour l’organisation."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Dazu gehört die Schaffung von 'Goodwill' für die Organisation."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Dit omvat het creëren van 'goodwill' voor de organisatie."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#note> "This includes creating 'goodwill' for the organization."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A4_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentlichkeitsarbeit"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public relations"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public relations"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relations publiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#note> "De analyse van concurrenten en eventuele handelspartners."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Analyse von Wettbewerbern und möglichen Handelspartnern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’analyse de concurrents et de partenaires commerciaux éventuels."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#note> "The analysis of competitors and possible trading partners."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A5_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Renseignements technico-commerciaux"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technical-commercial information"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technisch-commerciële inlichtingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technisch-kommerzielle Informationen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Führung eines Registers der Aktionäre oder Partner. Die Verwaltung der finanziellen und anderen Vorteile, die ihnen zufließen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het bijhouden van een register van aandeelhouders of vennoten. De administratie van de financiële en andere voordelen die hun toekomen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Keeping a register of shareholders or partners. The administration of the financial and other benefits that accrue to them."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#note> "La tenue d’un registre d’actionnaires ou d’associés. L’administration des bénéfices financiers et autres qui leur reviennent."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A6_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrement et administration des actionnaires ou des associés"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registratie en administratie van aandeelhouders of vennoten"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registration and administration of shareholders or partners"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registrierung und Verwaltung von Aktionären oder Partnern"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#note> "De administratie van leden, vrijwilligers en sympathisanten van een vereniging."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verwaltung von Mitgliedern, Freiwilligen und Sympathisanten eines Vereins."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#note> "L’administration des membres, des volontaires et des sympathisants d’une association."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#note> "The administration of members, volunteers and sympathizers of an association."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#notation> "A6_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration des membres"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ledenadministratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Member administration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A6_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliedsverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verwerken van persoonsgegevens om de veiligheid te waarborgen van personen of goederen. Let op: de bewakingscamera's zijn in principe onderworpen aan de wet van 21 maart 2007 tot regeling van de plaatsing en het gebruik van bewakingscamera’s (de 'camerawet') en mogen niet via het huidige formulier worden aangegeven. Gelieve dan ook het aangepaste thematische formulier te gebruiken. Meer informatie hieromtrent is te vinden op www.privacycommission.be > In praktijk > Bewakingscamera's."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le traitement de données à caractère personnel en vue de garantir la sécurité de personnes ou des biens. Attention : en principe, les caméras de surveillance sont soumises à la loi du 21 mars 2007 réglant l’installation et l’utilisation de caméras de surveillance (la 'loi caméras') et ne peuvent pas être déclarés via le présent formulaire. Utilisez pour ce faire le formulaire thématique adapté. Vous trouverez davantage d'informations à ce sujet sur www.privacycommission.be > En pratique > Caméras de surveillance."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#note> "Processing personal data to ensure the safety of persons or goods. Please note: the surveillance cameras are in principle subject to the law of 21 March 2007 regulating the placement and use of surveillance cameras (the 'camera law') and may not be indicated via the current form. Please also use the adapted thematic form. More information about this can be found on www.privacycommission.be> In practice> Surveillance cameras."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitung personenbezogener Daten zur Gewährleistung der Sicherheit von Personen oder Gütern. Bitte beachten Sie: Die Überwachungskameras unterliegen grundsätzlich dem Gesetz vom 21. März 2007 über die Anordnung und Verwendung von Überwachungskameras (das 'Kameragesetz') und dürfen nicht über das aktuelle Formular angegeben werden. Bitte verwenden Sie auch die angepasste thematische Form. Weitere Informationen hierzu finden Sie unter www.privacycommission.be> In der Praxis> Überwachungskameras."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A7_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beveiliging"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A7_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#note> "Führung eigener Streitigkeiten durch natürliche Personen oder privatrechtliche oder öffentlich-rechtliche Körperschaften"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het beheren van eigen geschillen door natuurlijke personen of privaatrechtelijke of publiekrechtelijke rechtspersonen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#note> "La gestion par des personnes physiques ou par des personnes morales de droit privé ou de droit public de leur propre contentieux."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#note> "Managing own disputes by natural persons or private-law or public-law legal entities"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A8_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van geschillen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dispute management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion du contentieux"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A8_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Konfliktmanagement"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le traitement de données relatives à des personnes représentant un risque spécifique, par exemple les hooligans,..."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#note> "Processing data concerning persons who have a specific risk such as eg. hooligans, .."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitung von Daten über Personen, die ein spezifisches Risiko haben, wie z. Hooligans, .."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verwerken van gegevens betreffende personen die een specifiek risico vertonen zoals bvb. hooligans,....."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/A#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#notation> "A9_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bescherming van de maatschappij, eigen sector of organisatie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Protecting society,  own sector or organization"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Protection de la société, secteur propre ou organisation"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/A9_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schutz der Gesellschaft, Ihres eigenen Sektors oder Ihrer eigenen Organisation"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#notation> "B" .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Doeleinden van overheden"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finalités des autorités publiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Purposes of governments"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zwecke der öffentlichen Behörden"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erhebung von Steuern und die damit verbundenen Tätigkeiten: die Registrierung von Steuerpflichtigen, die Berechnung, Erhebung und Überwachung von Steuern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het heffen van belastingen en de activiteiten die daarmee verband houden : het registreren van belastingplichtigen, het berekenen, innen en opvolgen van de belastingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La levée d’impôts et les activités qui s’y rapportent : l’enregistrement des contribuables, le calcul, la perception et le suivi des impôts."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The levying of taxes and the related activities: the registration of taxpayers, the calculation, collection and follow-up of taxes."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Belastingen"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Belastingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Impôts"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Steuern"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Gewährung von Subventionen und die damit verbundenen Aktivitäten: die Untersuchung der Begünstigten, die Berechnung, Zahlung und Weiterverfolgung der Subventionen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verlenen van subsidies en de activiteiten die daarmee verband houden: het onderzoek van de gerechtigden, het berekenen, uitbetalen en opvolgen van de subsidies."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’octroi de subventions et les activités qui s’y rapportent : la recherche des ayants droit, le calcul, le versement et le suivi des subventions."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#note> "The granting of subsidies and the related activities: the investigation of the beneficiaries, the calculation, payment and follow-up of the subsidies."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grants"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Subsidies"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Subventionen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Subventions"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erteilung von Genehmigungen und die damit verbundenen Aktivitäten: die Untersuchung der Begünstigten, die folgenden Bedingungen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verlenen van vergunningen en de activiteiten die daarmee verband houden : het onderzoek van de gerechtigden, het opvolgen van de voorwaarden."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#note> "La délivrance de permis et les activités qui s’y rapportent : la recherche des ayants droit, le suivi des conditions."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#note> "The granting of permits and the related activities: the investigation of the beneficiaries, the following of the conditions."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genehmigungen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Permis"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Permits"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vergunningen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Processings other than those exempted by art. 60 KB."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#note> "traitements que les communes réalisent tels que les traitements relatifs aux registres de la population, aux cartes d'identité, aux registres de l'état civil, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitungen, die nicht von Art. 60 KB."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#note> "verwerkingen die de gemeenten verrichten zoals verwerkingen in verband met bevolkingsregisters, identiteitskaarten,  registers van de burgerlijke stand, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B4_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Processing performed by the municipalities"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Traitements effectués par les communes"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verarbeitung durch die Gemeinden durchgeführt"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwerkingen verricht door de gemeenten"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het bijhouden van de kiezerslijsten en het organiseren van verkiezingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#note> "Keeping the voter lists and organizing elections."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#note> "La tenue des listes électorales et l’organisation d’élections."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#note> "Wählerlisten führen und Wahlen organisieren."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#notation> "B4_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elections"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Élections"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkiezingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wahlen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#note> "Ein Ausländerregister führen und Aufenthaltsgenehmigungen folgen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#note> "Het houden van een vreemdelingenregister en het opvolgen van verblijfsvergunningen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#note> "Holding a register of foreigners and following residence permits."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#note> "La tenue d’un registre des étrangers et le suivi des permis de séjour."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#notation> "B4_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration des étrangers"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Einwanderungsverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Immigration administration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B4_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vreemdelingenadministratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erstellung und Aktualisierung eines Eigentumsverzeichnisses, die Erhebung von Immobiliensteuern und die Ausstellung von Zertifikaten zu diesem Thema."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het aanleggen en bijwerken van een register van eigendommen, het heffen van belastingen op eigendommen en het afleveren van attesten dienaangaande."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#note> "La création et la mise à jour d’un registre de propriétés, la levée d’impôts sur les propriétés et la délivrance d’attestations à ce sujet."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#note> "The creation and updating of a register of property, the levying of taxes on property and the issuing of certificates on this subject."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B5_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cadastre"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cadastre"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kadaster"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kataster"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verwaltung der Korrespondenz zwischen dem öffentlichen Dienst und den Menschen, die sich spontan an diesen Dienst gewandt haben. Die Verwaltung personenbezogener Daten, mit denen der öffentliche Dienst keine gewinnbringende Beziehung hat."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het beheer van de briefwisseling tussen de overheidsdienst en de personen die zich spontaan tot die dienst hebben gewend. Het beheer van gegevens van personen met wie de overheidsdienst geen winstgevende betrekkingen onderhoudt."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#note> "La gestion de la correspondance entre le service public et les personnes qui se sont adressées spontanément à lui. La gestion de données de personnes avec lesquelles le service public entretient des relations non lucratives."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#note> "The management of the correspondence between the public service and the people who spontaneously turned to that service. The management of personal data with whom the public service does not have a profitable relationship."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/B#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#notation> "B6_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administratieve overheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administrative government"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autorité administrative"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/B6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltungsregierung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#notation> "C" .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice and police"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice et police"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justitie en politie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justiz und Polizei"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Collection and follow-up of information about persons who are considered to be a risk to public safety."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verzamelen en opvolgen van informatie over personen die geacht worden een risico te zijn voor de openbare veiligheid."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La collecte et le suivi des informations concernant des personnes qui sont considérées comme pouvant présenter un risque pour la sécurité publique."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Sammlung und Nachverfolgung von Informationen über Personen, die als Risiko für die öffentliche Sicherheit gelten."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "C1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentliche Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Openbare veiligheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public safety"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité publique"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het signaleren en opsporen van personen die verdacht worden van misdrijven."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Identifizierung und Aufdeckung von Straftatverdächtigen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Identifying and detecting persons suspected of crime."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Le signalement et la recherche de personnes soupçonnées d’infractions."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "C1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missionen der Kriminalpolizei"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missions de police judiciaire"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missions of judicial police"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opdrachten van gerechtelijke politie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#note> "La prévention d’infractions, le contrôle du respect des lois et des règlements."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Prevention of violations, supervision of compliance with laws and regulations."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Verhinderung von Verstößen, Überwachung der Einhaltung von Gesetzen und Vorschriften."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Voorkoming van overtredingen, toezicht op het naleven van wetten en reglementen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#notation> "C1_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missionen der Verwaltungspolizei"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missions de police administrative"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Missions of administrative police"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opdrachten van bestuurlijke politie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het bijhouden van rollen en registers."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#note> "La tenue de rôles et de registres."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Tracking roles and registers."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verfolgen von Rollen und Registern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "C2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administratie van de werkzaamheden van het gerecht"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration des activités d’une juridiction"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration of the proceedings of the court"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltung des Verfahrens des Gerichts"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Registrierung von Verurteilungen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het registreren van veroordelingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#note> "L’enregistrement de condamnations."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#note> "The registration of convictions."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#notation> "C2_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Casier judiciaire"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Penal register"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Strafregister"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Strafregister"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het beheren van geschillen en belangen door advocaten of andere juridische raadgevers ten voordele van hun cliënten."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#note> "La gestion de litiges et d’intérêts par des avocats ou autres conseillers juridiques au profit de leurs clients."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Managing disputes and interests by lawyers or other legal counselors for the benefit of their clients."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Umgang mit Streitigkeiten und Interessen von Rechtsanwälten oder anderen Rechtsberatern zum Wohle ihrer Mandanten."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/C#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "C3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Défense de clients"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Defense of clients"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verdediging van cliënten"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/C3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verteidigung von Kunden"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#notation> "D" .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bildung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Education"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enseignement"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Onderwijs"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/D#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Creating an apprenticeship, organizing the education, the exams, registering the results and the results of the deliberation. Calculating, invoicing and collecting amounts due. The follow-up of former pupils."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het aanleggen van een leerlingenbestand, het organiseren van het onderwijs, de examens, het registreren van de uitslagen en de deliberatieresultaten. Het berekenen, factureren en innen van verschuldigde bedragen. Het opvolgen van oud-leerlingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La création d’un fichier d’élèves, l’organisation de l’enseignement, les examens, l’enregistrement des résultats et des résultats des délibérations. Le calcul, la facturation et la perception de montants dus. Le suivi d'anciens élèves."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Schaffung einer Lehrstelle, Organisation der Ausbildung, der Prüfungen, Registrierung der Ergebnisse und der Ergebnisse der Beratungen. Berechnung, Fakturierung und Einzug fälliger Beträge. Das Follow-up von ehemaligen Schülern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/D#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "D1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration des élèves"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leerlingenadministratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Student administration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Studentenverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Guiding pupils in their intellectual development and in psychological problems, as well as in their choice of career."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het begeleiden van leerlingen in hun intellectuele ontwikkeling en bij psychische problemen, alsmede bij hun beroepskeuze."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#note> "L’assistance des élèves dans leur développement intellectuel et en cas de problèmes psychiques, ainsi que dans leur orientation professionnelle."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Schüler in ihrer intellektuellen Entwicklung und bei psychologischen Problemen sowie bei der Berufswahl begleiten."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/D#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "D1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assistance aux élèves"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leerlingenbegeleiding"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pupil guidance"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/D1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schülerführung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#notation> "E" .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Culture and well-being"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Culture et bien-être"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cultuur en welzijn"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kultur und Wohlbefinden"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Aufnahme in eine Datei von Mitgliedern einer Bibliothek, die Nachverfolgung ihrer Anleihen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het opnemen in een bestand van leden van een bibliotheek, de opvolging van hun ontleningen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’inscription des membres d’une bibliothèque dans un fichier et le suivi de leurs emprunts."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The inclusion in a file of members of a library, the follow-up of their borrowings."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/E#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "E1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bibliotheekbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bibliotheksverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de bibliothèque"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Library management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Bereitstellung von materieller und / oder psychologischer Hilfe für Menschen in Notsituationen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verlenen van materiële en/of psychische hulp aan mensen in een noodsituatie."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’assistance matérielle et/ou psychique à des personnes qui se trouvent dans le besoin."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Providing material and / or psychological assistance to people in an emergency situation."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/E#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "E2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Client guidance"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cliëntenbegeleiding"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kundenberatung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Suivi de la clientèle"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#note> "De begeleiding van werklozen en hun vorming naar nieuwe tewerkstelling."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Anleitung von Arbeitslosen und ihre Ausbildung zu neuer Beschäftigung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’accompagnement des chômeurs et leur formation en vue d'un nouvel emploi."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#note> "The guidance of the unemployed and their formation towards new employment."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/E#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "E3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeidsbemiddeling"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeitsvermittlung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Job placement"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/E3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Médiation en matière d’emploi"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#notation> "F" .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité sociale"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Social Security"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sociale zekerheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Soziale Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/F#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Collecting contributions, establishing and granting rights within social security, including social assistance."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Einziehung von Beiträgen, Einrichtung und Gewährung von Rechten im Rahmen der sozialen Sicherheit, einschließlich Sozialhilfe."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het innen van bijdragen, het vaststellen en toekennen van rechten binnen de sociale zekerheid, met inbegrip van de sociale bijstand."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La perception de cotisations, la fixation et l’attribution de droits de sécurité sociale, y compris l’assistance sociale."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/F#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "F1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administratie van rechthebbenden"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration des ayants droit"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration of rightholders"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/F1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltung von Rechteinhabern"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#notation> "G" .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gesundheitswesen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gezondheidszorg"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Healthcare"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Soins de santé"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#note> "De diagnose en de paramedische behandeling van patiënten, met inbegrip van de evaluatie van de verstrekte en te verstrekken zorgen teneinde de kwaliteit van de aan deze patiënten verleende zorgen te verbeteren."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Diagnose und paramedizinische Behandlung von Patienten einschließlich der Bewertung der bereitgestellten und zu erbringenden Leistungen, um die Qualität der Versorgung dieser Patienten zu verbessern."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le diagnostic et le traitement paramédical de patients, en ce compris l'évaluation des soins accomplis et à accomplir afin d'améliorer la qualité des soins prodigués à ces patients."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The diagnosis and paramedical treatment of patients, including the evaluation of the care provided and to be provided in order to improve the quality of the care provided to these patients."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "G1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patient care"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patientenversorgung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patiëntenzorg"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Soins de patients"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het opvolgen van verblijf en behandeling van patiënten met het oog op facturatie."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Le suivi du séjour et du traitement de patients, en vue de la facturation."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Monitoring the stay and treatment of patients with a view to invoicing."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Überwachung des Aufenthalts und der Behandlung von Patienten im Hinblick auf die Rechnungsstellung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "G1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administration de patients"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patient administration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patiëntenadministratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patientenverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Die Registrierung von medizinischen Daten und Aufenthaltsdaten von Patienten für Managementzwecke."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Het registreren van medische gegevens en verblijfsgegevens van patiënten voor beheersdoeleinden."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#note> "L’enregistrement de données médicales et de séjour de patients, à des fins de gestion."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#note> "The registration of medical data and residence data of patients for management purposes."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#notation> "G1_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrement de patients"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patient registration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patiëntenregistratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patientenregistrierung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het identificeren en opvolgen van personen die een medisch risico dragen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Identifying and following up people who carry a medical risk."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’identification et le suivi de personnes présentant un risque médical."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Personen identifizieren und verfolgen, die ein medizinisches Risiko tragen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "G2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrement de groupes à risque"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registratie van risicogroepen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registration of risk groups"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registrierung von Risikogruppen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erstellung von Dateien mit Personen, die als Spender fungieren wollen, die Förderung und die Verwertung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het aanleggen van bestanden met personen die als donor willen optreden, de promotie daartoe en de uitbating."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#note> "La création de fichiers comprenant des personnes qui souhaitent être donneur, la promotion à cette fin et l’exploitation."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#note> "The creation of files with persons who want to act as donors, the promotion and the exploitation."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "G3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Donor registration"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Donorenregistratie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrement de donneurs"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Spenderregistrierung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Les traitements relatifs à la prescription et à la délivrance de médicaments."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Processing with regard to the prescription and delivery of medicines."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitung in Bezug auf die Verschreibung und Lieferung von Arzneimitteln."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verwerkingen met betrekking tot het voorschrijven en het afleveren van geneesmiddelen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/G#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#notation> "G4_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arzneimittel-Management"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Drug management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geneesmiddelenbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/G4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de médicaments"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#notation> "H" .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Primair wetenschappelijk onderzoek of secundair wetenschappelijk onderzoek waarvan het doel verenigbaar is met het oorspronkelijk doel"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Primäre wissenschaftliche Forschung oder sekundäre wissenschaftliche Forschung, deren Zweck mit dem ursprünglichen Ziel vereinbar ist"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Primary scientific research or secondary scientific research whose purpose is compatible with the original goal"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "recherche scientifique primaire ou recherche scientifique secondaire dont le but est compatible avec la finalité initiale"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erforschung der Verbreitung von medizinischen Risiken, Morbidität und Mortalität."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het onderzoek naar de verspreiding van medische risico’s, morbiditeit en mortaliteit.."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La recherche sur la dissémination de risques médicaux, la morbidité et la mortalité."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The research into the spread of medical risks, morbidity and mortality."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "H1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epidemiological research"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epidemiologisch onderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epidemiologische Forschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recherche épidémiologique"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erforschung der Ursachen der medizinischen Pathologie und die Wirkung von medizinischen Behandlungen. Klinische Studien."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het onderzoek naar de oorzaken van medische pathologie en het effect van medische behandelingen. Klinische proeven."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#note> "La recherche des causes de pathologie médicale et l’effet de traitements médicaux. Essais cliniques."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#note> "The research into the causes of medical pathology and the effect of medical treatments. Clinical trials."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "H1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bio-medisch onderzoek"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bio-medisch onderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biomedizinische Forschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recherche biomédicale"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Collection and processing of all data relating to medical and paramedical diagnostic and therapeutic practices administered to patients with the aim of improving the quality of care methods."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#note> "La collecte et traitement de toutes les données relatives aux pratiques diagnostiques et thérapeutiques, médicales et paramédicales, administrées aux patients en vue d’améliorer la qualité des méthodes de soins."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Sammlung und Verarbeitung aller Daten in Bezug auf medizinische und paramedizinische diagnostische und therapeutische Verfahren, die Patienten mit dem Ziel der Verbesserung der Qualität von Behandlungsmethoden verabreicht werden."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Verzameling en verwerking van alle gegevens met betrekking tot medische en paramedische diagnostische en therapeutische praktijken toegediend aan de patiënten met als doel de kwaliteit van de zorgmethoden te verbeteren."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#notation> "H1_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bewertung der Pflege"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evaluatie van de zorg"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Évaluation des soins"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evaluation of care"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Any action intended to establish laws, rules of conduct and causal links that transcend all persons to whom they relate. Is aimed at describing global phenomena."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Elke handeling die ertoe strekt om wetmatigheden, gedragsregels en oorzakelijke verbanden vast te stellen die alle personen op wie zij betrekking hebben, overstijgen. Is gericht op het omschrijven van globale verschijnselen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Jede Handlung, die darauf abzielt, Gesetze, Verhaltensregeln und Kausalzusammenhänge festzulegen, die über alle Personen hinausgehen, auf die sie sich beziehen. Ziel ist es, globale Phänomene zu beschreiben."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Tout acte visant à établir des phénomènes récursifs, des règles de conduite et des liens de causalité qui transcendent tous les individus qu’ils concernent. Ainsi, elle vise à définir des phénomènes globaux."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "H2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recherche scientifique"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Scientific research"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wetenschappelijk onderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wissenschaftliche Forschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Les études sur le comportement d’achat, les préférences et les intentions d’achat des gens, afin de déterminer des stratégies commerciales."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Studien über das Kaufverhalten, Präferenzen und Kaufabsichten von Menschen zur Ermittlung von Marktstrategien."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Studies aangaande het koopgedrag, de voorkeuren en koopintenties van mensen ter bepaling van marktstrategieën."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Studies on the buying behavior, preferences and purchase intentions of people to determine market strategies."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "H3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Étude de marché"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marketing research"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marktforschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marktonderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le traitement de données à caractère personnel provenant d’archives privées ou publiques en vue de l’analyse d’un événement passé ou en vue de permettre cette analyse."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Processing personal data from private or public archives with a view to analyzing an earlier event or to make that analysis possible."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitung personenbezogener Daten aus privaten oder öffentlichen Archiven zur Analyse eines früheren Ereignisses oder zur Ermöglichung dieser Analyse."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verwerking van persoonsgegevens uit private of publieke archieven met het oog op de analyse van een vroegere gebeurtenis of om die analyse mogelijk te maken."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#notation> "H4_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historical research"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historisch onderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historische Forschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recherche historique"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#note> "De verwerking van persoonsgegevens met als doel het opstellen van een stamboom of geslachtsboom, geslachtslijst of geslachtsregister,..."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung personenbezogener Daten mit dem Ziel, einen Stammbaum, eine Geschlechtsliste oder eine Genealogie zu erstellen, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#note> "Le traitement de données à caractère personnel dans le but d’établir un arbre, une table ou un registre généalogique."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#note> "The processing of personal data with the aim of compiling a pedigree or sex tree, sex list or genealogy, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#notation> "H4_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genealogie"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genealogie"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Généalogie"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H4_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genealogie"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Any action with a view to the collection and processing of personal data necessary for statistical surveys or to provide a statistical result (eg general provision of information, help with planning and decision making and serving science)."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Elke handeling met het oog op de verzameling en verwerking van persoonsgegevens die noodzakelijk is voor statistische enquêtes of om een statistisch resultaat over te leggen (bijv. algemene informatieverstrekking, hulp bij planning en besluitvorming en het dienen van de wetenschap)."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Jede Maßnahme im Hinblick auf die Erhebung und Verarbeitung personenbezogener Daten, die für statistische Erhebungen erforderlich sind oder ein statistisches Ergebnis liefern (z. B. allgemeine Bereitstellung von Informationen, Unterstützung bei Planung und Entscheidungsfindung und Unterstützung der Wissenschaft)."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Tout acte visant à la collecte et au traitement de données à caractère personnel, nécessaires à la réalisation d’enquêtes statistiques ou à l’obtention d’un résultat statistique (par ex. diffusion d’informations générales, assistance dans le planning et la prise de décision et le service à la science)."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/H#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#notation> "H5_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recherche statistique"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Statistical research"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Statistisch onderzoek"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/H5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Statistische Forschung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#notation> "I" .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bank- und Kreditwesen, Versicherung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bank-en kredietwezen, verzekeringen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banking and credit, insurance"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque, crédit, assurances"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verwaltung von individuellen Konten und Sparkonten - mit oder ohne Kredit - von den Kunden eines Finanzinstituts. Zu diesen Aktivitäten gehören die Zahlungsvorgänge, die sich auf das Konto beziehen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het beheer van de individuele rekeningen en spaarrekeningen — waaraan al dan niet een krediet is verbonden — van de klanten van een financiële instelling. Deze activiteiten omvatten de betalingstransacties met betrekking tot de rekening."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La gestion des comptes individuels et des comptes d’épargne des clients d’une institution financière – qu’un crédit soit ou non lié à ces comptes. Ces activités comprennent les opérations de paiement afférentes au compte."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#note> "The management of the individual accounts and savings accounts - with or without a credit - from the clients of a financial institution. These activities include the payment transactions relating to the account."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Account management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de comptes"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kontoverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rekeningenbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Dies betrifft die Gesamtheit der Transaktionen, mit denen eine Bank ihren Kunden bei der Verwaltung seines Erbes leitet, sei es auf diskretionärer Basis oder nicht."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Het gaat hier om het geheel van verrichtingen waarmee een bank haar klant al dan niet discretionair begeleidt bij het beheer van zijn erfgoed."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#note> "Il s’agit de l’ensemble des opérations par lesquelles une banque guide son client, de manière discrétionnaire ou non, dans la gestion de son patrimoine."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#note> "This concerns the whole of transactions with which a bank guides its client, whether discretionarily or not, in the management of its heritage."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#notation> "I1_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asset management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de fortunes"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vermogensbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vermögensverwaltung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Die Erbringung von Dienstleistungen im Zusammenhang mit der Ausgabe von Kapital, der Verkauf von Aktien, die Akquisitionen und Fusionen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#note> "Het leveren van diensten in verband met de uitgifte van kapitaal, het verkopen van aandelen, de overnames en fusies."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#note> "La fourniture de services en relation avec l’émission de capital, la vente d’actions, les reprises et fusions."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#note> "The provision of services related to the issue of capital, the sale of shares, the acquisitions and mergers."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#notation> "I1_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Corporate finance"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Corporate finance"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financement des entreprises"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I1_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unternehmensfinanzierung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Dies betrifft die Gesamtheit der Tätigkeiten im Zusammenhang mit der Einschätzung der Risiken, die die Bank bei der Vergabe eines Kredits eingeht, ungeachtet ihrer Art."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het gaat hier om het geheel van activiteiten die verband houden met de schatting van de door de bank genomen risico’s bij de toekenning van een krediet, ongeacht de aard hiervan."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Il s’agit de l’ensemble des activités liées à l’évaluation des risques pris par la banque lors de l’octroi d’un crédit, peu importe la nature de celui-ci."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#note> "This concerns the whole of activities related to the estimation of the risks taken by the bank in the allocation of a credit, regardless of its nature."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ausleihe"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kredietverlening"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lending"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Octroi de crédits"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Dies bezieht sich auf die Aktivitäten im Zusammenhang mit der Nachverfolgung und Rückzahlung der Kredite, einschließlich der Streitigkeiten, der damit verbundenen Transaktionen, unabhängig davon, ob ein Dritter beteiligt ist oder nicht."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Hiermee worden de activiteiten bedoeld die verband houden met de opvolging en terugbetaling van de kredieten, met inbegrip van de betwistingen, de verrichtingen die daarmee verband houden, ongeacht of hierbij een derde betrokken is."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#note> "Sont visées ici les activités relatives au suivi et au remboursement des crédits, y compris le contentieux, les opérations y afférentes, qu’elles impliquent ou non un tiers."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#note> "This refers to the activities relating to the follow-up and repayment of the credits, including the disputes, the related transactions, whether or not a third party is involved."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#notation> "I2_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Credit management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de crédits"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kredietbeheer"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I2_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kreditmanagement"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#note> "De integratie van alle of van een gedeelte van de verwerkte gegevens in het kader an één van de finaliteiten die specifiek zijn voor de banksector. Dit om tot een beoordeling te komen van de globale rendabiliteit van een klant en hem bankprodukten of diensten voor te stellen aangepast aan zijn noden, en om, op een algemene manier, de bankinstelling te helpen bij het nemen van de nodige beslissingen ten opzichte van haar klant."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#note> "Die Integration aller oder eines Teils der verarbeiteten Daten in eine der für den Bankensektor spezifischen Finalitäten. Dies dient dazu, die Gesamtprofitabilität eines Kunden zu bewerten und ihm Produkte oder Dienstleistungen anzubieten, die an seine Bedürfnisse angepasst sind, und dem Bankinstitut im Allgemeinen zu helfen, die notwendigen Entscheidungen in Bezug auf seine Kunden zu treffen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’intégration de la totalité ou d’une partie des données traitées dans le cadre d’une des finalités spécifiques au secteur bancaire afin d’évaluer la rentabilité globale d’un client, de lui proposer des produits ou services bancaires adaptés à ses besoins et, d’une manière générale, d’aider l’institution bancaire à prendre vis-à-vis de son client les décisions nécessaires."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#note> "The integration of all or part of the processed data in one of the finalities specific to the banking sector. This is to assess the overall profitability of a customer and to propose to him bank products or services adapted to his needs, and to help, in a general way, the banking institution to make the necessary decisions in relation to its clients. customer."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I3_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Globaal overzicht van het cliënteel"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Global customer overview"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Globaler Überblick über die Kundschaft"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I3_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vue globale de la clientèle"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#note> "De bemiddeling tussen cliënten en financiële instellingen voor verzekeringen, kredieten, beursverrichtingen, enz."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’intervention entre des clients et des institutions financières concernant des assurances, des crédits, des opérations boursières, etc."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Mediation between clients and financial institutions for insurance, credit, stock exchange transactions, etc."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#note> "Vermittlung zwischen Kunden und Finanzinstituten für Versicherungen, Kredite, Börsengeschäfte etc."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I4_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Brokerage-Dienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Makelaarsdiensten"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Makelaarsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I4_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Services de courtage"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Het verzekeren voor onzekere voorvallen die de fysieke integriteit of de gezinstoestand van personen aantast. Risico-analyse, beheer van polissen, premies en schadevergoedingen. Herverzekering en geschillenbeheer."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Insurance for uncertain events that affect the physical integrity or family situation of persons. Risk analysis, management of policies, premiums and damages. Reinsurance and dispute management."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#note> "L’assurance contre des incidents indéterminés portant atteinte à l’intégrité physique ou à la situation familiale de personnes. L’analyse des risques, la gestion de polices, de primes et d’indemnités. Réassurance et gestion de litiges."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#note> "Versicherung für unsichere Ereignisse, die die körperliche Unversehrtheit oder Familiensituation von Personen beeinflussen. Risikoanalyse, Verwaltung von Policen, Prämien und Schäden. Rückversicherung und Konfliktmanagement."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I5_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van persoonsverzekeringen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion d’assurances de personnes"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management of personal insurances"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltung von Personenversicherungen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#note> "De collectieve vorm van persoonsverzekeringen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#note> "Die kollektive Form von Personenversicherungen."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#note> "La forme collective d’assurances de personnes."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#note> "The collective form of personal insurances."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#notation> "I5_02" .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van groepsverzekeringen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion d’assurances groupes"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Group insurance management"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gruppenversicherungsmanagement"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#note> "Het verzekeren voor schade aan goederen en bezittingen van de cliënt of voor zijn aansprakelijkheid voor schade aan derden. Risico-analyse, beheer van polissen, premies en schadevergoedingen. Herverzekering en geschillenbeheer."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#note> "Insuring for damage to goods and belongings of the client or for his liability for damage to third parties. Risk analysis, management of policies, premiums and damages. Reinsurance and dispute management."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#note> "L’assurance contre le dommage causé à des biens ou à des possessions du client ou contre sa responsabilité du dommage causé à des tiers. L’analyse des risques, la gestion de polices, de primes et d’indemnités. Réassurance et gestion de litiges."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#note> "Versicherung für Schäden an Sachen und Eigentum des Kunden oder für seine Haftung für Schäden an Dritten. Risikoanalyse, Verwaltung von Policen, Prämien und Schäden. Rückversicherung und Konfliktmanagement."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#notation> "I5_03" .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van verzekeringen tegen brand, ongevallen en allerlei gevaren"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion d’assurances incendie, accidents et risques divers"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management der Versicherung gegen Feuer, Unfälle und alle Arten von Gefahren"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management of insurance against fire, accidents and all kinds of dangers"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#note> "Het verzekeren van werkgevers voor de schade opgelopen door werknemers bij arbeidsongevallen. Risico-analyse, beheer van polissen, premies en schadevergoedingen. Herverzekering en geschillenbeheer. Preventieonderzoek."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#note> "Insuring employers for the damage suffered by employees in case of industrial accidents. Risk analysis, management of policies, premiums and damages. Reinsurance and dispute management. Prevention research."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#note> "L’assurance d’employeurs pour les dommages subis par des employés lors d’accidents de travail. L’analyse des risques, la gestion de polices, de primes et d’indemnités. Réassurance et gestion de litiges. Examen de prévention."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#note> "Versicherung der Arbeitgeber für den Schaden, den die Arbeitnehmer bei Arbeitsunfällen erleiden. Risikoanalyse, Verwaltung von Policen, Prämien und Schäden. Rückversicherung und Konfliktmanagement. Präventionsforschung."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#notation> "I5_04" .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accident insurance"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeidsongevallenverzekeringen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assurances accidents de travail"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I5_04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unfallversicherung"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#note> "De verwerking, over de verschillende verzekeringstakken heen, van gegevens over personen die een verzwaard risico vertonen, om overdreven risico’s en fraude te vermijden."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Le traitement couvrant les diverses branches d’assurances, de données qui se rapportent à des personnes présentant un risque alourdi, afin d’éviter des excès de risques et de fraude."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#note> "The processing, across the various insurance branches, of data on persons who have a heightened risk, in order to avoid excessive risks and fraud."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verarbeitung von Daten über Personen mit erhöhtem Risiko in den verschiedenen Versicherungszweigen, um übermäßige Risiken und Betrug zu vermeiden."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/I#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#notation> "I6_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beheer van verzwaarde risico’s"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion de risques alourdis"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management of aggravated risks"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/I6_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Management von verschärften Risiken"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#notation> "J" .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commerce"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Handel"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Handel"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trade"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/J#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#note> "La prospection, les activités, les services offerts par des firmes commerciales, des associations de bienfaisance ou d’autres associations ou fondations, notamment de nature politique, à des segments de la population. Le moyen de communication employé à cet effet peut être le courrier, le téléphone ou d’autres moyens directs (par ex. e-mail, …). Il importe peu que le destinataire soit déjà client ou non."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Prospectie, activiteiten, diensten aangeboden door commerciële firma’s, liefdadigheidsinstellingen of andere verenigingen of stichtingen, o.a. deze van politieke aard, aan bevolkingssegmenten. Het communicatiemiddel dat hiertoe gebruikt wordt, kan post, telefoon of andere rechtstreekse middelen (bijv. e-mail,…) zijn. Het heeft geen belang of de geadresseerde reeds klant is of niet."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Prospection, activities, services offered by commercial firms, charities or other associations or foundations, including those of a political nature, to population segments. The means of communication that is used for this purpose can be mail, telephone or other direct means (eg e-mail, ...). It does not matter whether the addressee is already a customer or not."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#note> "Prospektion, Aktivitäten, Dienstleistungen, die von kommerziellen Firmen, Wohltätigkeitsorganisationen oder anderen Vereinigungen oder Stiftungen, einschließlich solcher politischer Natur, für Bevölkerungsgruppen angeboten werden. Die Kommunikationsmittel, die für diesen Zweck verwendet werden, können Mail, Telefon oder andere direkte Mittel (z. B. E-Mail, ...) sein. Es spielt keine Rolle, ob der Empfänger bereits Kunde ist oder nicht."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/J#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#notation> "J1_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Direct marketing"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Direct marketing"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Direktmarketing"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J1_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marketing direct"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#note> "La vente, après traitement, de données publiées par des sources officielles (comme par ex. le Moniteur belge, …) et de données recueillies auprès d’autres institutions."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Sale after processing of data, published by official sources (such as eg Belgian Official Gazette, ....), together with data obtained from other institutions."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verkauf nach der Verarbeitung von Daten, veröffentlicht von offiziellen Quellen (wie zB Belgian Official Gazette, ....), zusammen mit Daten von anderen Institutionen erhalten."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#note> "Verkoop na verwerking van gegevens, gepubliceerd door officiële bronnen (zoals bijv. Belgisch Staatsblad,….), samen met gegevens ingewonnen bij andere instellingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-finality/J#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#notation> "J2_01" .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Commerce d’informations commerciales"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Handel in commerciële inlichtingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Handel mit kommerziellen Informationen"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/J2_01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trade in commercial information"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#note> "À définir par le responsable lui-même."@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Te omschrijven door de verantwoordelijke zelf."@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#note> "To be described by the responsible person."@en .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Von der verantwortlichen Person beschrieben werden."@de .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-finality#id> .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ander doeleinde"@nl .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Another purpose"@en .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre finalité"@fr .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ein anderer Zweck"@de .
+<http://vocab.belgif.be/auth/gdpr-finality/Z#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-finality#id> .

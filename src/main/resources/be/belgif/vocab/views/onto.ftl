@@ -105,7 +105,7 @@
 	<h3>Properties</h3>
 	<#list p?sort_by("id") as pr>
             <#assign name = pr.id.localName>
-            <a name="${name}">
+            <a name="#${name}">
             <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
                 <#assign val = pr.objs("rdfs", "subPropertyOf")>
