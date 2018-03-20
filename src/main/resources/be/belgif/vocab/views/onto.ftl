@@ -20,6 +20,10 @@
         <h3>${m.getString("msg.general")}</h3>
         <table>
         <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
+        <#assign val = o.lit("owl:versionInfo", "")!"">
+        <#if val?has_content>
+            <tr><td>Version</td><td>${val}</td></tr>
+        </#if>
         <#assign val = o.lit("rdfs:label", l)!"">
         <#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
