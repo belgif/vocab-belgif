@@ -28,6 +28,7 @@ package be.belgif.vocab.resources;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.VocabListView;
 import be.belgif.vocab.views.VocabTermView;
 import be.belgif.vocab.views.VocabView;
 
@@ -42,6 +43,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
@@ -67,6 +69,12 @@ public class VocabResource extends RdfResource {
 				: PREFIX + vocab + "#id";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
 		return getById(url, ctx);
+	}
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public VocabListView getVocabListHTML(@QueryParam("lang") Optional<String> lang) {
+		return new VocabListView(getByClass(SKOS.CONCEPT_SCHEME) , lang.orElse("en"));
 	}
 	
 	@GET

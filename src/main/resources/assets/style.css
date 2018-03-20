@@ -91,9 +91,13 @@ footer {
 	font-size: smaller;
 }
 
+
 a {
 	color: inherit;
-	text-decoration: none;
+}
+
+div#languages a {
+    text-decoration: none;
 }
 
 h1, h2 {
@@ -178,6 +182,11 @@ th {
 	color: white;
 	font-weight: normal;
 }
+
+table.onto td:first-child { 
+    width: 20% ;
+}
+
 
 details {
 	padding: 0.5rem;

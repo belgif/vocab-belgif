@@ -25,16 +25,8 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.VoidDAO;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.ws.rs.ext.Provider;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
  * HTML view for homepage / VoID descriptions
@@ -43,31 +35,13 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  */
 @Provider
 public class HomepageView extends RdfView {
-	private final List<VoidDAO> vocabs = new ArrayList();
 
-	/**
-	 * Get the list of vocabularies
-	 * 
-	 * @return list
-	 */
-	public List<VoidDAO> getVocabs() {
-		return this.vocabs;
-	}
-	
-	
 	/** 
 	 * Constructor
 	 * 
-	 * @param vocs vocabularies as triples
 	 * @param lang language
 	 */
-	public HomepageView(Model vocs, String lang) {
-		super("homepage.ftl", lang);
-		vocs.subjects().stream().forEachOrdered(subj -> {
-			Model m = new LinkedHashModel();
-			vocs.getNamespaces().forEach(m::setNamespace);
-			m.addAll(vocs.filter(subj, null, null));
-			vocabs.add(new VoidDAO(m, (IRI) subj));
-		});		
+	public HomepageView(String lang) {
+		super("homepage.ftl", lang);	
 	}
 }

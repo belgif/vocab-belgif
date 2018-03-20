@@ -29,24 +29,32 @@
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>
 	</table>
-	<#if c?has_content>
+        <#assign clo = o.classesLetter>
+	<#if clo?has_content>
 	<section>
 	    <h4>Classes</h4>
 	    <table>
-	    <#list c?sort_by("id") as cl>
-                <#assign name = cl.id.localName>
-		<tr><td><a href="#${name}">${name}</a></td></tr>
+	    <#list clo?keys as letter>
+		<tr><th>${letter}</th><td>
+                    <#list clo[letter] as name>
+                        <a href="#${name}">${name}</a>
+                    </#list>
+                </td></tr>
 	    </#list>
 	    </table>
 	</section>
 	</#if>
-	<#if p?has_content>
+        <#assign pro = o.propertiesLetter>
+	<#if pro?has_content>
 	<section>
 	    <h4>Properties</h4>
 	    <table>
-	    <#list p?sort_by("id") as pr>
-                <#assign name = pr.id.localName>
-		<tr><td><a href="#${name}">${name}</a></td></tr>
+	    <#list pro?keys as letter>
+                <tr><th>${letter}</th><td>
+                    <#list pro[letter] as name>
+                        <a href="#${name}">${name}</a>
+                    </#list>
+                </td></tr>
 	    </#list>
 	    </table>
 	</section>
@@ -58,7 +66,7 @@
 	<#list c?sort_by("id") as cl>
             <#assign name = cl.id.localName>
             <a name="#${name}">
-            <table>
+            <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
                 <#assign val = cl.objs("rdfs", "subClassOf")>
                 <#if val?has_content>
@@ -94,7 +102,7 @@
 	<#list p?sort_by("id") as pr>
             <#assign name = pr.id.localName>
             <a name="${name}">
-            <table>
+            <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
                 <#assign val = pr.objs("rdfs", "subPropertyOf")>
                 <#if val?has_content>

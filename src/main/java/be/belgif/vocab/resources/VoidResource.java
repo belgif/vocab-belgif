@@ -54,12 +54,6 @@ public class VoidResource extends RdfResource {
 		return getByClass(SKOS.CONCEPT_SCHEME);
 	}	
 	
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public HomepageView getVoidHTML(@QueryParam("lang") Optional<String> lang) {
-		return new HomepageView(getByClass(VOID.DATASET), lang.orElse("en"));
-	}
-	
 	
 	/**
 	 * Constructor

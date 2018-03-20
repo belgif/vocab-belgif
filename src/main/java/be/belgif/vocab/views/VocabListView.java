@@ -23,63 +23,50 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.views;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import be.belgif.vocab.dao.SkosDAO;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.ext.Provider;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.VOID;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
- * DAO helper class for VoID.
- *
- * @author Bart.Hanssens
+ * HTML view for homepage / VoID descriptions
+ * 
+ * @author Bart Hanssens
  */
-public class VoidDAO extends RdfDAO {
+@Provider
+public class VocabListView extends RdfView {
+	private final List<SkosDAO> vocabs = new ArrayList();
 
 	/**
-	 * Get SKOS root resource
-	 *
-	 * @return uri as string
+	 * Get the list of vocabularies
+	 * 
+	 * @return list
 	 */
-	public String getRoot() {
-		Value v = obj(VOID.ROOT_RESOURCE);
-		return (v != null) ? v.toString() : "";
+	public List<SkosDAO> getVocabs() {
+		return this.vocabs;
 	}
-
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value v = obj(VOID.DATA_DUMP);
-		return (v != null) ? v.toString() : "";
-	}
-
-	/**
-	 * Get name of the vocabulary
-	 *
-	 * @return
-	 */
-	public String getName() {
-		try {
-			return new URL(getRoot()).getFile();
-		} catch (MalformedURLException mfe) {
-			return "";
-		}
-	}
-
-	/**
+	
+	/** 
 	 * Constructor
-	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * 
+	 * @param vocs vocabularies as triples
+	 * @param lang language
 	 */
-	public VoidDAO(Model m, IRI id) {
-		super(m, id);
+	public VocabListView(Model vocs, String lang) {
+		super("vocablist.ftl", lang);
+		vocs.subjects().stream().forEachOrdered(subj -> {
+			Model m = new LinkedHashModel();
+			vocs.getNamespaces().forEach(m::setNamespace);
+			m.addAll(vocs.filter(subj, null, null));
+			vocabs.add(new SkosDAO(m, (IRI) subj));
+		});		
 	}
 }

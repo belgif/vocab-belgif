@@ -29,6 +29,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedMap;
+import java.util.SortedSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -53,6 +57,48 @@ public class OwlDAO extends RdfDAO {
 	 */
 	public List<RdfDAO> getClasses() {
 		return this.classes;
+	}
+	
+	
+	/**
+	 * Sort a list of properties or classes and group by starting letter.
+	 * 
+	 * @param lst list of properties or classes
+	 * @return sorted nested map
+	 */
+	private SortedMap<String,SortedSet<String>> getLetter(List<RdfDAO> lst) {
+		TreeMap<String,SortedSet<String>> map = new TreeMap<>();
+		
+		for (RdfDAO rdf: lst) {
+			String name = rdf.getId().getLocalName();
+			String letter = name.substring(0, 1);
+			SortedSet set = map.get(letter);
+			if (set == null) {
+				set = new TreeSet<>();
+				map.put(letter, set);
+			}
+			set.add(name);
+		}
+		return map;
+	}
+	
+
+	/**
+	 * Get ordered list of class names, grouped by starting letter.
+	 * 
+	 * @return nested map
+	 */
+	public SortedMap<String,SortedSet<String>> getClassesLetter() {
+		return getLetter(getClasses());
+	}
+	
+	/**
+	 * Get ordered list of property names, grouped by starting letter.
+	 * 
+	 * @return nested map
+	 */
+	public SortedMap<String,SortedSet<String>> getPropertiesLetter() {
+		return getLetter(getProperties());
 	}
 	
 	/**

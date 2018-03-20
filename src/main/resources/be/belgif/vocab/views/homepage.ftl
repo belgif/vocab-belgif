@@ -13,36 +13,18 @@
 <main>
     <div id="container">
     <#include "message.ftl">
-    <#if vocabs?has_content>
     <section>
-	<h3>Thesauri</h3>
-	<section>
-	    <h4>${m.getString("msg.overview")}</h4>
-	    <table>
-	    <tr><th>${m.getString("msg.name")}</th>
-		<th>${m.getString("msg.description")}</th>
-		<th>${m.getString("msg.downloads")}</th>
-	    </tr>
-	    <#list vocabs?sort_by("root") as v>
-	    <tr><td><a href="${v.root}">${v.lit("dcterms:title", l)!""}</a></td>
-		<td>${v.lit("dcterms:description", l)!""}</td>
-                <#assign download = v.download!"">
-		<td><a href="${download}.ttl">TTL</a>
-		    <a href="${download}.jsonld">JSON-LD</a>
-		    <a href="${download}.nt">N-Triples</a></td>
-	    </tr>
-	    </#list>
-	    </table>
-	</section>
+	<h3>${m.getString("msg.vocabs")}</h3>
+        <p><a href="/auth?lang=${l}">${m.getString("msg.vocabsdesc")}</a></p>
     </section>
     <section>
-	<#include "contentneg.ftl">
-	<section>
-	    <h4>Linked Data Fragments</h4>
-	    <p>http://vocab.belgif.be/_ldf</p>
-	</section>
+        <h3>${m.getString("msg.ontos")}</h3>
+        <p><a href="/ns?lang=${l}">${m.getString("msg.ontosdesc")}</a></p>
     </section>
-    </#if>
+    <section>
+        <h3>${m.getString("msg.shacls")}</h3>
+        <p><a href="/shacl?lang=${l}">${m.getString("msg.shaclsdesc")}</a></p>
+    </section>
     </div>
 </main>
 <#include "footer.ftl">

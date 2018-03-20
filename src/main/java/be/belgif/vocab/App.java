@@ -153,9 +153,8 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new RDFMessageBodyWriter());
 
 		// Resources / "web pages"
-		env.jersey().register(new RootResource());
+		env.jersey().register(new RootResource(repo));
 		env.jersey().register(new VoidResource(repo));
-		
 		
 		env.jersey().register(new VocabResource(repo));
 		env.jersey().register(new DatasetResource(
@@ -186,9 +185,9 @@ public class App extends Application<AppConfig> {
 		env.healthChecks().register("triplestore", check);
 		
 		env.lifecycle().addServerLifecycleListener(server -> {
-			if (repo.getConnection().isEmpty()) {
+			//if (repo.getConnection().isEmpty()) {
 				importAll(config);
-			}
+			//}
 		});
 		
 	}

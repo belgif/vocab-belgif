@@ -46,7 +46,7 @@ public class DatasetResource {
 	@GET
 	@Path("{file: .+\\.(nt|jsonld|ttl)}")
 	@Produces({RDFMediaType.NTRIPLES, RDFMediaType.JSONLD, RDFMediaType.TURTLE})
-	public File getJsonFile(@PathParam("file") String file) {
+	public File getFile(@PathParam("file") String file) {
 		return Paths.get(vocabDir, file).toFile();
 	}
 

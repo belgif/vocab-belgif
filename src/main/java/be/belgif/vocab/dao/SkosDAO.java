@@ -27,6 +27,7 @@ package be.belgif.vocab.dao;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 
@@ -36,7 +37,26 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
  * @author Bart.Hanssens
  */
 public class SkosDAO extends RdfDAO {
-
+	/**
+	 * Get SKOS root resource
+	 *
+	 * @return uri as string
+	 */
+	public String getRoot() {
+		Value v = obj(VOID.ROOT_RESOURCE);
+		return (v != null) ? v.toString() : "";
+	}
+	
+	/**
+	 * Get SKOS root resource
+	 *
+	 * @return uri as string
+	 */
+	public String getDownload() {
+		return getId().toString().replaceFirst("/auth/", "/dataset/")
+					.replaceFirst("#id", "");
+	}
+	
 	/**
 	 * Get SKOS notation
 	 *
@@ -44,15 +64,6 @@ public class SkosDAO extends RdfDAO {
 	 */
 	public String getNotation() {
 		return literal(SKOS.NOTATION);
-	}
-
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		return obj(VOID.DATA_DUMP).toString();
 	}
 
 	/**
