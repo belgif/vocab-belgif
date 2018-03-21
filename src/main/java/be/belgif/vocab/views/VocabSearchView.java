@@ -26,6 +26,7 @@
 package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.RdfDAO;
+import be.belgif.vocab.dao.SkosDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,7 +61,7 @@ public class VocabSearchView extends RdfView {
 	public VocabSearchView(String vocab, Model m, String lang) {
 		super("vocabsearch.ftl", lang);
 		
-		m.subjects().forEach(s -> results.add(new RdfDAO(m, (IRI) s)));
+		m.subjects().forEach(s -> results.add(new SkosDAO(m, (IRI) s)));
 	}
 }
 

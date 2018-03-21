@@ -20,7 +20,7 @@
 	    <#list results as r>
 		<tr><td><a href="${r.id}">${r.id}</a></td><td>
 		<#list langs as lang>
-		    <#assign val = r.lit("skos:prefLabel", lang)!"">
+                    <#assign val = r.getPrefLabel(lang)>
 		    <#if val?has_content>
 			${val}<br>
 		    </#if>

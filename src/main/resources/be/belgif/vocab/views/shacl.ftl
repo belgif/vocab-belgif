@@ -18,11 +18,11 @@
         <h3>Node Shapes</h3>
         <#list s?sort_by("id") as ns>
             <table>
-            <tr><th colspan="3">${ns.obj("sh", "targetClass").localName}</th></tr>
+            <tr><th colspan="3">${ns.shortTarget}</th></tr>
             <#assign props = ns.propertyShapes>
             <#if props?has_content>
                 <#list props as prop>
-                    <tr><td>${prop.obj("sh", "path").localName}</td>
+                    <tr><td>${prop.shortPath}</td>
                         <td>${prop.obj("sh", "minCount")!"0"} -
                         ${prop.obj("sh", "maxCount")!"N"}
                         <#assign type = prop.obj("sh", "datatype")!"">

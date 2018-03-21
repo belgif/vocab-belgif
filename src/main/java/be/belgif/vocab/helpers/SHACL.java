@@ -51,9 +51,12 @@ public class SHACL {
 	 */
 	public static final String PREFIX = "sh";
 
+	public static final IRI CLASS;
 	public static final IRI NODE_SHAPE;
+	public static final IRI PATH;
 	public static final IRI PROPERTY_SHAPE;
 	public static final IRI PROPERTY;
+	public static final IRI TARGET_CLASS;
 	
 	/**
 	 * An immutable {@link Namespace} constant that represents the namespace.
@@ -62,10 +65,14 @@ public class SHACL {
 	
 	static {
 		ValueFactory factory = SimpleValueFactory.getInstance();
+
 		
 		NODE_SHAPE = factory.createIRI(NAMESPACE, "NodeShape");
 		PROPERTY_SHAPE = factory.createIRI(NAMESPACE, "PropertyShape");
 		
+		CLASS = factory.createIRI(NAMESPACE, "class");
+		PATH = factory.createIRI(NAMESPACE, "path");		
 		PROPERTY = factory.createIRI(NAMESPACE, "property");
+		TARGET_CLASS = factory.createIRI(NAMESPACE, "targetClass");
 	}
 }

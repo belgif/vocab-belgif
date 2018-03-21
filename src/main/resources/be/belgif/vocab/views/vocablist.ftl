@@ -10,10 +10,11 @@
 <#include "header.ftl">
 <#assign l = lang>
 <#assign m = messages>
+<#assign vs = vocabs>
 <main>
     <div id="container">
     <#include "message.ftl">
-    <#if vocabs?has_content>
+    <#if vs?has_content>
     <section>
 	<h3>Thesauri</h3>
 	<section>
@@ -23,10 +24,9 @@
 		<th>${m.getString("msg.description")}</th>
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
-	    <#list vocabs?sort_by("id") as v>
-            <#assign link = v.id?remove_ending('#id') + "?lang=" + l>
-	    <tr><td><a href="${link}">${v.lit("dcterms:title", l)!""}</a></td>
-		<td>${v.lit("dcterms:description", l)!""}</td>
+	    <#list vs?sort_by("id") as v>
+            <tr><td><a href="${v.id}">${v.getTitle(l)}</a></td>
+		<td>${v.getDescription(l)}</td>
                 <#assign download = v.download!"">
 		<td><a href="${download}.ttl">TTL</a>
 		    <a href="${download}.jsonld">JSON-LD</a>

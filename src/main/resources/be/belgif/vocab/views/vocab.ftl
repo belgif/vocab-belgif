@@ -25,16 +25,15 @@
 	<section>
 	    <h4>${m.getString("msg.general")}</h4>
 	    <table>
-	    <#assign n = v.notation!"">
 	    <#list langs as lang>
-		<#assign val = v.lit("dcterms:description", lang)!"">
+		<#assign val = v.getDescription(lang)!"">
 		<#if val?has_content>
 		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
 		 </#if>
 	    </#list>
 	</table>
         </section>
-	<#assign tc = v.objs("skos", "hasTopConcept")>
+	<#assign tc = v.topConcepts>
 	<#if tc?has_content>
 	<section>
 	    <h4>SKOS TopConcepts</h4>

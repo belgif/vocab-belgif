@@ -25,16 +25,14 @@
  */
 package be.belgif.vocab.ldf;
 
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 
-
 /**
- * vCard RDF helper class
+ * Hydra RDF helper class
  * 
- * @author Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * @author Bart Hanssens
  */
 public class Hydra {
 	public final static String NAMESPACE = "http://www.w3.org/ns/hydra/core#";

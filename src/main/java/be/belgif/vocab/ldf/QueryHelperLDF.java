@@ -323,17 +323,6 @@ public class QueryHelperLDF {
 		return Integer.valueOf(val);
 	}
 	
-	/**
-	 * Set namespaces
-	 * 
-	 * @param m
-	 * @return 
-	 */
-	private static Model setNamespaces(Model m) {
-		Model ns = QueryHelper.setNamespaces(m);
-		ns.setNamespace(Hydra.PREFIX, Hydra.NAMESPACE);
-		return ns;
-	}
 	
 	/**
 	 * Get linked data fragment
@@ -360,7 +349,6 @@ public class QueryHelperLDF {
 		IRI pred = (p != null) ? createIRI(p) : null;
 		Value obj = (o != null) ? createLiteralOrUri(o) : null;
 	
-		
 		UriBuilder builder  = UriBuilder.fromUri(PREFIX).path(LDF).path(vocab);
 		if (s != null) {
 			builder = builder.queryParam("s", s);
@@ -388,7 +376,8 @@ public class QueryHelperLDF {
 			hyperControls(m, vocab, dataset, builder, offset, count, isFrag);
 			getFragment(m, conn, subj, pred, obj, graph, offset, count);
 
-			return setNamespaces(m);
+			//return setNamespaces(m);
+			return m;
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);
 		}

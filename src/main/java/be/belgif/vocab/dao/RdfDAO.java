@@ -28,18 +28,18 @@ package be.belgif.vocab.dao;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Optional;
 import java.util.Set;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Namespace;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
+import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,7 +56,6 @@ public class RdfDAO {
 	private final Model m;
 	private final Resource id;
 
-	
 	/**
 	 * Get model
 	 * 
@@ -64,6 +63,15 @@ public class RdfDAO {
 	 */
 	protected Model getModel() {
 		return this.m;
+	}
+		
+	/**
+	 * Get the triple subject ID
+	 *
+	 * @return subject IRI
+	 */
+	public Resource getId() {
+		return id;
 	}
 	
 	/**
@@ -76,24 +84,7 @@ public class RdfDAO {
 		Set objs = m.filter(id, prop, null).objects();
 		return (objs == null ? Collections.EMPTY_SET : objs);
 	}
-
-	/**
-	 * Get set of triple objects
-	 *
-	 * @param prefix property namespace prefix
-	 * @param term property term
-	 * @return set of objects (IRI or literal)
-	 */
-	public Set<Value> objs(String prefix, String term) {
-		Optional<Namespace> ns = m.getNamespace(prefix);
-		if (ns.isPresent()) {
-			return objs(f.createIRI(ns.get().getName(), term));
-		} else {
-			LOG.error("Namespace for prefix {} not found", prefix);
-			return Collections.EMPTY_SET;
-		}
-	}
-
+	
 	/**
 	 * Get one triple
 	 *
@@ -106,111 +97,86 @@ public class RdfDAO {
 	}
 
 	/**
-	 * Get one triple
+	 * Get a set of literals as strings
 	 *
-	 * @param prefix property namespace prefix
-	 * @param term property term
-	 * @return set of objects (IRI or literal)
-	 */
-	public Value obj(String prefix, String term) {
-		Iterator<Value> i = objs(prefix, term).iterator();
-		return (i.hasNext() ? i.next() : null);
-	}
-
-	/**
-	 * Get one literal
-	 *
-	 * @param prop property uri
-	 * @return literals (IRI or literal)
-	 */
-	public Set<Literal> literals(IRI prop) {
-		Set objs = m.filter(id, prop, null).objects();
-		return (objs == null ? Collections.EMPTY_SET : objs);
-	}
-
-	/**
-	 * Get one literal
-	 *
-	 * @param prop property URI
-	 * @return literal
-	 */
-	public String literal(IRI prop) {
-		Iterator<Literal> i = literals(prop).iterator();
-		return (i.hasNext() ? i.next().stringValue() : null);
-	}
-
-	/**
-	 * Get one literal
-	 *
-	 * @param prefix property namespace prefix
-	 * @param term property term
+	 * @param prop RDF property
 	 * @param lang language code
-	 * @return literal (IRI or value)
+	 * @return set of strings
 	 */
-	public String literal(String prefix, String term, String lang) {
-		Iterator<String> i = literals(prefix, term, lang).iterator();
-		return (i.hasNext() ? i.next() : null);
-	}
-
-	/**
-	 * Shortcut for getting one literal
-	 * 
-	 * @param term prefixed term
-	 * @param lang language code
-	 * @return literal (IRI or value) 
-	 */
-	public String lit(String term, String lang) {
-		String parts[] = term.split(":");
-		return literal(parts[0], parts[1], lang);
-	}
-	
-	/**
-	 * Get a set of literals
-	 *
-	 * @param prefix property namespace prefix
-	 * @param term property term
-	 * @param lang language code
-	 * @return literals (IRI or literal)
-	 */
-	public Set<String> literals(String prefix, String term, String lang) {
+	public Set<String> literals(IRI prop, String lang) {
 		Set<String> vals = new HashSet<>();
-		for (Value obj : objs(prefix, term)) {
+
+		for (Value obj : objs(prop)) {
 			Literal l = (Literal) obj;
 			if (l.getLanguage().orElse("").equals(lang)) {
-				vals.add(l.stringValue());
+				String val = l.stringValue();
+				if (val != null) {
+					vals.add(val);
+				}
 			}
 		}
 		return vals;
 	}
-
+	
 	/**
-	 * Shortcut for getting a set of literals
-	 * 
-	 * @param term prefixed term
+	 * Get one literal
+	 *
+	 * @param prop
 	 * @param lang language code
-	 * @return literals (IRI or value) 
+	 * @return literal (IRI or value)
 	 */
-	public Set<String> lits(String term, String lang) {
-		String parts[] = term.split(":");
-		return literals(parts[0], parts[1], lang);
+	public String literal(IRI prop, String lang) {
+		Iterator<String> i = literals(prop, lang).iterator();
+		return (i.hasNext() ? i.next() : "");
 	}
 	
 	/**
-	 * Get sameAs URI
+	 * Get RDFS comment
+	 * 
+	 * @param lang language code
+	 * @return value
+	 */
+	public String getComment(String lang) {
+		return literal(RDFS.COMMENT, lang);
+	}
+	
+	/**
+	 * Get sameAs URIs
 	 *
 	 * @return set of uri
 	 */
 	public Set<Value> getSameAs() {
 		return objs(OWL.SAMEAS);
 	}
+	
+	/**
+	 * Get DCTERMS description
+	 * 
+	 * @param lang language code
+	 * @return string
+	 */
+	public String getDescription(String lang) {
+		return literal(DCTERMS.DESCRIPTION, lang);
+	}
 
 	/**
-	 * Get the triple subject ID
-	 *
-	 * @return subject IRI
+	 * Get RDFS label
+	 * 
+	 * @param lang language code
+	 * @return string
 	 */
-	public Resource getId() {
-		return id;
+	public String getLabel(String lang) {
+		return literal(RDFS.LABEL, lang);
+	}
+	
+	/**
+	 * Get DCTERMS title
+	 * 
+	 * @param lang language code
+	 * @return title 
+	 */
+	public String getTitle(String lang) {
+		return literal(DCTERMS.TITLE, lang);
 	}
 
 	/**

@@ -25,13 +25,18 @@
  */
 package be.belgif.vocab.dao;
 
+import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.SHACL;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
@@ -44,11 +49,73 @@ import org.eclipse.rdf4j.model.vocabulary.RDF;
  * @author Bart Hanssens
  */
 public class ShaclDAO extends RdfDAO {
+	private final List<ShaclNodeShapeDAO> shapes = new ArrayList<>();
+	private final Map<String,String> usedNs = new HashMap<>();
+	
 	/**
-	 * SHACL node shape
+	 * Get short (prefixed) name of an IRI
+	 * 
+	 * @param prop
+	 * @return string
 	 */
-	public class ShaclNodeDAO extends RdfDAO {
-		private final List<RdfDAO> shapes = new ArrayList<>();
+	protected String getShort(IRI prop) {
+		Value val = obj(prop);
+		if (! (val instanceof IRI)) {
+			return null;
+		}
+		IRI iri = (IRI) val;
+		String prefix = usedNs.get(iri.getNamespace());
+		return (prefix == null) ? val.toString() 
+					: prefix + ":" + iri.getLocalName();	
+	}
+	
+	/**
+	 * PropertyShape helper class
+	 */
+	public class ShaclPropertyShapeDAO extends RdfDAO {
+		/**
+		 * Get prefixed path
+		 * 
+		 * @return string
+		 */
+		public String getShortPath() {
+			return getShort(SHACL.PATH);
+		}
+		
+		/**
+		 * Get prefixed class
+		 * 
+		 * @return string
+		 */
+		public String getShortClass() {
+			return getShort(SHACL.CLASS);
+		}
+		
+		/**
+		 * Constructor
+		 * 
+		 * @param m model
+		 * @param id 
+		 */
+		public ShaclPropertyShapeDAO(Model m, Resource id) {
+			super(m, id);
+		}
+	}
+	
+	/**
+	 * NodeShape helper class
+	 */
+	public class ShaclNodeShapeDAO extends RdfDAO {
+		private final List<ShaclPropertyShapeDAO> shapes = new ArrayList<>();
+		
+		/**
+		 * Get target class
+		 * 
+		 * @return 
+		 */
+		public String getShortTarget() {
+			return getShort(SHACL.TARGET_CLASS);
+		}
 		
 		/**
 		 * Initialize SHACL property shapes
@@ -66,18 +133,18 @@ public class ShaclDAO extends RdfDAO {
 				}
 				Model mp = new LinkedHashModel();
 				mp.addAll(m.filter((Resource) subj, null, null));
-				shapes.add(new RdfDAO(mp, (Resource) subj));
+				shapes.add(new ShaclPropertyShapeDAO(mp, (Resource) subj));
 				m.removeAll(mp);
 			}
 		}
 
 	
 		/**
-		 * Get list of propertyshapes
+		 * Get list of property shapes
 		 * 
 		 * @return 
 		 */
-		public List<RdfDAO> getPropertyShapes() {
+		public List<ShaclPropertyShapeDAO> getPropertyShapes() {
 			return shapes;
 		}
 
@@ -88,20 +155,18 @@ public class ShaclDAO extends RdfDAO {
 		 * @param id
 		 * @param fullm complete model 
 		 */
-		public ShaclNodeDAO(Model m, Resource id, Model fullm) {
+		public ShaclNodeShapeDAO(Model m, Resource id, Model fullm) {
 			super(m, id);
 			initPropertyShapes(fullm, id);
 		}
 	}
-
-	private final List<RdfDAO> shapes = new ArrayList<>();
 
 	/**
 	 * Get list of SHACL node shapes
 	 * 
 	 * @return 
 	 */
-	public List<RdfDAO> getShapes() {
+	public List<ShaclNodeShapeDAO> getShapes() {
 		return this.shapes;
 	}
 	
@@ -117,8 +182,28 @@ public class ShaclDAO extends RdfDAO {
 		for(Resource subj: subjs) {
 			Model mp = new LinkedHashModel();
 			mp.addAll(m.filter(subj, null, null));
-			shapes.add(new ShaclNodeDAO(mp, (Resource) subj, m));
+			shapes.add(new ShaclNodeShapeDAO(mp, (Resource) subj, m));
 			m.removeAll(mp);
+		}
+	}
+	
+	/**
+	 * Create a list of known namespaces used in the SHACL
+	 * 
+	 * @param m 
+	 */
+	private void initUsedNamespaces(Model m) {
+		Set<String> used = new HashSet<>();
+		
+		for (Value val: m.objects()) {
+			if (val instanceof IRI) {
+				used.add(((IRI) val).getNamespace());
+			}
+		}			
+		for (Entry<String,String> e: QueryHelper.NS_MAP.entrySet()){
+			if (used.contains(e.getValue())) {
+				usedNs.put(e.getValue(), e.getKey());
+			}
 		}
 	}
 	
@@ -130,6 +215,7 @@ public class ShaclDAO extends RdfDAO {
 	 */
 	public ShaclDAO(Model m, Resource id) {
 		super(m, id);
+		initUsedNamespaces(m);
 		initNodeShapes(m);
 	}
 }

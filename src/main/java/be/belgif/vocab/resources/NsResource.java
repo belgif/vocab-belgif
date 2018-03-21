@@ -32,8 +32,8 @@ import be.belgif.vocab.views.OwlView;
 
 import java.io.File;
 import java.nio.file.Paths;
-import java.util.Optional;
 
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -59,20 +59,20 @@ public class NsResource extends RdfResource {
 	
 	@GET
 	@Produces(MediaType.TEXT_HTML)
-	public OntoListView getListHTML(@QueryParam("lang") Optional<String> lang) {
+	public OntoListView getListHTML(@DefaultValue("en") @QueryParam("lang") String lang) {
 		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
-					getByClass(OWL.ONTOLOGY), lang.orElse("en"));
+					getByClass(OWL.ONTOLOGY), lang);
 	}
 	
 	@GET
 	@Path("/{onto}")
 	@Produces(MediaType.TEXT_HTML)
 	public OwlView getOntoHTML(@PathParam("onto") String onto,
-				@QueryParam("lang") Optional<String> lang) {
+				@DefaultValue("en") @QueryParam("lang") String lang) {
 		//String subj = PREFIX + onto + "#";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
 		Model m = getById(null, ctx);
-		return new OwlView(onto, m, lang.orElse("en"));
+		return new OwlView(onto, m, lang);
 	}
 	
 	@GET

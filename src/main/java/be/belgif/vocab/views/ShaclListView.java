@@ -25,12 +25,13 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.RdfDAO;
+import be.belgif.vocab.dao.ShaclDAO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
@@ -39,15 +40,14 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * @author Bart Hanssens
  */
 public class ShaclListView extends RdfView {
-	private final List<RdfDAO> shacls = new ArrayList();
-
+	private final List<ShaclDAO> shacls = new ArrayList<>();
 
 	/**
 	 * Get the list of SHACLs
 	 * 
 	 * @return list
 	 */
-	public List<RdfDAO> getShacls() {
+	public List<ShaclDAO> getShacls() {
 		return this.shacls;
 	}
 	
@@ -60,12 +60,12 @@ public class ShaclListView extends RdfView {
 	public ShaclListView(Model ms, String lang) {
 		super("shacllist.ftl", lang);
 		
-		ms.subjects().stream().filter(s -> s.toString().contains("shacl"))
-							.forEachOrdered(subj -> {
-			Model m = new LinkedHashModel();
-			ms.getNamespaces().forEach(m::setNamespace);
-			m.addAll(ms.filter(subj, null, null));
-			shacls.add(new RdfDAO(m, subj));
-		});	
+		for(Resource subj: ms.subjects()) {
+			if (subj.toString().contains("shacl")) {
+				Model m = new LinkedHashModel();
+				m.addAll(ms.filter(subj, null, null));
+				shacls.add(new ShaclDAO(m, subj));
+			}
+		}
 	}
 }

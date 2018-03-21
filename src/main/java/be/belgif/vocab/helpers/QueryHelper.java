@@ -26,6 +26,7 @@
 package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.App;
+import be.belgif.vocab.ldf.Hydra;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -89,6 +90,7 @@ public class QueryHelper {
 		NS_MAP.put(VCARD4.PREFIX, VCARD4.NAMESPACE);
 		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
 		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
+		NS_MAP.put(Hydra.PREFIX, Hydra.NAMESPACE);
 	}
 
 	private final static String PREFIX = App.getPrefix();
@@ -115,16 +117,6 @@ public class QueryHelper {
 	public static IRI getGraphName(String type, String name) {
 		return F.createIRI(PREFIX + "graph/" + type + "/" + name);
 	}
-	
-	/**
-	 * Get name graph + context id from name
-	 *
-	 * @param name
-	 * @return context URI
-	 */
-	/*public static IRI asGraph(String name) {
-		return F.createIRI(PREFIX_GRAPH + name);
-	}*/
 
 	/**
 	 * Get named graph / context id from name
@@ -176,7 +168,8 @@ public class QueryHelper {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
-		return setNamespaces(m);
+		//return setNamespaces(m);
+		return m;
 	}
 
 	
@@ -201,8 +194,8 @@ public class QueryHelper {
 			throw new WebApplicationException(e);
 		}
 		
-		return setNamespaces(m);
-	
+		//return setNamespaces(m);
+		return m;
 	}
 	
 	/**

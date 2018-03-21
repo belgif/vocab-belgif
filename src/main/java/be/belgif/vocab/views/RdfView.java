@@ -59,7 +59,6 @@ public abstract class RdfView extends View {
 		return this.msgs;
 	}
 	
-	
 	/** 
 	 * Constructor
 	 * 

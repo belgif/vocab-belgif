@@ -59,6 +59,7 @@ public class QueryHelperFTS {
 	 *
 	 * @param repo RDF store
 	 * @param text text to search for
+	 * @param type
 	 * @param from named graph
 	 * @return RDF model
 	 */
@@ -68,7 +69,8 @@ public class QueryHelperFTS {
 			gq.setBinding("query", QueryHelper.asLiteral(text + "*"));
 			gq.setBinding("graph", QueryHelper.getGraphName(type, from));
 
-			return QueryHelper.setNamespaces(QueryResults.asModel(gq.evaluate()));
+			//return QueryHelper.setNamespaces(QueryResults.asModel(gq.evaluate()));
+			return QueryResults.asModel(gq.evaluate());
 		} catch (RepositoryException | MalformedQueryException | QueryEvaluationException e) {
 			throw new WebApplicationException(e);
 		}

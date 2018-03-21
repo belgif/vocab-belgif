@@ -80,6 +80,9 @@ public class RDFMessageBodyWriter implements MessageBodyWriter<Model> {
 			if (m.contains(null, Hydra.MAPPING, null)) {
 				headers.add(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
 			}
+			if (fmt.supportsNamespaces()) {
+				QueryHelper.setNamespaces(m);
+			}
 			Rio.write(m, out, fmt);
 		} catch (RDFHandlerException ex) {
 			throw new WebApplicationException(ex);

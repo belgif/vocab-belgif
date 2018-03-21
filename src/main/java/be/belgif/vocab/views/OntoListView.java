@@ -25,7 +25,7 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.RdfDAO;
+import be.belgif.vocab.dao.OwlDAO;
 import be.belgif.vocab.dao.XmlnsDAO;
 
 import java.util.ArrayList;
@@ -33,6 +33,7 @@ import java.util.List;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
@@ -41,15 +42,15 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * @author Bart Hanssens
  */
 public class OntoListView extends RdfView {
-	private final List<XmlnsDAO> xmlns = new ArrayList();
-	private final List<RdfDAO> ontos = new ArrayList();	
+	private final List<XmlnsDAO> xmlns = new ArrayList<>();
+	private final List<OwlDAO> ontos = new ArrayList<>();	
 
 	/**
 	 * Get the list of ontologies
 	 * 
 	 * @return list
 	 */
-	public List<RdfDAO> getOntos() {
+	public List<OwlDAO> getOntos() {
 		return this.ontos;
 	}
 	
@@ -72,19 +73,18 @@ public class OntoListView extends RdfView {
 	public OntoListView(Model mx, Model mo, String lang) {
 		super("ontolist.ftl", lang);
 		
-		mx.subjects().stream().forEachOrdered(subj -> {
+		for (Resource subj: mx.subjects()) {
 			Model m = new LinkedHashModel();
-			mx.getNamespaces().forEach(m::setNamespace);
 			m.addAll(mx.filter(subj, null, null));
 			xmlns.add(new XmlnsDAO(m, (IRI) subj));
-		});
+		}
 		
-		mo.subjects().stream().filter(s -> !s.toString().contains("shacl"))
-					.forEachOrdered(subj -> {
-			Model m = new LinkedHashModel();
-			mo.getNamespaces().forEach(m::setNamespace);
-			m.addAll(mo.filter(subj, null, null));
-			ontos.add(new RdfDAO(m, subj));
-		});
+		for (Resource subj: mo.subjects()) {
+			if (! subj.toString().contains("shacl")) {
+				Model m = new LinkedHashModel();
+				m.addAll(mo.filter(subj, null, null));
+				ontos.add(new OwlDAO(m, subj));
+			}
+		}
 	}
 }

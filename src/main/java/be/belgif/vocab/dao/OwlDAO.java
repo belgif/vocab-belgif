@@ -37,7 +37,9 @@ import java.util.TreeSet;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
@@ -59,7 +61,25 @@ public class OwlDAO extends RdfDAO {
 		return this.classes;
 	}
 	
+	public String getVersion(String lang) {
+		return literal(OWL.VERSIONINFO, lang);
+	}
 	
+	public Set<Value> getDomains() {
+		return objs(RDFS.DOMAIN);
+	}
+	
+	public Set<Value> getRanges() {
+		return objs(RDFS.RANGE);
+	}
+	
+	public Set<Value> getSubClasses() {
+		return objs(RDFS.SUBCLASSOF);
+	}
+	
+	public Set<Value> getSubProperties() {
+		return objs(RDFS.SUBPROPERTYOF);
+	}
 	/**
 	 * Sort a list of properties or classes and group by starting letter.
 	 * 
@@ -73,6 +93,7 @@ public class OwlDAO extends RdfDAO {
 			String name = ((IRI) rdf.getId()).getLocalName();
 			String letter = name.substring(0, 1);
 			SortedSet set = map.get(letter);
+			
 			if (set == null) {
 				set = new TreeSet<>();
 				map.put(letter, set);

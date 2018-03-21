@@ -25,19 +25,21 @@
 	<section>
 	    <h4>${m.getString("msg.general")}</h4>
 	    <table>
-	    <#assign n = v.notation!"">
+	    <#assign n = v.notation>
 	    <#if n?has_content>
 		<tr><td>SKOS notation</td><td>${n}</td></tr>
 	    </#if>
-	    <#assign labels = [ "prefLabel", "altLabel" ]>
-	    <#list labels as label>
-		<#list langs as lang>
-		    <#assign val = v.literal("skos", label, lang)!"">
-		    <#if val?has_content>
-			<tr><td>SKOS ${label} (${lang})</td><td>${val}</td></tr>
-		    </#if>
-		</#list>
-	    </#list>
+            <#list langs as lang>
+                <#assign val = v.getPrefLabels(lang)>
+                <#if val?has_content>
+                    <tr><td>PrefLabel (${lang})</td><td>${val}</td></tr>
+                </#if>
+            </#list>
+            <#list langs as lang>
+                <#list v.getAltLabels(lang) as val>
+                    <tr><td>AltLabel (${lang})</td><td>${val}</td></tr>
+                </#list>
+            </#list>
 	    </table>
         </section>
         <section>

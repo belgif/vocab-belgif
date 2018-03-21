@@ -25,6 +25,8 @@
  */
 package be.belgif.vocab.dao;
 
+import java.util.Set;
+
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
@@ -63,9 +65,38 @@ public class SkosDAO extends RdfDAO {
 	 * @return string
 	 */
 	public String getNotation() {
-		return literal(SKOS.NOTATION);
+		return literal(SKOS.NOTATION, "");
 	}
 
+	/**
+	 * Get SKOS top concepts
+	 * 
+	 * @return 
+	 */
+	public Set<Value> getTopConcepts() {
+		return objs(SKOS.HAS_TOP_CONCEPT);
+	}
+
+	/**
+	 * Get alt labels
+	 * 
+	 * @param lang language code
+	 * @return 
+	 */
+	public Set<String> getAltLabels(String lang) {
+		return literals(SKOS.ALT_LABEL, lang);
+	}
+	
+	/**
+	 * Get preferred labels
+	 * 
+	 * @param lang language code
+	 * @return 
+	 */
+	public Set<String> getPrefLabels(String lang) {
+		return literals(SKOS.PREF_LABEL, lang);
+	}
+	
 	/**
 	 * Constructor
 	 *

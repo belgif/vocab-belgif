@@ -170,13 +170,19 @@ public class App extends Application<AppConfig> {
 		env.jersey().register(new LdfResource(repo));
 
 		// Tasks
-		env.admin().addTask(new OntoImportTask(repo, config.getOntos().getImportDir(),
+		env.admin().addTask(new OntoImportTask(repo, 
+						config.getOntos().getImportDir(),
 						config.getOntos().getDownloadDir()));
-		env.admin().addTask(new ShaclImportTask(repo, config.getShacls().getImportDir(),
+		env.admin().addTask(new ShaclImportTask(repo, 
+						config.getShacls().getImportDir(),
 						config.getShacls().getDownloadDir()));
-		env.admin().addTask(new VocabImportTask(repo, config.getVocabs().getImportDir(), 
+		env.admin().addTask(new VocabImportTask(repo, 
+						config.getVocabs().getImportDir(), 
 						config.getVocabs().getDownloadDir()));
-		env.admin().addTask(new XmlnsRegisterTask(repo, config.getXsds().getImportDir()));
+		env.admin().addTask(new XmlnsRegisterTask(repo, 
+						config.getXsds().getImportDir()));
+		
+		// Full text search
 		env.admin().addTask(new LuceneReindexTask(repo));
 		
 
@@ -185,9 +191,9 @@ public class App extends Application<AppConfig> {
 		env.healthChecks().register("triplestore", check);
 		
 		env.lifecycle().addServerLifecycleListener(server -> {
-			//if (repo.getConnection().isEmpty()) {
+			if (repo.getConnection().isEmpty()) {
 				importAll(config);
-			//}
+			}
 		});
 		
 	}

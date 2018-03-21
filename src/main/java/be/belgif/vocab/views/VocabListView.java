@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
@@ -39,7 +40,7 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * @author Bart Hanssens
  */
 public class VocabListView extends RdfView {
-	private final List<SkosDAO> vocabs = new ArrayList();
+	private final List<SkosDAO> vocabs = new ArrayList<>();
 
 	/**
 	 * Get the list of vocabularies
@@ -58,11 +59,11 @@ public class VocabListView extends RdfView {
 	 */
 	public VocabListView(Model vocs, String lang) {
 		super("vocablist.ftl", lang);
-		vocs.subjects().stream().forEachOrdered(subj -> {
+		
+		for(Resource subj: vocs.subjects()) {
 			Model m = new LinkedHashModel();
-			vocs.getNamespaces().forEach(m::setNamespace);
 			m.addAll(vocs.filter(subj, null, null));
 			vocabs.add(new SkosDAO(m, subj));
-		});		
+		}
 	}
 }
