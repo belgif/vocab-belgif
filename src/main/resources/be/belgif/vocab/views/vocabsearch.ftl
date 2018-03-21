@@ -20,7 +20,7 @@
 	    <#list results as r>
 		<tr><td><a href="${r.id}">${r.id}</a></td><td>
 		<#list langs as lang>
-                    <#list r.getPrefLabel(lang) as val>
+                    <#list r.getPrefLabels(lang) as val>
 			${val}<br>
 		    </#list>
 		</#list>

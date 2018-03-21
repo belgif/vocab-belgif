@@ -72,29 +72,16 @@
             <a name="${name}">
             <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
-                <#assign val = cl.subClasses>
-                <#if val?has_content>
-                    <#list val as subc>
-                        <tr><td>SubClassOf</td><td><a href="${subc}">${subc}</a></td></tr>
-                    </#list>
-		</#if>
-                <#assign val = cl.getLabel(l)>
+                <#list cl.subClasses as subc>
+                    <tr><td>SubClassOf</td><td><a href="${subc}">${subc}</a></td></tr>
+                </#list>
+                <#assign val = cl.getLabel(l)!cl.getLabel("")>
 		<#if val?has_content>
-		    <tr><td>Label (${l})</td><td>${val}</td></tr>
-                <#else>
-                    <#assign val = cl.getLabel("")>
-                    <#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
-                    </#if>
 		</#if>
-                <#assign val = cl.getComment(l)>
+                <#assign val = cl.getComment(l)!cl.getLabel("")>
 		<#if val?has_content>
-		    <tr><td>Comment (${l})</td><td>${val}</td></tr>
-                <#else>
-                    <#assign val = cl.getLabel("")>
-                    <#if val?has_content>
-		    <tr><td>RDFS Comment</td><td>${val}</td></tr>
-                    </#if>
+		    <tr><td>Comment</td><td>${val}</td></tr>
 		</#if>
             </table>
 	</#list>
@@ -108,29 +95,16 @@
             <a name="${name}">
             <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
-                <#assign val = pr.subProperties>
-                <#if val?has_content>
-                    <#list val as subp>
-                        <tr><td>SubPropertyOf</td><td><a href="${subp}">${subp}</a></td></tr>
-                    </#list>
-		</#if>
-                <#assign val = pr.getLabel(l)>
+                <#list pr.subProperties as subp>
+                    <tr><td>SubPropertyOf</td><td><a href="${subp}">${subp}</a></td></tr>
+                </#list>
+                <#assign val = pr.getLabel(l)!pr.getLabel("")>
 		<#if val?has_content>
-		    <tr><td>Label (${l})</td><td>${val}</td></tr>
-                <#else>
-                    <#assign val = pr.label("")>
-                    <#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
-                    </#if>
 		</#if>
-                <#assign val = pr.getComment(l)>
+                <#assign val = pr.getComment(l)!pr.getComment("")>
 		<#if val?has_content>
-		    <tr><td>Comment (${l})</td><td>${val}</td></tr>
-                <#else>
-                    <#assign val = pr.getComment("")>
-                    <#if val?has_content>
 		    <tr><td>Comment</td><td>${val}</td></tr>
-                    </#if>
 		</#if>
                 <#assign vals = pr.domains>
 		<#if vals?has_content>

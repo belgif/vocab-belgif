@@ -49,18 +49,57 @@ import org.eclipse.rdf4j.model.vocabulary.RDFS;
  * @author Bart.Hanssens
  */
 public class OwlDAO extends RdfDAO {
-	private final List<RdfDAO> classes = new ArrayList<>();
-	private final List<RdfDAO> properties = new ArrayList<>();
+	private final List<OwlThingDAO> classes = new ArrayList<>();
+	private final List<OwlThingDAO> properties = new ArrayList<>();
 	
-	/**
-	 * Get RDFS/OWL classes
-	 * 
-	 * @return 
-	 */
-	public List<RdfDAO> getClasses() {
-		return this.classes;
+	public class OwlThingDAO extends RdfDAO {
+		/**
+		 * Get domains
+		 *
+		 * @return
+		 */
+		public Set<Value> getDomains() {
+			return objs(RDFS.DOMAIN);
+		}
+
+		/**
+		 * Get ranges
+		 *
+		 * @return
+		 */
+		public Set<Value> getRanges() {
+			return objs(RDFS.RANGE);
+		}
+
+		/**
+		 * Get subclasses
+		 *
+		 * @return
+		 */
+		public Set<Value> getSubClasses() {
+			return objs(RDFS.SUBCLASSOF);
+		}
+
+		/**
+		 * Get subproperties
+		 *
+		 * @return
+		 */
+		public Set<Value> getSubProperties() {
+			return objs(RDFS.SUBPROPERTYOF);
+		}
+
+		/**
+		 * Constructor
+		 * 
+		 * @param m
+		 * @param id 
+		 */
+		public OwlThingDAO(Model m, Resource id) {
+			super(m, id);
+		}
 	}
-	
+		
 	/**
 	 * Get version info
 	 * 
@@ -71,40 +110,6 @@ public class OwlDAO extends RdfDAO {
 		return literal(OWL.VERSIONINFO, lang);
 	}
 	
-	/**
-	 * Get domains
-	 * 
-	 * @return 
-	 */
-	public Set<Value> getDomains() {
-		return objs(RDFS.DOMAIN);
-	}
-	
-	/**
-	 * Get ranges
-	 * 
-	 * @return 
-	 */
-	public Set<Value> getRanges() {
-		return objs(RDFS.RANGE);
-	}
-	
-	/**
-	 * Get subclasses
-	 * 
-	 * @return 
-	 */
-	public Set<Value> getSubClasses() {
-		return objs(RDFS.SUBCLASSOF);
-	}
-	
-	/**
-	 * Get subproperties
-	 * @return 
-	 */
-	public Set<Value> getSubProperties() {
-		return objs(RDFS.SUBPROPERTYOF);
-	}
 	
 	/**
 	 * Sort a list of properties or classes and group by starting letter.
@@ -112,7 +117,7 @@ public class OwlDAO extends RdfDAO {
 	 * @param lst list of properties or classes
 	 * @return sorted nested map
 	 */
-	private SortedMap<String,SortedSet<String>> getLetter(List<RdfDAO> lst) {
+	private SortedMap<String,SortedSet<String>> getLetter(List<OwlThingDAO> lst) {
 		TreeMap<String,SortedSet<String>> map = new TreeMap<>();
 		
 		for (RdfDAO rdf: lst) {
@@ -129,6 +134,14 @@ public class OwlDAO extends RdfDAO {
 		return map;
 	}
 	
+	/**
+	 * Get RDFS/OWL classes
+	 * 
+	 * @return 
+	 */
+	public List<OwlThingDAO> getClasses() {
+		return this.classes;
+	}
 
 	/**
 	 * Get ordered list of class names, grouped by starting letter.
@@ -140,6 +153,15 @@ public class OwlDAO extends RdfDAO {
 	}
 	
 	/**
+	 * Get RDFS/OWL properties
+	 * 
+	 * @return 
+	 */
+	public List<OwlThingDAO> getProperties() {
+		return this.properties;
+	}
+	
+	/**
 	 * Get ordered list of property names, grouped by starting letter.
 	 * 
 	 * @return nested map
@@ -148,14 +170,6 @@ public class OwlDAO extends RdfDAO {
 		return getLetter(getProperties());
 	}
 	
-	/**
-	 * Get RDFS/OWL properties
-	 * 
-	 * @return 
-	 */
-	public List<RdfDAO> getProperties() {
-		return this.properties;
-	}
 	
 	/**
 	 * Initialize RDF/OWL classes
@@ -172,7 +186,7 @@ public class OwlDAO extends RdfDAO {
 			// First copy the results to a new model, otherwise remove will fail
 			Model mc = new LinkedHashModel();
 			mc.addAll(m.filter(subj, null, null));
-			classes.add(new RdfDAO(mc, (IRI) subj));
+			classes.add(new OwlThingDAO(mc, (IRI) subj));
 			m.removeAll(mc);
 		}
 	}
@@ -191,7 +205,7 @@ public class OwlDAO extends RdfDAO {
 		for(Resource subj: subjs) {
 			Model mp = new LinkedHashModel();
 			mp.addAll(m.filter(subj, null, null));
-			properties.add(new RdfDAO(mp, (IRI) subj));
+			properties.add(new OwlThingDAO(mp, (IRI) subj));
 			m.removeAll(mp);
 		}
 	}
