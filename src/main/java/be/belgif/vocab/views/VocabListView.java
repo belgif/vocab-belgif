@@ -32,7 +32,6 @@ import java.util.List;
 
 import javax.ws.rs.ext.Provider;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
@@ -66,7 +65,7 @@ public class VocabListView extends RdfView {
 			Model m = new LinkedHashModel();
 			vocs.getNamespaces().forEach(m::setNamespace);
 			m.addAll(vocs.filter(subj, null, null));
-			vocabs.add(new SkosDAO(m, (IRI) subj));
+			vocabs.add(new SkosDAO(m, subj));
 		});		
 	}
 }

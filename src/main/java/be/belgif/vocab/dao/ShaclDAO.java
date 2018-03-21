@@ -26,19 +26,17 @@
 package be.belgif.vocab.dao;
 
 import be.belgif.vocab.helpers.SHACL;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
-
-
 
 /**
  * DAO helper class for SHACL shapes.
@@ -58,10 +56,10 @@ public class ShaclDAO extends RdfDAO {
 		 * @param m triples
 		 * @param node parent node shape
 		 */
-		private void initPropertyShapes(Model m, IRI node) {
+		private void initPropertyShapes(Model m, Resource node) {
 			Set<Value> subjs = new HashSet<>();
-			subjs.addAll(m.filter(node, SHACL.PROPERTY_SHAPE, null).objects());
-		
+			subjs.addAll(m.filter(node, SHACL.PROPERTY, null).objects());
+
 			for(Value subj: subjs) {
 				if (! (subj instanceof Resource)) {
 					continue;
@@ -69,7 +67,7 @@ public class ShaclDAO extends RdfDAO {
 				Model mp = new LinkedHashModel();
 				m.getNamespaces().forEach(mp::setNamespace);
 				mp.addAll(m.filter((Resource) subj, null, null));
-				shapes.add(new RdfDAO(mp, (IRI) subj));
+				shapes.add(new RdfDAO(mp, (Resource) subj));
 				m.removeAll(mp);
 			}
 		}
@@ -91,9 +89,9 @@ public class ShaclDAO extends RdfDAO {
 		 * @param id
 		 * @param fullm complete model 
 		 */
-		public ShaclNodeDAO(Model m, IRI id, Model fullm) {
+		public ShaclNodeDAO(Model m, Resource id, Model fullm) {
 			super(m, id);
-			initPropertyShapes(m, id);
+			initPropertyShapes(fullm, id);
 		}
 	}
 
@@ -121,7 +119,7 @@ public class ShaclDAO extends RdfDAO {
 			Model mp = new LinkedHashModel();
 			m.getNamespaces().forEach(mp::setNamespace);
 			mp.addAll(m.filter(subj, null, null));
-			shapes.add(new ShaclNodeDAO(mp, (IRI) subj, m));
+			shapes.add(new ShaclNodeDAO(mp, (Resource) subj, m));
 			m.removeAll(mp);
 		}
 	}
@@ -132,7 +130,7 @@ public class ShaclDAO extends RdfDAO {
 	 * @param m triples
 	 * @param id subject ID
 	 */
-	public ShaclDAO(Model m, IRI id) {
+	public ShaclDAO(Model m, Resource id) {
 		super(m, id);
 		initNodeShapes(m);
 	}

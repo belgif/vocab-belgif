@@ -65,7 +65,7 @@ public class OwlView extends RdfView {
 	public OwlView(String onto, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "onto.ftl", lang);
 		Iterator<Resource> i = m.subjects().iterator();
-		this.onto = i.hasNext() ? new OwlDAO(m, (IRI) i.next()) : null;
+		this.onto = i.hasNext() ? new OwlDAO(m, i.next()) : null;
 	}
 }
 

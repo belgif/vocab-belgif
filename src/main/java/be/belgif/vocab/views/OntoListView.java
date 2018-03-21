@@ -87,7 +87,7 @@ public class OntoListView extends RdfView {
 			Model m = new LinkedHashModel();
 			mo.getNamespaces().forEach(m::setNamespace);
 			m.addAll(mo.filter(subj, null, null));
-			ontos.add(new RdfDAO(m, (IRI) subj));
+			ontos.add(new RdfDAO(m, subj));
 		});
 	}
 }

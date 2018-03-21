@@ -25,8 +25,8 @@
  */
 package be.belgif.vocab.dao;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
@@ -52,7 +52,7 @@ public class XmlnsDAO extends RdfDAO {
 	 * @param m triples
 	 * @param id subject ID
 	 */
-	public XmlnsDAO(Model m, IRI id) {
+	public XmlnsDAO(Model m, Resource id) {
 		super(m, id);
 	}
 }

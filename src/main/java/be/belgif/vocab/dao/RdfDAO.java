@@ -35,6 +35,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Namespace;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
@@ -53,7 +54,7 @@ public class RdfDAO {
 
 	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final Model m;
-	private final IRI id;
+	private final Resource id;
 
 	
 	/**
@@ -208,7 +209,7 @@ public class RdfDAO {
 	 *
 	 * @return subject IRI
 	 */
-	public IRI getId() {
+	public Resource getId() {
 		return id;
 	}
 
@@ -216,9 +217,9 @@ public class RdfDAO {
 	 * Constructor
 	 *
 	 * @param m triple model
-	 * @param id subject IRI
+	 * @param id subject IRI or black node
 	 */
-	public RdfDAO(Model m, IRI id) {
+	public RdfDAO(Model m, Resource id) {
 		this.id = id;
 		this.m = m.filter(id, null, null);
 	}

@@ -41,12 +41,15 @@ import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
+import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
+import org.eclipse.rdf4j.model.vocabulary.ROV;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VCARD4;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
@@ -73,11 +76,14 @@ public class QueryHelper {
 	public final static Map<String, String> NS_MAP = new HashMap();
 
 	static {
+		NS_MAP.put(DCAT.PREFIX, DCAT.NAMESPACE);
 		NS_MAP.put(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
 		NS_MAP.put(FOAF.PREFIX, FOAF.NAMESPACE);
+		NS_MAP.put(ORG.PREFIX, ORG.NAMESPACE);
 		NS_MAP.put(OWL.PREFIX, OWL.NAMESPACE);
 		NS_MAP.put(RDF.PREFIX, RDF.NAMESPACE);
 		NS_MAP.put(RDFS.PREFIX, RDFS.NAMESPACE);
+		NS_MAP.put(ROV.PREFIX, ROV.NAMESPACE);
 		NS_MAP.put(SHACL.PREFIX, SHACL.NAMESPACE);
 		NS_MAP.put(SKOS.PREFIX, SKOS.NAMESPACE);
 		NS_MAP.put(VCARD4.PREFIX, VCARD4.NAMESPACE);

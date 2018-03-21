@@ -20,15 +20,15 @@
         <h3>${m.getString("msg.general")}</h3>
         <table>
         <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
-        <#assign val = o.lit("owl:versionInfo", "")!"">
+        <#assign val = o.lit("owl:versionInfo", "")>
         <#if val?has_content>
             <tr><td>Version</td><td>${val}</td></tr>
         </#if>
-        <#assign val = o.lit("rdfs:label", l)!"">
+        <#assign val = o.lit("rdfs:label", l)>
         <#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
         </#if>
-        <#assign val = o.lit("rdfs:comment", l)!"">
+        <#assign val = o.lit("rdfs:comment", l)>
         <#if val?has_content>
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>
@@ -69,7 +69,7 @@
         <h3>Classes</h3>
 	<#list c?sort_by("id") as cl>
             <#assign name = cl.id.localName>
-            <a name="#${name}">
+            <a name="${name}">
             <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
                 <#assign val = cl.objs("rdfs", "subClassOf")>
@@ -78,20 +78,20 @@
                         <tr><td>SubClassOf</td><td><a href="${subc}">${subc}</a></td></tr>
                     </#list>
 		</#if>
-                <#assign val = cl.lit("rdfs:label", lang)!"">
+                <#assign val = cl.lit("rdfs:label", lang)>
 		<#if val?has_content>
 		    <tr><td>Label (${lang})</td><td>${val}</td></tr>
                 <#else>
-                    <#assign val = cl.lit("rdfs:label", "")!"">
+                    <#assign val = cl.lit("rdfs:label", "")>
                     <#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
                     </#if>
 		</#if>
-                <#assign val = cl.lit("rdfs:comment", lang)!"">
+                <#assign val = cl.lit("rdfs:comment", lang)>
 		<#if val?has_content>
 		    <tr><td>Comment (${lang})</td><td>${val}</td></tr>
                 <#else>
-                    <#assign val = cl.lit("rdfs:label", "")!"">
+                    <#assign val = cl.lit("rdfs:label", "")>
                     <#if val?has_content>
 		    <tr><td>RDFS Comment</td><td>${val}</td></tr>
                     </#if>
@@ -105,7 +105,7 @@
 	<h3>Properties</h3>
 	<#list p?sort_by("id") as pr>
             <#assign name = pr.id.localName>
-            <a name="#${name}">
+            <a name="${name}">
             <table class="onto">
                 <tr><th colspan="2">${name}</th></tr>
                 <#assign val = pr.objs("rdfs", "subPropertyOf")>
@@ -114,31 +114,38 @@
                         <tr><td>SubPropertyOf</td><td><a href="${subp}">${subp}</a></td></tr>
                     </#list>
 		</#if>
-                <#assign val = pr.lit("rdfs:label", lang)!"">
+                <#assign val = pr.lit("rdfs:label", lang)>
 		<#if val?has_content>
 		    <tr><td>Label (${lang})</td><td>${val}</td></tr>
                 <#else>
-                    <#assign val = pr.lit("rdfs:label", "")!"">
+                    <#assign val = pr.lit("rdfs:label", "")>
                     <#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
                     </#if>
 		</#if>
-                <#assign val = pr.lit("rdfs:comment", lang)!"">
+                <#assign val = pr.lit("rdfs:comment", lang)>
 		<#if val?has_content>
 		    <tr><td>Comment (${lang})</td><td>${val}</td></tr>
                 <#else>
-                    <#assign val = pr.lit("rdfs:comment", "")!"">
+                    <#assign val = pr.lit("rdfs:comment", "")>
                     <#if val?has_content>
 		    <tr><td>Comment</td><td>${val}</td></tr>
                     </#if>
 		</#if>
-                <#assign val = pr.obj("rdfs", "domain")!"">
-		<#if val?has_content>
-		    <tr><td>Domain</td><td><a href="${val}">${val}</a></td></tr>
+                <#assign vals = pr.objs("rdfs", "domain")>
+		<#if vals?has_content>
+		    <tr><td>Domain</td><td>
+                    <#list vals as val>        
+                        <a href="${val}">${val}</a>
+                    </#list>
+                    </td></tr>
 		</#if>
-                <#assign val = pr.obj("rdfs", "range")!"">
-		<#if val?has_content>
-		    <tr><td>Range</td><td><a href="${val}">${val}</a></td></tr>
+                <#assign vals = pr.objs("rdfs", "range")>
+		<#if vals?has_content>
+		    <tr><td>Range</td><td>
+                    <#list vals as val>        
+                        <a href="${val}">${val}</a>
+                    </#list></td></tr>
 		</#if>
             </table>
 	</#list>

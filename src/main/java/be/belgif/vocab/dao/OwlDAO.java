@@ -70,7 +70,7 @@ public class OwlDAO extends RdfDAO {
 		TreeMap<String,SortedSet<String>> map = new TreeMap<>();
 		
 		for (RdfDAO rdf: lst) {
-			String name = rdf.getId().getLocalName();
+			String name = ((IRI) rdf.getId()).getLocalName();
 			String letter = name.substring(0, 1);
 			SortedSet set = map.get(letter);
 			if (set == null) {
@@ -157,7 +157,7 @@ public class OwlDAO extends RdfDAO {
 	 * @param m triples
 	 * @param id subject ID
 	 */
-	public OwlDAO(Model m, IRI id) {
+	public OwlDAO(Model m, Resource id) {
 		super(m, id);
 		initClasses(m);
 		initProperties(m);

@@ -27,11 +27,10 @@ package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.ShaclDAO;
 
-
 import javax.ws.rs.ext.Provider;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 
 /**
  * HTML view for the list of SHACLs
@@ -55,7 +54,7 @@ public class ShaclView extends RdfView {
 	 */
 	public ShaclView(String shacl, Model m, String lang) {
 		super(m.isEmpty() ? "notfound.ftl" : "shacl.ftl", lang);
-		this.shacl = new ShaclDAO(m, (IRI) null);
+		this.shacl = new ShaclDAO(m, (Resource) null);
 	}
 }
 

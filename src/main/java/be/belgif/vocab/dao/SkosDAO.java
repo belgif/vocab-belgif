@@ -25,8 +25,8 @@
  */
 package be.belgif.vocab.dao;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
@@ -72,7 +72,7 @@ public class SkosDAO extends RdfDAO {
 	 * @param m triples
 	 * @param id subject ID
 	 */
-	public SkosDAO(Model m, IRI id) {
+	public SkosDAO(Model m, Resource id) {
 		super(m, id);
 	}
 }

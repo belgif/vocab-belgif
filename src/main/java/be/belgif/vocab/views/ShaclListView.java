@@ -32,7 +32,6 @@ import java.util.List;
 
 import javax.ws.rs.ext.Provider;
 
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
@@ -69,7 +68,7 @@ public class ShaclListView extends RdfView {
 			Model m = new LinkedHashModel();
 			ms.getNamespaces().forEach(m::setNamespace);
 			m.addAll(ms.filter(subj, null, null));
-			shacls.add(new RdfDAO(m, (IRI) subj));
+			shacls.add(new RdfDAO(m, subj));
 		});	
 	}
 }
