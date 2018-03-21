@@ -20,10 +20,9 @@
 	    <#list results as r>
 		<tr><td><a href="${r.id}">${r.id}</a></td><td>
 		<#list langs as lang>
-                    <#assign val = r.getPrefLabel(lang)>
-		    <#if val?has_content>
+                    <#list r.getPrefLabel(lang) as val>
 			${val}<br>
-		    </#if>
+		    </#list>
 		</#list>
 		</td></tr>
 	    </#list>

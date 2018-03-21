@@ -20,7 +20,7 @@
         <h3>${m.getString("msg.general")}</h3>
         <table>
         <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
-        <#assign val = o.version>
+        <#assign val = o.getVersion(l)!o.getVersion("")>
         <#if val?has_content>
             <tr><td>Version</td><td>${val}</td></tr>
         </#if>

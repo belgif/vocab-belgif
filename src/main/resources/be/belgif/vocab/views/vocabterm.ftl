@@ -27,13 +27,12 @@
 	    <table>
 	    <#assign n = v.notation>
 	    <#if n?has_content>
-		<tr><td>SKOS notation</td><td>${n}</td></tr>
+		<tr><td>Notation</td><td>${n}</td></tr>
 	    </#if>
             <#list langs as lang>
-                <#assign val = v.getPrefLabels(lang)>
-                <#if val?has_content>
+                <#list v.getPrefLabels(lang) as val>
                     <tr><td>PrefLabel (${lang})</td><td>${val}</td></tr>
-                </#if>
+                </#list>
             </#list>
             <#list langs as lang>
                 <#list v.getAltLabels(lang) as val>
@@ -48,27 +47,42 @@
 	    <#list v.sameAs as s>
 		<tr><td>OWL sameAs</td><td><a href="${s}">${s}</a></td></tr>
 	    </#list>
-	    <#assign refs = [ "exactMatch", "closeMatch", "broadMatch", "narrowMatch" ]>
-	    <#list refs as ref>
-		<#list v.objs("skos", ref)!"" as val>
-		    <tr><td>SKOS ${ref}</td><td><a href="${val}">${val}</a></td></tr>
-		</#list>
-	    </#list>
+            <#list v.exactMatches as val>
+                <tr><td>Exact</td><td><a href="${val}">${val}</a></td></tr>
+            </#list>
+            <#list v.closeMatches as val>
+                <tr><td>Close</td><td><a href="${val}">${val}</a></td></tr>
+            </#list>
+            <#list v.broadMatches as val>
+                <tr><td>Broader</td><td><a href="${val}">${val}</a></td></tr>
+            </#list>
+            <#list v.narrowMatches as val>
+                <tr><td>Narrower</td><td><a href="${val}">${val}</a></td></tr>
+            </#list>
 	    </table>
 	</section>
-	<#list [ "narrower", "broader" ] as bn>
-	    <#assign rels = v.objs("skos", bn)>
-	    <#if rels?has_content>
-	    <section>
-		<h4>SKOS ${bn}</h4>
-		<table>
-		<#list rels as rel>
-		    <tr><td><a href="${rel}">${rel}</a></td></tr>
-		</#list>
-		</table>
-	    </section>
-	    </#if>
-	</#list>
+        <#assign rels = v.broaders>
+        <#if rels?has_content>
+        <section>
+            <h4>Broader</h4>
+            <table>
+            <#list rels as rel>
+                <tr><td><a href="${rel}">${rel}</a></td></tr>
+            </#list>
+            </table>
+        </section>
+        </#if>
+        <#assign rels = v.narrowers>
+        <#if rels?has_content>
+        <section>
+            <h4>Narrower</h4>
+            <table>
+            <#list rels as rel>
+                <tr><td><a href="${rel}">${rel}</a></td></tr>
+            </#list>
+            </table>
+        </section>
+        </#if>
     </section>
     </div>
 </main>

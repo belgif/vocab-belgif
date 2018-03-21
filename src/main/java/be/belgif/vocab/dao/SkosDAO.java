@@ -78,24 +78,70 @@ public class SkosDAO extends RdfDAO {
 	}
 
 	/**
-	 * Get alt labels
+	 * Get alternative labels in specific language
 	 * 
 	 * @param lang language code
-	 * @return 
+	 * @return set of strings
 	 */
 	public Set<String> getAltLabels(String lang) {
 		return literals(SKOS.ALT_LABEL, lang);
 	}
 	
 	/**
-	 * Get preferred labels
+	 * Get preferred labels in specific language
 	 * 
 	 * @param lang language code
-	 * @return 
+	 * @return set of strings
 	 */
 	public Set<String> getPrefLabels(String lang) {
 		return literals(SKOS.PREF_LABEL, lang);
 	}
+	
+	public Set<Value> getBroaders() {
+		return objs(SKOS.BROADER);
+	}
+	
+	public Set<Value> getNarrowers() {
+		return objs(SKOS.BROADER);
+	}
+	
+	
+	/**
+	 * Get close matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
+	public Set<Value> getCloseMatches() {
+		return objs(SKOS.CLOSE_MATCH);
+	}
+	
+	/**
+	 * Get exact matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
+	public Set<Value> getExactMatches() {
+		return objs(SKOS.EXACT_MATCH);
+	}
+	
+	/**
+	 * Get broad matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
+	public Set<Value> getBroadMatches() {
+		return objs(SKOS.BROAD_MATCH);
+	}
+	
+	/**
+	 * Get narrow matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
+	public Set<Value> getNarrowMatches() {
+		return objs(SKOS.NARROW_MATCH);
+	}
+	
 	
 	/**
 	 * Constructor

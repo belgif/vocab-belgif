@@ -61,25 +61,51 @@ public class OwlDAO extends RdfDAO {
 		return this.classes;
 	}
 	
+	/**
+	 * Get version info
+	 * 
+	 * @param lang
+	 * @return 
+	 */
 	public String getVersion(String lang) {
 		return literal(OWL.VERSIONINFO, lang);
 	}
 	
+	/**
+	 * Get domains
+	 * 
+	 * @return 
+	 */
 	public Set<Value> getDomains() {
 		return objs(RDFS.DOMAIN);
 	}
 	
+	/**
+	 * Get ranges
+	 * 
+	 * @return 
+	 */
 	public Set<Value> getRanges() {
 		return objs(RDFS.RANGE);
 	}
 	
+	/**
+	 * Get subclasses
+	 * 
+	 * @return 
+	 */
 	public Set<Value> getSubClasses() {
 		return objs(RDFS.SUBCLASSOF);
 	}
 	
+	/**
+	 * Get subproperties
+	 * @return 
+	 */
 	public Set<Value> getSubProperties() {
 		return objs(RDFS.SUBPROPERTYOF);
 	}
+	
 	/**
 	 * Sort a list of properties or classes and group by starting letter.
 	 * 
