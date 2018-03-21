@@ -30,8 +30,6 @@ import be.belgif.vocab.dao.SkosDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.ext.Provider;
-
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
@@ -40,7 +38,6 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * 
  * @author Bart Hanssens
  */
-@Provider
 public class VocabListView extends RdfView {
 	private final List<SkosDAO> vocabs = new ArrayList();
 

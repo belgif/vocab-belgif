@@ -30,8 +30,6 @@ import be.belgif.vocab.dao.RdfDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.ext.Provider;
-
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
@@ -40,7 +38,6 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * 
  * @author Bart Hanssens
  */
-@Provider
 public class ShaclListView extends RdfView {
 	private final List<RdfDAO> shacls = new ArrayList();
 

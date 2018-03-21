@@ -31,8 +31,6 @@ import be.belgif.vocab.dao.XmlnsDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.ext.Provider;
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
@@ -42,7 +40,6 @@ import org.eclipse.rdf4j.model.impl.LinkedHashModel;
  * 
  * @author Bart Hanssens
  */
-@Provider
 public class OntoListView extends RdfView {
 	private final List<XmlnsDAO> xmlns = new ArrayList();
 	private final List<RdfDAO> ontos = new ArrayList();	

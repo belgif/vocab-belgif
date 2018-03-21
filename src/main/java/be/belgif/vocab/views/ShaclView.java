@@ -27,8 +27,6 @@ package be.belgif.vocab.views;
 
 import be.belgif.vocab.dao.ShaclDAO;
 
-import javax.ws.rs.ext.Provider;
-
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 
@@ -37,7 +35,6 @@ import org.eclipse.rdf4j.model.Resource;
  * 
  * @author Bart.Hanssens
  */
-@Provider
 public class ShaclView extends RdfView {
 	private final ShaclDAO shacl;
 	

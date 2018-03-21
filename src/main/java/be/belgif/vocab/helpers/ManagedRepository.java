@@ -29,8 +29,9 @@ import io.dropwizard.lifecycle.Managed;
 import org.eclipse.rdf4j.repository.Repository;
 
 /**
- *
- * @author Bart.Hanssens
+ * Manage embedded RDF4J repository
+ * 
+ * @author Bart Hanssens
  */
 public class ManagedRepository implements Managed {
 

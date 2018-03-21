@@ -25,15 +25,11 @@
  */
 package be.belgif.vocab.views;
 
-import javax.ws.rs.ext.Provider;
-
-
 /**
  * HTML view for homepage / VoID descriptions
  * 
  * @author Bart Hanssens
  */
-@Provider
 public class HomepageView extends RdfView {
 
 	/** 

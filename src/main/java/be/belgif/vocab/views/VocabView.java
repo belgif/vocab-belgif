@@ -29,8 +29,6 @@ import be.belgif.vocab.dao.SkosDAO;
 
 import java.util.Iterator;
 
-import javax.ws.rs.ext.Provider;
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
@@ -40,7 +38,6 @@ import org.eclipse.rdf4j.model.Resource;
  * 
  * @author Bart.Hanssens
  */
-@Provider
 public class VocabView extends RdfView {
 	private final SkosDAO term;
 	private final String vocabName;

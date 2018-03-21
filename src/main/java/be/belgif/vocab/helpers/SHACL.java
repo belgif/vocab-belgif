@@ -34,6 +34,7 @@ import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 
 /**
  * Constants for the Shapes Constraint Language.
+ * Not needed anymore when RDF4J 2.3 will be finalized.
  *
  * @see <a href="https://www.w3.org/TR/2017/WD-shacl-20170303/">Shapes Constraint Language</a>
  *

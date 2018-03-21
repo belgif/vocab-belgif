@@ -65,7 +65,6 @@ public class ShaclDAO extends RdfDAO {
 					continue;
 				}
 				Model mp = new LinkedHashModel();
-				m.getNamespaces().forEach(mp::setNamespace);
 				mp.addAll(m.filter((Resource) subj, null, null));
 				shapes.add(new RdfDAO(mp, (Resource) subj));
 				m.removeAll(mp);
@@ -117,7 +116,6 @@ public class ShaclDAO extends RdfDAO {
 		
 		for(Resource subj: subjs) {
 			Model mp = new LinkedHashModel();
-			m.getNamespaces().forEach(mp::setNamespace);
 			mp.addAll(m.filter(subj, null, null));
 			shapes.add(new ShaclNodeDAO(mp, (Resource) subj, m));
 			m.removeAll(mp);

@@ -39,7 +39,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.MessageBodyWriter;
-import javax.ws.rs.ext.Provider;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.rio.RDFFormat;
@@ -51,7 +50,6 @@ import org.eclipse.rdf4j.rio.Rio;
  *
  * @author Bart.Hanssens
  */
-@Provider
 @Produces({RDFMediaType.JSONLD + ";charset=utf-8",
 	RDFMediaType.NTRIPLES + ";charset=utf-8",
 	RDFMediaType.TURTLE + ";charset=utf-8",

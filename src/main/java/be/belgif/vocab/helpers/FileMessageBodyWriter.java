@@ -38,7 +38,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.MessageBodyWriter;
-import javax.ws.rs.ext.Provider;
+
 import org.eclipse.rdf4j.rio.RDFFormat;
 
 /**
@@ -46,7 +46,6 @@ import org.eclipse.rdf4j.rio.RDFFormat;
  *
  * @author Bart Hanssens
  */
-@Provider
 @Produces({MediaType.APPLICATION_XML + ";charset=utf-8", 
 	MediaType.TEXT_XML + ";charset=utf-8",
 	RDFMediaType.JSONLD + ";charset=utf-8",
