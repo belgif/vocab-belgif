@@ -30,9 +30,6 @@ import be.belgif.vocab.ldf.Hydra;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.common.iteration.Iterations;
@@ -93,6 +90,10 @@ public class QueryHelper {
 		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
 		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
 		NS_MAP.put(Hydra.PREFIX, Hydra.NAMESPACE);
+		
+		// Joinup Core Vocabularies
+		NS_MAP.put("cv", "http://data.europa.eu/m8g/");
+		NS_MAP.put("schema", "http://schema.org/");
 	}
 
 	private final static String PREFIX = App.getPrefix();

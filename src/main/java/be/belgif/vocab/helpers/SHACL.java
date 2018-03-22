@@ -68,7 +68,6 @@ public class SHACL {
 	
 	static {
 		ValueFactory factory = SimpleValueFactory.getInstance();
-
 		
 		NODE_SHAPE = factory.createIRI(NAMESPACE, "NodeShape");
 		PROPERTY_SHAPE = factory.createIRI(NAMESPACE, "PropertyShape");

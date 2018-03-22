@@ -27,8 +27,6 @@ package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
-import be.belgif.vocab.views.OntoListView;
-import be.belgif.vocab.views.OwlView;
 import be.belgif.vocab.views.ShaclListView;
 import be.belgif.vocab.views.ShaclView;
 
