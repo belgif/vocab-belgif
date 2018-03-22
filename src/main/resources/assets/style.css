@@ -187,6 +187,12 @@ table.onto td:first-child {
     width: 20% ;
 }
 
+table.shacl td:nth-child(1) { 
+    width: 20% ;
+}
+table.shacl td:nth-child(2) { 
+    width: 5% ;
+}
 
 details {
 	padding: 0.5rem;

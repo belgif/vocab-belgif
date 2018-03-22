@@ -28,7 +28,7 @@
     <section>
         <h3>Node Shapes</h3>
         <#list s?sort_by("id") as ns>
-            <table class="onto">
+            <table class="shacl">
             <#assign target = ns.target>
             <tr><th colspan="3"><a href="${target}">${sh.getShort(target)}</a></th></tr>
             <#assign props = ns.propertyShapes>
@@ -37,10 +37,8 @@
                     <#assign path = prop.path>
                     <td><a href="${path}">${sh.getShort(path)}</a></td>
                     <td>${prop.minCount!"0"} - ${prop.maxCount!"N"}</td>
-                    <#assign typ = prop.dataType!prop.shClass>
-                    <#if typ?has_content>
-                        <td><a href="${typ}">${sh.getShort(typ)}</a></td>
-                    </#if>
+                    <#assign typ = prop.dataType!prop.shClass!"">
+                    <td><a href="${typ}">${sh.getShort(typ)}</a></td>
                 </tr>
             </#list>
             </table>
