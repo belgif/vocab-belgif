@@ -25,15 +25,17 @@
  */
 package be.belgif.vocab.dao;
 
+import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.SHACL;
 
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.eclipse.rdf4j.model.IRI;
@@ -45,29 +47,15 @@ import org.eclipse.rdf4j.model.vocabulary.RDF;
 
 /**
  * DAO helper class for SHACL shapes.
+ * Only used for HTML view
  *
  * @author Bart Hanssens
  */
 public class ShaclDAO extends RdfDAO {
-	private final List<ShaclNodeShapeDAO> shapes = new ArrayList<>();
-	private final Map<String,String> usedNs = new HashMap<>();
+	private final String vocabNs = App.getPrefix() + "auth/";
 	
-	/**
-	 * Get short (prefixed) name of an IRI
-	 * 
-	 * @param prop
-	 * @return string
-	 */
-	protected String getShort(IRI prop) {
-		Value val = obj(prop);
-		if (! (val instanceof IRI)) {
-			return null;
-		}
-		IRI iri = (IRI) val;
-		String prefix = usedNs.get(iri.getNamespace());
-		return (prefix == null) ? val.toString() 
-					: prefix + ":" + iri.getLocalName();	
-	}
+	private final List<ShaclNodeShapeDAO> shapes = new ArrayList<>();
+	private final BiMap<String,String> usedNs = HashBiMap.create();
 	
 	/**
 	 * PropertyShape helper class
@@ -90,7 +78,19 @@ public class ShaclDAO extends RdfDAO {
 		public String getShortClass() {
 			return getShort(SHACL.CLASS);
 		}
+		public String getShortType() {
+			return getShort(SHACL.DATATYPE);
+		}
 		
+		
+		
+		public String getMaxCount() {
+			return literal(SHACL.MAX_COUNT, "");
+		}
+		
+		public String getMinCount() {
+			return literal(SHACL.MIN_COUNT, "");
+		}
 		/**
 		 * Constructor
 		 * 
@@ -160,7 +160,8 @@ public class ShaclDAO extends RdfDAO {
 			initPropertyShapes(fullm, id);
 		}
 	}
-
+	
+	
 	/**
 	 * Get list of SHACL node shapes
 	 * 
@@ -171,9 +172,37 @@ public class ShaclDAO extends RdfDAO {
 	}
 	
 	/**
+	 * Get map of used namespaces
+	 * 
+	 * @return map of <namespace,prefix> 
+	 */
+	public Map<String,String> getUsedNs() {
+		return this.usedNs.inverse();
+	}
+	
+	/**
+	 * Get short (prefixed) name of an IRI
+	 * 
+	 * @param prop
+	 * @return string
+	 */
+	protected String getShort(IRI prop) {
+		Value val = obj(prop);
+		if (! (val instanceof IRI)) {
+			return null;
+		}
+		IRI iri = (IRI) val;
+		String prefix = usedNs.get(iri.getNamespace());
+		
+		return (prefix == null) ? val.toString() 
+					: prefix + ":" + iri.getLocalName();	
+	}
+	
+	
+	/**
 	 * Initialize SHACL property shapes
 	 * 
-	 * @param m 
+	 * @param m model
 	 */
 	private void initNodeShapes(Model m) {
 		Set<Resource> subjs = new HashSet<>();
@@ -188,21 +217,33 @@ public class ShaclDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Create a list of known namespaces used in the SHACL
+	 * Initialize a map of "known" namespaces and their prefixes used in this SHACL
 	 * 
-	 * @param m 
+	 * @param m model
 	 */
 	private void initUsedNamespaces(Model m) {
-		Set<String> used = new HashSet<>();
+		Set<String> ns = new HashSet<>();
 		
+		// only check objects (e.g. targetClass, datatype
 		for (Value val: m.objects()) {
-			if (val instanceof IRI) {
-				used.add(((IRI) val).getNamespace());
+			if (! (val instanceof IRI)) {
+				continue;
 			}
-		}			
-		for (Entry<String,String> e: QueryHelper.NS_MAP.entrySet()){
-			if (used.contains(e.getValue())) {
-				usedNs.put(e.getValue(), e.getKey());
+			ns.add(((IRI) val).getNamespace());
+		}
+		
+		// get <namespace,prefix> instead of <prefix,namespace>
+		BiMap<String,String> inverseNS = QueryHelper.NS_MAP.inverse();
+			
+		for (String n: ns) {
+			// "local" namespace published on vocab
+			if (n.startsWith(vocabNs)) {
+				usedNs.put(n, n.replaceFirst(vocabNs, "be-"));
+			} else {
+				String prefix = inverseNS.get(n);
+				if (prefix != null) {
+					usedNs.put(n, prefix);
+				}
 			}
 		}
 	}

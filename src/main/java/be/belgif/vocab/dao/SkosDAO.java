@@ -34,9 +34,10 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 
 /**
- * DAO helper class for VoID.
- *
- * @author Bart.Hanssens
+ * DAO helper class for SKOS vocabularies
+ * Only used for HTML view
+ * 
+ * @author Bart Hanssens
  */
 public class SkosDAO extends RdfDAO {
 	/**
@@ -50,9 +51,9 @@ public class SkosDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Get SKOS root resource
+	 * Get download URL for a full download of the vocabulary
 	 *
-	 * @return uri as string
+	 * @return download URL as string
 	 */
 	public String getDownload() {
 		return getId().toString().replaceFirst("/auth/", "/dataset/")
@@ -62,7 +63,7 @@ public class SkosDAO extends RdfDAO {
 	/**
 	 * Get SKOS notation
 	 *
-	 * @return string
+	 * @return string or empty string
 	 */
 	public String getNotation() {
 		return literal(SKOS.NOTATION, "");
@@ -71,7 +72,7 @@ public class SkosDAO extends RdfDAO {
 	/**
 	 * Get SKOS top concepts
 	 * 
-	 * @return 
+	 * @return set of IRIs
 	 */
 	public Set<Value> getTopConcepts() {
 		return objs(SKOS.HAS_TOP_CONCEPT);
@@ -97,12 +98,22 @@ public class SkosDAO extends RdfDAO {
 		return literals(SKOS.PREF_LABEL, lang);
 	}
 	
+	/**
+	 * Get broader matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
 	public Set<Value> getBroaders() {
 		return objs(SKOS.BROADER);
 	}
 	
+	/**
+	 * Get narrower matches
+	 * 
+	 * @return set of IRIs or empty set
+	 */
 	public Set<Value> getNarrowers() {
-		return objs(SKOS.BROADER);
+		return objs(SKOS.NARROWER);
 	}
 	
 	

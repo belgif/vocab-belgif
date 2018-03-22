@@ -23,13 +23,15 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list shacls as s>
-	    <tr><td><a href="${s.id}">${s.literal("rdfs", "label", l)!""}</a></td>
-		<td>${s.literal("rdfs", "comment", l)!""}</td>
-                <#assign download = s.id?remove_ending("#")>
-                <td><a href="${download}.ttl">TTL</a>
-                    <a href="${download}.jsonld">JSON-LD</a>
-                    <a href="${download}.nt">N-Triples</a></td>
-	    </tr>
+                <#assign label = s.getLabel(l)!s.getLabel("")>
+                <#assign comment = s.getComment(l)!s.getComment("")>
+                <tr><td><a href="${s.id}">${label}</a></td>
+                    <td>${comment}</td>
+                    <#assign download = s.id?remove_ending("#")>
+                    <td><a href="${download}.ttl">TTL</a>
+                        <a href="${download}.jsonld">JSON-LD</a>
+                        <a href="${download}.nt">N-Triples</a></td>
+                </tr>
 	    </#list>
 	    </table>
 	</section>

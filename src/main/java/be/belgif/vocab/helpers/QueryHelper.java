@@ -27,6 +27,8 @@ package be.belgif.vocab.helpers;
 
 import be.belgif.vocab.App;
 import be.belgif.vocab.ldf.Hydra;
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -74,7 +76,7 @@ public class QueryHelper {
 	public final static String XMLNS = "xmlns";
 	
 	// namespace mappings
-	public final static Map<String, String> NS_MAP = new HashMap();
+	public final static BiMap<String,String> NS_MAP = HashBiMap.create();
 
 	static {
 		NS_MAP.put(DCAT.PREFIX, DCAT.NAMESPACE);

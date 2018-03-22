@@ -52,6 +52,9 @@ public class SHACL {
 	public static final String PREFIX = "sh";
 
 	public static final IRI CLASS;
+	public static final IRI DATATYPE;
+	public static final IRI MAX_COUNT;
+	public static final IRI MIN_COUNT;
 	public static final IRI NODE_SHAPE;
 	public static final IRI PATH;
 	public static final IRI PROPERTY_SHAPE;
@@ -71,6 +74,9 @@ public class SHACL {
 		PROPERTY_SHAPE = factory.createIRI(NAMESPACE, "PropertyShape");
 		
 		CLASS = factory.createIRI(NAMESPACE, "class");
+		DATATYPE = factory.createIRI(NAMESPACE, "datatype");
+		MAX_COUNT = factory.createIRI(NAMESPACE, "maxCount");
+		MIN_COUNT = factory.createIRI(NAMESPACE, "minCount");
 		PATH = factory.createIRI(NAMESPACE, "path");		
 		PROPERTY = factory.createIRI(NAMESPACE, "property");
 		TARGET_CLASS = factory.createIRI(NAMESPACE, "targetClass");

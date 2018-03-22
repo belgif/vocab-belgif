@@ -46,8 +46,9 @@ import org.slf4j.LoggerFactory;
 
 /**
  * DAO helper class for RDF triples
+ * Only used for HTML view
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class RdfDAO {
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
@@ -78,7 +79,7 @@ public class RdfDAO {
 	 * Get set of triple objects
 	 *
 	 * @param prop property URI
-	 * @return set of objects (IRI or literal)
+	 * @return set of values or empty set
 	 */
 	public Set<Value> objs(IRI prop) {
 		Set objs = m.filter(id, prop, null).objects();
@@ -89,7 +90,7 @@ public class RdfDAO {
 	 * Get one triple
 	 *
 	 * @param prop property URI
-	 * @return set of objects (IRI or literal)
+	 * @return value or null
 	 */
 	public Value obj(IRI prop) {
 		Iterator<Value> i = objs(prop).iterator();
@@ -110,7 +111,7 @@ public class RdfDAO {
 			Literal l = (Literal) obj;
 			if (l.getLanguage().orElse("").equals(lang)) {
 				String val = l.stringValue();
-				if (val != null) {
+				if (val != null && !val.isEmpty()) {
 					vals.add(val);
 				}
 			}
@@ -121,9 +122,9 @@ public class RdfDAO {
 	/**
 	 * Get one literal
 	 *
-	 * @param prop
+	 * @param prop predicate
 	 * @param lang language code
-	 * @return literal (IRI or value)
+	 * @return string or empty string
 	 */
 	public String literal(IRI prop, String lang) {
 		Iterator<String> i = literals(prop, lang).iterator();
@@ -131,10 +132,10 @@ public class RdfDAO {
 	}
 	
 	/**
-	 * Get RDFS comment
+	 * Get RDFS comment in a specific language
 	 * 
 	 * @param lang language code
-	 * @return value
+	 * @return string or empty string
 	 */
 	public String getComment(String lang) {
 		return literal(RDFS.COMMENT, lang);
@@ -143,37 +144,37 @@ public class RdfDAO {
 	/**
 	 * Get sameAs URIs
 	 *
-	 * @return set of uri
+	 * @return set of IRIs or empty set
 	 */
 	public Set<Value> getSameAs() {
 		return objs(OWL.SAMEAS);
 	}
 	
 	/**
-	 * Get DCTERMS description
+	 * Get description in a specific language
 	 * 
 	 * @param lang language code
-	 * @return string
+	 * @return string or empty string
 	 */
 	public String getDescription(String lang) {
 		return literal(DCTERMS.DESCRIPTION, lang);
 	}
 
 	/**
-	 * Get RDFS label
+	 * Get label in a specific language
 	 * 
 	 * @param lang language code
-	 * @return string
+	 * @return string or empty string
 	 */
 	public String getLabel(String lang) {
 		return literal(RDFS.LABEL, lang);
 	}
 	
 	/**
-	 * Get DCTERMS title
+	 * Get title in a specific language
 	 * 
 	 * @param lang language code
-	 * @return title 
+	 * @return string or empty string
 	 */
 	public String getTitle(String lang) {
 		return literal(DCTERMS.TITLE, lang);

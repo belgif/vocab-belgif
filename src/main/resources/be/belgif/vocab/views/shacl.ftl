@@ -14,6 +14,18 @@
     <div id="container">
     <#include "message.ftl">
     <#if s?has_content>
+    <#assign ns = s.usedNs>
+    <#if ns?hasContent>
+    <section>
+        <h3>Prefixes</h3>
+        <table>
+            <tr><th>Prefix</th><th>Namespace</th>/tr>
+            <<#list ns.entrySet?sort as e> 
+                <tr><td>${e.key}</td><td>${e.value}</td></tr>
+            </#list>
+        </table>
+    </section>
+    </#if>
     <section>
         <h3>Node Shapes</h3>
         <#list s?sort_by("id") as ns>
@@ -23,13 +35,8 @@
             <#if props?has_content>
                 <#list props as prop>
                     <tr><td>${prop.shortPath}</td>
-                        <td>${prop.obj("sh", "minCount")!"0"} -
-                        ${prop.obj("sh", "maxCount")!"N"}
-                        <#assign type = prop.obj("sh", "datatype")!"">
-                        <#if ! type?has_content>
-                            <#assign type = prop.obj("sh", "class")!"">
-                        </#if>
-                        <td>${type}</td>
+                        <td>${prop.minCount!"0"} - ${prop.maxCount)!"N"}</td>
+                        <td>${prop.shortType!prop.shortClass}</td>
                     </tr>
                 </#list>
             </#if>

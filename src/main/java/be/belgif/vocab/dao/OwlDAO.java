@@ -45,18 +45,22 @@ import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
 /**
  * DAO helper class for ontology overview.
+ * Only used for HTML view
  *
- * @author Bart.Hanssens
+ * @author BartHanssens
  */
 public class OwlDAO extends RdfDAO {
 	private final List<OwlThingDAO> classes = new ArrayList<>();
 	private final List<OwlThingDAO> properties = new ArrayList<>();
 	
+	/**
+	 * Helper class for OWL classes and properties
+	 */
 	public class OwlThingDAO extends RdfDAO {
 		/**
 		 * Get domains
 		 *
-		 * @return
+		 * @return set of IRIs or empty set
 		 */
 		public Set<Value> getDomains() {
 			return objs(RDFS.DOMAIN);
@@ -65,7 +69,7 @@ public class OwlDAO extends RdfDAO {
 		/**
 		 * Get ranges
 		 *
-		 * @return
+		 * @return set of IRIS or empty set
 		 */
 		public Set<Value> getRanges() {
 			return objs(RDFS.RANGE);
@@ -74,7 +78,7 @@ public class OwlDAO extends RdfDAO {
 		/**
 		 * Get subclasses
 		 *
-		 * @return
+		 * @return set of IRIS or empty set
 		 */
 		public Set<Value> getSubClasses() {
 			return objs(RDFS.SUBCLASSOF);
@@ -83,7 +87,7 @@ public class OwlDAO extends RdfDAO {
 		/**
 		 * Get subproperties
 		 *
-		 * @return
+		 * @return set of IRIS or empty set
 		 */
 		public Set<Value> getSubProperties() {
 			return objs(RDFS.SUBPROPERTYOF);
@@ -92,8 +96,8 @@ public class OwlDAO extends RdfDAO {
 		/**
 		 * Constructor
 		 * 
-		 * @param m
-		 * @param id 
+		 * @param m model
+		 * @param id subject IRI
 		 */
 		public OwlThingDAO(Model m, Resource id) {
 			super(m, id);
@@ -101,10 +105,10 @@ public class OwlDAO extends RdfDAO {
 	}
 		
 	/**
-	 * Get version info
+	 * Get version info in a specific language
 	 * 
-	 * @param lang
-	 * @return 
+	 * @param lang language code
+	 * @return string or empty string
 	 */
 	public String getVersion(String lang) {
 		return literal(OWL.VERSIONINFO, lang);
@@ -137,7 +141,7 @@ public class OwlDAO extends RdfDAO {
 	/**
 	 * Get RDFS/OWL classes
 	 * 
-	 * @return 
+	 * @return list of classes
 	 */
 	public List<OwlThingDAO> getClasses() {
 		return this.classes;
@@ -153,9 +157,9 @@ public class OwlDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Get RDFS/OWL properties
+	 * Get properties
 	 * 
-	 * @return 
+	 * @return list of properties
 	 */
 	public List<OwlThingDAO> getProperties() {
 		return this.properties;
