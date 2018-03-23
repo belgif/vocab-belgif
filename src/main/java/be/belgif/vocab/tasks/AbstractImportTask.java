@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 
 import com.google.common.collect.ImmutableCollection;
@@ -43,8 +42,6 @@ import java.util.Optional;
 import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.ValueFactory;
-import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryException;

@@ -87,7 +87,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 				if (fmt.isPresent()) {
 					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
 					rdfh.set(BasicWriterSettings.PRETTY_PRINT, true);
-					//rdfh.set(BasicWriterSettings.INLINE_BLANK_NODES, false);
+					rdfh.set(BasicWriterSettings.INLINE_BLANK_NODES, true);
 					LOG.info("Writing file {}", f);
 					conn.export(rdfh, ctx);
 				} else {
