@@ -1,0 +1,57 @@
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/title> "Workflow"@en .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/title> "Workflow"@fr .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/title> "Workflow"@de .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/title> "Workflow"@nl .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/description> "Workflow status"@en .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/description> "Statuts de flux de travail"@fr .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/description> "Arbeitsablauf Status"@de .
+<http://vocab.belgif.be/auth/workflow#id> <http://purl.org/dc/terms/description> "Workflow statussen"@nl .
+<http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> .
+<http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> <http://www.w3.org/2004/02/skos/core#notation> "NOTSTARTED" .
+<http://vocab.belgif.be/auth/workflow/NOTSTARTED#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Not started"@en .
+<http://vocab.belgif.be/auth/workflow/STARTED#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/workflow/STARTED#id> .
+<http://vocab.belgif.be/auth/workflow/STARTED#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/STARTED#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/STARTED#id> <http://www.w3.org/2004/02/skos/core#notation> "STARTED" .
+<http://vocab.belgif.be/auth/workflow/STARTED#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Started"@en .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/workflow/WAIT#id> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#notation> "WAIT" .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waiting"@en .
+<http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/workflow/WAIT#id> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> .
+<http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> <http://www.w3.org/2004/02/skos/core#notation> "WAITAPPROV" .
+<http://vocab.belgif.be/auth/workflow/WAITAPPROV#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waiting approval"@en .
+<http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/workflow/WAIT#id> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> .
+<http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> <http://www.w3.org/2004/02/skos/core#notation> "WAITTRANSL" .
+<http://vocab.belgif.be/auth/workflow/WAITTRANSL#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waiting translation"@en .
+<http://vocab.belgif.be/auth/workflow/WAITCORR#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/workflow/WAIT#id> .
+<http://vocab.belgif.be/auth/workflow/WAIT#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/workflow/WAITCORR#id> .
+<http://vocab.belgif.be/auth/workflow/WAITCORR#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/WAITCORR#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/WAITCORR#id> <http://www.w3.org/2004/02/skos/core#notation> "WAITCORR" .
+<http://vocab.belgif.be/auth/workflow/WAITCORR#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Waiting correction"@en .
+<http://vocab.belgif.be/auth/workflow/EXITED#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/workflow/EXITED#id> .
+<http://vocab.belgif.be/auth/workflow/EXITED#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/EXITED#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/EXITED#id> <http://www.w3.org/2004/02/skos/core#notation> "EXITED" .
+<http://vocab.belgif.be/auth/workflow/EXITED#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stopped without completion"@en .
+<http://vocab.belgif.be/auth/workflow/COMPLETED#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/workflow/COMPLETED#id> .
+<http://vocab.belgif.be/auth/workflow/COMPLETED#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/workflow/COMPLETED#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/workflow#id> .
+<http://vocab.belgif.be/auth/workflow/COMPLETED#id> <http://www.w3.org/2004/02/skos/core#notation> "COMPLETED" .
+<http://vocab.belgif.be/auth/workflow/COMPLETED#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Completed"@en .

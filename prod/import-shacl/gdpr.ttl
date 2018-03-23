@@ -1,7 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix be-gdpr: <http://vocab.belgif.be/ns/gdpr#> .
 @prefix be-infosec: <http://vocab.belgif.be/ns/infosec#> .
 @prefix shbe-gdpr: <http://vocab.belgif.be/shacl/gdpr#> .
@@ -15,36 +22,231 @@ shbe-gdpr:RegisterShape a sh:NodeShape ;
 	sh:property [
 		sh:path dcterms:title ;
 		sh:minCount 1 ;
-		sh:datatype rdfs:Literal ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true ;
+		sh:languageIn ("nl" "fr" "de" "en") ;
 	] ;
 	sh:property [
-		sh:path cv:isOwnedBy ;
+		sh:path cv:ownedBy ;
 		sh:minCount 1 ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
-		sh:class rov:RegisteredOrganization ;
+		sh:class cv:PublicOrganisation ;
 	] .
 
+shbe-gdpr:OrganizationShape a sh:NodeShape ;
+	sh:targetClass cv:PublicOrganisation ;
+	sh:property [
+		sh:path skos:altLabel ;
+		sh:datatype rdfs:Literal ;
+	] .	
 
 shbe-gdpr:DataTreatmentPartShape a sh:NodeShape ;
 	sh:targetClass be-gdpr:DataTreatmentPart ;
 	sh:property [
-		sh:path gdpr:category ;
+		sh:path be-gdpr:conservation ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:dataCategory ;
 		sh:minCount 1 ;
 		sh:maxCount 1;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
 	] ;
 	sh:property [
-		sh:path gdpr:duration
-	
-	
-	
-	
-shbe-gdpr:RegisteredOrganizationShape a sh:NodeShape ;
-	sh:targetClass rov:RegisteredOrganization ;
+		sh:path be-gdpr:dataCategoryText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
 	sh:property [
-		sh:path rov:legalName ;
+		sh:path be-gdpr:isJuridical ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isSensitive ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isSensitiveText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasDataReceiver ;
+		sh:nodeKind sh:IRI ;
+		sh:class be-gdpr:DataReceiver ;
+	] .
+
+shbe-gdpr:ControllerShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:Controller ;
+	sh:property [
+		sh:path cv:hasCompetentAuthority ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class cv:PublicOrganisation ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasResponsible ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasDelegate ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasDPO ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isDPOInternal ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isDPOInternalText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path foaf:mbox ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] .
+
+shbe-gdpr:ProcessorShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:Processor ;
+	sh:property [
+		sh:path cv:hasCompetentAuthority ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class cv:PublicOrganisation ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasResponsible ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasDelegate ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:hasDPO ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isDPOInternal ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isDPOInternalText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path foaf:mbox ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:minCount 1 ;
+		sh:maxCount 1;
+	] .
+
+shbe-gdpr:DataReceiverGenericShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:DataReceiverGeneric ;
+	sh:property [
+		sh:path be-gdpr:guarantee ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:receiverType ;
 		sh:minCount 1;
-		sh:datatype rdfs:Literal ;
+		sh:maxCount 1;
+		sh:nodeKind sh:IRI ;
+		sh:class skos:Concept ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:receiverTypeText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] .
+
+shbe-gdpr:DataReceiverSpecificShape a sh:NodeShape ;
+	sh:targetClass be-gdpr:DataReceiverSpecific ;
+	sh:property [
+		sh:path be-gdpr:guarantee ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:receiverType ;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:nodeKind sh:IRI ;
+		sh:class skos:Concept ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:receiverTypeText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:transferNature ;
+		sh:maxCount 1;
+		sh:nodeKind sh:IRI ;
+		sh:class skos:Concept ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:transferNatureText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path cv:hasCompetentAuthority ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class cv:PublicOrganisation ;
+	] ;
+	sh:property [
+		sh:path cv:hasContactPoint ;
+		sh:minCount 1 ;
+		sh:nodeKind sh:BlankNodeOrIRI ;
+		sh:class schema:ContactPoint ;
 	] .
