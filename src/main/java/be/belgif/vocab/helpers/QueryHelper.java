@@ -107,7 +107,14 @@ public class QueryHelper {
 	 * @return URI representation
 	 */
 	public static IRI asURI(String uri) {
-		return (uri != null) ?  F.createIRI(uri) : null;
+		if (uri == null || uri.isEmpty()) {
+			return null;
+		}
+		try {
+			return F.createIRI(uri);
+		} catch (IllegalArgumentException e) {
+			return null;
+		}
 	}
 
 	/**

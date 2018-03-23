@@ -190,8 +190,8 @@ public class App extends Application<AppConfig> {
 		RdfStoreHealthCheck check = new RdfStoreHealthCheck(repo);
 		env.healthChecks().register("triplestore", check);
 		
-		env.lifecycle().addServerLifecycleListener(server -> {
-			if (repo.getConnection().isEmpty()) {
+		env.lifecycle().addServerLifecycleListener(s -> {
+			if (repo.getConnection().isEmpty() || config.getOverwrite()) {
 				importAll(config);
 			}
 		});

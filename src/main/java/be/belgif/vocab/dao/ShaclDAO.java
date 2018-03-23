@@ -213,6 +213,16 @@ public class ShaclDAO extends RdfDAO {
 	}
 	
 	/**
+	 * Get short (prefixed) name of an IRI
+	 * 
+	 * @param iri full IRI value
+	 * @return string
+	 */
+	public String getShort(String iri) {
+		return getShort(QueryHelper.asURI(iri));
+	}
+	
+	/**
 	 * Initialize SHACL property shapes
 	 * 
 	 * @param m model

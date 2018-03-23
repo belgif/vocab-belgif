@@ -68,6 +68,8 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 		}
 	}
 
+	private boolean overwrite;
+	
 	@NotEmpty
 	private String dataDir;
 	
@@ -96,6 +98,16 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	@JsonProperty("xmlnamespaces")
 	private ImportDownloadFactory xsds = new ImportDownloadFactory();
 
+	
+	@JsonProperty
+	public boolean getOverwrite() {
+		return overwrite;
+	}
+	
+	@JsonProperty
+	public void setOverwrite(boolean overwrite) {
+		this.overwrite = overwrite;
+	}
 	
 	@JsonProperty
 	public String getDataDir() {

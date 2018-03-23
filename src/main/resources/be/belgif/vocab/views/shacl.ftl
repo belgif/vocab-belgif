@@ -29,12 +29,12 @@
         <h3>Node Shapes</h3>
         <#list s?sort_by("id") as ns>
             <table class="shacl">
-            <#assign target = ns.target>
+            <#assign target = ns.target!"">
             <tr><th colspan="3"><a href="${target}">${sh.getShort(target)}</a></th></tr>
             <#assign props = ns.propertyShapes>
             <#list props as prop>
+                <#assign path = prop.path!"">
                 <tr>
-                    <#assign path = prop.path>
                     <td><a href="${path}">${sh.getShort(path)}</a></td>
                     <td>${prop.minCount!"0"} - ${prop.maxCount!"N"}</td>
                     <#assign typ = prop.dataType!prop.shClass!"">
