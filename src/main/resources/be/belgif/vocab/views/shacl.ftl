@@ -32,7 +32,7 @@
             <#assign target = ns.target!"">
             <tr><th colspan="3"><a href="${target}">${sh.getShort(target)}</a></th></tr>
             <#assign props = ns.propertyShapes>
-            <#list props as prop>
+            <#list props?sort_by("path") as prop>
                 <#assign path = prop.path!"">
                 <tr>
                     <td><a href="${path}">${sh.getShort(path)}</a></td>

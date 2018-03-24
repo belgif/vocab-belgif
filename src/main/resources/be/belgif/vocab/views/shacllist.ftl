@@ -22,7 +22,7 @@
 		<th>${m.getString("msg.description")}</th>
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
-	    <#list shacls as s>
+	    <#list shacls?sort as s>
                 <#assign label = s.getLabel(l)!s.getLabel("")>
                 <#assign comment = s.getComment(l)!s.getComment("")>
                 <tr><td><a href="${s.id}">${label}</a></td>
