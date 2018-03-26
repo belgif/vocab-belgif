@@ -11,6 +11,11 @@ infosec:Rating a rdfs:Class, owl:Class ;
 	rdfs:isDefinedBy infosec: ;
 	rdfs:label "Rating"@nl, "Rating"@fr, "Rating"@de, "Rating"@en .
 
+infosec:hasRating a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "heeft rating"@nl, "Rating"@fr, "Rating"@de, "Rating"@en ;
+	rdfs:range infosec:Rating ;
+	
 infosec:genericRating a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy infosec: ;
 	rdfs:range xsd:nonNegativeInteger .

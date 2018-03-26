@@ -1,0 +1,119 @@
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/description> "Data receiver (generic)"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/title> "GDPR datareceivergenerictype"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/description> "Datenempfänger (generisch)"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/title> "GDPR datareceivergenerictype"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/description> "Gegevensontvanger (generiek)"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/title> "GDPR datareceivergenerictype"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/description> "Récepteur de données (générique)"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://purl.org/dc/terms/title> "GDPR datareceivergenerictype"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/A#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/B#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/C#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/D#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/E#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/F#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/G#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/H#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/I#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/J#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/K#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#note> "Die Person, auf die sich die personenbezogenen Daten beziehen."@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#note> "The person to whom the personal data relate."@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#notation> "A" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "De geregistreerde persoon zelf"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Die betroffene Person"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "La personne enregistrée elle-même"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "The person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/A#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#notation> "B" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal relationships of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Beziehungen der beteiligten Person"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke relaties van de geregistreerde persoons"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relations personnelles de la personne enregistrée"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/B#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#notation> "C" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "conseillers professionnels de la personne enregistrée"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional counselors of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "professionele raadgevers van de geregistreerde persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professionelle Berater der betroffenen Person"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/C#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#notation> "D" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeitgeber oder Geschäftsbeziehungen der betreffenden Person"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employer or business relations of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "employeur ou relations de travail de la personne enregistrée"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "werkgever of zakenrelaties van de geregistreerde persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/D#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#notation> "E" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Einzelpersonen oder Organisationen in direktem Kontakt mit der verantwortlichen Person"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individuals or organizations in direct contact with the person in charge"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individuen of organisaties in directe relatie met de verantwoordelijke"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individus ou organisations en relation directe avec le responsable"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/E#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#notation> "F" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere private Unternehmen"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "andere privé-ondernemingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "autres entreprises privées"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other private companies"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/F#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#notation> "G" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Government services"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regierungsdienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "services publics"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/G#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#notation> "H" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "gerecht en politiediensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice and police services"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "justice et services de police"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justiz- und Polizeidienste"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/H#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#notation> "I" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "instances de la sécurité sociale"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentliche Einrichtungen der sozialen Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public social security institutions"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "sociale zekerheidsinstanties"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/I#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#notation> "J" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "banken en verzekeringsmaatschappijen"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banken und Versicherungen"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banks and insurance companies"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "banques et compagnies d'assurances"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/J#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#notation> "K" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Broker in persönlichen Daten oder Direktmarketing"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Brokers in personal data or direct marketing"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "courtiers en données à caractère personnel ou marketing direct"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "makelaars in persoonsgegevens of direct marketing"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/K#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "andere (angeben)"@de .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "andere (specifiëren)"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "autres (à spécifier)"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "other (specify)"@en .
+<http://vocab.belgif.be/auth/gdpr-recvgen/Z#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-recvgen#id> .

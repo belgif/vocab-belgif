@@ -93,6 +93,12 @@ gdpr:authoritativeSource a rdf:Property, owl:DataProperty ;
 	rdfs:label "Authentieke bron"@nl, "Authentische Quelle"@de, "Authoritative source"@en, "Source authentique"@fr ;
 	rdfs:range rdfs:Literal .
 
+gdpr:otherSource a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Andere bron"@nl, "Andere Quelle"@de, "Autre source"@fr, "Other source"@en ;
+	rdfs:range rdfs:Literal .
+
 gdpr:authorization a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
@@ -124,6 +130,11 @@ gdpr:hasController a rdf:Property, owl:ObjectProperty ;
 	rdfs:label "Controller"@de, "Controller"@en, "Controller"@fr, "Controller"@nl ;
 	rdfs:range gdpr:Controller .
 
+gdpr:classificationText rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Classificatieniveau"@nl, "Classification level"@en, "Klassifizierungsstufe"@de, "Niveau de classification"@fr .
+	
 gdpr:dataCategory a rdf:Property, owl:ObjectProperty;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment, gdpr:DataTreatmentPart ;
@@ -143,7 +154,14 @@ gdpr:dataCoupling a rdf:Property, owl:DataProperty ;
 	rdfs:label "Couplage de données"@fr, "Data coupling"@en, "Datenkopplung"@de, "Gegevenskoppeling"@nl ;
 	rdfs:range rdfs:Literal .
 
-gdpr:dataTreatmentTypeText a rdf:Property, owl:DataProperty ;
+gdpr:treatmentType a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf dcterms:subject ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Data treatment type"@en, "Datenverarbeitungstyp"@de, "Type de traitement de données"@fr, "Type gegevensverwerking"@nl ;
+	rdfs:range rdfs:Literal .
+	
+gdpr:treatmentTypeText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "(imported) Data treatment type"@en, "(imported) Datenverarbeitungstyp"@de, "(imported) Type de traitement de données"@fr, "(imported) Type gegevensverwerking"@nl ;
@@ -177,12 +195,6 @@ gdpr:involvedPartyText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "(imported) Categorie betrokkene"@nl, "(imported) Catégorie de personne concernée"@fr, "(imported) Category of involved party"@en, "(imported) Kategorie der beteiligten Person"@de ;
-	rdfs:range rdfs:Literal .
-
-gdpr:involvedPartyText a rdf:Property, owl:DataProperty  ;
-	rdfs:isDefinedBy gdpr: ;
-	rdfs:domain gdpr:DataTreatment ;
-	rdfs:label "Informatieproces naar betrokken partijen"@nl, "Information process towards involved parties"@en, "Informationsprozess gegenüber Beteiligten"@de, "Processus d'information vers les parties impliquées"@fr ;
 	rdfs:range rdfs:Literal .
 
 gdpr:rightsProcedure a rdf:Property, owl:DataProperty  ;
@@ -346,6 +358,7 @@ gdpr:Register a rdfs:Class, owl:Class ;
 
 gdpr:hasDataTreatment a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf dcterms:relation ;
 	rdfs:label "Data treatment"@en, "Datenbehandlung"@de, "Gegevensverwerking"@nl, "Traitement des données"@fr ;
 	rdfs:domain gdpr:Register ;
 	rdfs:range gdpr:DataTreatment .

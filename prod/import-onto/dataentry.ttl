@@ -11,6 +11,11 @@ dataentry:DataStatus a rdfs:Class, owl:Class ;
 	rdfs:isDefinedBy dataentry: ;
 	rdfs:label "Data status"@en, "Data status"@nl,"Data status"@de, "Data status"@fr .
 
+dataentry:hasDataStatus a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy dataentry: ;
+	rdfs:label "Data status"@en, "Data status"@nl,"Data status"@de, "Data status"@fr ;
+	rdfs:range dataentry:DataStatus .
+	
 dataentry:exportStatus a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy dataentry: ;
 	rdfs:label "Export status"@en, "Export status"@nl, "Export status"@de, "Export status"@fr; 
