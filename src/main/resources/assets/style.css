@@ -1,9 +1,9 @@
 body {
-	font-family: sans-serif;
-	width: 95%;
-	height: 100%;
-	margin: 0 auto 0 auto;
-	padding: 0; 
+    font-family: sans-serif;
+    width: 95%;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0; 
     background: linear-gradient(
 			to bottom, 
 			#787586 0%, #ffffff 100%)
@@ -11,19 +11,19 @@ body {
 }
 
 header {
-	margin: 0 1rem 0 1rem;
+    margin: 0 1rem 0 1rem;
 }
 
 div#logo-wrapper {
-	width: 100px;
-	margin: 0;
-	padding: 0;
-	float: left;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    float: left;
 }
 
 img#logo {
-	width: 100px;
-	height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 @media screen and (max-width: 400px) {
@@ -31,69 +31,69 @@ img#logo {
 }
 
 div#lang-wrapper {
-	height: 100%;
-	overflow: auto;
+    height: 100%;
+    overflow: auto;
 }
 
 div#languages {
-	width: 100%;
-	height: 100%;
-	color: #282828;
-	background-color: #4c4a50;
-	display: flex;
-	justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    color: #282828;
+    background-color: #4c4a50;
+    display: flex;
+    justify-content: space-between;
 }	
 
 div#languages ul {
-	margin: 0;
-	padding: 0.5rem 1rem 0.5rem;
-	display: inline-block;
+    margin: 0;
+    padding: 0.5rem 1rem 0.5rem;
+    display: inline-block;
 }
 
 div#languages li {
-	text-align: center;
-	display: inline;
-	font-size: smaller;
-	margin-right: 0.6rem;
+    text-align: center;
+    display: inline;
+    font-size: smaller;
+    margin-right: 0.6rem;
 }
 
 div#languages li a {
-	color: white;
+    color: white;
 }
 
 div#languages li.disabled {
-	color: black;
+    color: black;
 }
 
 div#flag {
-	padding-bottom: 3px;
-	background: linear-gradient(
-		to right,
-		black 0%, black 33%,
-		yellow 33%, yellow 66%,
-		red 66%, red 100%);
-	background-repeat: no-repeat;
-	background-position: center bottom;
+    padding-bottom: 3px;
+    background: linear-gradient(
+        to right,
+        black 0%, black 33%,
+        yellow 33%, yellow 66%,
+        red 66%, red 100%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 div#site-name {
-	padding: 0.5em 0.8em;
-	overflow: auto;
+    padding: 0.5em 0.8em;
+    overflow: auto;
 }
 
 iframe {
-	border: 0;
+    border: 0;
 }
 
 footer {
-	color: #5b6f90;
-	text-align: center;
-	font-size: smaller;
+    color: #5b6f90;
+    text-align: center;
+    font-size: smaller;
 }
 
 
 a {
-	color: inherit;
+    color: inherit;
 }
 
 div#languages a {
@@ -101,86 +101,86 @@ div#languages a {
 }
 
 h1, h2 {
-	color: white;
-	padding: 0;
-	margin: 0;
-	font-weight: normal;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
 }
 
 h2 {
-	font-size: larger;
+    font-size: larger;
 }
 
 div#container {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 div#lang-select {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 20vh 0;
-	width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20vh 0;
+    width: 80%;
 }
 
 @media screen and (max-height: 600px) {
-	div#lang-select { padding: 0 0; }
+    div#lang-select { padding: 0 0; }
 }
 
 section  {
-	flex-grow: 1;
-	padding: 0;
-	margin: 1rem;
-	background-color: white;
-	color: #282828;
-	border-bottom: #dddddd solid 1px;
+    flex-grow: 1;
+    padding: 0;
+    margin: 1rem;
+    background-color: white;
+    color: #282828;
+    border-bottom: #dddddd solid 1px;
 }
 
 section.panel ul {
-	list-style-type: none;
-	padding-left: 1rem;
+    list-style-type: none;
+    padding-left: 1rem;
 }
 
 section.panel li {
-	padding-top: 1rem;
-	color: #5b6f90;
-	border-bottom: #dddddd 1px solid;
+    padding-top: 1rem;
+    color: #5b6f90;
+    border-bottom: #dddddd 1px solid;
 }
 
 h3 {
-	background-color: #566378;
-	color: white;
-	text-align: center;
-	padding: 1.25rem;
-	margin: 0;
+    background-color: #566378;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+    margin: 0;
 }
 
 div#joinup {
-	padding-top: 1rem;
-	text-align: center;
+    padding-top: 1rem;
+    text-align: center;
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
-	border: #dddddd 3px solid;
+    width: 100%;
+    border-collapse: collapse;
+    border: #dddddd 3px solid;
 }
 
 th, td {
-	text-align: left;
-	border: #dddddd 2px solid;
-	padding: 0.5rem;
+    text-align: left;
+    border: #dddddd 2px solid;
+    padding: 0.5rem;
 }
 
 td a {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 th {
- 	background-color: #566378;
-	color: white;
-	font-weight: normal;
+    background-color: #566378;
+    color: white;
+    font-weight: normal;
 }
 
 table.onto td:first-child { 
@@ -188,19 +188,22 @@ table.onto td:first-child {
 }
 
 table.shacl td:nth-child(1) { 
-    width: 20% ;
+    width: 25% ;
 }
 table.shacl td:nth-child(2) { 
     width: 5% ;
 }
+table.shacl td:nth-child(3) { 
+    width: 25% ;
+}
 
 details {
-	padding: 0.5rem;
-	border: #dddddd 1px solid;
+    padding: 0.5rem;
+    border: #dddddd 1px solid;
 }
 
 details[open] summary {
- 	background-color: #566378;
-	color: white;
-	font-weight: normal;
+    background-color: #566378;
+    color: white;
+    font-weight: normal;
 }

@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.dao;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -37,6 +38,8 @@ import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.util.ModelException;
+import org.eclipse.rdf4j.model.util.RDFCollections;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
@@ -131,6 +134,26 @@ public class RdfDAO {
 		return (i.hasNext() ? i.next() : "");
 	}
 	
+	/**
+	 * Get a RDF list as a collection of values
+	 * 
+	 * @param prop predicate
+	 * @param fullm full model
+	 * @return collection of values or empty collection
+	 */
+	public Set<Value> collection(IRI prop, Model fullm) {
+		Value head = obj(prop);
+		if (head == null || !(head instanceof Resource)) {
+			return Collections.EMPTY_SET;
+		}
+
+		try {
+			Set<Value> vals = new HashSet<>();
+			return RDFCollections.asValues(fullm, (Resource) head, vals);
+		} catch(ModelException me) {
+			return Collections.EMPTY_SET;
+		}
+	}
 	/**
 	 * Get RDFS comment in a specific language
 	 * 
