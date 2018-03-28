@@ -25,7 +25,7 @@
 	<section>
 	    <h4>${m.getString("msg.general")}</h4>
 	    <table>
-	    <#assign n = v.notation>
+	    <#assign n = v.notation!"">
 	    <#if n?has_content>
 		<tr><td>Notation</td><td>${n}</td></tr>
 	    </#if>

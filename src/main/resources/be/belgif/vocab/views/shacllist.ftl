@@ -23,8 +23,8 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list shacls?sort as s>
-                <#assign label = s.getLabel(l)!s.getLabel("")>
-                <#assign comment = s.getComment(l)!s.getComment("")>
+                <#assign label = s.getLabel(l)!s.getLabel("")!"">
+                <#assign comment = s.getComment(l)!s.getComment("")!"">
                 <tr><td><a href="${s.id}">${label}</a></td>
                     <td>${comment}</td>
                     <#assign download = s.id?remove_ending("#")>

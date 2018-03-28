@@ -127,11 +127,11 @@ public class RdfDAO {
 	 *
 	 * @param prop predicate
 	 * @param lang language code
-	 * @return string or empty string
+	 * @return string or null
 	 */
 	public String literal(IRI prop, String lang) {
 		Iterator<String> i = literals(prop, lang).iterator();
-		return (i.hasNext() ? i.next() : "");
+		return (i.hasNext() ? i.next() : null);
 	}
 	
 	/**

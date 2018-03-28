@@ -14,6 +14,23 @@
 <main>
     <div id="container">
     <#include "message.ftl">
+    <section>
+        <h3>${m.getString("msg.general")}</h3>
+        <table>
+        <#assign val = sh.getVersion(l)!sh.getVersion("")!"">
+        <#if val?has_content>
+            <tr><td>Version</td><td>${val}</td></tr>
+        </#if>
+        <#assign val = sh.getLabel(l)!sh.getLabel("")!"">
+        <#if val?has_content>
+            <tr><td>RDFS label</td><td>${val}</td></tr>
+        </#if>
+        <#assign val = sh.getComment(l)!sh.getComment("")!"">
+        <#if val?has_content>
+            <tr><td>RDFS comment</td><td>${val}</td></tr>
+        </#if>
+	</table>
+    </section>
     <#if s?has_content>
     <section>
         <h3>Prefixes</h3>

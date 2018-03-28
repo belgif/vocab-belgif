@@ -42,6 +42,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SHACL;
 
@@ -299,6 +300,16 @@ public class ShaclDAO extends RdfDAO {
 	 */
 	protected Model getFullModel() {
 		return getModel();
+	}
+	
+	/**
+	 * Get version info in a specific language
+	 * 
+	 * @param lang language code
+	 * @return string or empty string
+	 */
+	public String getVersion(String lang) {
+		return literal(OWL.VERSIONINFO, lang);
 	}
 	
  	/**

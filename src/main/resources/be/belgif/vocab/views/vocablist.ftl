@@ -25,8 +25,8 @@
 		<th>${m.getString("msg.downloads")}</th>
 	    </tr>
 	    <#list vs?sort_by("id") as v>
-            <tr><td><a href="${v.id}">${v.getTitle(l)}</a></td>
-		<td>${v.getDescription(l)}</td>
+            <tr><td><a href="${v.id}">${v.getTitle(l)!""}</a></td>
+		<td>${v.getDescription(l)!""}</td>
                 <#assign download = v.download!"">
 		<td><a href="${download}.ttl">TTL</a>
 		    <a href="${download}.jsonld">JSON-LD</a>
