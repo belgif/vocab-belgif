@@ -1,0 +1,153 @@
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/description> "Mesures de sécurité"@fr .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/title> "Mesures de sécurité"@fr .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/description> "Security measures"@en .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/title> "Security measures"@en .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/description> "Sicherheitsmaßnahme"@de .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/title> "Sicherheitsmaßnahme"@de .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/description> "Veiligheidsmaatregelen"@nl .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://purl.org/dc/terms/title> "Veiligheidsmaatregelen"@nl .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/01#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/02#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/03#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/04#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/05#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/06#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/07#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/08#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/09#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/10#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/11#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/12#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/13#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/14#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/15#id> .
+<http://vocab.belgif.be/auth/securitymeasure#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/securitymeasure/16#id> .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#notation> "01" .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Informatieveiligheidsbeleid"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Information security policy"@en .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Informationssicherheitspolitik"@de .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politique de sécurité de l'information"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/01#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#notation> "02" .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Analyse de risque et plan de sécurité"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risico-analyse en veiligheidsplan"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risikoanalyse und Sicherheitsplan"@de .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risk analysis and safety plan"@en .
+<http://vocab.belgif.be/auth/securitymeasure/02#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#notation> "03" .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanstelling van een DPO / VC"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Appointment of a DPO / VC"@en .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ernennung eines DPO / VC"@de .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nomination d'un DPO / VC"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/03#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#notation> "04" .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisatie van informatieveiligheid"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation de la sécurité de l'information"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation der Informationssicherheit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization of information security"@en .
+<http://vocab.belgif.be/auth/securitymeasure/04#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#notation> "05" .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employee-related safety"@en .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medewerkersgerelateerde veiligheid"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitarbeiterbezogene Sicherheit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité liée au personnel"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/05#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#notation> "06" .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asset Management"@de .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asset Management"@en .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asset Management"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asset Management"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/06#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#notation> "07" .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Access control (logical)"@en .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contrôle d'accès (logique)"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Toegangscontrole (logisch)"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zugriffskontrolle (logisch)"@de .
+<http://vocab.belgif.be/auth/securitymeasure/07#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#notation> "08" .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cryptografie"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cryptographie"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cryptography"@en .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kryptographie"@de .
+<http://vocab.belgif.be/auth/securitymeasure/08#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#notation> "09" .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fysieke beveiliging"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physical security"@en .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physische Sicherheit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité physique"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/09#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#notation> "10" .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Betriebssicherheit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operational safety"@en .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Operationele veiligheid"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité opérationnelle"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/10#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#notation> "11" .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Communicatiebeveiliging"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Communication security"@en .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kommunikationssicherheit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité de communication"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/11#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#notation> "12" .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acquisition, développement et maintenance du système"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Systeemverwerving, ontwikkeling en onderhoud"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "System acquisition, development and maintenance"@en .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Systemakquisition, Entwicklung und Wartung"@de .
+<http://vocab.belgif.be/auth/securitymeasure/12#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#notation> "13" .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leveranciers- en verwerkersrelaties"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lieferanten- und Prozessorbeziehungen"@de .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relations fournisseur et processeur"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Supplier and processor relationships"@en .
+<http://vocab.belgif.be/auth/securitymeasure/13#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#notation> "14" .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gestion des incidents de sécurité et des fuites de données"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security incident and data leak management"@en .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sicherheitsvorfall und Datenleckmanagement"@de .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Veiligheidsincident- en datalekmanagement"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/14#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#notation> "15" .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business Continuity Management"@de .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business Continuity Management"@en .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business Continuity Management"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business Continuity Management"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/15#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/securitymeasure#id> .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#notation> "16" .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance & Accountability"@en .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance & Verantwoording"@nl .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance und Verantwortlichkeit"@de .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conformité et responsabilité"@fr .
+<http://vocab.belgif.be/auth/securitymeasure/16#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/securitymeasure#id> .

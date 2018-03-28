@@ -10,7 +10,7 @@
 @prefix gdpr: <http://vocab.belgif.be/ns/gdpr#> .
 
 <http://vocab.belgif.be/ns/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-03-23" ;
+	owl:versionInfo "Draft 2018-03-27" ;
 	rdfs:label "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en ;
 	rdfs:comment "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en .
 
@@ -118,6 +118,12 @@ gdpr:businessProcessOwner a rdf:Property, owl:DataProperty ;
 	rdfs:label "Business process Besitzer"@de, "Business process eigenaar"@nl, "Business process owner"@en, "Business process propriétaire"@fr ;
 	rdfs:range rdfs:Literal .
 
+gdpr:classificationLevel a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Classificatieniveau"@nl, "Classification level"@en, "Klassifizierungsstufe"@de, "Niveau de classification"@fr ;
+	rdfs:range rdfs:Literal .
+	
 gdpr:isConfirmed a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
@@ -130,7 +136,7 @@ gdpr:hasController a rdf:Property, owl:ObjectProperty ;
 	rdfs:label "Controller"@de, "Controller"@en, "Controller"@fr, "Controller"@nl ;
 	rdfs:range gdpr:Controller .
 
-gdpr:classificationText rdf:Property, owl:DataProperty ;
+gdpr:classificationText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "Classificatieniveau"@nl, "Classification level"@en, "Klassifizierungsstufe"@de, "Niveau de classification"@fr .
@@ -154,6 +160,13 @@ gdpr:dataCoupling a rdf:Property, owl:DataProperty ;
 	rdfs:label "Couplage de données"@fr, "Data coupling"@en, "Datenkopplung"@de, "Gegevenskoppeling"@nl ;
 	rdfs:range rdfs:Literal .
 
+gdpr:dataTreatmentName a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf dcterms:title ;
+	rdfs:domain gdpr:Processor;
+	rdfs:label "Data treatment name"@en, "Naam gegevensbehandeling"@nl, "Name der Datenbehandlung"@de, "Nom du traitement des données"@fr ;
+	rdfs:range rdfs:Literal .
+	
 gdpr:treatmentType a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:subPropertyOf dcterms:subject ;
@@ -166,6 +179,21 @@ gdpr:treatmentTypeText a rdf:Property, owl:DataProperty ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "(imported) Data treatment type"@en, "(imported) Datenverarbeitungstyp"@de, "(imported) Type de traitement de données"@fr, "(imported) Type gegevensverwerking"@nl ;
 	rdfs:range rdfs:Literal .
+
+gdpr:destinationCountry a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf dcterms:spatial ;
+	rdfs:domain gdpr:DataReceiverSpecific ;
+	rdfs:label "Country Recipient of data"@en, "Land Empfänger von Daten"@de, "Land Ontvanger van gegevens"@nl, "Pays Destinataire de données"@fr ;
+	rdfs:comment "En cas d'échange de données avec un autre pays"@fr, "Im Falle des Austauschs von Daten mit einem anderen Land"@de, "In case of exchange of data with another country"@en, "In geval van uitwisseling van gegevens met een ander land"@nl ;
+	rdfs:range skos:Concept .
+
+gdpr:emailPrivacyQuestions a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf foaf:mbox ;
+	rdfs:label "E-mail for privacy questions"@en, "E-Mail für Fragen zum Datenschutz"@de, "E-mail pour des questions au sujet du privacy"@fr, "E-mail voor vragen rond privacy"@nl ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:range owl:Thing .
 
 gdpr:finalityText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
@@ -191,6 +219,12 @@ gdpr:involvedParty a rdf:Property, owl:ObjectProperty ;
 	rdfs:label "Categorie betrokkene"@nl, "Catégorie de personne concernée"@fr, "Category of involved party"@en, "Kategorie der beteiligten Person"@de ;
 	rdfs:range skos:Concept .
 
+gdpr:involvedPartyInformation a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Informatieproces naar betrokken partijen"@nl, "Information process towards involved parties"@en, "Informationsprozess gegenüber Beteiligten"@de, "Processus d'information vers les parties impliquées"@fr ;
+	rdfs:range rdfs:Literal .
+	
 gdpr:involvedPartyText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
@@ -275,6 +309,13 @@ gdpr:policy a rdf:Property, owl:DataProperty ;
 	rdfs:label "Policy reference"@en, "Référence de politique"@fr, "Referentie naar policy"@nl, "Richtlinienreferenz"@de ;
 	rdfs:range rdfs:Literal .
 
+gdpr:remarks a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:subPropertyOf rdfs:comment ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Kommentare"@de, "Opmerkingen"@nl, "Remarks"@en, "Remarques"@fr ;
+	rdfs:range rdfs:Literal .
+	
 gdpr:hasProcessor a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
@@ -315,6 +356,12 @@ gdpr:technologyRisks a rdf:Property, owl:DataProperty ;
 	rdfs:label "Technology risico's"@nl, "Technology Risiken"@de, "Technology risks"@en, "Technology risques"@fr ;
 	rdfs:range rdfs:Literal .
 
+gdpr:replacedBy a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy gdpr: ;
+	rdfs:domain gdpr:DataTreatment ;
+	rdfs:label "Ersatz für die Datenbehandlung"@de, "Remplacement pour le traitement des données"@fr, "Replacement for the data treatment"@en, "Vervanging voor de gegevensverwerking"@nl ;
+	rdfs:range rdfs:Literal .
+
 gdpr:securityMeasure a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
@@ -333,19 +380,13 @@ gdpr:securityMeasuresDoc a rdf:Property, owl:DataProperty ;
 	rdfs:label "Documentatie van beveiligingsmaatregelen"@nl, "Documentation des mesures de sécurité"@fr, "Documentation of security measures"@en, "Dokumentation von Sicherheitsmaßnahmen"@de ;
 	rdfs:range rdfs:Literal .
 
-gdpr:timestampExport a rdf:Property, owl:DataProperty ;
-	rdfs:isDefinedBy gdpr: ;
-	rdfs:domain gdpr:DataTreatment ;
-	rdfs:label "Timestamp de la dernière exportation"@fr, "Timestamp des letzten Exports"@de, "Timestamp of last export"@en, "Timestamp van laatste export"@nl ;
-	rdfs:range xsd:datetime .
-
 gdpr:Processor a rdfs:Classs ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:subClassOf gdpr:DataTreatmentRole ;
 	rdfs:comment "Processor - betekent een natuurlijke persoon of rechtspersoon, overheidsinstantie, agentschap of andere instantie die persoonsgegevens verwerkt namens de verantwoordelijke voor de verwerking."@nl, "Processor - bezeichnet eine natürliche oder juristische Person, Behörde, Agentur oder sonstige Stelle, die personenbezogene Daten im Auftrag des für die Verarbeitung Verantwortlichen verarbeitet"@de, "Processor - désigne une personne physique ou morale, une autorité publique, une agence ou un autre organisme qui traite des données personnelles au nom du responsable du traitement."@fr, "Processor – means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en ;
 	rdfs:label "Processor"@en, "Prozessor"@de, "Sous-traitant"@fr, "Verwerker"@nl .
 
-gdpr:processorContract a rdf:Property, owl:DataProperty ;
+gdpr:contract a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:comment "Number of data processing contract or identification for data processing."@en, "Numéro de contrat de traitement de données ou identification de traitement de données."@fr, "Nummer des Datenverarbeitungsvertrages oder Identifikation für die Datenverarbeitung."@de, "Nummer gegevensverwerkingscontract of identificatie voor gegevensverwerking."@nl ;
 	rdfs:domain gdpr:Processor ;
