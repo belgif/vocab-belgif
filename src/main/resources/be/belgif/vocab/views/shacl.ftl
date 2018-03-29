@@ -19,7 +19,7 @@
         <table>
         <#assign val = sh.getVersion(l)!sh.getVersion("")!"">
         <#if val?has_content>
-            <tr><td>Version</td><td>${val}</td></tr>
+            <tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
         </#if>
         <#assign val = sh.getLabel(l)!sh.getLabel("")!"">
         <#if val?has_content>

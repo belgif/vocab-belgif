@@ -19,10 +19,9 @@
     <section>
         <h3>${m.getString("msg.general")}</h3>
         <table>
-        <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
         <#assign val = o.getVersion(l)!o.getVersion("")!"">
         <#if val?has_content>
-            <tr><td>Version</td><td>${val}</td></tr>
+            <tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
         </#if>
         <#assign val = o.getLabel(l)!"">
         <#if val?has_content>
@@ -32,6 +31,7 @@
         <#if val?has_content>
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>
+        <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
 	</table>
         <#assign clo = o.classesLetter>
 	<#if clo?has_content>
@@ -75,11 +75,11 @@
                 <#list cl.subClasses as subc>
                     <tr><td>SubClassOf</td><td><a href="${subc}">${subc}</a></td></tr>
                 </#list>
-                <#assign val = cl.getLabel(l)!cl.getLabel("")>
+                <#assign val = cl.getLabel(l)!cl.getLabel("")!"">
 		<#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
 		</#if>
-                <#assign val = cl.getComment(l)!cl.getLabel("")>
+                <#assign val = cl.getComment(l)!cl.getLabel("")!"">
 		<#if val?has_content>
 		    <tr><td>Comment</td><td>${val}</td></tr>
 		</#if>
@@ -98,11 +98,11 @@
                 <#list pr.subProperties as subp>
                     <tr><td>SubPropertyOf</td><td><a href="${subp}">${subp}</a></td></tr>
                 </#list>
-                <#assign val = pr.getLabel(l)!pr.getLabel("")>
+                <#assign val = pr.getLabel(l)!pr.getLabel("")!"">
 		<#if val?has_content>
 		    <tr><td>Label</td><td>${val}</td></tr>
 		</#if>
-                <#assign val = pr.getComment(l)!pr.getComment("")>
+                <#assign val = pr.getComment(l)!pr.getComment("")!"">
 		<#if val?has_content>
 		    <tr><td>Comment</td><td>${val}</td></tr>
 		</#if>
