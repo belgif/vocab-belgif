@@ -38,7 +38,6 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
@@ -187,11 +186,7 @@ public class OwlDAO extends RdfDAO {
 		subjs.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
 		for(Resource subj: subjs) {
-			// First copy the results to a new model, otherwise remove will fail
-			Model mc = new LinkedHashModel();
-			mc.addAll(m.filter(subj, null, null));
-			classes.add(new OwlThingDAO(mc, (IRI) subj));
-			m.removeAll(mc);
+			classes.add(new OwlThingDAO(getModel(), (IRI) subj));
 		}
 	}
 	
@@ -207,10 +202,7 @@ public class OwlDAO extends RdfDAO {
 		subjs.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
 
 		for(Resource subj: subjs) {
-			Model mp = new LinkedHashModel();
-			mp.addAll(m.filter(subj, null, null));
-			properties.add(new OwlThingDAO(mp, (IRI) subj));
-			m.removeAll(mp);
+			properties.add(new OwlThingDAO(getModel(), (IRI) subj));
 		}
 	}
 	

@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.dao;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -56,7 +55,6 @@ import org.slf4j.LoggerFactory;
 public class RdfDAO {
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
 
-	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final Model m;
 	private final Resource id;
 
@@ -211,6 +209,7 @@ public class RdfDAO {
 	 */
 	public RdfDAO(Model m, Resource id) {
 		this.id = id;
-		this.m = m.filter(id, null, null);
+		this.m = m;
+		//this.m = m.filter(id, null, null);
 	}
 }

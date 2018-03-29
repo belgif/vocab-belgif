@@ -1,6 +1,6 @@
 <header>
     <div id="logo-wrapper">
-    <a href=".">
+    <a href="/">
 	<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
     </a>
     </div>

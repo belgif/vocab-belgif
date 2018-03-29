@@ -59,9 +59,18 @@
                     <#assign typ = prop.dataType!prop.shClass!"">
                     <td><a href="${typ}">${sh.getShort(typ)}</a></td>
                     <td>
-                    <#list prop.langIn as ls>
-                        ${ls} 
-                    </#list>
+                    <#assign langin = prop.langIn>
+                    <#if langin?has_content>
+                        ${m.getString("msg.language")}:
+                        <#list langin as ls>
+                            ${ls}
+                        </#list>
+                    </#if>
+                    <#assign nested = prop.propertyShapes>
+                    <#if nested?has_content>
+                        <#assign voc = nested?first.hasValue>
+                        <a href="${voc}">${voc}</a>
+                    </#if>
                     </td>
                 </tr>
             </#list>

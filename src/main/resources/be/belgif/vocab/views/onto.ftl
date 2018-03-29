@@ -20,15 +20,15 @@
         <h3>${m.getString("msg.general")}</h3>
         <table>
         <tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
-        <#assign val = o.getVersion(l)!o.getVersion("")>
+        <#assign val = o.getVersion(l)!o.getVersion("")!"">
         <#if val?has_content>
             <tr><td>Version</td><td>${val}</td></tr>
         </#if>
-        <#assign val = o.getLabel(l)>
+        <#assign val = o.getLabel(l)!"">
         <#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
         </#if>
-        <#assign val = o.getComment(l)>
+        <#assign val = o.getComment(l)!"">
         <#if val?has_content>
             <tr><td>RDFS comment</td><td>${val}</td></tr>
         </#if>

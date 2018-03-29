@@ -41,7 +41,6 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SHACL;
@@ -58,17 +57,21 @@ public class ShaclDAO extends RdfDAO {
 	private final List<ShaclNodeShapeDAO> shapes = new ArrayList<>();
 	private final BiMap<String,String> usedNs = HashBiMap.create();
 	
+	
 	/**
 	 * PropertyShape helper class
 	 */
 	public class ShaclPropertyShapeDAO extends RdfDAO {
+		private final List<ShaclPropertyShapeDAO> nested = new ArrayList<>();
+		
 		/**
 		 * Get path
 		 * 
 		 * @return string
 		 */
 		public Value getPath() {
-			return obj(SHACL.PATH);
+			Value v = obj(SHACL.PATH);
+			return (v != null) ? v : QueryHelper.asLiteral("");
 		}
 		
 		/**
@@ -88,7 +91,15 @@ public class ShaclDAO extends RdfDAO {
 		public Value getDataType() {
 			return obj(SHACL.DATATYPE);
 		}
-		
+
+		/**
+		 * Get has value object, e.g. for skos:inSchema
+		 * 
+		 * @return value
+		 */
+		public Value getHasValue() {
+			return obj(SHACL.HAS_VALUE);
+		}
 		
 		/**
 		 * Get max count value
@@ -113,7 +124,7 @@ public class ShaclDAO extends RdfDAO {
 		 * @return set of values or empty set
 		 */
 		public Set<Value> getLangIn() {
-			return collection(SHACL.LANGUAGE_IN, getFullModel());
+			return collection(SHACL.LANGUAGE_IN, getModel());
 		}
 		
 		/**
@@ -126,6 +137,33 @@ public class ShaclDAO extends RdfDAO {
 		} 
 		
 		/**
+		 * Get list of nested roperty shapes
+		 * 
+		 * @return 
+		 */
+		public List<ShaclPropertyShapeDAO> getPropertyShapes() {
+			return nested;
+		}
+		
+		/**
+		 * Initialize nested property shapes
+		 * 
+		 * @param m triples
+		 * @param node parent node shape
+		 */
+		private void initPropertyShapes(Resource prop) {
+			Set<Value> subjs = new HashSet<>();
+			subjs.addAll(getModel().filter(prop, SHACL.PROPERTY, null).objects());
+
+			for(Value subj: subjs) {
+				if (! (subj instanceof Resource)) {
+					continue;
+				}
+				nested.add(new ShaclPropertyShapeDAO(getModel(), (Resource) subj));
+			}
+		}
+
+		/**
 		 * Constructor
 		 * 
 		 * @param m model
@@ -133,6 +171,8 @@ public class ShaclDAO extends RdfDAO {
 		 */
 		public ShaclPropertyShapeDAO(Model m, Resource id) {
 			super(m, id);
+			// nested property shapes
+			initPropertyShapes(id);	
 		}
 	}
 	
@@ -159,20 +199,15 @@ public class ShaclDAO extends RdfDAO {
 		 */
 		private void initPropertyShapes(Resource node) {
 			Set<Value> subjs = new HashSet<>();
-			Model fm  = getFullModel();
-			subjs.addAll(fm.filter(node, SHACL.PROPERTY, null).objects());
+			subjs.addAll(getModel().filter(node, SHACL.PROPERTY, null).objects());
 
 			for(Value subj: subjs) {
 				if (! (subj instanceof Resource)) {
 					continue;
 				}
-				Model mp = new LinkedHashModel();
-				mp.addAll(fm.filter((Resource) subj, null, null));
-				shapes.add(new ShaclPropertyShapeDAO(mp, (Resource) subj));
-				fm.removeAll(mp);
+				shapes.add(new ShaclPropertyShapeDAO(getModel(), (Resource) subj));
 			}
 		}
-
 	
 		/**
 		 * Get list of property shapes
@@ -188,7 +223,6 @@ public class ShaclDAO extends RdfDAO {
 		 * 
 		 * @param m triples
 		 * @param id
-		 * @param fullm complete model 
 		 */
 		public ShaclNodeShapeDAO(Model m, Resource id) {
 			super(m, id);
@@ -247,15 +281,12 @@ public class ShaclDAO extends RdfDAO {
 	 * 
 	 * @param m model
 	 */
-	private void initNodeShapes(Model m) {
+	private void initNodeShapes() {
 		Set<Resource> subjs = new HashSet<>();
-		subjs.addAll(m.filter(null, RDF.TYPE, SHACL.NODE_SHAPE).subjects());
+		subjs.addAll(getModel().filter(null, RDF.TYPE, SHACL.NODE_SHAPE).subjects());
 		
 		for(Resource subj: subjs) {
-			Model mp = new LinkedHashModel();
-			mp.addAll(m.filter(subj, null, null));
-			shapes.add(new ShaclNodeShapeDAO(mp, (Resource) subj));
-			m.removeAll(mp);
+			shapes.add(new ShaclNodeShapeDAO(getModel(), (Resource) subj));
 		}
 	}
 	
@@ -264,11 +295,11 @@ public class ShaclDAO extends RdfDAO {
 	 * 
 	 * @param m model
 	 */
-	private void initUsedNamespaces(Model m) {
+	private void initUsedNamespaces() {
 		Set<String> ns = new HashSet<>();
 		
 		// only check objects (e.g. targetClass, datatype)
-		for (Value val: m.objects()) {
+		for (Value val: getModel().objects()) {
 			if (! (val instanceof IRI)) {
 				continue;
 			}
@@ -294,15 +325,6 @@ public class ShaclDAO extends RdfDAO {
 	}
 	
 	/**
-	 * Get full model
-	 * 
-	 * @return full set of triples 
-	 */
-	protected Model getFullModel() {
-		return getModel();
-	}
-	
-	/**
 	 * Get version info in a specific language
 	 * 
 	 * @param lang language code
@@ -320,7 +342,7 @@ public class ShaclDAO extends RdfDAO {
 	 */
 	public ShaclDAO(Model m, Resource id) {
 		super(m, id);
-		initUsedNamespaces(m);
-		initNodeShapes(m);
+		initUsedNamespaces();
+		initNodeShapes();
 	}
 }
