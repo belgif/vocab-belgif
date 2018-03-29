@@ -1,4 +1,4 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf: <http://www.w3.org/19999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,7 +16,7 @@
 @prefix shbe-gdpr: <http://vocab.belgif.be/shacl/gdpr#> .
 
 <http://vocab.belgif.be/shacl/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-03-28" ;
+	owl:versionInfo "Draft 2018-03-29" ;
 	rdfs:label "GDPR model"@nl, "GDPR model"@fr, "GDPR model"@de, "GDPR model"@en ;
 	rdfs:comment "GDPR SHACL rules"@en, "GDPR SHACL rules"@fr, "GDPR SHACL rules"@nl, "GDPR SHACL rules"@de .
 
@@ -69,6 +69,10 @@ shbe-gdpr:DataTreatmentPartShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-category2#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:dataCategoryText ;
@@ -202,6 +206,10 @@ shbe-gdpr:DataReceiverGenericShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-recvgen#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:receiverTypeText ;
@@ -224,6 +232,10 @@ shbe-gdpr:DataReceiverSpecificShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-recvspec#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:receiverTypeText ;
@@ -236,6 +248,10 @@ shbe-gdpr:DataReceiverSpecificShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-transfer#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:transferNatureText ;
@@ -261,6 +277,10 @@ shbe-gdpr:DataReceiverSpecificShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/territory#id> ;
+		] ;
 	] .
 
 shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
@@ -311,6 +331,10 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-treatment#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:treatmentTypeText ;
@@ -371,6 +395,10 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-category#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:dataCategoryText ;
@@ -390,11 +418,19 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-finality#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:finalityOther ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-finality#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:finalityText ;
@@ -407,12 +443,20 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://publications.europa.eu/resource/authority/access-rights> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:involvedParty ;
 		sh:minCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-involved#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:involvedPartyInformation ;
@@ -432,6 +476,10 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-juridical#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:juridicalBaseText ;
@@ -506,6 +554,10 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:path be-gdpr:securityMeasure ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://vocab.belgif.be/auth/securitymeasure#id> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-gdpr:securityMeasures ;
@@ -546,6 +598,10 @@ shbe-gdpr:DataStatusShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
+		sh:property [
+			sh:path skos:inScheme ;
+			sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+		] ;
 	] ;
 	sh:property [
 		sh:path be-dataentry:importStatus ;

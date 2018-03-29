@@ -3,14 +3,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
+@prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cv: <http://data.europa.eu/m8g/> .
 @prefix gdpr: <http://vocab.belgif.be/ns/gdpr#> .
 
 <http://vocab.belgif.be/ns/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-03-27" ;
+	owl:versionInfo "Draft 2018-03-29" ;
 	rdfs:label "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en ;
 	rdfs:comment "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en .
 
@@ -190,7 +190,7 @@ gdpr:destinationCountry a rdf:Property, owl:ObjectProperty ;
 
 gdpr:emailPrivacyQuestions a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
-	rdfs:subPropertyOf foaf:mbox ;
+	rdfs:subPropertyOf schema:email ;
 	rdfs:label "E-mail for privacy questions"@en, "E-Mail für Fragen zum Datenschutz"@de, "E-mail pour des questions au sujet du privacy"@fr, "E-mail voor vragen rond privacy"@nl ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:range owl:Thing .
