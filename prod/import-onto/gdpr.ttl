@@ -287,13 +287,13 @@ gdpr:isJuridical a rdf:Property, owl:DataProperty ;
 gdpr:isSensitive a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:comment "Lijst met gevoelige gegevenscategorieën = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@nl, "List of sensitive data categories = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@en, "Liste der sensiblen Datenkategorien = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@de, "Liste des catégories de données sensibles = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@fr ;
-	rdfs:domain gdpr:DataTreatmentPart ;
+	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "Données sensibles"@fr, "Gevoelige gegevens"@nl, "Sensible Daten"@de, "Sensitive data"@en ;
 	rdfs:range xsd:boolean .
 
 gdpr:isSensitiveText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
-	rdfs:domain gdpr:DataTreatmentPart ;
+	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "(imported) Données sensibles"@fr, "(imported) Gevoelige gegevens"@nl, "(imported) Sensible Daten"@de, "(imported) Sensitive data"@en ;
 	rdfs:range rdfs:Literal .
 

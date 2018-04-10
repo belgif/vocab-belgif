@@ -88,18 +88,6 @@ shbe-gdpr:DataTreatmentPartShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 	] ;
 	sh:property [
-		sh:path be-gdpr:isSensitive ;
-		sh:datatype xsd:boolean ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:path be-gdpr:isSensitiveText ;
-		sh:datatype rdf:langString ;
-		sh:uniqueLang true;
-		sh:languageIn ("nl" "fr" "de" "en") ;
-	] ;
-	sh:property [
 		sh:path be-gdpr:hasDataReceiver ;
 		sh:nodeKind sh:IRI ;
 		sh:class be-gdpr:DataReceiver ;
@@ -392,22 +380,6 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:maxCount 1 ;
 	] ;	
 	sh:property [
-		sh:path be-gdpr:dataCategory ;
-		sh:maxCount 1 ;
-		sh:nodeKind sh:IRI ;
-		sh:class skos:Concept ;
-		sh:property [
-			sh:path skos:inScheme ;
-			sh:hasValue <http://vocab.belgif.be/auth/gdpr-category#id> ;
-		] ;
-	] ;
-	sh:property [
-		sh:path be-gdpr:dataCategoryText ;
-		sh:datatype rdf:langString ;
-		sh:uniqueLang true ;
-		sh:languageIn ("nl" "fr" "de" "en") ;
-	] ;
-	sh:property [
 		sh:path be-gdpr:dataCoupling ;
 		sh:datatype rdf:langString ;
 		sh:uniqueLang true ;
@@ -588,6 +560,18 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:path be-gdpr:technologyRisks ;
 		sh:datatype rdf:langString ;
 		sh:uniqueLang true ;
+		sh:languageIn ("nl" "fr" "de" "en") ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isSensitive ;
+		sh:datatype xsd:boolean ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	] ;
+	sh:property [
+		sh:path be-gdpr:isSensitiveText ;
+		sh:datatype rdf:langString ;
+		sh:uniqueLang true;
 		sh:languageIn ("nl" "fr" "de" "en") ;
 	] .
 	
