@@ -1,0 +1,554 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/shacl/gdpr#> a owl:Ontology;
+  rdfs:comment "GDPR SHACL rules"@de, "GDPR SHACL rules"@en, "GDPR SHACL rules"@fr,
+    "GDPR SHACL rules"@nl;
+  rdfs:label "GDPR model"@de, "GDPR model"@en, "GDPR model"@fr, "GDPR model"@nl;
+  owl:versionInfo "Draft 2018-03-29".
+
+<http://vocab.belgif.be/shacl/gdpr#ContactShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype xsd:string;
+      sh:path schema:name
+    ], [
+      sh:datatype xsd:string;
+      sh:path schema:email
+    ], [
+      sh:datatype xsd:string;
+      sh:path schema:faxNumber
+    ], [
+      sh:datatype xsd:string;
+      sh:path schema:telephone
+    ];
+  sh:targetClass schema:ContactPoint.
+
+<http://vocab.belgif.be/shacl/gdpr#ControllerShape> a sh:NodeShape;
+  sh:property [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path org:memberOf
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasResponsible>
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDelegate>
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDPO>
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/gdpr#isDPOInternal>
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#isDPOInternalText>;
+      sh:uniqueLang true
+    ], [
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#emailPrivacyQuestions>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#Controller>.
+
+<http://vocab.belgif.be/shacl/gdpr#DataReceiverGenericShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#guarantee>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#receiverType>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-recvgen#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#receiverTypeText>;
+      sh:uniqueLang true
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric>.
+
+<http://vocab.belgif.be/shacl/gdpr#DataReceiverSpecificShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#guarantee>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#receiverType>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-recvspec#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#receiverTypeText>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#transferNature>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-transfer#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#transferNatureText>;
+      sh:uniqueLang true
+    ], [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path org:memberOf
+    ], [
+      sh:class schema:ContactPoint;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#destinationCountry>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/territory#id>;
+          sh:path skos:inScheme
+        ]
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific>.
+
+<http://vocab.belgif.be/shacl/gdpr#DataStatusShape> a sh:NodeShape;
+  sh:property [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:language;
+      sh:property [
+          sh:hasValue <http://publications.europa.eu/resource/authority/language>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/dataentry#importStatus>
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/dataentry#exportStatus>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/dataentry#DataStatus>.
+
+<http://vocab.belgif.be/shacl/gdpr#DataTreatmentPartShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#conservation>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataCategory>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-category2#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataCategoryText>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/gdpr#isJuridical>
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/gdpr#isSensitive>
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#isSensitiveText>;
+      sh:uniqueLang true
+    ], [
+      sh:class <http://vocab.belgif.be/ns/gdpr#DataReceiver>;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDataReceiver>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>.
+
+<http://vocab.belgif.be/shacl/gdpr#DataTreatmentShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path dcterms:description;
+      sh:uniqueLang true
+    ], [
+      sh:class <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path dcterms:hasPart
+    ], [
+      sh:class <http://vocab.belgif.be/ns/gdpr#Controller>;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasController>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/gdpr#Processor>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasProcessor>
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#treatmentType>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#treatmentTypeText>;
+      sh:uniqueLang true
+    ], [
+      sh:class <http://vocab.belgif.be/ns/dataentry#DataStatus>;
+      sh:minCount 4;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/dataentry#hasDataStatus>
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#authoritativeSource>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#otherSource>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#authorization>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#businessProcess>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#businessProcessOwner>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype xsd:date;
+      sh:lessThanOrEquals schema:endDate;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path schema:startDate
+    ], [
+      sh:datatype xsd:date;
+      sh:maxCount 1;
+      sh:path schema:endDate
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataCategory>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-category#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataCategoryText>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataCoupling>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#finalityMain>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-finality#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#finalityOther>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-finality#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#finalityText>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:accessRights;
+      sh:property [
+          sh:hasValue <http://publications.europa.eu/resource/authority/access-rights>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#involvedParty>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-involved#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#involvedPartyInformation>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#involvedPartyText>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#juridicalBase>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/gdpr-juridical#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#juridicalBaseText>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#privacyImpact>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#policy>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:path <http://vocab.belgif.be/ns/gdpr#isVulnerable>
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#isVulnerableText>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxCount 1;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#availability>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxCount 1;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#confidentiality>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxCount 1;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#integrity>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxCount 1;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#nonrepudiation>
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#remarks>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#rightsProcedure>;
+      sh:uniqueLang true
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#securityMeasure>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/securitymeasure#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#securityMeasures>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#replacedBy>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#technology>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#technologyRisks>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype rdfs:Literal;
+      sh:maxCount 1;
+      sh:path dcterms:identifier
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:path dcterms:title;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#classificationLevel>;
+      sh:uniqueLang true
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#DataTreatment>.
+
+<http://vocab.belgif.be/shacl/gdpr#OrganizationShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdfs:Literal;
+      sh:path skos:altLabel
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:path skos:notation
+    ];
+  sh:targetClass org:Organization.
+
+<http://vocab.belgif.be/shacl/gdpr#ProcessorShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#contract>;
+      sh:uniqueLang true
+    ], [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:path <http://vocab.belgif.be/ns/gdpr#dataTreatmentName>;
+      sh:uniqueLang true
+    ], [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path org:memberOf
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasResponsible>
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDelegate>
+    ], [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDPO>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#Processor>.
+
+<http://vocab.belgif.be/shacl/gdpr#RegisterShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype <http://www.w3.org/19999/02/22-rdf-syntax-ns#langString>;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:path dcterms:title;
+      sh:uniqueLang true
+    ], [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:rightsHolder
+    ], [
+      sh:class <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/gdpr#hasDataTreatment>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/gdpr#Register>.

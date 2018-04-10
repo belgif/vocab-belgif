@@ -1,0 +1,41 @@
+<http://vocab.belgif.be/ns/infosec#genericRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://vocab.belgif.be/ns/infosec#genericRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security ontology"@de .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security ontology"@en .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security ontology"@fr .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security ontology"@nl .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#availability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#confidentiality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#genericRating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#integrity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#nonrepudiation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.belgif.be/ns/infosec#> .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@de .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@de .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@de .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@en .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@en .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@en .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@fr .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@fr .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@fr .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@nl .
+<http://vocab.belgif.be/ns/infosec#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@nl .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "heeft rating"@nl .
+<http://vocab.belgif.be/ns/infosec#availability> <http://www.w3.org/2000/01/rdf-schema#label> "Availability" .
+<http://vocab.belgif.be/ns/infosec#confidentiality> <http://www.w3.org/2000/01/rdf-schema#label> "Confidentiality" .
+<http://vocab.belgif.be/ns/infosec#integrity> <http://www.w3.org/2000/01/rdf-schema#label> "Integrity" .
+<http://vocab.belgif.be/ns/infosec#nonrepudiation> <http://www.w3.org/2000/01/rdf-schema#label> "Non-repudiation" .
+<http://vocab.belgif.be/ns/infosec#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.belgif.be/ns/infosec#Rating> .
+<http://vocab.belgif.be/ns/infosec#genericRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://vocab.belgif.be/ns/infosec#availability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://vocab.belgif.be/ns/infosec#genericRating> .
+<http://vocab.belgif.be/ns/infosec#confidentiality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://vocab.belgif.be/ns/infosec#genericRating> .
+<http://vocab.belgif.be/ns/infosec#integrity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://vocab.belgif.be/ns/infosec#genericRating> .
+<http://vocab.belgif.be/ns/infosec#nonrepudiation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://vocab.belgif.be/ns/infosec#genericRating> .
+<http://vocab.belgif.be/ns/infosec#> <http://www.w3.org/2002/07/owl#versionInfo> "Draft 2018-03-21" .

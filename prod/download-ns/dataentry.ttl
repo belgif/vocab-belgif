@@ -1,0 +1,35 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/ns/dataentry#exportStatus> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/dataentry#DataStatus>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/dataentry#>;
+  rdfs:label "Export status"@de, "Export status"@en, "Export status"@fr, "Export status"@nl;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/dataentry#hasDataStatus> a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/dataentry#>;
+  rdfs:label "Data status"@de, "Data status"@en, "Data status"@fr, "Data status"@nl;
+  rdfs:range <http://vocab.belgif.be/ns/dataentry#DataStatus>.
+
+<http://vocab.belgif.be/ns/dataentry#importStatus> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/dataentry#DataStatus>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/dataentry#>;
+  rdfs:label "Import status"@de, "Import status"@en, "Import status"@fr, "Import status"@nl;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/dataentry#DataStatus> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/dataentry#>;
+  rdfs:label "Data status"@de, "Data status"@en, "Data status"@fr, "Data status"@nl.
+
+<http://vocab.belgif.be/ns/dataentry#> a owl:Ontology;
+  rdfs:comment "Data entry ontology"@de, "Data entry ontology"@en, "Data entry ontology"@fr,
+    "Data entry ontology"@nl;
+  rdfs:label "Data entry"@de, "Data entry"@en, "Data entry"@fr, "Data entry"@nl;
+  owl:versionInfo "Draft 2018-03-23".
+ntry ontology"@de , "Data entry ontology"@en , "Data entry ontology"@fr , "Data entry ontology"@nl ;
+	rdfs:label "Data entry"@de , "Data entry"@en , "Data entry"@fr , "Data entry"@nl ;
+	owl:versionInfo "Draft 2018-03-23" .

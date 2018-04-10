@@ -1,0 +1,494 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/be-theme#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Belgium.be themen"
+    }, {
+      "@language" : "en",
+      "@value" : "Belgium.be themes"
+    }, {
+      "@language" : "fr",
+      "@value" : "Belgium.be thèmes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Belgium.be thema's"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Be themen"
+    }, {
+      "@language" : "en",
+      "@value" : "Be themes"
+    }, {
+      "@language" : "fr",
+      "@value" : "Be themes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Be themes"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/BELG#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/ECON#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/EDUC#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/ENVI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/FAMI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/HEAL#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/HOUS#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/JUST#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/MOBI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/TAXE#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/WORK#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/BELG#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+      "@id" : "http://stad.gent/id/ns/themas/stad-beleid-bestuur"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "BELG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "über Belgien"
+    }, {
+      "@language" : "en",
+      "@value" : "About Belgium"
+    }, {
+      "@language" : "fr",
+      "@value" : "La Belgique"
+    }, {
+      "@language" : "nl",
+      "@value" : "Over België"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/ECON#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/ECON"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+      "@id" : "http://vocab.belgif.be/mybe-theme/ECON#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/FINA#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "ECON"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Wirtschaft"
+    }, {
+      "@language" : "en",
+      "@value" : "Economy"
+    }, {
+      "@language" : "fr",
+      "@value" : "Economie"
+    }, {
+      "@language" : "nl",
+      "@value" : "Economie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/EDUC#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/EDUC"
+    }, {
+      "@id" : "http://stad.gent/id/ns/themas/onderwijs-kinderopvang"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "EDUC"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Ausbilding"
+    }, {
+      "@language" : "en",
+      "@value" : "Education"
+    }, {
+      "@language" : "fr",
+      "@value" : "Formation"
+    }, {
+      "@language" : "nl",
+      "@value" : "Leren"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/ENVI#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+    }, {
+      "@id" : "http://stad.gent/id/ns/themas/natuur-milieu"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/ENVI#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "ENVI"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Umwelt"
+    }, {
+      "@language" : "en",
+      "@value" : "Environment"
+    }, {
+      "@language" : "fr",
+      "@value" : "Environnement"
+    }, {
+      "@language" : "nl",
+      "@value" : "Leefmilieu"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/FAMI#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/SOCI"
+    }, {
+      "@id" : "http://stad.gent/id/ns/themas/burgerzaken"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://vocab.belgif.be/mybe-theme/FAMI#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+      "@id" : "http://stad.gent/id/ns/themas/onderwijs-kinderopvang"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "FAMI"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Familie"
+    }, {
+      "@language" : "en",
+      "@value" : "Family"
+    }, {
+      "@language" : "fr",
+      "@value" : "Famille"
+    }, {
+      "@language" : "nl",
+      "@value" : "Familie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/HEAL#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/HEAL"
+    }, {
+      "@id" : "http://stad.gent/id/ns/themas/welzijn-gezondheid"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/HEAL#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "HEAL"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Gesundheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Health"
+    }, {
+      "@language" : "fr",
+      "@value" : "Santé"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gezondheid"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/HOUS#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/SOCI"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://stad.gent/id/ns/themas/wonen-bouwen"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/HOUS#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "HOUS"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Wohnen"
+    }, {
+      "@language" : "en",
+      "@value" : "Housing"
+    }, {
+      "@language" : "fr",
+      "@value" : "Logement"
+    }, {
+      "@language" : "nl",
+      "@value" : "Huisvesting"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/JUST#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/JUST"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+      "@id" : "http://vocab.belgif.be/mybe-theme/JUST#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/SECU#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "JUST"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Justiz"
+    }, {
+      "@language" : "en",
+      "@value" : "Justice"
+    }, {
+      "@language" : "fr",
+      "@value" : "Justice"
+    }, {
+      "@language" : "nl",
+      "@value" : "Justitie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/MOBI#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+      "@id" : "http://stad.gent/id/ns/themas/mobiliteit-openbare-werken"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/MOBI#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "MOBI"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Verkehr"
+    }, {
+      "@language" : "en",
+      "@value" : "Mobility"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mobilité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Mobiliteit"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/TAXE#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+      "@id" : "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://vocab.belgif.be/mybe-theme/TAXE#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "TAXE"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Steuern"
+    }, {
+      "@language" : "en",
+      "@value" : "Taxes"
+    }, {
+      "@language" : "fr",
+      "@value" : "Impôts"
+    }, {
+      "@language" : "nl",
+      "@value" : "Belastingen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/be-theme/WORK#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+      "@id" : "http://stad.gent/id/ns/themas/werken-ondernemen"
+    }, {
+      "@id" : "http://vocab.belgif.be/mybe-theme/WORK#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "WORK"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Arbeit"
+    }, {
+      "@language" : "en",
+      "@value" : "Work"
+    }, {
+      "@language" : "fr",
+      "@value" : "Emploi"
+    }, {
+      "@language" : "nl",
+      "@value" : "Werk"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#be-theme",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Belgium.be themen"
+    }, {
+      "@language" : "en",
+      "@value" : "Belgium.be themes"
+    }, {
+      "@language" : "fr",
+      "@value" : "Belgium.be thèmes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Belgium.be thema's"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:29.801+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Be themen"
+    }, {
+      "@language" : "en",
+      "@value" : "Be themes"
+    }, {
+      "@language" : "fr",
+      "@value" : "Be themes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Be themes"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/be-theme"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/BELG#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/ECON#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/EDUC#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/ENVI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/FAMI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/HEAL#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/HOUS#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/JUST#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/MOBI#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/TAXE#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/be-theme/WORK#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/be-theme#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "137"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/be-theme"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/be-theme"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/be-theme"
+} ]

@@ -16,7 +16,7 @@
 @prefix shbe-gdpr: <http://vocab.belgif.be/shacl/gdpr#> .
 
 <http://vocab.belgif.be/shacl/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-04-03" ;
+	owl:versionInfo "Draft 2018-04-10" ;
 	rdfs:label "GDPR model"@nl, "GDPR model"@fr, "GDPR model"@de, "GDPR model"@en ;
 	rdfs:comment "GDPR SHACL rules"@en, "GDPR SHACL rules"@fr, "GDPR SHACL rules"@nl, "GDPR SHACL rules"@de .
 
@@ -398,7 +398,7 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		sh:class skos:Concept ;
 		sh:property [
 			sh:path skos:inScheme ;
-			sh:hasValue <http://vocab.belgif.be/auth/gdpr-category2#id> ;
+			sh:hasValue <http://vocab.belgif.be/auth/gdpr-category#id> ;
 		] ;
 	] ;
 	sh:property [

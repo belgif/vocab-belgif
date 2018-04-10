@@ -1,0 +1,148 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/auth/gdpr-treatment#id> a skos:ConceptScheme;
+  dcterms:description "Data treatment type"@en, "Datenverarbeitungstyp"@de, "Type de traitement de données"@fr,
+    "Type gegevensverwerking"@nl;
+  dcterms:title "GDPR datatreatmenttype"@de, "GDPR datatreatmenttype"@en, "GDPR datatreatmenttype"@fr,
+    "GDPR datatreatmenttype"@nl;
+  skos:hasTopConcept <http://vocab.belgif.be/auth/gdpr-treatment/01#id>, <http://vocab.belgif.be/auth/gdpr-treatment/02#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/03#id>, <http://vocab.belgif.be/auth/gdpr-treatment/04#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/05#id>, <http://vocab.belgif.be/auth/gdpr-treatment/06#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/07#id>, <http://vocab.belgif.be/auth/gdpr-treatment/08#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/09#id>.
+
+<http://vocab.belgif.be/void#gdpr-treatment> a void:Dataset;
+  dcterms:description "Data treatment type"@en, "Datenverarbeitungstyp"@de, "Type de traitement de données"@fr,
+    "Type gegevensverwerking"@nl;
+  dcterms:modified "2018-03-29T10:12:32.816+02:00"^^xsd:dateTime;
+  dcterms:title "GDPR datatreatmenttype"@de, "GDPR datatreatmenttype"@en, "GDPR datatreatmenttype"@fr,
+    "GDPR datatreatmenttype"@nl;
+  void:dataDump <http://vocab.belgif.be/dataset/gdpr-treatment>;
+  void:exampleResource <http://vocab.belgif.be/auth/gdpr-treatment/01#id>, <http://vocab.belgif.be/auth/gdpr-treatment/02#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/03#id>, <http://vocab.belgif.be/auth/gdpr-treatment/04#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/05#id>, <http://vocab.belgif.be/auth/gdpr-treatment/06#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/07#id>, <http://vocab.belgif.be/auth/gdpr-treatment/08#id>,
+    <http://vocab.belgif.be/auth/gdpr-treatment/09#id>;
+  void:feature <http://www.w3.org/ns/formats/JSON-LD>, <http://www.w3.org/ns/formats/N-Triples>,
+    <http://www.w3.org/ns/formats/Turtle>;
+  void:rootResource <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  void:triples "90"^^xsd:long;
+  void:uriLookupEndpoint <http://vocab.belgif.be/_ldf>, <http://vocab.belgif.be/_ldf/gdpr-treatment>;
+  void:uriSpace "http://vocab.belgif.be/auth/gdpr-treatment";
+  void:vocabulary <http://www.w3.org/2004/02/skos/core#>;
+  foaf:homepage <http://vocab.belgif.be/>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "01";
+  skos:prefLabel "normaal--> als geen van onderstaande types"@nl, "normal --> si aucun des types ci-dessous"@fr,
+    "normal -> if none of the types below"@en, "normal -> wenn keine der folgenden Typen"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/02#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "02";
+  skos:prefLabel "Bewertung von Menschen einschließlich Profiling und Prognosen."@de,
+    "Evaluatie of beoordeling van mensen waaronder profilering en het maken van prognoses"@nl,
+    "Evaluation or assessment of people including profiling and making prognoses."@en,
+    "Évaluation ou appréciation de personnes dont le profilage et l'établissement de prévisions"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/03#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "03";
+  skos:prefLabel "Automated decisions with legal effects or comparable material consequences."@en,
+    "Automatisierte Entscheidungen mit rechtlichen Auswirkungen oder vergleichbaren materiellen Konsequenzen."@de,
+    "Décisions automatisées avec des conséquences juridiques ou des conséquences intrinsèques comparables"@fr,
+    "Geautomatiseerde beslissingen met rechtsgevolgen of vergelijkbare wezenlijke gevolgen"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/04#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "04";
+  skos:prefLabel "Stelselmatige monitoring (betrokkene volgen, monitoren en controleren) (klank-, beeld- of video-opname)"@nl,
+    "Surveillance systématique (suivre, surveiller et contrôler la personne concernée) (enregistrement des sons, des images ou enregistrement vidéo)"@fr,
+    "Systematic monitoring (monitoring of the person concerned) (sound, image or video recording)."@en,
+    "Systematische Überwachung (Überwachung der betroffenen Person) (Ton-, Bild- oder Videoaufzeichnung)."@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/05#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "05";
+  skos:prefLabel "Grootschalige gegevensverwerkingen of verwerkingen die gevolgen hebben voor een groot aantal stakeholders"@nl,
+    "Large-scale data processing or processing that impacts a large number of stakeholders."@en,
+    "Traitements de données à grande échelle ou traitements qui ont des conséquences pour un grand nombre d'acteurs concernés"@fr,
+    "Umfangreiche Datenverarbeitung oder -verarbeitung, die eine große Anzahl von Stakeholdern betrifft."@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/06#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "06";
+  skos:prefLabel "Combinaison ou couplage de collectes de données que les personnes concernées ne peuvent raisonnablement pas prévoir"@fr,
+    "Combinatie of koppeling van gegevensverzamelingen die betrokkenen niet redelijkerwijs kunnen verwachten"@nl,
+    "Combination or linking of data collections that can not reasonably be expected by data subjects."@en,
+    "Verknüpfung oder Verknüpfung von Datensammlungen, die von den betroffenen Personen nicht erwartet werden können."@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/07#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "07";
+  skos:prefLabel "Data processing with consequences on rights, services, contracts"@en,
+    "Datenverarbeitung mit Auswirkungen auf Rechte, Dienstleistungen, Verträge"@de, "Gegevensverwerking die tot gevolg heeft dat betrokkenen een recht niet kunnen uitoefenen, dat zij geen gebruik kunnen maken van een dienst of geen contract kunnen afsluiten"@nl,
+    "Traitement de données impliquant que les personnes concernées ne puissent pas exercer un droit, ne puissent pas recourir à un service ou ne puissent pas conclure de contrat"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/08#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "08";
+  skos:prefLabel "Einsatz neuer Technologien oder Anwendung von technischen und organisatorischen Mitteln."@de,
+    "Gebruik van nieuwe technologieën of toepassing van technische en organisatorische middelen"@nl,
+    "Use of new technologies or application of technical and organizational means."@en,
+    "Utilisation de nouvelles technologies ou application de moyens techniques et organisationnels"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+
+<http://vocab.belgif.be/auth/gdpr-treatment/09#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-treatment#id>;
+  skos:notation "09";
+  skos:prefLabel "Systematic and large-scale monitoring of publicly accessible areas."@en,
+    "Systematische und groß angelegte Überwachung von öffentlich zugänglichen Bereichen."@de,
+    "stelselmatige en grootschalige monitoring van openbaar toegankelijke ruimten"@nl,
+    "surveillance systématique à grande échelle d'une zone accessible au public."@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+on öffentlich zugänglichen Bereichen."@de , "Systematic and large-scale monitoring of publicly accessible areas."@en , "surveillance systématique à grande échelle d'une zone accessible au public."@fr , "stelselmatige en grootschalige monitoring van openbaar toegankelijke ruimten"@nl ;
+	skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id> .
+elgif.be/auth/gdpr-treatment/03#id> skos:prefLabel "Décisions automatisées avec des conséquences juridiques ou des conséquences intrinsèques comparables"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/04#id> skos:prefLabel "Surveillance systématique (suivre, surveiller et contrôler la personne concernée) (enregistrement des sons, des images ou enregistrement vidéo)"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/07#id> skos:prefLabel "Traitement de données impliquant que les personnes concernées ne puissent pas exercer un droit, ne puissent pas recourir à un service ou ne puissent pas conclure de contrat"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/05#id> skos:prefLabel "Traitements de données à grande échelle ou traitements qui ont des conséquences pour un grand nombre d'acteurs concernés"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/08#id> skos:prefLabel "Utilisation de nouvelles technologies ou application de moyens techniques et organisationnels"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> skos:prefLabel "normal --> si aucun des types ci-dessous"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/09#id> skos:prefLabel "surveillance systématique à grande échelle d'une zone accessible au public."@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/02#id> skos:prefLabel "Évaluation ou appréciation de personnes dont le profilage et l'établissement de prévisions"@fr.
+<http://vocab.belgif.be/auth/gdpr-treatment/06#id> skos:prefLabel "Combinatie of koppeling van gegevensverzamelingen die betrokkenen niet redelijkerwijs kunnen verwachten"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/02#id> skos:prefLabel "Evaluatie of beoordeling van mensen waaronder profilering en het maken van prognoses"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/03#id> skos:prefLabel "Geautomatiseerde beslissingen met rechtsgevolgen of vergelijkbare wezenlijke gevolgen"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/08#id> skos:prefLabel "Gebruik van nieuwe technologieën of toepassing van technische en organisatorische middelen"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/07#id> skos:prefLabel "Gegevensverwerking die tot gevolg heeft dat betrokkenen een recht niet kunnen uitoefenen, dat zij geen gebruik kunnen maken van een dienst of geen contract kunnen afsluiten"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/05#id> skos:prefLabel "Grootschalige gegevensverwerkingen of verwerkingen die gevolgen hebben voor een groot aantal stakeholders"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/04#id> skos:prefLabel "Stelselmatige monitoring (betrokkene volgen, monitoren en controleren) (klank-, beeld- of video-opname)"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> skos:prefLabel "normaal--> als geen van onderstaande types"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/09#id> skos:prefLabel "stelselmatige en grootschalige monitoring van openbaar toegankelijke ruimten"@nl.
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/02#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/03#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/04#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/05#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/06#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/07#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/08#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/09#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/void#gdpr-treatment> foaf:homepage <http://vocab.belgif.be/>.
+opConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/auth/gdpr-treatment/09#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-treatment#id>.
+<http://vocab.belgif.be/void#gdpr-treatment> foaf:homepage <http://vocab.belgif.be/>.

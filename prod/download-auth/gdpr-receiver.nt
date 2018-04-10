@@ -1,0 +1,170 @@
+<http://vocab.belgif.be/void#gdpr-receiver> <http://purl.org/dc/terms/modified> "2018-03-20T15:38:01.781+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#dataDump> <http://vocab.belgif.be/dataset/gdpr-receiver> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/JSON-LD> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/N-Triples> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#triples> "143"^^<http://www.w3.org/2001/XMLSchema#long> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#uriLookupEndpoint> <http://vocab.belgif.be/_ldf> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#uriLookupEndpoint> <http://vocab.belgif.be/_ldf/gdpr-receiver> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#uriSpace> "http://vocab.belgif.be/auth/gdpr-receiver" .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://rdfs.org/ns/void#vocabulary> <http://www.w3.org/2004/02/skos/core#> .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#inScheme> <vocab-auth:GDPR#DataReceiverGenericType> .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#notation> "A" .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#notation> "B" .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#notation> "C" .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#notation> "D" .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#notation> "E" .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#notation> "F" .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#notation> "G" .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#notation> "H" .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#notation> "I" .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#notation> "J" .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#notation> "K" .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#notation> "L" .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Andere Regierungsdienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#note> "Banken und Versicherungen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#note> "Broker in persönlichen Daten oder Direktmarketing"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#note> "Die Person, auf die sich die personenbezogenen Daten beziehen."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#note> "Eine Justiz, die Bundes- und lokalen Polizeidienste."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#note> "Einzelpersonen oder Organisationen in direktem Kontakt mit der verantwortlichen Person."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#note> "Institution, Dienstorganisation oder System, das unter politischer Kontrolle steht und von einer gewählten Regierung (national, föderal, regional oder lokal) kontrolliert wird. Es umfasst auch Organisationen, die sich mit der Politikentwicklung und der Strafverfolgung befassen."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#note> "Person oder Organisation, bei der die betreffende Person beschäftigt ist."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#note> "Persönliche Beziehungen der Person, wie die Eltern."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#note> "Professionelle Berater oder Vertreter der Person, wie Rechtsanwälte, Notare, Buchhalter, Mandatare, vorläufige Verwalter oder Schuldvermittler."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#note> "Sonstige Dienstleistungen oder Nebentätigkeiten des für die Verarbeitung Verantwortlichen."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#note> "Sozialversicherungsträger und die kooperierenden Einrichtungen der sozialen Sicherheit, zum Beispiel: Nationales Sozialversicherungsamt"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#note> "Verschiedene private Unternehmen."@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#note> "A judiciary, the federal and local police services."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#note> "Banks and insurance companies"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#note> "Brokers in personal data or direct marketing"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#note> "Individuals or organizations in direct contact with the person in charge."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#note> "Institution, service organization or system that is under political control and controlled by an elected government (national, federal regional or local). It also includes organizations that deal with policy development and law enforcement."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Other government services"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#note> "Other services or ancillary activities of the controller."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#note> "Person or organization where the person concerned is employed."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#note> "Personal relationships of the person, such as the parents."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#note> "Professional counselors or representatives of the person, such as lawyers, notaries, accountants, mandatories, provisional administrators or debt mediators."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#note> "Social security institutions and the cooperating social security institutions, for example: National Social Security Office"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#note> "The person to whom the personal data relate."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#note> "Various private companies."@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#note> "Autres services ou activités auxiliaires du contrôleur."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Autres services publics"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#note> "Banques et compagnies d'assurances"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#note> "Courtiers en données à caractère personnel ou en marketing direct"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#note> "Des conseillers professionnels ou des représentants de la personne, tels que des avocats, des notaires, des comptables, des mandataires, des administrateurs provisoires ou des médiateurs de la dette."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#note> "Diverses entreprises privées."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#note> "Institution, organisation de service ou système qui est sous contrôle politique et contrôlé par un gouvernement élu (national, fédéral, régional ou local). Il comprend également des organisations qui traitent de l'élaboration de politiques et de l'application de la loi."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#note> "La personne à laquelle les données personnelles se rapportent."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#note> "Les individus ou les organisations en relation directe avec le responsable."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#note> "Les institutions de sécurité sociale et les institutions de sécurité sociale coopérantes, par exemple: Office national de sécurité sociale"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#note> "Les relations personnelles de la personne, telles que les parents."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#note> "Personne ou organisation où la personne concernée est employée."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#note> "Un système judiciaire, les services de police fédéraux et locaux."@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#note> "Andere diensten of nevenondernemingen van de verantwoordelijke."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#note> "Andere overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#note> "Banken en verzekeringsmaatschappijen"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#note> "De persoon waarop de persoonsgegevens betrekking hebben."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#note> "Diverse private ondernemingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#note> "Een rechtsprekende instantie, de federale en de lokale politiediensten."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#note> "Individuen of organisaties in directe relatie met de verantwoordelijke."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#note> "Instelling, dienstenorganisatie of -systeem dat onder politiek gezag staat en gecontroleerd wordt door een gekozen regering (nationaal, federaal regionaal of lokaal). Het omvat ook organisaties die zich bezig houden met beleidsontwikkeling en wetshandhaving."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#note> "Makelaars in persoonsgegevens of direct marketing"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#note> "Persoon of organisatie waarbij de betrokken persoon in dienst is."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#note> "Persoonlijke relaties van de persoon, zoals de ouders."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#note> "Professionele raadgevers of vertegenwoordigers van de  persoon, zoals advocaten, notarissen, accountants, mandatarissen, voorlopig bewindvoerders of schuldbemiddelaars."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#note> "Sociale-zekerheidsinstellingen en de meewerkende instellingen van sociale zekerheid, bijvoorbeeld: Rijksdienst voor Sociale Zekerheid."@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere Regierungsdienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere private Unternehmen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeitgeber oder Geschäftsbeziehungen der betreffenden Person"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banken und Versicherungen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Broker in persönlichen Daten oder Direktmarketing"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Die betroffene Person"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Einzelpersonen oder Organisationen in direktem Kontakt mit der verantwortlichen Person"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justiz- und Polizeidienste"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Beziehungen der beteiligten Person"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professionelle Berater der betroffenen Person"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regierungsdienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sonstige Dienstleistungen oder Nebendienstleistungen des für die Verarbeitung Verantwortlichen"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentliche Einrichtungen der sozialen Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banks and insurance companies"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Brokers in personal data or direct marketing"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employer or business relations of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Government services"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individuals or organizations in direct contact with the person in charge"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice and police services"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other government services"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other private companies"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other services or ancillary activities of the controller"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal relationships of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional counselors of the person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public social security institutions"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "The person involved"@en .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autres entreprises privées"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autres services ou entreprises annexes du responsable"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autres services publics"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banques et compagnies d'assurances"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conseillers professionnels de la personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Courtiers en données à caractère personnel ou en marketing direct"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employeur ou relations d’affaires de la personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individus ou organisations en relation directe avec le responsable"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Institutions publiques de la sécurité sociale"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice et services de police"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "La personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relations personnelles de la personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Services publics"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere diensten of nevenondernemingen van de verantwoordelijke"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere privé-ondernemingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banken en verzekeringsmaatschappijen"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "De betrokkene zelf"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individuen of organisaties in directe relatie met de verantwoordelijke"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justitie en politiediensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Makelaars in persoonsgegevens of direct marketing"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Openbare instellingen van sociale zekerheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke relaties van de betrokken persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professionele raadgevers van de betrokken persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Werkgever of zakenrelaties van de betrokken persoon"@nl .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://xmlns.com/foaf/0.1/homepage> <http://vocab.belgif.be/> .
+ttp://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Services publics"@fr .
+<http://vocab.belgif.be/auth/gdpr-receiver/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere diensten of nevenondernemingen van de verantwoordelijke"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere privé-ondernemingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banken en verzekeringsmaatschappijen"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "De betrokkene zelf"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Individuen of organisaties in directe relatie met de verantwoordelijke"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justitie en politiediensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Makelaars in persoonsgegevens of direct marketing"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Openbare instellingen van sociale zekerheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overheidsdiensten"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke relaties van de betrokken persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professionele raadgevers van de betrokken persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-receiver/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Werkgever of zakenrelaties van de betrokken persoon"@nl .
+<http://vocab.belgif.be/void#gdpr-receiver> <http://xmlns.com/foaf/0.1/homepage> <http://vocab.belgif.be/> .

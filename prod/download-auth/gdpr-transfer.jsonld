@@ -1,0 +1,309 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datentransfer Natur"
+    }, {
+      "@language" : "en",
+      "@value" : "Data transfer nature"
+    }, {
+      "@language" : "fr",
+      "@value" : "Nature du transfert de données"
+    }, {
+      "@language" : "nl",
+      "@value" : "Aard van gegevensoverdracht"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datatransfernature"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/05#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "art.45 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "art.45 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "article 45 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "art.45 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertragung auf der Grundlage einer Angemessenheitsentscheidung"
+    }, {
+      "@language" : "en",
+      "@value" : "Transfer on the basis of an adequacy decision"
+    }, {
+      "@language" : "fr",
+      "@value" : "transfert fondé sur une décision d'adéquation"
+    }, {
+      "@language" : "nl",
+      "@value" : "doorgifte op basis van een adequaatsheidbesluit"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "art.46 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "art.46 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "article 46 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "art.46 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertragung auf der Grundlage geeigneter Garantien"
+    }, {
+      "@language" : "en",
+      "@value" : "Transfer on the basis of appropriate safeguards"
+    }, {
+      "@language" : "fr",
+      "@value" : "Transfert moyennant des garanties appropriées"
+    }, {
+      "@language" : "nl",
+      "@value" : "doorgifte op basis van passende waarborgen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "art.47 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "art.47 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "article 47 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "art.47 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertragung auf der Grundlage verbindlicher Betriebsvorschriften"
+    }, {
+      "@language" : "en",
+      "@value" : "Transfer on the basis of binding company regulations"
+    }, {
+      "@language" : "fr",
+      "@value" : "transfert sur la base de règles d'entreprise contraignantes"
+    }, {
+      "@language" : "nl",
+      "@value" : "doorgifte op basis van bindende bedrijfsvoorschriften"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "art.49.1 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "art.49.1 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "article 49.1 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "art.49.1 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertragung auf der Grundlage einer Abweichung für bestimmte Situationen"
+    }, {
+      "@language" : "en",
+      "@value" : "Transfer on the basis of a deviation for specific situations"
+    }, {
+      "@language" : "fr",
+      "@value" : "transfert fondé sur une dérogation pour des situations spécifiques"
+    }, {
+      "@language" : "nl",
+      "@value" : "doorgifte op basis van een afwijking voor specifieke situaties"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "art.49.2 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "art.49.2 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "article 49.2 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "art.49.2 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertragung basierend auf Konditionskunst. 49.2 AVG"
+    }, {
+      "@language" : "en",
+      "@value" : "Transfer based on condition art. 49.2 AVG"
+    }, {
+      "@language" : "fr",
+      "@value" : "transfert sur la base de la condition de l'article 49.2 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "doorgifte op basis voorwaarde art. 49.2 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-transfer",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datentransfer Natur"
+    }, {
+      "@language" : "en",
+      "@value" : "Data transfer nature"
+    }, {
+      "@language" : "fr",
+      "@value" : "Nature du transfert de données"
+    }, {
+      "@language" : "nl",
+      "@value" : "Aard van gegevensoverdracht"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:32.707+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datatransfernature"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datatransfernature"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-transfer"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer/05#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-transfer#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "74"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-transfer"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-transfer"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-transfer"
+} ]

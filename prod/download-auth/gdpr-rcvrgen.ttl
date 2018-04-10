@@ -1,0 +1,184 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen#id> a skos:ConceptScheme;
+  dcterms:description "Data receiver (generic)"@en, "Datenempfänger (generisch)"@de,
+    "Gegevensontvanger (generiek)"@nl, "Récepteur de données (générique)"@fr;
+  dcterms:title "GDPR datareceivergenerictype"@de, "GDPR datareceivergenerictype"@en,
+    "GDPR datareceivergenerictype"@fr, "GDPR datareceivergenerictype"@nl;
+  skos:hasTopConcept <http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id>.
+
+<http://vocab.belgif.be/void#gdpr-rcvrgen> a void:Dataset;
+  dcterms:description "Data receiver (generic)"@en, "Datenempfänger (generisch)"@de,
+    "Gegevensontvanger (generiek)"@nl, "Récepteur de données (générique)"@fr;
+  dcterms:modified "2018-03-26T11:46:03.756+02:00"^^xsd:dateTime;
+  dcterms:title "GDPR datareceivergenerictype"@de, "GDPR datareceivergenerictype"@en,
+    "GDPR datareceivergenerictype"@fr, "GDPR datareceivergenerictype"@nl;
+  void:dataDump <http://vocab.belgif.be/dataset/gdpr-rcvrgen>;
+  void:exampleResource <http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id>,
+    <http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id>, <http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id>;
+  void:feature <http://www.w3.org/ns/formats/JSON-LD>, <http://www.w3.org/ns/formats/N-Triples>,
+    <http://www.w3.org/ns/formats/Turtle>;
+  void:rootResource <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  void:triples "119"^^xsd:long;
+  void:uriLookupEndpoint <http://vocab.belgif.be/_ldf>, <http://vocab.belgif.be/_ldf/gdpr-rcvrgen>;
+  void:uriSpace "http://vocab.belgif.be/auth/gdpr-rcvrgen";
+  void:vocabulary <http://www.w3.org/2004/02/skos/core#>;
+  foaf:homepage <http://vocab.belgif.be/>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "A";
+  skos:note "Die Person, auf die sich die personenbezogenen Daten beziehen."@de, "The person to whom the personal data relate."@en;
+  skos:prefLabel "De geregistreerde persoon zelf"@nl, "Die betroffene Person"@de, "La personne enregistrée elle-même"@fr,
+    "The person involved"@en;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "B";
+  skos:prefLabel "Personal relationships of the person involved"@en, "Persoonlijke relaties van de geregistreerde persoons"@nl,
+    "Persönliche Beziehungen der beteiligten Person"@de, "Relations personnelles de la personne enregistrée"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "C";
+  skos:prefLabel "Professional counselors of the person involved"@en, "Professionelle Berater der betroffenen Person"@de,
+    "conseillers professionnels de la personne enregistrée"@fr, "professionele raadgevers van de geregistreerde persoon"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "D";
+  skos:prefLabel "Arbeitgeber oder Geschäftsbeziehungen der betreffenden Person"@de,
+    "Employer or business relations of the person involved"@en, "employeur ou relations de travail de la personne enregistrée"@fr,
+    "werkgever of zakenrelaties van de geregistreerde persoon"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "E";
+  skos:prefLabel "Einzelpersonen oder Organisationen in direktem Kontakt mit der verantwortlichen Person"@de,
+    "Individuals or organizations in direct contact with the person in charge"@en, "Individuen of organisaties in directe relatie met de verantwoordelijke"@nl,
+    "Individus ou organisations en relation directe avec le responsable"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "F";
+  skos:prefLabel "Andere private Unternehmen"@de, "Other private companies"@en, "andere privé-ondernemingen"@nl,
+    "autres entreprises privées"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "G";
+  skos:prefLabel "Government services"@en, "Regierungsdienstleistungen"@de, "overheidsdiensten"@nl,
+    "services publics"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "H";
+  skos:prefLabel "Justice and police services"@en, "Justiz- und Polizeidienste"@de,
+    "gerecht en politiediensten"@nl, "justice et services de police"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "I";
+  skos:prefLabel "Public social security institutions"@en, "instances de la sécurité sociale"@fr,
+    "sociale zekerheidsinstanties"@nl, "Öffentliche Einrichtungen der sozialen Sicherheit"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "J";
+  skos:prefLabel "Banken und Versicherungen"@de, "Banks and insurance companies"@en,
+    "banken en verzekeringsmaatschappijen"@nl, "banques et compagnies d'assurances"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "K";
+  skos:prefLabel "Broker in persönlichen Daten oder Direktmarketing"@de, "Brokers in personal data or direct marketing"@en,
+    "courtiers en données à caractère personnel ou marketing direct"@fr, "makelaars in persoonsgegevens of direct marketing"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> a skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>;
+  skos:notation "Z";
+  skos:prefLabel "andere (angeben)"@de, "andere (specifiëren)"@nl, "autres (à spécifier)"@fr,
+    "other (specify)"@en;
+  skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+"@nl ;
+	skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id> .
+
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> a skos:Concept ;
+	skos:inScheme <http://vocab.belgif.be/auth/gdpr-rcvrgen#id> ;
+	skos:notation "Z" ;
+	skos:prefLabel "andere (angeben)"@de , "other (specify)"@en , "autres (à spécifier)"@fr , "andere (specifiëren)"@nl ;
+	skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id> .
+lgif.be/auth/gdpr-rcvrgen/G#id> skos:prefLabel "Government services"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id> skos:prefLabel "Individuals or organizations in direct contact with the person in charge"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id> skos:prefLabel "Justice and police services"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id> skos:prefLabel "Other private companies"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id> skos:prefLabel "Personal relationships of the person involved"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id> skos:prefLabel "Professional counselors of the person involved"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id> skos:prefLabel "Public social security institutions"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id> skos:prefLabel "The person involved"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> skos:prefLabel "other (specify)"@en.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id> skos:prefLabel "Individus ou organisations en relation directe avec le responsable"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id> skos:prefLabel "La personne enregistrée elle-même"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id> skos:prefLabel "Relations personnelles de la personne enregistrée"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> skos:prefLabel "autres (à spécifier)"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id> skos:prefLabel "autres entreprises privées"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id> skos:prefLabel "banques et compagnies d'assurances"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id> skos:prefLabel "conseillers professionnels de la personne enregistrée"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id> skos:prefLabel "courtiers en données à caractère personnel ou marketing direct"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id> skos:prefLabel "employeur ou relations de travail de la personne enregistrée"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id> skos:prefLabel "instances de la sécurité sociale"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id> skos:prefLabel "justice et services de police"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id> skos:prefLabel "services publics"@fr.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id> skos:prefLabel "De geregistreerde persoon zelf"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id> skos:prefLabel "Individuen of organisaties in directe relatie met de verantwoordelijke"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id> skos:prefLabel "Persoonlijke relaties van de geregistreerde persoons"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> skos:prefLabel "andere (specifiëren)"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id> skos:prefLabel "andere privé-ondernemingen"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id> skos:prefLabel "banken en verzekeringsmaatschappijen"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id> skos:prefLabel "gerecht en politiediensten"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id> skos:prefLabel "makelaars in persoonsgegevens of direct marketing"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id> skos:prefLabel "overheidsdiensten"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id> skos:prefLabel "professionele raadgevers van de geregistreerde persoon"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id> skos:prefLabel "sociale zekerheidsinstanties"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id> skos:prefLabel "werkgever of zakenrelaties van de geregistreerde persoon"@nl.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/void#gdpr-rcvrgen> foaf:homepage <http://vocab.belgif.be/>.
+d> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id> skos:topConceptOf <http://vocab.belgif.be/auth/gdpr-rcvrgen#id>.
+<http://vocab.belgif.be/void#gdpr-rcvrgen> foaf:homepage <http://vocab.belgif.be/>.

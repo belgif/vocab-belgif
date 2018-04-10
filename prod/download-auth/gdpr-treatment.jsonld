@@ -1,0 +1,360 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenverarbeitungstyp"
+    }, {
+      "@language" : "en",
+      "@value" : "Data treatment type"
+    }, {
+      "@language" : "fr",
+      "@value" : "Type de traitement de données"
+    }, {
+      "@language" : "nl",
+      "@value" : "Type gegevensverwerking"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datatreatmenttype"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/09#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "normal -> wenn keine der folgenden Typen"
+    }, {
+      "@language" : "en",
+      "@value" : "normal -> if none of the types below"
+    }, {
+      "@language" : "fr",
+      "@value" : "normal --> si aucun des types ci-dessous"
+    }, {
+      "@language" : "nl",
+      "@value" : "normaal--> als geen van onderstaande types"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Bewertung von Menschen einschließlich Profiling und Prognosen."
+    }, {
+      "@language" : "en",
+      "@value" : "Evaluation or assessment of people including profiling and making prognoses."
+    }, {
+      "@language" : "fr",
+      "@value" : "Évaluation ou appréciation de personnes dont le profilage et l'établissement de prévisions"
+    }, {
+      "@language" : "nl",
+      "@value" : "Evaluatie of beoordeling van mensen waaronder profilering en het maken van prognoses"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Automatisierte Entscheidungen mit rechtlichen Auswirkungen oder vergleichbaren materiellen Konsequenzen."
+    }, {
+      "@language" : "en",
+      "@value" : "Automated decisions with legal effects or comparable material consequences."
+    }, {
+      "@language" : "fr",
+      "@value" : "Décisions automatisées avec des conséquences juridiques ou des conséquences intrinsèques comparables"
+    }, {
+      "@language" : "nl",
+      "@value" : "Geautomatiseerde beslissingen met rechtsgevolgen of vergelijkbare wezenlijke gevolgen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Systematische Überwachung (Überwachung der betroffenen Person) (Ton-, Bild- oder Videoaufzeichnung)."
+    }, {
+      "@language" : "en",
+      "@value" : "Systematic monitoring (monitoring of the person concerned) (sound, image or video recording)."
+    }, {
+      "@language" : "fr",
+      "@value" : "Surveillance systématique (suivre, surveiller et contrôler la personne concernée) (enregistrement des sons, des images ou enregistrement vidéo)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Stelselmatige monitoring (betrokkene volgen, monitoren en controleren) (klank-, beeld- of video-opname)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Umfangreiche Datenverarbeitung oder -verarbeitung, die eine große Anzahl von Stakeholdern betrifft."
+    }, {
+      "@language" : "en",
+      "@value" : "Large-scale data processing or processing that impacts a large number of stakeholders."
+    }, {
+      "@language" : "fr",
+      "@value" : "Traitements de données à grande échelle ou traitements qui ont des conséquences pour un grand nombre d'acteurs concernés"
+    }, {
+      "@language" : "nl",
+      "@value" : "Grootschalige gegevensverwerkingen of verwerkingen die gevolgen hebben voor een groot aantal stakeholders"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/06#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "06"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Verknüpfung oder Verknüpfung von Datensammlungen, die von den betroffenen Personen nicht erwartet werden können."
+    }, {
+      "@language" : "en",
+      "@value" : "Combination or linking of data collections that can not reasonably be expected by data subjects."
+    }, {
+      "@language" : "fr",
+      "@value" : "Combinaison ou couplage de collectes de données que les personnes concernées ne peuvent raisonnablement pas prévoir"
+    }, {
+      "@language" : "nl",
+      "@value" : "Combinatie of koppeling van gegevensverzamelingen die betrokkenen niet redelijkerwijs kunnen verwachten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/07#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "07"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Datenverarbeitung mit Auswirkungen auf Rechte, Dienstleistungen, Verträge"
+    }, {
+      "@language" : "en",
+      "@value" : "Data processing with consequences on rights, services, contracts"
+    }, {
+      "@language" : "fr",
+      "@value" : "Traitement de données impliquant que les personnes concernées ne puissent pas exercer un droit, ne puissent pas recourir à un service ou ne puissent pas conclure de contrat"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gegevensverwerking die tot gevolg heeft dat betrokkenen een recht niet kunnen uitoefenen, dat zij geen gebruik kunnen maken van een dienst of geen contract kunnen afsluiten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/08#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "08"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Einsatz neuer Technologien oder Anwendung von technischen und organisatorischen Mitteln."
+    }, {
+      "@language" : "en",
+      "@value" : "Use of new technologies or application of technical and organizational means."
+    }, {
+      "@language" : "fr",
+      "@value" : "Utilisation de nouvelles technologies ou application de moyens techniques et organisationnels"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gebruik van nieuwe technologieën of toepassing van technische en organisatorische middelen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/09#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "09"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Systematische und groß angelegte Überwachung von öffentlich zugänglichen Bereichen."
+    }, {
+      "@language" : "en",
+      "@value" : "Systematic and large-scale monitoring of publicly accessible areas."
+    }, {
+      "@language" : "fr",
+      "@value" : "surveillance systématique à grande échelle d'une zone accessible au public."
+    }, {
+      "@language" : "nl",
+      "@value" : "stelselmatige en grootschalige monitoring van openbaar toegankelijke ruimten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-treatment",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenverarbeitungstyp"
+    }, {
+      "@language" : "en",
+      "@value" : "Data treatment type"
+    }, {
+      "@language" : "fr",
+      "@value" : "Type de traitement de données"
+    }, {
+      "@language" : "nl",
+      "@value" : "Type gegevensverwerking"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:32.816+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datatreatmenttype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datatreatmenttype"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-treatment"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment/09#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-treatment#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "90"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-treatment"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-treatment"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-treatment"
+} ]

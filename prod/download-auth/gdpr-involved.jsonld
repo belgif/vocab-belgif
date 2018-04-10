@@ -1,0 +1,592 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Kategorie betroffene Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Category involved Party"
+    }, {
+      "@language" : "fr",
+      "@value" : "Catégorie de Personne concernée"
+    }, {
+      "@language" : "nl",
+      "@value" : "Categorie betrokken Persoon"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR involvedparty"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/14#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/15#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/16#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/17#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Burger"
+    }, {
+      "@language" : "en",
+      "@value" : "Citizens"
+    }, {
+      "@language" : "fr",
+      "@value" : "Citoyens"
+    }, {
+      "@language" : "nl",
+      "@value" : "Burgers"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Personal der Regierungsagentur"
+    }, {
+      "@language" : "en",
+      "@value" : "Staff of the government agency"
+    }, {
+      "@language" : "fr",
+      "@value" : "Personnel des institutions publiques"
+    }, {
+      "@language" : "nl",
+      "@value" : "Personeel van de overheidsinstelling"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Übertreter"
+    }, {
+      "@language" : "en",
+      "@value" : "Violators"
+    }, {
+      "@language" : "fr",
+      "@value" : "Les contrevenants"
+    }, {
+      "@language" : "nl",
+      "@value" : "Overtreders"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Verdächtige"
+    }, {
+      "@language" : "en",
+      "@value" : "Suspects"
+    }, {
+      "@language" : "fr",
+      "@value" : "Suspects"
+    }, {
+      "@language" : "nl",
+      "@value" : "Verdachten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Zeugen oder Dritte zu einer Straftat"
+    }, {
+      "@language" : "en",
+      "@value" : "Witnesses or third party to a violation"
+    }, {
+      "@language" : "fr",
+      "@value" : "Témoin ou tiers à un délit"
+    }, {
+      "@language" : "nl",
+      "@value" : "Getuigen of derde aan een overtreding"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/06#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "06"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Opfer"
+    }, {
+      "@language" : "en",
+      "@value" : "Victims"
+    }, {
+      "@language" : "fr",
+      "@value" : "Victimes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Slachtoffers"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/07#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "07"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Beschwerdeführer"
+    }, {
+      "@language" : "en",
+      "@value" : "Complainants"
+    }, {
+      "@language" : "fr",
+      "@value" : "Plaignants"
+    }, {
+      "@language" : "nl",
+      "@value" : "Klagers"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/08#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "08"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Korrespondenten"
+    }, {
+      "@language" : "en",
+      "@value" : "Correspondents"
+    }, {
+      "@language" : "fr",
+      "@value" : "Correspondants"
+    }, {
+      "@language" : "nl",
+      "@value" : "Correspondenten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/09#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "09"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Minderjährige"
+    }, {
+      "@language" : "en",
+      "@value" : "Minors"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mineurs"
+    }, {
+      "@language" : "nl",
+      "@value" : "Minderjarigen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/10#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "10"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Familie, Vormund, Partner der betreffenden Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Family, guardian(s), partners of the person concerned’"
+    }, {
+      "@language" : "fr",
+      "@value" : "Famille, tuteur(s), partenaire de la «personne concernée»"
+    }, {
+      "@language" : "nl",
+      "@value" : "Familie, voogd(en), vennoten van de ‘betrokkene’"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/11#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "11"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Berater, Berater oder Experten"
+    }, {
+      "@language" : "en",
+      "@value" : "Counselors, consultants or experts"
+    }, {
+      "@language" : "fr",
+      "@value" : "Conseillers, consultants ou experts"
+    }, {
+      "@language" : "nl",
+      "@value" : "Raadslieden, consultants of experts"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/12#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "12"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Mitarbeiter"
+    }, {
+      "@language" : "en",
+      "@value" : "Employees"
+    }, {
+      "@language" : "fr",
+      "@value" : "Employés"
+    }, {
+      "@language" : "nl",
+      "@value" : "Werknemers"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/13#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "13"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Geistig behindert"
+    }, {
+      "@language" : "en",
+      "@value" : "Mentally disabled"
+    }, {
+      "@language" : "fr",
+      "@value" : "Handicapé mental"
+    }, {
+      "@language" : "nl",
+      "@value" : "Mentaal gehandicapten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/14#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "14"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Asylsuchende"
+    }, {
+      "@language" : "en",
+      "@value" : "Asylum seekers"
+    }, {
+      "@language" : "fr",
+      "@value" : "Demandeurs d'asile"
+    }, {
+      "@language" : "nl",
+      "@value" : "Asielzoekers"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/15#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "15"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Ältere Menschen"
+    }, {
+      "@language" : "en",
+      "@value" : "Elderly"
+    }, {
+      "@language" : "fr",
+      "@value" : "Personnes âgées"
+    }, {
+      "@language" : "nl",
+      "@value" : "Ouderen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/16#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "16"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Patienten"
+    }, {
+      "@language" : "en",
+      "@value" : "Patients"
+    }, {
+      "@language" : "fr",
+      "@value" : "Patients"
+    }, {
+      "@language" : "nl",
+      "@value" : "Patiënten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-involved/17#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "17"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Andere"
+    }, {
+      "@language" : "en",
+      "@value" : "Other"
+    }, {
+      "@language" : "fr",
+      "@value" : "Autre"
+    }, {
+      "@language" : "nl",
+      "@value" : "Andere"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-involved",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Kategorie betroffene Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Category involved Party"
+    }, {
+      "@language" : "fr",
+      "@value" : "Catégorie de Personne concernée"
+    }, {
+      "@language" : "nl",
+      "@value" : "Categorie betrokken Persoon"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:31.879+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR involvedparty"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR involvedparty"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-involved"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/14#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/15#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/16#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved/17#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-involved#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "162"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-involved"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-involved"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-involved"
+} ]

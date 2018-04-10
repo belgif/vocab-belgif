@@ -1,0 +1,454 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenempfänger (generisch)"
+    }, {
+      "@language" : "en",
+      "@value" : "Data receiver (generic)"
+    }, {
+      "@language" : "fr",
+      "@value" : "Récepteur de données (générique)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gegevensontvanger (generiek)"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datareceivergenerictype"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "A"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Person, auf die sich die personenbezogenen Daten beziehen."
+    }, {
+      "@language" : "en",
+      "@value" : "The person to whom the personal data relate."
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Die betroffene Person"
+    }, {
+      "@language" : "en",
+      "@value" : "The person involved"
+    }, {
+      "@language" : "fr",
+      "@value" : "La personne enregistrée elle-même"
+    }, {
+      "@language" : "nl",
+      "@value" : "De geregistreerde persoon zelf"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "B"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Persönliche Beziehungen der beteiligten Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Personal relationships of the person involved"
+    }, {
+      "@language" : "fr",
+      "@value" : "Relations personnelles de la personne enregistrée"
+    }, {
+      "@language" : "nl",
+      "@value" : "Persoonlijke relaties van de geregistreerde persoons"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "C"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Professionelle Berater der betroffenen Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Professional counselors of the person involved"
+    }, {
+      "@language" : "fr",
+      "@value" : "conseillers professionnels de la personne enregistrée"
+    }, {
+      "@language" : "nl",
+      "@value" : "professionele raadgevers van de geregistreerde persoon"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "D"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Arbeitgeber oder Geschäftsbeziehungen der betreffenden Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Employer or business relations of the person involved"
+    }, {
+      "@language" : "fr",
+      "@value" : "employeur ou relations de travail de la personne enregistrée"
+    }, {
+      "@language" : "nl",
+      "@value" : "werkgever of zakenrelaties van de geregistreerde persoon"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "E"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Einzelpersonen oder Organisationen in direktem Kontakt mit der verantwortlichen Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Individuals or organizations in direct contact with the person in charge"
+    }, {
+      "@language" : "fr",
+      "@value" : "Individus ou organisations en relation directe avec le responsable"
+    }, {
+      "@language" : "nl",
+      "@value" : "Individuen of organisaties in directe relatie met de verantwoordelijke"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "F"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Andere private Unternehmen"
+    }, {
+      "@language" : "en",
+      "@value" : "Other private companies"
+    }, {
+      "@language" : "fr",
+      "@value" : "autres entreprises privées"
+    }, {
+      "@language" : "nl",
+      "@value" : "andere privé-ondernemingen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "G"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Regierungsdienstleistungen"
+    }, {
+      "@language" : "en",
+      "@value" : "Government services"
+    }, {
+      "@language" : "fr",
+      "@value" : "services publics"
+    }, {
+      "@language" : "nl",
+      "@value" : "overheidsdiensten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "H"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Justiz- und Polizeidienste"
+    }, {
+      "@language" : "en",
+      "@value" : "Justice and police services"
+    }, {
+      "@language" : "fr",
+      "@value" : "justice et services de police"
+    }, {
+      "@language" : "nl",
+      "@value" : "gerecht en politiediensten"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "I"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Öffentliche Einrichtungen der sozialen Sicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Public social security institutions"
+    }, {
+      "@language" : "fr",
+      "@value" : "instances de la sécurité sociale"
+    }, {
+      "@language" : "nl",
+      "@value" : "sociale zekerheidsinstanties"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "J"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Banken und Versicherungen"
+    }, {
+      "@language" : "en",
+      "@value" : "Banks and insurance companies"
+    }, {
+      "@language" : "fr",
+      "@value" : "banques et compagnies d'assurances"
+    }, {
+      "@language" : "nl",
+      "@value" : "banken en verzekeringsmaatschappijen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "K"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Broker in persönlichen Daten oder Direktmarketing"
+    }, {
+      "@language" : "en",
+      "@value" : "Brokers in personal data or direct marketing"
+    }, {
+      "@language" : "fr",
+      "@value" : "courtiers en données à caractère personnel ou marketing direct"
+    }, {
+      "@language" : "nl",
+      "@value" : "makelaars in persoonsgegevens of direct marketing"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "Z"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "andere (angeben)"
+    }, {
+      "@language" : "en",
+      "@value" : "other (specify)"
+    }, {
+      "@language" : "fr",
+      "@value" : "autres (à spécifier)"
+    }, {
+      "@language" : "nl",
+      "@value" : "andere (specifiëren)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-rcvrgen",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenempfänger (generisch)"
+    }, {
+      "@language" : "en",
+      "@value" : "Data receiver (generic)"
+    }, {
+      "@language" : "fr",
+      "@value" : "Récepteur de données (générique)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gegevensontvanger (generiek)"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-26T11:46:03.756+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datareceivergenerictype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datareceivergenerictype"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-rcvrgen"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/A#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/B#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/C#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/D#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/E#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/F#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/G#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/H#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/I#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/J#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/K#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen/Z#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrgen#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "119"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-rcvrgen"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-rcvrgen"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-rcvrgen"
+} ]

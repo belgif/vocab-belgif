@@ -1,0 +1,254 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/workflow#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Arbeitsablauf Status"
+    }, {
+      "@language" : "en",
+      "@value" : "Workflow status"
+    }, {
+      "@language" : "fr",
+      "@value" : "Statuts de flux de travail"
+    }, {
+      "@language" : "nl",
+      "@value" : "Workflow statussen"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "en",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "fr",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "nl",
+      "@value" : "Workflow"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/COMPLETED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/EXITED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/NOTSTARTED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/STARTED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/COMPLETED#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "COMPLETED"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Completed"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/EXITED#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "EXITED"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Stopped without completion"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/NOTSTARTED#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "NOTSTARTED"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Not started"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/STARTED#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "STARTED"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Started"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAITAPPROV#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAITCORR#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAITTRANSL#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "WAIT"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Waiting"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/WAITAPPROV#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broader" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "WAITAPPROV"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Waiting approval"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/WAITCORR#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broader" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "WAITCORR"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Waiting correction"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/workflow/WAITTRANSL#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#broader" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "WAITTRANSL"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "en",
+      "@value" : "Waiting translation"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#workflow",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Arbeitsablauf Status"
+    }, {
+      "@language" : "en",
+      "@value" : "Workflow status"
+    }, {
+      "@language" : "fr",
+      "@value" : "Statuts de flux de travail"
+    }, {
+      "@language" : "nl",
+      "@value" : "Workflow statussen"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:40.140+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "en",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "fr",
+      "@value" : "Workflow"
+    }, {
+      "@language" : "nl",
+      "@value" : "Workflow"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/workflow"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow/COMPLETED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/EXITED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/NOTSTARTED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/STARTED#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/workflow/WAIT#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/workflow#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "57"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/workflow"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/workflow"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/workflow"
+} ]

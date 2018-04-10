@@ -10,13 +10,13 @@
 @prefix gdpr: <http://vocab.belgif.be/ns/gdpr#> .
 
 <http://vocab.belgif.be/ns/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-03-29" ;
+	owl:versionInfo "Draft 2018-04-10" ;
 	rdfs:label "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en ;
 	rdfs:comment "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en .
 
 gdpr:Controller a rdfs:Class, owl:Class ;
 	rdfs:isDefinedBy gdpr: ;
-	rdfs:subClassOf gdpr:DatTreatmentRole ;
+	rdfs:subClassOf gdpr:DataTreatmentRole ;
 	rdfs:label "Controller"@de, "Controller"@en, "Controller"@fr, "Controller"@nl ;
 	rdfs:comment "Contrôleur - désigne la personne physique ou morale, l'autorité publique, l'agence ou tout autre organisme qui, seul ou conjointement avec d'autres, détermine les finalités et les moyens du traitement des données à caractère personnel."@fr, "Controller –  means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data."@en, "Controller - betekent de natuurlijke of rechtspersoon, overheidsinstantie, instantie of andere instantie die, alleen of samen met anderen, de doeleinden en middelen van de verwerking van persoonsgegevens bepaalt."@nl, "Kontrolleur - bezeichnet die natürliche oder juristische Person, Behörde, Agentur oder sonstige Stelle, die allein oder gemeinsam mit anderen die Zwecke und Mittel der Verarbeitung personenbezogener Daten festlegt"@de .
 
@@ -333,7 +333,7 @@ gdpr:hasDPO a rdf:Property, owl:ObjectProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:subPropertyOf cv:hasContactPoint ;
 	rdfs:comment "Data Protection Officer."@de, "Data Protection Officer."@en, "Data Protection Officer."@fr, "Data Protection Officer."@nl ;
-	rdfs:domain gdpr:DatTreatmentRole ;
+	rdfs:domain gdpr:DataTreatmentRole ;
 	rdfs:label "DPO"@de, "DPO"@en, "DPO"@fr, "DPO"@nl ;
 	rdfs:range schema:ContactPoint .
 

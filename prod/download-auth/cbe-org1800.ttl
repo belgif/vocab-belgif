@@ -1,0 +1,2539 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/auth/cbe-org1800#id> a skos:ConceptScheme;
+  dcterms:description "Formes juridiques selon la Banque-Carrefour des Entreprises (1800 - 6/2003)"@fr,
+    "Legal forms according to the Crossroad Bank Enterprises (1800 - 6/2003)"@en, "Rechtsvormen volgens Kruispuntbank Ondernemingen (1800 - 6/2003)"@nl;
+  dcterms:title "Formes juridiques (1800-2003)"@fr, "Legal forms (1800-2003)"@en, "Rechtsvormen (1800-2003)"@nl;
+  skos:hasTopConcept <http://vocab.belgif.be/auth/cbe-org1800/006#id>, <http://vocab.belgif.be/auth/cbe-org1800/007#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/008#id>, <http://vocab.belgif.be/auth/cbe-org1800/009#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/010#id>, <http://vocab.belgif.be/auth/cbe-org1800/011#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/012#id>, <http://vocab.belgif.be/auth/cbe-org1800/013#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/014#id>, <http://vocab.belgif.be/auth/cbe-org1800/015#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/016#id>, <http://vocab.belgif.be/auth/cbe-org1800/017#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/018#id>, <http://vocab.belgif.be/auth/cbe-org1800/019#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/020#id>, <http://vocab.belgif.be/auth/cbe-org1800/021#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/022#id>, <http://vocab.belgif.be/auth/cbe-org1800/023#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/025#id>, <http://vocab.belgif.be/auth/cbe-org1800/026#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/028#id>, <http://vocab.belgif.be/auth/cbe-org1800/030#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/040#id>, <http://vocab.belgif.be/auth/cbe-org1800/051#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/060#id>, <http://vocab.belgif.be/auth/cbe-org1800/065#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/070#id>, <http://vocab.belgif.be/auth/cbe-org1800/106#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/107#id>, <http://vocab.belgif.be/auth/cbe-org1800/108#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/109#id>, <http://vocab.belgif.be/auth/cbe-org1800/110#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/114#id>, <http://vocab.belgif.be/auth/cbe-org1800/116#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/117#id>, <http://vocab.belgif.be/auth/cbe-org1800/121#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/123#id>, <http://vocab.belgif.be/auth/cbe-org1800/124#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/125#id>, <http://vocab.belgif.be/auth/cbe-org1800/127#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/128#id>, <http://vocab.belgif.be/auth/cbe-org1800/129#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/151#id>, <http://vocab.belgif.be/auth/cbe-org1800/160#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/200#id>, <http://vocab.belgif.be/auth/cbe-org1800/206#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/208#id>, <http://vocab.belgif.be/auth/cbe-org1800/211#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/212#id>, <http://vocab.belgif.be/auth/cbe-org1800/213#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/214#id>, <http://vocab.belgif.be/auth/cbe-org1800/215#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/225#id>, <http://vocab.belgif.be/auth/cbe-org1800/230#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/235#id>, <http://vocab.belgif.be/auth/cbe-org1800/260#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/265#id>, <http://vocab.belgif.be/auth/cbe-org1800/301#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/302#id>, <http://vocab.belgif.be/auth/cbe-org1800/303#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/310#id>, <http://vocab.belgif.be/auth/cbe-org1800/320#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/330#id>, <http://vocab.belgif.be/auth/cbe-org1800/340#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/350#id>, <http://vocab.belgif.be/auth/cbe-org1800/370#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/371#id>, <http://vocab.belgif.be/auth/cbe-org1800/372#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/373#id>, <http://vocab.belgif.be/auth/cbe-org1800/374#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/375#id>, <http://vocab.belgif.be/auth/cbe-org1800/376#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/377#id>, <http://vocab.belgif.be/auth/cbe-org1800/378#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/379#id>, <http://vocab.belgif.be/auth/cbe-org1800/380#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/381#id>, <http://vocab.belgif.be/auth/cbe-org1800/382#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/383#id>, <http://vocab.belgif.be/auth/cbe-org1800/384#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/385#id>, <http://vocab.belgif.be/auth/cbe-org1800/386#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/387#id>, <http://vocab.belgif.be/auth/cbe-org1800/388#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/389#id>, <http://vocab.belgif.be/auth/cbe-org1800/390#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/391#id>, <http://vocab.belgif.be/auth/cbe-org1800/392#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/393#id>, <http://vocab.belgif.be/auth/cbe-org1800/400#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/401#id>, <http://vocab.belgif.be/auth/cbe-org1800/411#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/412#id>, <http://vocab.belgif.be/auth/cbe-org1800/413#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/414#id>, <http://vocab.belgif.be/auth/cbe-org1800/415#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/416#id>, <http://vocab.belgif.be/auth/cbe-org1800/417#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/418#id>, <http://vocab.belgif.be/auth/cbe-org1800/419#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/420#id>, <http://vocab.belgif.be/auth/cbe-org1800/451#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/452#id>, <http://vocab.belgif.be/auth/cbe-org1800/453#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/454#id>, <http://vocab.belgif.be/auth/cbe-org1800/506#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/508#id>, <http://vocab.belgif.be/auth/cbe-org1800/510#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/511#id>, <http://vocab.belgif.be/auth/cbe-org1800/512#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/513#id>, <http://vocab.belgif.be/auth/cbe-org1800/514#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/515#id>, <http://vocab.belgif.be/auth/cbe-org1800/560#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/606#id>, <http://vocab.belgif.be/auth/cbe-org1800/608#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/614#id>, <http://vocab.belgif.be/auth/cbe-org1800/651#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/701#id>, <http://vocab.belgif.be/auth/cbe-org1800/702#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/703#id>, <http://vocab.belgif.be/auth/cbe-org1800/704#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/721#id>, <http://vocab.belgif.be/auth/cbe-org1800/722#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/723#id>, <http://vocab.belgif.be/auth/cbe-org1800/724#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/790#id>, <http://vocab.belgif.be/auth/cbe-org1800/999#id>.
+
+<http://vocab.belgif.be/void#cbe-org1800> a void:Dataset;
+  dcterms:description "Formes juridiques selon la Banque-Carrefour des Entreprises (1800 - 6/2003)"@fr,
+    "Legal forms according to the Crossroad Bank Enterprises (1800 - 6/2003)"@en, "Rechtsvormen volgens Kruispuntbank Ondernemingen (1800 - 6/2003)"@nl;
+  dcterms:modified "2018-03-29T10:12:30.150+02:00"^^xsd:dateTime;
+  dcterms:title "Formes juridiques (1800-2003)"@fr, "Legal forms (1800-2003)"@en, "Rechtsvormen (1800-2003)"@nl;
+  void:dataDump <http://vocab.belgif.be/dataset/cbe-org1800>;
+  void:exampleResource <http://vocab.belgif.be/auth/cbe-org1800/006#id>, <http://vocab.belgif.be/auth/cbe-org1800/007#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/008#id>, <http://vocab.belgif.be/auth/cbe-org1800/009#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/010#id>, <http://vocab.belgif.be/auth/cbe-org1800/011#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/012#id>, <http://vocab.belgif.be/auth/cbe-org1800/013#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/014#id>, <http://vocab.belgif.be/auth/cbe-org1800/015#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/016#id>, <http://vocab.belgif.be/auth/cbe-org1800/017#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/018#id>, <http://vocab.belgif.be/auth/cbe-org1800/019#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/020#id>, <http://vocab.belgif.be/auth/cbe-org1800/021#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/022#id>, <http://vocab.belgif.be/auth/cbe-org1800/023#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/025#id>, <http://vocab.belgif.be/auth/cbe-org1800/026#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/028#id>, <http://vocab.belgif.be/auth/cbe-org1800/030#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/040#id>, <http://vocab.belgif.be/auth/cbe-org1800/051#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/060#id>, <http://vocab.belgif.be/auth/cbe-org1800/065#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/070#id>, <http://vocab.belgif.be/auth/cbe-org1800/106#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/107#id>, <http://vocab.belgif.be/auth/cbe-org1800/108#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/109#id>, <http://vocab.belgif.be/auth/cbe-org1800/110#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/114#id>, <http://vocab.belgif.be/auth/cbe-org1800/116#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/117#id>, <http://vocab.belgif.be/auth/cbe-org1800/121#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/123#id>, <http://vocab.belgif.be/auth/cbe-org1800/124#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/125#id>, <http://vocab.belgif.be/auth/cbe-org1800/127#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/128#id>, <http://vocab.belgif.be/auth/cbe-org1800/129#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/151#id>, <http://vocab.belgif.be/auth/cbe-org1800/160#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/200#id>, <http://vocab.belgif.be/auth/cbe-org1800/206#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/208#id>, <http://vocab.belgif.be/auth/cbe-org1800/211#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/212#id>, <http://vocab.belgif.be/auth/cbe-org1800/213#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/214#id>, <http://vocab.belgif.be/auth/cbe-org1800/215#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/225#id>, <http://vocab.belgif.be/auth/cbe-org1800/230#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/235#id>, <http://vocab.belgif.be/auth/cbe-org1800/260#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/265#id>, <http://vocab.belgif.be/auth/cbe-org1800/301#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/302#id>, <http://vocab.belgif.be/auth/cbe-org1800/303#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/310#id>, <http://vocab.belgif.be/auth/cbe-org1800/320#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/330#id>, <http://vocab.belgif.be/auth/cbe-org1800/340#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/350#id>, <http://vocab.belgif.be/auth/cbe-org1800/370#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/371#id>, <http://vocab.belgif.be/auth/cbe-org1800/372#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/373#id>, <http://vocab.belgif.be/auth/cbe-org1800/374#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/375#id>, <http://vocab.belgif.be/auth/cbe-org1800/376#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/377#id>, <http://vocab.belgif.be/auth/cbe-org1800/378#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/379#id>, <http://vocab.belgif.be/auth/cbe-org1800/380#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/381#id>, <http://vocab.belgif.be/auth/cbe-org1800/382#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/383#id>, <http://vocab.belgif.be/auth/cbe-org1800/384#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/385#id>, <http://vocab.belgif.be/auth/cbe-org1800/386#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/387#id>, <http://vocab.belgif.be/auth/cbe-org1800/388#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/389#id>, <http://vocab.belgif.be/auth/cbe-org1800/390#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/391#id>, <http://vocab.belgif.be/auth/cbe-org1800/392#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/393#id>, <http://vocab.belgif.be/auth/cbe-org1800/400#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/401#id>, <http://vocab.belgif.be/auth/cbe-org1800/411#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/412#id>, <http://vocab.belgif.be/auth/cbe-org1800/413#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/414#id>, <http://vocab.belgif.be/auth/cbe-org1800/415#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/416#id>, <http://vocab.belgif.be/auth/cbe-org1800/417#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/418#id>, <http://vocab.belgif.be/auth/cbe-org1800/419#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/420#id>, <http://vocab.belgif.be/auth/cbe-org1800/451#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/452#id>, <http://vocab.belgif.be/auth/cbe-org1800/453#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/454#id>, <http://vocab.belgif.be/auth/cbe-org1800/506#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/508#id>, <http://vocab.belgif.be/auth/cbe-org1800/510#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/511#id>, <http://vocab.belgif.be/auth/cbe-org1800/512#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/513#id>, <http://vocab.belgif.be/auth/cbe-org1800/514#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/515#id>, <http://vocab.belgif.be/auth/cbe-org1800/560#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/606#id>, <http://vocab.belgif.be/auth/cbe-org1800/608#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/614#id>, <http://vocab.belgif.be/auth/cbe-org1800/651#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/701#id>, <http://vocab.belgif.be/auth/cbe-org1800/702#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/703#id>, <http://vocab.belgif.be/auth/cbe-org1800/704#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/721#id>, <http://vocab.belgif.be/auth/cbe-org1800/722#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/723#id>, <http://vocab.belgif.be/auth/cbe-org1800/724#id>,
+    <http://vocab.belgif.be/auth/cbe-org1800/790#id>, <http://vocab.belgif.be/auth/cbe-org1800/999#id>;
+  void:feature <http://www.w3.org/ns/formats/JSON-LD>, <http://www.w3.org/ns/formats/N-Triples>,
+    <http://www.w3.org/ns/formats/Turtle>;
+  void:rootResource <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  void:triples "1749"^^xsd:long;
+  void:uriLookupEndpoint <http://vocab.belgif.be/_ldf>, <http://vocab.belgif.be/_ldf/cbe-org1800>;
+  void:uriSpace "http://vocab.belgif.be/auth/cbe-org1800";
+  void:vocabulary <http://www.w3.org/2004/02/skos/core#>;
+  foaf:homepage <http://vocab.belgif.be/>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/006#id> a skos:Concept;
+  skos:altLabel "CVOA"@nl, "Gen.mubH"@de, "SCRI"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/006#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "006";
+  skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid"@nl, "Genossenschaft mit unbeschränkter Haftung"@de,
+    "Société coopérative à responsabilité illimitée"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/007#id> a skos:Concept;
+  skos:altLabel "CVOACD"@nl, "GugsHGB"@de, "SCRISCP"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "007";
+  skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid, bij wijze van deelneming"@nl,
+    "Genossenschaft mit unbeschränkter gesamtschuldnerischer Haftung, Genossenschaft auf Beteiligung"@de,
+    "Société coopérative à responsabilité illimitée et solidaire, société coopérative de participation"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/008#id> a skos:Concept;
+  skos:altLabel "CVBA"@nl, "Gen.mbH"@de, "SCRL"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/008#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "008";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid"@nl, "Genossenschaft mit beschränkter Haftung"@de,
+    "Société coopérative à responsabilité limitée"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/009#id> a skos:Concept;
+  skos:altLabel "CVBA CD"@nl, "GbHGB"@de, "SCRL CP"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "009";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid, bij wijze van deelneming"@nl,
+    "Genossenschaft mit beschränkter Haftung, Genossenschaft auf Beteiligung"@de, "Société coopérative à responsabilité limitée, coopérative de participation"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/010#id> a skos:Concept;
+  skos:altLabel "EBVBA"@nl, "PGmbHmA"@de, "SPRLU"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "010";
+  skos:prefLabel "Eenpersoons BVBA"@nl, "Privatgesellschaft mit beschränkter Haftung mit einem Alleingesellschafter"@de,
+    "Société privée à responsabilité limitée unipersonnelle"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/011#id> a skos:Concept;
+  skos:altLabel "OHG"@de, "SNC"@fr, "V.O.F."@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/011#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "011";
+  skos:prefLabel "Offene Handelsgesellschaft"@de, "Société en nom collectif"@fr, "Vennootschap onder firma"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/012#id> a skos:Concept;
+  skos:altLabel "Comm.V"@nl, "EKG"@de, "SCS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/012#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "012";
+  skos:prefLabel "Einfache Kommanditgesellschaft"@de, "Gewone commanditaire vennootschap"@nl,
+    "Société en commandite simple"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/013#id> a skos:Concept;
+  skos:altLabel "Comm.VA"@nl, "KGaA"@de, "SCA"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/013#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "013";
+  skos:prefLabel "Commanditaire vennootschap op aandelen"@nl, "Kommanditgesellschaft auf Aktien"@de,
+    "Société en commandite par actions"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/014#id> a skos:Concept;
+  skos:altLabel "AG"@de, "NV"@nl, "SA"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/014#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "014";
+  skos:prefLabel "Aktiengesellschaft"@de, "Naamloze vennootschap"@nl, "Société anonyme"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/015#id> a skos:Concept;
+  skos:altLabel "BVBA"@nl, "PGmbH"@de, "SPRL"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/015#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "015";
+  skos:prefLabel "Besloten vennootschap met beperkte aansprakelijkheid"@nl, "Privatgesellschaft mit beschränkter Haftung"@de,
+    "Société privée à responsabilité limitée"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/016#id> a skos:Concept;
+  skos:altLabel "CV"@nl, "Gen."@de, "SC (AS)"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "016";
+  skos:prefLabel "Coöperatieve vennootschap (oud statuut)"@nl, "Genossenschaft (früheres Statut)"@de,
+    "Société coopérative (ancien statut)"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1993-10-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/017#id> a skos:Concept;
+  skos:altLabel "ASBL"@fr, "VZW"@nl, "VoG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/017#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "017";
+  skos:prefLabel "Association sans but lucratif"@fr, "Vereinigung ohne Gewinnerzielungsabsicht"@de,
+    "Vereniging zonder winstoogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/018#id> a skos:Concept;
+  skos:altLabel "EtUtPub"@fr, "GemEinri"@de, "Inst OpN"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "018";
+  skos:prefLabel "Etablissement d'utilité publique"@fr, "Gemeinnützige Einrichtung"@de,
+    "Instelling van openbaar nut"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-11T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/019#id> a skos:Concept;
+  skos:altLabel "Kankenka"@de, "MUTU"@fr, "ZIEK F"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/019#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "019";
+  skos:prefLabel "Krankenkasse / Gesellschaft auf Gegenseitigkeit / Krankenkassenlandesverband"@de,
+    "Mutualité / Société Mutualiste / Union nationale de mutualités"@fr, "Ziekenfonds / Maatschappij van onderlinge bijstand / Landsbond van ziekenfondsen"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/020#id> a skos:Concept;
+  skos:altLabel "BV"@de, "BV"@nl, "UP"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/020#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "020";
+  skos:prefLabel "Beroepsvereniging"@nl, "Berufsvereinigung"@de, "Union professionnelle"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/021#id> a skos:Concept;
+  skos:altLabel "AAM"@fr, "OVV"@nl, "PRVGaG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/021#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "021";
+  skos:prefLabel "Association d'assurances mutuelles / Caisse commune d'assurances de droit privé"@fr,
+    "Onderlinge verzekeringsvereniging / Gemeenschappelijke verzekeringskas van privaat recht"@nl,
+    "Versicherungsvereinigung auf Gegenseitigkeit / Privatrechtliche Versicherungsgesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/022#id> a skos:Concept;
+  skos:altLabel "IWO BR"@nl, "IWObR"@de, "OSI DB"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/022#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "022";
+  skos:prefLabel "Internationale wetenschappelijke organisatie van Belgisch recht"@nl,
+    "Internationale wissenschaftliche Organisation belgischen Rechts"@de, "Organisation scientifique internationale de droit belge"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/023#id> a skos:Concept;
+  skos:altLabel "AEP"@fr, "BPR"@nl, "PRaV"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/023#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "023";
+  skos:prefLabel "Associations étrangères privées avec établissement, agence, bureau, succursale en Belgique"@fr,
+    "Buitenlandse privaatrechtelijke verenigingen met vestiging, agentschap, kantoor of bijhuis in België"@nl,
+    "Privatrechtliche ausländische Vereinigungen mit Niederlassung, Geschäftsstelle, Büro oder Zweigstelle in Belgien"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/025#id> a skos:Concept;
+  skos:altLabel "LG"@de, "LV"@nl, "S. Agr."@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/025#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "025";
+  skos:prefLabel "Landbouwvennootschap"@nl, "Landwirtschaftliche Gesellschaft"@de, "Société agricole"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> a skos:Concept;
+  skos:altLabel "FONDPRIV"@fr, "PRIV ST."@nl, "PrSt"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/026#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "026";
+  skos:prefLabel "Fondation privée"@fr, "Private stichting"@nl, "Privatstiftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "2002-05-02T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> a skos:Concept;
+  skos:altLabel "EoG"@de, "ISBL"@fr, "IZW"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/028#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "028";
+  skos:prefLabel "Einrichtung ohne Gewinnerzielungsabsicht"@de, "Instelling zonder winstoogmerk"@nl,
+    "Institution sans but lucratif"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "2003-04-04T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/030#id> a skos:Concept;
+  skos:altLabel "AGes."@de, "BO"@nl, "ENT E"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/030#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "030";
+  skos:prefLabel "Ausländische Gesellschaft"@de, "Buitenlandse onderneming"@nl, "Entreprise étrangère"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/040#id> a skos:Concept;
+  skos:altLabel "K.G."@de, "KONG VEN"@nl, "SOC CONG"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "040";
+  skos:prefLabel "Kongolese vennootschap"@nl, "Kongolesische Gesellschaft"@de, "Société congolaise (loi de 1927)"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/051#id> a skos:Concept;
+  skos:altLabel "FDP PJ"@fr, "PRRFmRP"@de, "PRV"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/051#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "051";
+  skos:prefLabel "Andere privaatrechtelijke vorm met rechtspersoonlijkheid"@nl, "Andere privatrechtliche Rechtsform mit Rechtspersönlichkeit"@de,
+    "Autre forme de droit privé avec personnalité juridique"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/060#id> a skos:Concept;
+  skos:altLabel "ESV"@nl, "GIE"@fr, "WIV"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/060#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "060";
+  skos:prefLabel "Economisch samenwerkingsverband "@nl, "Groupement d'intérêt économique"@fr,
+    "Wirtschaftliche Interessenvereinigung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/065#id> a skos:Concept;
+  skos:altLabel "EESV"@nl, "EWIV"@de, "GEIE"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/065#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "065";
+  skos:prefLabel "Europees economisch samenwerkingsverband"@nl, "Europäische wirtschaftliche Interessenvereinigung"@de,
+    "Groupement européen d'intérêt économique"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/070#id> a skos:Concept;
+  skos:altLabel "ACP"@fr, "MEV"@de, "VME"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/070#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "070";
+  skos:prefLabel "Association des copropriétaires"@fr, "Miteigentümervereinigung"@de,
+    "Vereniging van mede-eigenaars"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/106#id> a skos:Concept;
+  skos:altLabel "CVOA PR"@nl, "SCRI DPU"@fr, "ÖffrGmuH"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "106";
+  skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid van publiek recht"@nl,
+    "Société coopérative à responsabilité illimitée de droit public"@fr, "Öffentlich-rechtliche Genossenschaft mit unbeschränkter Haftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> a skos:Concept;
+  skos:altLabel "CVOA CD"@nl, "GmuHGB"@de, "SCRI CP"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/107#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "107";
+  skos:prefLabel "Coopérative à responsabilité illimitée, coopérative de participation, de droit public"@fr,
+    "Coöperatieve vennootschap met onbeperkte aansprakelijkheid, bij wijze van deelneming van publiek recht"@nl,
+    "Öffentlich-rechtliche Genossenschaft mit unbeschränkter Haftung, Genossenschaft auf Beteiligung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> a skos:Concept;
+  skos:altLabel "CVBA PR"@nl, "SCRL DPU"@fr, "ÖfrGmbH"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/108#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "108";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid van publiek recht"@nl,
+    "Société coopérative à responsabilité limitée de droit public"@fr, "Öffentlich-rechtliche Genossenschaft mit beschränkter Haftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/109#id> a skos:Concept;
+  skos:altLabel "CVBA CD"@nl, "GbHGB"@de, "SCRL CP"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "109";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid, bij wijze van deelneming, van publiek recht"@nl,
+    "Société coopérative à responsabilité limitée, coopérative de participation, de droit public"@fr,
+    "Öffentlich-rechtliche Genossenschaft mit beschränkter Haftung, Genossenschaft auf Beteiligung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/110#id> a skos:Concept;
+  skos:altLabel "EPRC"@fr, "RPGG"@nl, "SPRG"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "110";
+  skos:prefLabel "Rijk, Provincie, Gewest, Gemeenschap"@nl, "Staat, Provinz, Region, Gemeinschaft"@de,
+    "État, Province, Région, Communauté"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/114#id> a skos:Concept;
+  skos:altLabel "NV PR"@nl, "SA DPU"@fr, "Ö.-r.AG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/114#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "114";
+  skos:prefLabel "Naamloze vennootschap van publiek recht"@nl, "Société anonyme de droit public"@fr,
+    "Öffentlich-rechtliche Aktiengesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/116#id> a skos:Concept;
+  skos:altLabel "CV PR"@nl, "SC DPU"@fr, "ÖfrGfrü"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "116";
+  skos:prefLabel "Coöperatieve vennootschap van publiek recht (oud statuut)"@nl, "Société coopérative de droit public (ancien statut)"@fr,
+    "Öffentlich-rechtliche Genossenschaft (frühere Rechtsform)"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1993-10-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/117#id> a skos:Concept;
+  skos:altLabel "ASBL DPU"@fr, "VZW PR"@nl, "ÖrVohGza"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/117#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "117";
+  skos:prefLabel "Association sans but lucratif de droit public"@fr, "Vereniging zonder winstoogmerk van publiek recht"@nl,
+    "Öffentlich-rechtliche Vereinigung ohne Gewinnerzielungsabsicht"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/121#id> a skos:Concept;
+  skos:altLabel "OVV PR"@nl, "SAM DPU"@fr, "ÖrVgGe"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/121#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "121";
+  skos:prefLabel "Association d'assurances mutuelles de droit public"@fr, "Onderlinge verzekeringsvereniging van publiek recht"@nl,
+    "Öffentlich-rechtliche Versicherungsvereinigung auf Gegenseitigkeit"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/123#id> a skos:Concept;
+  skos:altLabel "BV ORDEN"@nl, "Ber-Kam"@de, "CP ORDRE"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "123";
+  skos:prefLabel "Beroepsvereniging / Orde"@nl, "Berufsverband / Kammer"@de, "Corporation professionnelle / Ordre"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/124#id> a skos:Concept;
+  skos:altLabel "ETSPUBLI"@fr, "OI"@nl, "ÖE"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/124#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "124";
+  skos:prefLabel "Etablissement public"@fr, "Openbare instelling"@nl, "Öffentliche Einrichtung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/125#id> a skos:Concept;
+  skos:altLabel "AISBL"@fr, "IVZW"@nl, "IVoG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/125#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "125";
+  skos:prefLabel "Association internationale sans but lucratif"@fr, "Internationale Vereinigung ohne Gewinnerzielungsabsicht"@de,
+    "Internationale vereniging zonder winstoogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> a skos:Concept;
+  skos:altLabel "BVB"@nl, "LH"@de, "PIETE"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/127#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "127";
+  skos:prefLabel "Berg van Barmhartigheid"@nl, "Monts-de-Piété"@fr, "Pfandleihhaus"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/128#id> a skos:Concept;
+  skos:altLabel "EREDIENS"@nl, "K"@de, "TEMPCULT"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "128";
+  skos:prefLabel "Eredienst"@nl, "Kult"@de, "Temporel des cultes / Établissement cultuel public"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/129#id> a skos:Concept;
+  skos:altLabel "Ewg-Bwg"@de, "PW"@fr, "PW"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/129#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "129";
+  skos:prefLabel "Entwässerungsgenossenschaft / Bewässerungsgenossenschaft"@de, "Polder / Watering"@nl,
+    "Polder / wateringue"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/151#id> a skos:Concept;
+  skos:altLabel "AFJ"@fr, "ARF"@de, "AV"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/151#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "151";
+  skos:prefLabel "Andere Rechtsform"@de, "Andere rechtsvorm"@nl, "Autre forme juridique"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/160#id> a skos:Concept;
+  skos:altLabel "AIÖE"@de, "BIPO"@nl, "OPEI"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/160#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "160";
+  skos:prefLabel "Ausländische oder internationale öffentliche Einrichtungen"@de, "Buitenlandse of internationale publieke organisatie"@nl,
+    "Organisme public étranger ou international"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> a skos:Concept;
+  skos:altLabel "GbG"@de, "SF"@fr, "VV"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/200#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "200";
+  skos:prefLabel "In Gründung befindliche Gesellschaft"@de, "Société en formation"@fr,
+    "Vennootschap in oprichting"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> a skos:Concept;
+  skos:altLabel "BV CVOA"@nl, "SC SCRI"@fr, "ZvGGugcH"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/206#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "206";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met onbeperkte aansprakelijkheid"@nl,
+    "Société civile sous forme de société coopérative à responsabilité illimitée"@fr,
+    "Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit unbeschränkter Haftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> a skos:Concept;
+  skos:altLabel "BV CVBA"@nl, "SC SCRL"@fr, "ZvGGbH"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/208#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "208";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met beperkte aansprakelijkheid"@nl,
+    "Société civile sous forme de société coopérative à responsabilité limitée"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer Genossenschaft mit beschränkter Haftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> a skos:Concept;
+  skos:altLabel "BV VOF"@nl, "SC SNC"@fr, "ZRG OHG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/211#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "211";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van vennootschap onder firma"@nl,
+    "Société civile sous forme de société en nom collectif"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer offenen Handelsgesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> a skos:Concept;
+  skos:altLabel "BV GCV"@nl, "SC SCS"@fr, "ZRG EKG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/212#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "212";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van gewone commanditaire vennootschap"@nl,
+    "Société civile sous forme de société en commandite simple"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer einfachen Kommanditgesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> a skos:Concept;
+  skos:altLabel "BV CVA"@nl, "SC SCA"@fr, "ZRG KGaA"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/213#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "213";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van commanditaire vennootschap op aandelen"@nl,
+    "Société civile sous forme de société en commandite par actions"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer Kommanditgesellschaft auf Aktien"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> a skos:Concept;
+  skos:altLabel "BV NV"@nl, "SC SA"@fr, "ZRG AG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/214#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "214";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van naamloze vennootschap"@nl,
+    "Société civile sous forme de société anonyme"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer Aktiengesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> a skos:Concept;
+  skos:altLabel "BV BVBA"@nl, "SC SPRL"@fr, "ZvGPgbH"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/215#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "215";
+  skos:prefLabel "Burgerlijke vennootschap onder vorm van besloten vennootschap met beperkte aansprakelijkheid"@nl,
+    "Société civile sous forme de société privée à responsabilité limitée"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer Privatgesellschaft mit beschränkter Haftung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> a skos:Concept;
+  skos:altLabel "BV LV"@nl, "SC SAGR"@fr, "ZRG LG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/225#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "225";
+  skos:prefLabel "Burgerlijke Vennootschap onder vorm van Landbouwvennootschap (BV LV)"@nl,
+    "Société civile sous forme de société agricole"@fr, "Zivilrechtliche Gesellschaft in der Rechtsform einer landwirtschaftlichen Gesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/230#id> a skos:Concept;
+  skos:altLabel "AusGmImm"@de, "BOOGBRP"@nl, "SEBIBPJ"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "230";
+  skos:prefLabel "Ausländische Gesellschaft mit einer Immobilie in Belgien (mit Rechtspersönlichkeit)"@de,
+    "Buitenlandse onderneming met onroerend goed in België (met rechtspersoonlijkheid)"@nl,
+    "Société étrangère avec un bien immobilier en Belgique (avec personnalité juridique)"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> a skos:Concept;
+  skos:altLabel "AusGohNi"@de, "BOZBVBTW"@nl, "SESEBTVA"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/235#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "235";
+  skos:prefLabel "Ausländische Gesellschaft ohne Niederlassung in Belgien mit einem Fiskalvertreter für die MwSt."@de,
+    "Buitenlandse onderneming zonder Belgische vestiging met vertegenwoordiger voor BTW"@nl,
+    "Société étrangère sans établissement belge avec représentant responsable TVA"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-02-25T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/260#id> a skos:Concept;
+  skos:altLabel "ESV VB"@nl, "GIE EB"@fr, "WIV"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "260";
+  skos:prefLabel "Economisch samenwerkingsverband zonder zetel met vestiging in België"@nl,
+    "Groupement d'intérêt économique sans siège avec établissement en Belgique"@fr, "Wirtschaftliche Interessenvereinigung ohne Sitz mit Niederlassung in Belgien"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> a skos:Concept;
+  skos:altLabel "EESV VB"@nl, "EWIV"@de, "GEIE EB"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/265#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "265";
+  skos:prefLabel "Europees economisch samenwerkingsverband zonder zetel met vestiging in België (EESV)"@nl,
+    "Europäische wirtschaftliche Interessenvereinigung ohne Sitz mit Niederlassung in Belgien (EWIV)"@de,
+    "Groupement européen d'intérêt économique sans siège avec établissement en Belgique"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/301#id> a skos:Concept;
+  skos:altLabel "FOD"@nl, "FÖD"@de, "SPF"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/301#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "301";
+  skos:prefLabel "Federale overheidsdienst"@nl, "Föderaler öffentlicher Dienst"@de,
+    "Service public fédéral"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/302#id> a skos:Concept;
+  skos:altLabel "FÖP"@de, "POD"@nl, "SPP"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/302#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "302";
+  skos:prefLabel "Föderaler öffentlicher Programmierungsdienst"@de, "Programmatorische federale overheidsdienst"@nl,
+    "Service public fédéral de programmation"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/303#id> a skos:Concept;
+  skos:altLabel "FEDEDIEN"@nl, "FödD"@de, "SERVFEDE"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/303#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "303";
+  skos:prefLabel "Andere federale dienst"@nl, "Anderer föderale Dienst"@de, "Autre service fédéral"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/310#id> a skos:Concept;
+  skos:altLabel "FlRG"@de, "REGCOMNL"@fr, "VLGEWGEM"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/310#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "310";
+  skos:prefLabel "Autorité de la Région flamande et de la Communauté flamande"@fr, "Behörde der Flämischen Region und der Flämischen Gemeinschaft"@de,
+    "Overheid van het Vlaamse Gewest en van de Vlaamse Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/320#id> a skos:Concept;
+  skos:altLabel "RW"@fr, "WG"@nl, "WR"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/320#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "320";
+  skos:prefLabel "Autorité de la Région wallonne"@fr, "Behörde der Wallonischen Region"@de,
+    "Overheid van het Waalse Gewest"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/330#id> a skos:Concept;
+  skos:altLabel "BRUHOOGE"@nl, "RBH"@de, "REGBRXCA"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/330#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "330";
+  skos:prefLabel "Autorité de la Région de Bruxelles-Capitale"@fr, "Behörde der Region Brüssel-Hauptstadt"@de,
+    "Overheid van het Brusselse Hoofdstedelijk Gewest"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/340#id> a skos:Concept;
+  skos:altLabel "COMMFRAN"@fr, "FRAGEMEE"@nl, "FrG"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/340#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "340";
+  skos:prefLabel "Autorité de la Communauté française"@fr, "Behörde der Französischen Gemeinschaft"@de,
+    "Overheid van de Franse Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/350#id> a skos:Concept;
+  skos:altLabel "COMGERMA"@fr, "DG"@de, "DUITGEME"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/350#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "350";
+  skos:prefLabel "Autorité de la Communauté germanophone"@fr, "Behörde der Deutschsprachigen Gemeinschaft"@de,
+    "Overheid van de Duitstalige Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/370#id> a skos:Concept;
+  skos:altLabel "AFFECO"@fr, "ECOZAKEN"@nl, "MWA"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "370";
+  skos:prefLabel "Ministerie van Economische Zaken"@nl, "Ministerium der Wirtschaftsangelegenheiten"@de,
+    "Ministère des Affaires économiques"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/371#id> a skos:Concept;
+  skos:altLabel "AE"@fr, "BZ"@nl, "MAA"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "371";
+  skos:prefLabel "Ministerie van Buitenlandse Zaken, Buitenlandse handel en Ontwikkelingssamenwerking"@nl,
+    "Ministerium der Auswärtigen Angelegenheiten, des Außenhandels und der Entwicklungszusammenarbeit"@de,
+    "Ministère des Affaires étrangères, Commerce extérieur et Coopération au Développement"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/372#id> a skos:Concept;
+  skos:altLabel "LANDMIN"@nl, "MINAGRI."@fr, "ML"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "372";
+  skos:prefLabel "Ministerie van Landbouw"@nl, "Ministerium der Landwirtschaft"@de,
+    "Ministère de l'Agriculture"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/373#id> a skos:Concept;
+  skos:altLabel "MIDDENST"@nl, "MOYENNES"@fr, "MnMittel"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "373";
+  skos:prefLabel "Ministerie van Middenstand"@nl, "Ministerium des Mittelstands"@de,
+    "Ministère des Classes moyennes"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/374#id> a skos:Concept;
+  skos:altLabel "MINCOMM"@fr, "MV"@de, "VERKEER"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "374";
+  skos:prefLabel "Ministerie van Verkeerswerken"@nl, "Ministerium des Verkehrswesens"@de,
+    "Ministère des Communications"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/375#id> a skos:Concept;
+  skos:altLabel "MD"@fr, "MD"@nl, "VM"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "375";
+  skos:prefLabel "Ministerie van Defensie"@nl, "Ministère de la Défense"@fr, "Verteidigungsministerium"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/376#id> a skos:Concept;
+  skos:altLabel "MENC"@fr, "MNOC"@nl, "MUK"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "376";
+  skos:prefLabel "Ministerie van Nationale Opvoeding en Cultuur"@nl, "Ministerium des Unterrichtswesens und der Kultur"@de,
+    "Ministère de l'Éducation nationale et de la Culture"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/377#id> a skos:Concept;
+  skos:altLabel "MBA"@de, "MET"@fr, "MTA"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "377";
+  skos:prefLabel "Ministerie van Tewerkstelling en Arbeid"@nl, "Ministerium der Beschäftigung und der Arbeit"@de,
+    "Ministère de l'Emploi et du Travail"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/378#id> a skos:Concept;
+  skos:altLabel "MF"@de, "MINFIN"@fr, "MINFIN"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "378";
+  skos:prefLabel "Ministerie van Financiën"@nl, "Ministerium der Finanzen"@de, "Ministère des Finances"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/379#id> a skos:Concept;
+  skos:altLabel "MBZ"@nl, "MI"@de, "MININT"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "379";
+  skos:prefLabel "Ministerie van Binnenlandse Zaken"@nl, "Ministerium des Innern"@de,
+    "Ministère de l'Intérieur"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/380#id> a skos:Concept;
+  skos:altLabel "MINJUST"@fr, "MINJUST"@nl, "MJ"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "380";
+  skos:prefLabel "Ministerie van Justitie"@nl, "Ministerium der Justiz"@de, "Ministère de la Justice"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/381#id> a skos:Concept;
+  skos:altLabel "MPS"@fr, "MS"@de, "MSV"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "381";
+  skos:prefLabel "Ministerie van Sociale Voorzorg"@nl, "Ministerium der Sozialfürsorge"@de,
+    "Ministère de la Prévoyance sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/382#id> a skos:Concept;
+  skos:altLabel "MSPF"@fr, "MVF"@de, "MVG"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "382";
+  skos:prefLabel "Ministerie van Volksgezondheid en Gezin"@nl, "Ministerium der Volksgesundheit und der Familie"@de,
+    "Ministère de la Santé publique et de la Famille"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/383#id> a skos:Concept;
+  skos:altLabel "DnstPrem"@de, "FIRSTMIN"@fr, "FIRSTMIN"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "383";
+  skos:prefLabel "Diensten van de Eerste Minister"@nl, "Dienststellen des Premierministers"@de,
+    "Services du Premier Ministre"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/384#id> a skos:Concept;
+  skos:altLabel "MCI"@fr, "MVI"@de, "MVI"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "384";
+  skos:prefLabel "Ministerie van Verkeer en Infrastructuur"@nl, "Ministerium des Verkehrswesens und der Infrastruktur"@de,
+    "Ministère des Communications et de l'Infrastructure"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/385#id> a skos:Concept;
+  skos:altLabel "MCF"@fr, "MFlG"@de, "MVG"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "385";
+  skos:prefLabel "Ministerie van de Vlaamse Gemeenschap"@nl, "Ministerium der Flämischen Gemeinschaft"@de,
+    "Ministère de la Communauté flamande"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/386#id> a skos:Concept;
+  skos:altLabel "MCF"@fr, "MFG"@nl, "MFrG"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "386";
+  skos:prefLabel "Ministerie van de Franse Gemeenschap"@nl, "Ministerium der Französischen Gemeinschaft"@de,
+    "Ministère de la Communauté française"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/387#id> a skos:Concept;
+  skos:altLabel "MBHG"@nl, "MRBC"@fr, "MRBH"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "387";
+  skos:prefLabel "Ministerie van het Brusselse Hoofdstedelijk Gewest"@nl, "Ministerium der Region Brüssel-Hauptstadt"@de,
+    "Ministère de la Région de Bruxelles-Capitale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/388#id> a skos:Concept;
+  skos:altLabel "MRW"@fr, "MWG"@nl, "MWR"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "388";
+  skos:prefLabel "Ministerie van het Waalse Gewest"@nl, "Ministerium der Wallonischen Region"@de,
+    "Ministère de la Région wallonne"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/389#id> a skos:Concept;
+  skos:altLabel "MCG"@fr, "MDG"@de, "MDG"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "389";
+  skos:prefLabel "Ministerie van de Duitstalige Gemeenschap"@nl, "Ministerium der Deutschsprachigen Gemeinschaft"@de,
+    "Ministère de la Communauté germanophone"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/390#id> a skos:Concept;
+  skos:altLabel "MAZ"@nl, "MFP"@fr, "MÖD"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "390";
+  skos:prefLabel "Ministerie van Ambtenarenzaken"@nl, "Ministerium des Öffentlichen Dienstes"@de,
+    "Ministère de la Fonction publique"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/391#id> a skos:Concept;
+  skos:altLabel "MCMA"@fr, "MML"@de, "MML"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "391";
+  skos:prefLabel "Ministerie van Middenstand en Landbouw"@nl, "Ministerium des Mittelstands und der Landwirtschaft"@de,
+    "Ministère des Classes moyennes et de l'Agriculture"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/392#id> a skos:Concept;
+  skos:altLabel "MASSPE"@fr, "MSAVU"@de, "MSZVL"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "392";
+  skos:prefLabel "Ministerie van Sociale Zaken, Volksgezondheid en Leefmilieu"@nl, "Ministerium der Sozialen Angelegenheiten, der Volksgesundheit und der Umwelt"@de,
+    "Ministère des Affaires sociales, de la Santé publique et de l'Environnement"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/393#id> a skos:Concept;
+  skos:altLabel "ANDERE"@nl, "DIVERS"@fr, "Sonstige"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "393";
+  skos:prefLabel "Andere"@nl, "Divers"@fr, "Sonstige"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/400#id> a skos:Concept;
+  skos:altLabel "AUTOPROV"@fr, "PROVOVER"@nl, "Provbehö"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/400#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "400";
+  skos:prefLabel "Autorité provinciale"@fr, "Provinciale overheid"@nl, "Provinzialbehörde"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/401#id> a skos:Concept;
+  skos:altLabel "ORG PPO"@nl, "ORGAPL"@fr, "St. PLV"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/401#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "401";
+  skos:prefLabel "Organisme immatriculé par l'ONSS-APL"@fr, "Organisme ingeschreven door de RSZ PPO"@nl,
+    "Vom LASSPLV eingetragene Stelle"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2006-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> a skos:Concept;
+  skos:altLabel "COMMUNES"@fr, "GEMEENTE"@nl, "Gemeinde"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/411#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "411";
+  skos:prefLabel "Stad / gemeente"@nl, "Stadt / Gemeinde"@de, "Ville / commune"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> a skos:Concept;
+  skos:altLabel "CPAS"@fr, "OCMW"@nl, "ÖSHZ"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/412#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "412";
+  skos:prefLabel "Centre public d'action sociale"@fr, "Openbaar centrum voor maatschappelijk welzijn"@nl,
+    "Öffentliches Sozialhilfezentrum"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> a skos:Concept;
+  skos:altLabel "LOKPOL"@nl, "LP"@de, "POLLOC"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/413#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "413";
+  skos:prefLabel "Lokale Polizeizone"@de, "Lokale politiezone"@nl, "Police locale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> a skos:Concept;
+  skos:altLabel "IC"@fr, "IC"@nl, "IK"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/414#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "414";
+  skos:prefLabel "Intercommunale"@fr, "Intercommunale"@nl, "Interkommunale"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/415#id> a skos:Concept;
+  skos:altLabel "APROJ"@fr, "PROJ V"@nl, "Prjverng"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/415#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "415";
+  skos:prefLabel "Association de projet"@fr, "Projectvereniging"@nl, "Projektvereinigung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> a skos:Concept;
+  skos:altLabel "ASS SERV"@fr, "DIENSTV"@nl, "DlvFL"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/416#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "416";
+  skos:prefLabel "Association prestataire de services (Région flamande)"@fr, "Dienstleistungsvereinigung (Flämische Region)"@de,
+    "Dienstverlenende vereniging (Vlaams Gewest)"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> a skos:Concept;
+  skos:altLabel "ACMISS"@fr, "BVerFL"@de, "OPDRAVER"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/417#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "417";
+  skos:prefLabel "Association chargée de mission (Région flamande)"@fr, "Beauftragte Vereinigung (Flämische Region)"@de,
+    "Opdrachthoudende vereniging (Vlaams Gewest)"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/418#id> a skos:Concept;
+  skos:altLabel "AUTOGEMB"@nl, "AutGemRg"@de, "RCOMAUT"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/418#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "418";
+  skos:prefLabel "Autonome Gemeinderegie"@de, "Autonoom gemeentebedrijf"@nl, "Régie communale autonome"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/419#id> a skos:Concept;
+  skos:altLabel "AUTOPRB"@nl, "AutPrvRg"@de, "RPROVAUT"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/419#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "419";
+  skos:prefLabel "Autonome Provinzialregie"@de, "Autonoom provinciebedrijf"@nl, "Régie provinciale autonome"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/420#id> a skos:Concept;
+  skos:altLabel "Ass.CPAS"@fr, "Ver.OCMW"@nl, "VÖSHZ"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/420#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "420";
+  skos:prefLabel "Association de CPAS"@fr, "Vereinigung von öffentlichen Sozialhilfezentren"@de,
+    "Vereniging van OCMW's"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/451#id> a skos:Concept;
+  skos:altLabel "LPA"@de, "ONP"@fr, "RVP"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "451";
+  skos:prefLabel "Beim LPA eingetragene Stellen"@de, "Organismen ingeschreven voorde R.V.P."@nl,
+    "Organismes immatriculés pour l'O.N.P."@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/452#id> a skos:Concept;
+  skos:altLabel "OIAP"@fr, "OIAP"@nl, "VPeSt."@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "452";
+  skos:prefLabel "Bei der Verwaltung der Pensionen eingetragene Stelle"@de, "Organisme immatriculé pour l'Administration des Pensions"@fr,
+    "Organisme ingeschreven voor de Administratie van de Pensioenen"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/453#id> a skos:Concept;
+  skos:altLabel "BOZBVGB"@nl, "BnausGoN"@de, "SESEBCB"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "453";
+  skos:prefLabel "Buitenlandse onderneming zonder Belgische vestiging genoteerd op de beurs"@nl,
+    "Börsennotierte ausländische Gesellschaft ohne Niederlassung in Belgien"@de, "Société étrangère sans établissement belge cotée en bourse"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/454#id> a skos:Concept;
+  skos:altLabel "AusGmImm"@de, "BOOGBE"@nl, "SEBIBE"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "454";
+  skos:prefLabel "Ausländische Gesellschaft mit einer Immobilie in Belgien (ohne Rechtspersönlichkeit)"@de,
+    "Buitenlandse onderneming met onroerend goed in België (zonder rechtspersoonlijkheid)"@nl,
+    "Société étrangère avec un bien immobilier en Belgique (sans personnalité juridique)"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/506#id> a skos:Concept;
+  skos:altLabel "CVOA SO"@nl, "GuHsZ"@de, "SCRI FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/506#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "506";
+  skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Genossenschaft mit unbeschränkter Haftung mit sozialer Zielsetzung"@de, "Société coopérative à responsabilité illimitée à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/508#id> a skos:Concept;
+  skos:altLabel "CVBA SO"@nl, "GbHsZ"@de, "SCRL FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/508#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "508";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Genossenschaft mit beschränkter Haftung mit sozialer Zielsetzung"@de, "Société coopérative à responsabilité limitée à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/510#id> a skos:Concept;
+  skos:altLabel "EBVBA SO"@nl, "PgbHsZ"@de, "SPRLU FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/510#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "510";
+  skos:prefLabel "Eenpersoons besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Privatgesellschaft mit beschränkter Haftung mit sozialer Zielsetzung mit einem Alleingesellschafter"@de,
+    "Société privée à responsabilité limitée unipersonnelle à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-02-28T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> a skos:Concept;
+  skos:altLabel "OHGmsZ"@de, "SNC FS"@fr, "VOF SO"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/511#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "511";
+  skos:prefLabel "Offene Handelsgesellschaft mit sozialer Zielsetzung"@de, "Société en nom collectif à finalité sociale"@fr,
+    "Vennootschap onder firma met een sociaal oogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> a skos:Concept;
+  skos:altLabel "EKGmsZ"@de, "GCW SO"@nl, "SCS FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/512#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "512";
+  skos:prefLabel "Einfache Kommanditgesellschaft mit sozialer Zielsetzung"@de, "Gewone commanditaire vennootschap met een sociaal oogmerk"@nl,
+    "Société en commandite simple à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> a skos:Concept;
+  skos:altLabel "CVA SO"@nl, "KGaAmsZ"@de, "SCA FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/513#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "513";
+  skos:prefLabel "Commanditaire vennootschap op aandelen met een sociaal oogmerk"@nl,
+    "Kommanditgesellschaft auf Aktien mit sozialer Zielsetzung"@de, "Société en commandite par actions à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> a skos:Concept;
+  skos:altLabel "AGmsZ"@de, "NV SO"@nl, "SA FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/514#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "514";
+  skos:prefLabel "Aktiengesellschaft mit sozialer Zielsetzung"@de, "Naamloze vennootschap met een sociaal oogmerk"@nl,
+    "Société anonyme à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> a skos:Concept;
+  skos:altLabel "BVBA SO"@nl, "PmbHsZ"@de, "SPRL FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/515#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "515";
+  skos:prefLabel "Besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Privatgesellschaft mit beschränkter Haftung mit sozialer Zielsetzung"@de, "Société privée à responsabilité limitée à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> a skos:Concept;
+  skos:altLabel "ESV SO"@nl, "GIE FS"@fr, "WIVmsZ"@de;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/560#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "560";
+  skos:prefLabel "Economisch samenwerkingsverband met een sociaal oogmerk"@nl, "Groupement d'intérêt économique à finalité sociale"@fr,
+    "Wirtschaftliche Interessenvereinigung mit sozialer Zielsetzung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/606#id> a skos:Concept;
+  skos:altLabel "CVOA SO"@nl, "GuHsZöfr"@de, "SCRI FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/606#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "606";
+  skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Genossenschaft mit unbeschränkter Haftung mit sozialer Zielsetzung"@de, "Société coopérative à responsabilité illimitée et à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/608#id> a skos:Concept;
+  skos:altLabel "CVBA SO"@nl, "GbHsZör"@de, "SCRL FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/608#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "608";
+  skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Genossenschaft mit beschränkter Haftung mit sozialer Zielsetzung"@de, "Société coopérative à responsabilité limitée à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/614#id> a skos:Concept;
+  skos:altLabel "AGmsZ"@de, "NV SO"@nl, "SA FS"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/614#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "614";
+  skos:prefLabel "Aktiengesellschaft mit sozialer Zielsetzung"@de, "Naamloze vennootschap met een sociaal oogmerk"@nl,
+    "Société anonyme à finalité sociale"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/651#id> a skos:Concept;
+  skos:altLabel "FORME FS"@fr, "RFmsZ"@de, "VORM SO"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/651#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "651";
+  skos:prefLabel "Andere vorm met een sociaal oogmerk van publiek recht"@nl, "Andere öffentlich-rechtliche Rechtsform mit sozialer Zielsetzung"@de,
+    "Autre forme à finalité sociale de droit public"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/701#id> a skos:Concept;
+  skos:altLabel "OMHV"@nl, "SCI"@fr, "UHG"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "701";
+  skos:prefLabel "Onrechtmatige handelsvennootschap"@nl, "Société commerciale irrégulière"@fr,
+    "Unrechtmäßige Handelsgesellschaft"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/702#id> a skos:Concept;
+  skos:altLabel "GaR"@de, "MS"@nl, "SDC"@fr;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/702#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "702";
+  skos:prefLabel "Gesellschaft des allgemeinen Rechts"@de, "Maatschap"@nl, "Société de droit commun"@fr;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> a skos:Concept;
+  skos:altLabel "GG"@de, "SM"@fr, "TH"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "703";
+  skos:prefLabel "Gelegenheitsgesellschaft"@de, "Société momentanée"@fr, "Tijdelijke handelsvennootschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> a skos:Concept;
+  skos:altLabel "SG"@de, "SH"@nl, "SI"@fr;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "704";
+  skos:prefLabel "Société interne"@fr, "Stille Gesellschaft"@de, "Stille handelsvennootschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> a skos:Concept;
+  skos:altLabel "GVoRP"@de, "SASPJ"@fr, "VVZRL"@nl;
+  skos:exactMatch <http://vocab.belgif.be/auth/cbe-org2003/721#id>;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "721";
+  skos:prefLabel "Gesellschaften oder Vereinigungen ohne Rechtspersönlichkeit"@de, "Société ou association sans personnalité juridique"@fr,
+    "Vennootschap of vereniging zonder rechtspersoonlijkheid"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/722#id> a skos:Concept;
+  skos:altLabel "AM"@fr, "Arbeitg"@de, "TV"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "722";
+  skos:prefLabel "Arbeitsgemeinschaft"@de, "Association momentanée"@fr, "Tijdelijke vereniging"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2001-02-06T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/723#id> a skos:Concept;
+  skos:altLabel "AFRAIS"@fr, "KV"@de, "KV"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "723";
+  skos:prefLabel "Association de frais"@fr, "Kostendelende vereniging"@nl, "Kostenteilende Vereinigung"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/724#id> a skos:Concept;
+  skos:altLabel "Gewerksc"@de, "SYNDIC"@fr, "VAKBOND"@nl;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "724";
+  skos:prefLabel "Gewerkschaft"@de, "Syndicat"@fr, "Vakbond"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-02-18T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/790#id> a skos:Concept;
+  skos:altLabel "DSPJ"@fr, "DZRL"@nl, "SoRP"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "790";
+  skos:prefLabel "Divers sans personnalité juridique"@fr, "Diversen zonder rechtspersoonlijkheid"@nl,
+    "Sonstige - ohne Rechtspersönlichkeit"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/999#id> a skos:Concept;
+  skos:altLabel "OUTONSS"@fr, "OUTRSZ"@nl, "OutLASS"@de;
+  skos:inScheme <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  skos:notation "999";
+  skos:prefLabel "Forme juridique inconnue (ONSS)"@fr, "Ongekende rechtsvorm RSZ"@nl,
+    "Unbekannte Rechtsform beim LASS"@de;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+if.be/auth/cbe-org1800#id> ;
+	<https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime ;
+	<https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime .
+:prefLabel "Commanditaire vennootschap op aandelen"@nl,
+    "Société en commandite par actions"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> skos:prefLabel "Commanditaire vennootschap op aandelen met een sociaal oogmerk"@nl,
+    "Société en commandite par actions à finalité sociale"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/012#id> skos:prefLabel "Gewone commanditaire vennootschap"@nl,
+    "Société en commandite simple"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> skos:prefLabel "Gewone commanditaire vennootschap met een sociaal oogmerk"@nl,
+    "Société en commandite simple à finalité sociale"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> skos:prefLabel "Société en formation"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/011#id> skos:prefLabel "Société en nom collectif"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> skos:prefLabel "Société en nom collectif à finalité sociale"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> skos:prefLabel "Société interne"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> skos:prefLabel "Société momentanée"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> skos:prefLabel "Société ou association sans personnalité juridique"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/015#id> skos:prefLabel "Besloten vennootschap met beperkte aansprakelijkheid"@nl,
+    "Société privée à responsabilité limitée"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/010#id> skos:prefLabel "Eenpersoons BVBA"@nl,
+    "Société privée à responsabilité limitée unipersonnelle"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/510#id> skos:prefLabel "Eenpersoons besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Société privée à responsabilité limitée unipersonnelle à finalité sociale"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> skos:prefLabel "Besloten vennootschap met beperkte aansprakelijkheid met een sociaal oogmerk"@nl,
+    "Société privée à responsabilité limitée à finalité sociale"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/230#id> skos:prefLabel "Buitenlandse onderneming met onroerend goed in België (met rechtspersoonlijkheid)"@nl,
+    "Société étrangère avec un bien immobilier en Belgique (avec personnalité juridique)"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/454#id> skos:prefLabel "Buitenlandse onderneming met onroerend goed in België (zonder rechtspersoonlijkheid)"@nl,
+    "Société étrangère avec un bien immobilier en Belgique (sans personnalité juridique)"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> skos:prefLabel "Buitenlandse onderneming zonder Belgische vestiging met vertegenwoordiger voor BTW"@nl,
+    "Société étrangère sans établissement belge avec représentant responsable TVA"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/453#id> skos:prefLabel "Buitenlandse onderneming zonder Belgische vestiging genoteerd op de beurs"@nl,
+    "Société étrangère sans établissement belge cotée en bourse"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/724#id> skos:prefLabel "Syndicat"@fr, "Vakbond"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/128#id> skos:prefLabel "Eredienst"@nl, "Temporel des cultes / Établissement cultuel public"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/020#id> skos:prefLabel "Beroepsvereniging"@nl,
+    "Union professionnelle"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> skos:prefLabel "Stad / gemeente"@nl,
+    "Ville / commune"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/110#id> skos:prefLabel "Rijk, Provincie, Gewest, Gemeenschap"@nl,
+    "État, Province, Région, Communauté"@fr.
+
+<http://vocab.belgif.be/auth/cbe-org1800/393#id> skos:prefLabel "Andere"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/051#id> skos:prefLabel "Andere privaatrechtelijke vorm met rechtspersoonlijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> skos:prefLabel "Berg van Barmhartigheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/123#id> skos:prefLabel "Beroepsvereniging / Orde"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/030#id> skos:prefLabel "Buitenlandse onderneming"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/023#id> skos:prefLabel "Buitenlandse privaatrechtelijke verenigingen met vestiging, agentschap, kantoor of bijhuis in België"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> skos:prefLabel "Burgerlijke Vennootschap onder vorm van Landbouwvennootschap (BV LV)"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van besloten vennootschap met beperkte aansprakelijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van commanditaire vennootschap op aandelen"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met beperkte aansprakelijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van coöperatieve vennootschap met onbeperkte aansprakelijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van gewone commanditaire vennootschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van naamloze vennootschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> skos:prefLabel "Burgerlijke vennootschap onder vorm van vennootschap onder firma"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid van publiek recht"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/109#id> skos:prefLabel "Coöperatieve vennootschap met beperkte aansprakelijkheid, bij wijze van deelneming, van publiek recht"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/106#id> skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid van publiek recht"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> skos:prefLabel "Coöperatieve vennootschap met onbeperkte aansprakelijkheid, bij wijze van deelneming van publiek recht"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/116#id> skos:prefLabel "Coöperatieve vennootschap van publiek recht (oud statuut)"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> skos:prefLabel "Dienstverlenende vereniging (Vlaams Gewest)"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/790#id> skos:prefLabel "Diversen zonder rechtspersoonlijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/060#id> skos:prefLabel "Economisch samenwerkingsverband "@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> skos:prefLabel "Economisch samenwerkingsverband met een sociaal oogmerk"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/260#id> skos:prefLabel "Economisch samenwerkingsverband zonder zetel met vestiging in België"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/065#id> skos:prefLabel "Europees economisch samenwerkingsverband"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> skos:prefLabel "Europees economisch samenwerkingsverband zonder zetel met vestiging in België (EESV)"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/018#id> skos:prefLabel "Instelling van openbaar nut"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> skos:prefLabel "Instelling zonder winstoogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> skos:prefLabel "Intercommunale"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/125#id> skos:prefLabel "Internationale vereniging zonder winstoogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/022#id> skos:prefLabel "Internationale wetenschappelijke organisatie van Belgisch recht"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/723#id> skos:prefLabel "Kostendelende vereniging"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> skos:prefLabel "Lokale politiezone"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/390#id> skos:prefLabel "Ministerie van Ambtenarenzaken"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/379#id> skos:prefLabel "Ministerie van Binnenlandse Zaken"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/371#id> skos:prefLabel "Ministerie van Buitenlandse Zaken, Buitenlandse handel en Ontwikkelingssamenwerking"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/375#id> skos:prefLabel "Ministerie van Defensie"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/370#id> skos:prefLabel "Ministerie van Economische Zaken"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/378#id> skos:prefLabel "Ministerie van Financiën"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/380#id> skos:prefLabel "Ministerie van Justitie"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/372#id> skos:prefLabel "Ministerie van Landbouw"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/373#id> skos:prefLabel "Ministerie van Middenstand"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/391#id> skos:prefLabel "Ministerie van Middenstand en Landbouw"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/376#id> skos:prefLabel "Ministerie van Nationale Opvoeding en Cultuur"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/381#id> skos:prefLabel "Ministerie van Sociale Voorzorg"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/392#id> skos:prefLabel "Ministerie van Sociale Zaken, Volksgezondheid en Leefmilieu"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/377#id> skos:prefLabel "Ministerie van Tewerkstelling en Arbeid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/384#id> skos:prefLabel "Ministerie van Verkeer en Infrastructuur"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/374#id> skos:prefLabel "Ministerie van Verkeerswerken"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/382#id> skos:prefLabel "Ministerie van Volksgezondheid en Gezin"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/389#id> skos:prefLabel "Ministerie van de Duitstalige Gemeenschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/386#id> skos:prefLabel "Ministerie van de Franse Gemeenschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/385#id> skos:prefLabel "Ministerie van de Vlaamse Gemeenschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/387#id> skos:prefLabel "Ministerie van het Brusselse Hoofdstedelijk Gewest"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/388#id> skos:prefLabel "Ministerie van het Waalse Gewest"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/014#id> skos:prefLabel "Naamloze vennootschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> skos:prefLabel "Naamloze vennootschap met een sociaal oogmerk"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/614#id> skos:prefLabel "Naamloze vennootschap met een sociaal oogmerk"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/114#id> skos:prefLabel "Naamloze vennootschap van publiek recht"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/021#id> skos:prefLabel "Onderlinge verzekeringsvereniging / Gemeenschappelijke verzekeringskas van privaat recht"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/121#id> skos:prefLabel "Onderlinge verzekeringsvereniging van publiek recht"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/999#id> skos:prefLabel "Ongekende rechtsvorm RSZ"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/701#id> skos:prefLabel "Onrechtmatige handelsvennootschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> skos:prefLabel "Opdrachthoudende vereniging (Vlaams Gewest)"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> skos:prefLabel "Openbaar centrum voor maatschappelijk welzijn"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/124#id> skos:prefLabel "Openbare instelling"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/401#id> skos:prefLabel "Organisme ingeschreven door de RSZ PPO"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/452#id> skos:prefLabel "Organisme ingeschreven voor de Administratie van de Pensioenen"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/451#id> skos:prefLabel "Organismen ingeschreven voorde R.V.P."@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/350#id> skos:prefLabel "Overheid van de Duitstalige Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/340#id> skos:prefLabel "Overheid van de Franse Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/330#id> skos:prefLabel "Overheid van het Brusselse Hoofdstedelijk Gewest"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/310#id> skos:prefLabel "Overheid van het Vlaamse Gewest en van de Vlaamse Gemeenschap"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/320#id> skos:prefLabel "Overheid van het Waalse Gewest"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/129#id> skos:prefLabel "Polder / Watering"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> skos:prefLabel "Private stichting"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/302#id> skos:prefLabel "Programmatorische federale overheidsdienst"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/415#id> skos:prefLabel "Projectvereniging"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/400#id> skos:prefLabel "Provinciale overheid"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> skos:prefLabel "Stille handelsvennootschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> skos:prefLabel "Tijdelijke handelsvennootschap"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/722#id> skos:prefLabel "Tijdelijke vereniging"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> skos:prefLabel "Vennootschap in oprichting"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> skos:prefLabel "Vennootschap of vereniging zonder rechtspersoonlijkheid"@nl.
+
+<http://vocab.belgif.be/auth/cbe-org1800/011#id> skos:prefLabel "Vennootschap onder firma"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> skos:prefLabel "Vennootschap onder firma met een sociaal oogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/420#id> skos:prefLabel "Vereniging van OCMW's"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/070#id> skos:prefLabel "Vereniging van mede-eigenaars"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/017#id> skos:prefLabel "Vereniging zonder winstoogmerk"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/117#id> skos:prefLabel "Vereniging zonder winstoogmerk van publiek recht"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/019#id> skos:prefLabel "Ziekenfonds / Maatschappij van onderlinge bijstand / Landsbond van ziekenfondsen"@nl;
+  skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/006#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/007#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/008#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/009#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/010#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/012#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/013#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/015#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/016#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1993-10-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/020#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/023#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/025#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/030#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/040#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/051#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/106#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/109#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1996-07-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/110#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/116#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "1993-10-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/123#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/128#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/151#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/160#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/230#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/260#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/301#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/303#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/370#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/371#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/372#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/373#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/374#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/375#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/376#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/377#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/378#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/379#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/380#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/381#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/382#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/383#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/384#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/385#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/386#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/387#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/388#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/389#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/390#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/391#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/392#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/393#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/401#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2006-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/418#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/419#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/451#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/452#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/453#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/454#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/506#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/508#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/510#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-02-28T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/606#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/608#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/614#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/651#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/701#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/702#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/722#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2001-02-06T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/723#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/724#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-02-18T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/790#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/999#id> skos:topConceptOf <http://vocab.belgif.be/auth/cbe-org1800#id>;
+  <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/void#cbe-org1800> foaf:homepage <http://vocab.belgif.be/>.
+
+<http://vocab.belgif.be/auth/cbe-org1800/018#id> <https://schema.org/endDate> "2003-06-30T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/010#id> <https://schema.org/endDate> "2003-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/040#id> <https://schema.org/endDate> "2003-07-01T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> <https://schema.org/endDate> "2004-02-25T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/022#id> <https://schema.org/endDate> "2004-04-23T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/006#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/008#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/011#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/012#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/013#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/014#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/015#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/017#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/019#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/020#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/021#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/023#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/025#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/030#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/051#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/060#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/065#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/070#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/114#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/117#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/121#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/124#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/125#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/129#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/151#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/160#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/301#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/302#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/303#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/310#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/320#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/330#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/340#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/350#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/400#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/415#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/418#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/419#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/420#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime;
+  <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/007#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/009#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/016#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/106#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/109#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/110#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/116#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/123#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/128#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/230#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/260#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/370#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/371#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/372#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/373#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/374#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/375#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/376#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/377#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/378#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/379#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/380#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/381#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/382#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/383#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/384#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/385#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/386#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/387#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/388#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/389#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/390#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/391#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/392#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/393#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/401#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/451#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/452#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/453#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/454#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/506#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/508#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/510#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/606#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/608#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/614#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/651#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/701#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/702#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/722#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/723#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/724#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/790#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/999#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/018#id> <https://schema.org/startDate> "1800-01-11T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> <https://schema.org/startDate> "2002-05-02T00:00:00.000+01:00"^^xsd:dateTime.
+
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> <https://schema.org/startDate> "2003-04-04T00:00:00.000+01:00"^^xsd:dateTime.
+^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/114#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/117#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/121#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/124#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/125#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/129#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/151#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/160#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/301#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/302#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/303#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/310#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/320#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/330#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/340#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/350#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/400#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/415#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/418#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/419#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/420#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/506#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/508#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/651#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/702#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/006#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/007#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/008#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/009#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/010#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/011#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/012#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/013#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/014#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/015#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/016#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/017#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/019#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/020#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/021#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/022#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/023#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/025#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/030#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/040#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/051#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/060#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/065#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/070#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/106#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/107#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/108#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/109#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/110#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/114#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/116#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/117#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/121#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/123#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/124#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/125#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/127#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/128#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/129#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/151#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/160#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/200#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/206#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/208#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/211#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/212#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/213#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/214#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/215#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/225#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/230#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/235#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/260#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/265#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/301#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/302#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/303#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/310#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/320#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/330#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/340#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/350#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/370#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/371#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/372#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/373#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/374#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/375#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/376#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/377#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/378#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/379#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/380#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/381#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/382#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/383#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/384#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/385#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/386#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/387#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/388#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/389#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/390#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/391#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/392#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/393#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/400#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/401#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/411#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/412#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/413#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/414#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/415#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/416#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/417#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/418#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/419#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/420#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/451#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/452#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/453#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/454#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/506#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/508#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/510#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/511#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/512#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/513#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/514#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/515#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/560#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/606#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/608#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/614#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/651#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/701#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/702#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/703#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/704#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/721#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/722#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/723#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/724#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/790#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/999#id> <https://schema.org/startDate> "1800-01-01T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/018#id> <https://schema.org/startDate> "1800-01-11T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> <https://schema.org/startDate> "2002-05-02T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> <https://schema.org/startDate> "2003-04-04T00:00:00.000+01:00"^^xsd:dateTime.
+:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/026#id> <https://schema.org/startDate> "2002-05-02T00:00:00.000+01:00"^^xsd:dateTime.
+<http://vocab.belgif.be/auth/cbe-org1800/028#id> <https://schema.org/startDate> "2003-04-04T00:00:00.000+01:00"^^xsd:dateTime.

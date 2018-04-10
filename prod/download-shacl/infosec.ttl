@@ -1,0 +1,34 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/shacl/infosec#> a owl:Ontology;
+  rdfs:comment "Information security SHACL rules"@en, "Information security SHACL rules"@fr,
+    "Information security SHACL rules"@nl, "Information security SHACL rulez"@de;
+  rdfs:label "Inf oSec"@de, "InfoSec"@en, "InfoSec"@fr, "InfoSec"@nl.
+
+<http://vocab.belgif.be/shacl/infosec#RateShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#availability>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#confidentiality>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#integrity>
+    ], [
+      sh:datatype xsd:nonNegativeInteger;
+      sh:maxInclusive 5;
+      sh:minInclusive 0;
+      sh:path <http://vocab.belgif.be/ns/infosec#nonrepudiation>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/infosec#Rate>.

@@ -1,0 +1,508 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenempfänger (generisch)"
+    }, {
+      "@language" : "en",
+      "@value" : "Data receiver (generic)"
+    }, {
+      "@language" : "fr",
+      "@value" : "Récepteur de données (générique)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gegevensontvanger (generiek)"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datareceiverspecifictype"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/14#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Belgischer öffentlicher Dienst"
+    }, {
+      "@language" : "en",
+      "@value" : "Belgian public service"
+    }, {
+      "@language" : "fr",
+      "@value" : "Service public belge"
+    }, {
+      "@language" : "nl",
+      "@value" : "Belgische overheidsdienst"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Land im EWR"
+    }, {
+      "@language" : "en",
+      "@value" : "Country in EEA"
+    }, {
+      "@language" : "fr",
+      "@value" : "Pays de l'EEE"
+    }, {
+      "@language" : "nl",
+      "@value" : "Land in de EER"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Land außerhalb des EWR"
+    }, {
+      "@language" : "en",
+      "@value" : "Country outside EEA"
+    }, {
+      "@language" : "fr",
+      "@value" : "Pays en dehors de l'EEE"
+    }, {
+      "@language" : "nl",
+      "@value" : "Land buiten de EER"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Energie Organisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Energy organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation de l'énergie"
+    }, {
+      "@language" : "nl",
+      "@value" : "Energie organisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Umweltorganisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Environmental organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation environnementale"
+    }, {
+      "@language" : "nl",
+      "@value" : "Milieuorganisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/06#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "06"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "EU"
+    }, {
+      "@language" : "en",
+      "@value" : "EU"
+    }, {
+      "@language" : "fr",
+      "@value" : "UE"
+    }, {
+      "@language" : "nl",
+      "@value" : "EU"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/07#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "07"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Finanz-, Handels- und Zollorganisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Financial, trade and customs organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation financière, commerciale et douanière"
+    }, {
+      "@language" : "nl",
+      "@value" : "Financiële, handels- en douaneorganisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/08#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "08"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Fischereiorganisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Fisheries organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation de la pêche"
+    }, {
+      "@language" : "nl",
+      "@value" : "Visserijorganisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/09#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "09"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Humanitäre Organisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Humanitarian organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation humanitaire"
+    }, {
+      "@language" : "nl",
+      "@value" : "Humanitaire organisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/10#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "10"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Strafverfolgungsorganisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Law enforcement organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation répressive"
+    }, {
+      "@language" : "nl",
+      "@value" : "Wetshandhavingsorganisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/11#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "11"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Maritime Organisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Maritime organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation maritime"
+    }, {
+      "@language" : "nl",
+      "@value" : "Maritieme organisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/12#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "12"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Regionale Organisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Regional organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation régionale"
+    }, {
+      "@language" : "nl",
+      "@value" : "Regionale organisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/13#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "13"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "UN"
+    }, {
+      "@language" : "en",
+      "@value" : "UN"
+    }, {
+      "@language" : "fr",
+      "@value" : "ONU"
+    }, {
+      "@language" : "nl",
+      "@value" : "VN"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/14#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "14"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Rüstungskontrollorganisation"
+    }, {
+      "@language" : "en",
+      "@value" : "Arms control organization"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation de contrôle des armes"
+    }, {
+      "@language" : "nl",
+      "@value" : "Wapenbeheersingsorganisatie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-rcvrspec",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Datenempfänger (generisch)"
+    }, {
+      "@language" : "en",
+      "@value" : "Data receiver (generic)"
+    }, {
+      "@language" : "fr",
+      "@value" : "Récepteur de données (générique)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gegevensontvanger (generiek)"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-26T11:46:03.850+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR datareceiverspecifictype"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR datareceiverspecifictype"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-rcvrspec"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec/14#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-rcvrspec#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "136"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-rcvrspec"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-rcvrspec"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-rcvrspec"
+} ]

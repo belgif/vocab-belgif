@@ -1,0 +1,351 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Legaler Verarbeitungsgrund"
+    }, {
+      "@language" : "en",
+      "@value" : "Juridical base for treatment"
+    }, {
+      "@language" : "fr",
+      "@value" : "Base juridique du traitement"
+    }, {
+      "@language" : "nl",
+      "@value" : "Juridische verwerkingsgrond"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR juridicalbase"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/06#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Der Betroffene hat die Erlaubnis zur Verarbeitung seiner persönlichen Daten erteilt"
+    }, {
+      "@language" : "en",
+      "@value" : "The data subject has given permission for the processing of his personal data"
+    }, {
+      "@language" : "fr",
+      "@value" : "la personne concernée a consenti au traitement de ses données à caractère personnel pour une ou plusieurs finalités spécifiques (art.6.1a) du RGPD. Attention, le consentement doit toutefois répondre aux conditions telles que définies à l'article 7 du RGPD"
+    }, {
+      "@language" : "nl",
+      "@value" : "de betrokkene heeft toestemming gegeven voor de verwerking van zijn persoonsgegevens voor een of meer specifieke doeleinden (art.6.1a) AVG). Let op, de toestemming dient evenwel te voldoen aan de voorwaarden zoals bepaalt in art.7 AVG"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Erlaubnis der betroffene Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Permission by the person concerned"
+    }, {
+      "@language" : "fr",
+      "@value" : "consentement de la personne concernée"
+    }, {
+      "@language" : "nl",
+      "@value" : "toestemming betrokkene"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Verarbeitung ist für die Ausführung einer Vereinbarung notwendig, an der die betroffene Partei beteiligt ist"
+    }, {
+      "@language" : "en",
+      "@value" : "The processing is necessary for the execution of an agreement to which the party concerned is a party"
+    }, {
+      "@language" : "fr",
+      "@value" : "le traitement est nécessaire à l'exécution d'un contrat auquel la personne concernée est partie ou à l'exécution de mesures précontractuelles prises à la demande de celle-ci (art.6.1b) du RGPD."
+    }, {
+      "@language" : "nl",
+      "@value" : "de verwerking is noodzakelijk voor de uitvoering van een overeenkomst waarbij de betrokkene partij is, of om op verzoek van de betrokkene vóór de sluiting van een overeenkomst maatregelen te nemen (art.6.1b) AVG)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Notwendig für die Ausführung einer Vereinbarung"
+    }, {
+      "@language" : "en",
+      "@value" : "Necessary for execution of an agreement"
+    }, {
+      "@language" : "fr",
+      "@value" : "nécessaire à l'exécution du contrat"
+    }, {
+      "@language" : "nl",
+      "@value" : "noodzakelijk voor uitvoering van een overeenkomst"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Verarbeitung ist notwendig, um einer rechtlichen Verpflichtung nachzukommen, die auf dem für die Verarbeitung Verantwortlichen beruht"
+    }, {
+      "@language" : "en",
+      "@value" : "The processing is necessary to comply with a legal obligation resting on the responsible for the treatment"
+    }, {
+      "@language" : "fr",
+      "@value" : "le traitement est nécessaire au respect d'une obligation légale à laquelle le responsable du traitement est soumis (article 6.1 c) du RGPD)."
+    }, {
+      "@language" : "nl",
+      "@value" : "de verwerking is noodzakelijk om te voldoen aan een wettelijke verplichting die op de verwerkingsverantwoordelijke rust (art.6.1c) AVG)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Rechtliche Verpflichtung"
+    }, {
+      "@language" : "en",
+      "@value" : "Legal obligation"
+    }, {
+      "@language" : "fr",
+      "@value" : "obligation légale"
+    }, {
+      "@language" : "nl",
+      "@value" : "wettelijke verplichting"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Verarbeitung ist notwendig, um die lebenswichtigen Interessen der betroffenen Person oder einer anderen natürlichen Person zu schützen"
+    }, {
+      "@language" : "en",
+      "@value" : "The processing is necessary to protect the vital interests of the data subject or of another natural person"
+    }, {
+      "@language" : "fr",
+      "@value" : "le traitement est nécessaire à la sauvegarde des intérêts vitaux de la personne concernée ou d’une autre personne physique (art.6.1d) du RGPD."
+    }, {
+      "@language" : "nl",
+      "@value" : "de verwerking is noodzakelijk om de vitale belangen van de betrokkene of van een andere natuurlijke persoon te beschermen (art.6.1d) AVG)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Schutz lebenswichtiger Interessen der betroffenen Person"
+    }, {
+      "@language" : "en",
+      "@value" : "Protect the vital interests of the person concerned"
+    }, {
+      "@language" : "fr",
+      "@value" : "sauvegarde des intérêts vitaux de la personne concernée"
+    }, {
+      "@language" : "nl",
+      "@value" : "beschermen van vitale belangen van de betrokkene"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Verarbeitung ist für die Erfüllung einer Aufgabe von allgemeinem Interesse erforderlich"
+    }, {
+      "@language" : "en",
+      "@value" : "The processing is necessary for the fulfillment of a task of general interest"
+    }, {
+      "@language" : "fr",
+      "@value" : "le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont est investi le responsable du traitement (art.6.1e) du RGPD."
+    }, {
+      "@language" : "nl",
+      "@value" : "de verwerking is noodzakelijk voor de vervulling van een taak van algemeen belang of van een taak in het kader van de uitoefening van het openbaar gezag dat aan de verwerkingsverantwoordelijke is opgedragen (art.6.1e) AVG)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Aufgabe von allgemeinem Interesse oder Ausübung öffentlicher Gewalt"
+    }, {
+      "@language" : "en",
+      "@value" : "Task of general interest or exercise of public authority"
+    }, {
+      "@language" : "fr",
+      "@value" : "tâche d'intérêt général ou exercice de l'autorité publique"
+    }, {
+      "@language" : "nl",
+      "@value" : "taak van algemeen belang of uitoefening van het openbaar gezag"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/06#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "06"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#note" : [ {
+      "@language" : "de",
+      "@value" : "Die Verarbeitung ist zur Verteidigung der berechtigten Interessen des für die Verarbeitung Verantwortlichen oder eines Dritten erforderlich, es sei denn, die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten erfordern, überwiegen diese Interessen, insbesondere wenn die betroffene Person ist ein Kind"
+    }, {
+      "@language" : "en",
+      "@value" : "Processing is necessary for the defense of the legitimate interests of the controller or of a third party, except where the interests or fundamental rights and fundamental freedoms of the data subject which require the protection of personal data outweigh those interests, in particular when the person concerned is a child"
+    }, {
+      "@language" : "fr",
+      "@value" : "le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers, à moins que ne prévalent les intérêts ou les libertés et droits fondamentaux de la personne concernée qui exigent une protection des données à caractère personnel, notamment lorsque la personne concernée est un enfant (art.6.1f) du RGPD."
+    }, {
+      "@language" : "nl",
+      "@value" : "de verwerking is noodzakelijk voor de behartiging van de gerechtvaardigde belangen van de verwerkingsverantwoordelijke of van een derde, behalve wanneer de belangen of de grondrechten en de fundamentele vrijheden van de betrokkene die tot bescherming van persoonsgegevens nopen, zwaarder wegen dan die belangen, met name wanneer de betrokkene een kind is (art.6.1f) AVG)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Berechtigte Interessen des Verantwortlichen oder eines Dritten"
+    }, {
+      "@language" : "en",
+      "@value" : "Justified interests of the controller or of a third party"
+    }, {
+      "@language" : "fr",
+      "@value" : "intérêts légitimes du responsable de traitement ou d’un tiers"
+    }, {
+      "@language" : "nl",
+      "@value" : "gerechtvaardigde belangen van de verwerkingsverantwoordelijke of van een derde"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#gdpr-juridical",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Legaler Verarbeitungsgrund"
+    }, {
+      "@language" : "en",
+      "@value" : "Juridical base for treatment"
+    }, {
+      "@language" : "fr",
+      "@value" : "Base juridique du traitement"
+    }, {
+      "@language" : "nl",
+      "@value" : "Juridische verwerkingsgrond"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:32.019+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "en",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "fr",
+      "@value" : "GDPR juridicalbase"
+    }, {
+      "@language" : "nl",
+      "@value" : "GDPR juridicalbase"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/gdpr-juridical"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical/06#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/gdpr-juridical#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "87"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/gdpr-juridical"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/gdpr-juridical"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/gdpr-juridical"
+} ]

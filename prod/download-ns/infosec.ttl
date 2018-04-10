@@ -1,0 +1,42 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/ns/infosec#genericRating> a rdf:Property, owl:DataProperty;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:range xsd:nonNegativeInteger.
+
+<http://vocab.belgif.be/ns/infosec#hasRating> a rdf:Property, owl:ObjectProperty;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Rating"@de, "Rating"@en, "Rating"@fr, "heeft rating"@nl;
+  rdfs:range <http://vocab.belgif.be/ns/infosec#Rating>.
+
+<http://vocab.belgif.be/ns/infosec#Rating> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Rating"@de, "Rating"@en, "Rating"@fr, "Rating"@nl.
+
+<http://vocab.belgif.be/ns/infosec#> a owl:Ontology;
+  rdfs:comment "Information security ontology"@de, "Information security ontology"@en,
+    "Information security ontology"@fr, "Information security ontology"@nl;
+  rdfs:label "InfoSec"@de, "InfoSec"@en, "InfoSec"@fr, "InfoSec"@nl;
+  owl:versionInfo "Draft 2018-03-21".
+
+<http://vocab.belgif.be/ns/infosec#availability> rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Availability";
+  rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.
+
+<http://vocab.belgif.be/ns/infosec#confidentiality> rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Confidentiality";
+  rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.
+
+<http://vocab.belgif.be/ns/infosec#integrity> rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Integrity";
+  rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.
+
+<http://vocab.belgif.be/ns/infosec#nonrepudiation> rdfs:isDefinedBy <http://vocab.belgif.be/ns/infosec#>;
+  rdfs:label "Non-repudiation";
+  rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.
+Rating>.
+<http://vocab.belgif.be/ns/infosec#integrity> rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.
+<http://vocab.belgif.be/ns/infosec#nonrepudiation> rdfs:subPropertyOf <http://vocab.belgif.be/ns/infosec#genericRating>.

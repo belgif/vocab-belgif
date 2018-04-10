@@ -1,0 +1,31 @@
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security SHACL rulez"@de .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security SHACL rules"@en .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security SHACL rules"@fr .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#comment> "Information security SHACL rules"@nl .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "Inf oSec"@de .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@en .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@fr .
+<http://vocab.belgif.be/shacl/infosec#> <http://www.w3.org/2000/01/rdf-schema#label> "InfoSec"@nl .
+_:node1c9od19tvx251 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:node1c9od19tvx252 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:node1c9od19tvx253 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:node1c9od19tvx254 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:node1c9od19tvx251 <http://www.w3.org/ns/shacl#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx252 <http://www.w3.org/ns/shacl#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx253 <http://www.w3.org/ns/shacl#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx254 <http://www.w3.org/ns/shacl#maxInclusive> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx251 <http://www.w3.org/ns/shacl#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx252 <http://www.w3.org/ns/shacl#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx253 <http://www.w3.org/ns/shacl#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx254 <http://www.w3.org/ns/shacl#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:node1c9od19tvx251 <http://www.w3.org/ns/shacl#path> <http://vocab.belgif.be/ns/infosec#availability> .
+_:node1c9od19tvx252 <http://www.w3.org/ns/shacl#path> <http://vocab.belgif.be/ns/infosec#confidentiality> .
+_:node1c9od19tvx253 <http://www.w3.org/ns/shacl#path> <http://vocab.belgif.be/ns/infosec#integrity> .
+_:node1c9od19tvx254 <http://www.w3.org/ns/shacl#path> <http://vocab.belgif.be/ns/infosec#nonrepudiation> .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/ns/shacl#property> _:node1c9od19tvx251 .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/ns/shacl#property> _:node1c9od19tvx252 .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/ns/shacl#property> _:node1c9od19tvx253 .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/ns/shacl#property> _:node1c9od19tvx254 .
+<http://vocab.belgif.be/shacl/infosec#RateShape> <http://www.w3.org/ns/shacl#targetClass> <http://vocab.belgif.be/ns/infosec#Rate> .

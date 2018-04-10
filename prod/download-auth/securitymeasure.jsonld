@@ -1,0 +1,563 @@
+[ {
+  "@graph" : [ {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Sicherheitsmaßnahme"
+    }, {
+      "@language" : "en",
+      "@value" : "Security measures"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mesures de sécurité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Veiligheidsmaatregelen"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Sicherheitsmaßnahme"
+    }, {
+      "@language" : "en",
+      "@value" : "Security measures"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mesures de sécurité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Veiligheidsmaatregelen"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/14#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/15#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/16#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/01#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "01"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Informationssicherheitspolitik"
+    }, {
+      "@language" : "en",
+      "@value" : "Information security policy"
+    }, {
+      "@language" : "fr",
+      "@value" : "Politique de sécurité de l'information"
+    }, {
+      "@language" : "nl",
+      "@value" : "Informatieveiligheidsbeleid"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/02#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "02"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Risikoanalyse und Sicherheitsplan"
+    }, {
+      "@language" : "en",
+      "@value" : "Risk analysis and safety plan"
+    }, {
+      "@language" : "fr",
+      "@value" : "Analyse de risque et plan de sécurité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Risico-analyse en veiligheidsplan"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/03#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "03"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Ernennung eines DPO / VC"
+    }, {
+      "@language" : "en",
+      "@value" : "Appointment of a DPO / VC"
+    }, {
+      "@language" : "fr",
+      "@value" : "Nomination d'un DPO / VC"
+    }, {
+      "@language" : "nl",
+      "@value" : "Aanstelling van een DPO / VC"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/04#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "04"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Organisation der Informationssicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Organization of information security"
+    }, {
+      "@language" : "fr",
+      "@value" : "Organisation de la sécurité de l'information"
+    }, {
+      "@language" : "nl",
+      "@value" : "Organisatie van informatieveiligheid"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/05#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "05"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Mitarbeiterbezogene Sicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Employee-related safety"
+    }, {
+      "@language" : "fr",
+      "@value" : "Sécurité liée au personnel"
+    }, {
+      "@language" : "nl",
+      "@value" : "Medewerkersgerelateerde veiligheid"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/06#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "06"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Asset Management"
+    }, {
+      "@language" : "en",
+      "@value" : "Asset Management"
+    }, {
+      "@language" : "fr",
+      "@value" : "Asset Management"
+    }, {
+      "@language" : "nl",
+      "@value" : "Asset Management"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/07#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "07"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Zugriffskontrolle (logisch)"
+    }, {
+      "@language" : "en",
+      "@value" : "Access control (logical)"
+    }, {
+      "@language" : "fr",
+      "@value" : "Contrôle d'accès (logique)"
+    }, {
+      "@language" : "nl",
+      "@value" : "Toegangscontrole (logisch)"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/08#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "08"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Kryptographie"
+    }, {
+      "@language" : "en",
+      "@value" : "Cryptography"
+    }, {
+      "@language" : "fr",
+      "@value" : "Cryptographie"
+    }, {
+      "@language" : "nl",
+      "@value" : "Cryptografie"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/09#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "09"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Physische Sicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Physical security"
+    }, {
+      "@language" : "fr",
+      "@value" : "Sécurité physique"
+    }, {
+      "@language" : "nl",
+      "@value" : "Fysieke beveiliging"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/10#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "10"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Betriebssicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Operational safety"
+    }, {
+      "@language" : "fr",
+      "@value" : "Sécurité opérationnelle"
+    }, {
+      "@language" : "nl",
+      "@value" : "Operationele veiligheid"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/11#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "11"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Kommunikationssicherheit"
+    }, {
+      "@language" : "en",
+      "@value" : "Communication security"
+    }, {
+      "@language" : "fr",
+      "@value" : "Sécurité de communication"
+    }, {
+      "@language" : "nl",
+      "@value" : "Communicatiebeveiliging"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/12#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "12"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Systemakquisition, Entwicklung und Wartung"
+    }, {
+      "@language" : "en",
+      "@value" : "System acquisition, development and maintenance"
+    }, {
+      "@language" : "fr",
+      "@value" : "Acquisition, développement et maintenance du système"
+    }, {
+      "@language" : "nl",
+      "@value" : "Systeemverwerving, ontwikkeling en onderhoud"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/13#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "13"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Lieferanten- und Prozessorbeziehungen"
+    }, {
+      "@language" : "en",
+      "@value" : "Supplier and processor relationships"
+    }, {
+      "@language" : "fr",
+      "@value" : "Relations fournisseur et processeur"
+    }, {
+      "@language" : "nl",
+      "@value" : "Leveranciers- en verwerkersrelaties"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/14#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "14"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Sicherheitsvorfall und Datenleckmanagement"
+    }, {
+      "@language" : "en",
+      "@value" : "Security incident and data leak management"
+    }, {
+      "@language" : "fr",
+      "@value" : "Gestion des incidents de sécurité et des fuites de données"
+    }, {
+      "@language" : "nl",
+      "@value" : "Veiligheidsincident- en datalekmanagement"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/15#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "15"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Business Continuity Management"
+    }, {
+      "@language" : "en",
+      "@value" : "Business Continuity Management"
+    }, {
+      "@language" : "fr",
+      "@value" : "Business Continuity Management"
+    }, {
+      "@language" : "nl",
+      "@value" : "Business Continuity Management"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/auth/securitymeasure/16#id",
+    "@type" : [ "http://www.w3.org/2004/02/skos/core#Concept" ],
+    "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#notation" : [ {
+      "@value" : "16"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+      "@language" : "de",
+      "@value" : "Compliance und Verantwortlichkeit"
+    }, {
+      "@language" : "en",
+      "@value" : "Compliance & Accountability"
+    }, {
+      "@language" : "fr",
+      "@value" : "Conformité et responsabilité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Compliance & Verantwoording"
+    } ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ]
+  }, {
+    "@id" : "http://vocab.belgif.be/void#securitymeasure",
+    "@type" : [ "http://rdfs.org/ns/void#Dataset" ],
+    "http://purl.org/dc/terms/description" : [ {
+      "@language" : "de",
+      "@value" : "Sicherheitsmaßnahme"
+    }, {
+      "@language" : "en",
+      "@value" : "Security measures"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mesures de sécurité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Veiligheidsmaatregelen"
+    } ],
+    "http://purl.org/dc/terms/modified" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value" : "2018-03-29T10:12:38.900+02:00"
+    } ],
+    "http://purl.org/dc/terms/title" : [ {
+      "@language" : "de",
+      "@value" : "Sicherheitsmaßnahme"
+    }, {
+      "@language" : "en",
+      "@value" : "Security measures"
+    }, {
+      "@language" : "fr",
+      "@value" : "Mesures de sécurité"
+    }, {
+      "@language" : "nl",
+      "@value" : "Veiligheidsmaatregelen"
+    } ],
+    "http://rdfs.org/ns/void#dataDump" : [ {
+      "@id" : "http://vocab.belgif.be/dataset/securitymeasure"
+    } ],
+    "http://rdfs.org/ns/void#exampleResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/01#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/02#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/03#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/04#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/05#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/06#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/07#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/08#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/09#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/10#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/11#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/12#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/13#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/14#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/15#id"
+    }, {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure/16#id"
+    } ],
+    "http://rdfs.org/ns/void#feature" : [ {
+      "@id" : "http://www.w3.org/ns/formats/JSON-LD"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/N-Triples"
+    }, {
+      "@id" : "http://www.w3.org/ns/formats/Turtle"
+    } ],
+    "http://rdfs.org/ns/void#rootResource" : [ {
+      "@id" : "http://vocab.belgif.be/auth/securitymeasure#id"
+    } ],
+    "http://rdfs.org/ns/void#triples" : [ {
+      "@type" : "http://www.w3.org/2001/XMLSchema#long",
+      "@value" : "153"
+    } ],
+    "http://rdfs.org/ns/void#uriLookupEndpoint" : [ {
+      "@id" : "http://vocab.belgif.be/_ldf"
+    }, {
+      "@id" : "http://vocab.belgif.be/_ldf/securitymeasure"
+    } ],
+    "http://rdfs.org/ns/void#uriSpace" : [ {
+      "@value" : "http://vocab.belgif.be/auth/securitymeasure"
+    } ],
+    "http://rdfs.org/ns/void#vocabulary" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#"
+    } ],
+    "http://xmlns.com/foaf/0.1/homepage" : [ {
+      "@id" : "http://vocab.belgif.be/"
+    } ]
+  } ],
+  "@id" : "http://vocab.belgif.be/graph/vocab/securitymeasure"
+} ]
