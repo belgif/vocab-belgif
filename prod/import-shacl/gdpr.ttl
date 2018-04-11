@@ -16,7 +16,7 @@
 @prefix shbe-gdpr: <http://vocab.belgif.be/shacl/gdpr#> .
 
 <http://vocab.belgif.be/shacl/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-04-10" ;
+	owl:versionInfo "Draft 2018-04-11" ;
 	rdfs:label "GDPR model"@nl, "GDPR model"@fr, "GDPR model"@de, "GDPR model"@en ;
 	rdfs:comment "GDPR SHACL rules"@en, "GDPR SHACL rules"@fr, "GDPR SHACL rules"@nl, "GDPR SHACL rules"@de .
 
@@ -147,13 +147,7 @@ shbe-gdpr:ProcessorShape a sh:NodeShape ;
 		sh:datatype rdf:langString ;
 		sh:uniqueLang true ;
 		sh:languageIn ("nl" "fr" "de" "en") ;
-	] ;	
-	sh:property [
-		sh:path be-gdpr:dataTreatmentName ;
-		sh:datatype rdf:langString ;
-		sh:uniqueLang true ;
-		sh:languageIn ("nl" "fr" "de" "en") ;
-	] ;	
+	] ;		
 	sh:property [
 		sh:path org:memberOf ;
 		sh:minCount 1 ;
@@ -533,7 +527,7 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 		] ;
 	] ;
 	sh:property [
-		sh:path be-gdpr:securityMeasures ;
+		sh:path be-gdpr:securityMeasuresText ;
 		sh:datatype rdf:langString ;
 		sh:uniqueLang true ;
 		sh:languageIn ("nl" "fr" "de" "en") ;

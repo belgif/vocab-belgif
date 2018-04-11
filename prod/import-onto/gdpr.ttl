@@ -10,7 +10,7 @@
 @prefix gdpr: <http://vocab.belgif.be/ns/gdpr#> .
 
 <http://vocab.belgif.be/ns/gdpr#> a owl:Ontology ;
-	owl:versionInfo "Draft 2018-04-10" ;
+	owl:versionInfo "Draft 2018-04-11" ;
 	rdfs:label "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en ;
 	rdfs:comment "GDPR"@nl, "GDPR"@fr, "GDPR"@de, "GDPR"@en .
 
@@ -158,13 +158,6 @@ gdpr:dataCoupling a rdf:Property, owl:DataProperty ;
 	rdfs:comment "Geeft aan of er gegevens uit verschillende datasets worden gekoppeld."@nl, "Gibt an, ob Daten aus verschiedenen Datensätzen verknüpft sind."@de, "Indicates whether data from different datasets are linked."@en, "Indique si les données de différents ensembles de données sont liées."@fr ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "Couplage de données"@fr, "Data coupling"@en, "Datenkopplung"@de, "Gegevenskoppeling"@nl ;
-	rdfs:range rdfs:Literal .
-
-gdpr:dataTreatmentName a rdf:Property, owl:ObjectProperty ;
-	rdfs:isDefinedBy gdpr: ;
-	rdfs:subPropertyOf dcterms:title ;
-	rdfs:domain gdpr:Processor;
-	rdfs:label "Data treatment name"@en, "Naam gegevensbehandeling"@nl, "Name der Datenbehandlung"@de, "Nom du traitement des données"@fr ;
 	rdfs:range rdfs:Literal .
 	
 gdpr:treatmentType a rdf:Property, owl:ObjectProperty ;
@@ -368,7 +361,7 @@ gdpr:securityMeasure a rdf:Property, owl:ObjectProperty ;
 	rdfs:label "Art der Sicherheitsmaßnahme"@de, "Type beveiligingsmaatregel"@nl, "Type de mesure de sécurité"@fr, "Type of security measure"@en ;
 	rdfs:range skos:Concept .
 
-gdpr:securityMeasures a rdf:Property, owl:DataProperty ;
+gdpr:securityMeasuresText a rdf:Property, owl:DataProperty ;
 	rdfs:isDefinedBy gdpr: ;
 	rdfs:domain gdpr:DataTreatment ;
 	rdfs:label "Technology mesures de sécurité"@fr, "Technology security measures"@en, "Technology Sicherheitsmaßnahmen"@de, "Technology veiligheidsmaatregelen"@nl ;
