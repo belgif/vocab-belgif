@@ -43,6 +43,7 @@ shbe-gdpr:RegisterShape a sh:NodeShape ;
 	] ;
 	sh:property [
 		sh:path dcterms:accessRights ;
+		sh:minCount 1 ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
@@ -417,6 +418,7 @@ shbe-gdpr:DataTreatmentShape a sh:NodeShape ;
 	] ;
 	sh:property [
 		sh:path dcterms:accessRights ;
+		sh:minCount 1 ;
 		sh:maxCount 1 ;
 		sh:nodeKind sh:IRI ;
 		sh:class skos:Concept ;
