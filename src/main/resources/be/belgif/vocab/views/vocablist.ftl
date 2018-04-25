@@ -12,39 +12,44 @@
 <#assign m = messages>
 <#assign vs = vocabs>
 <main>
-    <div id="container">
-    <#include "message.ftl">
-    <#if vs?has_content>
-    <section>
-	<h3>Thesauri</h3>
+	<div id="container">
 	<section>
-	    <h4>${m.getString("msg.overview")}</h4>
-	    <table>
-	    <tr><th>${m.getString("msg.name")}</th>
-		<th>${m.getString("msg.description")}</th>
-		<th>${m.getString("msg.downloads")}</th>
-	    </tr>
-	    <#list vs?sort_by("id") as v>
-            <tr><td><a href="${v.id}">${v.getTitle(l)!""}</a></td>
-		<td>${v.getDescription(l)!""}</td>
-                <#assign download = v.download!"">
-		<td><a href="${download}.ttl">TTL</a>
-		    <a href="${download}.jsonld">JSON-LD</a>
-		    <a href="${download}.nt">N-Triples</a></td>
-	    </tr>
-	    </#list>
-	    </table>
+		<div id="breadcrumb">
+			<a href="/">Home</a>
+		</div>
+		<#include "message.ftl">
+		<#if vs?has_content>
+		<section>
+			<h3>Thesauri</h3>
+			<section>
+				<h4>${m.getString("msg.overview")}</h4>
+				<table>
+					<tr><th>${m.getString("msg.name")}</th>
+						<th>${m.getString("msg.description")}</th>
+						<th>${m.getString("msg.downloads")}</th>
+					</tr>
+					<#list vs?sort_by("id") as v>
+					<tr><td><a href="${v.id}">${v.getTitle(l)!""}</a></td>
+						<td>${v.getDescription(l)!""}</td>
+						<#assign download = v.download!"">
+						<td><a href="${download}.ttl">TTL</a>
+							<a href="${download}.jsonld">JSON-LD</a>
+							<a href="${download}.nt">N-Triples</a></td>
+					</tr>
+					</#list>
+				</table>
+			</section>
+		</section>
+		<section>
+			<#include "contentneg.ftl">
+			<section>
+				<h4>Linked Data Fragments</h4>
+				<p>http://vocab.belgif.be/_ldf</p>
+			</section>
+		</section>
+		</#if>
 	</section>
-    </section>
-    <section>
-	<#include "contentneg.ftl">
-	<section>
-	    <h4>Linked Data Fragments</h4>
-	    <p>http://vocab.belgif.be/_ldf</p>
-	</section>
-    </section>
-    </#if>
-    </div>
+	</div>
 </main>
 <#include "footer.ftl">
 </body>

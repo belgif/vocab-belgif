@@ -12,17 +12,22 @@
 <#assign sh = shacl>
 <#assign s = sh.shapes>
 <main>
-    <div id="container">
-    <#include "message.ftl">
-    <section>
-        <h3>${m.getString("msg.general")}</h3>
-        <table>
-        <#assign val = sh.getVersion(l)!sh.getVersion("")!"">
-        <#if val?has_content>
-            <tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
-        </#if>
-        <#assign val = sh.getLabel(l)!sh.getLabel("")!"">
-        <#if val?has_content>
+	<div id="container">
+	<section>
+		<div id="breadcrumb">
+			<a href="/">Home</a> / 
+			<a href="/shacl">${m.getString("msg.shacls")}</a>
+		</div>
+		<#include "message.ftl">
+		<section>
+			<h3>${m.getString("msg.general")}</h3>
+			<table>
+			<#assign val = sh.getVersion(l)!sh.getVersion("")!"">
+			<#if val?has_content>
+				<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
+			</#if>
+			<#assign val = sh.getLabel(l)!sh.getLabel("")!"">
+			<#if val?has_content>
             <tr><td>RDFS label</td><td>${val}</td></tr>
         </#if>
         <#assign val = sh.getComment(l)!sh.getComment("")!"">

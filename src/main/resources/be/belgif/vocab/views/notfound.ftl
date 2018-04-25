@@ -9,9 +9,14 @@
 <#include "header.ftl">
 <#assign m = messages>
 <main>
-  <section>
-	<h3>${m.getString("msg.notfound")}</h3>
-  </section>
+	<div id="container">
+	<section>
+		<#include "message.ftl">
+		<section>
+			<h3>${m.getString("msg.notfound")}</h3>
+		</section>
+	</section>
+	</div>
 </main>
 <#include "footer.ftl">
 </body>

@@ -11,40 +11,47 @@
 <#assign v = term>
 <#assign langs = ['nl', 'fr', 'en', 'de']>
 <main>
-    <div id="container">
-    <#include "message.ftl">
-    <section>
-	<h3>${v.id}</h3>
+	<div id="container">
 	<section>
-	    <h4>${m.getString("msg.search")}</h4>
-	    <form method="get" action="/_search/${vocabName}">
-		<input name="q" type="search"/>
-		<input name="search" type="submit"/>
-	    </form>
+		<div id="breadcrumb">
+			<a href="/">Home</a> / 
+			<a href="/auth">${m.getString("msg.vocabs")}</a>
+		</div>
+		<#include "message.ftl">
+		<section>
+			<h3>${v.id}</h3>
+			<section>
+				<h4>${m.getString("msg.search")}</h4>
+				<form method="get" action="/_search/${vocabName}">
+					<input name="q" type="search"/>
+					<input name="search" type="submit"/>
+				</form>
+			</section>
+			<section>
+				<h4>${m.getString("msg.general")}</h4>
+				<table>
+				<#list langs as lang>
+				<#assign val = v.getDescription(lang)!"">
+				<#if val?has_content>
+					<tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
+				</#if>
+				</#list>
+				</table>
+			</section>
+			<#assign tc = v.topConcepts>
+			<#if tc?has_content>
+			<section>
+				<h4>SKOS TopConcepts</h4>
+				<table>
+				<#list tc as t>
+					<tr><td><a href="${t}">${t}</a></td></tr>
+				</#list>
+				</table>
+			</section>
+			</#if>
+		</section>
 	</section>
-	<section>
-	    <h4>${m.getString("msg.general")}</h4>
-	    <table>
-	    <#list langs as lang>
-		<#assign val = v.getDescription(lang)!"">
-		<#if val?has_content>
-		    <tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
-		 </#if>
-	    </#list>
-	</table>
-        </section>
-	<#assign tc = v.topConcepts>
-	<#if tc?has_content>
-	<section>
-	    <h4>SKOS TopConcepts</h4>
-	    <table>
-	    <#list tc as t>
-		<tr><td><a href="${t}">${t}</a></td></tr>
-	    </#list>
-	    </table>
-	</section>
-	</#if>
-    </section>
+	</div>
 </main>
 <#include "footer.ftl">
 </body>

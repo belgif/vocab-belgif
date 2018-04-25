@@ -10,52 +10,57 @@
 <#assign l = lang>
 <#assign m = messages>
 <main>
-    <div id="container">
-    <#include "message.ftl">
-    <#if ontos?has_content>
-    <section>
-	<h3>Ontologies</h3>
+	<div id="container">
 	<section>
-	    <h4>${m.getString("msg.overview")}</h4>
-	    <table>
-	    <tr><th>${m.getString("msg.name")}</th>
-		<th>${m.getString("msg.description")}</th>
-		<th>${m.getString("msg.downloads")}</th>
-	    </tr>
-	    <#list ontos as o>
-	    <tr><td><a href="${o.id}">${o.getLabel(l)!""}</a></td>
-		<td>${o.getComment(l)!""}</td>
-                <#assign download = o.id?remove_ending("#")>
-                <td><a href="${download}.ttl">TTL</a>
-                    <a href="${download}.jsonld">JSON-LD</a>
-                    <a href="${download}.nt">N-Triples</a></td>
-	    </tr>
-	    </#list>
-	    </table>
+		<div id="breadcrumb">
+			<a href="/">Home</a>
+		</div>
+		<#include "message.ftl">
+		<#if ontos?has_content>
+		<section>
+			<h3>Ontologies</h3>
+			<section>
+				<h4>${m.getString("msg.overview")}</h4>
+				<table>
+					<tr><th>${m.getString("msg.name")}</th>
+						<th>${m.getString("msg.description")}</th>
+						<th>${m.getString("msg.downloads")}</th>
+					</tr>
+				<#list ontos as o>
+					<tr><td><a href="${o.id}">${o.getLabel(l)!""}</a></td>
+						<td>${o.getComment(l)!""}</td>
+						<#assign download = o.id?remove_ending("#")>
+						<td><a href="${download}.ttl">TTL</a>
+							<a href="${download}.jsonld">JSON-LD</a>
+							<a href="${download}.nt">N-Triples</a></td>
+					</tr>
+				</#list>
+				</table>
+			</section>
+		</section>
+		</#if>
+		<#if xmlns?has_content>
+		<section>
+			<h3>XML Namespaces</h3>
+			<section>
+				<h4>${m.getString("msg.overview")}</h4>
+				<table>
+					<tr><th>${m.getString("msg.name")}</th>
+						<th>${m.getString("msg.description")}</th>
+						<th>${m.getString("msg.downloads")}</th>
+					</tr>
+					<#list xmlns as n>
+					<tr><td>${n.getTitle(l)!""}</td>
+						<td>${n.getDescription(l)!""}</td>
+						<td><a href="${n.download!""}">XSD</a></td>
+					</tr>
+					</#list>
+				</table>
+			</section>
+		</section>
+		</#if>
 	</section>
-    </section>
-    </#if>
-    <#if xmlns?has_content>
-    <section>
-	<h3>XML Namespaces</h3>
-	<section>
-	    <h4>${m.getString("msg.overview")}</h4>
-	    <table>
-	    <tr><th>${m.getString("msg.name")}</th>
-		<th>${m.getString("msg.description")}</th>
-		<th>${m.getString("msg.downloads")}</th>
-	    </tr>
-	    <#list xmlns as n>
-	    <tr><td>${n.getTitle(l)!""}</td>
-		<td>${n.getDescription(l)!""}</td>
-		<td><a href="${n.download!""}">XSD</a></td>
-	    </tr>
-	    </#list>
-	    </table>
-	</section>
-    </section>
-    </#if>
-    </div>
+	</div>
 </main>
 <#include "footer.ftl">
 </body>

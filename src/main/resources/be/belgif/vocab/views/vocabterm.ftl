@@ -12,6 +12,13 @@
 <#assign langs = ['nl', 'fr', 'en', 'de']>
 <main>
     <div id="container">
+    <section>
+    <div id="breadcrumb">
+        <a href="/">Home</a> / 
+        <a href="/auth">${m.getString("msg.vocabs")}</a> /
+        <a href="/auth/${vocabName}">${vocabName}</a>
+    </div>
+    </section>
     <#include "message.ftl">
     <section>
 	<h3>${v.id}</h3>
