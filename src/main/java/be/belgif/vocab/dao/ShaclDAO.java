@@ -285,11 +285,11 @@ public class ShaclDAO extends RdfDAO {
 	 * Initialize SHACL property shapes
 	 */
 	private void initNodeShapes() {
-		Set<Resource> subjs = new HashSet<>();
-		subjs.addAll(getModel().filter(null, RDF.TYPE, SHACL.NODE_SHAPE)
-						.subjects().stream().filter(s -> s instanceof IRI)
-						.collect(Collectors.toSet()));
-		
+		Set<Resource> subjs = getModel().filter(null, RDF.TYPE, SHACL.NODE_SHAPE).subjects();
+		Set<Resource> nested = getModel().filter(null, SHACL.NODE, null).objects()
+									.stream().map(o -> (Resource) o)
+									.collect(Collectors.toSet());
+		subjs.removeAll(nested);
 		for(Resource subj: subjs) {
 			shapes.add(new ShaclNodeShapeDAO(getModel(), (Resource) subj));
 		}
