@@ -36,6 +36,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -148,18 +149,23 @@ public class ShaclDAO extends RdfDAO {
 		/**
 		 * Initialize nested property shapes
 		 * 
-		 * @param m triples
-		 * @param node parent node shape
+		 * @param parent
 		 */
-		private void initPropertyShapes(Resource prop) {
-			Set<Value> subjs = new HashSet<>();
-			subjs.addAll(getModel().filter(prop, SHACL.PROPERTY, null).objects());
+		private void initPropertyShapes(Resource parent) {
+			Set<Value> nodes = getModel().filter(parent, SHACL.NODE, null).objects();
 
-			for(Value subj: subjs) {
-				if (! (subj instanceof Resource)) {
+			for(Value node: nodes) {
+				if (! (node instanceof Resource)) {
 					continue;
 				}
-				nested.add(new ShaclPropertyShapeDAO(getModel(), (Resource) subj));
+				
+				Set<Value> props = getModel().filter((Resource) node, SHACL.PROPERTY, null).objects();
+				for (Value prop: props) {
+					if (! (prop instanceof Resource)) {
+						continue;
+					}
+					nested.add(new ShaclPropertyShapeDAO(getModel(), (Resource) prop));
+				}
 			}
 		}
 
@@ -194,7 +200,6 @@ public class ShaclDAO extends RdfDAO {
 		/**
 		 * Initialize SHACL property shapes
 		 * 
-		 * @param m triples
 		 * @param node parent node shape
 		 */
 		private void initPropertyShapes(Resource node) {
@@ -278,12 +283,12 @@ public class ShaclDAO extends RdfDAO {
 	
 	/**
 	 * Initialize SHACL property shapes
-	 * 
-	 * @param m model
 	 */
 	private void initNodeShapes() {
 		Set<Resource> subjs = new HashSet<>();
-		subjs.addAll(getModel().filter(null, RDF.TYPE, SHACL.NODE_SHAPE).subjects());
+		subjs.addAll(getModel().filter(null, RDF.TYPE, SHACL.NODE_SHAPE)
+						.subjects().stream().filter(s -> s instanceof IRI)
+						.collect(Collectors.toSet()));
 		
 		for(Resource subj: subjs) {
 			shapes.add(new ShaclNodeShapeDAO(getModel(), (Resource) subj));
@@ -292,8 +297,6 @@ public class ShaclDAO extends RdfDAO {
 	
 	/**
 	 * Initialize a map of "known" namespaces and their prefixes used in this SHACL
-	 * 
-	 * @param m model
 	 */
 	private void initUsedNamespaces() {
 		Set<String> ns = new HashSet<>();
