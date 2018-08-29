@@ -1,8 +1,8 @@
 # lod-vocab
 
-SKOS publication tool for publishing demo thesauri on Vocab.belgif.be.
+SKOS, OWL and SHACL publication tool for publishing demo thesauri on Vocab.belgif.be.
 
-Best practices and guidelines can be found in [VOCAB-BELGIF.md](VOCAB-BELGIF.md)
+Best practices and guidelines can be found in [README-SKOS.md](README-SKOS.md) and [README-RDFSOWL.md](README-RDFSOWL.md)
 
 # Description
 
@@ -17,7 +17,7 @@ Configuration is done using a YAML file, an example is included in the source.
 
 ## Subdirectories
 
-Both Lucene and RDF4j triplestore need (separate) writable directories. 
+Both Lucene and RDF4J triplestore need (separate) writable directories. 
 In addition, there must be a directory for importing the thesauri, 
 and another one for the generated dump files in several formats.
 

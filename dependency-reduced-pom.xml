@@ -4,7 +4,7 @@
   <groupId>be.belgif</groupId>
   <artifactId>lod-vocab</artifactId>
   <name>Vocab Belgif</name>
-  <version>1.3.2</version>
+  <version>1.3.3</version>
   <description>Belgif.be vocabulary server</description>
   <build>
     <plugins>
