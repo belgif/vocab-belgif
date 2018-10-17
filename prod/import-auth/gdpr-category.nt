@@ -32,6 +32,7 @@
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/V#id> .
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/W#id> .
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/X#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/Z#id> .
 <http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
 <http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A1#id> .
@@ -1245,3 +1246,9 @@
 <http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "License plate"@en .
 <http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nummerplaat"@nl .
 <http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plaque d'immatriculation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere Kategorie"@de .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other category"@en .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere category"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre catégorie"@fr .
