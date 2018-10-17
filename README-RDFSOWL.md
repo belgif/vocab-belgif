@@ -8,10 +8,10 @@ In order to be published on vocab.belgif.be, the following requirements must be 
  * RDF Turtle serialization is recommended but not required (NTriples and JSON-LD are acceptable as well)
  
 ## owl:Ontology
- * URI must adhere to the template: http://vocab.belgif.be/ns/[short-onto-name]#
-    * where short-onto-name is all-lowercase, only alphanumeric characters and hyphens are permitted
-    * short-onto-code can be based on English words (e.g. abbreviation), but should be relatively short
-    * "translating" short-onto-codes is not permitted (translation must be done at the label level)
+ * URI must adhere to the template: http://vocab.belgif.be/ns/[short-ontology-name]#
+    * where short-ontology-name is all-lowercase, only alphanumeric characters and hyphens are permitted
+    * short-ontology-name can be based on English words (e.g. abbreviation), but should be relatively short
+    * "translating" short-ontology-name is not permitted (translation must be done at the label level)
  * owl:Ontology should have a owl:versionInfo description
  * owl:Ontology must have a rdfs:label in Dutch, French, English and German (will be used in the HTML overview as title)
  * owl:Ontology must have a rdfs:comment in Dutch, French, English and German (will be used in the HTML overview as description)
@@ -46,7 +46,7 @@ In order to be published on vocab.belgif.be, the following requirements must be 
 ## Other OWL capabilities (cardinality etc)
  * Ontologies may include other constraints and definitions (e.g. owl:disjointWith)
  * properties may use cardinality constraints
-   * these constraints must be application-independent (use contraints in SHACL instead)
+   * these constraints must be application-independent (use constraints in SHACL instead)
    * note that cardinality is OWL may not work as expected: it is used in reasoning, not in enforcing (use cardinality in SHACL instead).
 
 ## Reuse of ontologies, classes and properties
@@ -71,7 +71,7 @@ E.g.
 ## Example of properties not belonging to classes
 
 In a similar way, properties don't belong to specific classes (unlike most OO-programming languages),
-but a reassoner can use domains and ranges to make assumptions about the classes.
+but a reasoner can use domains and ranges to make assumptions about the classes.
 
 E.g. 
   * if there is a property "hasAuthor" with domain "Book" and range "Person"
