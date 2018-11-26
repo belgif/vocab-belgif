@@ -19,10 +19,10 @@
 <http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-treatment#id> .
 <http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#notation> "01" .
-<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normaal--> als geen van onderstaande types"@nl .
-<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal -> if none of the types below"@en .
-<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal --> si aucun des types ci-dessous"@fr .
-<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal -> wenn keine der folgenden Typen"@de .
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normaal"@nl .
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal"@en .
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal"@fr .
+<http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "normal"@de .
 <http://vocab.belgif.be/auth/gdpr-treatment/01#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-treatment#id> .
 <http://vocab.belgif.be/auth/gdpr-treatment/02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://vocab.belgif.be/auth/gdpr-treatment/02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-treatment#id> .
