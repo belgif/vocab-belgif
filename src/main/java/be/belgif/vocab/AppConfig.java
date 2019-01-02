@@ -83,6 +83,10 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	private Map<String, Map<String, String>> views;
 
 	@NotNull
+	@JsonProperty("jsonldcontexts")
+	private ImportDownloadFactory ctxs = new ImportDownloadFactory();
+		
+	@NotNull
 	@JsonProperty("ontologies")
 	private ImportDownloadFactory ontos = new ImportDownloadFactory();
 
@@ -147,6 +151,16 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 	@JsonProperty
 	public void setViews(Map<String, Map<String, String>> views) {
 		this.views = views;
+	}
+
+	@JsonProperty
+	public ImportDownloadFactory getCtxs() {
+		return ctxs;
+	}
+	
+	@JsonProperty
+	public void setCtxs(ImportDownloadFactory ctxs) {
+		this.ctxs = ctxs;
 	}
 
 	@JsonProperty

@@ -29,6 +29,8 @@ import be.belgif.vocab.helpers.ManagedRepository;
 import be.belgif.vocab.health.RdfStoreHealthCheck;
 import be.belgif.vocab.helpers.FileMessageBodyWriter;
 import be.belgif.vocab.helpers.RDFMessageBodyWriter;
+
+import be.belgif.vocab.resources.CtxResource;
 import be.belgif.vocab.resources.DatasetResource;
 import be.belgif.vocab.resources.LdfResource;
 import be.belgif.vocab.resources.NsResource;
@@ -37,11 +39,13 @@ import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.ShaclResource;
 import be.belgif.vocab.resources.VocabResource;
 import be.belgif.vocab.resources.VoidResource;
+
 import be.belgif.vocab.tasks.LuceneReindexTask;
+import be.belgif.vocab.tasks.CtxRegisterTask;
 import be.belgif.vocab.tasks.OntoImportTask;
 import be.belgif.vocab.tasks.ShaclImportTask;
-import be.belgif.vocab.tasks.XmlnsRegisterTask;
 import be.belgif.vocab.tasks.VocabImportTask;
+import be.belgif.vocab.tasks.XmlnsRegisterTask;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -164,12 +168,16 @@ public class App extends Application<AppConfig> {
 						config.getXsds().getDownloadDir()));
 		env.jersey().register(new ShaclResource(repo, 
 						config.getShacls().getDownloadDir()));
+		env.jersey().register(new CtxResource(repo,
+						config.getCtxs().getDownloadDir()));
 		
 		// Services
 		env.jersey().register(new SearchResource(repo));
 		env.jersey().register(new LdfResource(repo));
 
 		// Tasks
+		env.admin().addTask(new CtxRegisterTask(repo,
+						config.getCtxs().getImportDir()));
 		env.admin().addTask(new OntoImportTask(repo, 
 						config.getOntos().getImportDir(),
 						config.getOntos().getDownloadDir()));
@@ -233,6 +241,9 @@ public class App extends Application<AppConfig> {
 			Client cl = ClientBuilder.newClient();
 			WebTarget target = cl.target(localhost);
 
+			importFiles(config.getCtxs().getImportDir(),
+					target.path("tasks/" + CtxRegisterTask.NAME));
+
 			importFiles(config.getOntos().getImportDir(),
 					target.path("tasks/" + OntoImportTask.NAME));
 
@@ -244,7 +255,7 @@ public class App extends Application<AppConfig> {
 					
 			importFiles(config.getVocabs().getImportDir(),
 					target.path("tasks/" + VocabImportTask.NAME));
-		
+			
 			cl.target(localhost).path("tasks/" + LuceneReindexTask.NAME)
 				.request().post(Entity.text(""));
 		} catch (IOException ioe) {

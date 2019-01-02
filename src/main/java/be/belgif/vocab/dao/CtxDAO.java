@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -26,19 +26,18 @@
 package be.belgif.vocab.dao;
 
 import be.belgif.vocab.helpers.EuDatasetType;
-
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
 /**
- * DAO helper class for NS.
+ * DAO helper class for JSON-LD contexts.
  *
  * @author Bart.Hanssens
  */
-public class XmlnsDAO extends RdfDAO {
-		
+public class CtxDAO extends RdfDAO {
+	
 	/**
 	 * Get download URL
 	 *
@@ -55,7 +54,7 @@ public class XmlnsDAO extends RdfDAO {
 	 * @param m triples
 	 * @param id subject ID
 	 */
-	public XmlnsDAO(Model m, Resource id) {
+	public CtxDAO(Model m, Resource id) {
 		super(m, id);
 	}
 }

@@ -67,6 +67,7 @@ import org.eclipse.rdf4j.repository.RepositoryResult;
  * @author Bart.Hanssens
  */
 public class QueryHelper {
+	public final static String CTX = "ctx";
 	public final static String DATASET = "dataset";
 	public final static String ONTO = "onto";
 	public final static String SHACLS = "shacl";

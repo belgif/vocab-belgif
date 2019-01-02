@@ -15,7 +15,7 @@
 	<div id="container">
 	<section>
 		<div id="breadcrumb">
-			<a href="/">Home</a>
+			<a href="/">${m.getString("msg.home")}</a>
 		</div>
 		<#include "message.ftl">
 		<#if vs?has_content>

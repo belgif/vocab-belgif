@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,39 +23,33 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.tasks;
 
-import be.belgif.vocab.helpers.EuDatasetType;
+import be.belgif.vocab.helpers.QueryHelper;
 
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import org.eclipse.rdf4j.repository.Repository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * DAO helper class for NS.
+ * Register JSON-LD context
  *
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
-public class XmlnsDAO extends RdfDAO {
-		
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value url = obj(DCAT.DOWNLOAD_URL);
-		return (url != null) ? url.toString() : "";
-	}
+public class CtxRegisterTask extends AbstractImportTask {
+	public final static String NAME = "ctx-register";
+	
+	private final Logger LOG = (Logger) LoggerFactory.getLogger(CtxRegisterTask.class);
 
+	
 	/**
 	 * Constructor
 	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * @param repo triple store
+	 * @param inDir import directory
 	 */
-	public XmlnsDAO(Model m, Resource id) {
-		super(m, id);
+	public CtxRegisterTask(Repository repo, String inDir) {
+		super(NAME, repo, inDir, QueryHelper.CTX);
 	}
 }

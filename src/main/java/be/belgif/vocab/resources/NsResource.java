@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.resources;
 
+import be.belgif.vocab.helpers.EuDatasetType;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.helpers.RDFMediaType;
 import be.belgif.vocab.views.OntoListView;
@@ -60,7 +61,7 @@ public class NsResource extends RdfResource {
 	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public OntoListView getListHTML(@DefaultValue("en") @QueryParam("lang") String lang) {
-		return new OntoListView(getByClass(DCAT.DISTRIBUTION), 
+		return new OntoListView(getByClass(EuDatasetType.SCHEMA), 
 					getByClass(OWL.ONTOLOGY), lang);
 	}
 	

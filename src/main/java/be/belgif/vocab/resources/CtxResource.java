@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,39 +23,56 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
+package be.belgif.vocab.resources;
 
 import be.belgif.vocab.helpers.EuDatasetType;
+import be.belgif.vocab.helpers.RDFMediaType;
+import be.belgif.vocab.views.CtxListView;
 
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import java.io.File;
+import java.nio.file.Paths;
+
+import javax.ws.rs.DefaultValue;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+
+import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * DAO helper class for NS.
+ * JSON-LD shared contexts
  *
  * @author Bart.Hanssens
  */
-public class XmlnsDAO extends RdfDAO {
-		
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value url = obj(DCAT.DOWNLOAD_URL);
-		return (url != null) ? url.toString() : "";
+@Path("/ctx")
+public class CtxResource extends RdfResource {
+	private final String ctxDir;
+	
+	@GET
+	@Produces(MediaType.TEXT_HTML)
+	public CtxListView getListHTML(@DefaultValue("en") @QueryParam("lang") String lang) {
+		return new CtxListView(getByClass(EuDatasetType.CORE_COMP), lang);
+	}
+	
+	@GET
+	@Path("{file: .+\\.jsonld}")
+	@Produces({RDFMediaType.JSONLD})
+	public File getContextFile(@PathParam("file") String file) {
+		return Paths.get(this.ctxDir, file).toFile();
 	}
 
+	
 	/**
 	 * Constructor
 	 *
-	 * @param m triples
-	 * @param id subject ID
+	 * @param repo RDF triple store
+	 * @param ctxDir
 	 */
-	public XmlnsDAO(Model m, Resource id) {
-		super(m, id);
+	public CtxResource(Repository repo, String ctxDir) {
+		super(repo);
+		this.ctxDir = ctxDir;
 	}
 }

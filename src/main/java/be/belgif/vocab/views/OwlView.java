@@ -33,7 +33,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 
 /**
- * HTML view for SKOS concept schema
+ * HTML view for OWL vocabularies
  * 
  * @author Bart.Hanssens
  */

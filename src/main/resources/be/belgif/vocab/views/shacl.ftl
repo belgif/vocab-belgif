@@ -15,7 +15,7 @@
 	<div id="container">
 	<section>
 		<div id="breadcrumb">
-			<a href="/">Home</a> / 
+			<a href="/">${m.getString("msg.home")}</a> / 
 			<a href="/shacl">${m.getString("msg.shacls")}</a>
 		</div>
 		<#include "message.ftl">

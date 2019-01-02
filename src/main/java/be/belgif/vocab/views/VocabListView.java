@@ -35,7 +35,7 @@ import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 
 /**
- * HTML view for homepage / VoID descriptions
+ * HTML view for list of vocabularies
  * 
  * @author Bart Hanssens
  */

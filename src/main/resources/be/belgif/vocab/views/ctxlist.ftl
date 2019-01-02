@@ -16,9 +16,9 @@
 			<a href="/">${m.getString("msg.home")}</a>
 		</div>
 		<#include "message.ftl">
-		<#if shacls?has_content>
+		<#if contexts?has_content>
 		<section>
-			<h3>SHACLs</h3>
+			<h3>${m.getString("msg.ctxs")}</h3>
 			<section>
 				<h4>${m.getString("msg.overview")}</h4>
 				<table>
@@ -26,15 +26,10 @@
 						<th>${m.getString("msg.description")}</th>
 						<th>${m.getString("msg.downloads")}</th>
 					</tr>
-				<#list shacls?sort as s>
-					<#assign label = s.getLabel(l)!s.getLabel("")!"">
-					<#assign comment = s.getComment(l)!s.getComment("")!"">
-					<tr><td><a href="${s.id}">${label}</a></td>
-						<td>${comment}</td>
-					<#assign download = s.id?remove_ending("#")>
-						<td><a href="${download}.ttl">TTL</a>
-							<a href="${download}.jsonld">JSON-LD</a>
-							<a href="${download}.nt">N-Triples</a></td>
+				<#list contexts as c>
+					<tr><td><a href="${c.id}">${c.getTitle(l)!""}</a></td>
+						<td>${c.getDescription(l)!""}</td>
+						<td><a href="${c.download!""}">JSON-LD</a></td>
 					</tr>
 				</#list>
 				</table>

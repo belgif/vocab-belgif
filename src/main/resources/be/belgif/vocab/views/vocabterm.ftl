@@ -14,7 +14,7 @@
 	<div id="container">
 	<section>
 		<div id="breadcrumb">
-			<a href="/">Home</a> / 
+			<a href="/">${m.getString("msg.home")}</a> / 
 			<a href="/auth">${m.getString("msg.vocabs")}</a> /
 			<a href="/auth/${vocabName}">${vocabName}</a>
 		</div>

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,39 +23,30 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.dao;
 
-import be.belgif.vocab.helpers.EuDatasetType;
+package be.belgif.vocab.helpers;
 
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 
 /**
- * DAO helper class for NS.
- *
- * @author Bart.Hanssens
+ * EU File type helper class
+ * 
+ * @author Bart Hanssens
  */
-public class XmlnsDAO extends RdfDAO {
-		
-	/**
-	 * Get download URL
-	 *
-	 * @return download URL
-	 */
-	public String getDownload() {
-		Value url = obj(DCAT.DOWNLOAD_URL);
-		return (url != null) ? url.toString() : "";
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @param m triples
-	 * @param id subject ID
-	 */
-	public XmlnsDAO(Model m, Resource id) {
-		super(m, id);
+public class EuDatasetType {
+	public final static String NAMESPACE =  "http://publications.europa.eu/resource/authority/dataset-type/";
+	public final static String PREFIX = "euft";
+	
+	public final static IRI CORE_COMP;
+	public final static IRI MAPPING;
+	public final static IRI SCHEMA;
+	
+	static {
+		ValueFactory f = SimpleValueFactory.getInstance();
+		CORE_COMP = f.createIRI(NAMESPACE, "CORE_COMP");
+		MAPPING = f.createIRI(NAMESPACE, "MAPPING");
+		SCHEMA = f.createIRI(NAMESPACE, "SCHEMA");
 	}
 }

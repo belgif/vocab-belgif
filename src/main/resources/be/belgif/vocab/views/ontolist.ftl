@@ -13,12 +13,12 @@
 	<div id="container">
 	<section>
 		<div id="breadcrumb">
-			<a href="/">Home</a>
+			<a href="/">${m.getString("msg.home")}</a>
 		</div>
 		<#include "message.ftl">
 		<#if ontos?has_content>
 		<section>
-			<h3>Ontologies</h3>
+			<h3>${m.getString("msg.ontos")}</h3>
 			<section>
 				<h4>${m.getString("msg.overview")}</h4>
 				<table>
