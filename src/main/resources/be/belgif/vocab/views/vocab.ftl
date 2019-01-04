@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='UTF-8'>
+<meta charset="UTF-8" />
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
 <#include "title.ftl">
 </head>
@@ -18,7 +18,7 @@
 			<a href="/auth">${m.getString("msg.vocabs")}</a>
 		</div>
 		<#include "message.ftl">
-		<section>
+		<section typeof="skos:ConceptScheme" about="${v.id}">
 			<h3>${v.id}</h3>
 			<section>
 				<h4>${m.getString("msg.search")}</h4>
@@ -33,7 +33,8 @@
 				<#list langs as lang>
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>
-					<tr><td>DCTERMS description (${lang})</td><td>${val}</td></tr>
+					<tr><td>DCTERMS description (${lang})</td>
+						<td property="dcterms:description" xml:lang="${lang}" content="${val}>${val}</td></tr>
 				</#if>
 				</#list>
 				</table>
@@ -44,7 +45,7 @@
 				<h4>SKOS TopConcepts</h4>
 				<table>
 				<#list tc as t>
-					<tr><td><a href="${t}">${t}</a></td></tr>
+					<tr><td rel="skos:hasTopConcept" resource="${t}"><a href="${t}">${t}</a></td></tr>
 				</#list>
 				</table>
 			</section>

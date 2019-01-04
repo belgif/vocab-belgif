@@ -57,18 +57,25 @@ public class VocabResource extends RdfResource {
 
 	/**
 	 * Get URI for the term.
-	 * Remember, HTTP request does NOT contain '#' or anything after that
 	 * 
 	 * @param vocab vocabulary name
 	 * @param term term name
 	 * @return 
 	 */
 	private Model get(String vocab, String term) {
-		String url = (!term.isEmpty()) 
-				? PREFIX + vocab + "/" + term + "#id"
-				: PREFIX + vocab + "#id";
+		String url = (!term.isEmpty()) ? PREFIX + vocab + "/" + term
+										: PREFIX + vocab;
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
-		return getById(url, ctx);
+		Model m = getById(url, ctx);
+		if (m.isEmpty()) {
+			// legacy
+			// HTTP request does NOT contain '#' or anything after that
+			url = (!term.isEmpty()) ? PREFIX + vocab + "/" + term + "#id"
+									: PREFIX + vocab + "#id";
+			ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
+			m = getById(url, ctx);
+		}
+		return m;
 	}
 	
 	@GET
