@@ -34,7 +34,7 @@
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>
 					<tr><td>DCTERMS description (${lang})</td>
-						<td property="dcterms:description" xml:lang="${lang}" content="${val}>${val}</td></tr>
+						<td property="dcterms:description" xml:lang="${lang}" content="${val}">${val}</td></tr>
 				</#if>
 				</#list>
 				</table>
