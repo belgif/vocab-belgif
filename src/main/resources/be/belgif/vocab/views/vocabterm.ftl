@@ -80,7 +80,7 @@
 				<h4>Broader</h4>
 				<table>
 					<#list rels as rel>
-						<tr><td rel="skos:broader" resource="${rel}><a href="${rel}">${rel}</a></td></tr>
+						<tr><td rel="skos:broader" resource="${rel}"><a href="${rel}">${rel}</a></td></tr>
 					</#list>
 				</table>
 			</section>
@@ -91,7 +91,7 @@
 				<h4>Narrower</h4>
 				<table>
 				<#list rels as rel>
-					<tr><td rel="skos:narrower" resource="${rel}><a href="${rel}">${rel}</a></td></tr>
+					<tr><td rel="skos:narrower" resource="${rel}"><a href="${rel}">${rel}</a></td></tr>
 				</#list>
 				</table>
 			</section>

@@ -1,10 +1,10 @@
-<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Data receiver (generic)"@en .
+<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Data receiver (specific)"@en .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/title> "GDPR datareceiverspecifictype"@en .
-<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Datenempfänger (generisch)"@de .
+<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Datenempfänge (Spezifisch)"@de .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/title> "GDPR datareceiverspecifictype"@de .
-<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Gegevensontvanger (generiek)"@nl .
+<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Gegevensontvanger (specifiek)"@nl .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/title> "GDPR datareceiverspecifictype"@nl .
-<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Récepteur de données (générique)"@fr .
+<http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/description> "Récepteur de donnéessp�cifique)"@fr .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://purl.org/dc/terms/title> "GDPR datareceiverspecifictype"@fr .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://vocab.belgif.be/auth/gdpr-recvspec#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-recvspec/01#id> .
