@@ -1,0 +1,150 @@
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/created> "2019-01-04T13:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/title> "Data.gov.be themes"@en .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/title> "Data.gov.be themes"@nl .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/title> "Data.gov.be themes"@fr .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/title> "Data.gov.be themes"@de .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/description> "Data.gov.be themes"@en .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/description> "Data.gov.be thema's"@nl .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/description> "Data.gov.be thèmes"@fr .
+<http://vocab.belgif.be/auth/datatheme> <http://purl.org/dc/terms/description> "Data.gov.be themen"@de .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/AGRI> .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#notation> "AGRI" .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agriculture, fisheries, forestry and food"@en .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landbouw, visserij, bosbouw en voeding"@nl .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agriculture, pêche, sylviculture et alimentation"@fr .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Landwirtschaft, Fischerei, Forstwirtschaft und Nahrungsmittel"@de .
+<http://vocab.belgif.be/auth/datatheme/AGRI> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/AGRI> .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/ECON> .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#notation> "ECON" .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#prefLabel> "Economy and finance"@en .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#prefLabel> "Economie en financiën"@nl .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#prefLabel> "Économie et finances"@fr .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wirtschaft und Finanzen"@de .
+<http://vocab.belgif.be/auth/datatheme/ECON> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/CULT> .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#notation> "CULT" .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#prefLabel> "Culture and sport"@en .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cultuur en sport"@nl .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#prefLabel> "Culture et sport"@fr .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kultur und Sport"@de .
+<http://vocab.belgif.be/auth/datatheme/CULT> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/EDUC> .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/EDUC> .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#notation> "EDUC" .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Education"@en .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Onderwijs"@nl .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Éducation"@fr .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bildung"@de .
+<http://vocab.belgif.be/auth/datatheme/EDUC> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://publications.europa.eu/resource/authority/data-theme/EDUC> .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/ENER> .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#notation> "ENER" .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Energy"@en .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Energie"@nl .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Énergie"@fr .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Energie"@de .
+<http://vocab.belgif.be/auth/datatheme/ENER> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/ENER> .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/ENVI> .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#notation> "ENVI" .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environment"@en .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Milieu"@nl .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environnement"@fr .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Umwelt"@de .
+<http://vocab.belgif.be/auth/datatheme/ENVI> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/ENVI> .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/GOVE> .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#notation> "GOVE" .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Government and public sector"@en .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overheid en publieke sector"@nl .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gouvernement et secteur public"@fr .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regierung und öffentlicher Sektor"@de .
+<http://vocab.belgif.be/auth/datatheme/GOVE> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/GOVE> .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/HEAL> .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#notation> "HEAL" .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Health"@en .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gezondheid"@nl .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Santé"@fr .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gesundheit"@de .
+<http://vocab.belgif.be/auth/datatheme/HEAL> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/HEAL> .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/INTR> .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#notation> "INTR" .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#prefLabel> "International issues"@en .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Internationale vraagstukken"@nl .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Questions internationales"@fr .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Internationale Themen"@de .
+<http://vocab.belgif.be/auth/datatheme/INTR> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/INTR> .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/JUST> .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#notation> "JUST" .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice, legal system and public safety"@en .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justitie, rechtsstelsel en openbare veiligheid"@nl .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justice, système juridique et sécurité publique"@fr .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justiz, Rechtssystem und öffentliche Sicherheit"@de .
+<http://vocab.belgif.be/auth/datatheme/JUST> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/JUST> .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/REGI> .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#notation> "REGI" .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regions and cities"@en .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regio's en steden"@nl .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Régions et villes"@fr .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Regionen und Städte"@de .
+<http://vocab.belgif.be/auth/datatheme/REGI> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/REGI> .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/SOCI> .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#notation> "SOCI" .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Population and society"@en .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bevolking en samenleving"@nl .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Population et société"@fr .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bevölkerung und Gesellschaft"@de .
+<http://vocab.belgif.be/auth/datatheme/SOCI> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/TECH> .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#notation> "TECH" .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#prefLabel> "Science and technology"@en .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wetenschap en technologie"@nl .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#prefLabel> "Science et technologie"@fr .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wissenschaft und Technologie"@de .
+<http://vocab.belgif.be/auth/datatheme/TECH> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/TECH> .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/datatheme/TRAN> .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/datatheme> .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#notation> "TRAN" .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport"@en .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vervoer"@nl .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transports"@fr .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verkehr"@de .
+<http://vocab.belgif.be/auth/datatheme/TRAN> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
