@@ -1,6 +1,8 @@
 # lod-vocab
 
-SKOS, OWL and SHACL publication tool for publishing demo thesauri on Vocab.belgif.be.
+Publication tool for publishing XML XSD's, SKOS thesauri, RDFS/OWL ontologies 
+and SHACL validation rules from [lod-vocab-data](https://github.com/fedict/lod-vocab-data) on Vocab.belgif.be.
+
 
 Best practices and guidelines can be found in [README-SKOS.md](README-SKOS.md) and [README-RDFSOWL.md](README-RDFSOWL.md)
 
