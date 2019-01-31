@@ -4,9 +4,19 @@ MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
 COPY lod-vocab-1.3.8.jar /usr/local/bin/lod-vocab.jar
+
 COPY vocab /home/dropwizard/ 
-#RUN chown -R dropwizard /home/dropwizard
-RUN chgrp -R 0 /home/dropwizard && \
+
+COPY lod-vocab-data/shacl /home/dropwizard/import-shacl/
+COPY lod-vocab-data/shacl /home/dropwizard/download-shacl/
+
+COPY lod-vocab-data/onto /home/dropwizard/import-onto/
+COPY lod-vocab-data/auth /home/dropwizard/import-auth/
+
+COPY lod-vocab-data/ns /home/dropwizard/download-ns/
+
+RUN mkdir /home/dropwizard/download-auth  && \ 
+    chown -R dropwizard:0 /home/dropwizard && \
     chmod -R g=u /home/dropwizard
 
 USER dropwizard 

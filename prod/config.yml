@@ -1,4 +1,4 @@
-dataDir: /home/dropwizard/store    
+dataDir: /home/dropwizard/store
 luceneDir: /home/dropwizard/lucene
 sitePrefix: http://vocab.belgif.be/
 overwrite: true
@@ -14,6 +14,10 @@ vocabularies:
 shacls:
     downloadDir: /home/dropwizard/download-shacl
     importDir: /home/dropwizard/import-shacl
+
+jsonldcontexts:
+    downloadDir: /home/dropwizard/download-ctx
+    importDir: /home/dropwizard/import-ctx
 
 xmlnamespaces:
     downloadDir: /home/dropwizard/download-ns
@@ -38,4 +42,3 @@ views:
         template_exception_handler: rethrow
         output_encoding: utf-8
         incompatible_improvements: 2.3.27   
-
