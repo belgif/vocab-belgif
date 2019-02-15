@@ -1,0 +1,68 @@
+{
+	"@context": {
+		"dcterms": "http://purl.org/dc/terms/",
+		"owl": "http://www.w3.org/2002/07/owl#",
+		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"dcterms:description": {
+			"@container": "@language"
+    	},
+		"dcterms:title": {
+			"@container": "@language"
+    	},
+		"dcterms:license": {
+			"@type": "@id"
+    	},
+		"skos:altLabel": {
+			"@container": "@language"
+        },
+		"skos:prefLabel": {
+			"@container": "@language"
+        },
+		"skos:note": {
+			"@container": "@language"
+        },
+		"skos:inScheme": {
+			"@type": "@id"
+		},
+		"skos:broader": {
+			"@type": "@id"
+		},
+		"skos:narrower": {
+			"@type": "@id"
+		},
+		"skos:closeMatch": {
+			"@type": "@id"
+		},
+		"skos:exactMatch": {
+			"@type": "@id"
+		},
+		"skos:broadMatch": {
+			"@type": "@id"
+		},
+		"skos:narrowMatch": {
+			"@type": "@id"
+		}
+	},
+	"@explicit": true,
+	"@type": "skos:ConceptScheme",
+	"@embed": "@always",
+	"dcterms:title": {},
+	"dcterms:description": {},
+	"dcterms:license": {},
+	"dcterms:modified": {},
+	"owl:versionInfo": {},
+	"skos:hasTopConcept": {
+		"@explicit": true,
+		"@type": "skos:Concept",
+		"skos:prefLabel": {},
+		"skos:altLabel": {},
+		"skos:notation": {},
+		"skos:inScheme": {},
+		"skos:narrower": { "@embed": "@always" },
+		"skos:broader": { "@embed": "@never" },
+		"skos:exactMatch": {},
+		"skos:closeMatch": {},
+		"skos:narrowMatch": {},
+		"skos:broadMatch": {}
+	}
+}

@@ -52,11 +52,11 @@ import org.slf4j.LoggerFactory;
  * @author Bart.Hanssens
  */
 public abstract class AbstractImportDumpTask extends AbstractImportTask {
-	private final String[] ftypes = 
+	protected final String[] ftypes = 
 		new String[] { RDFFormat.TURTLE.getDefaultFileExtension(), 
 				RDFFormat.JSONLD.getDefaultFileExtension(), 
 				RDFFormat.NTRIPLES.getDefaultFileExtension() };
-	private final String downloadDir;
+	protected final String downloadDir;
 	
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportDumpTask.class);
 	

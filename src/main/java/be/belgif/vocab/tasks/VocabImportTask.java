@@ -28,11 +28,23 @@ package be.belgif.vocab.tasks;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
+import com.github.jsonldjava.core.JsonLdOptions;
+import com.github.jsonldjava.core.JsonLdProcessor;
+import com.github.jsonldjava.utils.JsonUtils;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.rdf4j.common.iteration.Iterations;
 import org.eclipse.rdf4j.model.IRI;
@@ -47,6 +59,8 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.Rio;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,6 +73,8 @@ import org.slf4j.LoggerFactory;
 public class VocabImportTask extends AbstractImportDumpTask {
 	public final static String NAME = "vocab-import";
 	
+	private final ClassLoader cl = VocabImportTask.class.getClassLoader();
+
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
 	/**
@@ -121,6 +137,51 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		conn.add(voidM, ctx);
 		
 		writeDumps(conn, name, ctx);
+		
+		frameJsonLd(name);
+	}
+
+	/**
+	 * Convert JSON-LD files to framed version
+	 * 
+	 * @param name
+	 * @throws IOException
+	 */
+	private void frameJsonLd(String name) throws IOException {
+		LOG.info("Using JSON-LD frame on {}", name);
+		
+		Object frame;
+		
+		try (InputStream is = cl.getResourceAsStream("skos.frame")) {
+			frame = JsonUtils.fromInputStream(is);
+		}
+		Path f = Paths.get(downloadDir, name + "." + RDFFormat.JSONLD.getDefaultFileExtension());
+		
+		Object obj;
+		try(BufferedReader r = Files.newBufferedReader(f)) {
+			// FIXME: merge graphs into default graph, workaround for JSON-LD-Java limitation
+			Model parsed = Rio.parse(r, "", RDFFormat.JSONLD);
+			Model merged = new LinkedHashModel();
+			parsed.forEach(s -> merged.add(s.getSubject(), s.getPredicate(), s.getObject()));
+			parsed.clear();
+			StringWriter w = new StringWriter();
+			Rio.write(merged, w, RDFFormat.JSONLD);
+			obj = JsonUtils.fromString(w.toString());
+		}
+		
+		JsonLdOptions opts = new JsonLdOptions();
+		opts.setOmitDefault(Boolean.TRUE);
+		opts.setProcessingMode(JsonLdOptions.JSON_LD_1_1);
+	
+		Map<String,Object> res = JsonLdProcessor.frame(obj, frame, opts);
+		
+		// replace existing file with framed version
+		try(BufferedWriter w = Files.newBufferedWriter(f, 
+											StandardOpenOption.WRITE, 
+											StandardOpenOption.TRUNCATE_EXISTING)) {
+			LOG.info("Writing framed JSON-LD file {}", f);
+			JsonUtils.writePrettyPrint(w, res);
+		}
 	}
 
 	/**
