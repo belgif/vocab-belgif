@@ -44,12 +44,23 @@ public class DatasetResource {
 	private final String vocabDir;
 	
 	@GET
-	@Path("{file: .+\\.(nt|jsonld|ttl)}")
-	@Produces({RDFMediaType.NTRIPLES, RDFMediaType.JSONLD, RDFMediaType.TURTLE})
-	public File getFile(@PathParam("file") String file) {
+	@Path("{file: .+\\.nt}")
+	@Produces(RDFMediaType.NTRIPLES+";charset=utf-8")
+	public File getFileNT(@PathParam("file") String file) {
 		return Paths.get(vocabDir, file).toFile();
 	}
-
+	@GET
+	@Path("{file: .+\\.jsonld}")
+	@Produces(RDFMediaType.JSONLD+";charset=utf-8")
+	public File getFileJSON(@PathParam("file") String file) {
+		return Paths.get(vocabDir, file).toFile();
+	}
+	@GET
+	@Path("{file: .+\\.ttl}")
+	@Produces(RDFMediaType.TURTLE+";charset=utf-8")
+	public File getFileTTL(@PathParam("file") String file) {
+		return Paths.get(vocabDir, file).toFile();
+	}
 	/**
 	 * Constructor
 	 *
