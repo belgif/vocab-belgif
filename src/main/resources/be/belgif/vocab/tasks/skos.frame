@@ -3,6 +3,7 @@
 		"dcterms": "http://purl.org/dc/terms/",
 		"owl": "http://www.w3.org/2002/07/owl#",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
+		"void": "http://rdfs.org/ns/void#",
 		"dcterms:description": {
 			"@container": "@language"
     	},
@@ -41,6 +42,9 @@
 		},
 		"skos:narrowMatch": {
 			"@type": "@id"
+		},
+		"void:vocabulary": {
+			"@type": "@id"
 		}
 	},
 	"@explicit": true,
@@ -51,6 +55,7 @@
 	"dcterms:license": {},
 	"dcterms:modified": {},
 	"owl:versionInfo": {},
+	"void:vocabulary": {},
 	"skos:hasTopConcept": {
 		"@explicit": true,
 		"@type": "skos:Concept",
