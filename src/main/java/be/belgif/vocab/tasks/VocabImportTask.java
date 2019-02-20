@@ -175,6 +175,7 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		
 		// replace existing file with framed version
 		try(BufferedWriter w = Files.newBufferedWriter(f, 
+											StandardOpenOption.CREATE,
 											StandardOpenOption.WRITE, 
 											StandardOpenOption.TRUNCATE_EXISTING)) {
 			LOG.info("Writing framed JSON-LD file {}", f);
