@@ -34,6 +34,7 @@
 						<#assign download = v.download!"">
 						<td><a href="${download}.ttl">TTL</a>
 							<a href="${download}.jsonld">JSON-LD</a>
+							(<a href="${download}-framed.jsonld">framed</a>)
 							<a href="${download}.nt">N-Triples</a></td>
 					</tr>
 					</#list>

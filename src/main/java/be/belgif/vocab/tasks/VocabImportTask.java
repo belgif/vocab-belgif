@@ -73,8 +73,6 @@ import org.slf4j.LoggerFactory;
 public class VocabImportTask extends AbstractImportDumpTask {
 	public final static String NAME = "vocab-import";
 	
-	private final ClassLoader cl = VocabImportTask.class.getClassLoader();
-
 	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
 	/**
@@ -152,10 +150,10 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		
 		Object frame;
 		
-		try (InputStream is = cl.getResourceAsStream("skos.frame")) {
+		try (InputStream is = VocabImportTask.class.getResourceAsStream("skos.frame")) {
 			frame = JsonUtils.fromInputStream(is);
 		}
-		Path f = Paths.get(downloadDir, name + "." + RDFFormat.JSONLD.getDefaultFileExtension());
+		Path f = Paths.get(downloadDir, name + "-framed." + RDFFormat.JSONLD.getDefaultFileExtension());
 		
 		Object obj;
 		try(BufferedReader r = Files.newBufferedReader(f)) {
