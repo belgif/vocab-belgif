@@ -153,10 +153,10 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		try (InputStream is = VocabImportTask.class.getResourceAsStream("skos.frame")) {
 			frame = JsonUtils.fromInputStream(is);
 		}
-		Path f = Paths.get(downloadDir, name + "-framed." + RDFFormat.JSONLD.getDefaultFileExtension());
+		Path fin = Paths.get(downloadDir, name + "." + RDFFormat.JSONLD.getDefaultFileExtension());
 		
 		Object obj;
-		try(BufferedReader r = Files.newBufferedReader(f)) {
+		try(BufferedReader r = Files.newBufferedReader(fin)) {
 			// FIXME: merge graphs into default graph, workaround for JSON-LD-Java limitation
 			Model parsed = Rio.parse(r, "", RDFFormat.JSONLD);
 			Model merged = new LinkedHashModel();
@@ -172,13 +172,15 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		opts.setProcessingMode(JsonLdOptions.JSON_LD_1_1);
 	
 		Map<String,Object> res = JsonLdProcessor.frame(obj, frame, opts);
+
+		Path fout = Paths.get(downloadDir, name + "-framed." + RDFFormat.JSONLD.getDefaultFileExtension());
 		
 		// replace existing file with framed version
-		try(BufferedWriter w = Files.newBufferedWriter(f, 
+		try(BufferedWriter w = Files.newBufferedWriter(fout, 
 											StandardOpenOption.CREATE,
 											StandardOpenOption.WRITE, 
 											StandardOpenOption.TRUNCATE_EXISTING)) {
-			LOG.info("Writing framed JSON-LD file {}", f);
+			LOG.info("Writing framed JSON-LD file {}", fout);
 			JsonUtils.writePrettyPrint(w, res);
 		}
 	}
