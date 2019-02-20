@@ -26,7 +26,7 @@
 						<th>${m.getString("msg.description")}</th>
 						<th>${m.getString("msg.downloads")}</th>
 					</tr>
-				<#list ontos as o>
+				<#list ontos?sort_by("id") as o>
 					<tr><td><a href="${o.id}">${o.getLabel(l)!""}</a></td>
 						<td>${o.getComment(l)!""}</td>
 						<#assign download = o.id?remove_ending("#")>
