@@ -95,6 +95,7 @@ public class QueryHelper {
 		
 		// Joinup Core Vocabularies
 		NS_MAP.put("cv", "http://data.europa.eu/m8g/");
+		NS_MAP.put("eli", "http://data.europa.eu/eli/ontology#");
 		NS_MAP.put("schema", "http://schema.org/");
 	}
 
