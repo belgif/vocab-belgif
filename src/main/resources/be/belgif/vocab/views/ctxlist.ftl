@@ -27,7 +27,7 @@
 						<th>${m.getString("msg.downloads")}</th>
 					</tr>
 				<#list contexts as c>
-					<tr><td><a href="${c.id}">${c.getTitle(l)!""}</a></td>
+					<tr><td>${c.getTitle(l)!""}</td>
 						<td>${c.getDescription(l)!""}</td>
 						<td><a href="${c.download!""}">JSON-LD</a></td>
 					</tr>
