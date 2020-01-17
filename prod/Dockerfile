@@ -3,7 +3,7 @@ FROM amd64/openjdk:8-jre-alpine
 MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
-COPY lod-vocab-1.3.12.jar /usr/local/bin/lod-vocab.jar
+COPY lod-vocab-1.3.17.jar /usr/local/bin/lod-vocab.jar
 
 COPY vocab /home/dropwizard/ 
 
