@@ -41,10 +41,11 @@ import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
 
+import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
+import org.eclipse.rdf4j.model.vocabulary.LOCN;
 import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -81,6 +82,7 @@ public class QueryHelper {
 		NS_MAP.put(DCAT.PREFIX, DCAT.NAMESPACE);
 		NS_MAP.put(DCTERMS.PREFIX, DCTERMS.NAMESPACE);
 		NS_MAP.put(FOAF.PREFIX, FOAF.NAMESPACE);
+		NS_MAP.put(LOCN.PREFIX, FOAF.NAMESPACE);
 		NS_MAP.put(ORG.PREFIX, ORG.NAMESPACE);
 		NS_MAP.put(OWL.PREFIX, OWL.NAMESPACE);
 		NS_MAP.put(RDF.PREFIX, RDF.NAMESPACE);

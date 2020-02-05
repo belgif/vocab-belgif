@@ -138,7 +138,7 @@ public class ShaclDAO extends RdfDAO {
 		} 
 		
 		/**
-		 * Get list of nested roperty shapes
+		 * Get list of nested property shapes
 		 * 
 		 * @return 
 		 */
