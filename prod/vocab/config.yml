@@ -1,0 +1,44 @@
+dataDir: /home/dropwizard/store
+luceneDir: /home/dropwizard/lucene
+sitePrefix: http://vocab.belgif.be/
+overwrite: true
+
+ontologies:
+    downloadDir: /home/dropwizard/download-ns
+    importDir: /home/dropwizard/import-onto
+
+vocabularies:
+    downloadDir: /home/dropwizard/download-auth
+    importDir: /home/dropwizard/import-auth
+
+shacls:
+    downloadDir: /home/dropwizard/download-shacl
+    importDir: /home/dropwizard/import-shacl
+
+jsonldcontexts:
+    downloadDir: /home/dropwizard/download-ctx
+    importDir: /home/dropwizard/import-ctx
+
+xmlnamespaces:
+    downloadDir: /home/dropwizard/download-ns
+    importDir: /home/dropwizard/import-ns
+    
+logging:
+    level: INFO
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: /home/dropwizard/logs/vocab.log
+
+server:
+  requestLog:
+    appenders:
+      - type: file
+        archive: false
+        currentLogFilename: /home/dropwizard/logs/vocab-request.log
+
+views:
+    freemarker:
+        template_exception_handler: rethrow
+        output_encoding: utf-8
+        incompatible_improvements: 2.3.27   

@@ -1,0 +1,10 @@
+<http://vocab.belgif.be/ctx/best#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/CORE_COMP> .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/title> "BeST context"@nl .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/title> "BeST Contexte"@fr .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/title> "BeST Kontext"@de .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/title> "BeST Context"@en .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/description> "BeST JSON-LD context"@nl .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/description> "BeST Contexte JSON-LD"@fr .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/description> "BeST Kontext JSON-LD"@de .
+<http://vocab.belgif.be/ctx/best#id> <http://purl.org/dc/terms/description> "BeST Context JSON-LD"@en .
+<http://vocab.belgif.be/ctx/best#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ctx/best.jsonld> .
