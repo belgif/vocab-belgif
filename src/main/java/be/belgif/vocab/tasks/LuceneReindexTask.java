@@ -25,10 +25,11 @@
  */
 package be.belgif.vocab.tasks;
 
-import com.google.common.collect.ImmutableMultimap;
 import io.dropwizard.servlets.tasks.Task;
 
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 import javax.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.repository.Repository;
@@ -59,7 +60,7 @@ public class LuceneReindexTask extends Task {
 	 * @throws Exception
 	 */
 	@Override
-	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
+	public void execute(Map<String,List<String>> param, PrintWriter w) throws Exception {
 		if (repo instanceof SailRepository) {
 			Sail sail = ((SailRepository) repo).getSail();
 			if (sail instanceof LuceneSail) {

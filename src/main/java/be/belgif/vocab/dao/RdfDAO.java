@@ -35,8 +35,6 @@ import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.ValueFactory;
-import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.util.ModelException;
 import org.eclipse.rdf4j.model.util.RDFCollections;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
@@ -200,7 +198,17 @@ public class RdfDAO {
 	public String getTitle(String lang) {
 		return literal(DCTERMS.TITLE, lang);
 	}
-
+		
+	/**
+	 * Get version info in a specific language
+	 * 
+	 * @param lang language code
+	 * @return string or empty string
+	 */
+	public String getVersion(String lang) {
+		return literal(OWL.VERSIONINFO, lang);
+	}
+	
 	/**
 	 * Constructor
 	 *

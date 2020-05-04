@@ -49,6 +49,23 @@
 					</#list>
 				</table>
 			</section>
+			<#assign sd = v.startDate!"">
+			<#assign ed = v.endDate!"">
+			<#if sd?has_content || ed?has_content>
+			<section>
+				<h4>${m.getString("msg.validity")}</h4>
+				<table>
+				<#if sd?has_content>
+					<tr><td>Start Date</td>
+						<td property="schema:startDate" content="${sd}">${sd}</td></tr>
+				</#if>
+				<#if ed?has_content>
+					<tr><td>End Date</td>
+						<td property="schema:endDate" content="${ed}">${ed}</td></tr>
+				</#if>
+				</table>
+			</section>
+			</#if>
 			<section>
 				<h4>Matches</h4>
 				<table>

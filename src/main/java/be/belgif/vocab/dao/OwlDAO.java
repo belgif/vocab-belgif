@@ -38,7 +38,6 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
-import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
@@ -102,17 +101,6 @@ public class OwlDAO extends RdfDAO {
 			super(m, id);
 		}
 	}
-		
-	/**
-	 * Get version info in a specific language
-	 * 
-	 * @param lang language code
-	 * @return string or empty string
-	 */
-	public String getVersion(String lang) {
-		return literal(OWL.VERSIONINFO, lang);
-	}
-	
 	
 	/**
 	 * Sort a list of properties or classes and group by starting letter.

@@ -30,6 +30,10 @@
 			<section>
 				<h4>${m.getString("msg.general")}</h4>
 				<table>
+				<#assign val = v.getVersion(lang)!v.getVersion("")!"">
+				<#if val?has_content>
+					<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
+				</#if>
 				<#list langs as lang>
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>

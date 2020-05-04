@@ -27,9 +27,6 @@ package be.belgif.vocab.tasks;
 
 import be.belgif.vocab.helpers.QueryHelper;
 
-import com.google.common.collect.ImmutableCollection;
-import com.google.common.collect.ImmutableMultimap;
-
 import io.dropwizard.servlets.tasks.Task;
 
 import java.io.IOException;
@@ -37,6 +34,8 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import javax.ws.rs.WebApplicationException;
@@ -112,13 +111,13 @@ public abstract class AbstractImportTask extends Task {
 	 * @throws Exception
 	 */
 	@Override
-	public void execute(ImmutableMultimap<String, String> param, PrintWriter w) throws Exception {
-		ImmutableCollection<String> files = param.get("file");
+	public void execute(Map<String,List<String>> param, PrintWriter w) throws Exception {
+		List<String> files = param.get("file");
 		if (files == null || files.isEmpty()) {
 			throw new WebApplicationException("Param name empty");
 		}
 
-		String file = files.asList().get(0);
+		String file = files.get(0);
 		Path infile = Paths.get(importDir, file);
 
 		LOG.info("Trying to parse {}", infile);

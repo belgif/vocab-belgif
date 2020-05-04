@@ -25,6 +25,7 @@
  */
 package be.belgif.vocab.dao;
 
+import be.belgif.vocab.helpers.SchemaOrg;
 import java.util.Set;
 
 import org.eclipse.rdf4j.model.Model;
@@ -153,6 +154,25 @@ public class SkosDAO extends RdfDAO {
 		return objs(SKOS.NARROW_MATCH);
 	}
 	
+	/**
+	 * Get SKOS start date
+	 *
+	 * @return start date as string
+	 */
+	public String getStartDate() {
+		String v = literal(SchemaOrg.START_DATE, "");
+		return (v != null) ? v : "";
+	}
+
+	/**
+	 * Get SKOS end date
+	 *
+	 * @return end date as string
+	 */
+	public String getEndDate() {
+		String v = literal(SchemaOrg.END_DATE, "");
+		return (v != null) ? v : "";
+	}
 	
 	/**
 	 * Constructor
