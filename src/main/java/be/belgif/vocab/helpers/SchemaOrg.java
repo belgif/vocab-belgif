@@ -36,7 +36,7 @@ import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
  * @author Bart Hanssens
  */
 public class SchemaOrg {
-	public final static String NAMESPACE =  "http://schema.org/";
+	public final static String NAMESPACE =  "https://schema.org/";
 	
 	public final static IRI START_DATE;
 	public final static IRI END_DATE;
