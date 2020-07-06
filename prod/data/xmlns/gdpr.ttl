@@ -1,0 +1,752 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/ns/gdpr#authoritativeSource> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Authentieke bron"@nl, "Authentische Quelle"@de, "Authoritative source"@en,
+    "Source authentique"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#authorization> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Authorization/Protocol"@en, "Autorisation/Protocol"@fr, "Genehmigung/Protokoll"@de,
+    "Machtiging/Protocol"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#businessProcess> a rdf:Property, owl:DataProperty;
+  rdfs:comment "Business process auquel appartient le traitement des données (nom + description)."@fr,
+    "Business process to which the data treatment belongs (name + description)."@en, "Business process waartoe de gegevensverwerking behoort (naam + beschrijving)."@nl,
+    "Business process, zu dem die Datenverarbeitung gehört (Name + Beschreibung)."@de;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Business process"@de, "Business process"@en, "Business process"@fr, "Business process"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#businessProcessOwner> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Business process Besitzer"@de, "Business process eigenaar"@nl, "Business process owner"@en,
+    "Business process propriétaire"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#classificationLevel> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Classificatieniveau"@nl, "Classification level"@en, "Klassifizierungsstufe"@de,
+    "Niveau de classification"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#classificationText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Classificatieniveau"@nl, "Classification level"@en, "Klassifizierungsstufe"@de,
+    "Niveau de classification"@fr.
+
+<http://vocab.belgif.be/ns/gdpr#conservation> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Dauer Zeit Tracking-Daten"@de, "Duration of data conservation"@en, "Durée de la conservation des données"@fr,
+    "Duurtijd bijhouden gegevens"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#contract> a rdf:Property, owl:DataProperty;
+  rdfs:comment "Number of data processing contract or identification for data processing."@en,
+    "Nummer des Datenverarbeitungsvertrages oder Identifikation für die Datenverarbeitung."@de,
+    "Nummer gegevensverwerkingscontract of identificatie voor gegevensverwerking."@nl,
+    "Numéro de contrat de traitement de données ou identification de traitement de données."@fr;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#Processor>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Contrat sous-traitant"@fr, "Gegevensverwerkingscontract"@nl, "Processor contract"@en,
+    "Prozessorvertrag"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataCategory> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>, <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Catégorie de données GDPR"@fr, "Data categorie GDPR"@nl, "Data category GDPR"@en,
+    "Datenkategorie GDPR"@de;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#dataCategoryText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>, <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Catégorie de données GDPR"@fr, "(imported) Data categorie GDPR"@nl,
+    "(imported) Data category GDPR"@en, "(imported) Datenkategorie GDPR"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataCoupling> a rdf:Property, owl:DataProperty;
+  rdfs:comment "Geeft aan of er gegevens uit verschillende datasets worden gekoppeld."@nl,
+    "Gibt an, ob Daten aus verschiedenen Datensätzen verknüpft sind."@de, "Indicates whether data from different datasets are linked."@en,
+    "Indique si les données de différents ensembles de données sont liées."@fr;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Couplage de données"@fr, "Data coupling"@en, "Datenkopplung"@de, "Gegevenskoppeling"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataTreatmentName> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#Processor>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment name"@en, "Naam gegevensbehandeling"@nl, "Name der Datenbehandlung"@de,
+    "Nom du traitement des données"@fr;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf dcterms:title.
+
+<http://vocab.belgif.be/ns/gdpr#destinationCountry> a rdf:Property, owl:ObjectProperty;
+  rdfs:comment "En cas d'échange de données avec un autre pays"@fr, "Im Falle des Austauschs von Daten mit einem anderen Land"@de,
+    "In case of exchange of data with another country"@en, "In geval van uitwisseling van gegevens met een ander land"@nl;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Country Recipient of data"@en, "Land Empfänger von Daten"@de, "Land Ontvanger van gegevens"@nl,
+    "Pays Destinataire de données"@fr;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dcterms:spatial.
+
+<http://vocab.belgif.be/ns/gdpr#emailPrivacyQuestions> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "E-Mail für Fragen zum Datenschutz"@de, "E-mail for privacy questions"@en,
+    "E-mail pour des questions au sujet du privacy"@fr, "E-mail voor vragen rond privacy"@nl;
+  rdfs:range owl:Thing;
+  rdfs:subPropertyOf schema:email.
+
+<http://vocab.belgif.be/ns/gdpr#finalityMain> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Finalité principale du traitement"@fr, "Hauptziel der Verarbeitung"@de,
+    "Hoofdverwerkingsdoel"@nl, "Main finality of the data treatment"@en;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#finalityOther> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Ander verwerkingsdoel"@nl, "Anderes Ziel der Verarbeitung"@de, "Autre finalité du traitement"@fr,
+    "Other finality of the data treatment"@en;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#finalityText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Finality of the data treatment"@en, "(imported) Finalité du traitement"@fr,
+    "(imported) Verwerkingsdoel"@nl, "(imported) Ziel der Verarbeitung"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#guarantee> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiver>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Documentatie passende waarborgen"@nl, "Documentation appropriate safeguards"@en,
+    "Documentation des garanties appropriées"@fr, "Dokumentation geeignete Sicherheitsmaßnahmen"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#hasController> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Controller"@de, "Controller"@en, "Controller"@fr, "Controller"@nl;
+  rdfs:range <http://vocab.belgif.be/ns/gdpr#Controller>.
+
+<http://vocab.belgif.be/ns/gdpr#hasDPO> a rdf:Property, owl:ObjectProperty;
+  rdfs:comment "Data Protection Officer."@de, "Data Protection Officer."@en, "Data Protection Officer."@fr,
+    "Data Protection Officer."@nl;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DatTreatmentRole>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "DPO"@de, "DPO"@en, "DPO"@fr, "DPO"@nl;
+  rdfs:range schema:ContactPoint;
+  rdfs:subPropertyOf cv:hasContactPoint.
+
+<http://vocab.belgif.be/ns/gdpr#hasDataReceiver> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Destinataire de données"@fr, "Empfänger von Daten"@de, "Ontvanger van gegevens"@nl,
+    "Recipient of data"@en;
+  rdfs:range <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+
+<http://vocab.belgif.be/ns/gdpr#hasDataTreatment> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#Register>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment"@en, "Datenbehandlung"@de, "Gegevensverwerking"@nl, "Traitement des données"@fr;
+  rdfs:range <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:subPropertyOf dcterms:relation.
+
+<http://vocab.belgif.be/ns/gdpr#hasDelegate> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Delegate of the responsible person"@en, "Delegierter der verantwortlichen Person"@de,
+    "Délégué du responsable"@fr, "Gedelegeerde van de verantwoordelijke"@nl;
+  rdfs:range schema:ContactPoint;
+  rdfs:subPropertyOf cv:hasContactPoint.
+
+<http://vocab.belgif.be/ns/gdpr#hasProcessor> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Processor"@en, "Prozessor"@de, "Sous-traitant"@fr, "Verwerker"@nl;
+  rdfs:range <http://vocab.belgif.be/ns/gdpr#Processor>.
+
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Personne responsable"@fr, "Responsible person"@en, "Verantwoordelijke persoon"@nl,
+    "Verantwortliche Person"@de;
+  rdfs:range schema:ContactPoint;
+  rdfs:subPropertyOf cv:hasContactPoint.
+
+<http://vocab.belgif.be/ns/gdpr#involvedParty> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Categorie betrokkene"@nl, "Category of involved party"@en, "Catégorie de personne concernée"@fr,
+    "Kategorie der beteiligten Person"@de;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#involvedPartyInformation> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Informatieproces naar betrokken partijen"@nl, "Information process towards involved parties"@en,
+    "Informationsprozess gegenüber Beteiligten"@de, "Processus d'information vers les parties impliquées"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Categorie betrokkene"@nl, "(imported) Category of involved party"@en,
+    "(imported) Catégorie de personne concernée"@fr, "(imported) Kategorie der beteiligten Person"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#isConfirmed> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment confirmed by DPO"@en, "Datenbehandlung von DPO bestätigt"@de,
+    "Gegevensverwerking bevestigd door DPO"@nl, "Traitement des données confirmé par DPO"@fr;
+  rdfs:range xsd:boolean.
+
+<http://vocab.belgif.be/ns/gdpr#isDPOInternal> a rdf:Property, owl:DataProperty;
+  rdfs:comment "DPO appartient au personnel de l'organisation du contrôleur ou non."@fr,
+    "DPO behoort tot het personeel van de Controller-organisatie of niet."@nl, "DPO belongs to the staff of the Controller organization or not."@en,
+    "DPO gehört dem Personal der Controller-Organisation oder nicht."@de;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#Controller>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "DPO interne"@fr, "Internal DPO"@en, "Interne DPO"@nl, "Interner DPO"@de;
+  rdfs:range xsd:boolean.
+
+<http://vocab.belgif.be/ns/gdpr#isDPOInternalText> a rdf:Property, owl:DataProperty;
+  rdfs:comment "DPO appartient au personnel de l'organisation du contrôleur ou non."@fr,
+    "DPO behoort tot het personeel van de Controller-organisatie of niet."@nl, "DPO belongs to the staff of the Controller organization or not."@en,
+    "DPO gehört dem Personal der Controller-Organisation oder nicht."@de;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#Controller>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) DPO interne"@fr, "(imported) Internal DPO"@en, "(imported) Interne DPO"@nl,
+    "(imported) Interner DPO"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#isJuridical> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Données juridiques"@fr, "Juridical data"@en, "Juridische gegevens"@nl,
+    "Rechtliche Informationen"@de;
+  rdfs:range xsd:boolean.
+
+<http://vocab.belgif.be/ns/gdpr#isSensitive> a rdf:Property, owl:DataProperty;
+  rdfs:comment "Lijst met gevoelige gegevenscategorieën = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@nl,
+    "List of sensitive data categories = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@en,
+    "Liste der sensiblen Datenkategorien = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@de,
+    "Liste des catégories de données sensibles = ['A4', 'F1', 'J5','M1', 'M2', 'M3', 'M4', 'M5', 'O6', 'Q', 'R', 'S1', 'S2', 'T1', 'U']"@fr;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Données sensibles"@fr, "Gevoelige gegevens"@nl, "Sensible Daten"@de, "Sensitive data"@en;
+  rdfs:range xsd:boolean.
+
+<http://vocab.belgif.be/ns/gdpr#isSensitiveText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatmentPart>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Données sensibles"@fr, "(imported) Gevoelige gegevens"@nl,
+    "(imported) Sensible Daten"@de, "(imported) Sensitive data"@en;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#isVulnerable> a rdf:Property, owl:DataProperty;
+  rdfs:comment "true - if those involved are in a situation where there is an imbalance in the relationship between the position of a data subject and a controller, such as children, employees, patients, ... false - if it is not a category of stakeholders as mentioned above"@en,
+    "true - si les personnes concernées se trouvent dans une situation où il existe un déséquilibre dans la relation entre la position d'une personne concernée et celle d'un responsable du traitement, tels que les enfants, les employés, les patients, ... .false - si ce n'est pas une catégorie de parties prenantes comme mentionné ci-dessus"@fr,
+    "true - wenn sich die Beteiligten in einer Situation befinden, in der das Verhältnis zwischen der Position einer betroffenen Person und einem für die Verarbeitung Verantwortlichen, wie Kinder, Angestellte, Patienten, ... . false - wenn es sich nicht um eine Kategorie von Interessengruppen handelt, wie oben erwähnt"@de,
+    "true -- indien het betrokkenen betreft die zich in een  situatie bevinden waarin een onevenwicht in de relatie tussen de positie van een betrokkene en een verwerkingsverantwoordelijke is, zoals bijvoorbeeld kinderen, werknemers, patiënten, ... . false --  indien het niet om een categorie betrokkenen zoals hierboven vermeld"@nl;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Anfällige Beteiligte"@de, "Kwetsbare betrokken partij"@nl, "Vulnerable involved party"@en,
+    "Vulnérable partie impliquée"@fr;
+  rdfs:range xsd:boolean.
+
+<http://vocab.belgif.be/ns/gdpr#isVulnerableText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Anfällige Beteiligte"@de, "(imported) Kwetsbare betrokken partij"@nl,
+    "(imported) Vulnerable involved party"@en, "(imported) Vulnérable partie impliquée"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Base juridique"@fr, "Juridical base"@en, "Juridische verwerkingsgrond"@nl,
+    "Legaler Verarbeitungsgrund"@de;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#juridicalBaseText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Base juridique"@fr, "(imported) Juridical base"@en, "(imported) Juridische verwerkingsgrond"@nl,
+    "(imported) Legaler Verarbeitungsgrund"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#otherSource> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Andere Quelle"@de, "Andere bron"@nl, "Autre source"@fr, "Other source"@en;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#policy> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Policy reference"@en, "Referentie naar policy"@nl, "Richtlinienreferenz"@de,
+    "Référence de politique"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#privacyImpact> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Privacy Impact Assessment (PIA)"@de, "Privacy Impact Assessment (PIA)"@en,
+    "Privacy Impact Assessment (PIA)"@fr, "Privacy Impact Assessment (PIA)"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#receiverType> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiver>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "En cas d'échange de données"@fr, "Im Falle des Austauschs von Daten"@de,
+    "In case of exchange of data"@en, "In geval van uitwisseling van gegevens"@nl;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dcterms:subject.
+
+<http://vocab.belgif.be/ns/gdpr#receiverTypeText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiver>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Destinataire de données (spécifique)"@fr, "(imported) Empfänger von Daten (spezifisch)"@de,
+    "(imported) Ontvanger van gegevens (specifiek)"@nl, "(imported) Recipient of data (specific)"@en;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#remarks> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Kommentare"@de, "Opmerkingen"@nl, "Remarks"@en, "Remarques"@fr;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf rdfs:comment.
+
+<http://vocab.belgif.be/ns/gdpr#replacedBy> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Ersatz für die Datenbehandlung"@de, "Remplacement pour le traitement des données"@fr,
+    "Replacement for the data treatment"@en, "Vervanging voor de gegevensverwerking"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#rightsProcedure> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Procedure for the exercise of rights"@en, "Procedure voor de uitoefening van rechten"@nl,
+    "Procédure d'exercice des droits"@fr, "Verfahren für die Ausübung von Rechten"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#securityMeasure> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Art der Sicherheitsmaßnahme"@de, "Type beveiligingsmaatregel"@nl, "Type de mesure de sécurité"@fr,
+    "Type of security measure"@en;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#securityMeasures> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Technology Sicherheitsmaßnahmen"@de, "Technology mesures de sécurité"@fr,
+    "Technology security measures"@en, "Technology veiligheidsmaatregelen"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Documentatie van beveiligingsmaatregelen"@nl, "Documentation des mesures de sécurité"@fr,
+    "Documentation of security measures"@en, "Dokumentation von Sicherheitsmaßnahmen"@de;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#technology> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Technology Beschreibung"@de, "Technology beschrijving"@nl, "Technology description"@en,
+    "Technology description"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Technology Risiken"@de, "Technology risico's"@nl, "Technology risks"@en,
+    "Technology risques"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#transferNature> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Aard van gegevensoverdracht"@nl, "Data transfer nature"@en, "Datentransfer Natur"@de,
+    "Nature du transfert de données"@fr;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#transferNatureText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Aard van gegevensoverdracht"@nl, "(imported) Data transfer nature"@en,
+    "(imported) Datentransfer Natur"@de, "(imported) Nature du transfert de données"@fr;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#treatmentType> a rdf:Property, owl:ObjectProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment type"@en, "Datenverarbeitungstyp"@de, "Type de traitement de données"@fr,
+    "Type gegevensverwerking"@nl;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf dcterms:subject.
+
+<http://vocab.belgif.be/ns/gdpr#treatmentTypeText> a rdf:Property, owl:DataProperty;
+  rdfs:domain <http://vocab.belgif.be/ns/gdpr#DataTreatment>;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "(imported) Data treatment type"@en, "(imported) Datenverarbeitungstyp"@de,
+    "(imported) Type de traitement de données"@fr, "(imported) Type gegevensverwerking"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#Controller> a rdfs:Class, owl:Class;
+  rdfs:comment "Controller - betekent de natuurlijke of rechtspersoon, overheidsinstantie, instantie of andere instantie die, alleen of samen met anderen, de doeleinden en middelen van de verwerking van persoonsgegevens bepaalt."@nl,
+    "Controller –  means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data."@en,
+    "Contrôleur - désigne la personne physique ou morale, l'autorité publique, l'agence ou tout autre organisme qui, seul ou conjointement avec d'autres, détermine les finalités et les moyens du traitement des données à caractère personnel."@fr,
+    "Kontrolleur - bezeichnet die natürliche oder juristische Person, Behörde, Agentur oder sonstige Stelle, die allein oder gemeinsam mit anderen die Zwecke und Mittel der Verarbeitung personenbezogener Daten festlegt"@de;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Controller"@de, "Controller"@en, "Controller"@fr, "Controller"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DatTreatmentRole>.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiver> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data receiver"@en, "Datenempfänger"@de, "Gegevensontvanger"@nl, "Récepteur de données"@fr.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data receiver (generic)"@en, "Datenempfänger (generisch)"@de, "Gegevensontvanger (generiek)"@nl,
+    "Récepteur de données (générique)"@fr;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data receiver (specific)"@en, "Datenempfänger (spezifisch)"@de, "Gegevensontvanger (specifiek)"@nl,
+    "Récepteur de données (spécifique)"@fr;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+
+<http://vocab.belgif.be/ns/gdpr#DataTreatment> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment"@en, "Data verwerking"@nl, "Datenbehandlung"@de, "Traitement de données"@fr.
+
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentPart> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Catégorie de données"@fr, "Data categorie"@nl, "Data category"@en, "Datenkategorie"@de.
+
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentRole> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Data treatment role"@en, "Datenbehandlung Rolle"@de, "Rol gegevensverwerking"@nl,
+    "Rôle de traitement des données"@fr.
+
+<http://vocab.belgif.be/ns/gdpr#Register> a rdfs:Class, owl:Class;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Register"@de, "Register"@en, "Register"@nl, "Registre"@fr.
+
+<http://vocab.belgif.be/ns/gdpr#Processor> a rdfs:Classs;
+  rdfs:comment "Processor - betekent een natuurlijke persoon of rechtspersoon, overheidsinstantie, agentschap of andere instantie die persoonsgegevens verwerkt namens de verantwoordelijke voor de verwerking."@nl,
+    "Processor - bezeichnet eine natürliche oder juristische Person, Behörde, Agentur oder sonstige Stelle, die personenbezogene Daten im Auftrag des für die Verarbeitung Verantwortlichen verarbeitet"@de,
+    "Processor - désigne une personne physique ou morale, une autorité publique, une agence ou un autre organisme qui traite des données personnelles au nom du responsable du traitement."@fr,
+    "Processor – means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller."@en;
+  rdfs:isDefinedBy <http://vocab.belgif.be/ns/gdpr#>;
+  rdfs:label "Processor"@en, "Prozessor"@de, "Sous-traitant"@fr, "Verwerker"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>.
+
+<http://vocab.belgif.be/ns/gdpr#> a owl:Ontology;
+  rdfs:comment "GDPR"@de, "GDPR"@en, "GDPR"@fr, "GDPR"@nl;
+  rdfs:label "GDPR"@de, "GDPR"@en, "GDPR"@fr, "GDPR"@nl;
+  owl:versionInfo "Draft 2018-03-29".
+l;
+  owl:versionInfo "Draft 2018-03-27".
+ken partij"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#receiverSpecificText> rdfs:label "(imported) Ontvanger van gegevens (specifiek)"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#transferNature> rdfs:label "Aard van gegevensoverdracht"@nl;
+  rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#Contact> rdfs:label "Contact"@nl.
+
+<http://vocab.belgif.be/ns/gdpr#Controller> rdfs:label "Controller"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>.
+
+<http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc> rdfs:label "Documentatie van beveiligingsmaatregelen"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiver> rdfs:label "Gegevensontvanger"@nl.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric> rdfs:label "Gegevensontvanger (generiek)"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+
+<http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific> rdfs:label "Gegevensontvanger (specifiek)"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+
+<http://vocab.belgif.be/ns/gdpr#processorContract> rdfs:label "Gegevensverwerkingscontract"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> rdfs:label "Juridische verwerkingsgrond"@nl;
+  rdfs:range skos:Concept;
+  skos:inScheme <http://vocab.belgif.be/authgdpr>.
+
+<http://vocab.belgif.be/ns/gdpr#authorization> rdfs:label "Machtiging/Protocol"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#Register> rdfs:label "Register"@nl.
+
+<http://vocab.belgif.be/ns/gdpr#technology> rdfs:label "Technology beschrijving"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> rdfs:label "Technology risico's"@nl;
+  rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#timestampExport> rdfs:label "Timestamp van laatste export"@nl;
+  rdfs:range xsd:datetime.
+
+<http://vocab.belgif.be/ns/gdpr#Processor> rdfs:label "Verwerker"@nl;
+  rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>.
+
+<http://vocab.belgif.be/ns/gdpr#hasDataTreatment> rdfs:range <http://vocab.belgif.be/ns/gdpr#DataTreatment>.
+
+<http://vocab.belgif.be/ns/gdpr#authoritativeSource> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#businessProcess> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#businessProcessOwner> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#conservation> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataCategoryText> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataCoupling> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#transferNatureText> rdfs:range rdfs:Literal.
+
+<http://vocab.belgif.be/ns/gdpr#dataCategory> rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#exportStatus> rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#finalityMain> rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#finalityOther> rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#involvedParty> rdfs:range skos:Concept.
+
+<http://vocab.belgif.be/ns/gdpr#dataReceiverSpecificOrganization> rdfs:range <http://www.w3.org/ns/regorg#RegisteredOrganization>.
+
+<http://vocab.belgif.be/ns/gdpr#hasDPO> rdfs:range foaf:Agent.
+
+<http://vocab.belgif.be/ns/gdpr#hasDelegate> rdfs:range foaf:Agent.
+
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> rdfs:range foaf:Agent.
+
+<http://vocab.belgif.be/ns/gdpr#> owl:versionInfo "Draft 2018-03-20".
+ct> rdfs:label "Processor contract"@en.
+<http://vocab.belgif.be/ns/gdpr#hasDataReceiver> rdfs:label "Recipient of data"@en.
+<http://vocab.belgif.be/ns/gdpr#Register> rdfs:label "Register"@en.
+<http://vocab.belgif.be/ns/gdpr#dataReceiverSpecificOrganization> rdfs:label "Registered organization"@en.
+<http://vocab.belgif.be/ns/gdpr#organization> rdfs:label "Registered organization"@en.
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> rdfs:label "Responsible person"@en.
+<http://vocab.belgif.be/ns/gdpr#isSensitive> rdfs:label "Sensitive data"@en.
+<http://vocab.belgif.be/ns/gdpr#technology> rdfs:label "Technology description"@en.
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> rdfs:label "Technology risks"@en.
+<http://vocab.belgif.be/ns/gdpr#securityMeasures> rdfs:label "Technology security measures"@en.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:label "Textrmation process towards involved parties"@en.
+<http://vocab.belgif.be/ns/gdpr#timestampExport> rdfs:label "Timestamp of last export"@en.
+<http://vocab.belgif.be/ns/gdpr#securityMeasure> rdfs:label "Type of security measure"@en.
+<http://vocab.belgif.be/ns/gdpr#isVulnerable> rdfs:label "Vulnerable involved party"@en.
+<http://vocab.belgif.be/ns/gdpr#juridicalBaseText> rdfs:label "(imported) Base juridique"@fr.
+<http://vocab.belgif.be/ns/gdpr#dataCategoryText> rdfs:label "(imported) Catégorie de données GDPR"@fr.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:label "(imported) Catégorie de personne concernée"@fr.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternalText> rdfs:label "(imported) DPO interne"@fr.
+<http://vocab.belgif.be/ns/gdpr#receiverSpecificText> rdfs:label "(imported) Destinataire de données (spécifique)"@fr.
+<http://vocab.belgif.be/ns/gdpr#isSensitiveText> rdfs:label "(imported) Données sensibles"@fr.
+<http://vocab.belgif.be/ns/gdpr#finalityText> rdfs:label "(imported) Finalité du traitement"@fr.
+<http://vocab.belgif.be/ns/gdpr#transferNatureText> rdfs:label "(imported) Nature du transfert de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#dataTreatmentTypeText> rdfs:label "(imported) Type de traitement de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#isVulnerableText> rdfs:label "(imported) Vulnérable partie impliquée"@fr.
+<http://vocab.belgif.be/ns/gdpr#authorization> rdfs:label "Autorisation/Protocol"@fr.
+<http://vocab.belgif.be/ns/gdpr#finalityOther> rdfs:label "Autre finalité du traitement"@fr.
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> rdfs:label "Base juridique"@fr.
+<http://vocab.belgif.be/ns/gdpr#businessProcess> rdfs:label "Business process"@fr.
+<http://vocab.belgif.be/ns/gdpr#businessProcessOwner> rdfs:label "Business process propriétaire"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentPart> rdfs:label "Catégorie de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#dataCategory> rdfs:label "Catégorie de données GDPR"@fr.
+<http://vocab.belgif.be/ns/gdpr#involvedParty> rdfs:label "Catégorie de personne concernée"@fr.
+<http://vocab.belgif.be/ns/gdpr#Contact> rdfs:label "Contact"@fr.
+<http://vocab.belgif.be/ns/gdpr#processorContract> rdfs:label "Contrat sous-traitant"@fr.
+<http://vocab.belgif.be/ns/gdpr#Controller> rdfs:label "Controller"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasController> rdfs:label "Controller"@fr.
+<http://vocab.belgif.be/ns/gdpr#dataCoupling> rdfs:label "Couplage de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasDPO> rdfs:label "DPO"@fr.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternal> rdfs:label "DPO interne"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataStatus> rdfs:label "Data status"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasDataReceiver> rdfs:label "Destinataire de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#guarantee> rdfs:label "Documentation des garanties appropriées"@fr.
+<http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc> rdfs:label "Documentation des mesures de sécurité"@fr.
+<http://vocab.belgif.be/ns/gdpr#isJuridical> rdfs:label "Données juridiques"@fr.
+<http://vocab.belgif.be/ns/gdpr#isSensitive> rdfs:label "Données sensibles"@fr.
+<http://vocab.belgif.be/ns/gdpr#conservation> rdfs:label "Durée de la conservation des données"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasDelegate> rdfs:label "Délégué du responsable"@fr.
+<http://vocab.belgif.be/ns/gdpr#exportStatus> rdfs:label "Export status"@fr.
+<http://vocab.belgif.be/ns/gdpr#finalityMain> rdfs:label "Finalité principale du traitement"@fr.
+<http://vocab.belgif.be/ns/gdpr#> rdfs:label "GDPR"@fr.
+<http://vocab.belgif.be/ns/gdpr#transferNature> rdfs:label "Nature du transfert de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#dataReceiverSpecificOrganization> rdfs:label "Organisation enregistrée"@fr.
+<http://vocab.belgif.be/ns/gdpr#organization> rdfs:label "Organisation enregistrée"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> rdfs:label "Personne responsable"@fr.
+<http://vocab.belgif.be/ns/gdpr#privacyImpact> rdfs:label "Privacy Impact Assessment (PIA)"@fr.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:label "Processus d'information vers les parties impliquées"@fr.
+<http://vocab.belgif.be/ns/gdpr#rightsProcedure> rdfs:label "Procédure d'exercice des droits"@fr.
+<http://vocab.belgif.be/ns/gdpr#Register> rdfs:label "Registre"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataReceiver> rdfs:label "Récepteur de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric> rdfs:label "Récepteur de données (générique)"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific> rdfs:label "Récepteur de données (spécifique)"@fr.
+<http://vocab.belgif.be/ns/gdpr#policy> rdfs:label "Référence de politique"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentRole> rdfs:label "Rôle de traitement des données"@fr.
+<http://vocab.belgif.be/ns/gdpr#authoritativeSource> rdfs:label "Source authentique"@fr.
+<http://vocab.belgif.be/ns/gdpr#Processor> rdfs:label "Sous-traitant"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasProcessor> rdfs:label "Sous-traitant"@fr.
+<http://vocab.belgif.be/ns/gdpr#technology> rdfs:label "Technology description"@fr.
+<http://vocab.belgif.be/ns/gdpr#securityMeasures> rdfs:label "Technology mesures de sécurité"@fr.
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> rdfs:label "Technology risques"@fr.
+<http://vocab.belgif.be/ns/gdpr#timestampExport> rdfs:label "Timestamp de la dernière exportation"@fr.
+<http://vocab.belgif.be/ns/gdpr#DataTreatment> rdfs:label "Traitement de données"@fr.
+<http://vocab.belgif.be/ns/gdpr#hasDataTreatment> rdfs:label "Traitement des données"@fr.
+<http://vocab.belgif.be/ns/gdpr#isConfirmed> rdfs:label "Traitement des données confirmé par DPO"@fr.
+<http://vocab.belgif.be/ns/gdpr#securityMeasure> rdfs:label "Type de mesure de sécurité"@fr.
+<http://vocab.belgif.be/ns/gdpr#isVulnerable> rdfs:label "Vulnérable partie impliquée"@fr.
+<http://vocab.belgif.be/ns/gdpr#transferNatureText> rdfs:label "(imported) Aard van gegevensoverdracht"@nl.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:label "(imported) Categorie betrokkene"@nl.
+<http://vocab.belgif.be/ns/gdpr#dataCategoryText> rdfs:label "(imported) Data categorie GDPR"@nl.
+<http://vocab.belgif.be/ns/gdpr#isSensitiveText> rdfs:label "(imported) Gevoelige gegevens"@nl.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternalText> rdfs:label "(imported) Interne DPO"@nl.
+<http://vocab.belgif.be/ns/gdpr#juridicalBaseText> rdfs:label "(imported) Juridische verwerkingsgrond"@nl.
+<http://vocab.belgif.be/ns/gdpr#isVulnerableText> rdfs:label "(imported) Kwetsbare betrokken partij"@nl.
+<http://vocab.belgif.be/ns/gdpr#receiverSpecificText> rdfs:label "(imported) Ontvanger van gegevens (specifiek)"@nl.
+<http://vocab.belgif.be/ns/gdpr#dataTreatmentTypeText> rdfs:label "(imported) Type gegevensverwerking"@nl.
+<http://vocab.belgif.be/ns/gdpr#finalityText> rdfs:label "(imported) Verwerkingsdoel"@nl.
+<http://vocab.belgif.be/ns/gdpr#transferNature> rdfs:label "Aard van gegevensoverdracht"@nl.
+<http://vocab.belgif.be/ns/gdpr#finalityOther> rdfs:label "Ander verwerkingsdoel"@nl.
+<http://vocab.belgif.be/ns/gdpr#authoritativeSource> rdfs:label "Authentieke bron"@nl.
+<http://vocab.belgif.be/ns/gdpr#businessProcess> rdfs:label "Business process"@nl.
+<http://vocab.belgif.be/ns/gdpr#businessProcessOwner> rdfs:label "Business process eigenaar"@nl.
+<http://vocab.belgif.be/ns/gdpr#involvedParty> rdfs:label "Categorie betrokkene"@nl.
+<http://vocab.belgif.be/ns/gdpr#Contact> rdfs:label "Contact"@nl.
+<http://vocab.belgif.be/ns/gdpr#Controller> rdfs:label "Controller"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasController> rdfs:label "Controller"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasDPO> rdfs:label "DPO"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentPart> rdfs:label "Data categorie"@nl.
+<http://vocab.belgif.be/ns/gdpr#dataCategory> rdfs:label "Data categorie GDPR"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataStatus> rdfs:label "Data status"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataTreatment> rdfs:label "Data verwerking"@nl.
+<http://vocab.belgif.be/ns/gdpr#guarantee> rdfs:label "Documentatie passende waarborgen"@nl.
+<http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc> rdfs:label "Documentatie van beveiligingsmaatregelen"@nl.
+<http://vocab.belgif.be/ns/gdpr#conservation> rdfs:label "Duurtijd bijhouden gegevens"@nl.
+<http://vocab.belgif.be/ns/gdpr#exportStatus> rdfs:label "Export status"@nl.
+<http://vocab.belgif.be/ns/gdpr#> rdfs:label "GDPR"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasDelegate> rdfs:label "Gedelegeerde van de verantwoordelijke"@nl.
+<http://vocab.belgif.be/ns/gdpr#dataCoupling> rdfs:label "Gegevenskoppeling"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataReceiver> rdfs:label "Gegevensontvanger"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric> rdfs:label "Gegevensontvanger (generiek)"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific> rdfs:label "Gegevensontvanger (specifiek)"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasDataTreatment> rdfs:label "Gegevensverwerking"@nl.
+<http://vocab.belgif.be/ns/gdpr#isConfirmed> rdfs:label "Gegevensverwerking bevestigd door DPO"@nl.
+<http://vocab.belgif.be/ns/gdpr#processorContract> rdfs:label "Gegevensverwerkingscontract"@nl.
+<http://vocab.belgif.be/ns/gdpr#dataReceiverSpecificOrganization> rdfs:label "Geregistreerde organisatie"@nl.
+<http://vocab.belgif.be/ns/gdpr#organization> rdfs:label "Geregistreerde organisatie"@nl.
+<http://vocab.belgif.be/ns/gdpr#isSensitive> rdfs:label "Gevoelige gegevens"@nl.
+<http://vocab.belgif.be/ns/gdpr#finalityMain> rdfs:label "Hoofdverwerkingsdoel"@nl.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternal> rdfs:label "Interne DPO"@nl.
+<http://vocab.belgif.be/ns/gdpr#isJuridical> rdfs:label "Juridische gegevens"@nl.
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> rdfs:label "Juridische verwerkingsgrond"@nl.
+<http://vocab.belgif.be/ns/gdpr#isVulnerable> rdfs:label "Kwetsbare betrokken partij"@nl.
+<http://vocab.belgif.be/ns/gdpr#authorization> rdfs:label "Machtiging/Protocol"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasDataReceiver> rdfs:label "Ontvanger van gegevens"@nl.
+<http://vocab.belgif.be/ns/gdpr#privacyImpact> rdfs:label "Privacy Impact Assessment (PIA)"@nl.
+<http://vocab.belgif.be/ns/gdpr#rightsProcedure> rdfs:label "Procedure voor de uitoefening van rechten"@nl.
+<http://vocab.belgif.be/ns/gdpr#policy> rdfs:label "Referentie naar policy"@nl.
+<http://vocab.belgif.be/ns/gdpr#Register> rdfs:label "Register"@nl.
+<http://vocab.belgif.be/ns/gdpr#DataTreatmentRole> rdfs:label "Rol gegevensverwerking"@nl.
+<http://vocab.belgif.be/ns/gdpr#technology> rdfs:label "Technology beschrijving"@nl.
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> rdfs:label "Technology risico's"@nl.
+<http://vocab.belgif.be/ns/gdpr#securityMeasures> rdfs:label "Technology veiligheidsmaatregelen"@nl.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:label "Textrmatieproces naar betrokken partijen"@nl.
+<http://vocab.belgif.be/ns/gdpr#timestampExport> rdfs:label "Timestamp van laatste export"@nl.
+<http://vocab.belgif.be/ns/gdpr#securityMeasure> rdfs:label "Type beveiligingsmaatregel"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> rdfs:label "Verantwoordelijke persoon"@nl.
+<http://vocab.belgif.be/ns/gdpr#Processor> rdfs:label "Verwerker"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasProcessor> rdfs:label "Verwerker"@nl.
+<http://vocab.belgif.be/ns/gdpr#hasController> rdfs:range <http://vocab.belgif.be/ns/gdpr#Controller>.
+<http://vocab.belgif.be/ns/gdpr#hasDataReceiver> rdfs:range <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+<http://vocab.belgif.be/ns/gdpr#hasDataTreatment> rdfs:range <http://vocab.belgif.be/ns/gdpr#DataTreatment>.
+<http://vocab.belgif.be/ns/gdpr#hasProcessor> rdfs:range <http://vocab.belgif.be/ns/gdpr#Processor>.
+<http://vocab.belgif.be/ns/gdpr#authoritativeSource> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#authorization> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#businessProcess> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#businessProcessOwner> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#conservation> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#dataCategoryText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#dataCoupling> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#dataTreatmentTypeText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#finalityText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#guarantee> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#involvedPartyText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternalText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#isSensitiveText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#isVulnerableText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#juridicalBaseText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#policy> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#privacyImpact> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#processorContract> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#receiverSpecificText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#rightsProcedure> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#securityMeasures> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#securityMeasuresDoc> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#technology> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#technologyRisks> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#transferNatureText> rdfs:range rdfs:Literal.
+<http://vocab.belgif.be/ns/gdpr#isConfirmed> rdfs:range xsd:boolean.
+<http://vocab.belgif.be/ns/gdpr#isDPOInternal> rdfs:range xsd:boolean.
+<http://vocab.belgif.be/ns/gdpr#isJuridical> rdfs:range xsd:boolean.
+<http://vocab.belgif.be/ns/gdpr#isSensitive> rdfs:range xsd:boolean.
+<http://vocab.belgif.be/ns/gdpr#isVulnerable> rdfs:range xsd:boolean.
+<http://vocab.belgif.be/ns/gdpr#timestampExport> rdfs:range xsd:datetime.
+<http://vocab.belgif.be/ns/gdpr#dataCategory> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#exportStatus> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#finalityMain> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#finalityOther> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#involvedParty> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#securityMeasure> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#transferNature> rdfs:range skos:Concept.
+<http://vocab.belgif.be/ns/gdpr#dataReceiverSpecificOrganization> rdfs:range <http://www.w3.org/ns/regorg#RegisteredOrganization>.
+<http://vocab.belgif.be/ns/gdpr#organization> rdfs:range <http://www.w3.org/ns/regorg#RegisteredOrganization>.
+<http://vocab.belgif.be/ns/gdpr#hasDPO> rdfs:range foaf:Agent.
+<http://vocab.belgif.be/ns/gdpr#hasDelegate> rdfs:range foaf:Agent.
+<http://vocab.belgif.be/ns/gdpr#hasResponsible> rdfs:range foaf:Agent.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverGeneric> rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+<http://vocab.belgif.be/ns/gdpr#DataReceiverSpecific> rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataReceiver>.
+<http://vocab.belgif.be/ns/gdpr#Controller> rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>.
+<http://vocab.belgif.be/ns/gdpr#Processor> rdfs:subClassOf <http://vocab.belgif.be/ns/gdpr#DataTreatmentRole>.
+<http://vocab.belgif.be/ns/gdpr#> owl:versionInfo "Draft 2018-03-20".
+<http://vocab.belgif.be/ns/gdpr#juridicalBase> skos:inScheme <http://vocab.belgif.be/authgdpr>.

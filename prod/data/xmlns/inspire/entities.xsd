@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	targetNamespace="http://vocab.belgif.be/ns/inspire/" xmlns="http://vocab.belgif.be/ns/inspire/"
+	xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:add="http://vocab.belgif.be/ns/inspire/"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" version="1.0"
+	xpathDefaultNamespace="##targetNamespace">
+	<xs:import namespace="http://www.opengis.net/gml/3.2"
+		schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.3/ce"
+		schemaLocation="http://schemas.opengis.net/gml/3.3/geometryCompact.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml/3.3/xbt"
+		schemaLocation="http://schemas.opengis.net/gml/3.3/extdBaseTypes.xsd"/>
+	<xs:include schemaLocation="common.xsd"/>
+	
+	<!-- Belgian Standard Address-->
+	
+	<!-- Belgian Standard Address Constraints -->
+	
+	<xs:element name="BestAdd" type="BestAddType">
+		<xs:key name="StreetnameKey">
+			<xs:selector xpath="Streetname"/>
+			<xs:field xpath="streetnameCode/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="StreetnameKey" name="StreetnameKeyRef">
+			<xs:selector xpath="Address/hasStreetname/Streetname"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+		<xs:key name="MunicipalityKey">
+			<xs:selector xpath="Municipality"/>
+			<xs:field xpath="municipalityCode/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="MunicipalityKey" name="MunicipalityKeyRef">
+			<xs:selector xpath="Address/hasMunicipality/Municipality"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+		<xs:key name="PostalInfoKey">
+			<xs:selector xpath="PostalInfo"/>
+			<xs:field xpath="postcode/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="PostalInfoKey" name="PostalInfoKeyRef">
+			<xs:selector xpath="Address/hasPostalInfo/PostalInfo"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+		<xs:key name="AdressableObjectKey">
+			<xs:selector xpath="BuildingUnit | Parcel"/>
+			<xs:field xpath="*/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="AdressableObjectKey" name="AdressableObjectKeyRef">
+			<xs:selector xpath="Address/isAssignedTo/AddresseableObject"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+		<xs:key name="PartOfMunicipalityKey">
+			<xs:selector xpath="PartOfMunicipality"/>
+			<xs:field xpath="partOfMunicipalityCode/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="PartOfMunicipalityKey" name="PartOfMunicipalityKeyRef">
+			<xs:selector xpath="Address/isSituatedIn/PartOfMunicipality"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+		<xs:key name="RoadObjectKey">
+			<xs:selector xpath="RoadObject"/>
+			<xs:field xpath="roadObjectCode/objectIdentifier"/>
+		</xs:key>
+		<xs:keyref refer="RoadObjectKey" name="RoadObjectKeyRef">
+			<xs:selector xpath="Streetname/isAssignedTo/RoadObject"/>
+			<xs:field xpath="objectIdentifier"/>
+		</xs:keyref>
+	</xs:element>
+	
+	<!-- Belgian Standard Address content model -->
+	
+	<xs:complexType name="BestAddType">
+		<xs:sequence>
+			<xs:element ref="Address"/>
+			<xs:element ref="Streetname"/>
+			<xs:element ref="Municipality"/>
+			<xs:element ref="PostalInfo"/>
+			<xs:element ref="AddresseableObject" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="PartOfMunicipality" minOccurs="0"/>
+			<xs:element ref="RoadObject" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- Address -->
+	
+	<xs:element name="Address" type="AddressType"/>
+	<xs:complexType name="AddressType">
+		<xs:annotation>
+			<xs:documentation>“Adres”: informatie die toelaat om op een gestructureerde en unieke
+				manier te verwijzen naar een "gebouweenheid", "gebouw", een “ligplaats”, een
+				“standplaats” of een “perceel” op basis van de naam van de “gemeente, de
+				“straatnaam” en het “huisnummer” eventueel aangevuld met een “busnummer” en met een
+				“postcode” « Adresse » : l’information permettant de référencer, de manière unique
+				et structurée, une « unité de bâtiment », un "bâtiment", un « poste d’amarrage », un
+				« emplacement » ou une « parcelle », sur la base du nom de la « commune », du « nom
+				de rue » et du « numéro de police », éventuellement complété d’une « numéro de boîte
+				» ainsi que d’un « code postal »</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="addressCode" type="IdentifierType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Externe identificator van het adres</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addressPosition" type="GeographicalPositionType" minOccurs="1"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Positie van een karakeristiek punt dat de positie van het
+						adres vertegenwoordigt volgens een bepaalde specificatie en inclusief
+						informatie over de herkomst van de positie.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addressSortfield" type="CharstringType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Transformatie van het oorspronkelijk huisnummer&amp;busnummer
+						(bv toevoeging van voorloopnullen) zodat dit kan worden
+						gesorteerd</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="addressStatus" type="AddressStatusType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Actuele toestand van het adres</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="boxNumber" type="CharstringType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>“Busnummer” : officieel toegekende alfanumerieke code die
+						wordt toegevoegd aan het huisnummer om meerdere gebouweenheden,
+						standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde
+						huisnummer hebben. « Numéro de boîte » : code alphanumérique, attribué
+						officiellement, qui s’ajoute au numéro de police pour distinguer plusieurs
+						unités de bâtiment, postes d’amarrage, emplacements ou parcelles qui portent
+						le même numéro de police.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="houseNumber" type="CharstringType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>“Huisnummer” : alfanumerieke code officieel toegekend aan
+						gebouweenheden, ligplaatsen, standplaatsen of percelen. « Numéro de police »
+						: code alphanumérique attribué officiellement à des unités de bâtiment,
+						postes d’amarrage, emplacements ou parcelles.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="offiallyAssigned" type="xs:boolean" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Geeft aan of het adres officieel door de adresbeheerder is
+						toegekend</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hasStreetname" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Streetname" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hasMunicipality" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Municipality" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hasPostalInfo" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PostalInfo" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="isAssignedTo" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AddresseableObject" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="isSituatedIn" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PartOfMunicipality" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="lifeCycleInfo"/>
+		<!-- Address constraints -->
+		<xs:assert
+			test="
+				if (@endLifeSpanVersion) then
+					@endLifeSpanVersion > @beginLifeSpanVersion
+				else
+					true()"
+		/>
+		<xs:assert test="if (exists(boxNumber)) then exists(houseNumber/text()) else true()"/>
+	</xs:complexType>
+	
+	<!-- Streetname -->
+	
+	<xs:element name="Streetname" type="StreetnameType"/>
+	<xs:complexType name="StreetnameType">
+		<xs:sequence>
+			<xs:element name="homonymAddition" type="CharstringType" minOccurs="0"/>
+			<xs:element name="streetnameCode" type="IdentifierType"/>
+			<xs:element name="streetname" type="GeographicalNameType" maxOccurs="unbounded"/>
+			<xs:element name="streetnameStatus" type="StreetnameStatusType"/>
+			<xs:element name="streetnameType" type="StreetnametypeValueType"/>
+			<xs:element name="isAssignedTo" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RoadObject" type="LinkType"/>
+						<xs:element name="streetSide" type="SideCodeValueType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="lifeCycleInfo"/>
+		<!-- Streetname constraints -->
+		<xs:assert
+			test="
+			if (@endLifeSpanVersion) then
+			@endLifeSpanVersion > @beginLifeSpanVersion
+			else
+			true()"
+		/>
+	</xs:complexType>
+	
+	<!-- Municipality -->
+	<xs:element name="Municipality" type="MunicipalityType"/>
+	<xs:complexType name="MunicipalityType">
+		<xs:sequence>
+			<xs:element name="municipalityCode" type="IdentifierType"/>
+			<xs:element name="municipalityName" type="GeographicalNameType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- PostalInfo -->
+	<xs:element name="PostalInfo" type="PostalInfoType"/>
+	<xs:complexType name="PostalInfoType">
+		<xs:sequence>
+			<xs:element name="postcode" type="IdentifierType"/>
+			<xs:element name="postname" type="GeographicalNameType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- PartOfMunicipality -->
+	<xs:element name="PartOfMunicipality" type="PartOfMunicipalityType"/>
+	<xs:complexType name="PartOfMunicipalityType">
+		<xs:sequence>
+			<xs:element name="partOfMunicipalityCode" type="IdentifierType"/>
+			<xs:element name="partOfMunicipalityName" type="GeographicalNameType"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- RoadObject -->
+	<xs:element name="RoadObject" type="RoadObjectType"/>
+	<xs:complexType name="RoadObjectType">
+		<xs:sequence>
+			<xs:element name="roadObjectCode" type="IdentifierType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- AddresseableObject being or a BuildingUnit or a Parcel -->
+
+	<xs:element name="AddresseableObject" abstract="true"/>
+
+	<xs:element name="BuildingUnit" substitutionGroup="AddresseableObject" type="BuildingUnitType"/>
+	<xs:complexType name="BuildingUnitType">
+		<xs:sequence>
+			<xs:element name="buildingUnitCode" type="IdentifierType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="Parcel" substitutionGroup="AddresseableObject" type="ParcelType"/>
+	<xs:complexType name="ParcelType">
+		<xs:sequence>
+			<xs:element name="parcelCode" type="IdentifierType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- AddressRepresentation -->
+
+	<xs:element name="AddressRepresentation" type="AddressRepresentationType"/>
+	<xs:complexType name="AddressRepresentationType">
+		<xs:annotation>
+			<xs:documentation>Meer leesbare voorstelling met enkel de basisgegevens van het adres,
+				bedoeld voor het gebruik van een adres als attribuut van een ander object.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="boxnumber" type="CharstringType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Busnummer van het adres.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="completeAddress" type="CharstringType" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Combinatie van alle adrescomponenten in de voorgeschreven
+						volgorde.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="housenumber" type="CharstringType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Huisnummer van het adres.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="municipalityName" type="CharstringType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Gemeentenaam van het adres.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="postcode" type="CharstringType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Postcode van het adres.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="streetname" type="CharstringType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Naam van de straat van het adres.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="refersTo" minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Address" type="LinkType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- Statustypes -->
+	<!-- for Adresses -->
+
+	<xs:complexType name="AddressStatusType">
+		<xs:annotation>
+			<xs:documentation>Toestand van een object op het terrein op een bepaald moment of
+				gedurende een bepaalde periode </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="status" type="AddressStatusValueType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Beschrijving van de toestand</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFrom" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Begin datumtijd vanaf wanneer de opgegeven toestand geldt op
+						terrein</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Eind datumtijd tot wanneer de opgegeven toestand geldt op het
+						terrein</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- for Streetnames -->
+	<xs:complexType name="StreetnameStatusType">
+		<xs:annotation>
+			<xs:documentation>Toestand van een object op het terrein op een bepaald moment of
+				gedurende een bepaalde periode </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="status" type="StreetnameStatusValueType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Beschrijving van de toestand</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validFrom" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Begin datumtijd vanaf wanneer de opgegeven toestand geldt op
+						terrein</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Eind datumtijd tot wanneer de opgegeven toestand geldt op het
+						terrein</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- code lists-->
+	<xs:simpleType name="AddressStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="StreetnameStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="SideCodeValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="both"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="StreetnametypeValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="hamlet"/>
+			<xs:enumeration value="streetname"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

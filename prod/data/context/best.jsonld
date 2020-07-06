@@ -1,0 +1,36 @@
+{
+	"@context": {
+		"countryName": {
+			"@id": "http://www.w3.org/ns/locn#adminUnitL1",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
+			"@container": "@language"
+		},
+		"fullAddress": {
+			"@id": "http://www.w3.org/ns/locn#fullAddress",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
+			"@container": "@language"
+		},
+		"houseNumber": {
+			"@id": "http://www.w3.org/ns/locn#houseNumber",
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
+		},
+		"poBox": {
+			"@id": "http://www.w3.org/ns/locn#poBox",
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
+		},
+		"postCode": {
+			"@id": "http://www.w3.org/ns/locn#postCode",
+			"@type":"http://www.w3.org/2001/XMLSchema#string"
+		},
+		"postName": {
+			"@id": "http://www.w3.org/ns/locn#postName",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
+			"@container": "@language"
+		},
+		"streetName": {
+			"@id": "http://www.w3.org/ns/locn#thoroughfare",
+			"@type":"http://www.w3.org/2001/XMLSchema#string",
+			"@container": "@language"
+		}
+	}
+}

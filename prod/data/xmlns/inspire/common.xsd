@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:common="http://vocab.belgif.be/ns/inspire/" xmlns:gml="http://www.opengis.net/gml/3.2"
+    elementFormDefault="qualified" xpathDefaultNamespace="##targetNamespace">
+    <xs:import namespace="http://www.opengis.net/gml/3.2"
+        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.3/ce"
+        schemaLocation="http://schemas.opengis.net/gml/3.3/geometryCompact.xsd"/>
+    <xs:import namespace="http://www.opengis.net/gml/3.3/xbt"
+        schemaLocation="http://schemas.opengis.net/gml/3.3/extdBaseTypes.xsd"/>
+    
+    <!-- reusable simple datatypes -->
+    <xs:simpleType name="CharstringType">
+        <xs:annotation>
+            <xs:documentation>Primitief datatype bestaande uit een opeenvolging van
+                karakters.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[^\s].*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- reusable complex datatypes -->
+    <xs:complexType name="GeographicalNameType">
+        <xs:annotation>
+            <xs:documentation>Benaming toegekend aan of gebruikt voor een geografisch
+                object</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="language" type="LanguagecodeValueType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>De taal waarin de naam is geschreven</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="spelling" type="xs:string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>De naam van het geografisch object</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="LinkType">
+        <xs:annotation>
+            <xs:documentation>de link tussen de verwijzing naar de entiteit en de beschrijving ervan.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="objectIdentifier" type="CharstringType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="IdentifierType">
+        <xs:annotation>
+            <xs:documentation>Unieke identificator van een object. Blijft ongewijzigd tijdens de
+                levensloop van een object.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="namespace" type="CharstringType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Lokale identificator, toegekend door de dataleverancier. Uniek
+                        binnen de naamruimte.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="objectIdentifier" type="CharstringType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identificeert de bron van het object. Eigendom van de
+                        leverancier van de dataset.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="versionIdentifier" type="CharstringType" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identificator van de versie van het object. Uniek binnen de
+                        verzameling van versies van het object.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="GeographicalPositionType">
+        <xs:annotation>
+            <xs:documentation>Geografische positie aangegeven dmv een punt</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="pointGeometry">
+                <xs:annotation>
+                    <xs:documentation>De cartografische coordinaten van het punt </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element ref="gml:Point"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="positionGeometryMethod" type="PositionGeometryMethodValueType"
+                minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>De manier waarop het punt werd bepaald</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="positionSpecification" type="PositionSpecificationValueType"
+                minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Het object op basis waarvan het punt werd
+                        bepaald</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- codelists -->
+
+    <xs:simpleType name="PositionGeometryMethodValueType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="assignedByAdministrator"/>
+            <xs:enumeration value="derivedFromObject"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="PositionSpecificationValueType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="building"/>
+            <xs:enumeration value="buildingUnit"/>
+            <xs:enumeration value="entrance"/>
+            <xs:enumeration value="mooringPlace"/>
+            <xs:enumeration value="municipality"/>
+            <xs:enumeration value="parcel"/>
+            <xs:enumeration value="plot"/>
+            <xs:enumeration value="stand"/>
+            <xs:enumeration value="street"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LanguagecodeValueType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dutch"/>
+            <xs:enumeration value="french"/>
+            <xs:enumeration value="german"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- lifecycleinfo -->
+
+    <xs:attributeGroup name="lifeCycleInfo">
+        <xs:attribute name="beginLifeSpanVersion" type="xs:dateTime" use="required"/>
+        <xs:attribute name="endLifeSpanVersion" type="xs:dateTime" use="optional"/>
+    </xs:attributeGroup>
+
+</xs:schema>

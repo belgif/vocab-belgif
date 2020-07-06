@@ -1,0 +1,87 @@
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/description> "Base juridique du traitement"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/title> "GDPR juridicalbase"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/description> "Juridical base for treatment"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/title> "GDPR juridicalbase"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/description> "Juridische verwerkingsgrond"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/title> "GDPR juridicalbase"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/description> "Legaler Verarbeitungsgrund"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://purl.org/dc/terms/title> "GDPR juridicalbase"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/01#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/02#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/03#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/04#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/05#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-juridical/06#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#note> "de betrokkene heeft toestemming gegeven voor de verwerking van zijn persoonsgegevens voor een of meer specifieke doeleinden (art.6.1a) AVG). Let op, de toestemming dient evenwel te voldoen aan de voorwaarden zoals bepaalt in art.7 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#note> "Der Betroffene hat die Erlaubnis zur Verarbeitung seiner persönlichen Daten erteilt"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#note> "la personne concernée a consenti au traitement de ses données à caractère personnel pour une ou plusieurs finalités spécifiques (art.6.1a) du RGPD. Attention, le consentement doit toutefois répondre aux conditions telles que définies à l'article 7 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#note> "The data subject has given permission for the processing of his personal data"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#notation> "01" .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "consentement de la personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Erlaubnis der betroffene Person"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Permission by the person concerned"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "toestemming betrokkene"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/01#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#note> "de verwerking is noodzakelijk voor de uitvoering van een overeenkomst waarbij de betrokkene partij is, of om op verzoek van de betrokkene vóór de sluiting van een overeenkomst maatregelen te nemen (art.6.1b) AVG)"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung ist für die Ausführung einer Vereinbarung notwendig, an der die betroffene Partei beteiligt ist"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#note> "le traitement est nécessaire à l'exécution d'un contrat auquel la personne concernée est partie ou à l'exécution de mesures précontractuelles prises à la demande de celle-ci (art.6.1b) du RGPD."@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#note> "The processing is necessary for the execution of an agreement to which the party concerned is a party"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#notation> "02" .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "nécessaire à l'exécution du contrat"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Necessary for execution of an agreement"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "noodzakelijk voor uitvoering van een overeenkomst"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notwendig für die Ausführung einer Vereinbarung"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/02#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#note> "de verwerking is noodzakelijk om te voldoen aan een wettelijke verplichting die op de verwerkingsverantwoordelijke rust (art.6.1c) AVG)"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung ist notwendig, um einer rechtlichen Verpflichtung nachzukommen, die auf dem für die Verarbeitung Verantwortlichen beruht"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#note> "le traitement est nécessaire au respect d'une obligation légale à laquelle le responsable du traitement est soumis (article 6.1 c) du RGPD)."@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#note> "The processing is necessary to comply with a legal obligation resting on the responsible for the treatment"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#notation> "03" .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Legal obligation"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "obligation légale"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rechtliche Verpflichtung"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "wettelijke verplichting"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/03#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#note> "de verwerking is noodzakelijk om de vitale belangen van de betrokkene of van een andere natuurlijke persoon te beschermen (art.6.1d) AVG)"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung ist notwendig, um die lebenswichtigen Interessen der betroffenen Person oder einer anderen natürlichen Person zu schützen"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#note> "le traitement est nécessaire à la sauvegarde des intérêts vitaux de la personne concernée ou d’une autre personne physique (art.6.1d) du RGPD."@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#note> "The processing is necessary to protect the vital interests of the data subject or of another natural person"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#notation> "04" .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "beschermen van vitale belangen van de betrokkene"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Protect the vital interests of the person concerned"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "sauvegarde des intérêts vitaux de la personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schutz lebenswichtiger Interessen der betroffenen Person"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/04#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#note> "de verwerking is noodzakelijk voor de vervulling van een taak van algemeen belang of van een taak in het kader van de uitoefening van het openbaar gezag dat aan de verwerkingsverantwoordelijke is opgedragen (art.6.1e) AVG)"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung ist für die Erfüllung einer Aufgabe von allgemeinem Interesse erforderlich"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#note> "le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont est investi le responsable du traitement (art.6.1e) du RGPD."@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#note> "The processing is necessary for the fulfillment of a task of general interest"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#notation> "05" .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aufgabe von allgemeinem Interesse oder Ausübung öffentlicher Gewalt"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "taak van algemeen belang of uitoefening van het openbaar gezag"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "tâche d'intérêt général ou exercice de l'autorité publique"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Task of general interest or exercise of public authority"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/05#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#note> "de verwerking is noodzakelijk voor de behartiging van de gerechtvaardigde belangen van de verwerkingsverantwoordelijke of van een derde, behalve wanneer de belangen of de grondrechten en de fundamentele vrijheden van de betrokkene die tot bescherming van persoonsgegevens nopen, zwaarder wegen dan die belangen, met name wanneer de betrokkene een kind is (art.6.1f) AVG)"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#note> "Die Verarbeitung ist zur Verteidigung der berechtigten Interessen des für die Verarbeitung Verantwortlichen oder eines Dritten erforderlich, es sei denn, die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten erfordern, überwiegen diese Interessen, insbesondere wenn die betroffene Person ist ein Kind"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#note> "le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers, à moins que ne prévalent les intérêts ou les libertés et droits fondamentaux de la personne concernée qui exigent une protection des données à caractère personnel, notamment lorsque la personne concernée est un enfant (art.6.1f) du RGPD."@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#note> "Processing is necessary for the defense of the legitimate interests of the controller or of a third party, except where the interests or fundamental rights and fundamental freedoms of the data subject which require the protection of personal data outweigh those interests, in particular when the person concerned is a child"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-juridical#id> .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#notation> "06" .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Berechtigte Interessen des Verantwortlichen oder eines Dritten"@de .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "gerechtvaardigde belangen van de verwerkingsverantwoordelijke of van een derde"@nl .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "intérêts légitimes du responsable de traitement ou d’un tiers"@fr .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justified interests of the controller or of a third party"@en .
+<http://vocab.belgif.be/auth/gdpr-juridical/06#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-juridical#id> .

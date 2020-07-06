@@ -1,0 +1,152 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/shacl/contract#> a owl:Ontology;
+  rdfs:comment "Kontrakten SHACL rules"@de, "Contracts SHACL rules"@en, 
+        "Contrats SHACL rules"@fr, "Contracten SHACL rules"@nl;
+  rdfs:label "Kontrakt model"@de, "Contract model"@en, "Contrat model"@fr, "Contract model"@nl;
+  owl:versionInfo "Draft 2020-02-05" .
+
+
+<http://vocab.belgif.be/shacl/contract#ContractShape> a sh:NodeShape;
+    sh:property [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path dcterms:identifier
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path dcterms:title
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+	  sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path dcterms:description
+	], [
+	  sh:class skos:Contract;
+      sh:nodeKind sh:IRI;
+	  sh:path dcterms:replaces
+	], [
+	  sh:class skos:Contract;
+      sh:nodeKind sh:IRI;
+	  sh:path dcterms:isReplacedBy
+	], [
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:path dcat:accesURL
+	], [
+	  sh:class dcterms:Location;
+	  sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:path locn:location
+	], [
+      sh:datatype xsd:date;
+      sh:lessThanOrEquals schema:endDate;
+	  sh:minCount 1;
+      sh:maxCount 1;
+      sh:path schema:startDate
+    ], [
+      sh:datatype xsd:date;
+      sh:maxCount 1;
+      sh:path schema:endDate
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path dcterms:type;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/bosa-contract-topic>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path dcterms:accessRights;
+      sh:property [
+          sh:hasValue <http://publications.europa.eu/resource/authority/access-right>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/dataentry#hasDataStatus>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/contract-status>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class schema:ContactPoint;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ], [
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/contract#hasContractParty>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/contract#Contract> .
+  
+<http://vocab.belgif.be/shacl/contract#ContactPointShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype xsd:string;
+      sh:path schema:name
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path schema:email
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:path schema:telephone
+    ], [
+      sh:class org:Organization;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:path org:memberOf
+    ];
+  sh:targetClass schema:ContactPoint .
+
+<http://vocab.belgif.be/shacl/contract#OrganizationShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdfs:Literal;
+      sh:path skos:altLabel
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:path skos:notation
+    ];
+  sh:targetClass org:Organization .
+
+<http://vocab.belgif.be/shacl/contract#LocationShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path locn:geographicName
+    ], [
+      sh:class locn:Address;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:path locn:address
+    ];
+  sh:targetClass dcterms:Location .

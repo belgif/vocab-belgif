@@ -1,0 +1,30 @@
+<http://vocab.belgif.be/auth/retention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/title> "Data retention"@en .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/title> "Conservation des données"@fr .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/title> "Vorratsdatenspeicherung"@de .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/title> "Bewaring gegevens"@nl .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/description> "Data retention policy"@en .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/description> "Politique de conservation des données"@fr .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/description> "Richtlinie zur Vorratsdatenspeicherung"@de .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/description> "Beleid rond gegevensbewaring"@nl .
+<http://vocab.belgif.be/auth/retention> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/modified> "2020-02-03T09:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/retention> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/retention> .
+<http://vocab.belgif.be/auth/retention> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/retention/ARCHIVE> .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/retention> .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#notation> "ARCHIVE" .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Archiveren"@nl .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Archive"@en .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Archiver"@fr .
+<http://vocab.belgif.be/auth/retention/ARCHIVE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Archivieren"@de .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/retention> .
+<http://vocab.belgif.be/auth/retention> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/retention/DESTROY> .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/retention> .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#notation> "DESTROY" .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vernietigen"@nl .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#prefLabel> "Destroy"@en .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#prefLabel> "Detruire"@fr .
+<http://vocab.belgif.be/auth/retention/DESTROY> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zerstören"@de .

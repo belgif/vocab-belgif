@@ -1,0 +1,133 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix authsrc: <http://vocab.belgif.be/ns/authsrc#> .
+
+<http://vocab.belgif.be/ns/authsrc#> a owl:Ontology ;
+	owl:versionInfo "Draft 2020-01-20" ;
+	rdfs:label "AS"@de, "AS"@en, "AS"@fr, "AS"@nl ;
+	rdfs:comment "Authentischen Quellen"@de, "Authentic Sources"@en, 
+		"Sources Authentiques"@fr, "Authentieke bronnen"@nl .
+
+authsrc:Agreement a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subClassOf dcterms:RightsStatement ;
+	rdfs:label "Accord"@fr, "Agreement"@en, "Overeenkomst"@nl, "Vereinbarung"@de ;
+	rdfs:comment "An agreement is a set of statements defining the collaboration between a data provider and one or more data consumers."@en,
+		"Een overeenkomst is een reeks verklaringen die de samenwerking tussen een gegevensprovider en een of meer gegevensgebruikers definiëren."@nl,
+		"Eine Vereinbarung besteht aus einer Reihe von Anweisungen, die die Zusammenarbeit zwischen einem Datenanbieter und einem oder mehreren Datenkonsumenten definieren"@de,
+		"Un accord est un ensemble d'instructions définissant la collaboration entre un fournisseur de données et un ou plusieurs consommateurs de données."@fr .
+
+authsrc:Consumer a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Consumer"@en, "Benutzer"@de, "Gebruiker"@nl, "Consommateur"@fr .
+
+authsrc:DataElement a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Data element"@en, "Datenelement"@de, "Gegevenselement"@nl, "Élément de données"@fr ;
+	rdfs:comment "A data element describes a characteristic (property) or a collection of characteristics (class) of an object. A data element can be authoritative or not. Authoritative data elements have a legal base and have to be reused according to the 'only once' legislation."@en, 
+		"Een gegevenselement beschrijft een kenmerk (eigenschap) of een verzameling kenmerken (klasse) van een object. Een gegevenselement kan authentiek zijn of niet. Authentieke gegevenselementen hebben een wettelijke basis en moeten opnieuw worden gebruikt volgens de 'only once' wetgeving."@nl,
+		"Ein Datenelement beschreibt ein Merkmal (Eigenschaft) oder eine Sammlung von Merkmalen (Klasse) eines Objekts. Ein Datenelement kann authentisch sein oder nicht. Authentische Datenelemente haben eine Rechtsgrundlage und müssen gemäß der 'nur einmal' -Gesetzgebung wiederverwendet werden."@de,
+		"Un élément de données décrit une caractéristique (propriété) ou une collection de caractéristiques (classe) d'un objet. Un élément de données peut être authentique ou non. Les éléments de données authentiques ont une base légale et doivent être réutilisés conformément à la législation 'only once'."@fr .
+
+authsrc:DataSource a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subClassOf dcat:Dataset ;
+	rdfs:label "Data source"@en, "Datenquelle"@de, "Gegevensbron"@nl, "Source de données"@fr ;
+	rdfs:comment "A Data source is a collection of data elements which describe objects. A data source can be authoritative or not. An authoritative data source contains authoritative data and therefore there is a legal obligation to reuse this data source wherever possible."@en,
+		"Een gegevensbron is een verzameling gegevenselementen die objecten beschrijven. Een gegevensbron kan authentiek zijn of niet. Een authentieke gegevensbron bevat authentieke gegevens en daarom is er een wettelijke verplichting om deze gegevensbron waar mogelijk te hergebruiken."@nl,
+		"Eine Datenquelle ist eine Sammlung von Datenelementen, die Objekte beschreiben. Eine Datenquelle kann authentisch sein oder nicht. Eine authentische Datenquelle enthält authentische Daten und daher besteht eine gesetzliche Verpflichtung, diese Datenquelle wo immer möglich zu verwenden."@de,
+		"Une source de données est une collection d'éléments de données qui décrivent des objets. Une source de données peut être authentique ou non. Une source de données authentique contient des données authentiques et, par conséquent, il existe une obligation légale de réutiliser cette source de données dans la mesure du possible."@fr  .
+
+authsrc:Initiator a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Initiateur"@fr, "Initiator"@de, "Initiator"@en, "Initiator"@nl ;
+	rdfs:comment "An initiator initiates the data in a data source (records data on behalf of the party responsible for the data source)."@en,
+		"Een initiator initieert de gegevens in een gegevensbron legt gegevens vast in opdracht van de partij verantwoordelijk voor de gegevensbron)."@nl,
+		"Ein Initiator initiiert die Daten in einer Datenquelle (zeichnet die Daten auf im Auftrag der für die Datenquelle verantwortlichen Partei)."@de,
+		"Un initiateur initie les données dans une source de données (enregistre les données pour le compte de la partie responsable de la source de données)."@fr .
+
+authsrc:Procedure a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Procedure"@en, "Procedure"@nl, "Procédure"@fr, "Prozedur"@de ;
+	rdfs:comment "A procedure is a set of rules that need to be followed in a process."@en,
+		"Een procedure is een verzameling van regels die moet worden gevolgd in een proces."@nl,
+		"Eine Prozedur ist eine Reihe von Regeln, die in einem Prozess befolgt werden müssen."@de,
+		"Une procédure est un ensemble de règles qui doivent être suivies dans un processus."@fr .
+
+authsrc:Provider a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Provider"@en, "Anbieter"@de, "Aanbieder"@nl, "Fournisseur"@fr .
+
+authsrc:SourceResponsible a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Responsable de la source de données"@fr, "Responsible for the data source"@en, "Verantwoordelijke voor de gegevensbron"@nl, "Verantwortlicher für die Datenquelle"@de;
+	rdfs:comment "Responsable de la source de données. Cette partie est une organisation à laquelle est joint un contactperson facultatif pour la source de données."@fr,
+		"Responsible for the data source. This party is an organization to which is attached an optional contactperson for the data source."@en,
+		"Verantwoordelijke voor de gegevensbron. Deze partij is een organisatie waaraan een optionele contactpersoon voor de gegevensbron is gekoppeld."@nl,
+		"Verantwortlicher für die Datenquelle. Diese Partei ist eine Organisation, der ein optionaler Kontaktperson für die Datenquelle beigefügt ist."@de .
+
+authsrc:hasAgreement a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A accord"@fr, "Has agreement"@en, "Hat Vereinbarung"@de, "Heeft overeenkomst"@nl ;
+	rdfs:range authsrc:Agreement .
+
+authsrc:hasConsumer a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "a consommateur"@fr, "has consumer"@en, "hat Verbraucher"@de, "heeft consumer"@nl ;
+	rdfs:domain authsrc:Agreement .
+
+authsrc:hasInitiator a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A initiateur"@fr, "Has initiator"@en, "Hat Initiator"@de, "Heeft initiator"@nl ;
+	rdfs:range authsrc:Initiator .
+
+authsrc:hasIntegrator a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A intégrateur"@fr, "Has integrator"@en, "Hat Integrator"@de, "Heeft integrator"@nl ;
+	rdfs:domain authsrc:DataSource .
+	
+authsrc:hasProcedure a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A procédure"@fr, "Has procedure"@en, "Hat Prozedur"@de, "Heeft procedure"@nl ;
+	rdfs:domain authsrc:Agreement ;
+	rdfs:range authsrc:Procedure .
+
+authsrc:hasProvider a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "a un fournisseur"@fr, "has provider"@en, "hat Anbieter"@de, "heeft provider"@nl ;
+	rdfs:comment "Can be different than the responsible party (e.g. a service integrator)"@en,
+		"Kan verschillen van de verantwoordelijke partij (bijvoorbeeld een service-integrator)"@nl,
+		"Kann anders sein als die verantwortliche Partei (z. B. ein Service-Integrator)"@de,
+		"Peut être différent de la partie responsable (par exemple un intégrateur de services)"@fr ;
+	rdfs:domain authsrc:Agreement ;
+	rdfs:range authsrc:Provider .
+
+authsrc:hasResponsible a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A responsable"@fr, "Has responsible"@en, "Hat verantwortliche Partei"@de, "Heeft verantwoordelijke"@nl ;
+	rdfs:domain authsrc:DataSource ;
+	rdfs:range authsrc:SourceResponsible .
+
+authsrc:hasSource a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:subPropertyOf dcterms:relation ;
+	rdfs:label "A source"@fr, "Has source"@en, "Hat Quelle"@de, "Heeft bron"@nl ;
+	rdfs:range authsrc:DataSource .
+
+authsrc:isAuthoritative a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy authsrc: ;
+	rdfs:label "Est authentique"@fr, "Is authentiek"@nl, "Is authoritative"@en, "Ist authentisch"@de ;	
+	rdfs:comment "Indicateur si quelque chose est authentique ou non."@fr, "Indicator of iets authentiek is of niet."@nl,
+		"Indicator whether something is authoritative or not."@en, "Indikator, ob etwas authentisch ist oder nicht."@de ;
+	rdfs:range xsd:boolean .

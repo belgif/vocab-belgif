@@ -1,0 +1,49 @@
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/shacl/inspire#> a owl:Ontology;
+  rdfs:comment "BeST/INSPIRE SHACL rules"@en, "BeST/INSPIRE SHACL rules"@fr,
+    "BeST/INSPIRE SHACL rules"@nl, "BeST/INSPIRE SHACL rules"@de;
+  rdfs:label "BeST/INSPIRE"@de, "BeST/INSPIRE"@en, "BeST/INSPIRE"@fr, "BeST/INSPIRE"@nl;
+  owl:versionInfo "Incomplete Draft 2020-01-24".
+
+<http://vocab.belgif.be/shacl/inspire#AddressRepresentationShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path locn:fullAddress
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path locn:thoroughfare
+    ], [
+      sh:datatype xsd:string;
+      sh:path locn:locatorDesignator
+    ], [
+      sh:datatype rdfs:Literal;
+      sh:path locn:poBox
+    ], [
+      sh:datatype rdfs:Literal;
+      sh:minCount 1;
+      sh:maxCount 1;
+      sh:path locn:postCode
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path locn:postName
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path locn:adminUnitL1
+    ];
+  sh:targetClass locn:Address .

@@ -1,0 +1,163 @@
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/description> "Categorie betrokken Persoon"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/title> "GDPR involvedparty"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/description> "Catégorie de Personne concernée"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/title> "GDPR involvedparty"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/description> "Category involved Party"@en .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/title> "GDPR involvedparty"@en .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/description> "Kategorie betroffene Person"@de .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://purl.org/dc/terms/title> "GDPR involvedparty"@de .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/01#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/02#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/03#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/04#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/05#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/06#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/07#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/08#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/09#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/10#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/11#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/12#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/13#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/14#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/15#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/16#id> .
+<http://vocab.belgif.be/auth/gdpr-involved#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-involved/17#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#notation> "01" .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Burger"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Burgers"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Citizens"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Citoyens"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/01#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#notation> "02" .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal der Regierungsagentur"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personeel van de overheidsinstelling"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personnel des institutions publiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Staff of the government agency"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/02#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#notation> "03" .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Les contrevenants"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overtreders"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertreter"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Violators"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/03#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#notation> "04" .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Suspects"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Suspects"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verdachten"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verdächtige"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/04#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#notation> "05" .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Getuigen of derde aan een overtreding"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Témoin ou tiers à un délit"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Witnesses or third party to a violation"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zeugen oder Dritte zu einer Straftat"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/05#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#notation> "06" .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opfer"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Slachtoffers"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Victimes"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Victims"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/06#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#notation> "07" .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beschwerdeführer"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Complainants"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Klagers"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plaignants"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/07#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#notation> "08" .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Correspondants"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Correspondenten"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Correspondents"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Korrespondenten"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/08#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#notation> "09" .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minderjährige"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minderjarigen"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mineurs"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minors"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/09#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#notation> "10" .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Familie, voogd(en), vennoten van de ‘betrokkene’"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Familie, Vormund, Partner der betreffenden Person"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Famille, tuteur(s), partenaire de la «personne concernée»"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Family, guardian(s), partners of the person concerned’"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/10#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#notation> "11" .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Berater, Berater oder Experten"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conseillers, consultants ou experts"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Counselors, consultants or experts"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Raadslieden, consultants of experts"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/11#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#notation> "12" .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employees"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Employés"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitarbeiter"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Werknemers"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/12#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#notation> "13" .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geistig behindert"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Handicapé mental"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mentaal gehandicapten"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mentally disabled"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/13#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#notation> "14" .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asielzoekers"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asylsuchende"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Asylum seekers"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Demandeurs d'asile"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/14#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#notation> "15" .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ältere Menschen"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elderly"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ouderen"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personnes âgées"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/15#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#notation> "16" .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patienten"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patiënten"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patients"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Patients"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/16#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-involved#id> .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#notation> "17" .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere"@de .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere"@nl .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre"@fr .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other"@en .
+<http://vocab.belgif.be/auth/gdpr-involved/17#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-involved#id> .

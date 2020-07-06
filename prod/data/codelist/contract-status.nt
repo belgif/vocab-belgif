@@ -1,0 +1,48 @@
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/title> "Contract status"@en .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/title> "Contract status"@fr .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/title> "Contract status"@de .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/title> "Contract status"@nl .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/description> "Contract status"@en .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/description> "Statut du contract"@fr .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/description> "Kontraktstatus"@de .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/description> "Contract status"@nl .
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/modified> "2020-02-05T11:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/contract-status> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/contract-status/UNSIGNED> .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status/> <http://www.w3.org/2004/02/skos/core#notation> "UNSIGNED" .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unsigned"@en .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non signé"@fr .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Niet getekend"@nl .
+<http://vocab.belgif.be/auth/contract-status/UNSIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nicht unterschrieben"@de .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/contract-status/SIGNED> .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#notation> "SIGNED" .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Signed"@en .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Signé"@fr .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Getekend"@nl .
+<http://vocab.belgif.be/auth/contract-status/SIGNED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unterschrieben"@de .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/contract-status/ENDED> .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#notation> "ENDED" .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ended"@en .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Terminé"@fr .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beëindigd"@nl .
+<http://vocab.belgif.be/auth/contract-status/ENDED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beendet"@de .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/contract-status/CONTESTED> .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/contract-status> .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#notation> "CONTESTED" .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contested"@en .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contesté"@fr .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aangevochten"@nl .
+<http://vocab.belgif.be/auth/contract-status/CONTESTED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Angefochtener"@de .
