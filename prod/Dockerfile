@@ -1,5 +1,5 @@
 # Dropwizard  vocab.belgif.be 
-FROM amd64/openjdk:8-jre-alpine
+FROM adoptopenjdk/openjdk11:alpine-jre
 MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
@@ -25,7 +25,7 @@ USER dropwizard
 WORKDIR /home/dropwizard
 
 ENV JAVA_OPT=""
-ENV DW_CFG=""
+ENV DW_CFG="config.yml"
 
 CMD java -server ${JAVA_OPT} -jar /usr/local/bin/vocab-belgif.jar server ${DW_CFG}
 
