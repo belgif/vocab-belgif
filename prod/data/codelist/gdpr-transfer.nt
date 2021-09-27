@@ -1,0 +1,74 @@
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/description> "Aard van gegevensoverdracht"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/title> "GDPR datatransfernature"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/description> "Data transfer nature"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/title> "GDPR datatransfernature"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/description> "Datentransfer Natur"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/title> "GDPR datatransfernature"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/description> "Nature du transfert de données"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://purl.org/dc/terms/title> "GDPR datatransfernature"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-transfer/01#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-transfer/02#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-transfer/03#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-transfer/04#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-transfer/05#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#note> "art.45 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#note> "art.45 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#note> "art.45 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#note> "article 45 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#notation> "01" .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "doorgifte op basis van een adequaatsheidbesluit"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer on the basis of an adequacy decision"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "transfert fondé sur une décision d'adéquation"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertragung auf der Grundlage einer Angemessenheitsentscheidung"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/01#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#note> "art.46 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#note> "art.46 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#note> "art.46 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#note> "article 46 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#notation> "02" .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "doorgifte op basis van passende waarborgen"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer on the basis of appropriate safeguards"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfert moyennant des garanties appropriées"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertragung auf der Grundlage geeigneter Garantien"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/02#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#note> "art.47 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#note> "art.47 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#note> "art.47 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#note> "article 47 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#notation> "03" .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "doorgifte op basis van bindende bedrijfsvoorschriften"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer on the basis of binding company regulations"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "transfert sur la base de règles d'entreprise contraignantes"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertragung auf der Grundlage verbindlicher Betriebsvorschriften"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/03#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.1 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.1 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.1 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#note> "article 49.1 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#notation> "04" .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "doorgifte op basis van een afwijking voor specifieke situaties"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer on the basis of a deviation for specific situations"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "transfert fondé sur une dérogation pour des situations spécifiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertragung auf der Grundlage einer Abweichung für bestimmte Situationen"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/04#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.2 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.2 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#note> "art.49.2 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#note> "article 49.2 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-transfer#id> .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#notation> "05" .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "doorgifte op basis voorwaarde art. 49.2 AVG"@nl .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transfer based on condition art. 49.2 AVG"@en .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "transfert sur la base de la condition de l'article 49.2 du RGPD"@fr .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Übertragung basierend auf Konditionskunst. 49.2 AVG"@de .
+<http://vocab.belgif.be/auth/gdpr-transfer/05#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-transfer#id> .

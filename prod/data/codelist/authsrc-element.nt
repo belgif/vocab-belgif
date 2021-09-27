@@ -1,0 +1,102 @@
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/title> "AS elements"@en .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/title> "AS elementen"@nl .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/title> "AS élements"@fr .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/title> "AS Elemente"@de .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/description> "Authentic Sources elements"@en .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/description> "Authentieke Bronnen elementen"@nl .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/description> "Sources Authentiques élements"@fr .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/description> "Aathentischen Quellen"@de .
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/modified> "2019-02-25T13:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-element/BIZ> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#notation> "BIZ" .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business"@de .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business"@en .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/BIZ> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#notation> "BIZ_ABBR" .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Afgekorte naam"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nom abrégé"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kurzwahlname"@de .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_ABBR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abbreviated name"@en .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/BIZ> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#notation> "BIZ_OTHER" .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business: Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business: Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business: Ander"@de .
+<http://vocab.belgif.be/auth/authsrc-element/BIZ_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Business: Other"@en .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-element/LOCN> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#notation> "LOCN" .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Locatie"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lieu"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standort"@de .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/LOCN> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#notation> "LOCN_STREET" .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Straatnaam"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nom de la rue"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Straßenname"@de .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "Streetname"@en .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/LOCN> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#notation> "LOCN_OTHER" .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location: Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location: Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location: Ander"@de .
+<http://vocab.belgif.be/auth/authsrc-element/LOCN_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location: Other"@en .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-element/PERS> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#notation> "PERS" .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoon"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personne"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@de .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/PERS> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#notation> "PERS_FAMNAME" .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#prefLabel> "Familienaam"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nom de famille"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nachname"@de .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_FAMNAME> <http://www.w3.org/2004/02/skos/core#prefLabel> "Family name"@en .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-element/OTHER> .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#notation> "PERS_OTHER" .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person: Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Perso: Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person: Ander"@de .
+<http://vocab.belgif.be/auth/authsrc-element/PERS_OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person: Other"@en .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-element/OTHER> .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-element> .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#notation> "OTHER" .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ander"@de .
+<http://vocab.belgif.be/auth/authsrc-element/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other"@en .

@@ -1,21 +1,21 @@
 # Dropwizard  vocab.belgif.be 
-FROM amd64/openjdk:8-jre-alpine
+FROM adoptopenjdk/openjdk11:alpine-jre
 MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
-COPY lod-vocab-1.3.17.jar /usr/local/bin/lod-vocab.jar
+COPY lod-vocab-1.4.0.jar /usr/local/bin/vocab-belgif.jar
 
-COPY vocab /home/dropwizard/ 
+COPY cfg /home/dropwizard/ 
 
-COPY lod-vocab-data/context /home/dropwizard/download-ctx/
+COPY data/context /home/dropwizard/download-ctx/
 
-COPY lod-vocab-data/shacl /home/dropwizard/import-shacl/
-COPY lod-vocab-data/shacl /home/dropwizard/download-shacl/
+COPY data/shacl /home/dropwizard/import-shacl/
+COPY data/shacl /home/dropwizard/download-shacl/
 
-COPY lod-vocab-data/ontologies /home/dropwizard/import-onto/
-COPY lod-vocab-data/codelist /home/dropwizard/import-auth/
+COPY data/ontologies /home/dropwizard/import-onto/
+COPY data/codelist /home/dropwizard/import-auth/
 
-COPY lod-vocab-data/xmlns /home/dropwizard/download-ns/
+COPY data/xmlns /home/dropwizard/download-ns/
 
 RUN mkdir /home/dropwizard/download-auth  && \ 
     chown -R dropwizard:0 /home/dropwizard && \
@@ -25,9 +25,9 @@ USER dropwizard
 WORKDIR /home/dropwizard
 
 ENV JAVA_OPT=""
-ENV DW_CFG=""
+ENV DW_CFG="config.yml"
 
-CMD java -server ${JAVA_OPT} -jar /usr/local/bin/lod-vocab.jar server ${DW_CFG}
+CMD java -server ${JAVA_OPT} -jar /usr/local/bin/vocab-belgif.jar server ${DW_CFG}
 
 EXPOSE 8080 8081
  

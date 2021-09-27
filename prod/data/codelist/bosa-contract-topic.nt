@@ -1,0 +1,193 @@
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/title> "BOSA Contract topics"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/title> "BOSA Contract topic"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/title> "BOSA Contract topic"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/title> "BOSA Contract topic"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/description> "BOSA contract topics"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/description> "BOSA contract topics"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/description> "BOSA contract topics"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/description> "BOSA contract topics"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/modified> "2020-01-17T11:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#notation> "eBOX" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBox"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBox"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBox"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBox"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#notation> "eBOX01" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord d'utilisation Expéditeurs eBox"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Benutzervereinbarung eBox-Absender"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebruiksovereenkomst eBox verzenders"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX01> <http://www.w3.org/2004/02/skos/core#prefLabel> "User agreement eBox senders"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#notation> "eBOX02" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord avec le projet pilote eBox"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agreement with eBox pilot project"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overeenkomst pilootproject eBox"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vereinbarung mit eBox-Pilotprojekt"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#notation> "EBOX03" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord opérationnel ouvrant eBox"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agreement operational opening up eBox"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overeenkomst operationele ontsluiting eBox"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vereinbarung operativer Zugang zu eBox"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/EBOX> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#notation> "EBOX04" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord de reconnaissance eBOX"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBOX Erkenningsovereenkomst"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBOX Recognition agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/EBOX04> <http://www.w3.org/2004/02/skos/core#prefLabel> "eBOX-Anerkennungsvereinbarung"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#notation> "FSB" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#notation> "FSB01" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord utilisateur FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB gebruikersovereenkomst"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB user agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-Nutzungsvereinbarung"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#notation> "FSB01" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord utilisateur FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB gebruikersovereenkomst"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB user agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB01> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-Nutzungsvereinbarung"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#notation> "FSB02" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Demande de connexion FSB à une source authentique"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB connection request to authoritative source"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-connectieverzoek naar authentieke bron"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB02> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-Verbindungsanforderung an autorisierende Quelle"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#notation> "FSB03" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord de protocole FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB protocol agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB protocolovereenkomst"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB03> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-Protokollvereinbarung"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#notation> "FSB04" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB common protocol"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB gemeenschappelijk protocol"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB gemeinsames Protokoll"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Protocole commun FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#notation> "FSB05" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord commun du FSB"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB common agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB gemeenschappelijke overeenkomst"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB05> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB-Einigung"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/FSB> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#notation> "FSB06" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB service level agreement"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB service level agreement"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB service level agreement"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/FSB06> <http://www.w3.org/2004/02/skos/core#prefLabel> "FSB service level agreement"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#notation> "GDPR" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#notation> "GDPR01" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#note> "see art. 26 EU-GDPR"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#note> "siehe art. 26 EU-GDPR"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#note> "voir art. 26 EU-GDPR"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#note> "zie art. 26 EU-GDPR"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Controller"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Controller"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Controller"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR01> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Controller"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#notation> "GDPR02" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#note> "see art. 28.3 EU-GDPR"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#note> "siehe art. 28.3 EU-GDPR"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#note> "voir art. 28.3 EU-GDPR"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#note> "zie art. 28.3 EU-GDPR"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Processor"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Processor"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Processor"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR02> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Processor"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#notation> "GDPR03" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#note> "see art. 20 Belgian GDPR law 2018-07-30"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#note> "siehe art. 20 Belgisches GDPR-Gesetz 2018-07-30"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#note> "voir art. 20 Loi belge GDPR 2018-07-30"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#note> "zie art. 20 Belgische GDPR-wet 2018-07-30"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Datareceiver"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Datareceiver"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Datareceiver"@fr . 
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR03> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Controller-Datareceiver"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/GDPR> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#notation> "GDPR04" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Processor-Processor"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Processor-Processor"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Processor-Processor"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/GDPR04> <http://www.w3.org/2004/02/skos/core#prefLabel> "GDPR Processor-Processor"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/bosa-contract-topic> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#notation> "NDA" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#notation> "NDA01" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA ohne vorherigen Vertrag"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA sans contrat préalable"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA without prior contract"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA01> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA zonder voorafgaand contract"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#notation> "NDA02" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contrat gouvernemental NDA"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA government contract"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA overheidsopdracht"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA02> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA Regierungsvertrag"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#notation> "NDA03" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA consultant"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA consultant"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA consultant"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA03> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA-Berater"@de .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/bosa-contract-topic/NDA> .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#notation> "NDA04" .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA Consultant avec données personnelles"@fr .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA consultant met persoonsgegevens"@nl .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA consultant with personal data"@en .
+<http://vocab.belgif.be/auth/bosa-contract-topic/NDA04> <http://www.w3.org/2004/02/skos/core#prefLabel> "NDA-Berater mit persönlichen Daten"@de .

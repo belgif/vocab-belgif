@@ -1,0 +1,1256 @@
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Catégorie de Données"@fr .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/title> "GDPR datacategory"@fr .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Data Categorie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/title> "GDPR datacategory"@nl .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Data category"@en .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/title> "GDPR datacategory"@en .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Kategorie Daten"@de .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/title> "GDPR datacategory"@de .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/C#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/D#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/F#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/G#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/H#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/I#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/K#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/L#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/P#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/Q#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/R#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/S#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/T#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/U#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/U#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/V#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/W#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/X#id> .
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/gdpr-category/Z#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A4#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/A5#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#notation> "A" .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d'identification"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identificatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identification data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identifikationsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#note> "naam, titel, adres (privé, werk), vroegere adressen, telefoonnummer (privé, werk), identificatiegegevens toegekend door verantwoordelijke."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#note> "Name, Titel, Adresse (privat, geschäftlich), frühere Adressen, Telefonnummer (privat, geschäftlich) und Identifikationsdaten, die von der verantwortlichen Partei vergeben wurden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#note> "name, title, address (private, work), previous addresses, telephone number (private, work) and identification data assigned by the responsible."@en .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#note> "nom, titre, adresse (privée et professionnelle), adresses antérieures, numéro de téléphone (privé, professionnel), identifiants attribués par le responsable."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#notation> "A1" .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d’identification personnelles"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal identification data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Identifikationsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke identificatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#note> "identiteitskaartnummer, paspoortnummer, rijbewijsnummer, pensioennummer, nummerplaat, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#note> "identity card number, passport number, driver's license number, pension number, number plate, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#note> "numéro de carte d’identité, de passeport, de permis de conduire, de pension, de plaque d’immatriculation, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#note> "Personalausweisnummer, Passnummer, Führerscheinnummer, Rentennummer, Nummernschild, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#notation> "A2" .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d’identification émises par les services publics, autres que le numéro de registre national"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identificatiegegevens, andere dan het Rijksregisternummer, uitgegeven door de overheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identification data, other than the National Register number, issued by the government"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identifizierungsdaten, die nicht von der nationalen Registernummer stammen und von der Regierung ausgestellt wurden"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#note> "adresses IP, cookies, moments de connexion, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#note> "IP addresses, cookies, connection times, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#note> "IP-adressen, cookies, verbindingsmomenten,…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#note> "IP-Adressen, Cookies, Verbindungszeiten, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#notation> "A3" .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d'identification électroniques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electronic identification data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elektronische identificatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elektronische Identifikationsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#note> "GSM, GPS, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#note> "GSM, GPS, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#note> "GSM, GPS, …"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#note> "GSM, GPS,…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#notation> "A4" .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données de localisation électroniques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Electronic localization data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elektronische lokalisatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elektronische Lokalisierungsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA data, finger and voice prints, image of the retina, recognition of the face, of the shape of the fingers or of the hand, dynamic signature, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA-Daten, Finger- und Stimmprints, Bild der Netzhaut, Erkennung des Gesichts, der Form der Finger oder der Hand, dynamische Unterschrift, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA-gegevens, vinger– en stemafdrukken, beeld van het netvlies, herkenning van het gezicht, van de vorm van de vingers of van het hand, dynamische handtekening, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#note> "données relatives à l’ADN, empreintes digitales, reconnaissance vocale, image de la rétine, reconnaissance du visage, de la forme des doigts ou de la main, signature dynamique, …"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/A#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#notation> "A5" .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biometric identification data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biometrische identificatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biometrische Identifikationsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/A5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d’identification biométriques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B01#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B02#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B03#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B04#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B05#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B06#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B07#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B08#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B09#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B10#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B11#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B12#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/B13#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#notation> "B" .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial details"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële bijzonderheden"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanzielle Details"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Particularités financières"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#note> "identificatie– en bankrekeningnummers, nummers van krediet– of debetkaarten, geheime codes."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#note> "identification and bank account numbers, numbers of credit or debit cards and secret codes."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#note> "Identifikations- und Bankkontonummern, Anzahl der Kredit- oder Debitkarten und Geheimcodes."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#note> "numéros d’identification et de comptes bancaires, numéros de cartes de crédit ou de débit, codes secrets."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#notation> "B01" .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données d’identification financières"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial identification data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële identificatiegegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanzielle Identifikationsdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#note> "Einkommen, Vermögen, Investitionen, Gesamteinkommen, berufliches Einkommen, Ersparnisse, Datum des Beginns und Endes der Investition, Kapitalerträge und Aufwendungen für die Vermögenswerte."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#note> "Income, assets, investments, total income, professional income, savings, start date and investment end date, investment income and expenses on the assets."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#note> "Inkomsten, bezittingen, investeringen, totale inkomsten, beroepsinkomsten, spaargelden, begindatum en einddatum van beleggingen, investeringsinkomsten, lasten op de activa."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#note> "Revenus, possessions, investissements, revenus totaux, revenus professionnels, épargne, date de début et de terme de placements, revenus d’investissements, charges sur les actifs."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#notation> "B02" .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial resources"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële middelen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanzielle Ressourcen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Moyens financiers"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#note> "dépenses totales, dépenses pour le loyer, prêts, hypothèques et autres formes de crédit."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#note> "Gesamtausgaben, Mieten, Darlehen, Hypotheken und andere Kreditformen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#note> "total expenses, rents, loans, mortgages and other forms of credit."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#note> "totale uitgaven, huurgelden, leningen, hypotheken en andere vormen van krediet."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#notation> "B03" .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Debts and expenses"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dettes, dépenses"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schulden und Ausgaben"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Schulden, uitgaven"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#note> "appréciation des revenus, du statut financier, de la solvabilité."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#note> "assessment of income, financial status, solvency."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#note> "beoordeling van de inkomsten, van het financieel statuut, van de solvabiliteit."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#note> "Einschätzung des Einkommens, des Finanzstatus, der Zahlungsfähigkeit."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#notation> "B04" .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvabilité"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvabiliteit"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvency"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvenz"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#note> "aard van de lening, geleend bedrag, resterend te betalen saldo, aanvangsdatum, duur, rentevoet, overzicht van de betaling, bijzonderheden betreffende de waarborgen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#note> "Art des Darlehens, Darlehensbetrag, zu zahlender Restbetrag, Beginndatum, Dauer, Zinssatz, Übersicht über die Zahlung, Einzelheiten der Garantien."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#note> "nature of the loan, loan amount, remaining balance to be paid, start date, duration, interest rate, overview of the payment, details of the guarantees."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#note> "type d’emprunt, montant emprunté, solde restant dû, date de début, durée, taux d’intérêt, aperçu des paiements, détail des garanties."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#notation> "B05" .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Darlehen, Hypotheken und Kredite"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Emprunts, hypothèques et crédits"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leningen, hypotheken, kredieten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Loans, mortgages and credits"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#note> "Allocations, aides, dons, subventions."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#note> "Benefits, assistance, donations, subsidies."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#note> "Uitkeringen, hulp, giften, subsidies."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#note> "Vorteile, Unterstützung, Spenden, Subventionen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#notation> "B06" .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aide financière"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial help"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële hulp"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanzielle Unterstützung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#note> "aard van de verzekering, bijzonderheden betreffende de gedekte risico’s, verzekerde bedragen, periode gedurende welke de risico’s zijn gedekt, vervaldatum, al dan niet uitgevoerde of ontvangen betalingen, stand van de overeenkomst"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#note> "Art der Versicherung, Einzelheiten zu den abgedeckten Risiken, Versicherungssummen, Zeitraum, in dem die Risiken gedeckt sind, Fälligkeitsdatum, geleistete oder erhaltene oder erhaltene Zahlungen und Status des Vertrags."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#note> "type d’assurance, détail des risques couverts, montants assurés, période de couverture, date d’échéance, paiements effectués ou reçus et paiements non effectués ou non reçus, état du contrat."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#note> "type of insurance, details concerning the risks covered, insured amounts, period during which the risks are covered, due date, payments made or received or received and status of the agreement."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#notation> "B07" .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bijzonderheden betreffende de verzekeringen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Détails relatifs aux assurances"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Insurances"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Versicherung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#note> "Angaben zur Rente: Datum, an dem die Personen dem Rentensystem beitreten, Art des Systems, Datum, zu dem sie nicht mehr zum System gehören, erhaltene Zahlungen und geleistete Zahlungen, Optionen und Begünstigte."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#note> "Data on the pension: date on which people will join the pension system, the nature of the system, the date on which they no longer belong to the system, payments received and payments made, options and beneficiaries."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#note> "date d’entrée dans le système de pension, type de système, date de sortie du système, paiements reçus et effectués, options, bénéficiaires."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#note> "datum waarop men deel gaat uitmaken van het pensioensysteem, aard van het systeem, datum waarop men geen deel meer uitmaakt van het systeem, ontvangen en uitgevoerde betalingen, opties, begunstigden."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#notation> "B08" .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bijzonderheden betreffende het pensioen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Details about the pension"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Détails relatifs à la pension"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Details zur Pension"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#note> "amounts that the person who has been included in the file must pay and have paid, granted credit, guarantee, methods of payment, overview of payments, deposits and other guarantees."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#note> "bedragen die de persoon die in het bestand is opgenomen, moet betalen en heeft betaald, toegekend krediet, wisselborgstelling, betalingswijzen, overzicht van de betalingen, deposito’s en andere waarborgen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#note> "Beträge, die die Person, die in die Datei aufgenommen wurde, zahlen und bezahlt haben muss, gewährt Kredit, Garantie, Zahlungsmethoden, Übersicht über Zahlungen, Einlagen und andere Garantien."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#note> "montants dus et payés par la personne fichée, crédit alloué, avals, modes de paiement, aperçu des paiements, dépôts et autres garanties."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#notation> "B09" .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial transactions"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële transacties"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanztransaktionen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transactions financières"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende de geëiste compensaties, betaalde bedragen of andere vormen van compensatie."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#note> "détails des compensations exigées, montants payés ou autres formes de compensation."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#note> "details of the required compensation, amounts paid or other forms of compensation."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#note> "Einzelheiten über die erforderliche Entschädigung, gezahlte Beträge oder andere Formen der Entschädigung."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#notation> "B10" .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compensatie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compensation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compensations"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kompensationen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#note> "Activités professionnelles de la personne fichée type d’activité, nature des biens ou des services utilisés ou fournis par la personne fichée, relations d’affaires."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#note> "Beroepsactiviteiten van de persoon die in het bestand is opgenomen: aard van de activiteit, aard van de goederen of diensten die door de persoon die in het bestand is opgenomen worden gebruikt of geleverd, zakenrelaties."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#note> "Data related to the professional activity: nature of the professional activity, nature of the goods or services used or delivered by the person included in the file and business relations."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#note> "Daten im Zusammenhang mit der beruflichen Tätigkeit: Art der beruflichen Tätigkeit, Art der Waren oder Dienstleistungen, die von der in der Akte erfassten Person und den Geschäftsbeziehungen verwendet oder geliefert werden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#notation> "B11" .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Activités professionnelles"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beroepsactiviteiten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Berufliche Aktivitäten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional activities"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende de schikkingen of handelsovereenkomsten, overeenkomsten betreffende de vertegenwoordiging of juridische overeenkomsten, bijzonderheden betreffende de agenten."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#note> "détails des accords ou des conventions commerciales, accords de représentation ou de conventions juridiques, détails relatifs aux agents."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#note> "Information regarding agreements and settlements: details of the settlements or trade agreements, agreements concerning representation or legal agreements and details concerning the agents."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#note> "Informationen zu Vereinbarungen und Abrechnungen: Einzelheiten zu den Abrechnungen oder Handelsabkommen, Vereinbarungen über Vertretungen oder rechtliche Vereinbarungen und Details zu den Agenten."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#notation> "B12" .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agreements and arrangements"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conventions et accords"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Konventionen und Vereinbarungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overeenkomsten en schikkingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#note> "In het bezit zijnde vergunningen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#note> "Licences détenues."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#note> "Licenses in possession."@en .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#note> "Lizenzen in Besitz."@de .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/B#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#notation> "B13" .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Licenses"@en .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lizenzen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Permis"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/B13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vergunningen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/C1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/C2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/C3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#notation> "C" .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques personnelles"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal characteristics"@en .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Eigenschaften"@de .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke kenmerken"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#note> "age, gender, date of birth, place of birth, marital status and nationality."@en .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#note> "âge, sexe, date de naissance, lieu de naissance, état civil et nationalité."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#note> "Alter, Geschlecht, Geburtsdatum, Geburtsort, Familienstand und Nationalität."@de .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#note> "leeftijd, geslacht, geboortedatum, geboorteplaats, burgerlijke staat, nationaliteit."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/C#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#notation> "C1" .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Détails personnels"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal information"@en .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Informationen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/C1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persoonlijke bijzonderheden"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#note> "militair statuut, militair overzicht, militaire onderscheidingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#note> "Militärischer Status, militärischer Überblick und militärische Auszeichnungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#note> "military status, military overview and military awards."@en .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#note> "statut militaire, parcours militaire, distinctions militaires."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/C#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#notation> "C2" .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Militaire situatie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Militärische Situation"@de .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Military situation"@en .
+<http://vocab.belgif.be/auth/gdpr-category/C2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Situation militaire"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende het visum, arbeidsvergunning, verblijfs– of verplaatsingsbeperkingen, bijzondere voorwaarden betreffende het verblijfsrecht."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#note> "Data relating to immigration: visa, work permit, residence or travel restrictions and special conditions concerning the right of residence."@en .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#note> "Daten zur Einwanderung: Visum, Arbeitserlaubnis, Aufenthalts- oder Reisebeschränkungen und besondere Bedingungen für das Aufenthaltsrecht."@de .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#note> "particularités concernant le visa, le permis de travail, les limitations de séjour ou de déplacement, les conditions particulières relatives au droit de séjour."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/C#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#notation> "C3" .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Immigrant status"@en .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Immigrantenstatus"@de .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Immigrantenstatuut"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/C3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Statut d’immigration"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/D1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#notation> "D" .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données physiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fysieke gegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physical data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physische Daten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/D#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#note> "grootte, gewicht, haarkleur, kleur van de ogen, onderscheidende kenmerken."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#note> "Physical data of a person: size, weight, hair color, color of the eyes and other distinguishing features."@en .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#note> "Physische Daten einer Person: Größe, Gewicht, Haarfarbe, Augenfarbe und andere Unterscheidungsmerkmale."@de .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#note> "taille, poids, couleur des cheveux, couleur des yeux, signes distinctifs."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/D#id> .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#notation> "D1" .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Description physique"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fysieke beschrijving"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physical description"@en .
+<http://vocab.belgif.be/auth/gdpr-category/D1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physische Beschreibung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E4#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E5#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E6#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E7#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E8#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/E9#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#notation> "E" .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Habitudes de vie"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lebensgewohnheiten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leefgewoonten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Living habits"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#note> "consommation de tabac, d’alcool."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#note> "Tabakkonsum, Alkoholkonsum."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#note> "tabaksverbruik, alcoholverbruik."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#note> "tobacco consumption, alcohol consumption."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#notation> "E1" .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gewohnheiten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gewoonten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Habits"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Habitudes"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#note> "Angaben zum Konsum von Gütern oder Dienstleistungen, Verhalten des Einzelnen oder seiner Familie."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende het verbruik van goederen of diensten, gedrag van het individu of zijn familie."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#note> "détails concernant la consommation de biens ou de services, comportement de l’individu ou de sa famille."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#note> "details concerning the consumption of goods or services, behavior of the individual or his family."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#notation> "E2" .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Allgemeine Lebensweise"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "General lifestyle"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Levensstijl"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Style de vie"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#note> "Data concerning past stays and relocations, travel visas and work permits."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#note> "Daten über frühere Aufenthalte und Umsiedlungen, Reisevisa und Arbeitserlaubnis."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#note> "informations concernant les séjours et déplacements effectués, visas de voyage, permis de travail."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#note> "inlichtingen betreffende de vroegere verblijven en verplaatsingen, reisvisa, werkvergunningen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#notation> "E3" .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bijzonderheden betreffende de reizen en verplaatsingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Détails des voyages et déplacements"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Einzelheiten zu Reisen und Bewegungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Particulars concerning travels and movements"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#note> "amis, associés, relations autres que la famille proche."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#note> "Freunde, Partner, andere Beziehungen als diejenigen mit nahen Verwandten."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#note> "friends, partners, other relations than those with close relatives."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#note> "vrienden, vennoten, andere betrekkingen dan die met naaste verwanten."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#notation> "E4" .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contacts sociaux"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Social contacts"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sociale contacten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Soziale Kontakte"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#note> "grond, eigendommen of andere bezittingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#note> "Information regarding land, property or other assets."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#note> "Informationen über Land, Eigentum oder andere Vermögenswerte."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#note> "terrains, propriétés ou autres possessions."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#notation> "E5" .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Besitz"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bezittingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Possessions"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Possessions"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#note> "fonctions à l’échelon communal, provincial, régional, communautaire ou fédéral, participation à des comités publics ou groupes de travail ou de réflexion ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#note> "functies op het niveau van de gemeente, de provincie, het gewest of de gemeenschap of op federaal niveau, deelname aan overheidscomités of werkgroepen of bezinningsgroepen, ..."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#note> "functions at municipal, provincial, regional or federal level, participation in government committees, working groups or reflection groups, etc."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#note> "Funktionen auf kommunaler, provinzieller, regionaler oder föderaler Ebene, Teilnahme an Regierungsausschüssen, Arbeitsgruppen oder Reflexionsgruppen usw."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#notation> "E6" .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "In het bezit zijnde openbare mandaten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mandats publics détenus"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Öffentliche Mandate"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Public mandates"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#note> "Information about an accident, incident or complaint in which the person included in the file is involved, nature of the damage or injuries, persons and witnesses involved."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#note> "Informationen über einen Unfall, Vorfall oder eine Beschwerde, in die die Person, die in der Akte enthalten ist, involviert ist, Art der Schäden oder Verletzungen, Personen und Zeugen beteiligt."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#note> "informations relatives à un accident, un incident ou une plainte impliquant la personne fichée, nature des dommages ou blessures, personnes impliquées, témoins."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#note> "inlichtingen betreffende een ongeval, incident of klacht waarin de persoon die in het bestand is opgenomen betrokken is, aard van de schade of kwetsuren, betrokken personen, getuigen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#notation> "E7" .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beschwerden, Vorfälle oder Unfälle"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Complaints, incidents or accidents"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Klachten, incidenten of ongevallen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E7#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plaintes, incidents ou accidents"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#note> "Bürgerliche und geistliche Auszeichnungen und Ehrungen der Armee."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#note> "Burgerlijke en geestelijke onderscheidingen, onderscheidingen van het leger."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#note> "Civil and spiritual awards and honors from the army."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#note> "Distinctions civiles, militaires ou ecclésiastiques."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#notation> "E8" .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Auszeichnungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Awarded awards"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Distinctions"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E8#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Onderscheidingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#note> "Gebruik van de media en communicatiemiddelen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#note> "Nutzung der Medien und Kommunikationsmittel."@de .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#note> "Use of the media and means of communication."@en .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#note> "Utilisation des médias et moyens de communication."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/E#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#notation> "E9" .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Media use"@en .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mediagebruik"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mediennutzung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/E9#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Utilisation des médias"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/F1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#notation> "F" .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données psychiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychic data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychische Daten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychische gegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/F#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#note> "Meinungen über die Persönlichkeit oder den Charakter einer Person."@de .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#note> "Meningen betreffende de persoonlijkheid of het karakter."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#note> "Opinions concernant la personnalité ou le caractère."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#note> "Opinions concerning the personality or character of a person."@en .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/F#id> .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#notation> "F1" .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Descriptions psychiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychic descriptions"@en .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychische Beschreibungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/F1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychische beschrijvingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/G1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/G2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/G3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#notation> "G" .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Composition du ménage"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Family composition"@en .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Samenstelling van het gezin"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zusammensetzung der Familie"@de .
+<http://vocab.belgif.be/auth/gdpr-category/G#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#note> "naam van de echtgenote of partner, meisjesnaam van de echtgenote of partner, huwelijksdatum, datum van het samenlevingscontract, aantal kinderen, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#note> "Name des Ehegatten oder Partners, Geburtsname des Ehegatten oder Partners, Datum der Eheschließung und Datum des Lebensunterhaltsvertrags."@de .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#note> "name of the spouse or partner, maiden name of the spouse or partner, date of marriage and date of the cohabitation contract."@en .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#note> "nom de l’épouse ou de la partenaire, nom de jeune fille de l’épouse ou de la partenaire, date du mariage, date du contrat de vie commune, nombre d’enfants, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/G#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#notation> "G1" .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ehe oder aktuelle Form des Zusammenlebens"@de .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Huwelijk of huidige vorm van samenleven"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mariage ou forme actuelle de cohabitation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marriage or current form of cohabitation"@en .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende de vorige huwelijken of verbintenissen, echtscheidingen, scheidingen, namen van de vroegere partners."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#note> "détails concernant les mariages ou unions précédents, divorces, séparations, noms des partenaires précédents."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#note> "Details der früheren Ehen oder Verpflichtungen, Scheidungen, Scheidungen und Namen der ehemaligen Partner."@de .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#note> "Details of the previous marriages or commitments, divorces, divorces and names of the former partners."@en .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/G#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#notation> "G2" .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ehegeschichte"@de .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historique marital"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maritaal overzicht"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Marital history"@en .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#note> "children, dependents, other members of the family, relatives in the sidelines, parents and descendants."@en .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#note> "enfants, personnes à charge, autres membres du ménage, collatéraux, parents et ascendants."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#note> "Kinder, Angehörige, andere Familienmitglieder, Verwandte in der Seitenlinie, Eltern und Nachkommen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#note> "kinderen, personen ten laste, andere leden van het gezin, bloedverwanten in zijlijn, ouders en afstammelingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/G#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#notation> "G3" .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bijzonderheden betreffende de andere familie– of gezinsleden"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Détails sur les autres membres de la famille ou du ménage"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Familie oder Familienmitglieder"@de .
+<http://vocab.belgif.be/auth/gdpr-category/G3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Family or family members"@en .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/H1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#notation> "H" .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Freizeitaktivitäten und Interessen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leisure activities and interests"@en .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Loisirs et intérêts"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vrijetijdsbesteding en interessen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/H#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#note> "Hobbies, Sport und andere Interessen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#note> "hobbies, sport, autres intérêts."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#note> "hobbies, sports and other interests."@en .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#note> "hobby’s, sport, andere interessen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/H#id> .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#notation> "H1" .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Activités de loisirs et intérêts"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Freizeitaktivitäten und Interessen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leisure activities and interests"@en .
+<http://vocab.belgif.be/auth/gdpr-category/H1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vrijetijdsactiviteiten en interessen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/I1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#notation> "I" .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliations"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschappen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Memberships"@en .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliedschaften"@de .
+<http://vocab.belgif.be/auth/gdpr-category/I#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#note> "affiliations à des organisations caritatives ou bénévoles, clubs, associations, unions, organisations, groupements, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#note> "lidmaatschappen van liefdadigheids– of vrijwilligersorganisaties, clubs, vennootschappen, verenigingen, organisaties, groeperingen,…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#note> "Memberships of charitable or voluntary organizations, clubs, companies, associations, organizations, groups, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#note> "Mitgliedschaften in karitativen oder freiwilligen Organisationen, Vereinen, Firmen, Verbänden, Organisationen, Gruppen, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/I#id> .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#notation> "I1" .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliations (autres que professionnelles, politiques ou syndicales)"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschappen (andere dan professionele, politieke of vakbondsmaatschappen)"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Memberships (other than professional, political or trade union partnerships)"@en .
+<http://vocab.belgif.be/auth/gdpr-category/I1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliedschaften (außer beruflichen, politischen oder gewerkschaftlichen Partnerschaften)"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/J1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/J2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/J3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/J4#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/J5#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#notation> "J" .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant …"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Judicial data concerning ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Justizdaten bezüglich ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/J#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#note> "suspicion d’infractions ou d’association de malfaiteurs connus. Enquêtes ou actions en justice (civiles ou pénales), entreprises par ou à l’encontre de la personne fichée."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#note> "suspicion of infringements, collusion with known criminals. Investigate legal actions (civil or criminal) that have been undertaken by or against the person being listed."@en .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#note> "Verdacht auf Verstöße, Absprachen mit bekannten Kriminellen. Untersuchen Sie rechtliche Schritte (zivil oder strafrechtlich), die von oder gegen die Person durchgeführt wurden, die aufgeführt wird."@de .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#note> "verdenking van inbreuken, samenspanning met gekende misdadigers. Onderzoeken of rechtsvorderingen (burgerlijke of strafrechtelijke) die ondernomen zijn door of tegen de geregistreerde persoon."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#notation> "J1" .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant les suspicions"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende verdenkingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Suspects and indictments"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verdächtige und Anklagen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#note> "Condamnations et peines."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#note> "convictions and punishments."@en .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#note> "Urteile und Strafen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#note> "Veroordelingen en straffen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#notation> "J2" .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant les condamnations et peines"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende veroordelingen en straffen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerichtliche Information über Verurteilungen und Bestrafungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Judicial information concerning convictions and punishments"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#note> "custody, provisional administrator, internment and placement."@en .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#note> "mise sous tutelle, sous administration provisoire, internement, collocation."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#note> "Sorgerecht, vorläufiger Verwalter, Internierung und Unterbringung."@de .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#note> "voogdijschap, voorlopig bewindvoerder, internering, plaatsing."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#notation> "J3" .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant des mesures judiciaires"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende gerechtelijke maatregelen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerichtliche Maßnahmen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Judicial measures"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#note> "Administratieve sancties: * van louter disciplinaire aard * welke kunnen worden opgelegd aan niet-ambtenaren die aan een openbare dienst hun medewerking verlenen (geneesheren, apothekers, paramedici, aannemers van openbare werken)  * die aan de gebruikers van openbare diensten kunnen worden opgelegd  * welke wegens niet-nakoming van wettelijke en verordenings-bepalingen kunnen worden opgelegd Bv. achterlaten van afval op de openbare weg.."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#note> "Administrative sanctions: * of a purely disciplinary nature * which may be imposed on non-civil servants who cooperate with a public service (physicians, pharmacists, paramedics, contractors of public works)  * which can be imposed on users of public services  * which may be imposed for non-compliance with legal and regulatory provisions Eg. leaving waste on public roads"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#note> "Sanctions administratives : * de pure nature disciplinaire * pouvant être imposées à des non-fonctionnaires qui ont apporté leur collaboration à un service public (médecins, pharmaciens, personnel paramédical, entrepreneurs de travaux publics)   * pouvant être imposées aux utilisateurs de services publics   * pouvant être imposées en raison du non-respect de dispositions légales et réglementaires Par ex. : abandon de déchets sur la voie publique, …"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#note> "Verwaltungssanktionen: * rein disziplinärer Natur * für nichtbeamte Bedienstete, die mit einem öffentlichen Dienst zusammenarbeiten (Ärzte, Apotheker, Sanitäter, Auftragnehmer öffentlicher Arbeiten)  * die den Nutzern öffentlicher Dienstleistungen auferlegt werden können  * die wegen Nichteinhaltung gesetzlicher und aufsichtsrechtlicher Bestimmungen auferlegt werden können Eg. Müll auf öffentlichen Straßen hinterlassen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#notation> "J4" .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Administrative sanctions"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant des sanctions administratives"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende administratieve sancties"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verwaltungssanktionen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#note> "Des données relatives à l’ADN qui font l’objet d’un traitement dans le cadre de la loi du 22 mars 1999 relative à la procédure d’identification par analyse ADN en matière pénale."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA data processed in the context of the law of 22 March 1999 concerning the identification procedure via DNA analysis in criminal cases."@en .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA-Daten, die im Rahmen des Gesetzes vom 22. März 1999 über das Identifizierungsverfahren mittels DNA-Analyse in Strafsachen verarbeitet wurden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#note> "DNA-gegevens die worden verwerkt in het kader van de wet van 22 maart 1999 betreffende de identificatieprocedure via DNA-analyse in strafzaken."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/J#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#notation> "J5" .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "DNA analyzes"@en .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "DNA-Analysen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données judiciaires concernant des données relatives à l'ADN"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/J5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gerechtelijke gegevens betreffende DNA-gegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/K1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/K2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#notation> "K" .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Consumptiegewoonten"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Consumption habits"@en .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Habitudes de consommation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Konsumgewohnheiten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/K#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#note> "Angaben zu den von der registrierten Person gelieferten oder entliehenen Waren und Dienstleistungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#note> "Bijzonderheden betreffende de goederen en diensten die aan de geregistreerde persoon worden geleverd, ontleend of gehuurd."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#note> "Details concerning the goods and services supplied, taken from or rented to the registered person."@en .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#note> "Détails des biens et services fournis, prêtés ou loués à la personne fichée."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/K#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#notation> "K1" .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données de location"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Huurgegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mietdaten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/K1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rental data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#note> "Angaben zu den von der registrierten Person gelieferten, geliehenen oder gemieteten Waren und Dienstleistungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#note> "Bijzonderheden betreffende de goederen en diensten die door de geregistreerde persoon worden geleverd, ontleend of gehuurd"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#note> "Details concerning the goods and services supplied, borrowed or rented by the registered person."@en .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#note> "Détails des biens et services fournis, prêtés ou loués par la personne fichée"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/K#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#notation> "K2" .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Angebotene Waren und Dienstleistungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données de mise en location"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Offered goods and services"@en .
+<http://vocab.belgif.be/auth/gdpr-category/K2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verhuurgegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/L1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#notation> "L" .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques du logement"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Haus Funktionen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "House features"@en .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Woningkenmerken"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/L#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#note> "Adres waar de woning zich bevindt: aard van de woning, eigendom of gehuurd, duur van het verblijf op dit adres, huur, lasten, classificatie van de woning, bijzonderheden betreffende de valorisatie, namen van de personen die in het bezit zijn van sleutels."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#note> "Adresse du logement type de logement, bien propre ou loué, durée de séjour à cette adresse, loyer, charges, classification de l’habitation, détails de valorisation, noms des détenteurs des clés."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#note> "Information about the home of a person: address where the house is located, nature of the house, property or rented, length of stay at this address, rent, charges, classification of the house, details concerning the valorisation and names of the holders of keys."@en .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#note> "Informationen über das Haus einer Person: Adresse, wo sich das Haus befindet, Art des Hauses, Eigentum oder gemietet, Aufenthaltsdauer unter dieser Adresse, Miete, Gebühren, Klassifizierung des Hauses, Angaben zur Verwertung und Namen der Inhaber von Schlüsseln."@de .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/L#id> .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#notation> "L1" .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Address of the accommodation"@en .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adresse der Unterkunft"@de .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques du logement"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/L1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Woningkenmerken"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/M1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/M2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/M3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/M4#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/M5#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#notation> "M" .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data concerning ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Daten bezüglich ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données concernant ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens betreffende…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#note> "Dossier médical, rapport médical, diagnostic, traitement, résultat d’analyse, handicap ou infirmité, régime   autres exigences de santé particulières concernant la gestion d'un voyage ou d'un logement."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#note> "Krankenakte, medizinischer Bericht, Diagnoseinformationen, Behandlung, Analyseergebnis, Behinderung oder Einschränkung, Diät und andere spezielle Gesundheitsanforderungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#note> "Medical record, medical report, diagnosis information, treatment, analysis result, disability or limitation, diet and other special health requirements."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#note> "Medisch dossier, medisch verslag, diagnose-informatie, behandeling, analyseresultaat, Handicap of gebrek, dieet  andere bijzondere vereisten in verband met de gezondheid bij de behandeling van een reis of een woning."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#notation> "M1" .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données concernant la santé physique"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens betreffende de lichamelijke gezondheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physical health"@en .
+<http://vocab.belgif.be/auth/gdpr-category/M1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Physische Gesundheit"@de .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#note> "dossier médical, rapport médical, diagnostic, traitements, résultats d’analyse."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#note> "Krankenakte, ärztlicher Befund, Diagnoseinformationen, Behandlungen und Analyseergebnisse."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#note> "medical record, medical report, diagnosis information, treatments and analysis results."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#note> "medisch dossier, medisch verslag, diagnose-informatie, behandelingen, analyseresultaten."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#notation> "M2" .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données concernant la santé mentale"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens betreffende de psychische gezondheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mental health"@en .
+<http://vocab.belgif.be/auth/gdpr-category/M2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Psychische Gesundheit"@de .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#note> "Risicosituaties en risicogedragingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#note> "Risikosituationen und Risikoverhalten."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#note> "Risk situations and risk behaviors."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#note> "Situations et comportements à risques."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#notation> "M3" .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données concernant des situations et comportements à risques."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens betreffende risicosituaties en risicogedragingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risikosituationen und Risikoverhalten."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risk situations and risk behaviors."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#note> "Données génétiques dans le cadre d’un dépistage, d’un examen d’hérédité, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#note> "Genetic data in the context of population screening, genetic research, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#note> "Genetische Daten im Kontext von Populations-Screening, Genforschung, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#note> "Genetische gegevens in het kader van bevolkingsonderzoek, erfelijkheidsonderzoek, ..."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#notation> "M4" .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données génétiques dans le cadre d’un dépistage, d’un examen d’hérédité, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genetic data in the context of population screening, genetic research, ..."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genetische Daten im Kontext von Populations-Screening, Genforschung, ..."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Genetische gegevens in het kader van bevolkingsonderzoek, erfelijkheidsonderzoek, ..."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#note> "Data related to the resources and procedures used for the medical and paramedical patients approach."@en .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#note> "Daten in Bezug auf die Ressourcen und Verfahren, die für den medizinischen und paramedizinischen Patientenansatz verwendet werden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#note> "données relatives aux ressources et procédures utilisées pour la prise en charge médicale et paramédicale des patients."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#note> "Gegevens met betrekking tot de gebruikte middelen en procedures voor de medische en paramedische patiëntenaanpak."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/M#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#notation> "M5" .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data relating to care"@en .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Daten zur Pflege"@de .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données relatives à la remédiation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/M5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens met betrekking tot de remediëring"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/N1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/N2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/N3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/N4#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/N5#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#notation> "N" .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Études et formation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opleiding en vorming"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Training and education"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Training und Ausbildung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#note> "historique des écoles, établissements, universités fréquentées, nature des cours suivis, diplômes visés, résultats d’examens, autres diplômes obtenus, appréciations de progression académique."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#note> "Overview of the academic career of a person: overview of the schools, institutions, universities, nature of the courses followed, intended diplomas, exam results, other diplomas obtained and an assessment of academic progress."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#note> "overzicht van de bezochte scholen, instellingen, universiteiten, aard van de gevolgde cursussen, beoogde diploma’s, examenresultaten, overige behaalde diploma’s, beoordeling van de vooruitgang die in de studies worden gemaakt."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#note> "Überblick über die akademische Laufbahn einer Person: Überblick über die Schulen, Institutionen, Universitäten, Art der absolvierten Kurse, beabsichtigte Diplome, Prüfungsergebnisse, andere erworbene Diplome und eine Bewertung des akademischen Fortschritts."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#notation> "N1" .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Academic curriculum"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Academische curriculum"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Akademischer Lehrplan"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Curriculum académique"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#note> "enrollment fees and costs paid, sources of funding, methods of payment and overview of payments."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#note> "Gebühren für Einschreibungen und bezahlte Kosten, Finanzierungsquellen, Zahlungsmethoden und Zahlungsübersicht."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#note> "inschrijvingsgelden en betaalde kosten, financieringsbronnen, betalingswijzen, overzicht der betalingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#note> "minerval et frais payés, sources de financement, méthodes de paiement, historique des paiements."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#notation> "N2" .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financieel overzicht van de studies"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Historique financier des études"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Studiengebühren"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tuition fees"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#note> "brevets et formations professionnelles, licences spéciales, (pilotage, ...)."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#note> "certificates, vocational training and special licenses (driver, ...)."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#note> "getuigschriften en beroepsopleidingen, speciale licenties (bestuurder, ...)."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#note> "Zertifikate, Berufsausbildung und spezielle Lizenzen (Fahrer, ...)."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#notation> "N3" .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beroepsbekwaamheid"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fachkompetenz"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional competence"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualifications professionnelles"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#note> "beroepsinteresses, onderzoeksinteresses, academische interesses, specialisatieonderwerpen, onderwijservaring, raadplegingen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#note> "berufliche Interessen, Forschungsinteressen, akademische Interessen, Spezialisierungsthemen, Bildungserfahrung, Konsultationen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#note> "intérêts professionnels, intérêts de recherche, intérêts académiques, sujets de spécialisation, expérience dans l’enseignement, consultations."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#note> "professional interests, research interests, academic interests, specialization topics, educational experience, consultations."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#notation> "N4" .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Berufliche Interessen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Expérience professionnelle"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professional interests"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N4#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professionele ervaring"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#note> "Angaben zu den betroffenen Gruppen, Ausschüssen oder Ausschüssen, ausgeübte Funktionen, besondere Interessen und Teilnahmeübersicht."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende de betrokken groeperingen, comités of commissies, uitgeoefende functies, bijzondere interesses en deelnameoverzicht."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#note> "details of the groups, committees or committees concerned, functions performed, special interests and participation overview."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#note> "détails relatifs aux groupements, comités ou commissions concernés, fonctions exercées, intérêts particuliers et historique de la participation."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/N#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#notation> "N5" .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliation / participation à des organisations professionnelles"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschap van/deelname in beroepsorganisaties"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Membership of / participation in professional organizations"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N5#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliedschaft / Teilnahme an Berufsorganisationen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#note> "boeken, artikels, verslagen, gepubliceerd audiovisueel materiaal."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#note> "books, articles, reports, published audiovisual material."@en .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#note> "Bücher, Artikel, Berichte, veröffentlichtes audiovisuelles Material."@de .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#note> "livres, articles, rapports, matériel audiovisuel publié."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#notation> "N6" .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Publicaties"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Publications"@en .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Publications"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/N6#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Publikationen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O01#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O02#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O03#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O04#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O05#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O06#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O07#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O08#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O09#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O10#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O11#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O12#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/O13#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#notation> "O" .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beroep en betrekking"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beruf und Beschäftigung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profession and employment"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profession et emploi"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#note> "Arbeitgeber, Titel und Beschreibung der Position, Besoldungsgruppe, Datum der Einstellung, Arbeitsplatz, Spezialisierung oder Unternehmen, Arbeitsbedingungen und Arbeitsbedingungen, frühere Positionen und frühere Erfahrungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#note> "employer, title and description of the position, grade, date of recruitment, workplace, specialization or company, working conditions and conditions, previous positions and previous experience."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#note> "employeur, titre et description de la fonction, grade, date de recrutement, lieu de travail, spécialisation ou type d’entreprise, modalités et conditions de travail, fonctions antérieures et expérience précédente auprès de l’employeur actuel."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#note> "werkgever, titel en beschrijving van de functie, graad, datum van aanwerving, werkplaats, specialisatie of type onderneming, arbeidsmodaliteiten en –voorwaarden, vroegere functies en voorafgaande ervaring bij de huidige werkgever."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#notation> "O01" .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aktueller Job"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Current job"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Emploi actuel"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O01#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Huidige betrekking"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#note> "date de recrutement, méthode de recrutement, source du recrutement, références, détails concernant la période d’essai."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#note> "date of recruitment, recruitment method, recruitment source, references and details concerning the trial period."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#note> "datum van aanwerving, methode van aanwerving, bron van de aanwerving, referenties, bijzonderheden betreffende de proefperiode."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#note> "Einstellungsdatum, Rekrutierungsmethode, Bezugsquelle, Referenzen und Details zur Probezeit."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#notation> "O02" .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanwerving"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recruitment"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recrutement"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O02#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rekrutierung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#note> "Abgangsdatum, Abgangsgrund, Kündigungsfrist und Kündigungsbedingungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#note> "date du départ, raison du départ, préavis donné, conditions de fin de l’emploi."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#note> "date of departure, reason for departure, given notice period and termination conditions."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#note> "datum van vertrek, reden van het vertrek, gegeven opzegtermijn, beëindigingsvoorwaarden."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#notation> "O03" .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beëindiging van de betrekking"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "End of employment"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ende der Beschäftigung"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O03#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fin de l’emploi"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#note> "emplois et employeurs précédents, périodes sans emploi, service militaire."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#note> "frühere Beziehungen und Arbeitgeber, Zeiten ohne Beschäftigung, Wehrpflicht."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#note> "previous relations and employers, periods without employment, conscription."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#note> "vorige betrekkingen en werkgevers, periodes zonder betrekking, dienstplicht."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#notation> "O04" .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Career"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Carrière"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Karriere"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O04#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Loopbaan"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#note> "aperçu des présences, motifs des absences, mesures disciplinaires."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#note> "Overview of the presence, reasons of the absences, disciplinary measures on the job."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#note> "overzicht van de aanwezigheid, redenen van de afwezigheden, disciplinaire maatregelen."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#note> "Überblick über die Anwesenheit, Gründe für die Abwesenheit, Disziplinarmaßnahmen am Arbeitsplatz."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#notation> "O05" .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aanwezigheid en discipline"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Präsenz und Disziplin"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Presence and discipline"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O05#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Présence et discipline"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#note> "% Behinderung infolge eines Arbeitsunfalls."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#note> "% d’invalidité suite à un accident de travail, certificat permettant d’administrer les premiers soins."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#note> "% disability as a result of an accident at work."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#note> "% invaliditeit ten gevolge van een arbeidsongeval, getuigschrift voor het toedienen van eerste hulp."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#notation> "O06" .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arbeitsmedizin"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bedrijfsgeneeskunde"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Médecine du travail"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O06#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Occupational medicine"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#note> "betalingen en afhoudingen, salaris, commissielonen, boni, uitgaven, toelagen, voordelen, leningen, ingehouden belastingen, pensioenafhoudingen, vakbondsbijdrage, betaalwijzen, datum van de laatste salarisverhoging."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#note> "paiements et retenues, salaire, commissions, bonus, dépenses, gratifications, avantages, prêts, taxes retenues, prélèvements pour la pension, cotisation syndicale, méthodes de paiement, date de la dernière augmentation salariale."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#note> "payments and deductions, salary, commissions, bonuses, expenses, allowances, benefits, loans, withheld taxes, pension deductions, trade union contribution, payment methods and date of the last salary increase."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#note> "Zahlungen und Abzüge, Gehalt, Provisionen, Boni, Aufwendungen, Zulagen, Leistungen, Darlehen, einbehaltene Steuern, Rentenabzüge, Gewerkschaftsbeiträge, Zahlungsmethoden und Datum der letzten Gehaltserhöhung."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#notation> "O07" .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Loon"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Prämienpaket"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reward package"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O07#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Salaire"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#note> "Auto, Werkzeuge, Ersatzteile, Nachschlagewerke, andere Gegenstände, die der Mitarbeiter besitzt."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#note> "car, tools, spare parts, reference books, other objects that the employee owns."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#note> "voiture, outils, pièces de rechange, ouvrages de référence, autres objets détenus par l’employé."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#note> "wagen, werktuigen, wisselstukken, naslagwerken, andere voorwerpen die de bediende in bezit heeft."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#notation> "O08" .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Actifs détenus par le membre du personnel"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Activa die het personeelslid bezit"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personalressourcen vergeben"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O08#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Staff resources awarded"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#note> "Aktuelle Aufgaben, Projekte, Stundensatz, Stundenplan, geleistete Stunden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#note> "Current responsibilities, projects, invoiced hourly rate, timetable, hours worked."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#note> "huidige verantwoordelijkheden, projecten, gefactureerd uurpercentage, uurregeling, gepresteerde uren."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#note> "responsabilités actuelles, projets, taux horaire de facturation, horaire, heures prestées."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#notation> "O09" .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisatie van het werk"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation der Arbeit"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisation du travail"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O09#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization of the work"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#note> "Bewertung der Leistung und Möglichkeiten bei der Arbeit."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#note> "evaluatie van de prestaties, mogelijkheden."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#note> "évaluation des prestations, du potentiel."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#note> "Evaluation of the performance and possibilities on the job."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#notation> "O10" .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evaluatie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Évaluation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal evaluations"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O10#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Persönliche Bewertungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#note> "bijzonderheden betreffende de vorming die de functie vereist en de gekregen vorming, en de bekomen kwalificaties en bevoegdheden."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#note> "Details concerning the training that the job requires, the training received, the obtained qualifications and powers."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#note> "détails des besoins de formation propres à la fonction et de la formation reçue, qualifications obtenues et compétences acquises."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#note> "Details über die Ausbildung, die der Job erfordert, das erhaltene Training, die erhaltenen Qualifikationen und Befugnisse."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#notation> "O11" .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bildung zur Funktion"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Formation à la fonction"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Formation to the function"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O11#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vorming tot de functie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#note> "mots de passe, codes de sécurité et niveaux d’autorisation."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#note> "Passwords, security codes and levels on which the authorization is granted."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#note> "Passwörter, Sicherheitscodes und Ebenen, auf denen die Autorisierung erteilt wird."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#note> "paswoorden, veiligheidscodes en niveaus waarop de machtiging wordt verleend."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#notation> "O12" .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beveiliging"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sécurité"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Security"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O12#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sicherheit"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#note> "Bewertung der Nutzung von Technologie (Internet, E-Mail, ...)."@de .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#note> "Evaluatie van het gebruik van de informaticamiddelen (internet, e-mail,....)"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#note> "Évaluation de l’utilisation des moyens informatiques (internet, e-mail,....)."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#note> "Evaluation of the use of technology (internet, e-mail, ...)."@en .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/O#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#notation> "O13" .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Anwendung von Technologie"@de .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Application technology"@en .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebruik informaticamiddelen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/O13#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Utilisation de moyens informatiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#note> "National register number"@en .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#note> "Nationale Registernummer"@de .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#note> "Numéro de Registre national"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#note> "Rijksregisternummer"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#notation> "P" .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "National register number"@en .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nationale Registernummer"@de .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Numéro de Registre national"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rijksregisternummer"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/P#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#note> "Données raciales ou ethniques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#note> "Racial or ethnic data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#note> "Raciale of etnische gegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#note> "Rassische oder ethnische Daten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#notation> "Q" .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données raciales ou ethniques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Racial or ethnic data"@en .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Raciale of etnische gegevens"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Rassische oder ethnische Daten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/Q#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#note> "Data about sexual life"@en .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#note> "Daten über das Sexualleben"@de .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#note> "orientation sexuelle, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#note> "seksuele geaardheid, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#notation> "R" .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data about sexual life"@en .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Daten über das Sexualleben"@de .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Données relatives au comportement sexuel"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevens over het seksuele leven"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/R#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/S1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/S2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/S3#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#notation> "S" .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Opinions politiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Political views"@en .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politieke opvattingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politische Ansichten"@de .
+<http://vocab.belgif.be/auth/gdpr-category/S#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#note> "Convictions politiques, préférence de vote."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#note> "Data related to political beliefs and voting preference."@en .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#note> "Daten im Zusammenhang mit politischen Überzeugungen und Wahlpräferenzen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#note> "Politieke overtuigingen, stemvoorkeur."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/S#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#notation> "S1" .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Political convictions"@en .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politieke strekking"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politische Überzeugungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/S1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tendances politiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#note> "Affiliation à un parti politique, fonctions politiques occupées."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#note> "Lidmaatschap van een politieke partij, politieke functies die worden vervuld."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#note> "Membership of a political party and political functions that are fulfilled."@en .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#note> "Mitgliedschaft in einer politischen Partei und politische Funktionen, die erfüllt werden."@de .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/S#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#notation> "S2" .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Political engagement"@en .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politieke relatie"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Politisches Engagement"@de .
+<http://vocab.belgif.be/auth/gdpr-category/S2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relation politique"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#note> "Adhésion à ou soutien apporté à des groupes de pression ou à des organisations militantes."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#note> "Lidmaatschap van of steun aan belangengroepen of militante organisaties."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#note> "Membership or support to interest groups or militant organizations."@en .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#note> "Mitgliedschaft oder Unterstützung von Interessengruppen oder militanten Organisationen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/S#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#notation> "S3" .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adhésion à des groupes de pression / à des organisations militantes."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschap belangengroep/militante organisaties"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Membership interest groups"@en .
+<http://vocab.belgif.be/auth/gdpr-category/S3#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliederinteressengruppen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/T1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#notation> "T" .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliation à une association professionnelle"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliation to a professional association"@en .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschap van een vakvereniging"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zugehörigkeit zu einem Berufsverband"@de .
+<http://vocab.belgif.be/auth/gdpr-category/T#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#note> "Affiliation à un syndicat ou à un groupement assimilé, fonctions occupées."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#note> "Lidmaatschap van een vakbond of een gelijkaardige groepering vervulde functies."@nl .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#note> "Membership of a trade union or similar grouping."@en .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#note> "Mitgliedschaft in einer Gewerkschaft oder ähnlichen Gruppierung."@de .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/T#id> .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#notation> "T1" .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Affiliation à un syndicat"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lidmaatschap van een vakbond"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Membership union"@en .
+<http://vocab.belgif.be/auth/gdpr-category/T1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mitgliedschaft Union"@de .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/U1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#notation> "U" .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Convictions philosophiques ou religieuses"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Filosofische of religieuze overtuigingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Philosophical or religious beliefs"@en .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Philosophische oder religiöse Überzeugungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/U#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#note> "Convictions philosophiques ou religieuses"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#note> "Filosofische of religieuze overtuigingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#note> "Philosophical or religious beliefs"@en .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#note> "Philosophische oder religiöse Überzeugungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/U#id> .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#notation> "U" .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Convictions philosophiques"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Levensbeschouwelijke overtuigingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Philosophical or religious beliefs"@en .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Philosophische oder religiöse Überzeugungen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/U1#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/V1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/V2#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#notation> "V" .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Beeldopnamen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bildaufnahmen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrements d’images"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Image recordings"@en .
+<http://vocab.belgif.be/auth/gdpr-category/V#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#note> "Cameraopname, fotografische opname, video-opname, digitale foto’s, …"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#note> "Films, photographies, enregistrements vidéo, photos numériques, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#note> "Visual images such as video recordings and photographic recordings."@en .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#note> "Visuelle Bilder wie Videoaufnahmen und Fotoaufnahmen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/V#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#notation> "V1" .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Afbeeldingen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Images"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Visual images"@en .
+<http://vocab.belgif.be/auth/gdpr-category/V1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Visuelle Bilder"@de .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#note> "Beelden van bewakingscamera's"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#note> "Bilder von Überwachungskameras."@de .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#note> "Images de caméras de surveillance"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#note> "Images from surveillance cameras."@en .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/V#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#notation> "V2" .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bewakingsbeelden"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Images de surveillance"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surveillance images"@en .
+<http://vocab.belgif.be/auth/gdpr-category/V2#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Überwachungsbilder"@de .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/W1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#notation> "W" .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrements de sons"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geluidsopnamen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sound recordings"@en .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tonaufnahmen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/W#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#note> "Audio files such as tape recordings and telephone recordings."@en .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#note> "Audiodateien wie Bandaufzeichnungen und Telefonaufzeichnungen."@de .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#note> "Bandopname, telefoonopname…"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#note> "Enregistrement sur bande sonore, enregistrement téléphonique, ..."@fr .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/W#id> .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#notation> "W1" .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Audio files"@en .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Audiodateien"@de .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrements de sons"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/W1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geluidsopnamen"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/gdpr-category/X1#id> .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#notation> "X" .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kennzeichen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "License plate"@en .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nummerplaat"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plaque d'immatriculation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/X#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/gdpr-category/X#id> .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#notation> "X1" .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kennzeichen"@de .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "License plate"@en .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nummerplaat"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/X1#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plaque d'immatriculation"@fr .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/gdpr-category#id> .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere Kategorie"@de .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other category"@en .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere category"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre catégorie"@fr.
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .

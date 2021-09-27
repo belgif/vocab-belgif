@@ -1,0 +1,97 @@
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/title> "BeST Geometry Spec"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/title> "BeST Geometry Spec"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/title> "BeST Geometry Spec"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/title> "BeST Geometry Spec"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/description> "INSPIRE/BeST Geometry Specification Type"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/description> "INSPIRE/BeST Geometry Specification Type"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/description> "INSPIRE/BeST Geometry Specification Type"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/description> "INSPIRE/BeST Geometry Specification Type"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2002/07/owl#versionInfo> "Draft 2019-02-01" .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/modified> "2019-01-31T15:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#notation> "BUILDING" .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#prefLabel> "gebouw"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#prefLabel> "building"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#prefLabel> "building"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue/building> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#notation> "BUILDING_UNIT" .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#prefLabel> "building unit"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#prefLabel> "building unit"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#prefLabel> "building unit"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#prefLabel> "building unit"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/BUILDING_UNIT> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue/building> .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#notation> "ENTRANCE" .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#prefLabel> "ingang"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#prefLabel> "entrance"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#prefLabel> "entrance"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#prefLabel> "entrance"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/ENTRANCE> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue/entrance> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#notation> "MOORING_PLACE" .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#prefLabel> "aanlegsteiger"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#prefLabel> "mooring place"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#prefLabel> "mooring place"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/MOORING_PLACE> <http://www.w3.org/2004/02/skos/core#prefLabel> "mooring place"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#notation> "MUNICIPALITY" .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#prefLabel> "gemeente"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#prefLabel> "municipality"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#prefLabel> "municipality"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/MUNICIPALITY> <http://www.w3.org/2004/02/skos/core#prefLabel> "municipality"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#notation> "PARCEL" .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "perceel"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "parcel"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "parcel"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "parcel"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/PARCEL> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://inspire.ec.europa.eu/codelist/GeometrySpecificationValue/parcel> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/PLOT> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#notation> "PLOT" .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#prefLabel> "plot"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#prefLabel> "plot"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#prefLabel> "plot"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/PLOT> <http://www.w3.org/2004/02/skos/core#prefLabel> "plot"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/STAND> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#notation> "STAND" .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#prefLabel> "stand"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#prefLabel> "stand"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#prefLabel> "stand"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/STAND> <http://www.w3.org/2004/02/skos/core#prefLabel> "stand"@de .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/inspire-geomspec/STREET> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/inspire-geomspec> .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#notation> "STREET" .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "straat"@nl .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "rue"@fr .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "street"@en .
+<http://vocab.belgif.be/auth/inspire-geomspec/STREET> <http://www.w3.org/2004/02/skos/core#prefLabel> "strasse"@de .

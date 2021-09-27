@@ -1,0 +1,151 @@
+<http://vocab.belgif.be/auth/authsrc-proc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/title> "AS procedures"@en .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/title> "AS procedures"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/title> "AS procédures"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/title> "AS Prozeduren"@de .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/description> "Authentic Sources procedures"@en .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/description> "Authentieke Bronnen procedures"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/description> "Sources Authentiques procédures"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/description> "Authentischen Quellen Prozeduren"@de .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://purl.org/dc/terms/modified> "2020-01-17T10:30"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-proc> . 
+<http://vocab.belgif.be/auth/authsrc-proc> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#notation> "Agreement" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accord"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agreement"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Overeenkomst"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vereinbarung"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#note> "einschließlich der Evolution"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#note> "including evolution"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#note> "inclusief evolutie"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#note> "y compris l'évolution"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-01" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Modalités techniques et opérationnelles"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technical and operational modalities"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technische en operationele modaliteiten"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Technische und betriebliche Modalitäten"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#note> "einschließlich Messung und Berichterstattung"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#note> "including measurement and reporting"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#note> "inclusief meten en rapporteren"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#note> "y compris la mesure et les rapports"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-02" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Level Agreement (SLA)"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Level Agreement (SLA)"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Level Agreement (SLA)"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Service Level Agreement (SLA)"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#note> "en cas d'indisponibilité, d'incidents ou de non-respect des SLA"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#note> "im Falle von Nichtverfügbarkeit, Vorfällen oder Respektlosigkeit gegenüber SLAs"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#note> "in case of unavailability, incidents or disrespect of SLA's"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#note> "in geval van onbeschikbaarheid, incidenten of gebrek aan respect voor SLA's"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-03" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Benachrichtigungsmaßnahmen"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Meldingsmaatregelen"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mesures de notification"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notification measures"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-04" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aantoonbaarheid van de raadplegingen en aanpassingen van gegevens"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Démonstrabilité des consultations et ajustements des données"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Demonstrability of the consultations and adjustments of data"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nachweisbarkeit der Konsultationen und Datenanpassungen"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-05" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#prefLabel> "Benachrichtigung beim Versuch eines nicht autorisierten Zugriffs"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#prefLabel> "Melding bij pogingen tot ongeoorloofde toegang"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notification lors d'une tentative d'accès non autorisé"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-05> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notification when attempting unauthorized access"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-06" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conditions financières liées à l'utilisation"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial conditions attached to the use"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financiële voorwaarden verbonden aan het gebruik"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-06> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finanzielle Bedingungen an die Verwendung gebunden"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/AGREE> .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#notation> "Agreement-99" .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/AGREE-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#notation> "DataSource" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Data source"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Datenquelle"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gegevensbron"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Source de données"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#notation> "DataSource-01" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Enregistrement et gestion"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registratie en beheer"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registration and management"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registrierung und Verwaltung"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#notation> "DataSource-02" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accessibilité"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Accessibility"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Toegankelijkheid"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zugänglichkeit"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#notation> "DataSource-03" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assurance de l'exactitude, de l'exhaustivité, de la sécurité, de la disponibilité"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assurance of correctness, completeness, security, availability"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gewährleistung der Richtigkeit, Vollständigkeit, Sicherheit, Verfügbarkeit"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-03> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verzekering van juistheid, volledigheid, veiligheid, beschikbaarheid"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#notation> "DataSource-04" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedback d'erreurs et correction"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedback errors and correction"@en .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedback Fehler und Korrektur"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-04> <http://www.w3.org/2004/02/skos/core#prefLabel> "Feedback fouten en correctie"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/authsrc-proc> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/authsrc-proc/DATASRC> .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#notation> "DataSource-99" .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ander"@nl .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere"@de .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre"@fr .
+<http://vocab.belgif.be/auth/authsrc-proc/DATASRC-99> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other"@en .

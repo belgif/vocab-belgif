@@ -1,0 +1,29 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dataentry: <http://vocab.belgif.be/ns/dataentry#> .
+
+<http://vocab.belgif.be/ns/dataentry#> a owl:Ontology ;
+    owl:versionInfo "Draft 2018-03-23" ;
+	rdfs:label "Data entry"@nl, "Data entry"@fr, "Data entry"@de, "Data entry"@en ;
+	rdfs:comment "Data entry ontology"@en, "Data entry ontology"@fr, "Data entry ontology"@nl,"Data entry ontology"@de .
+	
+dataentry:DataStatus a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy dataentry: ;
+	rdfs:label "Data status"@en, "Data status"@nl,"Data status"@de, "Data status"@fr .
+
+dataentry:hasDataStatus a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy dataentry: ;
+	rdfs:label "Data status"@en, "Data status"@nl,"Data status"@de, "Data status"@fr ;
+	rdfs:range dataentry:DataStatus .
+	
+dataentry:exportStatus a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy dataentry: ;
+	rdfs:label "Export status"@en, "Export status"@nl, "Export status"@de, "Export status"@fr; 
+	rdfs:domain dataentry:DataStatus ;
+	rdfs:range skos:Concept .
+
+dataentry:importStatus a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy dataentry: ;
+	rdfs:label "Import status"@en, "Import status"@nl, "Import status"@de, "Import status"@fr; 
+	rdfs:domain dataentry:DataStatus ;
+    rdfs:range skos:Concept .

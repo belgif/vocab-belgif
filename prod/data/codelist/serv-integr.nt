@@ -1,0 +1,107 @@
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Belgian Service Integrators"@en .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Belgische dienstenintegratoren"@nl .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Int\u00E9grateurs des services belges"@fr .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Service-Integratoren"@de .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/modified> "2019-10-14T12:57:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Dienstenintegratoren"@nl .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Int\u00E9grateurs des services"@fr .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Service integrators"@en .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Service-Integratoren"@de .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version" .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/BCED> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/BOSADT> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/CBSS> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/EHEALTH> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/FIDUS> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/VDI> .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#altLabel> "BCED"@de .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#altLabel> "BCED"@en .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#altLabel> "BCED"@fr .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#altLabel> "BCED"@nl .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#notation> "BCED" .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque Carrefour d'Echange de Donn\u00E9es"@de .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque Carrefour d'Echange de Donn\u00E9es"@en .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque Carrefour d'Echange de Donn\u00E9es"@fr .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque Carrefour d'Echange de Donn\u00E9es"@nl .
+<http://vocab.belgif.be/auth/serv-integr/BCED> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#altLabel> "FOD BOSA DG DT"@nl .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#altLabel> "FPS BOSA DG DT"@en .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#altLabel> "F\u00D6D BOSA GD DT"@de .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#altLabel> "SPF BOSA DG TD"@fr .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#notation> "BOSA DG DT" .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#prefLabel> "FOD BOSA DG Digitale Transformatie"@nl .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#prefLabel> "FPS BOSA DG Digital Transformation"@en .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#prefLabel> "F\u00D6D BOSA GD Digitale Transformation"@de .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#prefLabel> "SPF BOSA DG Transformation digitale"@fr .
+<http://vocab.belgif.be/auth/serv-integr/BOSADT> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#altLabel> "BCSS"@fr .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#altLabel> "CBSS"@en .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#altLabel> "KSS"@de .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#altLabel> "KSZ"@nl .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#notation> "CBSS" .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kruispuntbank van de Sociale Zekerheid"@nl .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Banque Carrefour de la S\u00E9curit\u00E9 Sociale"@fr .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Crossroads Bank for Social Security"@en .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kreuzungsbank f\u00FCr soziale Sicherheit"@de .
+<http://vocab.belgif.be/auth/serv-integr/CBSS> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#altLabel> "eHealth"@de .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#altLabel> "eHealth"@en .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#altLabel> "eHealth"@fr .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#altLabel> "eHealth"@nl .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#notation> "eHealth" .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plate-forme eHealth"@fr .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#prefLabel> "eHealth Platform"@en .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#prefLabel> "eHealth Plattform"@de .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#prefLabel> "eHealth Plattform"@nl .
+<http://vocab.belgif.be/auth/serv-integr/EHEALTH> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#altLabel> "FIDUS"@de .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#altLabel> "FIDUS"@en .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#altLabel> "FIDUS"@fr .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#altLabel> "FIDUS"@nl .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#notation> "FIDUS" .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#prefLabel> "FIDUS"@de .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#prefLabel> "FIDUS"@en .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#prefLabel> "FIDUS"@fr .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#prefLabel> "FIDUS"@nl .
+<http://vocab.belgif.be/auth/serv-integr/FIDUS> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#altLabel> "VDI"@de .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#altLabel> "VDI"@en .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#altLabel> "VDI"@fr .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#altLabel> "VDI"@nl .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#notation> "VDI" .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vlaamse Dienstenintegrator"@de .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vlaamse Dienstenintegrator"@en .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vlaamse Dienstenintegrator"@fr .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vlaamse Dienstenintegrator"@nl .
+<http://vocab.belgif.be/auth/serv-integr/VDI> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/serv-integr/OTHER> .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/serv-integr> .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#notation> "OTHER" .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere"@nl .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre"@fr .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Anderes"@de .
+<http://vocab.belgif.be/auth/serv-integr/OTHER> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other"@en .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Belgian Service Integrators"@en .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Belgische dienstenintegratoren"@nl .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Int\u00E9grateurs des services belges"@fr .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/description> "Service-Integratoren"@de .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/modified> "2019-10-16T12:40:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Dienstenintegratoren"@nl .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Int\u00E9grateurs des services"@fr .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Service integrators"@en .
+<http://vocab.belgif.be/auth/serv-integr> <http://purl.org/dc/terms/title> "Service-Integratoren"@de .

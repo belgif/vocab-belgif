@@ -1,0 +1,329 @@
+@prefix cv: <http://data.europa.eu/m8g/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.belgif.be/shacl/authsrc#> a owl:Ontology;
+  rdfs:comment "Authentischen Quellen SHACL rules"@de, "Authentic Sources SHACL rules"@en, 
+        "Sources Authentiques SHACL rules"@fr, "Authentieke bronnen SHACL rules"@nl;
+  rdfs:label "AS model"@de, "AS model"@en, "AS model"@fr, "AS model"@nl;
+  owl:versionInfo "Draft 2020-01-24".
+
+
+<http://vocab.belgif.be/shacl/authsrc#AgreementShape> a sh:NodeShape;
+    sh:property [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:minCount 1;
+      sh:uniqueLang true;
+      sh:path dcterms:title
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path dcterms:description
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Procedure> ;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasProcedure> 
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Consumer>;
+      sh:nodeKind sh:IRI;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasConsumer>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Provider>;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasProvider>
+    ], [
+      sh:class schema:ContactPoint;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#Agreement> .
+  
+<http://vocab.belgif.be/shacl/authsrc#ContactPointShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype xsd:string;
+      sh:minCount 0;
+      sh:path schema:name
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path schema:email
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:path schema:telephone
+    ], [
+      sh:class org:Organization;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:path org:memberOf
+    ];
+  sh:targetClass schema:ContactPoint.
+
+<http://vocab.belgif.be/shacl/authsrc#ConsumerShape> a sh:NodeShape;
+  sh:property [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:IRI;
+      sh:path org:memberOf
+    ],  [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#Consumer> .
+
+<http://vocab.belgif.be/shacl/authsrc#DataElementShape> a sh:NodeShape;
+    sh:property [
+      sh:datatype rdfs:Literal;
+	  sh:minCount 1;
+      sh:maxCount 1;
+      sh:path dcterms:identifier
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:minCount 1;
+      sh:path dcterms:title
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path dcterms:description
+    ], [
+      sh:datatype xsd:date;
+      sh:lessThanOrEquals schema:endDate;
+      sh:maxCount 1;
+      sh:path schema:startDate
+    ], [
+      sh:datatype xsd:date;
+      sh:maxCount 1;
+      sh:path schema:endDate
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:type;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/authsrc-element>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/authsrc#isAuthoritative>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#DataElement> .
+    
+<http://vocab.belgif.be/shacl/authsrc#DataSourceShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdfs:Literal;
+	  sh:minCount 1;
+      sh:maxCount 1;
+      sh:path dcterms:identifier
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:minCount 1;
+      sh:path dcterms:title
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path dcterms:description
+    ], [
+      sh:datatype xsd:date;
+      sh:lessThanOrEquals schema:endDate;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path schema:startDate
+    ], [
+      sh:datatype xsd:date;
+      sh:maxCount 1;
+      sh:path schema:endDate
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:accrualPeriodicity;
+      sh:minCount 1;
+      sh:maxCount 1;
+      sh:property [
+          sh:hasValue <http://publications.europa.eu/resource/authority/frequency>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:path dcat:theme;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/be-theme#id>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasIntegrator>;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/serv-integr>;
+          sh:path skos:inScheme
+        ]
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#DataElement>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path dcterms:hasPart
+    ], [
+      sh:class skos:Concept;
+      sh:nodeKind sh:IRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path dcterms:accessRights;
+      sh:property [
+          sh:hasValue <http://publications.europa.eu/resource/authority/access-right>;
+          sh:path skos:inScheme
+        ]    
+    ], [
+      sh:nodeKind sh:IRI;
+      sh:path foaf:page
+    ], [
+      sh:class eli:LegalResource;
+      sh:nodeKind sh:IRI;
+      sh:path cv:hasLegalResource
+    ], [
+      sh:datatype xsd:boolean;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/authsrc#isAuthoritative>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Agreement>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasAgreement>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Initiator>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasInitiator>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#Procedure>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasProcedure>
+    ], [
+      sh:class <http://vocab.belgif.be/ns/authsrc#SourceResponsible>;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:path <http://vocab.belgif.be/ns/authsrc#hasResponsible>
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#DataSource> .
+
+<http://vocab.belgif.be/shacl/authsrc#InitiatorShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:minCount 1;
+      sh:path dcterms:title
+    ], [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:IRI;
+      sh:path org:memberOf
+    ],  [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#Initiator> .
+
+<http://vocab.belgif.be/shacl/authsrc#OrganizationShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype xsd:string;
+      sh:path skos:altLabel
+    ], [
+      sh:datatype xsd:string;
+      sh:maxCount 1;
+      sh:path skos:notation
+    ];
+  sh:targetClass org:Organization.
+
+<http://vocab.belgif.be/shacl/authsrc#ProcedureShape> a sh:NodeShape;
+  sh:property [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:minCount 1;
+      sh:path dcterms:title
+    ], [
+      sh:datatype rdf:langString;
+      sh:languageIn ("nl" "fr" "de" "en");
+      sh:uniqueLang true;
+      sh:path dcterms:description
+    ], [
+      sh:class skos:Concept;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path dcterms:type;
+      sh:property [
+          sh:hasValue <http://vocab.belgif.be/auth/authsrc-proc>;
+          sh:path skos:inScheme
+        ]
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#Procedure> .
+
+<http://vocab.belgif.be/shacl/authsrc#ProviderShape> a sh:NodeShape;
+  sh:property [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:IRI;
+      sh:path org:memberOf
+    ],  [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#Provider> .
+
+<http://vocab.belgif.be/shacl/authsrc#SourceResponsibleShape> a sh:NodeShape;
+  sh:property [
+      sh:class org:Organization;
+      sh:maxCount 1;
+      sh:minCount 1;
+      sh:nodeKind sh:IRI;
+      sh:path org:memberOf
+    ],  [
+      sh:class schema:ContactPoint;
+      sh:maxCount 1;
+      sh:minCount 0;
+      sh:nodeKind sh:BlankNodeOrIRI;
+      sh:path cv:hasContactPoint
+    ];
+  sh:targetClass <http://vocab.belgif.be/ns/authsrc#SourceResponsible> .

@@ -1,0 +1,37 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix infosec: <http://vocab.belgif.be/ns/infosec#> .
+
+<http://vocab.belgif.be/ns/infosec#> a owl:Ontology ;
+    owl:versionInfo "Draft 2018-03-21" ;
+	rdfs:label "InfoSec"@nl, "InfoSec"@fr, "InfoSec"@de, "InfoSec"@en ;
+	rdfs:comment "Information security ontology"@en, "Information security ontology"@fr, "Information security ontology"@nl,"Information security ontology"@de .
+	
+infosec:Rating a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "Rating"@nl, "Rating"@fr, "Rating"@de, "Rating"@en .
+
+infosec:hasRating a rdf:Property, owl:ObjectProperty ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "heeft rating"@nl, "Rating"@fr, "Rating"@de, "Rating"@en ;
+	rdfs:range infosec:Rating .
+	
+infosec:genericRating a rdf:Property, owl:DataProperty ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:range xsd:nonNegativeInteger .
+
+infosec:confidentiality rdfs:subPropertyOf infosec:genericRating ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "Confidentiality" .
+
+infosec:integrity rdfs:subPropertyOf infosec:genericRating ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "Integrity" .
+	
+infosec:availability rdfs:subPropertyOf infosec:genericRating ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "Availability" .
+	
+infosec:nonrepudiation rdfs:subPropertyOf infosec:genericRating ;
+	rdfs:isDefinedBy infosec: ;
+	rdfs:label "Non-repudiation" .
