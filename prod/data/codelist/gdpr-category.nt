@@ -1251,6 +1251,6 @@
 <http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#notation> "Z" .
 <http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere Kategorie"@de .
 <http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Other category"@en .
-<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere category"@nl .
+<http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere categorie"@nl .
 <http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#prefLabel> "Autre catégorie"@fr.
 <http://vocab.belgif.be/auth/gdpr-category/Z#id> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/gdpr-category#id> .
