@@ -1,3 +1,4 @@
+<http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/modified> "2021-09-27T11:00+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Catégorie de Données"@fr .
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/title> "GDPR datacategory"@fr .
 <http://vocab.belgif.be/auth/gdpr-category#id> <http://purl.org/dc/terms/description> "Data Categorie"@nl .
