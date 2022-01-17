@@ -1,9 +1,9 @@
 # Dropwizard  vocab.belgif.be 
-FROM adoptopenjdk/openjdk11:alpine-jre
+FROM eclipse-temurin:17-jre-alpine
 MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
-COPY lod-vocab-1.4.0.jar /usr/local/bin/vocab-belgif.jar
+COPY lod-vocab-*.jar /usr/local/bin/vocab-belgif.jar
 
 COPY cfg /home/dropwizard/ 
 
