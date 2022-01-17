@@ -34,6 +34,7 @@ import be.belgif.vocab.resources.CtxResource;
 import be.belgif.vocab.resources.DatasetResource;
 import be.belgif.vocab.resources.LdfResource;
 import be.belgif.vocab.resources.NsResource;
+import be.belgif.vocab.resources.PageResource;
 import be.belgif.vocab.resources.RootResource;
 import be.belgif.vocab.resources.SearchResource;
 import be.belgif.vocab.resources.ShaclResource;
@@ -158,6 +159,7 @@ public class App extends Application<AppConfig> {
 
 		// Resources / "web pages"
 		env.jersey().register(new RootResource(repo));
+		env.jersey().register(new PageResource());
 		env.jersey().register(new VoidResource(repo));
 		
 		env.jersey().register(new VocabResource(repo));

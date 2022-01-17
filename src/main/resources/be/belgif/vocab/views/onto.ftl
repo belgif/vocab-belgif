@@ -1,15 +1,11 @@
+<#assign l = lang>
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset='UTF-8'>
-<link rel="stylesheet" type="text/css" href="/static/style.css" />
-<#include "title.ftl">
-</head>
+<html lang="${lang}">
+<#include "head.ftl">
 <body>
 <#include "header.ftl">
-<#assign l = lang>
-<#assign langs = ['nl', 'fr', 'en', 'de', '']>
 <#assign m = messages>
+<#assign langs = ['nl', 'fr', 'en', 'de', '']>
 <#assign o = onto>
 <#assign c = o.classes>
 <#assign p = o.properties> 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,45 +25,20 @@
  */
 package be.belgif.vocab.views;
 
-import be.belgif.vocab.dao.CtxDAO;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
-
 /**
- * HTML view for JSON-LD contexts
+ * HTML view for pages
  * 
- * @author Bart Hanssens
+ * @author Bart.Hanssens
  */
-public class CtxListView extends RdfView {
-	private final List<CtxDAO> ctxs = new ArrayList<>();
-
-	/**
-	 * Get the list of contexts
-	 * 
-	 * @return list
-	 */
-	public List<CtxDAO> getContexts() {
-		return this.ctxs;
-	}
-	
+public class PageView extends RdfView {
 	/** 
 	 * Constructor
 	 * 
-	 * @param conts contexts as triples
+	 * @param page page name
 	 * @param lang language
 	 */
-	public CtxListView(Model conts, String lang) {
-		super("ctxlist.ftl", lang);
-		
-		for(Resource subj: conts.subjects()) {
-			Model m = new LinkedHashModel();
-			m.addAll(conts.filter(subj, null, null));
-			ctxs.add(new CtxDAO(m, subj));
-		}
+	public PageView(String page, String lang) {
+		super(page + "_" + lang + ".ftl", lang);
 	}
 }
+

@@ -1,1 +1,1 @@
-<title>Vocab Belgif - DEMO</title>
+<title>Vocab Belgif</title>

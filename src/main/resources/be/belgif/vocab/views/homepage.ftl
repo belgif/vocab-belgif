@@ -1,5 +1,6 @@
+<#assign l = lang>
 <!DOCTYPE html>
-<html>
+<html lang="${l}">
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/static/style.css" />
@@ -8,7 +9,6 @@
 </head>
 <body>
 <#include "header.ftl">
-<#assign l = lang>
 <#assign m = messages>
 <main>
 	<div id="container">

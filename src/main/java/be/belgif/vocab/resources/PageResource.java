@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,47 +23,31 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.views;
+package be.belgif.vocab.resources;
 
-import be.belgif.vocab.dao.CtxDAO;
+import be.belgif.vocab.views.PageView;
+import java.util.Optional;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.Resource;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 
 /**
- * HTML view for JSON-LD contexts
- * 
- * @author Bart Hanssens
+ * Abstract resource querying the RDF triple store.
+ *
+ * @author Bart.Hanssens
  */
-public class CtxListView extends RdfView {
-	private final List<CtxDAO> ctxs = new ArrayList<>();
+@Path("/page")
+public class PageResource  {
+	@GET
+	@Path("{page}")
+	@Produces(MediaType.TEXT_HTML)
+	public PageView getHTML(@PathParam("page") String page, 
+							@QueryParam("lang") Optional<String> lang) {
+		return new PageView(page, lang.orElse("en"));
 
-	/**
-	 * Get the list of contexts
-	 * 
-	 * @return list
-	 */
-	public List<CtxDAO> getContexts() {
-		return this.ctxs;
-	}
-	
-	/** 
-	 * Constructor
-	 * 
-	 * @param conts contexts as triples
-	 * @param lang language
-	 */
-	public CtxListView(Model conts, String lang) {
-		super("ctxlist.ftl", lang);
-		
-		for(Resource subj: conts.subjects()) {
-			Model m = new LinkedHashModel();
-			m.addAll(conts.filter(subj, null, null));
-			ctxs.add(new CtxDAO(m, subj));
-		}
 	}
 }
