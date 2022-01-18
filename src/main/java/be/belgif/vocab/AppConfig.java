@@ -31,21 +31,19 @@ import io.dropwizard.Configuration;
 
 import java.util.Map;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class AppConfig extends Configuration { // implements AssetsBundleConfiguration {
+public class AppConfig extends Configuration {
 	public class ImportDownloadFactory {
-		@NotEmpty
+		@NotBlank
 		private String importDir;
 
-		@NotEmpty
+		@NotBlank
 		private String downloadDir;
-
 		
 		@JsonProperty
 		public String getDownloadDir() {
@@ -70,16 +68,16 @@ public class AppConfig extends Configuration { // implements AssetsBundleConfigu
 
 	private boolean overwrite;
 	
-	@NotEmpty
+	@NotBlank
 	private String dataDir;
 	
-	@NotEmpty
+	@NotBlank
 	private String luceneDir;
 
-	@NotEmpty
+	@NotBlank
 	private String sitePrefix;
 
-	@NotEmpty
+	@NotBlank
 	private Map<String, Map<String, String>> views;
 
 	@NotNull

@@ -61,6 +61,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import java.util.Map;
+import java.util.stream.Stream;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -85,7 +86,7 @@ public class App extends Application<AppConfig> {
 	private static String PREFIX;
 	private static String PREFIX_GRAPH;
 
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
+	private final static Logger LOG = (Logger) LoggerFactory.getLogger(App.class);
 
 	/**
 	 * Configure a triple store repository
@@ -216,7 +217,7 @@ public class App extends Application<AppConfig> {
 	 * @throws IOException 
 	 */
 	private void importFiles(String dir, WebTarget target) throws IOException {
-		Path p = Paths.get(dir);
+		Path p = Paths.get("tasks/" + dir);
 		
 		File d = p.toFile();
 		if (! (d.exists() && d.isDirectory() && d.canRead())) {
@@ -224,11 +225,13 @@ public class App extends Application<AppConfig> {
 			return;
 		}
 
-		Files.list(p).forEach(f -> {
+		try(Stream<Path> files = Files.list(p)) {
+			files.forEach(f ->
 				target.queryParam("file", f.getFileName())
 					.request()
-					.post(Entity.text(""));
-		});
+					.post(Entity.text(""))
+			);
+		}
 	}
 
 	/**
@@ -243,20 +246,11 @@ public class App extends Application<AppConfig> {
 			Client cl = ClientBuilder.newClient();
 			WebTarget target = cl.target(localhost);
 
-			importFiles(config.getCtxs().getImportDir(),
-					target.path("tasks/" + CtxRegisterTask.NAME));
-
-			importFiles(config.getOntos().getImportDir(),
-					target.path("tasks/" + OntoImportTask.NAME));
-
-			importFiles(config.getShacls().getImportDir(),
-					target.path("tasks/" + ShaclImportTask.NAME));
-			
-			importFiles(config.getXsds().getImportDir(),
-					target.path("tasks/" + XmlnsRegisterTask.NAME));
-					
-			importFiles(config.getVocabs().getImportDir(),
-					target.path("tasks/" + VocabImportTask.NAME));
+			importFiles(config.getCtxs().getImportDir(), target.path(CtxRegisterTask.NAME));
+			importFiles(config.getOntos().getImportDir(), target.path(OntoImportTask.NAME));
+			importFiles(config.getShacls().getImportDir(), target.path(ShaclImportTask.NAME));
+			importFiles(config.getXsds().getImportDir(), target.path(XmlnsRegisterTask.NAME));
+			importFiles(config.getVocabs().getImportDir(), target.path(VocabImportTask.NAME));
 			
 			cl.target(localhost).path("tasks/" + LuceneReindexTask.NAME)
 				.request().post(Entity.text(""));
@@ -264,8 +258,7 @@ public class App extends Application<AppConfig> {
 			LOG.error("Could not import on startup", ioe);
 		}
 	}
-	
-	
+
 	/**
 	 * Main
 	 *

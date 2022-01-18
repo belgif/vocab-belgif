@@ -60,7 +60,7 @@ public abstract class AbstractImportTask extends Task {
 	private final Repository repo;
 	private final String type;
 	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportTask.class);
+	private final static Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportTask.class);
 
 	/**
 	 * Additional processing
@@ -143,7 +143,7 @@ public abstract class AbstractImportTask extends Task {
 	 * @param inDir import directory
 	 * @param type type of file to import
 	 */
-	public AbstractImportTask(String task, Repository repo, String inDir, String type) {
+	protected AbstractImportTask(String task, Repository repo, String inDir, String type) {
 		super(task);
 		this.repo = repo;
 		this.importDir = inDir;

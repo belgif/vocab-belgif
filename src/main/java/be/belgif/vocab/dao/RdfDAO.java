@@ -41,8 +41,6 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * DAO helper class for RDF triples
@@ -51,8 +49,6 @@ import org.slf4j.LoggerFactory;
  * @author Bart Hanssens
  */
 public class RdfDAO {
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(RdfDAO.class);
-
 	private final Model m;
 	private final Resource id;
 
@@ -81,8 +77,8 @@ public class RdfDAO {
 	 * @return set of values or empty set
 	 */
 	public Set<Value> objs(IRI prop) {
-		Set objs = m.filter(id, prop, null).objects();
-		return (objs == null ? Collections.EMPTY_SET : objs);
+		Set<Value> objs = m.filter(id, prop, null).objects();
+		return (objs == null ? Collections.emptySet() : objs);
 	}
 	
 	/**
@@ -140,14 +136,14 @@ public class RdfDAO {
 	public Set<Value> collection(IRI prop, Model fullm) {
 		Value head = obj(prop);
 		if (head == null || !(head instanceof Resource)) {
-			return Collections.EMPTY_SET;
+			return Collections.emptySet();
 		}
 
 		try {
 			Set<Value> vals = new HashSet<>();
 			return RDFCollections.asValues(fullm, (Resource) head, vals);
 		} catch(ModelException me) {
-			return Collections.EMPTY_SET;
+			return Collections.emptySet();
 		}
 	}
 	/**
@@ -218,6 +214,5 @@ public class RdfDAO {
 	public RdfDAO(Model m, Resource id) {
 		this.id = id;
 		this.m = m;
-		//this.m = m.filter(id, null, null);
 	}
 }

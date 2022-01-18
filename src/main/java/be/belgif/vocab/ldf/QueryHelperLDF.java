@@ -376,7 +376,6 @@ public class QueryHelperLDF {
 			hyperControls(m, vocab, dataset, builder, offset, count, isFrag);
 			getFragment(m, conn, subj, pred, obj, graph, offset, count);
 
-			//return setNamespaces(m);
 			return m;
 		} catch (RepositoryException|MalformedQueryException|QueryEvaluationException e) {
 			throw new WebApplicationException(e);

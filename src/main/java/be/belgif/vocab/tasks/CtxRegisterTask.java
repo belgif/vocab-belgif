@@ -29,8 +29,6 @@ import be.belgif.vocab.helpers.QueryHelper;
 
 import org.eclipse.rdf4j.repository.Repository;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Register JSON-LD context
@@ -39,9 +37,6 @@ import org.slf4j.LoggerFactory;
  */
 public class CtxRegisterTask extends AbstractImportTask {
 	public final static String NAME = "ctx-register";
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(CtxRegisterTask.class);
-
 	
 	/**
 	 * Constructor

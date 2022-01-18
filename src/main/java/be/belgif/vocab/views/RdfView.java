@@ -65,7 +65,7 @@ public abstract class RdfView extends View {
 	 * @param template template file
 	 * @param lang language
 	 */
-	public RdfView(String template, String lang) {
+	protected RdfView(String template, String lang) {
 		super(template, StandardCharsets.UTF_8);
 		this.lang = (lang == null || lang.isEmpty()) ? "en" : lang;
 		this.msgs = ResourceBundle.getBundle("be.belgif.vocab.views.MessageBundle", 

@@ -73,7 +73,7 @@ import org.slf4j.LoggerFactory;
 public class VocabImportTask extends AbstractImportDumpTask {
 	public final static String NAME = "vocab-import";
 	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
+	private final static Logger LOG = (Logger) LoggerFactory.getLogger(VocabImportTask.class);
 	
 	/**
 	 * Add VoID metadata about the thesaurus

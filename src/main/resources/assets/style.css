@@ -174,7 +174,7 @@ body{
 }
 .footer-bg-image{
 	height:14.0625rem;
-	background-image:url("../images/splash-wave.svg");
+	background-image:url("/static/splash-wave.svg");
 	background-position:bottom;
 	background-size:cover;
 	position:fixed;
@@ -221,7 +221,7 @@ main{
 	min-height:45vh
 }
 .homepage main{
-	background-image:url("../images/first-wave.svg");
+	background-image:url("../static/first-wave.svg");
 	background-position:center top;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -237,7 +237,7 @@ main{
 	bottom:0;
 	left:0;
 	right:0;
-	background:url("../images/first-wave-white.svg");
+	background:url("/static/first-wave-white.svg");
 	background-position:center bottom;
 	background-size:cover;
 	background-repeat:no-repeat
@@ -272,7 +272,7 @@ footer{
 footer:after{
 	content:"";
 	display:block;
-	background:url("../images/footer.svg");
+	background:url("/static/footer.svg");
 	background-position:center 0;
 	background-size:cover;
 	background-repeat:no-repeat;

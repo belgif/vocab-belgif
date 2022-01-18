@@ -114,7 +114,7 @@ public class OwlDAO extends RdfDAO {
 		for (RdfDAO rdf: lst) {
 			String name = ((IRI) rdf.getId()).getLocalName();
 			String letter = name.substring(0, 1);
-			SortedSet set = map.get(letter);
+			SortedSet<String> set = map.get(letter);
 			
 			if (set == null) {
 				set = new TreeSet<>();

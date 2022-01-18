@@ -30,8 +30,6 @@ import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Import a SHACL file and create (static) download files in various formats.
@@ -40,9 +38,6 @@ import org.slf4j.LoggerFactory;
  */
 public class ShaclImportTask extends AbstractImportDumpTask {
 	public final static String NAME = "shacl-import";
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(ShaclImportTask.class);
-
 
 	@Override
 	protected void process(RepositoryConnection conn, String name, Resource ctx) 

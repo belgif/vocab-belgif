@@ -183,7 +183,6 @@ public class QueryHelper {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
-		//return setNamespaces(m);
 		return m;
 	}
 
@@ -208,8 +207,6 @@ public class QueryHelper {
 		} catch (RepositoryException e) {
 			throw new WebApplicationException(e);
 		}
-		
-		//return setNamespaces(m);
 		return m;
 	}
 	

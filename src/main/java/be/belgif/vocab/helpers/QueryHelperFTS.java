@@ -69,7 +69,6 @@ public class QueryHelperFTS {
 			gq.setBinding("query", QueryHelper.asLiteral(text + "*"));
 			gq.setBinding("graph", QueryHelper.getGraphName(type, from));
 
-			//return QueryHelper.setNamespaces(QueryResults.asModel(gq.evaluate()));
 			return QueryResults.asModel(gq.evaluate());
 		} catch (RepositoryException | MalformedQueryException | QueryEvaluationException e) {
 			throw new WebApplicationException(e);

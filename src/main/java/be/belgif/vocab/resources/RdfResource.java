@@ -76,7 +76,7 @@ public abstract class RdfResource {
 	 *
 	 * @param repo
 	 */
-	public RdfResource(Repository repo) {
+	protected RdfResource(Repository repo) {
 		this.repo = repo;
 	}
 }

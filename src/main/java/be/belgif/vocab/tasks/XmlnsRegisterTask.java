@@ -29,8 +29,6 @@ import be.belgif.vocab.helpers.QueryHelper;
 
 import org.eclipse.rdf4j.repository.Repository;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Register XML namespace / XSD file
@@ -39,10 +37,7 @@ import org.slf4j.LoggerFactory;
  */
 public class XmlnsRegisterTask extends AbstractImportTask {
 	public final static String NAME = "xmlns-register";
-	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(XmlnsRegisterTask.class);
 
-	
 	/**
 	 * Constructor
 	 *

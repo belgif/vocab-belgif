@@ -50,7 +50,7 @@ public class LuceneReindexTask extends Task {
 
 	private final Repository repo;
 
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(LuceneReindexTask.class);
+	private final static Logger LOG = (Logger) LoggerFactory.getLogger(LuceneReindexTask.class);
 
 	/**
 	 * Execute task

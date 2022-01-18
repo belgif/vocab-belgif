@@ -58,7 +58,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 				RDFFormat.NTRIPLES.getDefaultFileExtension() };
 	protected final String downloadDir;
 	
-	private final Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportDumpTask.class);
+	private final static Logger LOG = (Logger) LoggerFactory.getLogger(AbstractImportDumpTask.class);
 	
 	
 	/**

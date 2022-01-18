@@ -44,7 +44,6 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCAT;
 import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.repository.Repository;
 
@@ -70,7 +69,6 @@ public class NsResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	public OwlView getOntoHTML(@PathParam("onto") String onto,
 				@DefaultValue("en") @QueryParam("lang") String lang) {
-		//String subj = PREFIX + onto + "#";
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.ONTO, onto);
 		Model m = getById(null, ctx);
 		return new OwlView(onto, m, lang);
