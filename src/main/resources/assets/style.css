@@ -221,7 +221,7 @@ main{
 	min-height:45vh
 }
 .homepage main{
-	background-image:url("../static/first-wave.svg");
+	background-image:url("/static/first-wave.svg");
 	background-position:center top;
 	background-size:cover;
 	background-repeat:no-repeat;

@@ -32,6 +32,7 @@ import io.dropwizard.Configuration;
 import java.util.Map;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 /**
  *
@@ -77,7 +78,7 @@ public class AppConfig extends Configuration {
 	@NotBlank
 	private String sitePrefix;
 
-	@NotBlank
+	@NotEmpty
 	private Map<String, Map<String, String>> views;
 
 	@NotNull

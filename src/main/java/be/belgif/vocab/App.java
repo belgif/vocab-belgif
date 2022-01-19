@@ -217,7 +217,7 @@ public class App extends Application<AppConfig> {
 	 * @throws IOException 
 	 */
 	private void importFiles(String dir, WebTarget target) throws IOException {
-		Path p = Paths.get("tasks/" + dir);
+		Path p = Paths.get(dir);
 		
 		File d = p.toFile();
 		if (! (d.exists() && d.isDirectory() && d.canRead())) {
@@ -246,11 +246,11 @@ public class App extends Application<AppConfig> {
 			Client cl = ClientBuilder.newClient();
 			WebTarget target = cl.target(localhost);
 
-			importFiles(config.getCtxs().getImportDir(), target.path(CtxRegisterTask.NAME));
-			importFiles(config.getOntos().getImportDir(), target.path(OntoImportTask.NAME));
-			importFiles(config.getShacls().getImportDir(), target.path(ShaclImportTask.NAME));
-			importFiles(config.getXsds().getImportDir(), target.path(XmlnsRegisterTask.NAME));
-			importFiles(config.getVocabs().getImportDir(), target.path(VocabImportTask.NAME));
+			importFiles(config.getCtxs().getImportDir(), target.path("tasks/" + CtxRegisterTask.NAME));
+			importFiles(config.getOntos().getImportDir(), target.path("tasks/" + OntoImportTask.NAME));
+			importFiles(config.getShacls().getImportDir(), target.path("tasks/" + ShaclImportTask.NAME));
+			importFiles(config.getXsds().getImportDir(), target.path("tasks/" + XmlnsRegisterTask.NAME));
+			importFiles(config.getVocabs().getImportDir(), target.path("tasks/" + VocabImportTask.NAME));
 			
 			cl.target(localhost).path("tasks/" + LuceneReindexTask.NAME)
 				.request().post(Entity.text(""));
