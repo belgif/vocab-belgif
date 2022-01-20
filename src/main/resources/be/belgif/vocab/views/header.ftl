@@ -7,9 +7,9 @@
 		<a href="?lang=de" hreflang="de" class="nav-link ">DE</a>
 		<a href="?lang=en" hreflang="en" class="nav-link ">EN</a>
 	</nav>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light">
 		<a href="/?lang=${l}" class="navbar-brand">
-			<img id="logo" src="/static/belgif.png" alt="Belgif logo">
+			<img id="logo" src="/static/belgif.png" alt="Belgif logo"/>
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" 
 				aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +21,7 @@
 			<a class="nav-link font-weight-bold" href="/ns?lang=${l}">${m.getString("msg.ontos")}</a>
 			<a class="nav-link font-weight-bold" href="/shacl?lang=${l}">${m.getString("msg.shacls")}</a>
 			<a class="nav-link font-weight-bold" href="/ctx?lang=${l}">${m.getString("msg.ctxs")}</a>
+			<a class="nav-link font-weight-bold" href="/contact?lang=${l}">${m.getString("msg.contact")}</a>
 		</div>
 	</nav>
 </header>

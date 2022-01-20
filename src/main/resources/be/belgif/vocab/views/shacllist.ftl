@@ -6,12 +6,9 @@
 <#include "header.ftl">
 <#assign m = messages>
 <main class="container-fluid bg-light">
-	<div id="breadcrumb">
-		<a href="/">${m.getString("msg.home")}</a>
-	</div>
-	<#include "message.ftl">
 	<#if shacls?has_content>
-		<h4>${m.getString("msg.overview")}</h4>
+		<h2>${m.getString("msg.overview")}</h2>
+		<div class="table-responsive">
 		<table class="table table-sm table-striped">
 		<thead class="bg-dark text-light">
 			<tr><th scope="col">${m.getString("msg.name")}</th>
@@ -33,6 +30,7 @@
 		</#list>
 		</tbody>
 	</table>
+	</div>
 	</#if>
 </main>
 <#include "footer.ftl">

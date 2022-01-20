@@ -4,8 +4,8 @@
 <head>
 <meta charset='UTF-8'>
 <link rel="alternate" type="text/turtle" href="/void" />
-<link rel="stylesheet" type="text/css" href="/static/style.css" />
 <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/style.css" />
 <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
 <script src="/static/jquery.min.js"></script>
 <script src="/static/bootstrap.bundle.min.js"></script>
@@ -14,7 +14,7 @@
 <body class="homepage">
 <#include "header.ftl">
 <#assign m = messages>
-<main class="container-fluid">
+<main class="container-fluid bg-light">
 	<div class="row row-cols-1 row-cols-md-2">
 		<div class="col mb-2">
 		<section class="card be-eif">
