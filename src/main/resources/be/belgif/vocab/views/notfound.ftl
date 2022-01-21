@@ -5,14 +5,9 @@
 <body>
 <#include "header.ftl">
 <#assign m = messages>
-<main>
-	<div id="container">
-	<section>
-		<#include "message.ftl">
-		<section>
-			<h3>${m.getString("msg.notfound")}</h3>
-		</section>
-	</section>
+<main class="container-fluid bg-light">
+	<div class="alert alert-warning" role="alert">
+		${m.getString("msg.notfound")}
 	</div>
 </main>
 <#include "footer.ftl">

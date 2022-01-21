@@ -14,6 +14,10 @@
 		<h1>${o.id.namespace}</h1>
 		<div class="table-responsive">
 		<table class="table table-sm table-striped table-hover table-bordered">
+			<colgroup>
+				<col class="col-sm-2">
+				<col class="col-sm-10">
+			</colgroup>
 		<#assign val = o.getVersion(l)!o.getVersion("")!"">
 		<#if val?has_content>
 			<tr><th>${m.getString("msg.version")}</th><td>${val}</td></tr>
@@ -35,6 +39,10 @@
 			<h2>Classes</h2>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
+				<colgroup>
+					<col class="col-sm-1">
+					<col class="col-sm-11">
+				</colgroup>
 			<#list clo?keys as letter>
 				<tr><th>${letter}</th><td>
 					<#list clo[letter] as name>
@@ -52,6 +60,10 @@
 			<h3>Properties</h3>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
+				<colgroup>
+					<col class="col-sm-1">
+					<col class="col-sm-11">
+				</colgroup>
 			<#list pro?keys as letter>
 				<tr><th>${letter}</th><td>
 				<#list pro[letter] as name>

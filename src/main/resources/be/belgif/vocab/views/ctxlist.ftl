@@ -7,8 +7,7 @@
 <#assign m = messages>
 <main class="container-fluid bg-light">
 	<section>
-		<h1>${m.getString("msg.ctxs")}</h1>
-		<h2>${m.getString("msg.overview")}</h2>
+		<h1>${m.getString("msg.ctxs")} - ${m.getString("msg.overview")}</h1>
 		<div class="table-responsive">
 		<table class="table table-sm table-striped table-bordered table-hover">
 			<thead class="tbg-dark text-light">
