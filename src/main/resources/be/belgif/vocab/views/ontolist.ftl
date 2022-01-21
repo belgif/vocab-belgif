@@ -26,8 +26,8 @@
 				<tr><td><a href="${o.id}">${o.getLabel(l)!""}</a></td>
 					<td>${o.getComment(l)!""}</td>
 					<#assign download = o.id?remove_ending("#")>
-					<td><a href="${download}.ttl">TTL</a>&nbsp;
-						<a href="${download}.jsonld">JSON-LD</a>&nbsp;
+					<td><a href="${download}.ttl">TTL</a>
+						<a href="${download}.jsonld">JSON-LD</a>
 						<a href="${download}.nt">N-Triples</a></td>
 				</tr>
 			</#list>

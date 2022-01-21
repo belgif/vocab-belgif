@@ -10,7 +10,7 @@
 		<h1>${m.getString("msg.ctxs")} - ${m.getString("msg.overview")}</h1>
 		<div class="table-responsive">
 		<table class="table table-sm table-striped table-bordered table-hover">
-			<thead class="tbg-dark text-light">
+			<thead class="bg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
 					<th>${m.getString("msg.description")}</th>
 					<th>${m.getString("msg.downloads")}</th>

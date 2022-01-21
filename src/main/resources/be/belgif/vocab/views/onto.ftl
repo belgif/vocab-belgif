@@ -5,7 +5,6 @@
 <body>
 <#include "header.ftl">
 <#assign m = messages>
-<#assign langs = ['nl', 'fr', 'en', 'de', '']>
 <#assign o = onto>
 <#assign c = o.classes>
 <#assign p = o.properties> 
@@ -28,9 +27,9 @@
 		</#if>
 		<#assign val = o.getComment(l)!"">
 		<#if val?has_content>
-			<tr><td>RDFS comment</td><td>${val}</td></tr>
+			<tr><th>RDFS comment</th><td>${val}</td></tr>
 		</#if>
-			<tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
+			<tr><th>Prefix</th><td>${o.id.namespace}</td></tr>
 		</table>
 		</div>
 		<#assign clo = o.classesLetter>

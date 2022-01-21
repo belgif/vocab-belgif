@@ -7,8 +7,7 @@
 <#assign m = messages>
 <main class="container-fluid bg-light">
 	<section>
-		<h1>${m.getString("msg.shacls")}</h1>
-		<h2>${m.getString("msg.overview")}</h2>
+		<h1>${m.getString("msg.shacls")} - ${m.getString("msg.overview")}</h1>
 		<div class="table-responsive">
 		<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
@@ -24,8 +23,8 @@
 				<tr><td><a href="${s.id}">${label}</a></td>
 					<td>${comment}</td>
 				<#assign download = s.id?remove_ending("#")>
-					<td><a href="${download}.ttl">TTL</a>&nbsp;
-						<a href="${download}.jsonld">JSON-LD</a>&nbsp;
+					<td><a href="${download}.ttl">TTL</a>
+						<a href="${download}.jsonld">JSON-LD</a>
 						<a href="${download}.nt">N-Triples</a></td>
 				</tr>
 			</#list>
