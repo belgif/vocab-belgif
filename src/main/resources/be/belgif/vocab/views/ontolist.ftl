@@ -10,7 +10,7 @@
 		<h2>${m.getString("msg.ontos")}</h2>
 		<h3>${m.getString("msg.overview")}</h3>
 		<div class="table-responsive">
-		<table class="table table-sm table-striped">
+		<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
 					<th>${m.getString("msg.description")}</th>
@@ -33,7 +33,7 @@
 		<h2>XML Namespaces</h2>
 		<h3>${m.getString("msg.overview")}</h3>
 		<div class="table-responsive">
-		<table class="table table-sm table-striped">
+		<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
 					<th>${m.getString("msg.description")}</th>

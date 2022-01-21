@@ -7,10 +7,10 @@
 <#assign m = messages>
 <main class="container-fluid bg-light">
 	<section>
-		<h2>${m.getString("msg.vocabs")}</h2>
-		<h3>${m.getString("msg.overview")}</h3>
+		<h1>${m.getString("msg.vocabs")}</h1>
+		<h2>${m.getString("msg.overview")}</h2>
 		<div class="table-responsive">
-		<table class="table table-sm table-striped">
+		<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
 				<th>${m.getString("msg.description")}</th>

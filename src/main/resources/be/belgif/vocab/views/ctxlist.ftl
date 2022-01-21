@@ -7,11 +7,11 @@
 <#assign m = messages>
 <main class="container-fluid bg-light">
 	<section>
-		<h2>${m.getString("msg.ctxs")}</h2>
-		<h3>${m.getString("msg.overview")}</h3>
+		<h1>${m.getString("msg.ctxs")}</h1>
+		<h2>${m.getString("msg.overview")}</h2>
 		<div class="table-responsive">
-		<table class="table table-sm table-striped">
-			<thead>
+		<table class="table table-sm table-striped table-bordered table-hover">
+			<thead class="tbg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
 					<th>${m.getString("msg.description")}</th>
 					<th>${m.getString("msg.downloads")}</th>
