@@ -7,7 +7,7 @@
 <#assign m = messages>
 <#assign v = term>
 <#assign langs = ['nl', 'fr', 'en', 'de']>
-<main>
+<main class="container-fluid bg-light">
 	<div id="container">
 	<section>
 		<div id="breadcrumb">

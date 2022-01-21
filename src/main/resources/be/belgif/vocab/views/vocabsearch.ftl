@@ -6,32 +6,25 @@
 <#include "header.ftl">
 <#assign m = messages>
 <#assign langs = ['nl', 'fr', 'en', 'de']>
-<main>
-	<div id="container">
-	<section>
-		<div id="breadcrumb">
-			<a href="/">${m.getString("msg.home")}</a> / 
-			<a href="/auth">${m.getString("msg.vocabs")}</a>
-		</div>
-		<#include "message.ftl">
-		<section>
-			<h3>Search results</h3>
-			<section>
-				<table>
-					<tr><th>ID</th><th>Label</th></tr>
-					<#list results as r>
-						<tr><td><a href="${r.id}">${r.id}</a></td><td>
-						<#list langs as lang>
-							<#list r.getPrefLabels(lang) as val>
-								${val}<br>
-								</#list>
-						</#list>
-						</td></tr>
-					</#list>
-				</table>
-			</section>
-		</section>
-	</section>
+<main class="container-fluid bg-light">
+	<h1>${msg.results}</h1>
+	<div class="table-responsive">
+	<table class="table table-sm table-striped table-hover table-bordered">
+	<thead class="bg-dark text-light">
+		<tr><th>ID</th><th>Label</th></tr>
+	</thead>
+	<tbody>
+	<#list results as r>
+		<tr><td><a href="${r.id}">${r.id}</a></td><td>
+			<#list langs as lang>
+				<#list r.getPrefLabels(lang) as val>
+					${val}<br>
+				</#list>
+			</#list>
+		</td></tr>
+	</#list>
+	</tbody>
+	</table>
 	</div>
 </main>
 <#include "footer.ftl">
