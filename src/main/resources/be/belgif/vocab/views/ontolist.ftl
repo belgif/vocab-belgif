@@ -12,8 +12,8 @@
 		<table class="table table-sm table-striped table-hover table-bordered">
 			<colgroup>
 				<col class="col-sm-2">
-				<col class="col-sm-6">
-				<col class="col-sm-4">
+				<col class="col-sm-5">
+				<col class="col-sm-5">
 			</colgroup>
 			<thead class="bg-dark text-light">
 				<tr><th>${m.getString("msg.name")}</th>
@@ -27,8 +27,8 @@
 					<td>${o.getComment(l)!""}</td>
 					<#assign download = o.id?remove_ending("#")>
 					<td><a href="${download}.ttl">TTL</a>
-						<a href="${download}.jsonld">JSON-LD</a>
-						<a href="${download}.nt">N-Triples</a></td>
+						<a href="${download}.jsonld" style="white-space: nowrap;">JSON-LD</a>
+						<a href="${download}.nt" style="white-space: nowrap;">N-Triples</a></td>
 				</tr>
 			</#list>
 			</tbody>

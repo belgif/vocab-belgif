@@ -18,20 +18,23 @@
 			</form>
 		</section>
 		<section>
-			<h2>${m.getString("msg.general")}</h2>
+			<h2>${m.getString("msg.overview")}</h2>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 				<colgroup>
-					<col class="col-sm-2">
-					<col class="col-sm-10">
+					<col class="col-sm-3">
+					<col class="col-sm-9">
 				</colgroup>
+				<thead class="bg-dark text-light">
+					<tr><th>${m.getString("msg.property")}</th>
+						<th>${m.getString("msg.description")}</th>
+					</tr>
+				</thead>
+				<tbody>
 				<#assign val = v.getVersion(lang)!v.getVersion("")!"">
 				<#if val?has_content>
-				<thead class="bg-dark text-light">
 					<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
-				</thead>
 				</#if>
-				<tbody>
 				<#list langs as lang>
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>
@@ -49,9 +52,14 @@
 			<h2>SKOS TopConcepts</h2>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
+			<thead class="bg-dark text-light">
+				<tr><th>${m.getString("msg.term")}</th></tr>
+			</thead>
+			<tbody>
 			<#list tc as t>
 				<tr><td rel="skos:hasTopConcept" resource="${t}"><a href="${t}">${t}</a></td></tr>
 			</#list>
+			</tbody>
 			</table>
 			</div>
 		</section>
