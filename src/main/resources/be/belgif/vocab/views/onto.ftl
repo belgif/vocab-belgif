@@ -13,23 +13,30 @@
 		<h1>${o.id.namespace}</h1>
 		<div class="table-responsive">
 		<table class="table table-sm table-striped table-hover table-bordered">
-			<colgroup>
-				<col class="col-sm-2">
-				<col class="col-sm-10">
-			</colgroup>
+		<colgroup>
+			<col class="col-sm-2">
+			<col class="col-sm-10">
+		</colgroup>
+		<thead class="bg-dark text-light">
+			<tr><th>${m.getString("msg.property")}</th>
+				<th>${m.getString("msg.description")}</th>
+			</tr>
+		</thead>
+		<tbody>
 		<#assign val = o.getVersion(l)!o.getVersion("")!"">
 		<#if val?has_content>
-			<tr><th>${m.getString("msg.version")}</th><td>${val}</td></tr>
+			<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
 		</#if>
 		<#assign val = o.getLabel(l)!"">
 		<#if val?has_content>
-			<tr><th>RDFS label</th><td>${val}</td></tr>
+			<tr><td>RDFS label</td><td>${val}</td></tr>
 		</#if>
 		<#assign val = o.getComment(l)!"">
 		<#if val?has_content>
-			<tr><th>RDFS comment</th><td>${val}</td></tr>
+			<tr><td>RDFS comment</td><td>${val}</td></tr>
 		</#if>
-			<tr><th>Prefix</th><td>${o.id.namespace}</td></tr>
+			<tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
+		</tbody>
 		</table>
 		</div>
 		<#assign clo = o.classesLetter>
