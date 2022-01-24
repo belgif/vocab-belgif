@@ -2,6 +2,7 @@
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/title> "Rechtsvormen (1800-2003)"@nl .
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/title> "Formes juridiques (1800-2003)"@fr .
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/title> "Legal forms (1800-2003)"@en .
+<http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/title> "Rechtsformen (1800-2003)"@de .
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/description> "Rechtsvormen volgens Kruispuntbank Ondernemingen (1800 - 6/2003)"@nl .
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/description> "Formes juridiques selon la Banque-Carrefour des Entreprises (1800 - 6/2003)"@fr .
 <http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/description> "Legal forms according to the Crossroad Bank Enterprises (1800 - 6/2003)"@en .
