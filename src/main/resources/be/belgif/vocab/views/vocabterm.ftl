@@ -121,7 +121,7 @@
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
-				<tr><th>${m.getString("msg.term)}</th></tr>
+				<tr><th>${m.getString("msg.term")}</th></tr>
 			</thead>
 			<tbody>
 			<#list rels as rel>
@@ -139,7 +139,7 @@
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 			<thead class="bg-dark text-light">
-				<tr><th>${m.getString("msg.term)}</th></tr>
+				<tr><th>${m.getString("msg.term")}</th></tr>
 			</thead>
 			<tbody>
 			<#list rels as rel>
