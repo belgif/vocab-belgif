@@ -1,0 +1,10 @@
+<http://vocab.belgif.be/ctx/gdpr#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/CORE_COMP> .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/title> "GDPR context"@nl .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/title> "GDPR Contexte"@fr .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/title> "GDPR Kontext"@de .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/title> "GDPR Context"@en .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/description> "GDPR JSON-LD context"@nl .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/description> "GDPR Contexte JSON-LD"@fr .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/description> "GDPR Kontext JSON-LD"@de .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://purl.org/dc/terms/description> "GDPR Context JSON-LD"@en .
+<http://vocab.belgif.be/ctx/gdpr#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ctx/gdpr.jsonld> .

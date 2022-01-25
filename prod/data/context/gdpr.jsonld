@@ -1,0 +1,145 @@
+{
+  "@context" : {
+    "be-dataentry" : "http://vocab.belgif.be/ns/dataentry#",
+    "be-gdpr" : "http://vocab.belgif.be/ns/gdpr#",
+    "be-infosec" : "http://vocab.belgif.be/ns/infosec#",
+    "cv" : "http://data.europa.eu/m8g/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "org" : "http://www.w3.org/ns/org#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "schema" : "http://schema.org/",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "identifier" : "dcterms:identifier",
+    "description" : {
+      "@id" : "dcterms:description",
+      "@container" : "@language"
+    },
+    "title" : {
+      "@id" : "dcterms:title",
+      "@container" : "@language"
+    },
+    "part" : "dcterms:hasPart",
+    "rights" : {
+      "@id" : "dcterms:accessRights",
+      "@type" : "@id"
+    },
+    "treatment" : {
+      "@id" : "be-gdpr:hasDataTreatment",
+      "@type" : "@id"
+    },
+    "startdate" : {
+      "@id" : "schema:startDate",
+      "@type" : "xsd:date"
+    },
+    "enddate" : {
+      "@id" : "schema:endDate",
+      "@type" : "xsd:date"
+    },
+    "code" : "skos:notation",
+    "note" : {
+      "@id" : "skos:note",
+      "@container" : "@language"
+    },
+    "altlabel" : {
+      "@id" : "skos:altLabel",
+      "@container" : "@language"
+    },
+    "preflabel" : {
+      "@id" : "skos:prefLabel",
+      "@container" : "@language"
+    },
+    "authoritativesource" : {
+      "@id" : "be-gdpr:authoritativeSource",
+      "@container" : "@language"
+    },
+    "authorization" : {
+      "@id" : "be-gdpr:authorization",
+      "@container" : "@language"
+    },
+    "businessprocess" : {
+      "@id" : "be-gdpr:businessProcess",
+      "@container" : "@language"
+    },
+    "businessprocessowner" : {
+      "@id" : "businessprocess:Owner",
+      "@container" : "@language"
+    },
+    "conservation" : {
+      "@id" : "be-gdpr:conservation",
+      "@container" : "@language"
+    },
+    "contract" : {
+      "@id" : "be-gdpr:contract",
+      "@container" : "@language"
+    },
+    "datacategory" : "be-gdpr:dataCategory",
+    "datacategorytext" : {
+      "@id" : "datacategory:Text",
+      "@container" : "@language"
+    },
+    "finalitymain" : "be-gdpr:finalityMain",
+    "finalityother" : "be-gdpr:finalityOther",
+    "finalitytext" : {
+      "@id" : "be-gdpr:finalityText",
+      "@container" : "@language"
+    },
+    "datacoupling" : {
+      "@id" : "be-gdpr:dataCoupling",
+      "@container" : "@language"
+    },
+    "destinationcountry" : "be-gdpr:destinationCountry",
+    "controller" : "be-gdpr:hasController",
+    "datareceiver" : "be-gdpr:hasDataReceiver",
+    "datareceivertype" : "be-gdpr:receiverType",
+    "datareceivertypetext" : {
+      "@id" : "receivertype:Text",
+      "@container" : "@language"
+    },
+    "email" : "be-gdpr:emailPrivacyQuestions",
+    "guarantee" : {
+      "@id" : "be-gdpr:guarantee",
+      "@container" : "@language"
+    },
+    "involvedparty" : "be-gdpr:involvedParty",
+    "involvedpartytext" : {
+      "@id" : "involvedparty:Text",
+      "@container" : "@language"
+    },
+    "juridicalbase" : "be-gdpr:juridicalBase",
+    "juridicalbasetext" : {
+      "@id" : "juridicalbase:Text",
+      "@container" : "@language"
+    },
+    "receivertype" : "be-gdpr:receiverType",
+    "receivertypetext" : {
+      "@id" : "receivertype:Text",
+      "@container" : "@language"
+    },
+    "remarks" : {
+      "@id" : "be-gdpr:remarks",
+      "@container" : "@language"
+    },
+    "rightsprocedure" : {
+      "@id" : "be-gdpr:rightsProcedure",
+      "@container" : "@language"
+    },
+    "securitymeasurestext" : {
+      "@id" : "be-gdpr:securityMeasuresText",
+      "@container" : "@language"
+    },
+    "transfernature" : "be-gdpr:transferNature",
+    "transfernaturetext" : {
+      "@id" : "transfernature:Text",
+      "@container" : "@language"
+    },
+    "treatmenttype" : "be-gdpr:treatmentType",
+    "treatmenttypetext" : {
+      "@id" : "treatmenttype:Text",
+      "@container" : "@language"
+    },
+    "organisation" : "org:memberOf"
+  }
+}
