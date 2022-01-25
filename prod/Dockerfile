@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 USER belgif
 
-RUN cd /home/best && \
+RUN cd /home/belgif && \
   git clone https://github.com/belgif/vocab-belgif && \
   cd /home/belgif/vocab-belgif && \
   mvn clean install -DskipTests 
