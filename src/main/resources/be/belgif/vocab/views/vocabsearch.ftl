@@ -7,7 +7,7 @@
 <#assign m = messages>
 <#assign langs = ['nl', 'fr', 'en', 'de']>
 <main class="container-fluid bg-light">
-	<h1>${msg.results}</h1>
+	<h1>${m.getString("msg.results")}</h1>
 	<div class="table-responsive">
 	<table class="table table-sm table-striped table-hover table-bordered">
 	<thead class="bg-dark text-light">
@@ -15,7 +15,7 @@
 	</thead>
 	<tbody>
 	<#list results as r>
-		<tr><td><a href="${r.id}">${r.id}</a></td><td>
+		<tr><td><a href="${r.id}?lang=${l}">${r.id}</a></td><td>
 			<#list langs as lang>
 				<#list r.getPrefLabels(lang) as val>
 					${val}<br>

@@ -114,7 +114,7 @@
 			</thead>
 			<tbody>
 			<#list rels as rel>
-				<tr><td rel="skos:broader" resource="${rel}"><a href="${rel}">${rel}</a></td></tr>
+				<tr><td rel="skos:broader" resource="${rel}"><a href="${rel}?lang=${l}">${rel}</a></td></tr>
 			</#list>
 			</tbody>
 			</table>
@@ -132,7 +132,7 @@
 			</thead>
 			<tbody>
 			<#list rels as rel>
-				<tr><td rel="skos:narrower" resource="${rel}"><a href="${rel}">${rel}</a></td></tr>
+				<tr><td rel="skos:narrower" resource="${rel}"><a href="${rel}?lang=${l}">${rel}</a></td></tr>
 			</#list>
 			</tbody>
 			</table>

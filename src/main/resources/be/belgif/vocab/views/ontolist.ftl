@@ -23,7 +23,7 @@
 			</thead>
 			<tbody>
 			<#list ontos?sort_by("id") as o>
-				<tr><td><a href="${o.id}">${o.getLabel(l)!""}</a></td>
+				<tr><td><a href="${o.id}?lang=${l}">${o.getLabel(l)!""}</a></td>
 					<td>${o.getComment(l)!""}</td>
 					<#assign download = o.id?remove_ending("#")>
 					<td><a href="${download}.ttl">TTL</a>
