@@ -2,7 +2,7 @@
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/title> "Rechtsvormen (7/2003)"@nl .
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/title> "Formes juridiques (7/2003)"@fr .
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/title> "Legal forms (7/2003)"@en .
-http://vocab.belgif.be/auth/cbe-org1800> <http://purl.org/dc/terms/title> "Rechtsformen (7/2003)"@de .
+<http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/title> "Rechtsformen (7/2003)"@de .
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/description> "Rechtsvormen volgens Kruispuntbank Ondernemingen (7/2003)"@nl .
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/description> "Formes juridiques selon la Banque-Carrefour des Entreprises (7/2003)"@fr .
 <http://vocab.belgif.be/auth/cbe-org2003> <http://purl.org/dc/terms/description> "Legal forms according to the Crossroad Bank Enterprises (7/2003)"@en .
