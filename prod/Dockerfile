@@ -9,7 +9,7 @@ RUN apt-get update && \
   apt-get install -y git-core && \
   useradd -m belgif
 
-USER best
+USER belgif
 
 RUN cd /home/best && \
   git clone https://github.com/belgif/vocab-belgif && \
