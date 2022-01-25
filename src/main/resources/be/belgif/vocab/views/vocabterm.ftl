@@ -47,35 +47,24 @@
 					<tr><td property="skos:altLabel" xml:lang="${lang}" content="${val}">AltLabel (${lang})</td><td>${val}</td></tr>
 				</#list>
 			</#list>
-			</tbody>
-			</table>
-		</section>
-		<#assign sd = v.startDate!"">
-		<#assign ed = v.endDate!"">
-		<#if sd?has_content || ed?has_content>
-		<#setting datetime_format = "iso">
-		<section>
-			<h2>${m.getString("msg.validity")}</h2>
-			<div class="table-responsive">
-			<table class="table table-sm table-striped table-hover table-bordered">
-			<colgroup>
-				<col class="col-sm-3">
-				<col class="col-sm-9">
-			</colgroup>
+			<#assign sd = v.startDate!"">
+			<#assign ed = v.endDate!"">
+			<#if sd?has_content || ed?has_content>
+			<#setting datetime_format = "iso">
 			<#if sd?has_content>
 				<#assign sd = sd?datetime>
-				<tr><th>Start Date</th>
+				<tr><td>Start Date</th>
 					<td property="schema:startDate" content="${sd}">${sd?date}</td></tr>
 			</#if>
 			<#if ed?has_content>
 				<#assign ed = ed?datetime>
-				<tr><th>End Date</th>
+				<tr><td>End Date</td>
 					<td property="schema:endDate" content="${ed}">${ed?date}</td></tr>
 			</#if>
+			</tbody>
 			</table>
 			</div>
 		</section>
-		</#if>
 		<section>
 			<h2>Matches</h2>
 			<div class="table-responsive">
@@ -112,7 +101,7 @@
 			</#list>
 			</body>
 			</table>
-		</div>
+			</div>
 		</section>
 		<#assign rels = v.broaders>
 		<#if rels?has_content>

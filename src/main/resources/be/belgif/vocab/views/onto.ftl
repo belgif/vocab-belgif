@@ -42,7 +42,7 @@
 		<#assign clo = o.classesLetter>
 		<#if clo?has_content>
 		<section>
-			<h2>Classes</h2>
+			<h2>Classes - ${m.getString("msg.overview")}</h2>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 				<colgroup>
@@ -63,7 +63,7 @@
 		<#assign pro = o.propertiesLetter>
 		<#if pro?has_content>
 		<section>
-			<h3>Properties</h3>
+			<h3>Properties - ${m.getString("msg.overview")}</h3>
 			<div class="table-responsive">
 			<table class="table table-sm table-striped table-hover table-bordered">
 				<colgroup>
