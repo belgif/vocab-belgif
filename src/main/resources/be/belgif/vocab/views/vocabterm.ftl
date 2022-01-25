@@ -15,6 +15,7 @@
 			<form method="get" action="/_search/${vocabName}">
 				<input name="q" type="search"/>
 				<input name="search" type="submit"/>
+				<input name="lang" type="hidden" value="${l}"/>
 			</form>
 		</section>
 		<section>
@@ -60,6 +61,7 @@
 				<#assign ed = ed?datetime>
 				<tr><td>End Date</td>
 					<td property="schema:endDate" content="${ed}">${ed?date}</td></tr>
+			</#if>
 			</#if>
 			</tbody>
 			</table>

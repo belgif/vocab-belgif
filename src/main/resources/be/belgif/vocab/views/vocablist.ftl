@@ -23,7 +23,7 @@
 			</thead>
 			<tbody>
 			<#list vocabs?sort_by("id") as v>
-				<tr><td><a href="${v.id}?lang=${l}">${v.getTitle(l)!""}</a></td>
+				<tr><td><a href="${v.id?remove_ending('#')}?lang=${l}">${v.getTitle(l)!""}</a></td>
 					<td>${v.getDescription(l)!""}</td>
 					<#assign download = v.download!"">
 					<td><a href="${download}.ttl">TTL</a>&nbsp;

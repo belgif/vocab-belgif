@@ -15,6 +15,7 @@
 			<form method="get" action="/_search/${vocabName}">
 				<input name="q" type="search"/>
 				<input name="search" type="submit"/>
+				<input name="lang" type="hidden" value="${l}"/>
 			</form>
 		</section>
 		<section>
