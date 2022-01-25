@@ -1,21 +1,40 @@
+# syntax=docker/dockerfile:1
+
+# start with downloading / converting data and compiling latest sources
+
+FROM maven:3-openjdk-17-slim as builder
+MAINTAINER bart.hanssens@bosa.fgov.be
+
+RUN apt-get update && \
+  apt-get install -y git-core && \
+  useradd -m belgif
+
+USER best
+
+RUN cd /home/best && \
+  git clone https://github.com/belgif/vocab-belgif && \
+  cd /home/belgif/vocab-belgif && \
+  mvn clean install -DskipTests 
+
 # Dropwizard  vocab.belgif.be 
+
 FROM eclipse-temurin:17-jre-alpine
 MAINTAINER Bart Hanssens <bart.hanssens@bosa.fgov.be>
 
 RUN adduser -S dropwizard 
-COPY lod-vocab-*.jar /usr/local/bin/vocab-belgif.jar
+COPY --from=0 /home/belgif/vocab-belgif/target/lod-vocab-*.jar /usr/local/bin/vocab-belgif.jar
 
-COPY cfg /home/dropwizard/ 
+COPY --from=0 /home/belgif/vocab-belgif/prod/cfg /home/dropwizard/ 
 
-COPY data/context /home/dropwizard/download-ctx/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/context /home/dropwizard/download-ctx/
 
-COPY data/shacl /home/dropwizard/import-shacl/
-COPY data/shacl /home/dropwizard/download-shacl/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/shacl /home/dropwizard/import-shacl/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/shacl /home/dropwizard/download-shacl/
 
-COPY data/ontologies /home/dropwizard/import-onto/
-COPY data/codelist /home/dropwizard/import-auth/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/ontologies /home/dropwizard/import-onto/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/codelist /home/dropwizard/import-auth/
 
-COPY data/xmlns /home/dropwizard/download-ns/
+COPY --from=0 /home/belgif/vocab-belgif/prod/data/xmlns /home/dropwizard/download-ns/
 
 RUN mkdir /home/dropwizard/download-auth  && \ 
     chown -R dropwizard:0 /home/dropwizard && \
