@@ -16,13 +16,18 @@
 				<col class="col-sm-2">
 				<col class="col-sm-10">
 			</colgroup>
+			<thead class="bg-dark text-light">
+				<tr><th>${m.getString("msg.property")}</th>
+					<th>${m.getString("msg.description")}</th>
+				</tr>
+			</thead>
 			<#assign val = sh.getVersion(l)!sh.getVersion("")!"">
 			<#if val?has_content>
-				<tr><th>${m.getString("msg.version")}</th><td>${val}</td></tr>
+				<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
 			</#if>
 			<#assign val = sh.getLabel(l)!sh.getLabel("")!"">
 			<#if val?has_content>
-				<tr><th>RDFS label</th><td>${val}</td></tr>
+				<tr><td>RDFS label</td><td>${val}</td></tr>
 			</#if>
 			<#assign val = sh.getComment(l)!sh.getComment("")!"">
 			<#if val?has_content>
@@ -62,7 +67,7 @@
 			<#assign target = ns.target!"">
 			<#if target?has_content>
 			<thead class="bg-dark text-light">
-				<tr><th colspan="4"><a href="${target}">${sh.getShort(target)}</a></th></tr>
+				<tr><th colspan="4"><a href="${target}" class="text-light">${sh.getShort(target)}</a></th></tr>
 			</thead>
 			</#if>
 			<tbody>
