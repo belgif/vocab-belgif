@@ -35,6 +35,9 @@
 		<#if val?has_content>
 			<tr><td>RDFS comment</td><td>${val}</td></tr>
 		</#if>
+		<#list o.seeAlso as val>
+			<tr><td>Info</td><td><a href="${val}">${val}</a></td></tr>
+		</#list>
 			<tr><td>Prefix</td><td>${o.id.namespace}</td></tr>
 		</tbody>
 		</table>

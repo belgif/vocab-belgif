@@ -68,6 +68,7 @@
 			<#if target?has_content>
 			<thead class="bg-dark text-light">
 				<tr><th colspan="4"><a href="${target}" class="text-light">${sh.getShort(target)}</a></th></tr>
+				<tr><th>Path</th><th>#</th><th>Target</th><th>Comment</th></tr>
 			</thead>
 			</#if>
 			<tbody>

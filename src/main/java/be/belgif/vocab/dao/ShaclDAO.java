@@ -64,7 +64,18 @@ public class ShaclDAO extends RdfDAO {
 	 */
 	public class ShaclPropertyShapeDAO extends RdfDAO {
 		private final List<ShaclPropertyShapeDAO> nested = new ArrayList<>();
-		
+	
+		/**
+		 * Get description
+		 * 
+		 * @param lang language
+		 * @return string or null
+		 */
+		@Override
+		public String getDescription(String lang) {
+			return literal(SHACL.DESCRIPTION, lang);
+		}
+
 		/**
 		 * Get path
 		 * 

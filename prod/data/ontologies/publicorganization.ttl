@@ -10,6 +10,7 @@
 <http://vocab.belgif.be/ns/publicorganization#> a owl:Ontology;
   rdfs:comment "ICEG Organisation Publique"@fr, "ICEG Public Organization"@en, "ICEG Publieke Organisatie"@nl;
   rdfs:label "ICEG-PO"@en, "ICEG-PO"@fr, "ICEG-PO"@nl;
+  rdfs:seeAlso <https://belgif.github.io/thematic/models/public%20organisation/index_en.html> ;
   owl:versionInfo "Draft 2022-01-21" .
 
 iceg-po:certification a rdf:Property, owl:ObjectProperty;

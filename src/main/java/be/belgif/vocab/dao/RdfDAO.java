@@ -155,7 +155,16 @@ public class RdfDAO {
 	public String getComment(String lang) {
 		return literal(RDFS.COMMENT, lang);
 	}
-	
+
+	/**
+	 * Get link to additional info
+	 *
+	 * @return IRI or null
+	 */
+	public Set<Value> getSeeAlso() {
+		return objs(RDFS.SEEALSO);
+	}
+
 	/**
 	 * Get sameAs URIs
 	 *
