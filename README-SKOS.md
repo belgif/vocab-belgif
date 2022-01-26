@@ -10,7 +10,6 @@ In order to be published on vocab.belgif.be, the following requirements must be 
 ## SKOS Concept Scheme
  * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]#id
     * where short-taxonomy-name is all-lowercase, only alphanumeric characters and hyphens are permitted
-    * 
  * skos:ConceptScheme must have a dcterms:title in Dutch, French, English and German (will be used in the HTML overview)
  * skos:ConceptScheme must have a dcterms:description in Dutch, French, English and German (will be used in the HTML overview)
 
