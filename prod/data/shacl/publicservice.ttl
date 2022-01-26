@@ -10,31 +10,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en> <https://semiceu.github.io/shacl/iceg-public-service_enshapes> <https://semiceu.github.io/shacl/iceg-public-service_en#LegalResourceShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#BusinessEventShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#ChannelShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#CostShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#EventShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#EvidenceShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#LifeEventShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#OutputShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#ParticipationShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#PublicOrganizationShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#PublicServiceDatasetShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#RequirementShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#PublicServiceShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#RuleShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#CollectionShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#ConceptShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#AddressShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#SiteShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#AgentShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#GroupShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#ContactPointShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#OpeningHoursSpecificationShape>,
-    <https://semiceu.github.io/shacl/iceg-public-service_en#PurposeShape> .
+<http://vocab.belgif.be/shacl/publicservice#> a owl:Ontology;
+  rdfs:comment "ICEG Public Service SHACL rules"@en, "ICEG Public Service rules"@fr,
+    "ICEG Public Service"@nl, "ICEG Public Service rules"@de;
+  rdfs:label "ICEG PS"@de, "ICEG PS"@en, "ICEG PS"@fr, "ICEG PS"@nl;
+  owl:versionInfo "Draft 2022-01-26".
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#AddressShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#AddressShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -106,7 +88,7 @@
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#AgentShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.w3.org/ns/locn#Address>;
@@ -137,11 +119,11 @@
   ];
   shacl:targetClass foaf:Agent .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#BusinessEventShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#BusinessEventShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/BusinessEvent> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#ChannelShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#ChannelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class schemas:OpeningHoursSpecification;
@@ -185,7 +167,7 @@ required for an online channel, whereas a physical signature may be required for
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Channel> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#CollectionShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#CollectionShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
@@ -195,7 +177,7 @@ required for an online channel, whereas a physical signature may be required for
   ];
   shacl:targetClass skos:Collection .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#ConceptShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#ConceptShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype skos:Concept;
@@ -206,7 +188,7 @@ required for an online channel, whereas a physical signature may be required for
   ];
   shacl:targetClass skos:Concept .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#ContactPointShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class schemas:OpeningHoursSpecification;
@@ -242,7 +224,7 @@ representative of it, can be contacted."""@en;
   ];
   shacl:targetClass schemas:ContactPoint .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#CostShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#CostShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -287,7 +269,7 @@ representative of it, can be contacted."""@en;
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Cost> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#EventShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#EventShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -322,7 +304,7 @@ representative of it, can be contacted."""@en;
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Event> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#EvidenceShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#EvidenceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/Output>;
@@ -374,7 +356,7 @@ This property might be used when a Public Service consumes its own Output as Evi
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#GroupShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#GroupShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class foaf:Agent;
@@ -384,7 +366,7 @@ This property might be used when a Public Service consumes its own Output as Evi
   ];
   shacl:targetClass foaf:Group .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#LegalResourceShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#LegalResourceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
@@ -394,11 +376,11 @@ This property might be used when a Public Service consumes its own Output as Evi
   ];
   shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#LifeEventShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#LifeEventShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/LifeEvent> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#OpeningHoursSpecificationShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#OpeningHoursSpecificationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:anyURI;
@@ -424,7 +406,7 @@ This property might be used when a Public Service consumes its own Output as Evi
   ];
   shacl:targetClass schemas:OpeningHoursSpecification .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#OutputShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#OutputShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -477,7 +459,7 @@ This property might be used when a Public Service consumes its own Output as Evi
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Output> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#ParticipationShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#ParticipationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -503,7 +485,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#PublicOrganizationShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#PublicOrganizationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/Channel>;
@@ -524,7 +506,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#PublicServiceDatasetShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#PublicServiceDatasetShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -553,7 +535,7 @@ this is an extension mechanism for the CSPV-AP, the controlled vocabulary should
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PublicServiceDataset> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#PublicServiceShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#PublicServiceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -581,12 +563,12 @@ Public Organization that is the Competent Authority of the service is the one th
 ultimately responsible for managing and providing the public service.
 The term Competent Authority is defined in the Services Directive (2006/123/EC) in
 the following way:
-Any body or authority which has a supervisory or regulatory role in a Member State
+'Any body or authority which has a supervisory or regulatory role in a Member State
 in relation to service activities, including, in particular, administrative authorities,
 including courts acting as such, professional bodies, and those professional
 associations or other professional organizations which, in the exercise of their legal
 autonomy, regulate in a collective manner access to service activities or the exercise
-thereof."""@en;
+thereof'."""@en;
     shacl:minCount 1;
     shacl:name "has competent authority"@en;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
@@ -629,7 +611,7 @@ including courts acting as such, professional bodies, and those professional ass
     shacl:path dc:identifier
   ], [
     shacl:class skos:Concept;
-    shacl:definition "The Is Classified By property allows to classify the Public Service with any Concept, other than those already foreseen and defined explicitely in the CPSV-AP (Thematic Area, Sector, ). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience "@en;
+    shacl:definition "The Is Classified By property allows to classify the Public Service with any Concept, other than those already foreseen and defined explicitely in the CPSV-AP (Thematic Area, Sector, ...). It is a generic property which can be further specialised to make the classification explicit, for instance for classifying public services according level of digitisation, type of audience ..."@en;
     shacl:name "is classified by"@en;
     shacl:path <http://data.europa.eu/m8g/isClassifiedBy>
   ], [
@@ -718,7 +700,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology."
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#PurposeShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#PurposeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/Channel>;
@@ -726,7 +708,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology."
     shacl:name "has channel"@en
   ] .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#RequirementShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#RequirementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -782,7 +764,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology."
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Requirement> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#RuleShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#RuleShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
@@ -819,7 +801,7 @@ the Legal Resource under which the Rules are being defined (see section 3.16).""
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#Rule> .
 
-<https://semiceu.github.io/shacl/iceg-public-service_en#SiteShape> a shacl:NodeShape;
+<http://vocab.belgif.be/shacl/publicservice#SiteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.w3.org/ns/locn#Address>;

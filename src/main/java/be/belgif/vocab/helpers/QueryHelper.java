@@ -55,7 +55,7 @@ import org.eclipse.rdf4j.model.vocabulary.SHACL;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.model.vocabulary.VCARD4;
 import org.eclipse.rdf4j.model.vocabulary.VOID;
-import org.eclipse.rdf4j.model.vocabulary.XMLSchema;
+import org.eclipse.rdf4j.model.vocabulary.XSD;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
@@ -92,13 +92,16 @@ public class QueryHelper {
 		NS_MAP.put(SKOS.PREFIX, SKOS.NAMESPACE);
 		NS_MAP.put(VCARD4.PREFIX, VCARD4.NAMESPACE);
 		NS_MAP.put(VOID.PREFIX, VOID.NAMESPACE);
-		NS_MAP.put(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
+		NS_MAP.put(XSD.PREFIX, XSD.NAMESPACE);
 		NS_MAP.put(Hydra.PREFIX, Hydra.NAMESPACE);
 		
 		// Joinup Core Vocabularies
+		NS_MAP.put("adms", "http://www.w3.org/ns/adms#");
+		NS_MAP.put("cpsv", "http://purl.org/vocab/cpsv#");
 		NS_MAP.put("cv", "http://data.europa.eu/m8g/");
 		NS_MAP.put("eli", "http://data.europa.eu/eli/ontology#");
 		NS_MAP.put("schema", "http://schema.org/");
+		NS_MAP.put("schemas", "https://schema.org/");	
 	}
 
 	private final static String PREFIX = App.getPrefix();
