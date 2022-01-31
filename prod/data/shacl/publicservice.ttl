@@ -11,10 +11,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://vocab.belgif.be/shacl/publicservice#> a owl:Ontology;
-  rdfs:comment "ICEG Public Service SHACL rules"@en, "ICEG Public Service rules"@fr,
-    "ICEG Public Service"@nl, "ICEG Public Service rules"@de;
+  rdfs:comment "ICEG Public Service SHACL rules"@en, "ICEG Public Service SHACL rules"@fr,
+    "ICEG Public Service SHACL rules"@nl, "ICEG Public Service SHACL rules"@de;
   rdfs:label "ICEG PS"@de, "ICEG PS"@en, "ICEG PS"@fr, "ICEG PS"@nl;
-  owl:versionInfo "Draft 2022-01-26".
+  owl:versionInfo "Draft 2022-01-31".
 
 <http://vocab.belgif.be/shacl/publicservice#AddressShape> a shacl:NodeShape;
   shacl:closed false;
