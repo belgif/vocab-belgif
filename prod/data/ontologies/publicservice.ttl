@@ -12,7 +12,7 @@
 <http://vocab.belgif.be/ns/publicservice#> a owl:Ontology;
   rdfs:comment "ICEG Public Service"@en, "ICEG Publieke Organisatie"@nl, "ICEG Service Public"@fr;
   rdfs:label "ICEG-PS"@en, "ICEG-PS"@fr, "ICEG-PS"@nl;
-  rdfs:seeAlso <https://belgif.github.io/thematic/models/public%20organisation/index_en.html> ;
+  rdfs:seeAlso <https://belgif.github.io/thematic/models/public%20services/index_en.html> ;
   owl:versionInfo "Draft 2022-01-21" .
 
 iceg-ps:hasPurpose a rdf:Property, owl:ObjectProperty;
