@@ -39,7 +39,7 @@ public class ManagedRepository implements Managed {
 
 	@Override
 	public void start() throws Exception {
-		repo.initialize();
+		repo.init();
 	}
 
 	@Override
