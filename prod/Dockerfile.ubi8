@@ -55,5 +55,5 @@ WORKDIR /home/nonroot
 USER nonroot
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
-CMD ["java", "-jar", "/home/nonroot/vocab-belgif.jar"]
+CMD ["java", "-jar", "/home/nonroot/vocab-belgif.jar", "server", "/home/nonroot/config.yml"]
 
