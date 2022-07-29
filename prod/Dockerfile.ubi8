@@ -32,13 +32,12 @@ USER root
 
 RUN echo 'nonroot:x:1949000151:0:non-root user:/home/nonroot:/sbin/nologin' >> /etc/passwd && \
   mkdir /home/nonroot && \
-  chgrp -R 0 /home/nonroot && \
-  chmod -R g=u /home/nonroot
+  chown nonroot:0 /home/nonroot
 
 COPY --from=temp /usr/local/bin/dumb-init /usr/local/bin/dumb-init
 COPY --from=temp /home/belgif/vocab-belgif/target/lod-vocab-*.jar /home/nonroot/vocab-belgif.jar
 
-COPY --from=temp /home/belgif/vocab-belgif/prod/cfg /home/nonroot/ 
+COPY --from=temp /home/belgif/vocab-belgif/prod/cfg /home/nonroot/
 
 COPY --from=temp /home/belgif/vocab-belgif/prod/data/context /home/nonroot/download-ctx/
 
@@ -50,10 +49,11 @@ COPY --from=temp /home/belgif/vocab-belgif/prod/data/codelist /home/nonroot/impo
 
 COPY --from=temp /home/belgif/vocab-belgif/prod/data/xmlns /home/nonroot/download-ns/
 
+RUN chmod -R 777 /home/nonroot/lucene /home/nonroot/logs /home/nonroot/download-*
+
 WORKDIR /home/nonroot
 
 USER nonroot
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 CMD ["java", "-jar", "/home/nonroot/vocab-belgif.jar", "server", "/home/nonroot/config.yml"]
-
