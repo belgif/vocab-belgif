@@ -31,7 +31,8 @@ LABEL org.opencontainers.image.authors="Bart Hanssens <bart.hanssens@bosa.fgov.b
 USER root
 
 RUN echo 'nonroot:x:1949000151:0:non-root user:/home/nonroot:/sbin/nologin' >> /etc/passwd && \
-  mkdir /home/nonroot && \
+  mkdir /home/nonroot /home/nonroot/lucene /home/nonroot/store /home/nonroot/logs && \
+  mkdir /home/nonroot/download-auth /home/nonroot/download-onto && \
   chown nonroot:0 /home/nonroot
 
 COPY --from=temp /usr/local/bin/dumb-init /usr/local/bin/dumb-init
@@ -49,7 +50,7 @@ COPY --from=temp /home/belgif/vocab-belgif/prod/data/codelist /home/nonroot/impo
 
 COPY --from=temp /home/belgif/vocab-belgif/prod/data/xmlns /home/nonroot/download-ns/
 
-RUN chmod -R 777 /home/nonroot/lucene /home/nonroot/logs /home/nonroot/download-*
+RUN chmod -R 777 /home/nonroot/lucene /home/nonroot/store /home/nonroot/logs /home/nonroot/download-*
 
 WORKDIR /home/nonroot
 
