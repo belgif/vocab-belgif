@@ -1,41 +1,45 @@
-dataDir: /home/dropwizard/store
-luceneDir: /home/dropwizard/lucene
+dataDir: /home/nonroot/store
+luceneDir: /home/nonroot/lucene
 sitePrefix: http://vocab.belgif.be/
 overwrite: true
 
 ontologies:
-    downloadDir: /home/dropwizard/download-ns
-    importDir: /home/dropwizard/import-onto
+    downloadDir: /home/nonroot/download-ns
+    importDir: /home/nonroot/import-onto
 
 vocabularies:
-    downloadDir: /home/dropwizard/download-auth
-    importDir: /home/dropwizard/import-auth
+    downloadDir: /home/nonroot/download-auth
+    importDir: /home/nonroot/import-auth
 
 shacls:
-    downloadDir: /home/dropwizard/download-shacl
-    importDir: /home/dropwizard/import-shacl
+    downloadDir: /home/nonroot/download-shacl
+    importDir: /home/nonroot/import-shacl
 
 jsonldcontexts:
-    downloadDir: /home/dropwizard/download-ctx
-    importDir: /home/dropwizard/import-ctx
+    downloadDir: /home/nonroot/download-ctx
+    importDir: /home/nonroot/import-ctx
 
 xmlnamespaces:
-    downloadDir: /home/dropwizard/download-ns
-    importDir: /home/dropwizard/import-ns
+    downloadDir: /home/nonroot/download-ns
+    importDir: /home/nonroot/import-ns
     
 logging:
     level: INFO
     appenders:
       - type: file
         archive: false
-        currentLogFilename: /home/dropwizard/logs/vocab.log
+        currentLogFilename: /home/nonroot/logs/vocab.log
+        maxFileSize: 20MB
+        archive: false
 
 server:
   requestLog:
     appenders:
       - type: file
         archive: false
-        currentLogFilename: /home/dropwizard/logs/vocab-request.log
+        currentLogFilename: /home/nonroot/logs/vocab-request.log
+        maxFileSize: 20MB
+        archive: false
 
 views:
     freemarker:

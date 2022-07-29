@@ -1,0 +1,59 @@
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.14 AS temp
+
+USER root
+
+RUN microdnf install git-core
+  
+RUN curl -L -o /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.5/dumb-init_1.2.5_x86_64 && \
+  chmod +x /usr/local/bin/dumb-init
+ 
+RUN mkdir /home/belgif && cd /home/belgif && \
+  git clone https://github.com/belgif/vocab-belgif && \
+  cd /home/belgif/vocab-belgif && \
+  mvn clean install -DskipTests
+
+FROM registry.access.redhat.com/ubi8/openjdk-17-runtime:1.14
+
+LABEL org.opencontainers.image.authors="Bart Hanssens <bart.hanssens@bosa.fgov.be>" \
+  io.k8s.display-name="Vocab Belgif" \
+  org.opencontainers.image.title="Vocab Belgif" \
+  io.k8s.description="Image with vocab.belgif.be linked data thesauri / ontology server, based on RedHat UBI 8 with OpenJDK JRE 17." \
+  org.opencontainers.image.description="Image with vocab.belgif.be linked data thesauri / ontology server, based on RedHat UBI 8 with OpenJDK JRE 17" \
+  org.opencontainers.image.documentation="https://github.com/belgif/vocab-belgif" \
+  org.opencontainers.image.licenses="Copyright (C) 2022 FPS BOSA." \
+  org.opencontainers.image.source="https://github.com/belgif/vocab-belgif" \
+  io.openshift.tags="bosa, rdfs, skos, thesauri, opendata" \
+  io.openshift.min-cpu="1" \
+  io.openshift.min-memory="512Mi" \
+  io.openshift.non-scalable="true" \
+  io.openshift.wants=""
+
+USER root
+
+RUN echo 'nonroot:x:1949000151:0:non-root user:/home/nonroot:/sbin/nologin' >> /etc/passwd && \
+  mkdir /home/nonroot && \
+  chgrp -R 0 /home/nonroot && \
+  chmod -R g=u /home/nonroot
+
+COPY --from=temp /usr/local/bin/dumb-init /usr/local/bin/dumb-init
+COPY --from=temp /home/belgif/vocab-belgif/target/lod-vocab-*.jar /home/nonroot/vocab-belgif.jar
+
+COPY --from=temp /home/belgif/vocab-belgif/prod/cfg /home/nonroot/ 
+
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/context /home/nonroot/download-ctx/
+
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/shacl /home/nonroot/import-shacl/
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/shacl /home/nonroot/download-shacl/
+
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/ontologies /home/nonroot/import-onto/
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/codelist /home/nonroot/import-auth/
+
+COPY --from=temp /home/belgif/vocab-belgif/prod/data/xmlns /home/nonroot/download-ns/
+
+WORKDIR /home/nonroot
+
+USER nonroot
+
+ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
+CMD ["java", "-jar", "/home/nonroot/vocab-belgif.jar"]
+
