@@ -25,7 +25,6 @@
  */
 package be.belgif.vocab.dao;
 
-import be.belgif.vocab.helpers.EuDatasetType;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;

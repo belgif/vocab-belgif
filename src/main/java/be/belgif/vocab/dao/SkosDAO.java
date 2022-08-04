@@ -41,6 +41,7 @@ import org.eclipse.rdf4j.model.vocabulary.VOID;
  * @author Bart Hanssens
  */
 public class SkosDAO extends RdfDAO {
+
 	/**
 	 * Get SKOS root resource
 	 *

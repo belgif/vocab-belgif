@@ -71,7 +71,7 @@ public class RdfDAO {
 	}
 	
 	/**
-	 * Get set of triple objects
+	 * Get set of object values
 	 *
 	 * @param prop property URI
 	 * @return set of values or empty set
@@ -80,9 +80,9 @@ public class RdfDAO {
 		Set<Value> objs = m.filter(id, prop, null).objects();
 		return (objs == null ? Collections.emptySet() : objs);
 	}
-	
+
 	/**
-	 * Get one triple
+	 * Get one object value
 	 *
 	 * @param prop property URI
 	 * @return value or null
@@ -125,7 +125,7 @@ public class RdfDAO {
 		Iterator<String> i = literals(prop, lang).iterator();
 		return (i.hasNext() ? i.next() : null);
 	}
-	
+
 	/**
 	 * Get a RDF list as a collection of values
 	 * 
@@ -203,7 +203,7 @@ public class RdfDAO {
 	public String getTitle(String lang) {
 		return literal(DCTERMS.TITLE, lang);
 	}
-		
+
 	/**
 	 * Get version info in a specific language
 	 * 

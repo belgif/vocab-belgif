@@ -38,7 +38,7 @@ import org.eclipse.rdf4j.model.Resource;
  * 
  * @author Bart.Hanssens
  */
-public class VocabView extends RdfView {
+public class VocabView extends RdfInfoView {
 	private final SkosDAO term;
 	private final String vocabName;
 	
@@ -66,9 +66,11 @@ public class VocabView extends RdfView {
 	 * @param vocab vocabulary name
 	 * @param m triples
 	 * @param lang language
+	 * @param org rightsholder triples
+	 * @param license license triples
 	 */
-	public VocabView(String vocab, Model m, String lang) {
-		super(m.isEmpty() ? "notfound.ftl" : "vocab.ftl", lang);
+	public VocabView(String vocab, Model m, String lang, Model org, Model license) {
+		super(m.isEmpty() ? "notfound.ftl" : "vocab.ftl", lang, org, license);
 		
 		Iterator<Resource> i = m.subjects().iterator();
 		this.term = i.hasNext() ? new SkosDAO(m, (IRI) i.next()) : null;

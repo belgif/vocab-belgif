@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,72 +23,56 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.views;
 
-import be.belgif.vocab.helpers.QueryHelper;
 
-import org.eclipse.rdf4j.model.IRI;
+import be.belgif.vocab.dao.LicenseDAO;
+import be.belgif.vocab.dao.OrgDAO;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
 
 /**
- * Abstract resource querying the RDF triple store.
- *
+ * HTML view for SKOS concept schema
+ * 
  * @author Bart.Hanssens
  */
-public abstract class RdfResource {
-
-	private final Repository repo;
-
-	/**
-	 * Get repository
-	 *
-	 * @return repository
-	 */
-	protected Repository getRepository() {
-		return repo;
-	}
-
-	/**
-	 * Get triples by ID from a specific context
-	 *
-	 * @param url
-	 * @param ctx
-	 * @return RDF model
-	 */
-	protected Model getById(String url, IRI ctx) {
-		return QueryHelper.getByID(repo, QueryHelper.asURI(url), ctx);
-	}
-
-	/**
-	 * Get child triples by ID from a specific context and for a specific property
-	 *
-	 * @param url
-	 * @param ctx
-	 * @param prop
-	 * @return RDF model
-	 */
-	protected Model getObjByProp(String url, IRI ctx, IRI prop) {
-		return QueryHelper.getObjByProp(repo, QueryHelper.asURI(url), ctx, prop);
-	}
-
-	/**
-	 * Get triples of a specific class (RDF type) across all contexts
-	 *
-	 * @param type IRI
-	 * @return triples
-	 */
-	protected Model getByClass(IRI type) {
-		return QueryHelper.getByClass(repo, type);
-	}
+public abstract class RdfInfoView extends RdfView {
+	private final LicenseDAO license;
+	private final OrgDAO org;
 	
+	/**
+	 * Get license info
+	 * @return 
+	 */
+	public LicenseDAO getLicense() {
+		return this.license;
+	}
 
 	/**
-	 * Constructor
-	 *
-	 * @param repo
+	 * Get organization info
+	 * 
+	 * @return 
 	 */
-	protected RdfResource(Repository repo) {
-		this.repo = repo;
+	public OrgDAO getOrganization() {
+		return this.org;
+	}
+
+	/** 
+	 * Constructor
+	 * 
+	 * @param template template file
+	 * @param lang language
+	 * @param org
+	 * @param license
+	 */
+	protected RdfInfoView(String template, String lang, Model org, Model license) {
+		super(template, lang);
+
+		this.org = (org == null || org.isEmpty()) 
+			? null
+			: new OrgDAO(org, org.subjects().iterator().next());
+		this.license = (license == null || license.isEmpty()) 
+			? null
+			: new LicenseDAO(license, license.subjects().iterator().next());
 	}
 }
+

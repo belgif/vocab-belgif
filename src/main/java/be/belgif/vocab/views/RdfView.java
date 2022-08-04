@@ -68,8 +68,7 @@ public abstract class RdfView extends View {
 	protected RdfView(String template, String lang) {
 		super(template, StandardCharsets.UTF_8);
 		this.lang = (lang == null || lang.isEmpty()) ? "en" : lang;
-		this.msgs = ResourceBundle.getBundle("be.belgif.vocab.views.MessageBundle", 
-							new Locale(this.lang));
+		this.msgs = ResourceBundle.getBundle("be.belgif.vocab.views.MessageBundle", new Locale(this.lang));
 	}
 }
 

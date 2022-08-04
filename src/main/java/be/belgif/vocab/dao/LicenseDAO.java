@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,72 +23,24 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.vocab.resources;
+package be.belgif.vocab.dao;
 
-import be.belgif.vocab.helpers.QueryHelper;
-
-import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.repository.Repository;
+import org.eclipse.rdf4j.model.Resource;
 
 /**
- * Abstract resource querying the RDF triple store.
+ * DAO helper class for License.
  *
  * @author Bart.Hanssens
  */
-public abstract class RdfResource {
-
-	private final Repository repo;
-
-	/**
-	 * Get repository
-	 *
-	 * @return repository
-	 */
-	protected Repository getRepository() {
-		return repo;
-	}
-
-	/**
-	 * Get triples by ID from a specific context
-	 *
-	 * @param url
-	 * @param ctx
-	 * @return RDF model
-	 */
-	protected Model getById(String url, IRI ctx) {
-		return QueryHelper.getByID(repo, QueryHelper.asURI(url), ctx);
-	}
-
-	/**
-	 * Get child triples by ID from a specific context and for a specific property
-	 *
-	 * @param url
-	 * @param ctx
-	 * @param prop
-	 * @return RDF model
-	 */
-	protected Model getObjByProp(String url, IRI ctx, IRI prop) {
-		return QueryHelper.getObjByProp(repo, QueryHelper.asURI(url), ctx, prop);
-	}
-
-	/**
-	 * Get triples of a specific class (RDF type) across all contexts
-	 *
-	 * @param type IRI
-	 * @return triples
-	 */
-	protected Model getByClass(IRI type) {
-		return QueryHelper.getByClass(repo, type);
-	}
-	
-
+public class LicenseDAO extends RdfDAO {
 	/**
 	 * Constructor
 	 *
-	 * @param repo
+	 * @param m triples
+	 * @param id subject ID
 	 */
-	protected RdfResource(Repository repo) {
-		this.repo = repo;
+	public LicenseDAO(Model m, Resource id) {
+		super(m, id);
 	}
 }

@@ -43,6 +43,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.repository.Repository;
 
@@ -96,7 +97,11 @@ public class VocabResource extends RdfResource {
 	@Produces(MediaType.TEXT_HTML)
 	public VocabView getVocabHTML(@PathParam("vocab") String vocab,
 			@QueryParam("lang") Optional<String> lang) {
-		return new VocabView(vocab, get(vocab, "") , lang.orElse("en"));
+		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
+		Model rights = getObjByProp(PREFIX + vocab, ctx, DCTERMS.RIGHTS_HOLDER);
+		Model license = getObjByProp(PREFIX + vocab, ctx, DCTERMS.LICENSE);
+		
+		return new VocabView(vocab, get(vocab, ""), lang.orElse("en"), rights, license);
 	}
 
 	@GET

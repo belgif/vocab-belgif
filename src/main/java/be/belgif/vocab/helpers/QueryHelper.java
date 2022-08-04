@@ -29,6 +29,8 @@ import be.belgif.vocab.App;
 import be.belgif.vocab.ldf.Hydra;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.ws.rs.WebApplicationException;
 
@@ -189,6 +191,36 @@ public class QueryHelper {
 		return m;
 	}
 
+	/**
+	 * Get all "child" triples from a named graph based on property
+	 *
+	 * @param repo RDF store
+	 * @param subj subject IRI or null
+	 * @param ctx named graph
+	 * @param prop property
+	 * @return list of triples
+	 */
+	public static Model getObjByProp(Repository repo, IRI subj, IRI ctx, IRI prop) {
+		Model m = new LinkedHashModel();
+
+		try (RepositoryConnection conn = repo.getConnection()) {
+			// get "childs" i.e. objects from "parent" triples to be used as subject later
+			Set<IRI> objs = conn.getStatements(subj, prop, null, ctx).stream()
+				.map(Statement::getObject)
+				.filter(IRI.class::isInstance)
+				.map(IRI.class::cast)
+				.collect(Collectors.toSet());
+
+			// collect "child" triples
+			objs.forEach(s -> {
+				Iterations.addAll(
+					conn.getStatements(s, null, null, ctx), m);
+			});
+		} catch (RepositoryException e) {
+			throw new WebApplicationException(e);
+		}
+		return m;
+	}
 	
 	/**
 	 * Get list of all instances of a specific class

@@ -6,6 +6,8 @@
 <#include "header.ftl">
 <#assign m = messages>
 <#assign v = term>
+<#assign lic = license>
+<#assign rh = organization>
 <#assign langs = ['nl', 'fr', 'en', 'de']>
 <main class="container-fluid bg-light">
 	<section typeof="skos:ConceptScheme" about="${v.id}">
@@ -36,13 +38,21 @@
 				<#if val?has_content>
 					<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
 				</#if>
-				<#list langs as lang>
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>
-					<tr><td>DCTERMS description (${lang})</td>
+					<tr><td>${m.getString("msg.description")}</td>
 						<td property="dcterms:description" xml:lang="${lang}" content="${val}">${val}</td></tr>
 				</#if>
-				</#list>
+				<#if rh?has_content>
+					<#assign val = rh.getLegalName(lang)!"">
+					<tr><td>${m.getString("msg.rightsholder")}</td>
+						<td property="dcterms:rightsHolder" resource="${rh.id}">${val}</td></tr>
+				</#if>
+				<#if lic?has_content>
+					<#assign val = lic.getTitle(lang)!"">
+					<tr><td>${m.getString("msg.license")}</td>
+						<td property="dcterms:license" resource="${lic.id}">${val}</td></tr>
+				</#if>
 				</tbody>
 			</table>
 			</div>

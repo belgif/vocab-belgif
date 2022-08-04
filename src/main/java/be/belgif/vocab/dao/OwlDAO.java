@@ -33,8 +33,8 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
-
 import org.eclipse.rdf4j.model.IRI;
+
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
@@ -174,7 +174,7 @@ public class OwlDAO extends RdfDAO {
 		subjs.addAll(m.filter(null, RDFS.SUBCLASSOF, null).subjects());
 		
 		for(Resource subj: subjs) {
-			classes.add(new OwlThingDAO(getModel(), (IRI) subj));
+			classes.add(new OwlThingDAO(getModel(), (Resource) subj));
 		}
 	}
 	
@@ -190,7 +190,7 @@ public class OwlDAO extends RdfDAO {
 		subjs.addAll(m.filter(null, RDFS.SUBPROPERTYOF, null).subjects());
 
 		for(Resource subj: subjs) {
-			properties.add(new OwlThingDAO(getModel(), (IRI) subj));
+			properties.add(new OwlThingDAO(getModel(), (Resource) subj));
 		}
 	}
 	
