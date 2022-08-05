@@ -6,8 +6,8 @@
 <#include "header.ftl">
 <#assign m = messages>
 <#assign v = term>
-<#assign lic = license>
-<#assign rh = organization>
+<#assign lic = license!"">
+<#assign rh = organization!"">
 <#assign langs = ['nl', 'fr', 'en', 'de']>
 <main class="container-fluid bg-light">
 	<section typeof="skos:ConceptScheme" about="${v.id}">
