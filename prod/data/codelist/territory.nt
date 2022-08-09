@@ -1,6 +1,6 @@
 <http://vocab.belgif.be/auth/territory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://vocab.belgif.be/auth/territory> <http://purl.org/dc/terms/title> "Territories"@en .
-<http://vocab.belgif.be/auth/territoty> <http://purl.org/dc/terms/title> "Territoria"@nl .
+<http://vocab.belgif.be/auth/territory> <http://purl.org/dc/terms/title> "Territoria"@nl .
 <http://vocab.belgif.be/auth/territory> <http://purl.org/dc/terms/title> "Territoires"@fr .
 <http://vocab.belgif.be/auth/territory> <http://purl.org/dc/terms/title> "Territorien"@de .
 <http://vocab.belgif.be/auth/territory> <http://purl.org/dc/terms/description> "List of territories"@en .
