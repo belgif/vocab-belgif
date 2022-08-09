@@ -7,9 +7,19 @@
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/description> "REFNIS (à partir de 2019): la division administrative repose sur quatre unités territoriales : les r\u00E9gions, les provinces, les arrondissements administratifs et les communes."@fr .
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/description> "REFNIS (ab 2019)"@de .
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/description> "REFNIS (starting in 2019)"@en .
-<http://vocab.belgif.be/auth/refnis2019> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version 2019-03-01" .
+<http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/creator> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> .
+<http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/rightsHolder> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@fr .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@de .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@en .
+<http://vocab.belgif.be/auth/refnis2019> <http://www.w3.org/2002/07/owl#versionInfo> "2022-08-09" .
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/license> <http://statbel.fgov.be/en/statistics/opendata/licence/> .
-<http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/modified> "2019-03-01T14:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data licentie"@nl .
+<http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel licence open data"@fr .
+<http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data license"@en .
+<http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data lizenz"@de .
+<http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/modified> "2022-08-09T22:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/source> <https://economie.fgov.be/en/themes/enterprises/crossroads-bank-enterprises/services-administrations/tables-codes> .
 <http://vocab.belgif.be/auth/refnis2019> <http://purl.org/dc/terms/source> <https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie> .
 <http://vocab.belgif.be/auth/refnis2019/1000> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/refnis2019> .
@@ -1219,7 +1229,6 @@
 <http://vocab.belgif.be/auth/refnis2019/12029> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/2788523/> .
 <http://vocab.belgif.be/auth/refnis2019/12029> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q929397> .
 <http://vocab.belgif.be/auth/refnis2019/12029> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/12029> .
-
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/12000> .
 <http://vocab.belgif.be/auth/refnis2019/12000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/12041> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -1231,23 +1240,13 @@
 <http://vocab.belgif.be/auth/refnis2019/12041> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q45202943> .
+<http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/11994998/> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://sws.geonames.org/2788507/> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.wikidata.org/entity/Q908546> .
 <http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis1995/12030> .
-
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/12000> .
-<http://vocab.belgif.be/auth/refnis2019/12000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/12034> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/refnis2019> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#notation> "12034" .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sint-Amands"@de .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sint-Amands"@fr .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sint-Amands"@nl .
-<http://vocab.belgif.be/auth/refnis2019/12034> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/2786747/> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q912030> .
-<http://vocab.belgif.be/auth/refnis2019/12034> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/12034> .
+<http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis1995/12034> . 
+<http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://sws.geonames.org/2786747/> .
+<http://vocab.belgif.be/auth/refnis2019/12041> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.wikidata.org/entity/Q912030> .
 <http://vocab.belgif.be/auth/refnis2019/12035> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/12000> .
 <http://vocab.belgif.be/auth/refnis2019/12000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/12035> .
 <http://vocab.belgif.be/auth/refnis2019/12035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -5550,7 +5549,7 @@
 <http://vocab.belgif.be/auth/refnis2019/58000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/58001> .
 <http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#inScheme> <http://vocab.belgif.be/auth/refnis2019> .
-<http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#notation> "55022" .
+<http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#notation> "58001" .
 <http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#prefLabel> "La Louvi\u00E8re"@de .
 <http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#prefLabel> "La Louvi\u00E8re"@fr .
 <http://vocab.belgif.be/auth/refnis2019/58001> <http://www.w3.org/2004/02/skos/core#prefLabel> "La Louvi\u00E8re"@nl .
@@ -7077,9 +7076,9 @@
 <http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://sws.geonames.org/2790358/> .
 <http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.wikidata.org/entity/Q651751> .
 <http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis1995/72025> .
-<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/2789404/> .
-<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q651736> .
-<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/72029> .
+<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://sws.geonames.org/2789404/> .
+<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.wikidata.org/entity/Q651736> .
+<http://vocab.belgif.be/auth/refnis2019/72043> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis1995/72029> .
 <http://vocab.belgif.be/auth/refnis2019/73001> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/73000> .
 <http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/73001> .
 <http://vocab.belgif.be/auth/refnis2019/73001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
