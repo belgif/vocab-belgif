@@ -97,10 +97,11 @@
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Province du Brabant flamand"@fr .
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Provincie Vlaams-Brabant"@nl .
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/3333250/> .
+<http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/20001> .
 <http://vocab.belgif.be/auth/refnis2019/20001> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/20001> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE24> .
-<http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/auth/refnis1995/20000> .
+<http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/auth/refnis1995/2000> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/3000> .
 <http://vocab.belgif.be/auth/refnis2019/3000> <http://www.w3.org/2004/02/skos/core#narrower> <http://vocab.belgif.be/auth/refnis2019/20002> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -110,6 +111,7 @@
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Province du Brabant wallon"@fr .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Provincie Waals-Brabant"@nl .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://sws.geonames.org/3333251/> .
+<http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/20002> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE31> .
