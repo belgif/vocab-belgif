@@ -1,0 +1,173 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://vocab.belgif.be/ns/person#> a owl:Ontology;
+    rdfs:label "Person"@en, "Persoon"@nl, "Personne"@fr, "Person"@de;
+    rdfs:comment "Federal vocabulary: Person"@en, "Federaal vocabularium: Persoon"@nl, "Vocabulaire fédéral: Personne"@fr;
+    owl:versionInfo "2022-10-20" .
+
+<http://vocab.belgif.be/ns/person#Cohabitation> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Arrangement whereby two people who are not married live together.
+Can, just like a marriage, form the basis of a family.
+Legally registered."""@en,
+        """Regeling waarbij twee personen die niet getrouwd zijn samenleven. 
+Kan, net als bv een huwelijk, de basis vormen van een gezin. """@nl,
+        """Arrangement par lequel deux personnes non mariées vivent ensemble.
+Peut, tout comme un mariage, former la base d'une famille."""@fr;
+    rdfs:label "Cohabitation"@en,"Samenwoning"@nl,"Cohabitation"@fr .
+
+<http://vocab.belgif.be/ns/person#Descent> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Descent is the descending line between different generations.
+The descent can be biological as well as non-biological, eg adoption. 
+Descent can also be viewed in the ascending line. 
+The concept is narrower than kinship that also includes marriage. 
+There must be a direct link between the persons (no link between child and grandparent)."""@en,
+        """Afstamming is de dalende lijn van bloedverwantschap tussen verschillende generaties. 
+De afstamming kan ook niet-biologisch zijn, bv adoptie. Afstamming kan ook in opgaande lijn worden bekeken. Het begrip is enger dan verwantschap dat oa ook huwelijk inhoudt."""@nl,
+        """La descendance est la relation descendante entre les différentes générations.
+La descendance peut également être non biologique, par exemple l'adoption. La descendance peut également être vue dans la ligne ascendante. Le concept est plus effrayant que la parenté qui inclut également le mariage."""@fr;
+    rdfs:label "Descent"@en,"Afstamming"@nl,"Descendance"@fr .
+
+<http://vocab.belgif.be/ns/person#EmbassyResident> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "Person residing in an embassy."@en,
+        "Persoon woonachtig in een ambassade."@nl,
+        "Personne résidant dans une ambassade."@fr;
+    rdfs:label "EmbassyResident"@en,"Ambassade resident"@nl,"Résident en ambassade"@fr .
+
+<http://vocab.belgif.be/ns/person#ForeignResident> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "Foreign person residing in the country."@en,
+        "Buitenlandse persoon woonachtig in het land."@nl,
+        "Personne étrangère résidant dans le pays."@fr;
+    rdfs:label "ForeignResident"@en,"Buitenlandse resident"@nl,"Résident étranger"@fr .
+
+<http://vocab.belgif.be/ns/person#Guardianship> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Situation where a person acting as guardian serves another person and in that capacity is responsible for this person and his goods.
+This is the case, for example, for minors who have lost their parents or for adults who have lost their intellectual faculties."""@en,
+        """Situatie waarbij een persoon die optreedt als voogd ve ander persoon en in die hoedanigheid instaat voor deze persoon en zijn goederen. 
+Dit is bv het geval voor minderjarigen die hun ouders zijn verloren of voor meerderjarigen die hun verstandelijke vermogens zijn verloren. """@nl,
+        """Situation où une personne agissant en tant que tuteur sert une autre personne et à ce titre est responsable de cette personne et de ses biens.
+C'est le cas, par exemple, des mineurs ayant perdu leurs parents ou des adultes ayant perdu leurs facultés intellectuelles."""@fr;
+    rdfs:label "Guardianship"@en,"Voogdij"@nl,"Tutelle"@fr .
+
+<http://vocab.belgif.be/ns/person#Household> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Form of cooperation that forms a recognizable social unit (eg through marriage), with persons who are related or not, who have lasting ties and provide mutual support and care.
+A broader concept than family where the family consists solely of close relatives, eg a single-person family or living separately together. Family members usually have the same whereabouts."""@en,
+        """Samenwerkingsvorm die een herkenbare sociale eenheid vormt (bv tgv huwelijk), met al dan niet verwante personen die duurzame banden hebben en elkaar onderling steun en verzorging verlenen. 
+Ruimer begrip dan familie waar het gezin louter bestaat uit nabije bloedverwanten, bv een enpersoonsgezin of living apart together. Gezinsleden hebben doorgaans dezelfde Verblijfplaats. """@nl,
+        """Forme de coopération qui forme une unité sociale reconnaissable (par exemple par le mariage), avec des personnes apparentées ou non, qui ont des liens durables et se soutiennent mutuellement.
+Un concept plus large que la famille où la famille est constituée uniquement de parents proches, par exemple une famille monoparentale ou vivant séparément ensemble. Les membres de la famille ont généralement le même endroit."""@fr;
+    rdfs:label "Household"@en,"Gezin"@nl,"Ménage"@fr .
+
+<http://vocab.belgif.be/ns/person#HouseholdRelation> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Relationship between members of the same family.
+Eg husband, son, mother-in-law."""@en,
+        """Relatie tussen leden van eenzelfde gezin. 
+Bv echtgenoot, zoon, schoonmoeder. """@nl,
+        """Relation entre membres d'une même famille.
+Par exemple, mari, fils, belle-mère."""@fr;
+    rdfs:label "HouseholdRelation"@en,"Gezinsrelatie"@nl,"Relation de ménage"@fr .
+
+<http://vocab.belgif.be/ns/person#Marriage> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+       """A form of cohabitation organized by civil or religious law of two persons.
+Can, just like living together, form the basis of a family."""@en,
+        """Een door burgerlijk of religieus recht geregelde samenlevingsvorm van twee personen. 
+Kan, net als bv samenwonen, de basis vormen van een gezin. """@nl,
+        """Une forme de cohabitation organisée par la loi civile ou religieuse de deux personnes.
+Peut, comme vivre ensemble, former la base d'une famille."""@fr;
+    rdfs:label "Marriage"@en,"Huwelijk"@nl,"Mariage"@fr .
+
+<http://vocab.belgif.be/ns/person#PersonRelation> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Relationship between two or more people.
+Typically these are civil relations (see marital status) but not necessarily limited to this."""@en,
+        """Relatie tussen twee of meer personen. 
+Typisch zijn dit burgerrechtelijke relaties (zie burgerlijke staat) maar niet noodzakelijk daartoe beperkt. """@nl,
+        """Relation entre deux personnes ou plus.
+Il s’agit généralement de relations civiles (voir statut matrimonial) mais pas nécessairement limitées à cela."""@fr;
+    rdfs:label "PersonRelation"@en,"Persoonsrelatie"@nl,"Relation de personne"@fr .
+
+<http://vocab.belgif.be/ns/person#Resident> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Person who lives in a certain place or country.
+Place or country is represented here by the jurisdiction entity."""@en,
+        """Persoon die in een bepaalde plaats of land woont. 
+Plaats of land wordt hier vertegenwoordigd door de entiteit jurisdictie. """@nl,
+        """Personne qui vit dans un certain endroit ou pays.
+Le lieu ou le pays est représenté ici par la jurisdiction compétente."""@fr;
+    rdfs:label "Resident"@en,"Resident"@nl,"Résident"@fr .
+
+<http://vocab.belgif.be/ns/person#civilState> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "Civil state of a person."@en,
+        "Burgerlijke staat van een persoon."@nl,
+        "Etat civil d'une personne."@fr;
+    rdfs:label "civilState"@en,"Burgerlijke staat"@nl,"Etat civil"@fr .
+
+<http://vocab.belgif.be/ns/person#fullName> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """The full name of the person, usually the combination of given names and family name.
+        Comment:
+        Norm ISA2"""@en,
+        """De volledige naam vd persoon, doorgaans de combinatie van voornamen en familienaam.
+        Comment:
+        Norm ISA2"""@nl,
+        """Le nom complet de la personne, généralement la combinaison des prénoms et du nom de famille.
+        Comment:
+        Norme ISA2"""@fr;
+    rdfs:label "fullName"@en,"Volledige naam"@nl,"Nom complet"@fr .
+
+<http://vocab.belgif.be/ns/person#givenNames> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "Given names of the person (given names aka firstnames) concatenated into 1 string."@en,
+        "Eerste voornaam en andere voornamen samengevoegd in 1 string. "@nl,
+        "Premier prénom et autres prénoms concaténés en 1 string. "@fr;
+    rdfs:label "givenNames"@en,"Voornamen"@nl,"Prénoms"@fr .
+
+<http://vocab.belgif.be/ns/person#householdRelation> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        """Nature of the relationship.
+Is typically determined relative to the head of the family. For example, if the father is a head of the family and a family member is a son, then if the grandfather were the head of the household the same family member would be a grandson."""@en,
+        """Aard vd relatie. 
+Wordt typisch bepaald tov het gezinshoofd. Bv als de vader gezinshoofd is en een gezinslid is zoon, dan zou als de grootvader gezinshoofd was datzelfde gezinslid kleinzoon zijn. """@nl,
+        """Nature de la relation
+Est généralement déterminé par rapport au chef de famille. Par exemple, si le père est un chef de famille et un membre de la famille est un fils, alors, si le grand-père était le chef de famille, le même membre de la famille serait un petit-fils."""@fr;
+    rdfs:label "householdRelation"@en,"Gezinsrelatie"@nl,"Relation de ménage"@fr .
+
+<http://vocab.belgif.be/ns/person#person1> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "First person in a relation of 2 persons."@en,
+        "Eerste persoon in een relatie van 2 personen."@nl,
+        "Première personne dans une relation de 2 personnes."@fr;
+    rdfs:label "person1"@en,"Persoon 1"@nl,"Personne 1"@fr .
+
+<http://vocab.belgif.be/ns/person#person2> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/person#>;
+    rdfs:comment 
+        "Second person in a relation of 2 persons."@en,
+        "Tweede persoon in een relatie van 2 personen."@nl,
+        "Seconde personne dans une relation de 2 personnes."@fr;
+    rdfs:label "person2"@en,"Persoon 2"@nl,"Personne 2"@fr .
+

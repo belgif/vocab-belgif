@@ -1,0 +1,94 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://vocab.belgif.be/ns/organization#> a owl:Ontology;
+    rdfs:label "Organization"@en, "Organisatie"@nl, "Organisation"@fr, "Organisation"@de;
+    rdfs:comment "Federal vocabulary: Organization"@en, "Federaal vocabularium: Organisatie"@nl, "Vocabulaire fédéral: Organisation"@fr;
+    owl:versionInfo "2022-10-20" .
+
+<http://vocab.belgif.be/ns/organization#endReason> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        "Reason why an organization or one of its sites has been stopped."@en,
+        "Reden weer waarom een onderneming of één van zijn vestigingseenheden is gestopt. "@nl,
+        "Raison pour laquelle une entreprise ou une de ses unités d'établissement  a été arrêtée."@fr;
+    rdfs:label "endReason"@en,"Reden stopzetting"@nl,"Raison d'arrêt"@fr .
+
+<http://vocab.belgif.be/ns/organization#function> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        """Role played by a person or an organization in a given organization.
+E.g. founder, manager, member of the management committee, ..."""@en,
+        """Rol gespeeld door een persoon of organisatie in een bepaalde organisatie.
+Bijv. oprichter, manager, lid van het managementcomité, ..."""@nl,
+        """Rôle joué par une personne ou une organisation dans une organisation donnée.
+Par exemple: fondateur, dirigeant, membre du comité de direction, ..."""@fr;
+    rdfs:label "function"@en,"Functie"@nl,"Fonction"@fr .
+
+<http://vocab.belgif.be/ns/organization#legalStatus> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        """The legal status of the registered organization.
+E.g. normal situation, judicial agreement, opening bankruptcy etc."""@en,
+        """De wettelijke status van de geregistreerde organisatie.
+Bijv. normale situatie, gerechtelijke overeenkomst, opening faillissement etc."""@nl,
+        """Le statut légal de l'organisation enregistrée.
+Par exemple: situation normale, accord judiciaire, mise en faillite, etc."""@fr;
+    rdfs:label "legalStatus"@en,"Rechtsstatus"@nl,"Statut légal"@fr .
+
+<http://vocab.belgif.be/ns/organization#organizationType> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        """Type of organization: 
+-natural person or 
+-legal entity/undertaking without legal personality."""@en,
+        """Type organisatie: 
+-natuurlijk persoon of 
+-rechtspersoon/onderneming zonder rechtspersoonlijkheid."""@nl,
+        """Type d'organisation: 
+- une entreprise personne physique ou
+ -une personne morale/entreprise sans personnalité juridique."""@fr;
+    rdfs:label "organizationType"@en,"Organisatietype"@nl,"Type d'organisation"@fr .
+
+<http://vocab.belgif.be/ns/organization#naturalPerson> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        "Natural person."@en,
+        "Natuurlijke persoon"@nl,
+        "Personne physique"@fr;
+    rdfs:label "naturalPerson"@en,"Natuurlijke persoon"@nl,"Personne physique"@fr .
+
+<http://vocab.belgif.be/ns/organization#nace2008> a rdf:Property, owl:ObjectProperty;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        """NACE-BEL 2008: Statistical nomenclature of Economic Activities in the European Community (Belgian version)
+The NACE-BEL is the reference framework for the production and dissemination of statistics relating to economic activities in Belgium. The NACE-BEL divides the universe of economic activities in such a way that a NACE-BEL code can be associated with a statistical unit and this on the basis of the activity that this unit carries out.
+        Comment:
+        see https://economie.fgov.be/en/themes/enterprises/crossroads-bank-enterprises/services-administrations/tables-codes (code NACE version 2008)"""@en,
+        """NACE-BEL 2008: Statistische nomenclatuur van de Economische activiteiten in de Europese Gemeenschap (Belgische versie)
+De NACE-BEL vormt het referentiekader voor de productie en de verspreiding van statistieken met betrekking tot economische activiteiten in België. De NACE-BEL verdeelt het universum van economische activiteiten zodanig dat men een NACE-BEL-code kan associëren met een statistische eenheid en dit op grond van de activiteit die deze eenheid uitoefent.
+        Comment:
+        zie https://economie.fgov.be/nl/themas/ondernemingen/kruispuntbank-van/diensten-voor-administraties/codetabellen (code NACE versie 2008)"""@nl,
+        """NACE-BEL 2008: Nomenclature statistique des activités économiques dans la Communauté européenne (version belge)
+La NACE-BEL est le cadre de référence pour la production et la diffusion de statistiques sur les activités économiques en Belgique. La NACE-BEL divise l'univers des activités économiques de telle sorte qu'un code NACE-BEL peut être associé à une unité statistique, et ce en fonction de l'activité exercée par cette unité.
+        Comment:
+        voir https://economie.fgov.be/fr/themes/entreprises/banque-carrefour-des/services-pour-les/tables-de-codes (code NACE version 2008)"""@fr;
+    rdfs:label "nace2008"@en,"Nace2008"@nl,"Nace2008"@fr .
+
+<http://vocab.belgif.be/ns/organization#Employer> a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.belgif.be/ns/organization#>;
+    rdfs:comment 
+        """For Belgian Social Security, an 'employer' is a natural or legal person, or a de facto association without legal personality which employs an employee, a trainee, an apprentice or a person assimilated to it, or one who is designated as such by the legislation
+(see https://www.socialsecurity.be/employer/instructions/dmfa/nl/latest/instructions/employers/general.html)
+        Comment:
+        Belgian employers can be identified by an nssoNumber, a pplNumber or a provisionalNssoNumber."""@en,
+        """Voor de Sociale Zekerheid wordt als ‘werkgever’ bedoeld de natuurlijke persoon, rechtspersoon of vereniging zonder rechtspersoonlijkheid die een werknemer, stagiair, leerling of een gelijkgestelde tewerkstelt, of die door de wetgeving expliciet als dusdanig is aangeduid.
+(zie https://www.socialsecurity.be/employer/instructions/dmfa/nl/latest/instructions/employers/general.html)
+        Comment:
+        Belgische werkgevers kunnen worden geïdentificeerd door een nssoNumber, een pplNumber of een provisionalNssoNumber"""@nl,
+        """Pour la Sécurité sociale belge, un ‘employeur’ est une personne physique ou morale, ou une association de fait sans personnalité juridique qui occupe un travailleur salarié, un stagiaire, un apprenti ou une personne y assimilée, ou celui qui est désigné comme tel par la législation
+(voir https://www.socialsecurity.be/employer/instructions/dmfa/fr/latest/instructions/employers/general.html)
+        Comment:
+        Les employeurs belges peuvent être identifiés par soit un nssoNumber, soit un pplNumber, soit un provisionalNssoNumber"""@fr;
+    rdfs:label "Employer"@en,"Werkgever"@nl,"Employeur"@fr .
+

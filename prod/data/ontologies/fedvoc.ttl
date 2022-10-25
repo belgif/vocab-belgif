@@ -1,0 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://vocab.belgif.be/ns/fedvoc#> a owl:Ontology;
+    rdfs:label "Fedvoc"@en, "Fedvoc"@nl, "Fedvoc"@fr, "Fedvoc"@de ;
+    rdfs:comment "Federal vocabulary"@en, "Federaal vocabularium"@nl, "Vocabulaire fédéral"@fr;
+    owl:imports <http://vocab.belgif.be/ns/location#>;
+    owl:imports <http://vocab.belgif.be/ns/organization#>;
+    owl:imports <http://vocab.belgif.be/ns/person#>;
+    owl:versionInfo "2022-10-20" .
+

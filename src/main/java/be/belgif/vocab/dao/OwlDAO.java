@@ -38,6 +38,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 
@@ -192,6 +193,15 @@ public class OwlDAO extends RdfDAO {
 		for(Resource subj: subjs) {
 			properties.add(new OwlThingDAO(getModel(), (Resource) subj));
 		}
+	}
+
+	/**
+	 * Get link to imports, if any
+	 *
+	 * @return IRI or null
+	 */
+	public Set<Value> getImports() {
+		return objs(OWL.IMPORTS);
 	}
 	
  	/**

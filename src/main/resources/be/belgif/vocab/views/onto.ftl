@@ -27,6 +27,14 @@
 		<#if val?has_content>
 			<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
 		</#if>
+		<#assign val =o.imports>
+		<#if val?has_content>
+			<tr><td>Imports</td><td>
+				<#list o.imports as val>
+					<a href="${val}">${val}</a><br/>
+				</#list>
+			</td></tr>
+		</#if>
 		<#assign val = o.getLabel(l)!"">
 		<#if val?has_content>
 			<tr><td>RDFS label</td><td>${val}</td></tr>
