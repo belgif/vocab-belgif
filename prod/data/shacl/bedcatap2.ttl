@@ -1,0 +1,755 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcat: <http://data.europa.eu/930/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://vocab.belgif.be/shacl/bedcatap2#> a owl:Ontology;
+  rdfs:comment "Federal INSPIRE / (Geo)DCAT-AP 2 profile"@en, "Profil fédéral INSPIRE / (Geo)DCAT-AP 2"@fr,
+    "Federaal INSPIRE / (Geo)DCAT-AP 2 profiel"@nl, "föderales INSPIRE / (Geo)DCAT-AP 2 Profil"@de;
+  rdfs:label "Fed DCAT-AP 2"@de, "Fed DCAT-AP 2"@en, "Fed DCAT-AP 2"@fr, "Fed DCAT-AP 2"@nl;
+  owl:versionInfo "2022-08-11" .
+
+<http://vocab.belgif.be/shacl/bedcatap2#CatalogShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:title
+	], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:description
+	], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:publisher
+	], [
+		sh:class dcat:Dataset;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:path dcat:dataset;
+		sh:severity sh:Warning
+	], [
+		sh:class dcat:DataService;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:path dcat:service
+	], [
+		sh:nodeKind sh:IRI;
+		sh:path foaf:homepage
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 4;
+		sh:path dcterms:language
+	], [
+		sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:issued;
+		sh:severity sh:Warning
+	], [
+		sh:class dcterms:Location;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:path dcterms:spatial;
+		sh:severity sh:Warning
+	], [
+		sh:class skos:ConceptScheme;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:themeTaxonomy
+	], [
+		sh:class dcat:Catalog;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:hasPart
+	], [
+		sh:class dcat:Catalog;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:isPartOf
+	], [
+		sh:class dcat:Catalog;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:catalog
+	], [
+		sh:class dcat:Record;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcat:record
+	], [
+		sh:class dcat:Distribution;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcat:distribution
+	], [
+		sh:class vcard:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:contactPoint
+	], [
+		sh:datatype xsd:string;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:identifier
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:theme
+	];
+	sh:targetClass dcat:Catalog .
+
+<http://vocab.belgif.be/shacl/bedcatap2#DatasetShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:title
+	], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:description
+	], [
+		sh:class vcard:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:contactPoint
+	], [
+		sh:class dcat:Distribution;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcat:distribution;
+    ], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 0;
+		sh:path dcat:keyword
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:path dcat:theme
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcterms:subject
+	], [
+		sh:class dcterms:Location;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcterms:spatial
+	], [
+		sh:class dcterms:PeriodOfTime;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcterms:temporal
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:created
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:modified
+	],[
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:issued
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:accrualPeriodicity
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path foaf:page
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 4;
+		sh:path dcat:landingPage
+	], [
+		sh:datatype xsd:string;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:identifier
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 4;
+		sh:path dcterms:language
+	], [
+		sh:class dcterms:ProvenanceStatement;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:provenance
+	], [
+		sh:class dcterms:Standard;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:conformsTo
+	], [
+		sh:class dcat:Dataset;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:source
+	], [
+		sh:class dqv:QualityMeasurement;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dqv:hasQualityMeasurement
+	], [
+		sh:datatype xsd:decimal;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:spatialResolutionInMeters
+	], [
+		sh:class dcterms:RightsStatement;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:accessRights
+	], [
+		sh:class dcat:Dataset;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path adms:sample
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:publisher
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcterms:creator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:custodian
+	], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:originator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:distributor
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:principalInvestigator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:processor
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:resourceProvider
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:user
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcterms:rightsHolder
+    ], [
+		sh:class dcterms:LicenseDocument;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:path dcterms:license
+    ], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:path adms:representationTechnique
+	];
+	sh:targetClass dcat:Dataset .
+
+<http://vocab.belgif.be/shacl/bedcatap2#DataServiceShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:title
+    ], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:description
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:endpointURL
+    ], [
+		sh:class dcat:Dataset;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcat:servesDataset
+	], [
+		sh:class dcterms:RightsStatement;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:accessRights
+	], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 0;
+		sh:path dcat:keyword
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:path dcat:theme
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:created
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:modified
+	],[
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:issued
+	], [
+		sh:class dcterms:Standard;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:conformsTo
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:path dcterms:type
+	], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:distributor
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:originator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:principalInvestigator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:processor
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:resourceProvider
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path geodcat:user
+	], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcterms:creator
+    ], [
+		sh:class foaf:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:path dcterms:rightsHolder
+    ], [
+		sh:class dcterms:LicenseDocument;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:path dcterms:license
+	], [
+		sh:class dcterms:Standard;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:conformsTo
+	];
+	sh:targetClass dcat:DataService .
+
+<http://vocab.belgif.be/shacl/bedcatap2#DistributionShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:title
+    ], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 0;
+		sh:uniqueLang true;
+		sh:path dcterms:description
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcat:accessURL
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:downloadURL
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:format
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:mediaType
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:compressFormat
+	], [
+		sh:class dcterms:Standard;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:conformsTo
+    ], [
+		sh:datatype xsd:decimal;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:byteSize
+    ], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path adms:status
+    ], [
+		sh:class dcterms:Location;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:spatial
+	], [
+		sh:class dcterms:PeriodOfTime;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:temporal
+    ], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:path dcterms:type
+	];
+	sh:targetClass dcat:Distribution .
+
+<http://vocab.belgif.be/shacl/bedcatap2#LicenseDocumentShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path dcterms:title
+    ], [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 0;
+		sh:uniqueLang true;
+		sh:path dcterms:description
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:type
+	];
+	sh:targetClass dcterms:LicenseDocument .
+
+<http://vocab.belgif.be/shacl/bedcatap2#CatalogRecordShape> a sh:NodeShape;
+    sh:property [
+		sh:or ( [ sh:class dcat:Dataset ] [ sh:class dcat:DataService ] );
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path foaf:primaryTopic
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:modified
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 4;
+		sh:path dcterms:language
+	], [
+		sh:class vcard:Organization;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcat:contactPoint
+	], [
+		sh:datatype xsd:string;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcterms:identifier
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 4;
+		sh:path dcat:landingPage
+	], [
+		sh:class dcat:Dataset;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:source
+	];
+	sh:targetClass dcat:CatalogRecord .
+
+<http://vocab.belgif.be/shacl/bedcatap2#FoafOrganizationShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path foaf:name
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:type
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path foaf:mbox
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 4;
+		sh:path foaf:workplaceHomepage
+	], [
+		sh:class locn:Address;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path locn:address
+	];
+	sh:targetClass foaf:Organization .
+
+<http://vocab.belgif.be/shacl/bedcatap2#vCardOrganizationShape> a sh:NodeShape;
+    sh:property [
+		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path vcard:organization-name
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path vcard:hasEmail
+	], [
+		sh:nodeKind sh:IRI;
+		sh:minCount 0;
+		sh:maxCount 4;
+		sh:path vcard:hasURL
+	], [
+		sh:class vcard:Address;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path vcard:hasAddress
+	];
+	sh:targetClass vcard:Organization .
+
+<http://vocab.belgif.be/shacl/bedcatap2#LocnAddressShape> a sh:NodeShape;
+   sh:property [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path locn:thoroughfare
+	], [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path locn:postName
+	], [
+ 		sh:datatype rdf:langString;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:uniqueLang true;
+		sh:path locn:postCode
+	], [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path locn:adminUnitL1
+	];
+	sh:targetClass locn:Address .
+
+<http://vocab.belgif.be/shacl/bedcatap2#vCardAddressShape> a sh:NodeShape;
+   sh:property [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path vcard:street-address
+	], [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path vcard:locality
+	], [
+ 		sh:datatype rdf:langString;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:uniqueLang true;
+		sh:path vcard:postal-code
+	], [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 1;
+		sh:uniqueLang true;
+		sh:path vcard:country-name
+	];
+	sh:targetClass vcard:Address .
+
+<http://vocab.belgif.be/shacl/bedcatap2#PeriodOfTimeShape> a sh:NodeShape;
+   sh:property [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcat:startDate
+	], [
+        sh:or ( [ sh:datatype xsd:date ] [ sh:datatype xsd:dateTime ] ) ;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dcat:endDate
+  	];
+	sh:targetClass dcterms:PeriodOfTime .
+
+<http://vocab.belgif.be/shacl/bedcatap2#LocationShape> a sh:NodeShape;
+   sh:property [
+		sh:datatype xsd:string;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcterms:identifier
+	], [
+ 		sh:datatype rdf:langString;
+		sh:languageIn ("nl" "fr" "de" "en");
+		sh:minCount 0;
+		sh:uniqueLang true;
+		sh:path skos:prefLabel
+	], [
+		sh:datatype xsd:string;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dcat:bbox
+	], [
+		sh:datatype xsd:string;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path locn:geometry
+  	];
+	sh:targetClass dcterms:Location .
+
+<http://vocab.belgif.be/shacl/bedcatap2#QualityMeasurementShape> a sh:NodeShape;
+   sh:property [
+		sh:class dqv:Metric;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path dqv:isMeasurementOf
+	], [
+		sh:nodeKind sh:Literal;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path dqv:value
+	], [
+		sh:class dqv:Metric;
+		sh:nodeKind sh:BlankNodeOrIRI;
+		sh:minCount 0;
+		sh:maxCount 1;
+		sh:path geodcat:spatialResolutionAsScale
+	], [
+		sh:class skos:Concept;
+		sh:nodeKind sh:IRI;
+		sh:minCount 1;
+		sh:maxCount 1;
+		sh:path sdmx-attribute:unitMeasure
+  	];
+	sh:targetClass dqv:QualityMeasurement .
+  
