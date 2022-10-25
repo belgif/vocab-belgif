@@ -3,7 +3,7 @@
 
 <http://vocab.belgif.be/ns/location#> a owl:Ontology;
     rdfs:label "Location"@en, "Locatie"@nl, "Lieu"@fr, "Standort"@de;
-    rdfs:comment "Federal vocabulary: Location"@en, "Federaal vocabularium: Locatie"@nl, "Vocabulaire fédéral: Lieu"@fr;
+    rdfs:comment "Federal vocabulary: Location"@en, "Federaal vocabularium: Locatie"@nl, "Vocabulaire fÃ©dÃ©ral: Lieu"@fr;
     owl:versionInfo "2022-10-20" .
 
 <http://vocab.belgif.be/ns/location#AddressableObject> a rdfs:Class, owl:Class;
@@ -11,10 +11,10 @@
     rdfs:comment 
         """Geographical object that can be identified with an address.
 Is abstract, ie the type of addressable object must always be specified (e.g. building unit, parcel, ..)."""@en,
-        """Geografisch object dat kan worden geïdentificeerd met een adres.
+        """Geografisch object dat kan worden geÃ¯dentificeerd met een adres.
 Is abstract, dwz het type adresseerbaar object moet altijd worden gespecificeerd (bijv. Gebouweenheid, perceel, ..)."""@nl,
-        """Objet géographique pouvant être identifié avec une adresse.
-Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spécifié (par exemple: unité de construction, parcelle, ..)."""@fr;
+        """Objet gÃ©ographique pouvant Ãªtre identifiÃ© avec une adresse.
+Est abstrait, c'est-Ã -dire que le type d'objet adressable doit toujours Ãªtre spÃ©cifiÃ© (par exemple: unitÃ© de construction, parcelle, ..)."""@fr;
     rdfs:label "AddressableObject"@en,"Adresseerbaar object"@nl,"Objet addressable"@fr .
 
 <http://vocab.belgif.be/ns/location#BuildingUnit> a rdfs:Class, owl:Class;
@@ -22,7 +22,7 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
     rdfs:comment 
         "The smallest unit within a building that is suitable for residential, commercial or recreational purposes and that can be accessed via its own lockable access from the public road, a yard or a common room."@en,
         "De kleinste eenheid binnen een gebouw die geschikt is voor woon-,bedrijfsmatige,of recreatieve doeleinden en die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg,een erf of een gemeenschappelijke ruimte."@nl,
-        "La plus petite unité à l’intérieur d’un bâtiment convenant à des fins d’habitation,d’entreprise ou de récréation et qui est rendue accessible par le biais de son propre accès délimitable  à partir de la voie publique,d’un terrain ou d’un espace commun."@fr;
+        "La plus petite unitÃ© Ã  lâ€™intÃ©rieur dâ€™un bÃ¢timent convenant Ã  des fins dâ€™habitation,dâ€™entreprise ou de rÃ©crÃ©ation et qui est rendue accessible par le biais de son propre accÃ¨s dÃ©limitable  Ã  partir de la voie publique,dâ€™un terrain ou dâ€™un espace commun."@fr;
     rdfs:label "BuildingUnit"@en,"Gebouw"@nl,"Batiment"@fr .
 
 <http://vocab.belgif.be/ns/location#MooringPlace> a rdfs:Class, owl:Class;
@@ -30,15 +30,15 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
     rdfs:comment 
         "A specifically designated place in the water, whether or not supplemented by a piece of land or a piece of land on the bank, allocated by the competent communal body and intended for the permanent anchorage of a vessel suitable for residential, commercial and recreational purposes"@en,
         "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een vaartuig voor woon-, bedrijfsmatige of recreatieve doeleinden."@nl,
-        "Un endroit spécifiquement désigné dans l’eau, complété ou non par un terrain ou une partie de terrain sur la berge, attribué par l’organisme communal compétent et qui est destiné au mouillage permanent d’un navire adapté à des fins résidentielles, commerciales ou recréationnelles."@fr;
+        "Un endroit spÃ©cifiquement dÃ©signÃ© dans lâ€™eau, complÃ©tÃ© ou non par un terrain ou une partie de terrain sur la berge, attribuÃ© par lâ€™organisme communal compÃ©tent et qui est destinÃ© au mouillage permanent dâ€™un navire adaptÃ© Ã  des fins rÃ©sidentielles, commerciales ou recrÃ©ationnelles."@fr;
     rdfs:label "MooringPlace"@en,"Aanlegplaats"@nl,"Amarrage"@fr .
 
 <http://vocab.belgif.be/ns/location#Municipality> a rdfs:Class, owl:Class;
     rdfs:isDefinedBy <http://vocab.belgif.be/ns/location#>;
     rdfs:comment 
         "Official administrative zone of the Belgian territory. The municipality is the smallest administrative part of the Belgian territory whose boundaries can only be changed by the legislator."@en,
-        "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd."@nl,
-        "Zone administrative officielle du territoire belge. La commune est la plus petite partie administrative du territoire belge dont les limites ne peuvent être modifiées que par le législateur."@fr;
+        "OfficiÃ«le administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd."@nl,
+        "Zone administrative officielle du territoire belge. La commune est la plus petite partie administrative du territoire belge dont les limites ne peuvent Ãªtre modifiÃ©es que par le lÃ©gislateur."@fr;
     rdfs:label "Municipality"@en,"Gemeente"@nl,"Commune"@fr .
 
 <http://vocab.belgif.be/ns/location#Parcel> a rdfs:Class, owl:Class;
@@ -46,7 +46,7 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
     rdfs:comment 
         "A 'parcel' is a part of the territory officially established with a cadastral or administrative purpose."@en,
         "Een 'perceel' is een deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel."@nl,
-        "Une 'parcelle' est une portion du territoire officiellement délimitée dans un but cadastral ou administratif."@fr;
+        "Une 'parcelle' est une portion du territoire officiellement dÃ©limitÃ©e dans un but cadastral ou administratif."@fr;
     rdfs:label "Parcel"@en,"Perceel"@nl,"Parcelle"@fr .
 
 <http://vocab.belgif.be/ns/location#Stand> a rdfs:Class, owl:Class;
@@ -54,7 +54,7 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
     rdfs:comment 
         "'Stand': a site or part thereof designated as such by the competent municipal authority and intended for the permanent installation of an area that is not directly and not permanently connected to the earth and suitable for residential, commercial or recreational purposes."@en,
         "'Standplaats' : een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden geschikte ruimte."@nl,
-        "'Emplacement' : un terrain ou une partie de terrain, attribué par l’organisme communal compétent et qui est destiné au stationnement permanent d’un espace, adapté à des fins résidentielles, commerciale ou récréative et qui n’est pas ancré de façon directe et permanente au sol."@fr;
+        "'Emplacement' : un terrain ou une partie de terrain, attribuÃ© par lâ€™organisme communal compÃ©tent et qui est destinÃ© au stationnement permanent dâ€™un espace, adaptÃ© Ã  des fins rÃ©sidentielles, commerciale ou rÃ©crÃ©ative et qui nâ€™est pas ancrÃ© de faÃ§on directe et permanente au sol."@fr;
     rdfs:label "Stand"@en,"Standplaats"@nl,"Emplacement"@fr .
 
 <http://vocab.belgif.be/ns/location#addressSortField> a rdf:Property, owl:ObjectProperty;
@@ -62,7 +62,7 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
     rdfs:comment 
         "Transformation of the original house number & bus number (eg addition of leading zeros) so that this can be sorted."@en,
         "Transformatie van het oorspronkelijk huisnummer&busnummer (bv toevoeging van voorloopnullen) zodat dit kan worden gesorteerd."@nl,
-        "Transformation du numéro de maison d'origine et du numéro de bus (par exemple, ajout de zéros à gauche) afin que cela puisse être trié."@fr;
+        "Transformation du numÃ©ro de maison d'origine et du numÃ©ro de bus (par exemple, ajout de zÃ©ros Ã  gauche) afin que cela puisse Ãªtre triÃ©."@fr;
     rdfs:label "addressSortField"@en,"Adres sorteerveld"@nl,"Adresse champs de triage"@fr .
 
 <http://vocab.belgif.be/ns/location#hasRepresentation> a rdf:Property, owl:ObjectProperty;
@@ -72,17 +72,17 @@ Est abstrait, c'est-à-dire que le type d'objet adressable doit toujours être spé
 E.g. Address has an AddressRepresentation."""@en,
         """Een object wordt vertegenwoordigd door een ander.
 Bijv. Adres heeft een adresrepresentatie."""@nl,
-        """Un objet est représenté par un autre.
-Par exemple: L'adresse a une représentation d'adresse."""@fr;
-    rdfs:label "hasRepresentation"@en,"Heeft voorstelling"@nl,"Est representé par"@fr .
+        """Un objet est reprÃ©sentÃ© par un autre.
+Par exemple: L'adresse a une reprÃ©sentation d'adresse."""@fr;
+    rdfs:label "hasRepresentation"@en,"Heeft voorstelling"@nl,"Est representÃ© par"@fr .
 
 <http://vocab.belgif.be/ns/location#assignedTo> a rdf:Property, owl:ObjectProperty;
     rdfs:isDefinedBy <http://vocab.belgif.be/ns/location#>;
     rdfs:comment 
         "Addressable object to which the address has been assigned."@en,
         "Adresseerbaar object waaraan het adres is toegekend."@nl,
-        "Objet adressable auquel l'adresse a été attribuée."@fr;
-    rdfs:label "assignedTo"@en,"Is gehecht aan"@nl,"Est assigné à"@fr .
+        "Objet adressable auquel l'adresse a Ã©tÃ© attribuÃ©e."@fr;
+    rdfs:label "assignedTo"@en,"Is gehecht aan"@nl,"Est assignÃ© Ã "@fr .
 
 <http://vocab.belgif.be/ns/location#isOfficiallyAssigned> a rdf:Property, owl:ObjectProperty;
     rdfs:isDefinedBy <http://vocab.belgif.be/ns/location#>;
@@ -91,9 +91,9 @@ Par exemple: L'adresse a une représentation d'adresse."""@fr;
 An address is unofficial if its existence was not known from the administrative procedures, but only after it was actually established on the site."""@en,
         """Geeft aan of het adres officieel door de adresbeheerder is toegekend.
 Een adres is niet-officieel wanneer het bestaan ervan niet gekend was vanuit de administratieve procedures, maar pas nadat nadat het feitelijk is vastgesteld op het terrein."""@nl,
-        """Indique si l'adresse a été officiellement attribuée par le gestionnaire d'adresses.
-Une adresse est officieuse si son existence n’était pas connue par les procédures administratives, mais seulement après qu’elle ait été effectivement établie sur le site."""@fr;
-    rdfs:label "isOfficiallyAssigned"@en,"Is officieel toegekend"@nl,"Est attribué officiellement"@fr .
+        """Indique si l'adresse a Ã©tÃ© officiellement attribuÃ©e par le gestionnaire d'adresses.
+Une adresse est officieuse si son existence nâ€™Ã©tait pas connue par les procÃ©dures administratives, mais seulement aprÃ¨s quâ€™elle ait Ã©tÃ© effectivement Ã©tablie sur le site."""@fr;
+    rdfs:label "isOfficiallyAssigned"@en,"Is officieel toegekend"@nl,"Est attribuÃ© officiellement"@fr .
 
 <http://vocab.belgif.be/ns/location#municipalityName> a rdf:Property, owl:ObjectProperty;
     rdfs:isDefinedBy <http://vocab.belgif.be/ns/location#>;
@@ -116,9 +116,9 @@ BEST context: part of an Identifier for an address, streetname, municipality, pa
         """String die wordt toegevoegd aan de lokale identificator om deze globaal uniek te maken.
 Laat toe om objecten te scheiden met dezelfde identificator maar van verschillende typen en / of van verschillende domeinen. In de praktijk bijvoorbeeld een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept.
 BEST context: deel van een identifier voor een adres, straatnaam, gemeente, deelgemeente, postinformatie"""@nl,
-       """String ajouté à l'identificateur local pour le rendre globalement unique.
-Permet de séparer des objets avec le même identifiant mais de différents types et / ou de différents domaines. En pratique, par exemple, un uri composé d'éléments significatifs tels qu'un nom de domaine, un type et un concept.
-Contexte BEST: partie d'un identifiant pour une adresse, un nom de rue, une commune, une sous-municipalité, des informations postales"""@fr;
+       """String ajoutÃ© Ã  l'identificateur local pour le rendre globalement unique.
+Permet de sÃ©parer des objets avec le mÃªme identifiant mais de diffÃ©rents types et / ou de diffÃ©rents domaines. En pratique, par exemple, un uri composÃ© d'Ã©lÃ©ments significatifs tels qu'un nom de domaine, un type et un concept.
+Contexte BEST: partie d'un identifiant pour une adresse, un nom de rue, une commune, une sous-municipalitÃ©, des informations postales"""@fr;
     rdfs:label "nameSpace"@en,"Namespace"@nl,"Namespace"@fr .
 
 <http://vocab.belgif.be/ns/location#streetNameStatus> a rdf:Property, owl:ObjectProperty;
@@ -126,7 +126,7 @@ Contexte BEST: partie d'un identifiant pour une adresse, un nom de rue, une comm
     rdfs:comment 
         "Current state of the streetname."@en,
         "Actuele toestand van de straatnaam."@nl,
-        "État actuel du nom de la rue."@fr;
+        "Ã‰tat actuel du nom de la rue."@fr;
     rdfs:label "streetNameStatus"@en,"Status straatnaam"@nl,"Statut du nom de la rue"@fr .
 
 <http://vocab.belgif.be/ns/location#streetNameType> a rdf:Property, owl:ObjectProperty;
@@ -148,11 +148,11 @@ Contexte BEST: partie d'un identifiant pour une adresse, un nom de rue, une comm
         Comment:
         Zie https://nl.wikipedia.org/wiki/ISO_3166-2:BE
 (BE-BRU, BE-VLG, BE-WAL)"""@nl,
-        """Concept correspondant à un code de région dans un pays.
+        """Concept correspondant Ã  un code de rÃ©gion dans un pays.
         Comment:
         Voir https://fr.wikipedia.org/wiki/ISO_3166-2:BE
 (BE-BRU, BE-VLG, BE-WAL)"""@fr;
-    rdfs:label "region"@en,"Regio"@nl,"Région"@fr .
+    rdfs:label "region"@en,"Regio"@nl,"RÃ©gion"@fr .
 
 <http://vocab.belgif.be/ns/location#country> a rdf:Property, owl:ObjectProperty;
     rdfs:isDefinedBy <http://vocab.belgif.be/ns/location#>;
@@ -165,7 +165,7 @@ CountryNisCode, CountryIsoCode (alpha2), CountryWithHistoryIsoCode, CountryIsoAl
         Comment:
         Mogelijke land conceptschemes:
 CountryNisCode, CountryIsoCode (alpha2), CountryWithHistoryIsoCode, CountryIsoAlpha3Code,  CountryIsoNum3Code"""@nl,
-        """Pays representé par un code pays.
+        """Pays representÃ© par un code pays.
         Comment:
         Conceptschemes possibles pour pays:
 CountryNisCode, CountryIsoCode (alpha2), CountryWithHistoryIsoCode, CountryIsoAlpha3Code,  CountryIsoNum3Code"""@fr;

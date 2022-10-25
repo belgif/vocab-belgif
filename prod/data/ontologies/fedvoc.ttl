@@ -3,7 +3,7 @@
 
 <http://vocab.belgif.be/ns/fedvoc#> a owl:Ontology;
     rdfs:label "Fedvoc"@en, "Fedvoc"@nl, "Fedvoc"@fr, "Fedvoc"@de ;
-    rdfs:comment "Federal vocabulary"@en, "Federaal vocabularium"@nl, "Vocabulaire fédéral"@fr;
+    rdfs:comment "Federal vocabulary"@en, "Federaal vocabularium"@nl, "Vocabulaire fÃ©dÃ©ral"@fr;
     owl:imports <http://vocab.belgif.be/ns/location#>;
     owl:imports <http://vocab.belgif.be/ns/organization#>;
     owl:imports <http://vocab.belgif.be/ns/person#>;
