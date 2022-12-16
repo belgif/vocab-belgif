@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.belgif</groupId>
     <artifactId>lod-vocab</artifactId>
-    <version>1.6.6</version>
+    <version>1.6.7</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-		<rdf4j.version>4.2.1</rdf4j.version>
+		<rdf4j.version>4.2.2</rdf4j.version>
 		<dw.version>2.1.4</dw.version>
 	</properties>
 	<name>Vocab Belgif</name>
