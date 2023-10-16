@@ -12,7 +12,7 @@ RUN mkdir /home/belgif && cd /home/belgif && \
   cd /home/belgif/vocab-belgif && \
   mvn clean install -DskipTests
 
-FROM registry.access.redhat.com/ubi8/openjdk-17-runtime:1.14-7
+FROM registry.access.redhat.com/ubi8/openjdk-17-runtime:1.17-1.1696520331
 
 LABEL org.opencontainers.image.authors="Bart Hanssens <bart.hanssens@bosa.fgov.be>" \
   io.k8s.display-name="Vocab Belgif" \
