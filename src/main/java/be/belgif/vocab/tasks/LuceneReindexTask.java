@@ -30,7 +30,8 @@ import io.dropwizard.servlets.tasks.Task;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.WebApplicationException;
+
+import jakarta.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.sail.SailRepository;

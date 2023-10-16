@@ -25,7 +25,7 @@
  */
 package be.belgif.vocab.views;
 
-import io.dropwizard.views.View;
+import io.dropwizard.views.common.View;
 
 import java.nio.charset.StandardCharsets;
 

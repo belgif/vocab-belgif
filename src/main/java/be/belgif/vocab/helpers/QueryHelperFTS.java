@@ -25,7 +25,7 @@
  */
 package be.belgif.vocab.helpers;
 
-import javax.ws.rs.WebApplicationException;
+import jakarta.ws.rs.WebApplicationException;
 
 import org.eclipse.rdf4j.model.Model;
 

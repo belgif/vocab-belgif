@@ -29,10 +29,10 @@ import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import java.net.URI;
 
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.UriBuilder;
-import org.eclipse.rdf4j.model.BNode;
+import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.core.UriBuilder;
 
+import org.eclipse.rdf4j.model.BNode;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Value;

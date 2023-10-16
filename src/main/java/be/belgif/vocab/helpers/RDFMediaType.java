@@ -28,7 +28,7 @@ package be.belgif.vocab.helpers;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 
