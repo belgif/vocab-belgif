@@ -39,6 +39,7 @@ import java.util.Map;
 import java.util.Optional;
 
 import jakarta.ws.rs.WebApplicationException;
+import org.eclipse.rdf4j.common.transaction.IsolationLevels;
 
 import org.eclipse.rdf4j.model.Resource;
 import org.eclipse.rdf4j.repository.Repository;
@@ -81,14 +82,15 @@ public abstract class AbstractImportTask extends Task {
 	 * @param name short name
 	 * @param format RDF format
 	 */
-	protected void importFile(Path file, String name, RDFFormat format) {
+	protected synchronized void importFile(Path file, String name, RDFFormat format) {
 		try (RepositoryConnection conn = repo.getConnection()) {
 			String imp = name.split("\\.")[0];
 			// load into separate context
 			Resource ctx = QueryHelper.getGraphName(type, imp);
 			
-			LOG.info("Loading data dumps from {} into {}", name, ctx);	
+			LOG.info("Loading data dumps from {} into {}", name, ctx);
 			
+			conn.setIsolationLevel(IsolationLevels.SERIALIZABLE);		
 			conn.begin();
 
 			conn.remove((Resource) null, null, null, ctx);
@@ -119,7 +121,16 @@ public abstract class AbstractImportTask extends Task {
 
 		String file = files.get(0);
 		Path infile = Paths.get(importDir, file);
-
+		
+		/*
+		if (file.endsWith(".gz")) {
+			LOG.info("Gunzip {}", infile);
+			Path uncompressed = Paths.get(importDir, file.substring(0, file.length() - 3));
+			try (GZIPInputStream gis = new GZIPInputStream(new FileInputStream(infile.toFile()))) {
+				Files.copy(gis, uncompressed);
+			}
+		}
+*/
 		LOG.info("Trying to parse {}", infile);
 
 		if (!Files.isReadable(infile)) {

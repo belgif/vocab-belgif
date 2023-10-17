@@ -26,8 +26,8 @@
 package be.belgif.vocab.tasks;
 
 import be.belgif.vocab.helpers.QueryHelper;
-
 import java.io.BufferedWriter;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -42,6 +42,8 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.helpers.BasicWriterSettings;
+import org.eclipse.rdf4j.rio.helpers.JSONLDMode;
+import org.eclipse.rdf4j.rio.helpers.JSONLDSettings;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,22 +77,23 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 		
 		conn.clearNamespaces();
 		QueryHelper.NS_MAP.forEach((p, n) -> conn.setNamespace(p, n));
-				
+
 		for (String ftype : ftypes) {
 			Path f = Paths.get(downloadDir, name + "." + ftype);
-			try (BufferedWriter w = Files.newBufferedWriter(f, StandardOpenOption.WRITE,
-					StandardOpenOption.CREATE)) {
-				Optional<RDFFormat> fmt
-						= Rio.getWriterFormatForFileName(name + "." + ftype);
-				if (fmt.isPresent()) {
+			Optional<RDFFormat> fmt = Rio.getWriterFormatForFileName(name + "." + ftype);
+
+			if (fmt.isPresent()) {
+				try (BufferedWriter w = Files.newBufferedWriter(f, 
+						StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE)) {
 					RDFWriter rdfh = Rio.createWriter(fmt.get(), w);
 					rdfh.set(BasicWriterSettings.PRETTY_PRINT, true);
 					rdfh.set(BasicWriterSettings.INLINE_BLANK_NODES, true);
+					rdfh.set(JSONLDSettings.JSONLD_MODE, JSONLDMode.COMPACT);
 					LOG.info("Writing file {}", f);
 					conn.export(rdfh, ctx);
-				} else {
-					throw new IOException("No RDF writer found for " + ftype);
 				}
+			} else {
+				throw new IOException("No RDF writer found for " + ftype);
 			}
 		}
 	}

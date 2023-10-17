@@ -48,8 +48,8 @@ import be.belgif.vocab.tasks.ShaclImportTask;
 import be.belgif.vocab.tasks.VocabImportTask;
 import be.belgif.vocab.tasks.XmlnsRegisterTask;
 
-import io.dropwizard.core.Application;
 import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.core.Application;
 import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
 import io.dropwizard.views.common.ViewBundle;
@@ -97,7 +97,7 @@ public class App extends Application<AppConfig> {
 		// native disk-based store
 		File dataDir = new File(config.getDataDir());
 		NativeStore store = new NativeStore(dataDir);
-
+	
 		// full text search
 		LuceneSail fts = new LuceneSail();
 		fts.setParameter(LuceneSail.LUCENE_DIR_KEY, config.getLuceneDir());
@@ -131,9 +131,9 @@ public class App extends Application<AppConfig> {
 
 	@Override
 	public void initialize(Bootstrap<AppConfig> config) {
-		config.addBundle(new AssetsBundle("/assets/belgif.png", "/favicon.ico", null, "index"));
-		config.addBundle(new AssetsBundle("/assets", "/static", null, "index"));
-		
+//		config.addBundle(new AssetsBundle("/assets/vocab-belgif.png", "/favicon.ico", null, "index"));
+		config.addBundle(new AssetsBundle("/assets", "/static"));
+	
 		config.addBundle(new ViewBundle<AppConfig>() {
 			@Override
 			public Map<String, Map<String, String>> getViewConfiguration(AppConfig config) {

@@ -1,9 +1,12 @@
 {
 	"@context": {
 		"dcterms": "http://purl.org/dc/terms/",
+		"geo": "http://www.opengis.net/ont/geosparql#",
 		"owl": "http://www.w3.org/2002/07/owl#",
+		"schema": "https://schema.org/",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
 		"void": "http://rdfs.org/ns/void#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
 		"dcterms:description": {
 			"@container": "@language"
     	},
@@ -56,6 +59,11 @@
 	"dcterms:modified": {},
 	"owl:versionInfo": {},
 	"void:vocabulary": {},
+	"levels": {
+		"@explicit": true,
+		"@type": "skos:Collection",
+		"skos:member": { "@embed": "@never" }
+	},
 	"skos:hasTopConcept": {
 		"@explicit": true,
 		"@type": "skos:Concept",
@@ -68,6 +76,9 @@
 		"skos:exactMatch": {},
 		"skos:closeMatch": {},
 		"skos:narrowMatch": {},
-		"skos:broadMatch": {}
+		"skos:broadMatch": {},
+		"geo:hasMetricArea": {},
+		"geo:hasMetricPerimeterLength": {},
+		"geo:hasGeometry": {}	
 	}
 }
