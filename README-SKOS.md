@@ -8,13 +8,13 @@ In order to be published on vocab.belgif.be, the following requirements must be 
  * RDF N-Triples serialization is recommended but not required (Turtle and JSON-LD are acceptable as well)
  
 ## SKOS Concept Scheme
- * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]#id
+ * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]
     * where short-taxonomy-name is all-lowercase, only alphanumeric characters and hyphens are permitted
  * skos:ConceptScheme must have a dcterms:title in Dutch, French, English and German (will be used in the HTML overview)
  * skos:ConceptScheme must have a dcterms:description in Dutch, French, English and German (will be used in the HTML overview)
 
 ## SKOS Concept
- * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]/[term-code]#id
+ * URI must adhere to the template: http://vocab.belgif.be/auth/[short-taxonomy-name]/[term-code]
    * where short-taxonomy-name is all-lowercase, only alphanumeric characters and hyphens are permitted
    * term-code can contain lowercase and uppercase characters, digits, hyphens and underscores
    * term-code can be based on English words (e.g. abbreviation), but should be relatively short
