@@ -224,11 +224,12 @@ public class App extends Application<AppConfig> {
 			return;
 		}
 
-		try(Stream<Path> files = Files.list(p)) {
-			files.forEach(f ->
-				target.queryParam("file", f.getFileName())
-					.request()
-					.post(Entity.text(""))
+		try(Stream<Path> files = Files.walk(p)) {
+			files.filter(f -> f.toFile().isFile())
+				.forEach(f -> 
+					target.queryParam("file", p.relativize(f))
+						.request()
+						.post(Entity.text(""))
 			);
 		}
 	}

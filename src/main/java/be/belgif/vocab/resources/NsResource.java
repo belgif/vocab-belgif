@@ -65,7 +65,7 @@ public class NsResource extends RdfResource {
 	}
 	
 	@GET
-	@Path("/{onto}")
+	@Path("/{onto:.+}")
 	@Produces(MediaType.TEXT_HTML)
 	public OwlView getOntoHTML(@PathParam("onto") String onto,
 				@DefaultValue("en") @QueryParam("lang") String lang) {

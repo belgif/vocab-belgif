@@ -84,7 +84,9 @@ public abstract class AbstractImportTask extends Task {
 	 */
 	protected synchronized void importFile(Path file, String name, RDFFormat format) {
 		try (RepositoryConnection conn = repo.getConnection()) {
-			String imp = name.split("\\.")[0];
+			int sep = name.lastIndexOf(".");
+			String imp = name.substring(0, sep);
+			
 			// load into separate context
 			Resource ctx = QueryHelper.getGraphName(type, imp);
 			
