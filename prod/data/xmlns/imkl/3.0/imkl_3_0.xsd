@@ -1,0 +1,933 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:imkl="https://vocab.belgif.be/ns/imkl/IMKL3.0"
+    xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:act-core="http://inspire.ec.europa.eu/schemas/act-core/4.0"
+    xmlns:us-net-common="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
+    xmlns:us-net-el="http://inspire.ec.europa.eu/schemas/us-net-el/4.0"
+    xmlns:us-net-tc="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0"
+    xmlns:us-net-ogc="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0"
+    xmlns:us-net-sw="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
+    xmlns:us-net-wa="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0"
+    xmlns:us-net-th="http://inspire.ec.europa.eu/schemas/us-net-th/4.0"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd"
+    targetNamespace="https://vocab.belgif.be/ns/imkl/3.0"
+    elementFormDefault="qualified"
+    version="3.0">
+
+    <import namespace="http://inspire.ec.europa.eu/schemas/base/3.3"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/base/3.3/BaseTypes.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/act-core/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/act-core/4.0/ActivityComplex_Core.xsd" />
+    <import
+        namespace="http://inspire.ec.europa.eu/schemas/us-net-common/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-common/4.0/UtilityNetworksCommon.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-el/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-el/4.0/ElectricityNetwork.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-tc/4.0/TelecommunicationsNetwork.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-ogc/4.0/OilGasChemicalsNetwork.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-sw/4.0/SewerNetwork.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-wa/4.0/WaterNetwork.xsd" />
+    <import namespace="http://inspire.ec.europa.eu/schemas/us-net-th/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/us-net-th/4.0/ThermalNetwork.xsd" />
+    <import
+        namespace="http://www.opengis.net/gml/3.2"
+        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+    <import
+        namespace="http://www.isotc211.org/2005/gmd"
+        schemaLocation="http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd" />
+
+
+    <element
+        name="UtilityNetwork" type="imkl:UtilityNetworkType"
+        substitutionGroup="us-net-common:UtilityNetwork" />
+
+    <complexType name="UtilityNetworkType">
+        <complexContent>
+            <extension base="us-net-common:UtilityNetworkType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="authorityRole" type="imkl:AgentType" />
+                    <element name="verticalPositionDetail" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:VerticalPositionDetail</targetElement>
+                            <reversePropertyName>
+                                imkl:inNetwork</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="standardCoverageDetail" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:StandardCoverageDetail</targetElement>
+								<reversePropertyName>
+                                imkl:inNetwork</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="protectedArea" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:ProtectedArea</targetElement>
+                            <reversePropertyName>
+                                imkl:inNetwork</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="documentation" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:Document</targetElement>
+                                <reversePropertyName>
+                                imkl:inNetwork</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="annotation" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:Annotation</targetElement>
+                        <reversePropertyName>
+                                imkl:inNetwork</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="ActivityComplex" type="imkl:ActivityComplexType"
+        substitutionGroup="act-core:ActivityComplex" />
+    <complexType name="ActivityComplexType">
+        <complexContent>
+            <extension base="act-core:ActivityComplexType">
+                <sequence>
+                    <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="geometrySurvey" type="imkl:SurveyType" minOccurs="0" />
+
+                    <element name="on" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <reversePropertyName>us-net-common:utilityFacilityReference</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                        <complexType>
+                            <choice minOccurs="0">
+                                <element ref="imkl:ElectricityCable" />
+                                <element ref="imkl:TelecommunicationsCable" />
+                                <element ref="imkl:Pipe" />
+                                <element ref="imkl:OilGasChemicalsPipe" />
+                                <element ref="imkl:SewerPipe" />
+                                <element ref="imkl:ThermalPipe" />
+                                <element ref="imkl:WaterPipe" />
+                                <element ref="imkl:Duct" />
+                                <element ref="imkl:Cabinet" />
+                                <element ref="imkl:Manhole" />
+                                <element ref="imkl:Pole" />
+                                <element ref="imkl:Tower" />
+                                <element ref="imkl:Appurtenance" />
+                                <element ref="imkl:Connection" />
+                            </choice>
+                            <attributeGroup ref="gml:AssociationAttributeGroup" />
+                            <attributeGroup ref="gml:OwnershipAttributeGroup" />
+                        </complexType>
+                    </element>
+
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                                <reversePropertyName>
+                                us-net-common:utilityFacilityReference</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="ElectricityCable" type="imkl:ElectricityCableType"
+        substitutionGroup="us-net-el:ElectricityCable" />
+    <complexType name="ElectricityCableType">
+        <complexContent>
+            <extension base="us-net-el:ElectricityCableType">
+                <sequence>
+                    <group ref="imkl:CableGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="TelecommunicationsCable" type="imkl:TelecommunicationsCableType"
+        substitutionGroup="us-net-tc:TelecommunicationsCable" />
+    <complexType name="TelecommunicationsCableType">
+        <complexContent>
+            <extension base="us-net-tc:TelecommunicationsCableType">
+                <sequence>
+                    <group ref="imkl:CableGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Pipe" type="imkl:PipeType" substitutionGroup="us-net-common:Pipe" />
+    <complexType name="PipeType">
+        <complexContent>
+            <extension base="us-net-common:PipeType">
+                <sequence>
+                    <group ref="imkl:PipeGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="OilGasChemicalsPipe" type="imkl:OilGasChemicalsPipeType"
+        substitutionGroup="us-net-ogc:OilGasChemicalsPipe" />
+    <complexType name="OilGasChemicalsPipeType">
+        <complexContent>
+            <extension base="us-net-ogc:OilGasChemicalsPipeType">
+                <sequence>
+                    <group ref="imkl:PipeGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="SewerPipe" type="imkl:SewerPipeType" substitutionGroup="us-net-sw:SewerPipe" />
+    <complexType name="SewerPipeType">
+        <complexContent>
+            <extension base="us-net-sw:SewerPipeType">
+                <sequence>
+                    <group ref="imkl:PipeGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="WaterPipe" type="imkl:WaterPipeType" substitutionGroup="us-net-wa:WaterPipe" />
+    <complexType name="WaterPipeType">
+        <complexContent>
+            <extension base="us-net-wa:WaterPipeType">
+                <sequence>
+                    <group ref="imkl:PipeGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="ThermalPipe" type="imkl:ThermalPipeType"
+        substitutionGroup="us-net-th:ThermalPipe" />
+    <complexType name="ThermalPipeType">
+        <complexContent>
+            <extension base="us-net-th:ThermalPipeType">
+                <sequence>
+                    <group ref="imkl:PipeGroup" />
+                    <element name="temperature" type="gml:MeasureType" minOccurs="0" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Duct" type="imkl:DuctType" substitutionGroup="us-net-common:Duct" />
+    <complexType name="DuctType">
+        <complexContent>
+            <extension base="us-net-common:DuctType">
+                <sequence>
+                    <group ref="imkl:CableAndPipeContainerGroup" />
+                    <element name="ductWidthAccuracy" type="gml:MeasureType" minOccurs="0" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Appurtenance" type="imkl:AppurtenanceType"
+        substitutionGroup="us-net-common:Appurtenance" />
+    <complexType name="AppurtenanceType">
+        <complexContent>
+            <extension base="us-net-common:AppurtenanceType">
+                <sequence>
+                    <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="orientation" type="gml:MeasureType" minOccurs="0" />
+                    <element name="subtheme" type="gml:ReferenceType" minOccurs="0">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>SubthemeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="elevatedRisk" type="boolean" minOccurs="0" />
+                    <element name="visibility" type="gml:ReferenceType" minOccurs="0">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>VisibilityValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="appearance" type="imkl:AppearanceType" minOccurs="0" />
+                    <element name="depthDetail" type="gml:ReferenceType" minOccurs="0">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:DepthDetail</targetElement>
+								<reversePropertyName>
+                                imkl:on</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="geometrySurvey" type="imkl:SurveyType" />
+                    <element name="height" type="gml:MeasureType" minOccurs="0" />
+                    <element name="documentation" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:Document</targetElement>
+                        <reversePropertyName>
+                                imkl:refersTo</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="annotation" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:Annotation</targetElement>
+                                <reversePropertyName>
+                                imkl:associatedWith</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Connection" type="imkl:ConnectionType"
+        substitutionGroup="us-net-common:Appurtenance" />
+    <complexType name="ConnectionType">
+        <complexContent>
+            <extension base="imkl:AppurtenanceType">
+                <sequence>
+                    <element name="address" type="imkl:AddressType" minOccurs="0" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Tower" type="imkl:TowerType" substitutionGroup="us-net-common:Tower" />
+    <complexType name="TowerType">
+        <complexContent>
+            <extension base="us-net-common:TowerType">
+                <sequence>
+                    <group ref="imkl:UtilityNodeContainerGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Pole" type="imkl:PoleType" substitutionGroup="us-net-common:Pole" />
+    <complexType name="PoleType">
+        <complexContent>
+            <extension base="us-net-common:PoleType">
+                <sequence>
+                    <group ref="imkl:UtilityNodeContainerGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Manhole" type="imkl:ManholeType" substitutionGroup="us-net-common:Manhole" />
+    <complexType name="ManholeType">
+        <complexContent>
+            <extension base="us-net-common:ManholeType">
+                <sequence>
+                    <group ref="imkl:UtilityNodeContainerGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Cabinet" type="imkl:CabinetType" substitutionGroup="us-net-common:Cabinet" />
+    <complexType name="CabinetType">
+        <complexContent>
+            <extension base="us-net-common:CabinetType">
+                <sequence>
+                    <group ref="imkl:UtilityNodeContainerGroup" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <element
+        name="ProtectedArea" type="imkl:ProtectedAreaType"
+        substitutionGroup="gml:AbstractFeature" />
+
+    <complexType name="ProtectedAreaType">
+        <complexContent>
+            <extension base="gml:AbstractFeatureType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="name" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="protectedAreaType" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>ProtectedAreaTypeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="geometry" type="gml:GeometryPropertyType" />
+                    <element name="geometrySurvey" type="imkl:SurveyType" minOccurs="0" />
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                                                <reversePropertyName>
+                                imkl:protectedArea</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element
+        name="TopographicalEement"
+        type="imkl:TopographicalElementType"
+        substitutionGroup="gml:AbstractFeature" />
+
+    <complexType name="TopographicalElementType">
+        <complexContent>
+            <extension base="gml:AbstractFeatureType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="location" type="gml:GeometryPropertyType" />
+                    <element name="locationSurvey" type="imkl:SurveyType" minOccurs="0" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Document" type="imkl:DocumentType" substitutionGroup="gml:AbstractFeature" />
+    <complexType name="DocumentType">
+        <complexContent>
+            <extension base="gml:AbstractFeatureType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+
+                    <element name="documentType" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>DocumentTypeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="documentLocation" type="anyURI" />
+                    <element name="documentMediaType" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>DocumentMediaTypeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                                    <reversePropertyName>
+                                imkl:documentation</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>                    
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="ExtraPlan" type="imkl:ExtraPlanType" substitutionGroup="imkl:Document" />
+    <complexType name="ExtraPlanType">
+        <complexContent>
+            <extension base="imkl:DocumentType">
+                <sequence>
+                    <element name="refersTo" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <reversePropertyName>imkl:documentation</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                        <complexType>
+                            <choice minOccurs="0">
+                                <element ref="imkl:ElectricityCable" />
+                                <element ref="imkl:TelecommunicationsCable" />
+                                <element ref="imkl:OilGasChemicalsPipe" />
+                                <element ref="imkl:SewerPipe" />
+                                <element ref="imkl:ThermalPipe" />
+                                <element ref="imkl:WaterPipe" />
+                                <element ref="imkl:Duct" />
+                                <element ref="imkl:Pipe" />
+                                <element ref="imkl:Cabinet" />
+                                <element ref="imkl:Manhole" />
+                                <element ref="imkl:Pole" />
+                                <element ref="imkl:Tower" />
+                                <element ref="imkl:Appurtenance" />
+                                <element ref="imkl:Connection" />
+                            </choice>
+                            <attributeGroup ref="gml:AssociationAttributeGroup" />
+                            <attributeGroup ref="gml:OwnershipAttributeGroup" />
+                        </complexType>
+                    </element>
+                    <element name="location" type="gml:GeometryPropertyType" />
+                    <element name="locationSurvey" type="imkl:SurveyType" minOccurs="0" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <group name="UtilityLinkSetGroup">
+        <sequence>
+            <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+            <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+            <element name="elevatedRisk" type="boolean" minOccurs="0" />
+            <element name="visibility" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>VisibilityValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="appearance" type="imkl:AppearanceType" minOccurs="0" />
+            <element name="materialType" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>MaterialTypeValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="technicalSpecification" type="gmd:PT_FreeText_PropertyType"
+                minOccurs="0" />
+            <element name="constructionTechnique" type="gml:ReferenceType" nillable="true" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>ConstructionTechniqueValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="coverageDetail" type="gml:ReferenceType" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:CoverageDetail</targetElement>
+                        <reversePropertyName>
+                        imkl:on</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="locationSurvey" type="imkl:SurveyType" />
+            <element name="documentation" type="gml:ReferenceType" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:Document</targetElement>
+                    <reversePropertyName>
+                        imkl:refersTo</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="annotation" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:Annotation</targetElement>
+                        <reversePropertyName>
+                        imkl:associatedWith</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </group>
+
+    <group name="CableGroup">
+        <sequence>
+            <group ref="imkl:UtilityLinkSetGroup" />
+            <element name="subtheme" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>SubthemeValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="cableDiameter" type="gml:MeasureType" minOccurs="0" />
+            <element name="cableDiameterAccuracy" type="gml:MeasureType" minOccurs="0" />
+        </sequence>
+    </group>
+
+    <group name="CableAndPipeContainerGroup">
+        <sequence>
+            <group ref="imkl:UtilityLinkSetGroup" />
+            <element name="containerType" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>ContainerTypeValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </group>
+
+    <group name="PipeGroup">
+        <sequence>
+            <group ref="imkl:CableAndPipeContainerGroup" />
+            <element name="pipeDiameterAccuracy" type="gml:MeasureType" minOccurs="0" />
+            <element name="subtheme" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>SubthemeValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </group>
+
+    <group name="UtilityNodeContainerGroup">
+        <sequence>
+            <element name="beginLifespanVersion" type="dateTime" />
+            <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+            <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+            <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+            <element name="orientation" type="gml:MeasureType" minOccurs="0" />
+            <element name="elevatedRisk" type="boolean" minOccurs="0" />
+            <element name="visibility" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>VisibilityValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="appearance" type="imkl:AppearanceType" minOccurs="0" />
+            <element name="depthDetail" type="gml:ReferenceType" minOccurs="0">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:DepthDetail</targetElement>
+                        <reversePropertyName>imkl:on</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="geometrySurvey" type="imkl:SurveyType" />
+            <element name="inNetwork" type="gml:ReferenceType">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:UtilityNetwork</targetElement>
+								<reversePropertyName>
+                        imkl:elements</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="documentation" type="gml:ReferenceType" minOccurs="0"
+                maxOccurs="unbounded">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:Document</targetElement>
+                      <reversePropertyName>
+                        imkl:refersTo</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="annotation" type="gml:ReferenceType" minOccurs="0" maxOccurs="unbounded">
+                <annotation>
+                    <appinfo>
+                        <targetElement>imkl:Annotation</targetElement>
+                        <reversePropertyName>
+                        imkl:associatedWith</reversePropertyName>
+                    </appinfo>
+                </annotation>
+            </element>
+        </sequence>
+    </group>
+
+    <complexType
+        name="AgentType">
+        <sequence>
+            <element name="name" type="string" />
+            <element name="phone" type="string" />
+            <element name="email" type="string" />
+        </sequence>
+    </complexType>
+
+    <element name="VerticalPositionDetail" type="imkl:VerticalPositionDetailType"
+        substitutionGroup="gml:AbstractFeature"
+        abstract="true" />
+    <complexType name="VerticalPositionDetailType" abstract="true">
+        <complexContent>
+            <extension base="gml:AbstractFeatureType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="referenceSurface" type="imkl:ReferenceSurfaceType" />
+                    <choice>
+                        <element name="verticalPosition" type="gml:DirectPositionType" />
+                        <element name="height" type="gml:MeasureType" />
+                        <element name="depth" type="gml:MeasureType" />
+                    </choice>
+                    <element name="verticalPositionSurvey" type="imkl:SurveyType" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="DepthDetail" type="imkl:DepthDetailType"
+        substitutionGroup="imkl:VerticalPositionDetail" />
+    <complexType name="DepthDetailType">
+        <complexContent>
+            <extension base="imkl:VerticalPositionDetailType">
+                <sequence>
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                            <reversePropertyName>
+                                imkl:verticalPositionDetail</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="on" maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <reversePropertyName>imkl:depthDetail</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                        <complexType>
+                            <choice minOccurs="0">
+                                <element ref="imkl:Cabinet" />
+                                <element ref="imkl:Manhole" />
+                                <element ref="imkl:Pole" />
+                                <element ref="imkl:Tower" />
+                                <element ref="imkl:Appurtenance" />
+                                <element ref="imkl:Connection" />
+                            </choice>
+                            <attributeGroup ref="gml:AssociationAttributeGroup" />
+                            <attributeGroup ref="gml:OwnershipAttributeGroup" />
+                        </complexType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="CoverageDetail" type="imkl:CoverageDetailType"
+        substitutionGroup="imkl:VerticalPositionDetail" />
+    <complexType name="CoverageDetailType">
+        <complexContent>
+            <extension base="imkl:VerticalPositionDetailType">
+                <sequence>
+                    <element name="location" type="gml:GeometryPropertyType" />
+                    <element name="locationSurvey" type="imkl:SurveyType" />
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement> imkl:UtilityNetwork</targetElement>
+                            <reversePropertyName>
+                                imkl:verticalPositionDetail</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="on" maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <reversePropertyName>imkl:coverageDetail</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                        <complexType>
+                            <choice minOccurs="0">
+                                <element ref="imkl:ElectricityCable" />
+                                <element ref="imkl:TelecommunicationsCable" />
+                                <element ref="imkl:Pipe" />
+                                <element ref="imkl:OilGasChemicalsPipe" />
+                                <element ref="imkl:SewerPipe" />
+                                <element ref="imkl:ThermalPipe" />
+                                <element ref="imkl:WaterPipe" />
+                                <element ref="imkl:Duct" />
+                            </choice>
+                            <attributeGroup ref="gml:AssociationAttributeGroup" />
+                            <attributeGroup ref="gml:OwnershipAttributeGroup" />
+                        </complexType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="StandardCoverageDetail" type="imkl:StandardCoverageDetailType"
+        substitutionGroup="gml:AbstractFeature" />
+    <complexType name="StandardCoverageDetailType">
+        <complexContent>
+            <extension base="imkl:VerticalPositionDetailType">
+                <sequence>
+                    <element name="subtheme" type="gml:ReferenceType" minOccurs="0"
+                        maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>SubthemeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                            <reversePropertyName>
+                                imkl:standardCoverageDetail</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <element name="Annotation" type="imkl:AnnotationType" substitutionGroup="gml:AbstractFeature" />
+    <complexType name="AnnotationType">
+        <complexContent>
+            <extension base="gml:AbstractFeatureType">
+                <sequence>
+                    <element name="imklId" type="base:IdentifierPropertyType" />
+                    <element name="beginLifespanVersion" type="dateTime" />
+                    <element name="endLifespanVersion" type="dateTime" minOccurs="0" />
+                    <element name="text" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+                    <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
+
+                    <element name="annotationType" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetCodeList>AnnotationTypeValue</targetCodeList>
+                            </appinfo>
+                        </annotation>
+                    </element>
+                    <element name="rotationAngle" type="gml:MeasureType" minOccurs="0" />
+                    <element name="location" type="gml:GeometryPropertyType" />
+
+                    <element name="inNetwork" type="gml:ReferenceType">
+                        <annotation>
+                            <appinfo>
+                                <targetElement>imkl:UtilityNetwork</targetElement>
+                                    <reversePropertyName>
+                                imkl:annotation</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                    </element>
+
+                    <element name="associatedWith" minOccurs="0" maxOccurs="unbounded">
+                        <annotation>
+                            <appinfo>
+                                <reversePropertyName>imkl:annotation</reversePropertyName>
+                            </appinfo>
+                        </annotation>
+                        <complexType>
+                            <choice minOccurs="0">
+                                <element ref="imkl:ElectricityCable" />
+                                <element ref="imkl:TelecommunicationsCable" />
+                                <element ref="imkl:Pipe" />
+                                <element ref="imkl:OilGasChemicalsPipe" />
+                                <element ref="imkl:SewerPipe" />
+                                <element ref="imkl:ThermalPipe" />
+                                <element ref="imkl:WaterPipe" />
+                                <element ref="imkl:Duct" />
+                                <element ref="imkl:Cabinet" />
+                                <element ref="imkl:Manhole" />
+                                <element ref="imkl:Pole" />
+                                <element ref="imkl:Tower" />
+                                <element ref="imkl:Appurtenance" />
+                                <element ref="imkl:Connection" />
+                            </choice>
+                            <attributeGroup ref="gml:AssociationAttributeGroup" />
+                            <attributeGroup ref="gml:OwnershipAttributeGroup" />
+                        </complexType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+
+    <complexType name="SurveyType">
+        <sequence>
+            <element name="method" type="gml:ReferenceType" nillable="true">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>SurveyMethodValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="recordedBy" type="imkl:AgentType" minOccurs="0" />
+            <element name="date" type="dateTime" minOccurs="0"></element>
+            <element name="accuracy" nillable="true">
+                <complexType>
+                    <simpleContent>
+                        <extension base="gml:MeasureType">
+                            <attribute name="nilReason" type="gml:NilReasonType" />
+                        </extension>
+                    </simpleContent>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="AppearanceType">
+        <sequence>
+            <element name="colour" type="gmd:PT_FreeText_PropertyType"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="AddressType">
+        <sequence>
+            <element name="municiaplityName" type="gmd:PT_FreeText_PropertyType" />
+            <element name="streetName" type="gmd:PT_FreeText_PropertyType" />
+            <element name="houseNumber" type="string" minOccurs="0" />
+            <element name="postalCode" type="string" />
+        </sequence>
+    </complexType>
+
+    <complexType name="ReferenceSurfaceType">
+        <sequence>
+            <element name="type" type="gml:ReferenceType" minOccurs="1">
+                <annotation>
+                    <appinfo>
+                        <targetCodeList>ReferenceSurfaceTypeValue</targetCodeList>
+                    </appinfo>
+                </annotation>
+            </element>
+            <element name="verticalPosition" type="gml:DirectPositionType" minOccurs="0" />
+            <element name="verticalPositionSurvey" type="imkl:SurveyType" minOccurs="0" />
+            <element name="location" type="gml:GeometryPropertyType" minOccurs="0" />
+            <element name="locationSurvey" type="imkl:SurveyType" minOccurs="0" />
+        </sequence>
+    </complexType>
+</schema>

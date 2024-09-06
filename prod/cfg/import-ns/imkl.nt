@@ -1,0 +1,10 @@
+<http://vocab.belgif.be/ns/imkl/common#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/SCHEMA> .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/title> "IMKL"@nl .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/title> "IMKL"@fr .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/title> "IMKL"@de .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/title> "IMKL"@en .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/description> "Informatiemodel Kabels en Leidingen"@nl .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/description> "Informatiemodel Kabels en Leidingen"@fr .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/description> "Informatiemodel Kabels en Leidingen"@de .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://purl.org/dc/terms/description> "Informatiemodel Kabels en Leidingen"@en .
+<http://vocab.belgif.be/ns/imkl/common#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ns/imkl/3.0/imkl_3_0.xsd> .
