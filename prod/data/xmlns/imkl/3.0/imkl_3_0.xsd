@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-    xmlns:imkl="https://vocab.belgif.be/ns/imkl/IMKL3.0"
+    xmlns:imkl="https://vocab.belgif.be/ns/imkl/3.0"
     xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:act-core="http://inspire.ec.europa.eu/schemas/act-core/4.0"
