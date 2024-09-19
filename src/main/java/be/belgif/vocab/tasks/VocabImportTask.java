@@ -28,9 +28,11 @@ package be.belgif.vocab.tasks;
 import be.belgif.vocab.App;
 import be.belgif.vocab.helpers.QueryHelper;
 import be.belgif.vocab.ldf.QueryHelperLDF;
+
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
 import com.github.jsonldjava.utils.JsonUtils;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
@@ -45,11 +47,12 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
-import org.eclipse.rdf4j.common.iteration.Iterations;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Resource;
+import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
@@ -97,9 +100,8 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		// multi-lingual titles, descriptions etc
 		List<IRI> props = Arrays.asList(DCTERMS.TITLE, DCTERMS.DESCRIPTION,
 				DCTERMS.LICENSE, DCTERMS.SOURCE);
-		props.forEach(p
-				-> Iterations.asList(conn.getStatements(null, p, null, ctx)).forEach(
-						s -> m.add(voidID, p, s.getObject()))
+		props.forEach(p -> conn.getStatements(null, p, null, ctx)
+							.forEach( s -> m.add(voidID, p, s.getObject()))
 		);
 
 		m.add(voidID, DCTERMS.MODIFIED, f.createLiteral(new Date()));
@@ -116,10 +118,12 @@ public class VocabImportTask extends AbstractImportDumpTask {
 		m.add(voidID, VOID.URI_LOOKUP_ENDPOINT, f.createIRI(prefix + QueryHelperLDF.LDF));
 
 		// top level and examples
-		Iterations.asList(conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx)).forEach(
+		conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx).forEach(
 				s -> m.add(voidID, VOID.ROOT_RESOURCE, s.getSubject()));
-		Iterations.asList(conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx)).forEach(
-				s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
+		
+		try (Stream<Statement> stmt = conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx).stream()){
+			stmt.limit(5).forEach(s -> m.add(voidID, VOID.EXAMPLE_RESOURCE, s.getSubject()));
+		}
 
 		m.add(voidID, VOID.TRIPLES, f.createLiteral(conn.size(ctx)));
 		m.add(voidID, VOID.URI_SPACE, f.createLiteral(prefix + "auth/" + name));
@@ -127,13 +131,77 @@ public class VocabImportTask extends AbstractImportDumpTask {
 
 		return m;
 	}
-	
+
+	/**
+	 * Add missing inverse SKOS relations
+	 * 
+	 * @param conn triple store repository connection
+	 * @param name name of the thesaurus
+	 * @param ctx context / named graph
+	 */
+	private void addInverse(RepositoryConnection conn, String name, Resource ctx) {
+		// add inverse relations
+		Model m = new LinkedHashModel();
+
+		conn.getStatements(null, SKOS.HAS_TOP_CONCEPT, null, ctx)
+			.forEach(s -> m.add((Resource) s.getObject(), SKOS.TOP_CONCEPT_OF, s.getSubject(), ctx));
+		conn.getStatements(null, SKOS.TOP_CONCEPT_OF, null, ctx)
+			.forEach(s -> m.add((Resource) s.getObject(), SKOS.HAS_TOP_CONCEPT, s.getSubject(), ctx));
+		conn.getStatements(null, SKOS.BROADER, null, ctx)
+			.forEach(s -> m.add((Resource) s.getObject(), SKOS.NARROWER, s.getSubject(), ctx));
+		conn.getStatements(null, SKOS.NARROWER, null, ctx)
+			.forEach(s -> m.add((Resource) s.getObject(), SKOS.BROADER, s.getSubject(), ctx));
+		conn.add(m, ctx);
+	}
+
+	/**
+	 * Add missing topConcept relations
+	 * 
+	 * @param conn triple store repository connection
+	 * @param name name of the thesaurus
+	 * @param ctx context / named graph
+	 */
+	private void addTopConcepts(RepositoryConnection conn, String name, Resource ctx) {
+		Resource scheme;
+			
+		try(Stream<Statement> s = conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT_SCHEME, ctx).stream()) {
+			scheme = s.findFirst().get().getSubject();
+		}
+		Model m = new LinkedHashModel();
+
+		// add top concept relations
+		conn.getStatements(null, RDF.TYPE, SKOS.CONCEPT, ctx).forEach(
+			s -> {
+				if (! conn.hasStatement(s.getSubject(), SKOS.BROADER, null, false, ctx)) {
+					LOG.info("Adding top concept relation for {}", s.getSubject());
+					m.add(scheme, SKOS.HAS_TOP_CONCEPT, s.getSubject(), ctx);
+					m.add(s.getSubject(), SKOS.TOP_CONCEPT_OF, scheme, ctx);
+				}
+			}
+		);
+		conn.add(m, ctx);
+	}
+
+	/**
+	 * Add missing SKOS relations and VOID metadata
+	 * 
+	 * @param conn triple store repository connection
+	 * @param name name of the thesaurus
+	 * @param ctx context / named graph
+	 * @return VoID triples
+	 */
+	private void addRelations(RepositoryConnection conn, String name, Resource ctx) {
+		addInverse(conn, name, ctx);
+		addTopConcepts(conn, name, ctx);
+	}
 
 	@Override
 	protected void process(RepositoryConnection conn, String name, Resource ctx) throws IOException {
+		addRelations(conn, name, ctx);
+		
 		Model voidM = addVOID(conn, name, ctx);
 		conn.add(voidM, ctx);
-		
+
 		writeDumps(conn, name, ctx);
 		
 		frameJsonLd(name);

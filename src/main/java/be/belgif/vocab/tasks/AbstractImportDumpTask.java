@@ -89,7 +89,7 @@ public abstract class AbstractImportDumpTask extends AbstractImportTask {
 					rdfh.set(BasicWriterSettings.PRETTY_PRINT, true);
 					rdfh.set(BasicWriterSettings.INLINE_BLANK_NODES, true);
 					rdfh.set(JSONLDSettings.JSONLD_MODE, JSONLDMode.COMPACT);
-					LOG.info("Writing file {}", f);
+					LOG.info("Writing file {} ...", f);
 					conn.export(rdfh, ctx);
 				}
 			} else {
