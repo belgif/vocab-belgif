@@ -53,14 +53,12 @@
 			<#if sd?has_content || ed?has_content>
 			<#setting datetime_format = "iso">
 			<#if sd?has_content>
-				<#assign sd = sd?datetime>
 				<tr><td>Start Date</th>
-					<td property="schema:startDate" content="${sd}">${sd?date}</td></tr>
+					<td property="schema:startDate" content="${sd}">${sd}</td></tr>
 			</#if>
 			<#if ed?has_content>
-				<#assign ed = ed?datetime>
 				<tr><td>End Date</td>
-					<td property="schema:endDate" content="${ed}">${ed?date}</td></tr>
+					<td property="schema:endDate" content="${ed}">${ed}</td></tr>
 			</#if>
 			</#if>
 			</tbody>

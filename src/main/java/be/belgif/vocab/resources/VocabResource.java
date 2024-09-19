@@ -55,6 +55,7 @@ import org.eclipse.rdf4j.repository.Repository;
 @Path("/auth")
 public class VocabResource extends RdfResource {
 	private final static String PREFIX = App.getPrefix() + "auth/";
+	private final static String ALT_PREFIX = App.getPrefix().replace("http:", "https:") + "auth/";
 
 	/**
 	 * Get URI for the term.
@@ -67,15 +68,22 @@ public class VocabResource extends RdfResource {
 		String url = (!term.isEmpty()) ? PREFIX + vocab + "/" + term
 										: PREFIX + vocab;
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
+	
 		Model m = getById(url, ctx);
+		if (m.isEmpty()) {
+			// HTTPS URI 
+			url = (!term.isEmpty()) ? ALT_PREFIX + vocab + "/" + term
+									: ALT_PREFIX + vocab;
+			m = getById(url, ctx);
+		}
 		if (m.isEmpty()) {
 			// legacy
 			// HTTP request does NOT contain '#' or anything after that
 			url = (!term.isEmpty()) ? PREFIX + vocab + "/" + term + "#id"
 									: PREFIX + vocab + "#id";
-			ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
 			m = getById(url, ctx);
 		}
+		
 		return m;
 	}
 	
@@ -98,8 +106,15 @@ public class VocabResource extends RdfResource {
 	public VocabView getVocabHTML(@PathParam("vocab") String vocab,
 			@QueryParam("lang") Optional<String> lang) {
 		IRI ctx = QueryHelper.getGraphName(QueryHelper.VOCAB, vocab);
+
 		Model rights = getObjByProp(PREFIX + vocab, ctx, DCTERMS.RIGHTS_HOLDER);
+		if (rights.isEmpty()) {
+			rights = getObjByProp(ALT_PREFIX + vocab, ctx, DCTERMS.RIGHTS_HOLDER);
+		}
 		Model license = getObjByProp(PREFIX + vocab, ctx, DCTERMS.LICENSE);
+		if (license.isEmpty()) {
+			license = getObjByProp(ALT_PREFIX + vocab, ctx, DCTERMS.RIGHTS_HOLDER);
+		}
 		
 		return new VocabView(vocab, get(vocab, ""), lang.orElse("en"), rights, license);
 	}
