@@ -1,0 +1,74 @@
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemas: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-ElectricitySubthemeValue"@en;
+  dcterms:description "IMKL-ElectricitySubthemeValue: Codelist with possible values for the electricity subtheme."@en;
+  dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  owl:versionInfo "3.0";
+  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
+
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityCathodicProtection> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityCathodicProtection";
+  skos:prefLabel "electricityCathodicProtection"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityDistributionHighVoltage> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityDistributionHighVoltage";
+  skos:prefLabel "electricityDistributionHighVoltage"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityDistributionLowVoltage> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityDistributionLowVoltage";
+  skos:prefLabel "electricityDistributionLowVoltage"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityPublicLighting> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityPublicLighting";
+  skos:prefLabel "electricityPublicLighting"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityTrafficEnforcementSystems> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityTrafficEnforcementSystems";
+  skos:prefLabel "electricityTrafficEnforcementSystems"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityTrafficLights> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityTrafficLights";
+  skos:prefLabel "electricityTrafficLights"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityTransport> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityTransport";
+  skos:prefLabel "electricityTransport"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityTransportLocal> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
+  skos:notation "electricityTransportLocal";
+  skos:prefLabel "electricityTransportLocal"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  

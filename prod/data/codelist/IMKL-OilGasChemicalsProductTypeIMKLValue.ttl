@@ -1,0 +1,291 @@
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemas: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-OilGasChemicalsProductTypeIMKLValue"@en;
+  dcterms:description "IMKL-OilGasChemicalsProductTypeIMKLValue: Codelist with possible values for the oilGasChemicalsProductType of an OilGasChemicalsPipe."@en;
+  dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  owl:versionInfo "3.0";
+  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
+
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/accetone> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "accetone";
+  skos:prefLabel "accetone"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/air> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "air";
+  skos:prefLabel "air"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/argon> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "argon";
+  skos:prefLabel "argon"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/bioGas> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "bioGas";
+  skos:prefLabel "bioGas"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1,2> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "butadiene1,2";
+  skos:prefLabel "butadiene1,2"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1,3> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "butadiene1,3";
+  skos:prefLabel "butadiene1,3"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butane> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "butane ";
+  skos:prefLabel "butane "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/carbonDioxide> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "carbonDioxide";
+  skos:prefLabel "carbonDioxide"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/carbonMonoxide> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "carbonMonoxide ";
+  skos:prefLabel "carbonMonoxide "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/chlorine> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "chlorine ";
+  skos:prefLabel "chlorine "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/concrete> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "concrete";
+  skos:prefLabel "concrete"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/crude> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "crude";
+  skos:prefLabel "crude"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/dichloroethane> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "dichloroethane ";
+  skos:prefLabel "dichloroethane "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/diesel> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "diesel";
+  skos:prefLabel "diesel"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/empty> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "empty";
+  skos:prefLabel "empty"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/ethylene> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "ethylene ";
+  skos:prefLabel "ethylene "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/gasFabricationOfCocs> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "gasFabricationOfCocs";
+  skos:prefLabel "gasFabricationOfCocs"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/gasHFx> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "gasHFx";
+  skos:prefLabel "gasHFx"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/gasoil> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "gasoil";
+  skos:prefLabel "gasoil"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/hydrogen> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "hydrogen";
+  skos:prefLabel "hydrogen"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/isobutane> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "isobutane ";
+  skos:prefLabel "isobutane "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/JET-A1> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "JET-A1";
+  skos:prefLabel "JET-A1"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/kerosene> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "kerosene";
+  skos:prefLabel "kerosene"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/liquidAmmonia> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "liquidAmmonia";
+  skos:prefLabel "liquidAmmonia"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/liquidHydrocarbon> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "liquidHydrocarbon ";
+  skos:prefLabel "liquidHydrocarbon "@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/multiProduct> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "multiProduct";
+  skos:prefLabel "multiProduct"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/MVC> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "MVC";
+  skos:prefLabel "MVC"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/naturalGas> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "naturalGas";
+  skos:prefLabel "naturalGas"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/nitrogen> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "nitrogen";
+  skos:prefLabel "nitrogen"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/oxygen> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "oxygen";
+  skos:prefLabel "oxygen"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/phenol> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "phenol";
+  skos:prefLabel "phenol"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/propane> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "propane";
+  skos:prefLabel "propane"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/propylene> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "propylene";
+  skos:prefLabel "propylene"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/saltWater> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "saltWater";
+  skos:prefLabel "saltWater"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/sand> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "sand";
+  skos:prefLabel "sand"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/saumur> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "saumur";
+  skos:prefLabel "saumur"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/tetrachloroide> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "tetrachloroide";
+  skos:prefLabel "tetrachloroide"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/unknown> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "unknown";
+  skos:prefLabel "unknown"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/water> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
+  skos:notation "water";
+  skos:prefLabel "water"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  

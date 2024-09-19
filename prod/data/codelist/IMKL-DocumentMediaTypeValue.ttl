@@ -1,0 +1,46 @@
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemas: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-DocumentMediaTypeValue"@en;
+  dcterms:description "IMKL-DocumentMediaTypeValue: Codelist with possible values for the media type of a document."@en;
+  dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  owl:versionInfo "3.0";
+  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
+
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+
+<https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue/JPEG> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
+  skos:notation "JPEG";
+  skos:prefLabel "JPEG"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue/PDF> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
+  skos:notation "PDF";
+  skos:prefLabel "PDF"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue/PNG> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
+  skos:notation "PNG";
+  skos:prefLabel "PNG"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue/TIFF> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
+  skos:notation "TIFF";
+  skos:prefLabel "TIFF"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  

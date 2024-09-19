@@ -1,0 +1,60 @@
+@prefix rov: <http://www.w3.org/ns/regorg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemas: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-SewerSubthemeValue"@en;
+  dcterms:description "IMKL-SewerSubthemeValue: Codelist with possible values for the sewer subtheme."@en;
+  dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  owl:versionInfo "3.0";
+  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
+
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/sewageWasteWaterGravitationalPipe> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "sewageWasteWaterGravitationalPipe";
+  skos:prefLabel "sewageWasteWaterGravitationalPipe"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/sewageWasteWaterPressurePipe> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "sewageWasteWaterPressurePipe";
+  skos:prefLabel "sewageWasteWaterPressurePipe"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageArchedWaterways> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "waterDrainageArchedWaterways";
+  skos:prefLabel "waterDrainageArchedWaterways"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainagePipedCanal> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "waterDrainagePipedCanal";
+  skos:prefLabel "waterDrainagePipedCanal"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageSurfaceWaterGravitationalPipe> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "waterDrainageSurfaceWaterGravitationalPipe";
+  skos:prefLabel "waterDrainageSurfaceWaterGravitationalPipe"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageSurfaceWaterPressurePipe> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
+  skos:notation "waterDrainageSurfaceWaterPressurePipe";
+  skos:prefLabel "waterDrainageSurfaceWaterPressurePipe"@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
