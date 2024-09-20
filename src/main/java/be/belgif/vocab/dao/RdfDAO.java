@@ -157,6 +157,15 @@ public class RdfDAO {
 	}
 
 	/**
+	 * Get link to last modified date
+	 *
+	 * @return string or empty string
+	 */
+	public String getModified() {
+		return literal(DCTERMS.MODIFIED, "");
+	}
+
+	/**
 	 * Get link to additional info
 	 *
 	 * @return IRI or null

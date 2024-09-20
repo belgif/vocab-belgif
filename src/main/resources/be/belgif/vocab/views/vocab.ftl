@@ -38,6 +38,10 @@
 				<#if val?has_content>
 					<tr><td>${m.getString("msg.version")}</td><td>${val}</td></tr>
 				</#if>
+				<#assign val = v.getModified!"">
+				<#if val?has_content>
+					<tr><td>${m.getString("msg.modified")}</td><td>${val}</td></tr>
+				</#if>
 				<#assign val = v.getDescription(lang)!"">
 				<#if val?has_content>
 					<tr><td>${m.getString("msg.description")}</td>
