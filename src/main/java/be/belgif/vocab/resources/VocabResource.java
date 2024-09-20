@@ -113,7 +113,7 @@ public class VocabResource extends RdfResource {
 		}
 		Model license = getObjByProp(PREFIX + vocab, ctx, DCTERMS.LICENSE);
 		if (license.isEmpty()) {
-			license = getObjByProp(ALT_PREFIX + vocab, ctx, DCTERMS.RIGHTS_HOLDER);
+			license = getObjByProp(ALT_PREFIX + vocab, ctx, DCTERMS.LICENSE);
 		}
 		
 		return new VocabView(vocab, get(vocab, ""), lang.orElse("en"), rights, license);
