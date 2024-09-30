@@ -49,7 +49,7 @@
 				</#list>
 			</#list>
 			<#list langs as lang>
-				<#list v.getDescription(lang) as val>
+				<#list v.getDescription(lang)![] as val>
 					<tr><td property="dcterms:description" xml:lang="${lang}" content="${val}">Description (${lang})</td><td>${val}</td></tr>
 				</#list>
 			</#list>
