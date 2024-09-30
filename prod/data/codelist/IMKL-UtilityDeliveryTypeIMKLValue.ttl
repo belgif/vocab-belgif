@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-UtilityDeliveryTypeIMKLValue>;
   skos:notation "connection";
   skos:prefLabel "connection"@en;
-  dct:description "Connection linking the distribution network to the end customer."@en;
+  dcterms:description "Connection linking the distribution network to the end customer."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue>;
   skos:notation "geotextile";
   skos:prefLabel "geotextile"@en;
-  dct:description "Geotextile."@en;
+  dcterms:description "Geotextile."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue>;
   skos:notation "protectivePlate";
   skos:prefLabel "protectivePlate"@en;
-  dct:description "A series of underground protective plates to cover cables or pipelines. (e.g. plastic sheet plates)."@en;
+  dcterms:description "A series of underground protective plates to cover cables or pipelines. (e.g. plastic sheet plates)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

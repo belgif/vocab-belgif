@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "electronicCommunication";
   skos:prefLabel "electronicCommunication"@en;
-  dct:description "E.g. cables used to transport data."@en;
+  dcterms:description "E.g. cables used to transport data."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "telecommunicationDistribution";
   skos:prefLabel "telecommunicationDistribution"@en;
-  dct:description "Cabling for local distribution of radio, TV, data and telephone signals up to the user's connection point(s)."@en;
+  dcterms:description "Cabling for local distribution of radio, TV, data and telephone signals up to the user's connection point(s)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "telecommunicationMainline";
   skos:prefLabel "telecommunicationMainline"@en;
-  dct:description "Cabling carrying radio,TV, data and telephone signals over long distances to the distribution network."@en;
+  dcterms:description "Cabling carrying radio,TV, data and telephone signals over long distances to the distribution network."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

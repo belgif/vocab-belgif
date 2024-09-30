@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionInstallation";
   skos:prefLabel "cathodicProtectionInstallation"@en;
-  dct:description "Installation of cathodic protection."@en;
+  dcterms:description "Installation of cathodic protection."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionMeasurementPoint";
   skos:prefLabel "cathodicProtectionMeasurementPoint"@en;
-  dct:description "Cathodic protection measurement point."@en;
+  dcterms:description "Cathodic protection measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "deliveryPoint";
   skos:prefLabel "deliveryPoint"@en;
-  dct:description "Delivery point."@en;
+  dcterms:description "Delivery point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "effluent";
   skos:prefLabel "effluent"@en;
-  dct:description "Effluent from a treatment plant."@en;
+  dcterms:description "Effluent from a treatment plant."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "infiltrationStructure";
   skos:prefLabel "infiltrationStructure"@en;
-  dct:description "Structure for the infiltration of water."@en;
+  dcterms:description "Structure for the infiltration of water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "inlet";
   skos:prefLabel "inlet"@en;
-  dct:description "Inlet."@en;
+  dcterms:description "Inlet."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -68,7 +68,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "measurementPoint";
   skos:prefLabel "measurementPoint"@en;
-  dct:description "Measurement point."@en;
+  dcterms:description "Measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,7 +76,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "other";
   skos:prefLabel "other"@en;
-  dct:description "Other."@en;
+  dcterms:description "Other."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -84,7 +84,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "overflow";
   skos:prefLabel "overflow"@en;
-  dct:description "Overflow."@en;
+  dcterms:description "Overflow."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -92,7 +92,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerAppurtenanceTypeIMKLValue>;
   skos:notation "treatmentSystem";
   skos:prefLabel "treatmentSystem"@en;
-  dct:description "Treatment system or plant."@en;
+  dcterms:description "Treatment system or plant."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

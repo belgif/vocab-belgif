@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "sewageWasteWaterGravitationalPipe";
   skos:prefLabel "sewageWasteWaterGravitationalPipe"@en;
-  dct:description "Gravitational piping of wastewater and mixed water."@en;
+  dcterms:description "Gravitational piping of wastewater and mixed water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "sewageWasteWaterPressurePipe";
   skos:prefLabel "sewageWasteWaterPressurePipe"@en;
-  dct:description "Wastewater and mixed water pressure pipes."@en;
+  dcterms:description "Wastewater and mixed water pressure pipes."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageArchedWaterways";
   skos:prefLabel "waterDrainageArchedWaterways"@en;
-  dct:description "Piped-in sections of catalogued watercourses."@en;
+  dcterms:description "Piped-in sections of catalogued watercourses."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainagePipedCanal";
   skos:prefLabel "waterDrainagePipedCanal"@en;
-  dct:description "Piped-in canals that are not constructed according to code, often localised arches, may also have pollution connected to them."@en;
+  dcterms:description "Piped-in canals that are not constructed according to code, often localised arches, may also have pollution connected to them."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageSurfaceWaterGravitationalPipe";
   skos:prefLabel "waterDrainageSurfaceWaterGravitationalPipe"@en;
-  dct:description "Gravitational piping of rainwater (constructed according to code)."@en;
+  dcterms:description "Gravitational piping of rainwater (constructed according to code)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageSurfaceWaterPressurePipe";
   skos:prefLabel "waterDrainageSurfaceWaterPressurePipe"@en;
-  dct:description "Rainwater pressure pipes (constructed according to code)."@en;
+  dcterms:description "Rainwater pressure pipes (constructed according to code)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

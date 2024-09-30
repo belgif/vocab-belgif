@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue>;
   skos:notation "notVisibleAboveGround";
   skos:prefLabel "notVisibleAboveGround"@en;
-  dct:description "Not visible above ground."@en;
+  dcterms:description "Not visible above ground."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue>;
   skos:notation "visibleAboveGround";
   skos:prefLabel "visibleAboveGround"@en;
-  dct:description "Visible above ground."@en;
+  dcterms:description "Visible above ground."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

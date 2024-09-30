@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityCathodicProtection";
   skos:prefLabel "electricityCathodicProtection"@en;
-  dct:description "Cables for the protection of metals against electrochemical corrosion. Connections between measurement poles and measurement points are not covered by this subtheme."@en;
+  dcterms:description "Cables for the protection of metals against electrochemical corrosion. Connections between measurement poles and measurement points are not covered by this subtheme."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityDistributionHighVoltage";
   skos:prefLabel "electricityDistributionHighVoltage"@en;
-  dct:description "1-36kV"@en;
+  dcterms:description "1-36kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityDistributionLowVoltage";
   skos:prefLabel "electricityDistributionLowVoltage"@en;
-  dct:description "< 1kV"@en;
+  dcterms:description "< 1kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityPublicLighting";
   skos:prefLabel "electricityPublicLighting"@en;
-  dct:description "E.g. road lighting, illuminated signs"@en;
+  dcterms:description "E.g. road lighting, illuminated signs"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTrafficEnforcementSystems";
   skos:prefLabel "electricityTrafficEnforcementSystems"@en;
-  dct:description "E.g. red light and speed cameras, changeable signage such as ‘zone 30’, lane signs, calamity routes, smog signs,…"@en;
+  dcterms:description "E.g. red light and speed cameras, changeable signage such as ‘zone 30’, lane signs, calamity routes, smog signs,…"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTrafficLights";
   skos:prefLabel "electricityTrafficLights"@en;
-  dct:description "E.g. cables used to control traffic lights"@en;
+  dcterms:description "E.g. cables used to control traffic lights"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -68,7 +68,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTransport";
   skos:prefLabel "electricityTransport"@en;
-  dct:description "> 70kV"@en;
+  dcterms:description "> 70kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,7 +76,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTransportLocal";
   skos:prefLabel "electricityTransportLocal"@en;
-  dct:description "=< 70kV"@en;
+  dcterms:description "=< 70kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

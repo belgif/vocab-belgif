@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ConstructionTechniqueValue>;
   skos:notation "culvert";
   skos:prefLabel "culvert"@en;
-  dct:description "Culvert."@en;
+  dcterms:description "Culvert."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ConstructionTechniqueValue>;
   skos:notation "directionalDrilling";
   skos:prefLabel "directionalDrilling"@en;
-  dct:description "Directional drilling."@en;
+  dcterms:description "Directional drilling."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ConstructionTechniqueValue>;
   skos:notation "openTrench";
   skos:prefLabel "openTrench"@en;
-  dct:description "Open trench."@en;
+  dcterms:description "Open trench."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ConstructionTechniqueValue>;
   skos:notation "other";
   skos:prefLabel "other"@en;
-  dct:description "Other."@en;
+  dcterms:description "Other."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

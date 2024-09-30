@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue>;
   skos:notation "drinkingWaterDistribution";
   skos:prefLabel "drinkingWaterDistribution"@en;
-  dct:description "Regardless of its diameter, the main purpose of a distribution pipeline is to provide local distribution of drinking water by distributing the supplied water directly to a large number of individual household and non-household final customers."@en;
+  dcterms:description "Regardless of its diameter, the main purpose of a distribution pipeline is to provide local distribution of drinking water by distributing the supplied water directly to a large number of individual household and non-household final customers."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue>;
   skos:notation "drinkingWaterSupply";
   skos:prefLabel "drinkingWaterSupply"@en;
-  dct:description "A supply pipeline, irrespective of its diameter, has one of the following purposes :
+  dcterms:description "A supply pipeline, irrespective of its diameter, has one of the following purposes :
 The supply of demarcated distribution areas, whether they are of a domestic, industrial or agricultural nature or a mixture thereof;
 The security connections between and within distribution areas, with the aim of ensuring the supplied capacities of these distribution areas;
 The transport of drinking water between water production centres and between the water extractions and these water distribution centres;

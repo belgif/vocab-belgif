@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "heatDistribution";
   skos:prefLabel "heatDistribution"@en;
-  dct:description "Heat distribution."@en;
+  dcterms:description "Heat distribution."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "heatTransport";
   skos:prefLabel "heatTransport"@en;
-  dct:description "Heat transport."@en;
+  dcterms:description "Heat transport."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "steamCondensate";
   skos:prefLabel "steamCondensate"@en;
-  dct:description "Steam condensate."@en;
+  dcterms:description "Steam condensate."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "steamTransport";
   skos:prefLabel "steamTransport"@en;
-  dct:description "Steam transport."@en;
+  dcterms:description "Steam transport."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

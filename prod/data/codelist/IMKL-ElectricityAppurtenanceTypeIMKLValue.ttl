@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "grounding";
   skos:prefLabel "grounding"@en;
-  dct:description "Grounding."@en;
+  dcterms:description "Grounding."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "marker";
   skos:prefLabel "marker"@en;
-  dct:description "Marker or ground beacon."@en;
+  dcterms:description "Marker or ground beacon."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "sleeve";
   skos:prefLabel "sleeve"@en;
-  dct:description "Sleeve."@en;
+  dcterms:description "Sleeve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

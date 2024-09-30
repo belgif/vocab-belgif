@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "crossSection";
   skos:prefLabel "crossSection"@en;
-  dct:description "Document containing a cross section"@en;
+  dcterms:description "Document containing a cross section"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "detailedPlan";
   skos:prefLabel "detailedPlan"@en;
-  dct:description "Document containing a detailed plan."@en;
+  dcterms:description "Document containing a detailed plan."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "directionalDrilling";
   skos:prefLabel "directionalDrilling"@en;
-  dct:description "Document containing information on a directional drilling."@en;
+  dcterms:description "Document containing information on a directional drilling."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "longitudinalSection";
   skos:prefLabel "longitudinalSection"@en;
-  dct:description "Document containing a longitudinal section."@en;
+  dcterms:description "Document containing a longitudinal section."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "other";
   skos:prefLabel "other"@en;
-  dct:description "Other type of document"@en;
+  dcterms:description "Other type of document"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "precaution";
   skos:prefLabel "precaution"@en;
-  dct:description "Document containing precautions."@en;
+  dcterms:description "Document containing precautions."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

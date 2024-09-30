@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "digitizedPlan";
   skos:prefLabel "digitizedPlan"@en;
-  dct:description "Digitized plan."@en;
+  dcterms:description "Digitized plan."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "gnss";
   skos:prefLabel "gnss"@en;
-  dct:description "Global Navigation Satelite System."@en;
+  dcterms:description "Global Navigation Satelite System."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "lidar";
   skos:prefLabel "lidar"@en;
-  dct:description "LIDAR."@en;
+  dcterms:description "LIDAR."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "measuringTape";
   skos:prefLabel "measuringTape"@en;
-  dct:description "Measuring tape."@en;
+  dcterms:description "Measuring tape."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "measuringWheel";
   skos:prefLabel "measuringWheel"@en;
-  dct:description "Measuring wheel."@en;
+  dcterms:description "Measuring wheel."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "photogrammetry";
   skos:prefLabel "photogrammetry"@en;
-  dct:description "Photogrammetry."@en;
+  dcterms:description "Photogrammetry."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -68,7 +68,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "sketch";
   skos:prefLabel "sketch"@en;
-  dct:description "Sketch."@en;
+  dcterms:description "Sketch."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,7 +76,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "terrestrial";
   skos:prefLabel "terrestrial"@en;
-  dct:description "Terrestrial."@en;
+  dcterms:description "Terrestrial."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -84,7 +84,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "totalStation";
   skos:prefLabel "totalStation"@en;
-  dct:description "Total station."@en;
+  dcterms:description "Total station."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -92,7 +92,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "triangulation";
   skos:prefLabel "triangulation"@en;
-  dct:description "Triangulation."@en;
+  dcterms:description "Triangulation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

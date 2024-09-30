@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "annotationLabel";
   skos:prefLabel "annotationLabel"@en;
-  dct:description "To be used to visualise a label in an annotation."@en;
+  dcterms:description "To be used to visualise a label in an annotation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "annotationLine";
   skos:prefLabel "annotationLine"@en;
-  dct:description "To be used to visualise a line in an annotation."@en;
+  dcterms:description "To be used to visualise a line in an annotation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "arrow";
   skos:prefLabel "arrow"@en;
-  dct:description "To be used to visualise an arrow in an annotation."@en;
+  dcterms:description "To be used to visualise an arrow in an annotation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningGuideline";
   skos:prefLabel "dimensioningGuideline"@en;
-  dct:description "To be used to visualise an auxiliary dimensioning line."@en;
+  dcterms:description "To be used to visualise an auxiliary dimensioning line."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningLabel";
   skos:prefLabel "dimensioningLabel"@en;
-  dct:description "To be used to visualise a dimensioning label."@en;
+  dcterms:description "To be used to visualise a dimensioning label."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningLine";
   skos:prefLabel "dimensioningLine"@en;
-  dct:description "To be used to visualise a dimensioning line."@en;
+  dcterms:description "To be used to visualise a dimensioning line."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

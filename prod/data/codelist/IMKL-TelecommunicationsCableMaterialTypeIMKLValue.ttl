@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "coaxial";
   skos:prefLabel "coaxial"@en;
-  dct:description "Coaxial cable."@en;
+  dcterms:description "Coaxial cable."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "opticalFiber";
   skos:prefLabel "opticalFiber"@en;
-  dct:description "Optical fibre cable."@en;
+  dcterms:description "Optical fibre cable."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "other";
   skos:prefLabel "other"@en;
-  dct:description "Other."@en;
+  dcterms:description "Other."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "twistedPair";
   skos:prefLabel "twistedPair"@en;
-  dct:description "Twisted pair."@en;
+  dcterms:description "Twisted pair."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

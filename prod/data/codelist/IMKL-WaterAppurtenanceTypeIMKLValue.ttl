@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionInstallation";
   skos:prefLabel "cathodicProtectionInstallation"@en;
-  dct:description "Cathodic protection installation."@en;
+  dcterms:description "Cathodic protection installation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionMeasurementPoint";
   skos:prefLabel "cathodicProtectionMeasurementPoint"@en;
-  dct:description "Cathodic protection measurement point."@en;
+  dcterms:description "Cathodic protection measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "connectionValve";
   skos:prefLabel "connectionValve"@en;
-  dct:description "Connection valve."@en;
+  dcterms:description "Connection valve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "deliveryPoint";
   skos:prefLabel "deliveryPoint"@en;
-  dct:description "Delivery point."@en;
+  dcterms:description "Delivery point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "drinkingWaterExtractionPoint";
   skos:prefLabel "drinkingWaterExtractionPoint"@en;
-  dct:description "Extraction point for drinking water."@en;
+  dcterms:description "Extraction point for drinking water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterAppurtenanceTypeIMKLValue>;
   skos:notation "measurementPoint";
   skos:prefLabel "measurementPoint"@en;
-  dct:description "Measurement point."@en;
+  dcterms:description "Measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "drinkingWaterExtractionArea";
   skos:prefLabel "drinkingWaterExtractionArea"@en;
-  dct:description "Area in which a water company extracts groundwater for the production of drinking water."@en;
+  dcterms:description "Area in which a water company extracts groundwater for the production of drinking water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "geothermalInstallation";
   skos:prefLabel "geothermalInstallation"@en;
-  dct:description "Area in which a large geothermal plant occurs."@en;
+  dcterms:description "Area in which a large geothermal plant occurs."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "infiltrationArea";
   skos:prefLabel "infiltrationArea"@en;
-  dct:description "Area intended for the infiltration of water into the soil."@en;
+  dcterms:description "Area intended for the infiltration of water into the soil."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "otherProtectedArea";
   skos:prefLabel "otherProtectedArea"@en;
-  dct:description "Area protected for another reason."@en;
+  dcterms:description "Area protected for another reason."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "undergroundGasStorage";
   skos:prefLabel "undergroundGasStorage"@en;
-  dct:description "Area used for underground gas storage."@en;
+  dcterms:description "Area used for underground gas storage."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

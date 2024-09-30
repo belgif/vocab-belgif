@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "JPEG";
   skos:prefLabel "JPEG"@en;
-  dct:description "JPEG document."@en;
+  dcterms:description "JPEG document."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "PDF";
   skos:prefLabel "PDF"@en;
-  dct:description "PDF document."@en;
+  dcterms:description "PDF document."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "PNG";
   skos:prefLabel "PNG"@en;
-  dct:description "PNG document."@en;
+  dcterms:description "PNG document."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "TIFF";
   skos:prefLabel "TIFF"@en;
-  dct:description "TIFF document."@en;
+  dcterms:description "TIFF document."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

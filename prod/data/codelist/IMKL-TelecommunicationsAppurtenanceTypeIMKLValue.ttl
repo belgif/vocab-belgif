@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "amplifier";
   skos:prefLabel "amplifier"@en;
-  dct:description "Device for upgrading the signal for distribution and trunk line over long distances."@en;
+  dcterms:description "Device for upgrading the signal for distribution and trunk line over long distances."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "spliceClosure";
   skos:prefLabel "spliceClosure"@en;
-  dct:description "Splice closure."@en;
+  dcterms:description "Splice closure."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "splitter";
   skos:prefLabel "splitter"@en;
-  dct:description "Device to split the signal in two or three directions."@en;
+  dcterms:description "Device to split the signal in two or three directions."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "termination";
   skos:prefLabel "termination"@en;
-  dct:description "Home connection, split point on cable."@en;
+  dcterms:description "Home connection, split point on cable."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

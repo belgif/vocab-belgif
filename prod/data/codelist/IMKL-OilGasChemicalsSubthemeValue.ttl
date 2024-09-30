@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasDistributionLowPressure";
   skos:prefLabel "naturalGasDistributionLowPressure"@en;
-  dct:description "Pipe whose highest permissible operating pressure does not exceed 0.1 kgf/cm2 (98.07 mbar)."@en;
+  dcterms:description "Pipe whose highest permissible operating pressure does not exceed 0.1 kgf/cm2 (98.07 mbar)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasDistributionMediumPressure";
   skos:prefLabel "naturalGasDistributionMediumPressure"@en;
-  dct:description "Pipe whose highest allowable operating pressure exceeds 0.1 kgf/cm2 (98.07 mbar) without exceeding 15 kgf/cm2 (14.71 bar)."@en;
+  dcterms:description "Pipe whose highest allowable operating pressure exceeds 0.1 kgf/cm2 (98.07 mbar) without exceeding 15 kgf/cm2 (14.71 bar)."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasTransport";
   skos:prefLabel "naturalGasTransport"@en;
-  dct:description "Natural gas transmission network - installations subject to law 12/04/65."@en;
+  dcterms:description "Natural gas transmission network - installations subject to law 12/04/65."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "oilGasChemicalsTransport";
   skos:prefLabel "oilGasChemicalsTransport"@en;
-  dct:description "Transmission network for transporting products other than natural gas - installations subject to law 12/04/65."@en;
+  dcterms:description "Transmission network for transporting products other than natural gas - installations subject to law 12/04/65."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

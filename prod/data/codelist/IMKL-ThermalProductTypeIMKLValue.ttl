@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
   skos:notation "condensate";
   skos:prefLabel "condensate"@en;
-  dct:description "Condensate from a thermal pipe."@en;
+  dcterms:description "Condensate from a thermal pipe."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
   skos:notation "coolingWater";
   skos:prefLabel "coolingWater"@en;
-  dct:description "Cooling water."@en;
+  dcterms:description "Cooling water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
   skos:notation "heatingSteam";
   skos:prefLabel "heatingSteam"@en;
-  dct:description "Heating steam."@en;
+  dcterms:description "Heating steam."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
   skos:notation "heatingWater";
   skos:prefLabel "heatingWater"@en;
-  dct:description "Heating water."@en;
+  dcterms:description "Heating water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

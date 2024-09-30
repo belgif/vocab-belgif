@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue>;
   skos:notation "cableAndPipeGutter";
   skos:prefLabel "cableAndPipeGutter"@en;
-  dct:description "Accessible gutter embedded in engineering structures to protect cables and pipes."@en;
+  dcterms:description "Accessible gutter embedded in engineering structures to protect cables and pipes."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue>;
   skos:notation "jacketPipe";
   skos:prefLabel "jacketPipe"@en;
-  dct:description "Underground pipe serving as a sheath to protect cables and pipes."@en;
+  dcterms:description "Underground pipe serving as a sheath to protect cables and pipes."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

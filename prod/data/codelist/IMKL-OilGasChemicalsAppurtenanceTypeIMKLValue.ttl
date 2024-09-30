@@ -20,7 +20,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "adapter";
   skos:prefLabel "adapter"@en;
-  dct:description "Adapter."@en;
+  dcterms:description "Adapter."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +28,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "airBeacon";
   skos:prefLabel "airBeacon"@en;
-  dct:description "Air beacon."@en;
+  dcterms:description "Air beacon."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +36,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "blowHole";
   skos:prefLabel "blowHole"@en;
-  dct:description "Blowhole."@en;
+  dcterms:description "Blowhole."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +44,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionInstallation";
   skos:prefLabel "cathodicProtectionInstallation"@en;
-  dct:description "Cathodic protection installation."@en;
+  dcterms:description "Cathodic protection installation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +52,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionMeasurementPoint";
   skos:prefLabel "cathodicProtectionMeasurementPoint"@en;
-  dct:description "Cathodic protection measurement point."@en;
+  dcterms:description "Cathodic protection measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +60,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "endCap";
   skos:prefLabel "endCap"@en;
-  dct:description "End cap."@en;
+  dcterms:description "End cap."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -68,7 +68,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "flange";
   skos:prefLabel "flange"@en;
-  dct:description "Flange."@en;
+  dcterms:description "Flange."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,7 +76,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "measurementPoint";
   skos:prefLabel "measurementPoint"@en;
-  dct:description "Measurement point."@en;
+  dcterms:description "Measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -84,7 +84,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "siphon";
   skos:prefLabel "siphon"@en;
-  dct:description "Siphon."@en;
+  dcterms:description "Siphon."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -92,7 +92,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "sleeve";
   skos:prefLabel "sleeve"@en;
-  dct:description "Sleeve."@en;
+  dcterms:description "Sleeve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -100,7 +100,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "sluice";
   skos:prefLabel "sluice"@en;
-  dct:description "Sluice."@en;
+  dcterms:description "Sluice."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -108,7 +108,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "stoppleFitting";
   skos:prefLabel "stoppleFitting"@en;
-  dct:description "Stopple fitting."@en;
+  dcterms:description "Stopple fitting."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -116,7 +116,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "valve";
   skos:prefLabel "valve"@en;
-  dct:description "Valve."@en;
+  dcterms:description "Valve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
