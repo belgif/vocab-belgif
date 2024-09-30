@@ -48,6 +48,11 @@
 					<tr><td property="skos:altLabel" xml:lang="${lang}" content="${val}">AltLabel (${lang})</td><td>${val}</td></tr>
 				</#list>
 			</#list>
+			<#list langs as lang>
+				<#list v.getDescription(lang) as val>
+					<tr><td property="dcterms:description" xml:lang="${lang}" content="${val}">Description (${lang})</td><td>${val}</td></tr>
+				</#list>
+			</#list>
 			<#assign sd = v.startDate!"">
 			<#assign ed = v.endDate!"">
 			<#if sd?has_content || ed?has_content>
