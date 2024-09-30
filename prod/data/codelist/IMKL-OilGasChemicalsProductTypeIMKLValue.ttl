@@ -64,7 +64,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butane > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butane> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "butane ";
   skos:prefLabel "butane "@en;
@@ -80,7 +80,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/carbonMonoxide > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/carbonMonoxide> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "carbonMonoxide ";
   skos:prefLabel "carbonMonoxide "@en;
@@ -88,7 +88,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/chlorine > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/chlorine> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "chlorine ";
   skos:prefLabel "chlorine "@en;
@@ -112,7 +112,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/dichloroethane > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/dichloroethane> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "dichloroethane ";
   skos:prefLabel "dichloroethane "@en;
@@ -136,7 +136,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/ethylene > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/ethylene> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "ethylene ";
   skos:prefLabel "ethylene "@en;
@@ -176,7 +176,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/isobutane > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/isobutane> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "isobutane ";
   skos:prefLabel "isobutane "@en;
@@ -208,7 +208,7 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/liquidHydrocarbon > a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/liquidHydrocarbon> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
   skos:notation "liquidHydrocarbon ";
   skos:prefLabel "liquidHydrocarbon "@en;

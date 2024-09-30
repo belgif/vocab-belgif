@@ -28,11 +28,11 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue>;
   skos:notation "drinkingWaterSupply";
   skos:prefLabel "drinkingWaterSupply"@en;
-  dcterms:description "A supply pipeline, irrespective of its diameter, has one of the following purposes :
+  dcterms:description """A supply pipeline, irrespective of its diameter, has one of the following purposes :
 The supply of demarcated distribution areas, whether they are of a domestic, industrial or agricultural nature or a mixture thereof;
 The security connections between and within distribution areas, with the aim of ensuring the supplied capacities of these distribution areas;
 The transport of drinking water between water production centres and between the water extractions and these water distribution centres;
-The transport of drinking water to large customers (port areas, a large company, an airport,...)"@en;
+The transport of drinking water to large customers (port areas, a large company, an airport,...)"""@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
