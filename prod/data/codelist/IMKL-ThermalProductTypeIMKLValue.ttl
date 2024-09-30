@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,44 @@
 
 <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ThermalProductTypeIMKLValue"@en;
-  dcterms:description "IMKL-ThermalProductTypeIMKLValue: Extension of the INSPIRE codelist 'ThermalProductTypeExtendedValue' for IMKL."@en;
+  dcterms:description "Classification of thermal products."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue/condensate> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
   skos:notation "condensate";
   skos:prefLabel "condensate"@en;
+  dct:description "Condensate from a thermal pipe."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue/coolingWater> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
+  skos:notation "coolingWater";
+  skos:prefLabel "coolingWater"@en;
+  dct:description "Cooling water."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue/heatingSteam> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
+  skos:notation "heatingSteam";
+  skos:prefLabel "heatingSteam"@en;
+  dct:description "Heating steam."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue/heatingWater> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalProductTypeIMKLValue>;
+  skos:notation "heatingWater";
+  skos:prefLabel "heatingWater"@en;
+  dct:description "Heating water."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

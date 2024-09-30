@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,20 @@
 
 <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-WaterSubthemeValue"@en;
-  dcterms:description "IMKL-WaterSubthemeValue: Codelist with possible values for the water subtheme."@en;
+  dcterms:description "Classification of water subthemes."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue/drinkingWaterDistribution> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue>;
   skos:notation "drinkingWaterDistribution";
   skos:prefLabel "drinkingWaterDistribution"@en;
+  dct:description "Regardless of its diameter, the main purpose of a distribution pipeline is to provide local distribution of drinking water by distributing the supplied water directly to a large number of individual household and non-household final customers."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -27,6 +27,11 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WaterSubthemeValue>;
   skos:notation "drinkingWaterSupply";
   skos:prefLabel "drinkingWaterSupply"@en;
+  dct:description "A supply pipeline, irrespective of its diameter, has one of the following purposes :
+The supply of demarcated distribution areas, whether they are of a domestic, industrial or agricultural nature or a mixture thereof;
+The security connections between and within distribution areas, with the aim of ensuring the supplied capacities of these distribution areas;
+The transport of drinking water between water production centres and between the water extractions and these water distribution centres;
+The transport of drinking water to large customers (port areas, a large company, an airport,...)"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,20 @@
 
 <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue> a skos:ConceptScheme;
   dcterms:title "IMKL-SurveyMethodValue"@en;
-  dcterms:description "IMKL-SurveyMethodValue: Classification of survey methods."@en;
+  dcterms:description "Classification of survey methods."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue/digitizedPlan> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "digitizedPlan";
   skos:prefLabel "digitizedPlan"@en;
+  dct:description "Digitized plan."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -27,6 +27,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "gnss";
   skos:prefLabel "gnss"@en;
+  dct:description "Global Navigation Satelite System."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -34,6 +35,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "lidar";
   skos:prefLabel "lidar"@en;
+  dct:description "LIDAR."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -41,6 +43,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "measuringTape";
   skos:prefLabel "measuringTape"@en;
+  dct:description "Measuring tape."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -48,6 +51,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "measuringWheel";
   skos:prefLabel "measuringWheel"@en;
+  dct:description "Measuring wheel."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -55,6 +59,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "photogrammetry";
   skos:prefLabel "photogrammetry"@en;
+  dct:description "Photogrammetry."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -62,6 +67,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "sketch";
   skos:prefLabel "sketch"@en;
+  dct:description "Sketch."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -69,6 +75,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "terrestrial";
   skos:prefLabel "terrestrial"@en;
+  dct:description "Terrestrial."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,6 +83,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "totalStation";
   skos:prefLabel "totalStation"@en;
+  dct:description "Total station."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -83,6 +91,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SurveyMethodValue>;
   skos:notation "triangulation";
   skos:prefLabel "triangulation"@en;
+  dct:description "Triangulation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

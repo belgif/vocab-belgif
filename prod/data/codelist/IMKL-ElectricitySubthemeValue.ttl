@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,20 @@
 
 <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ElectricitySubthemeValue"@en;
-  dcterms:description "IMKL-ElectricitySubthemeValue: Codelist with possible values for the electricity subtheme."@en;
+  dcterms:description "Classification of electricity subthemes."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue/electricityCathodicProtection> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityCathodicProtection";
   skos:prefLabel "electricityCathodicProtection"@en;
+  dct:description "Cables for the protection of metals against electrochemical corrosion. Connections between measurement poles and measurement points are not covered by this subtheme."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -27,6 +27,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityDistributionHighVoltage";
   skos:prefLabel "electricityDistributionHighVoltage"@en;
+  dct:description "1-36kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -34,6 +35,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityDistributionLowVoltage";
   skos:prefLabel "electricityDistributionLowVoltage"@en;
+  dct:description "< 1kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -41,6 +43,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityPublicLighting";
   skos:prefLabel "electricityPublicLighting"@en;
+  dct:description "E.g. road lighting, illuminated signs"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -48,6 +51,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTrafficEnforcementSystems";
   skos:prefLabel "electricityTrafficEnforcementSystems"@en;
+  dct:description "E.g. red light and speed cameras, changeable signage such as ‘zone 30’, lane signs, calamity routes, smog signs,…"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -55,6 +59,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTrafficLights";
   skos:prefLabel "electricityTrafficLights"@en;
+  dct:description "E.g. cables used to control traffic lights"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -62,6 +67,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTransport";
   skos:prefLabel "electricityTransport"@en;
+  dct:description "> 70kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -69,6 +75,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricitySubthemeValue>;
   skos:notation "electricityTransportLocal";
   skos:prefLabel "electricityTransportLocal"@en;
+  dct:description "=< 70kV"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,20 @@
 
 <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ThermalAppurtenanceTypeIMKLValue"@en;
-  dcterms:description "IMKL-ThermalAppurtenanceTypeIMKLValue: Extension of the empty INSPIRE codelist 'ThermalAppurtenanceTypeValue' for IMKL."@en;
+  dcterms:description "Classification of thermal appurtenances."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue/adapter> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "adapter";
   skos:prefLabel "adapter"@en;
+  dct:description "Adapter."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -27,6 +27,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "adapterSingleDualPipe";
   skos:prefLabel "adapterSingleDualPipe"@en;
+  dct:description "Adapter single dual pipe."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -34,6 +35,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "airBeacon";
   skos:prefLabel "airBeacon"@en;
+  dct:description "Air beacon."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -41,6 +43,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionInstallation";
   skos:prefLabel "cathodicProtectionInstallation"@en;
+  dct:description "Cathodic protection installation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -48,6 +51,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionMeasurementPoint";
   skos:prefLabel "cathodicProtectionMeasurementPoint"@en;
+  dct:description "Cathodic protection measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -55,6 +59,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "condensateWell";
   skos:prefLabel "condensateWell"@en;
+  dct:description "Condensate well."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -62,6 +67,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "deliveryPoint";
   skos:prefLabel "deliveryPoint"@en;
+  dct:description "Delivery point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -69,6 +75,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "dilatationJoint";
   skos:prefLabel "dilatationJoint"@en;
+  dct:description "Dilatation joint."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -76,6 +83,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "flange";
   skos:prefLabel "flange"@en;
+  dct:description "Flange."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -83,6 +91,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "leakdetectionInstallation";
   skos:prefLabel "leakdetectionInstallation"@en;
+  dct:description "Leak detection installation."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -90,6 +99,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "leakdetectionMeasurementPoint";
   skos:prefLabel "leakdetectionMeasurementPoint"@en;
+  dct:description "Leak detection measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -97,13 +107,15 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "measurementPoint";
   skos:prefLabel "measurementPoint"@en;
+  dct:description "Measurement point."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue/sifon> a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue/siphon> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
-  skos:notation "sifon";
-  skos:prefLabel "sifon"@en;
+  skos:notation "siphon";
+  skos:prefLabel "siphon"@en;
+  dct:description "Siphon."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -111,6 +123,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "sleeve";
   skos:prefLabel "sleeve"@en;
+  dct:description "Sleeve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -118,6 +131,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "sluice";
   skos:prefLabel "sluice"@en;
+  dct:description "Sluice."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -125,6 +139,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalAppurtenanceTypeIMKLValue>;
   skos:notation "valve";
   skos:prefLabel "valve"@en;
+  dct:description "Valve."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

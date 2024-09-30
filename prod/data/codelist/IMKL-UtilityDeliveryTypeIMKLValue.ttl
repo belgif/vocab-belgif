@@ -4,9 +4,9 @@
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue> a skos:ConceptScheme;
-  dcterms:title "IMKL-ReferenceSurfaceTypeValue"@en;
-  dcterms:description "Classification of surface types."@en;
+<https://vocab.belgif.be/auth/IMKL-UtilityDeliveryTypeIMKLValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-UtilityDeliveryTypeIMKLValue"@en;
+  dcterms:description "Classification of utility delivery types."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
@@ -15,11 +15,11 @@
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
-<https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue/surfaceLevel> a skos:Concept;
-  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue>;
-  skos:notation "surfaceLevel";
-  skos:prefLabel "surfaceLevel"@en;
-  dct:description "The surface level."@en;
+<https://vocab.belgif.be/auth/IMKL-UtilityDeliveryTypeIMKLValue/connection> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-UtilityDeliveryTypeIMKLValue>;
+  skos:notation "connection";
+  skos:prefLabel "connection"@en;
+  dct:description "Connection linking the distribution network to the end customer."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

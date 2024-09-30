@@ -4,9 +4,9 @@
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue> a skos:ConceptScheme;
-  dcterms:title "IMKL-ReferenceSurfaceTypeValue"@en;
-  dcterms:description "Classification of surface types."@en;
+<https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-UtilityNetworkTypeIMKLValue"@en;
+  dcterms:description "Classification of utility network types."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
@@ -15,11 +15,11 @@
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
-<https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue/surfaceLevel> a skos:Concept;
-  skos:inScheme <https://vocab.belgif.be/auth/IMKL-ReferenceSurfaceTypeValue>;
-  skos:notation "surfaceLevel";
-  skos:prefLabel "surfaceLevel"@en;
-  dct:description "The surface level."@en;
+<https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue/crossTheme> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue>;
+  skos:notation "crossTheme";
+  skos:prefLabel "crossTheme"@en;
+  dct:description "Mixed Networks. For use in case of, for example, a UtilityNetwork with Duct and Pipe objects containing cables or pipes of different themes."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

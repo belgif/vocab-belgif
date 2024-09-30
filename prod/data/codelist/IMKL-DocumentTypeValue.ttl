@@ -1,5 +1,4 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,19 +6,20 @@
 
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-DocumentTypeValue"@en;
-  dcterms:description "IMKL-DocumentTypeValue: Codelist with possible values for the type of a document or extra plan."@en;
+  dcterms:description "Classification of document types."@en;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-09"^^xsd:date;
+  dcterms:modified "2024-09-26"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
 
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/crossSection> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "crossSection";
   skos:prefLabel "crossSection"@en;
+  dct:description "Document containing a cross section"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -27,6 +27,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "detailedPlan";
   skos:prefLabel "detailedPlan"@en;
+  dct:description "Document containing a detailed plan."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -34,6 +35,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "directionalDrilling";
   skos:prefLabel "directionalDrilling"@en;
+  dct:description "Document containing information on a directional drilling."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -41,6 +43,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "longitudinalSection";
   skos:prefLabel "longitudinalSection"@en;
+  dct:description "Document containing a longitudinal section."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -48,6 +51,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "other";
   skos:prefLabel "other"@en;
+  dct:description "Other type of document"@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -55,6 +59,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "precaution";
   skos:prefLabel "precaution"@en;
+  dct:description "Document containing precautions."@en;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

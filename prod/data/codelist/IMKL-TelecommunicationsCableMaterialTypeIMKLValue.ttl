@@ -1,0 +1,49 @@
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemas: <https://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue> a skos:ConceptScheme;
+  dcterms:title "IMKL-TelecommunicationsCableMaterialTypeIMKLValue"@en;
+  dcterms:description "Classification of telecommunication cable materials."@en;
+  dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
+  owl:versionInfo "3.0";
+  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
+
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
+
+<https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/coaxial> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
+  skos:notation "coaxial";
+  skos:prefLabel "coaxial"@en;
+  dct:description "Coaxial cable."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/opticalFiber> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
+  skos:notation "opticalFiber";
+  skos:prefLabel "opticalFiber"@en;
+  dct:description "Optical fibre cable."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/other> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
+  skos:notation "other";
+  skos:prefLabel "other"@en;
+  dct:description "Other."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
+<https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/twistedPair> a skos:Concept;
+  skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
+  skos:notation "twistedPair";
+  skos:prefLabel "twistedPair"@en;
+  dct:description "Twisted pair."@en;
+  schemas:startDate "2024-01-01"^^xsd:date;
+  schemas:endDate "9999-12-31"^^xsd:date .
+  
