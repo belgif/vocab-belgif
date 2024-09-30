@@ -49,9 +49,10 @@
 				</#list>
 			</#list>
 			<#list langs as lang>
-				<#list v.getDescription(lang)![] as val>
+				<#assign val = v.getDescription(lang)!"">
+				<#if val?has_content>
 					<tr><td property="dcterms:description" xml:lang="${lang}" content="${val}">Description (${lang})</td><td>${val}</td></tr>
-				</#list>
+				</#if>
 			</#list>
 			<#assign sd = v.startDate!"">
 			<#assign ed = v.endDate!"">
