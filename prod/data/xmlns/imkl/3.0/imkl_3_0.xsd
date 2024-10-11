@@ -274,7 +274,6 @@
                             </appinfo>
                         </annotation>
                     </element>
-                    <element name="elevatedRisk" type="boolean" minOccurs="0" />
                     <element name="visibility" type="gml:ReferenceType" minOccurs="0">
                         <annotation>
                             <appinfo>
@@ -516,7 +515,6 @@
         <sequence>
             <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
             <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
-            <element name="elevatedRisk" type="boolean" minOccurs="0" />
             <element name="visibility" type="gml:ReferenceType" minOccurs="0">
                 <annotation>
                     <appinfo>
@@ -623,7 +621,6 @@
             <element name="label" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
             <element name="description" type="gmd:PT_FreeText_PropertyType" minOccurs="0" />
             <element name="orientation" type="gml:MeasureType" minOccurs="0" />
-            <element name="elevatedRisk" type="boolean" minOccurs="0" />
             <element name="visibility" type="gml:ReferenceType" minOccurs="0">
                 <annotation>
                     <appinfo>
@@ -917,7 +914,7 @@
 
     <complexType name="ReferenceSurfaceType">
         <sequence>
-            <element name="type" type="gml:ReferenceType" minOccurs="1">
+            <element name="referenceSurfaceType" type="gml:ReferenceType" minOccurs="1">
                 <annotation>
                     <appinfo>
                         <targetCodeList>ReferenceSurfaceTypeValue</targetCodeList>
