@@ -412,7 +412,7 @@
     </complexType>
 
     <element
-        name="TopographicalEement"
+        name="TopographicalElement"
         type="imkl:TopographicalElementType"
         substitutionGroup="gml:AbstractFeature" />
 
