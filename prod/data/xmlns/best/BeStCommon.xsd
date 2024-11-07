@@ -1,0 +1,273 @@
+<!-- XSD V24.4 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:com="http://fsb.belgium.be/data/common" targetNamespace="http://fsb.belgium.be/data/common" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="AddressStatusType">
+		<xs:sequence>
+			<xs:element name="status" type="com:AddressStatusValueType"/>
+			<xs:element name="validFrom" type="xs:dateTime"/>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="AddressStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+			<xs:enumeration value="rejected"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element name="code" type="com:IdentifierType"/>
+			<xs:element name="position" type="com:GeographicalPositionType"/>
+			<xs:element name="sortField" type="com:CharStringType" minOccurs="0"/>
+			<xs:element name="addressStatus" type="com:AddressStatusType"/>
+			<xs:element name="boxNumber" type="com:CharStringType" minOccurs="0"/>
+			<xs:element name="houseNumber" type="com:CharStringType"/>
+			<xs:element name="officiallyAssigned" type="xs:boolean"/>
+			<xs:element name="hasStreetName" type="com:IdentifierType"/>
+			<xs:element name="hasMunicipality" type="com:IdentifierType"/>
+			<xs:element name="hasPostalInfo" type="com:IdentifierType"/>
+			<xs:element name="hasPartOfMunicipality" type="com:IdentifierType" minOccurs="0"/>
+			<xs:element name="isAssignedToAddressableObject" type="com:IdentifierOptionalVersionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="com:LifeCycleInfoGroup"/>
+	</xs:complexType>
+	<xs:simpleType name="CharStringType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:pattern value="[^\s].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="coordinates" type="com:CoordinatesType"/>
+	<xs:complexType name="CoordinatesType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="decimal" type="xs:string" default="."/>
+				<xs:attribute name="cs" type="xs:string" default=","/>
+				<xs:attribute name="ts" type="xs:string" default="&#x20;"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="DateTimeType">
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	<xs:complexType name="DirectPositionType">
+		<xs:simpleContent>
+			<xs:extension base="com:DoubleList">
+				<xs:attributeGroup ref="com:SrsReferenceGroup"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="DoubleList">
+		<xs:list itemType="xs:double"/>
+	</xs:simpleType>
+	<xs:complexType name="GeographicalNameType">
+		<xs:sequence>
+			<xs:element name="language" type="com:LanguageCodeValueType"/>
+			<xs:element name="spelling" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GeographicalPositionType">
+		<xs:sequence>
+			<xs:element name="pointGeometry">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="com:point"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="positionGeometryMethod" type="com:PositionGeometryMethodValueType"/>
+			<xs:element name="positionSpecification" type="com:PositionSpecificationValueType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IdentifierType">
+		<xs:sequence>
+			<xs:group ref="com:IdentityGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="IdentityGroup">
+		<xs:sequence>
+			<xs:element name="namespace" type="com:CharStringType"/>
+			<xs:element name="objectIdentifier" type="com:CharStringType"/>
+			<xs:element name="versionIdentifier" type="com:CharStringType"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="IdentifierOptionalVersionType">
+		<xs:sequence>
+			<xs:group ref="com:IdentityOptionalVersionGroup"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="IdentityOptionalVersionGroup">
+		<xs:sequence>
+			<xs:element name="namespace" type="com:CharStringType"/>
+			<xs:element name="objectIdentifier" type="com:CharStringType"/>
+			<xs:element name="versionIdentifier" type="com:CharStringType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:simpleType name="LanguageCodeValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="nl"/>
+			<xs:enumeration value="fr"/>
+			<xs:enumeration value="de"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="LifeCycleInfoGroup">
+		<!-- Copied from Common -->
+		<xs:attribute name="beginLifeSpanVersion" type="xs:dateTime" use="required"/>
+		<xs:attribute name="endLifeSpanVersion" type="xs:dateTime" use="optional"/>
+	</xs:attributeGroup>
+	<xs:complexType name="MunicipalityStatusType">
+		<xs:sequence>
+			<xs:element name="status" type="com:MunicipalityStatusValueType"/>
+			<xs:element name="validFrom" type="xs:dateTime"/>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="MunicipalityStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MunicipalityType">
+		<xs:sequence>
+			<xs:element name="code" type="com:IdentifierType"/>
+			<xs:element name="name" type="com:GeographicalNameType" maxOccurs="unbounded"/>
+			<xs:element name="municipalityStatus" type="com:MunicipalityStatusType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="NcNameList">
+		<xs:list itemType="xs:NCName"/>
+	</xs:simpleType>
+	<xs:complexType name="PartOfMunicipalityStatusType">
+		<xs:sequence>
+			<xs:element name="status" type="com:PartOfMunicipalityStatusValueType"/>
+			<xs:element name="validFrom" type="xs:dateTime"/>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PartOfMunicipalityStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PartOfMunicipalityType">
+		<xs:sequence>
+			<xs:element name="code" type="com:IdentifierType"/>
+			<xs:element name="name" type="com:GeographicalNameType" maxOccurs="unbounded"/>
+			<xs:element name="partOfMunicipalityStatus" type="com:PartOfMunicipalityStatusType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="point" type="com:PointType"/>
+	<xs:complexType name="PointType">
+		<xs:sequence>
+			<xs:element ref="com:pos" maxOccurs="2"/>
+			<xs:element ref="com:coordinates" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="pos" type="com:DirectPositionType"/>
+	<xs:simpleType name="PositionGeometryMethodValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="assignedByAdministrator"/>
+			<xs:enumeration value="derivedFromObject"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PositionSpecificationValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="building"/>
+			<xs:enumeration value="buildingUnit"/>
+			<xs:enumeration value="entrance"/>
+			<xs:enumeration value="mooringPlace"/>
+			<xs:enumeration value="municipality"/>
+			<xs:enumeration value="parcel"/>
+			<xs:enumeration value="plot"/>
+			<xs:enumeration value="stand"/>
+			<xs:enumeration value="street"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="PostalInfoType">
+		<xs:sequence>
+			<xs:element name="code" type="com:IdentifierType"/>
+			<xs:element name="name" type="com:GeographicalNameType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="postalInfoStatus" type="com:PostalInfoStatusType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PostalInfoStatusType">
+		<xs:sequence>
+			<xs:element name="status" type="com:PostalInfoStatusValueType"/>
+			<xs:element name="validFrom" type="xs:dateTime"/>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="PostalInfoStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SideCodeValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="both"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="SrsInformationGroup">
+		<xs:attribute name="axisLabels" type="com:NcNameList"/>
+		<xs:attribute name="uomLabels" type="com:NcNameList"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="SrsReferenceGroup">
+		<xs:attribute name="srsName" type="xs:anyURI"/>
+		<xs:attribute name="srsDimension" type="xs:positiveInteger"/>
+		<xs:attributeGroup ref="com:SrsInformationGroup"/>
+	</xs:attributeGroup>
+	<xs:complexType name="StreetNameStatusType">
+		<xs:sequence>
+			<xs:element name="status" type="com:StreetNameStatusValueType"/>
+			<xs:element name="validFrom" type="xs:dateTime"/>
+			<xs:element name="validTo" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="StreetNameStatusValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="current"/>
+			<xs:enumeration value="proposed"/>
+			<xs:enumeration value="reserved"/>
+			<xs:enumeration value="retired"/>
+			<xs:enumeration value="rejected"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="StreetNameType">
+		<xs:sequence>
+			<xs:element name="code" type="com:IdentifierType"/>
+			<xs:element name="name" type="com:GeographicalNameType" maxOccurs="unbounded"/>
+			<xs:element name="streetNameStatus" type="com:StreetNameStatusType"/>
+			<xs:element name="type" type="com:StreetNameTypeValueType"/>
+			<xs:element name="homonymAddition" type="com:CharStringType" minOccurs="0"/>
+			<xs:element name="isAssignedByMunicipality" type="com:IdentifierType"/>
+			<xs:element name="isAssignedTo" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="RoadObject" type="com:IdentifierOptionalVersionType"/>
+						<xs:element name="streetSide" type="com:SideCodeValueType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="com:LifeCycleInfoGroup"/>
+	</xs:complexType>
+	<xs:simpleType name="StreetNameTypeValueType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="hamlet"/>
+			<xs:enumeration value="streetname"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

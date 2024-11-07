@@ -1,0 +1,30 @@
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/SCHEMA> .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/title> "BeSt Common"@nl .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/title> "BeSt Common"@fr .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/title> "BeSt Common"@de .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/title> "BeSt Common"@en .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Common data types"@nl .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Common data types"@fr .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Common data types"@de .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Common data types"@en .
+<http://vocab.belgif.be/ns/best/BeStCommon#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ns/best/BeStCommon.xsd> .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/SCHEMA> .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/title> "BeSt Full Download"@nl .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/title> "BeSt Full Download"@fr .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/title> "BeSt Full Download"@de .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/title> "BeSt Full Download"@en .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Full Download"@nl .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Full Download"@fr .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Full Download"@de .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Full Download"@en .
+<http://vocab.belgif.be/ns/best/FullDownload#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ns/best/FullDownload.xsd> .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://publications.europa.eu/resource/authority/dataset-type/SCHEMA> .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/title> "BeSt Mutations"@nl .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/title> "BeSt Mutations"@fr .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/title> "BeSt Mutations"@de .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/title> "BeSt Mutations"@en .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Mutations"@nl .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Mutations"@fr .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Mutations"@de .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://purl.org/dc/terms/description> "Belgian Streets and Addresses Mutations"@en .
+<http://vocab.belgif.be/ns/best/Mutations#id> <http://www.w3.org/ns/dcat#downloadURL> <http://vocab.belgif.be/ns/best/Mutations.xsd> .

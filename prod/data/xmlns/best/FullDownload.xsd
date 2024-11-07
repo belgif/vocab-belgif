@@ -1,0 +1,62 @@
+<!-- XSD V24.4 (unchanged since v24.3) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://fsb.belgium.be/mappingservices/FullDownload/v1_00" xmlns:com="http://fsb.belgium.be/data/common" targetNamespace="http://fsb.belgium.be/mappingservices/FullDownload/v1_00" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://fsb.belgium.be/data/common" schemaLocation="./BeStCommon.xsd"/>
+	<xs:simpleType name="SourceType">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="brussels"/>
+					<xs:enumeration value="flanders"/>
+					<xs:enumeration value="wallonia"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[Bb][Rr][Uu][Ss][Ss][Ee][Ll][Ss]"/>
+					<xs:pattern value="[Ff][Ll][Aa][Nn][Dd][Ee][Rr][Ss]"/>
+					<xs:pattern value="[Ww][Aa][Ll][Ll][Oo][Nn][Ii][Aa]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:element name="addressResponseBySource" type="tns:AddressResponseBySourceType"/>
+	<xs:complexType name="AddressResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="source" type="tns:SourceType" minOccurs="0"/>
+			<xs:element name="timestamp" type="com:DateTimeType" minOccurs="0"/>
+			<xs:element name="address" type="com:AddressType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="municipalityResponseBySource" type="tns:MunicipalityResponseBySourceType"/>
+	<xs:complexType name="MunicipalityResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="source" type="tns:SourceType" minOccurs="0"/>
+			<xs:element name="timestamp" type="com:DateTimeType" minOccurs="0"/>
+			<xs:element name="municipality" type="com:MunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="partOfMunicipalityResponseBySource" type="tns:PartOfMunicipalityResponseBySourceType"/>
+	<xs:complexType name="PartOfMunicipalityResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="source" type="tns:SourceType" minOccurs="0"/>
+			<xs:element name="timestamp" type="com:DateTimeType" minOccurs="0"/>
+			<xs:element name="partOfMunicipality" type="com:PartOfMunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="postalInfoResponseBySource" type="tns:PostalInfoResponseBySourceType"/>
+	<xs:complexType name="PostalInfoResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="source" type="tns:SourceType" minOccurs="0"/>
+			<xs:element name="timestamp" type="com:DateTimeType" minOccurs="0"/>
+			<xs:element name="postalInfo" type="com:PostalInfoType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="streetNameResponseBySource" type="tns:StreetNameResponseBySourceType"/>
+	<xs:complexType name="StreetNameResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="source" type="tns:SourceType" minOccurs="0"/>
+			<xs:element name="timestamp" type="com:DateTimeType" minOccurs="0"/>
+			<xs:element name="streetName" type="com:StreetNameType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

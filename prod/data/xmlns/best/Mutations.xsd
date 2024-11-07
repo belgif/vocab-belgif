@@ -1,0 +1,136 @@
+<!-- XSD V24.4 (unchanged since v24.3) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://fsb.belgium.be/mappingservices/Mutations/v1_00" xmlns:com="http://fsb.belgium.be/data/common" targetNamespace="http://fsb.belgium.be/mappingservices/Mutations/v1_00" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://fsb.belgium.be/data/common" schemaLocation="./BeStCommon.xsd"/>
+	<xs:element name="mutationsResponseBySource" type="tns:MutationsResponseBySourceType"/>
+	<xs:simpleType name="SourceType">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="brussels"/>
+					<xs:enumeration value="flanders"/>
+					<xs:enumeration value="wallonia"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[Bb][Rr][Uu][Ss][Ss][Ee][Ll][Ss]"/>
+					<xs:pattern value="[Ff][Ll][Aa][Nn][Dd][Ee][Rr][Ss]"/>
+					<xs:pattern value="[Ww][Aa][Ll][Ll][Oo][Nn][Ii][Aa]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:complexType name="MutationsResponseBySourceType">
+		<xs:sequence>
+			<xs:element name="mutations" type="tns:MutationsResponseType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MutationsResponseType">
+		<xs:sequence>
+			<xs:element name="deltaBeginDateTime" type="com:DateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="deltaEndDateTime" type="com:DateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="source" type="tns:SourceType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="add" type="tns:AddType" minOccurs="0"/>
+			<xs:element name="update" type="tns:UpdateType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddType">
+		<xs:sequence>
+			<xs:element name="addMunicipalityVersion" type="tns:AddMunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="addPartOfMunicipalityVersion" type="tns:AddPartOfMunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="addPostalInfoVersion" type="tns:AddPostalInfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="addStreetNameVersion" type="tns:AddStreetNameType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="addAddressVersion" type="tns:AddAddressType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddAddressType">
+		<xs:sequence>
+			<xs:element name="address" type="com:AddressType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddMunicipalityType">
+		<xs:sequence>
+			<xs:element name="municipality" type="com:MunicipalityType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddPartOfMunicipalityType">
+		<xs:sequence>
+			<xs:element name="partOfMunicipality" type="com:PartOfMunicipalityType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddPostalInfoType">
+		<xs:sequence>
+			<xs:element name="postalInfo" type="com:PostalInfoType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddStreetNameType">
+		<xs:sequence>
+			<xs:element name="streetName" type="com:StreetNameType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdateType">
+		<xs:sequence>
+			<xs:element name="updateAddressVersion" type="tns:UpdAddressType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="updateStreetNameVersion" type="tns:UpdStreetNameType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="updatePostalInfoVersion" type="tns:UpdPostalInfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="updatePartOfMunicipalityVersion" type="tns:UpdPartOfMunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="updateMunicipalityVersion" type="tns:UpdMunicipalityType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdMunicipalityType">
+		<xs:sequence>
+			<xs:element name="municipality" type="com:MunicipalityType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="successor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdPartOfMunicipalityType">
+		<xs:sequence>
+			<xs:element name="partOfMunicipality" type="com:PartOfMunicipalityType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="successor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdPostalInfoType">
+		<xs:sequence>
+			<xs:element name="postalInfo" type="com:PostalInfoType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="successor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdStreetNameType">
+		<xs:sequence>
+			<xs:element name="streetName" type="com:StreetNameType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="successor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UpdAddressType">
+		<xs:sequence>
+			<xs:element name="address" type="com:AddressType"/>
+			<xs:element name="event" type="tns:EventType" maxOccurs="unbounded"/>
+			<xs:element name="predecessor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="successor" type="com:IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EventType">
+		<xs:sequence>
+			<xs:element name="date" type="com:DateTimeType"/>
+			<xs:element name="type" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
