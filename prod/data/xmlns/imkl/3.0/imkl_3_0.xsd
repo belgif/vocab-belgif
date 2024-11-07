@@ -905,7 +905,7 @@
 
     <complexType name="AddressType">
         <sequence>
-            <element name="municiaplityName" type="gmd:PT_FreeText_PropertyType" />
+            <element name="municipalityName" type="gmd:PT_FreeText_PropertyType" />
             <element name="streetName" type="gmd:PT_FreeText_PropertyType" />
             <element name="houseNumber" type="string" minOccurs="0" />
             <element name="postalCode" type="string" />
