@@ -13,7 +13,7 @@
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
                 <exec.workingdir>c:/data/vocab</exec.workingdir>
-                <exec.vmArgs>-Xmx2G</exec.vmArgs>
+                <exec.vmArgs>-Xmx4G -Dorg.eclipse.rdf4j.repository.debug=true</exec.vmArgs>
                 <exec.appArgs>server c:/data/vocab/config.yml</exec.appArgs>
                 <exec.mainClass>be.belgif.vocab.App</exec.mainClass>
             </properties>
@@ -32,7 +32,7 @@
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
                 <exec.workingdir>c:/data/vocab</exec.workingdir>
-                <exec.vmArgs>-Xmx2G -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
+                <exec.vmArgs>-Xmx4G -Dorg.eclipse.rdf4j.repository.debug=true -agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.appArgs>server c:/data/vocab/config.yml</exec.appArgs>
                 <exec.mainClass>be.belgif.vocab.App</exec.mainClass>
             </properties>
@@ -50,7 +50,7 @@
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
                 <exec.workingdir>c:/data/vocab</exec.workingdir>
-                <exec.vmArgs>-Xmx2G</exec.vmArgs>
+                <exec.vmArgs>-Xmx4G -Dorg.eclipse.rdf4j.repository.debug=true</exec.vmArgs>
                 <exec.appArgs>server c:/data/vocab/config.yml</exec.appArgs>
                 <exec.mainClass>be.belgif.vocab.App</exec.mainClass>
             </properties>
