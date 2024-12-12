@@ -6,7 +6,7 @@
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/description> "REFNIS (vanaf 12/2024): de administratieve indeling gebeurt aan de hand van vier territoriale eenheden: gewesten, provincies, bestuurlijke arrondissementen en gemeenten."@nl .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/description> "REFNIS (à partir de 12/2024): la division administrative repose sur quatre unités territoriales : les régions, les provinces, les arrondissements administratifs et les communes."@fr .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/description> "REFNIS (ab 12/2024)"@de .
-<http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/description> "REFNIS (starting in 12/Q)"@en .
+<http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/description> "REFNIS (starting in 12/2024)"@en .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/creator> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/rightsHolder> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> .
 <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@nl .
