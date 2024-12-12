@@ -85,7 +85,7 @@
 <http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Provincie Antwerpen"@nl .
 <http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://sws.geonames.org/2803136/> .
 <http://vocab.belgif.be/auth/refnis2019/10000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/10000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/10000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE21> .
 <http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/10000> .
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/2000> .
@@ -137,7 +137,7 @@
 <http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Provincie Oost-Vlaanderen"@nl .
 <http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://sws.geonames.org/2789733/> .
 <http://vocab.belgif.be/auth/refnis2019/40000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/40000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/40000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE23> .
 <http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/40000> .
 <http://vocab.belgif.be/auth/refnis2019/50000> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/3000> .
@@ -214,7 +214,7 @@
 <http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement d’Anvers"@fr .
 <http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement Antwerpen"@nl .
 <http://vocab.belgif.be/auth/refnis2019/11000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/11000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/11000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE211> .
 <http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/11000> .
 <http://vocab.belgif.be/auth/refnis2019/12000> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/10000> .
@@ -454,7 +454,7 @@
 <http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement de Saint-Nicolas"@fr .
 <http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement Sint-Niklaas"@nl .
 <http://vocab.belgif.be/auth/refnis2019/46000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/46000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/46000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE236> .
 <http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/46000> .
 <http://vocab.belgif.be/auth/refnis2019/51000> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/50000> .
@@ -599,7 +599,7 @@
 <http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement de Hasselt"@fr .
 <http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement Hasselt"@nl .
 <http://vocab.belgif.be/auth/refnis2019/71000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/71000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/71000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE221> .
 <http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/71000> .
 <http://vocab.belgif.be/auth/refnis2019/72000> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/70000> .
@@ -623,7 +623,7 @@
 <http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement de Tongres"@fr .
 <http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#prefLabel> "Arrondissement Tongeren"@nl .
 <http://vocab.belgif.be/auth/refnis2019/73000> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/73000> <https://schema.org/endDate> "9999-12-31T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/73000> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://rdfdata.eionet.europa.eu/ramon/nuts2008/BE223> .
 <http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/73000> .
 <http://vocab.belgif.be/auth/refnis2019/81000> <http://www.w3.org/2004/02/skos/core#broader> <http://vocab.belgif.be/auth/refnis2019/80000> .
@@ -3826,7 +3826,7 @@
 <http://vocab.belgif.be/auth/refnis2019/37018> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wingene"@fr .
 <http://vocab.belgif.be/auth/refnis2019/37018> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wingene"@nl .
 <http://vocab.belgif.be/auth/refnis2019/37018> <https://schema.org/startDate> "2019-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/refnis2019/37018> <https://schema.org/endDate> "025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2019/37018> <https://schema.org/endDate> "2025-01-01T00:00:00.000+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2019/37018> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://sws.geonames.org/2783587/> .
 <http://vocab.belgif.be/auth/refnis2019/37018> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.wikidata.org/entity/Q735797> .
 <http://vocab.belgif.be/auth/refnis2019/37018> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis1995/37018> .
@@ -8325,17 +8325,17 @@
 <http://vocab.belgif.be/auth/refnis2019/2000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/2000> .
 <http://vocab.belgif.be/auth/refnis2019/3000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/3000> .
 <http://vocab.belgif.be/auth/refnis2019/4000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/4000> .
-<http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/10000> .
+<http://vocab.belgif.be/auth/refnis2019/10000> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis2025/10000> .
 <http://vocab.belgif.be/auth/refnis2019/20001> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/20001> .
 <http://vocab.belgif.be/auth/refnis2019/20002> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/20002> .
 <http://vocab.belgif.be/auth/refnis2019/30000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/30000> .
-<http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/40000> .
+<http://vocab.belgif.be/auth/refnis2019/40000> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/auth/refnis2025/40000> .
 <http://vocab.belgif.be/auth/refnis2019/50000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/50000> .
 <http://vocab.belgif.be/auth/refnis2019/60000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/60000> .
 <http://vocab.belgif.be/auth/refnis2019/70000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/70000> .
 <http://vocab.belgif.be/auth/refnis2019/80000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/80000> .
 <http://vocab.belgif.be/auth/refnis2019/90000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/90000> .
-<http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/11000> .
+<http://vocab.belgif.be/auth/refnis2019/11000> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis2025/11000> .
 <http://vocab.belgif.be/auth/refnis2019/12000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/12000> .
 <http://vocab.belgif.be/auth/refnis2019/13000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/13000> .
 <http://vocab.belgif.be/auth/refnis2019/21000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/21000> .
@@ -8355,7 +8355,7 @@
 <http://vocab.belgif.be/auth/refnis2019/43000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/43000> .
 <http://vocab.belgif.be/auth/refnis2019/44000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/44000> .
 <http://vocab.belgif.be/auth/refnis2019/45000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/45000> .
-<http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/46000> .
+<http://vocab.belgif.be/auth/refnis2019/46000> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/auth/refnis2025/46000> .
 <http://vocab.belgif.be/auth/refnis2019/51000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/51000> .
 <http://vocab.belgif.be/auth/refnis2019/52000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/52000> .
 <http://vocab.belgif.be/auth/refnis2019/53000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/53000> .
@@ -8367,9 +8367,9 @@
 <http://vocab.belgif.be/auth/refnis2019/62000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/62000> .
 <http://vocab.belgif.be/auth/refnis2019/63000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/63000> .
 <http://vocab.belgif.be/auth/refnis2019/64000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/64000> .
-<http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/71000> .
+<http://vocab.belgif.be/auth/refnis2019/71000> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://vocab.belgif.be/auth/refnis2025/71000> .
 <http://vocab.belgif.be/auth/refnis2019/72000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/72000> .
-<http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/73000> .
+<http://vocab.belgif.be/auth/refnis2019/73000> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://vocab.belgif.be/auth/refnis2025/73000> .
 <http://vocab.belgif.be/auth/refnis2019/81000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/81000> .
 <http://vocab.belgif.be/auth/refnis2019/82000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/82000> .
 <http://vocab.belgif.be/auth/refnis2019/83000> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vocab.belgif.be/auth/refnis2025/83000> .
