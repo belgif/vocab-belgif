@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ElectricityAppurtenanceTypeIMKLValue"@en;
   dcterms:description "Classification of electricity appurtenances."@en;
+  dcterms:description "Classificatie van electricity appurtenances."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,24 +20,30 @@
 <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue/grounding> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "grounding";
-  skos:prefLabel "grounding"@en;
-  dcterms:description "Grounding."@en;
+  skos:prefLabel "Grounding"@en;
+  skos:prefLabel "Aarding"@nl;
+  dcterms:description """Grounding."""@en;
+  dcterms:description """Aarding"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue/marker> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "marker";
-  skos:prefLabel "marker"@en;
-  dcterms:description "Marker or ground beacon."@en;
+  skos:prefLabel "Marker"@en;
+  skos:prefLabel "Markering, grondbaken"@nl;
+  dcterms:description """Marker or ground beacon."""@en;
+  dcterms:description """Markering, grondbaken"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue/sleeve> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ElectricityAppurtenanceTypeIMKLValue>;
   skos:notation "sleeve";
-  skos:prefLabel "sleeve"@en;
-  dcterms:description "Sleeve."@en;
+  skos:prefLabel "Sleeve"@en;
+  skos:prefLabel "Mof"@nl;
+  dcterms:description """Sleeve."""@en;
+  dcterms:description """Mof"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

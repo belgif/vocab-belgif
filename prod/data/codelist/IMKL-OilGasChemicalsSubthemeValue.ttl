@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-OilGasChemicalsSubthemeValue"@en;
   dcterms:description "Classification of oil, gas, chemicals subthemes."@en;
+  dcterms:description "Classificatie van oil, gas, chemicals subthema's."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,32 +20,40 @@
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue/naturalGasDistributionLowPressure> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasDistributionLowPressure";
-  skos:prefLabel "naturalGasDistributionLowPressure"@en;
-  dcterms:description "Pipe whose highest permissible operating pressure does not exceed 0.1 kgf/cm2 (98.07 mbar)."@en;
+  skos:prefLabel "Natural gas distribution low pressure"@en;
+  skos:prefLabel "Aardgas distributie lage druk, maximum 0,1 kgf/cm2"@nl;
+  dcterms:description """Pipe whose highest permissible operating pressure does not exceed 0.1 kgf/cm2 (98.07 mbar)."""@en;
+  dcterms:description """leiding waarvan de hoogst toelaatbare bedrijfsdruk 0,1 kgf/cm2 (98,07 mbar) niet overschrijdt."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue/naturalGasDistributionMediumPressure> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasDistributionMediumPressure";
-  skos:prefLabel "naturalGasDistributionMediumPressure"@en;
-  dcterms:description "Pipe whose highest allowable operating pressure exceeds 0.1 kgf/cm2 (98.07 mbar) without exceeding 15 kgf/cm2 (14.71 bar)."@en;
+  skos:prefLabel "Natural gas distribution medium pressure"@en;
+  skos:prefLabel "Aardgas distributie midden druk, maximum 15 kgf/cm2"@nl;
+  dcterms:description """Pipe whose highest allowable operating pressure exceeds 0.1 kgf/cm2 (98.07 mbar) without exceeding 15 kgf/cm2 (14.71 bar)."""@en;
+  dcterms:description """leiding waarvan de hoogst toelaatbare bedrijfsdruk meer dan 0,1 kgf/cm2 (98,07 mbar) bedraagt zonder 15 kgf/cm2 (14,71 bar) te overschrijden."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue/naturalGasTransport> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "naturalGasTransport";
-  skos:prefLabel "naturalGasTransport"@en;
-  dcterms:description "Natural gas transmission network - installations subject to law 12/04/65."@en;
+  skos:prefLabel "Natural gas transport"@en;
+  skos:prefLabel "Aardgas transport"@nl;
+  dcterms:description """Natural gas transmission network - installations subject to law 12/04/65."""@en;
+  dcterms:description """Vervoersnet voor het vervoer van aardgas –installaties onderworpen aan wet 12/04/65."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue/oilGasChemicalsTransport> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsSubthemeValue>;
   skos:notation "oilGasChemicalsTransport";
-  skos:prefLabel "oilGasChemicalsTransport"@en;
-  dcterms:description "Transmission network for transporting products other than natural gas - installations subject to law 12/04/65."@en;
+  skos:prefLabel "Transport"@en;
+  skos:prefLabel "Transport"@nl;
+  dcterms:description """Transmission network for transporting products other than natural gas - installations subject to law 12/04/65."""@en;
+  dcterms:description """Vervoersnet voor het vervoer van producten ander dan aardgas –installaties onderworpen aan wet 12/04/65"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

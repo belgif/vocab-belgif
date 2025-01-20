@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-SewerSubthemeValue"@en;
   dcterms:description "Classification of sewer subthemes."@en;
+  dcterms:description "Classificatie van sewer subthema's."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,48 +20,60 @@
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/sewageWasteWaterGravitationalPipe> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "sewageWasteWaterGravitationalPipe";
-  skos:prefLabel "sewageWasteWaterGravitationalPipe"@en;
-  dcterms:description "Gravitational piping of wastewater and mixed water."@en;
+  skos:prefLabel "Waste water gravitational pipe"@en;
+  skos:prefLabel "Afvalwater gravitaire leiding"@nl;
+  dcterms:description """Gravitational piping of wastewater and mixed water."""@en;
+  dcterms:description """Gravitaire leiding van afvalwater (DWA) en gemengd water"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/sewageWasteWaterPressurePipe> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "sewageWasteWaterPressurePipe";
-  skos:prefLabel "sewageWasteWaterPressurePipe"@en;
-  dcterms:description "Wastewater and mixed water pressure pipes."@en;
+  skos:prefLabel "Waste water pressure pipe"@en;
+  skos:prefLabel "Afvalwater persleiding"@nl;
+  dcterms:description """Wastewater and mixed water pressure pipes."""@en;
+  dcterms:description """Persleidingen van afvalwater (DWA) en gemengd water"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageArchedWaterways> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageArchedWaterways";
-  skos:prefLabel "waterDrainageArchedWaterways"@en;
-  dcterms:description "Piped-in sections of catalogued watercourses."@en;
+  skos:prefLabel "Drainage arched waterways"@en;
+  skos:prefLabel "Waterafvoer overwelfde waterlopen"@nl;
+  dcterms:description """Piped-in sections of catalogued watercourses."""@en;
+  dcterms:description """Ingebuisde delen van gecatalogeerde waterlopen"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainagePipedCanal> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainagePipedCanal";
-  skos:prefLabel "waterDrainagePipedCanal"@en;
-  dcterms:description "Piped-in canals that are not constructed according to code, often localised arches, may also have pollution connected to them."@en;
+  skos:prefLabel "Drainage piped canal"@en;
+  skos:prefLabel "Waterafvoer ingebuisde gracht"@nl;
+  dcterms:description """Piped-in canals that are not constructed according to code, often localised arches, may also have pollution connected to them."""@en;
+  dcterms:description """Ingebuisde grachten welke niet aangelegd zijn volgens code, vaak lokale overwelvingen, hierop kan ook vervuiling zijn aangesloten"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageSurfaceWaterGravitationalPipe> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageSurfaceWaterGravitationalPipe";
-  skos:prefLabel "waterDrainageSurfaceWaterGravitationalPipe"@en;
-  dcterms:description "Gravitational piping of rainwater (constructed according to code)."@en;
+  skos:prefLabel "Drainage surface water gravitational pipe"@en;
+  skos:prefLabel "Oppervlaktewater gravitaire leiding"@nl;
+  dcterms:description """Gravitational piping of rainwater (constructed according to code)."""@en;
+  dcterms:description """Gravitaire leiding regenwater (RWA) (aangelegd volgens code)"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue/waterDrainageSurfaceWaterPressurePipe> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-SewerSubthemeValue>;
   skos:notation "waterDrainageSurfaceWaterPressurePipe";
-  skos:prefLabel "waterDrainageSurfaceWaterPressurePipe"@en;
-  dcterms:description "Rainwater pressure pipes (constructed according to code)."@en;
+  skos:prefLabel "Drainage surface water pressure pipe"@en;
+  skos:prefLabel "Oppervlaktewater persleiding"@nl;
+  dcterms:description """Rainwater pressure pipes (constructed according to code)."""@en;
+  dcterms:description """Persleiding regenwater (RWA) (aangelegd volgens code)"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

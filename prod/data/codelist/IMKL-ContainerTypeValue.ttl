@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ContainerTypeValue"@en;
   dcterms:description "Classification of container types."@en;
+  dcterms:description "Classificatie van containertypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,16 +20,20 @@
 <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue/cableAndPipeGutter> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue>;
   skos:notation "cableAndPipeGutter";
-  skos:prefLabel "cableAndPipeGutter"@en;
-  dcterms:description "Accessible gutter embedded in engineering structures to protect cables and pipes."@en;
+  skos:prefLabel "Cable and pipe gutter"@en;
+  skos:prefLabel "Kabel- en leidinggoot"@nl;
+  dcterms:description """Accessible gutter embedded in engineering structures to protect cables and pipes."""@en;
+  dcterms:description """In kunstwerken ingewerkte toegankelijke goot/houder die dient ter bescherming van kabels en leidingen"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue/jacketPipe> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ContainerTypeValue>;
   skos:notation "jacketPipe";
-  skos:prefLabel "jacketPipe"@en;
-  dcterms:description "Underground pipe serving as a sheath to protect cables and pipes."@en;
+  skos:prefLabel "Jacket pipe"@en;
+  skos:prefLabel "Mantelbuis"@nl;
+  dcterms:description """Underground pipe serving as a sheath to protect cables and pipes."""@en;
+  dcterms:description """Ondergrondse buis die als mantelbuis dienst doet ter bescherming van kabels en leidingen"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

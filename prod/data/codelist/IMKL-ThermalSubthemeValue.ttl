@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ThermalSubthemeValue"@en;
   dcterms:description "Classification of thermal subthemes."@en;
+  dcterms:description "Classificatie van thermal subthema's."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,32 +20,40 @@
 <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue/heatDistribution> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "heatDistribution";
-  skos:prefLabel "heatDistribution"@en;
-  dcterms:description "Heat distribution."@en;
+  skos:prefLabel "Heat distribution"@en;
+  skos:prefLabel "Distributienet warmte"@nl;
+  dcterms:description """Heat distribution."""@en;
+  dcterms:description """Distributienet warmte"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue/heatTransport> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "heatTransport";
-  skos:prefLabel "heatTransport"@en;
-  dcterms:description "Heat transport."@en;
+  skos:prefLabel "Heat transport"@en;
+  skos:prefLabel "Transportnet warmte"@nl;
+  dcterms:description """Heat transport."""@en;
+  dcterms:description """Transportnet  warmte"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue/steamCondensate> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "steamCondensate";
-  skos:prefLabel "steamCondensate"@en;
-  dcterms:description "Steam condensate."@en;
+  skos:prefLabel "Steam condensate"@en;
+  skos:prefLabel "Condensatienet stoom"@nl;
+  dcterms:description """Steam condensate."""@en;
+  dcterms:description """Condensatienet stoom"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue/steamTransport> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ThermalSubthemeValue>;
   skos:notation "steamTransport";
-  skos:prefLabel "steamTransport"@en;
-  dcterms:description "Steam transport."@en;
+  skos:prefLabel "Steam transport"@en;
+  skos:prefLabel "Transportnet stoom"@nl;
+  dcterms:description """Steam transport."""@en;
+  dcterms:description """Transportnet  stoom"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

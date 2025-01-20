@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-TelecommunicationsCableMaterialTypeIMKLValue"@en;
   dcterms:description "Classification of telecommunication cable materials."@en;
+  dcterms:description "Classificatie van telecommunication kabelmaterialen."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,32 +20,40 @@
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/coaxial> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "coaxial";
-  skos:prefLabel "coaxial"@en;
-  dcterms:description "Coaxial cable."@en;
+  skos:prefLabel "Coaxial"@en;
+  skos:prefLabel "Coaxial"@nl;
+  dcterms:description """Coaxial cable."""@en;
+  dcterms:description """Coax kabel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/opticalFiber> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "opticalFiber";
-  skos:prefLabel "opticalFiber"@en;
-  dcterms:description "Optical fibre cable."@en;
+  skos:prefLabel "Optical fiber"@en;
+  skos:prefLabel "Optische vezel"@nl;
+  dcterms:description """Optical fibre cable."""@en;
+  dcterms:description """Optische vezel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/other> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "other";
-  skos:prefLabel "other"@en;
-  dcterms:description "Other."@en;
+  skos:prefLabel "Other"@en;
+  skos:prefLabel "Andere"@nl;
+  dcterms:description """Other."""@en;
+  dcterms:description """Andere"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue/twistedPair> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "twistedPair";
-  skos:prefLabel "twistedPair"@en;
-  dcterms:description "Twisted pair."@en;
+  skos:prefLabel "Twisted pair"@en;
+  skos:prefLabel "Koperpaarkabel"@nl;
+  dcterms:description """Twisted pair."""@en;
+  dcterms:description """Koperpaar kabel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

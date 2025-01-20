@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-VisibilityTypeValue"@en;
   dcterms:description "Classification of visibility types."@en;
+  dcterms:description "Classificatie van visibilitytypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,16 +20,20 @@
 <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue/notVisibleAboveGround> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue>;
   skos:notation "notVisibleAboveGround";
-  skos:prefLabel "notVisibleAboveGround"@en;
-  dcterms:description "Not visible above ground."@en;
+  skos:prefLabel "Not visible above ground"@en;
+  skos:prefLabel "Niet zichtbaar bovengronds"@nl;
+  dcterms:description """Not visible above ground."""@en;
+  dcterms:description """Niet zichtbaar bovengronds"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue/visibleAboveGround> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-VisibilityTypeValue>;
   skos:notation "visibleAboveGround";
-  skos:prefLabel "visibleAboveGround"@en;
-  dcterms:description "Visible above ground."@en;
+  skos:prefLabel "Visible above grond"@en;
+  skos:prefLabel "Zichtbaar bovengronds"@nl;
+  dcterms:description """Visible above ground."""@en;
+  dcterms:description """Zichtbaar bovengronds"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

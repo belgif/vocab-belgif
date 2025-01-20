@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-WarningTypeIMKLValue"@en;
   dcterms:description "Classification of warning types."@en;
+  dcterms:description "Classificatie van warningtypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,16 +20,20 @@
 <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue/geotextile> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue>;
   skos:notation "geotextile";
-  skos:prefLabel "geotextile"@en;
-  dcterms:description "Geotextile."@en;
+  skos:prefLabel "Geotextile"@en;
+  skos:prefLabel "Geotextiel"@nl;
+  dcterms:description """Geotextile."""@en;
+  dcterms:description """Geotextiel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue/protectivePlate> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-WarningTypeIMKLValue>;
   skos:notation "protectivePlate";
-  skos:prefLabel "protectivePlate"@en;
-  dcterms:description "A series of underground protective plates to cover cables or pipelines. (e.g. plastic sheet plates)."@en;
+  skos:prefLabel "Protective plates"@en;
+  skos:prefLabel "Beschermplaten"@nl;
+  dcterms:description """A series of underground protective plates to cover cables or pipelines. (e.g. plastic sheet plates)."""@en;
+  dcterms:description """Een reeks ondergronds geplaatste beschermplaten ter afdekking van kabels of pijpleidingen. (bv kunststofplaten platen)"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-DocumentTypeValue"@en;
   dcterms:description "Classification of document types."@en;
+  dcterms:description "Classificatie van documenttypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,48 +20,60 @@
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/crossSection> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "crossSection";
-  skos:prefLabel "crossSection"@en;
-  dcterms:description "Document containing a cross section"@en;
+  skos:prefLabel "Cross section"@en;
+  skos:prefLabel "Dwarsprofiel"@nl;
+  dcterms:description """Document containing a cross section."""@en;
+  dcterms:description """Te gebruiken wanneer het extra plan een dwarsprofiel is"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/detailedPlan> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "detailedPlan";
-  skos:prefLabel "detailedPlan"@en;
-  dcterms:description "Document containing a detailed plan."@en;
+  skos:prefLabel "Detailed plan"@en;
+  skos:prefLabel "Detailplan"@nl;
+  dcterms:description """Document containing a detailed plan."""@en;
+  dcterms:description """Te gebruiken wanneer het extra plan een detailplan is"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/directionalDrilling> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "directionalDrilling";
-  skos:prefLabel "directionalDrilling"@en;
-  dcterms:description "Document containing information on a directional drilling."@en;
+  skos:prefLabel "Directional drilling"@en;
+  skos:prefLabel "Gestuurde boring"@nl;
+  dcterms:description """Document containing information on a directional drilling."""@en;
+  dcterms:description """Te gebruiken indien het plan een gestuurde boring  is"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/longitudinalSection> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "longitudinalSection";
-  skos:prefLabel "longitudinalSection"@en;
-  dcterms:description "Document containing a longitudinal section."@en;
+  skos:prefLabel "Longitudinal section"@en;
+  skos:prefLabel "Lengteprofiel"@nl;
+  dcterms:description """Document containing a longitudinal section."""@en;
+  dcterms:description """Te gebruiken wanneer het extra plan een lengteprofiel is"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/other> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "other";
-  skos:prefLabel "other"@en;
-  dcterms:description "Other type of document"@en;
+  skos:prefLabel "Other"@en;
+  skos:prefLabel "Andere"@nl;
+  dcterms:description """Other type of document."""@en;
+  dcterms:description """Andere plannen of plannen met zowel detail als lengteprofiel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue/precaution> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentTypeValue>;
   skos:notation "precaution";
-  skos:prefLabel "precaution"@en;
-  dcterms:description "Document containing precautions."@en;
+  skos:prefLabel "Precaution"@en;
+  skos:prefLabel "Voorzorgsmaatregel"@nl;
+  dcterms:description """Document containing precautions."""@en;
+  dcterms:description """Classificatie van documenttypes."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

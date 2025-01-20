@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue"@en;
   dcterms:description "Classification of oil, gas, chemicals appurtenances."@en;
+  dcterms:description "Classificatie van oil, gas, chemicals appurtenances."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,104 +20,130 @@
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/adapter> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "adapter";
-  skos:prefLabel "adapter"@en;
-  dcterms:description "Adapter."@en;
+  skos:prefLabel "Adapter"@en;
+  skos:prefLabel "Verloopstuk"@nl;
+  dcterms:description """Adapter."""@en;
+  dcterms:description """Verloopstuk"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/airBeacon> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "airBeacon";
-  skos:prefLabel "airBeacon"@en;
-  dcterms:description "Air beacon."@en;
+  skos:prefLabel "Air beacon"@en;
+  skos:prefLabel "Luchtbaken"@nl;
+  dcterms:description """Air beacon."""@en;
+  dcterms:description """Luchtbaken"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/blowHole> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "blowHole";
-  skos:prefLabel "blowHole"@en;
-  dcterms:description "Blowhole."@en;
+  skos:prefLabel "Blowhole"@en;
+  skos:prefLabel "Blaasgat"@nl;
+  dcterms:description """Blowhole."""@en;
+  dcterms:description """Blaasgat """@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/cathodicProtectionInstallation> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionInstallation";
-  skos:prefLabel "cathodicProtectionInstallation"@en;
-  dcterms:description "Cathodic protection installation."@en;
+  skos:prefLabel "Cathodic protection installation"@en;
+  skos:prefLabel "Installatie kathodische bescherming"@nl;
+  dcterms:description """Cathodic protection installation."""@en;
+  dcterms:description """Installatie kathodische bescherming"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/cathodicProtectionMeasurementPoint> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "cathodicProtectionMeasurementPoint";
-  skos:prefLabel "cathodicProtectionMeasurementPoint"@en;
-  dcterms:description "Cathodic protection measurement point."@en;
+  skos:prefLabel "Cathodic protection measurement point"@en;
+  skos:prefLabel "Meetpunt kathodische bescherming"@nl;
+  dcterms:description """Cathodic protection measurement point."""@en;
+  dcterms:description """Meetpunt kathodische bescherming"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/endCap> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "endCap";
-  skos:prefLabel "endCap"@en;
-  dcterms:description "End cap."@en;
+  skos:prefLabel "End cap"@en;
+  skos:prefLabel "Eindkap"@nl;
+  dcterms:description """End cap."""@en;
+  dcterms:description """Eindkap"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/flange> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "flange";
-  skos:prefLabel "flange"@en;
-  dcterms:description "Flange."@en;
+  skos:prefLabel "Flange"@en;
+  skos:prefLabel "Flens"@nl;
+  dcterms:description """Flange."""@en;
+  dcterms:description """Flens"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/measurementPoint> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "measurementPoint";
-  skos:prefLabel "measurementPoint"@en;
-  dcterms:description "Measurement point."@en;
+  skos:prefLabel "Measurement point"@en;
+  skos:prefLabel "Meetpunt"@nl;
+  dcterms:description """Measurement point."""@en;
+  dcterms:description """Drukmeetpunt"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/siphon> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "siphon";
-  skos:prefLabel "siphon"@en;
-  dcterms:description "Siphon."@en;
+  skos:prefLabel "Siphon"@en;
+  skos:prefLabel "Sifon"@nl;
+  dcterms:description """Siphon."""@en;
+  dcterms:description """Sifon"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/sleeve> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "sleeve";
-  skos:prefLabel "sleeve"@en;
-  dcterms:description "Sleeve."@en;
+  skos:prefLabel "Sleeve"@en;
+  skos:prefLabel "Mof"@nl;
+  dcterms:description """Sleeve."""@en;
+  dcterms:description """Mof"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/sluice> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "sluice";
-  skos:prefLabel "sluice"@en;
-  dcterms:description "Sluice."@en;
+  skos:prefLabel "Sluice"@en;
+  skos:prefLabel "Spui"@nl;
+  dcterms:description """Sluice."""@en;
+  dcterms:description """Spui """@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/stoppleFitting> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "stoppleFitting";
-  skos:prefLabel "stoppleFitting"@en;
-  dcterms:description "Stopple fitting."@en;
+  skos:prefLabel "Stopple fitting"@en;
+  skos:prefLabel "Stopplefitting"@nl;
+  dcterms:description """Stopple fitting."""@en;
+  dcterms:description """Stopplefitting"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue/valve> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsAppurtenanceTypeIMKLValue>;
   skos:notation "valve";
-  skos:prefLabel "valve"@en;
-  dcterms:description "Valve."@en;
+  skos:prefLabel "Valve"@en;
+  skos:prefLabel "Afsluiter"@nl;
+  dcterms:description """Valve."""@en;
+  dcterms:description """Afsluiter"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

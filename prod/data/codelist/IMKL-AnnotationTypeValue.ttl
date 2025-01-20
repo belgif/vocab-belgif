@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-AnnotationTypeValue"@en;
   dcterms:description "Classification of annotation types."@en;
+  dcterms:description "Classificatie van annotatietypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -20,7 +21,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "annotationLabel";
   skos:prefLabel "annotationLabel"@en;
-  dcterms:description "To be used to visualise a label in an annotation."@en;
+  skos:prefLabel "annotatieLabel"@nl;
+  dcterms:description """To be used to visualise a label in an annotation."""@en;
+  dcterms:description """Te gebruiken om een label in een annotatie te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +31,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "annotationLine";
   skos:prefLabel "annotationLine"@en;
-  dcterms:description "To be used to visualise a line in an annotation."@en;
+  skos:prefLabel "annotatieLijn"@nl;
+  dcterms:description """To be used to visualise a line in an annotation."""@en;
+  dcterms:description """Te gebruiken om een lijn in een annotatie te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +41,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "arrow";
   skos:prefLabel "arrow"@en;
-  dcterms:description "To be used to visualise an arrow in an annotation."@en;
+  skos:prefLabel "pijl"@nl;
+  dcterms:description """To be used to visualise an arrow in an annotation."""@en;
+  dcterms:description """Te gebruiken om een pijl in een annotatie te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +51,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningGuideline";
   skos:prefLabel "dimensioningGuideline"@en;
-  dcterms:description "To be used to visualise an auxiliary dimensioning line."@en;
+  skos:prefLabel "maatvoeringsHulplijn"@nl;
+  dcterms:description """To be used to visualise an auxiliary dimensioning line."""@en;
+  dcterms:description """Te gebruiken om een hulplijn in een maatvoering te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -52,7 +61,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningLabel";
   skos:prefLabel "dimensioningLabel"@en;
-  dcterms:description "To be used to visualise a dimensioning label."@en;
+  skos:prefLabel "maatvoeringsLabel"@nl;
+  dcterms:description """To be used to visualise a dimensioning label."""@en;
+  dcterms:description """Te gebruiken om een label in een maatvoering te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -60,7 +71,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-AnnotationTypeValue>;
   skos:notation "dimensioningLine";
   skos:prefLabel "dimensioningLine"@en;
-  dcterms:description "To be used to visualise a dimensioning line."@en;
+  skos:prefLabel "maatvoeringsLijn"@nl;
+  dcterms:description """To be used to visualise a dimensioning line."""@en;
+  dcterms:description """Te gebruiken om een lijn in een maatvoering te visualiseren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

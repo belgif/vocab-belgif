@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-MaterialTypeValue"@en;
   dcterms:description "Classification of material types."@en;
+  dcterms:description "Classificatie van materiaaltypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,104 +20,130 @@
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/brickwork> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "brickwork";
-  skos:prefLabel "brickwork"@en;
-  dcterms:description "Brickwork."@en;
+  skos:prefLabel "Brickwork"@en;
+  skos:prefLabel "Metselwerk"@nl;
+  dcterms:description """Brickwork."""@en;
+  dcterms:description """Metselwerk"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/concrete> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "concrete";
-  skos:prefLabel "concrete"@en;
-  dcterms:description "Concrete."@en;
+  skos:prefLabel "Concrete"@en;
+  skos:prefLabel "Beton"@nl;
+  dcterms:description """Concrete."""@en;
+  dcterms:description """Beton"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/crossLinkPolyethylene> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "crossLinkPolyethylene";
-  skos:prefLabel "crossLinkPolyethylene"@en;
-  dcterms:description "Cross-linked polyethylene."@en;
+  skos:prefLabel "XLPE"@en;
+  skos:prefLabel "XLPE"@nl;
+  dcterms:description """Cross-linked polyethylene."""@en;
+  dcterms:description """XLPE"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/ductileCastIron> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "ductileCastIron";
-  skos:prefLabel "ductileCastIron"@en;
-  dcterms:description "Ductile cast iron."@en;
+  skos:prefLabel "Ductile cast iron"@en;
+  skos:prefLabel "Duktiel gietijzer"@nl;
+  dcterms:description """Ductile cast iron."""@en;
+  dcterms:description """Nodulair of duktiel Gietijzer"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/ductileCastIronBlutop> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "ductileCastIronBlutop";
-  skos:prefLabel "ductileCastIronBlutop"@en;
-  dcterms:description "Ductile cast iron Blutop."@en;
+  skos:prefLabel "Ductile cast iron blutop"@en;
+  skos:prefLabel "Duktiel gietijzer blutop"@nl;
+  dcterms:description """Ductile cast iron Blutop."""@en;
+  dcterms:description """Duktiel gietijzer blutop"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/fiberCement> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "fiberCement";
-  skos:prefLabel "fiberCement"@en;
-  dcterms:description "Fiber cement."@en;
+  skos:prefLabel "Fiber cement"@en;
+  skos:prefLabel "Vezelcement"@nl;
+  dcterms:description """Fiber cement."""@en;
+  dcterms:description """Vezelcement"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/galvanisedSteel> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "galvanisedSteel";
-  skos:prefLabel "galvanisedSteel"@en;
-  dcterms:description "Galvanised steel."@en;
+  skos:prefLabel "Galvanised steel"@en;
+  skos:prefLabel "Gegalvaniseerd staal"@nl;
+  dcterms:description """Galvanised steel."""@en;
+  dcterms:description """Gegalvaniseerd staal"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/glassFiberReinforcedPolyester> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "glassFiberReinforcedPolyester";
-  skos:prefLabel "glassFiberReinforcedPolyester"@en;
-  dcterms:description "Fiber-reinforced polyester."@en;
+  skos:prefLabel "Fiber-reinforced polyester"@en;
+  skos:prefLabel "Glasvezel versterkte polyester"@nl;
+  dcterms:description """Fiber-reinforced polyester."""@en;
+  dcterms:description """Glasvezel versterkte polyester"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/grayCastIron> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "grayCastIron";
-  skos:prefLabel "grayCastIron"@en;
-  dcterms:description "Gray cast iron."@en;
+  skos:prefLabel "Gray cast iron"@en;
+  skos:prefLabel "Grijs gietijzer"@nl;
+  dcterms:description """Gray cast iron."""@en;
+  dcterms:description """Grijs gietijzer"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/jute> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "jute";
-  skos:prefLabel "jute"@en;
-  dcterms:description "Jute."@en;
+  skos:prefLabel "Jute"@en;
+  skos:prefLabel "Jute"@nl;
+  dcterms:description """Jute."""@en;
+  dcterms:description """Jute"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/lead> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "lead";
-  skos:prefLabel "lead"@en;
-  dcterms:description "Lead."@en;
+  skos:prefLabel "Lead"@en;
+  skos:prefLabel "Lood"@nl;
+  dcterms:description """Lead."""@en;
+  dcterms:description """Lood"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/other> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "other";
-  skos:prefLabel "other"@en;
-  dcterms:description "Other."@en;
+  skos:prefLabel "Other"@en;
+  skos:prefLabel "Andere"@nl;
+  dcterms:description """Other."""@en;
+  dcterms:description """Andere"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/polyethylene> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "polyethylene";
-  skos:prefLabel "polyethylene"@en;
-  dcterms:description "Polyehtylene."@en;
+  skos:prefLabel "Polythylene"@en;
+  skos:prefLabel "Polyethyleen"@nl;
+  dcterms:description """Polyehtylene."""@en;
+  dcterms:description """Polyethyleen"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -124,95 +151,119 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "polyethyleneHighDensity";
   skos:prefLabel "polyethyleneHighDensity"@en;
-  dcterms:description "High density polyethylene."@en;
+  skos:prefLabel "Polyethyleen hoge densiteit"@nl;
+  dcterms:description """High density polyethylene."""@en;
+  dcterms:description """Polyethyleen hoge densiteit"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/polyethyleneSafetyLine> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "polyethyleneSafetyLine";
-  skos:prefLabel "polyethyleneSafetyLine"@en;
-  dcterms:description "Polyethylene SafeteLine"@en;
+  skos:prefLabel "Polyethylene SafeteLine"@en;
+  skos:prefLabel "Polyethyleen safety line"@nl;
+  dcterms:description """Polyethylene SafeteLine"""@en;
+  dcterms:description """Polyethyleen safety line"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/polypropylene> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "polypropylene";
-  skos:prefLabel "polypropylene"@en;
-  dcterms:description "Polypropylene."@en;
+  skos:prefLabel "Polypropylene"@en;
+  skos:prefLabel "Polypropyleen"@nl;
+  dcterms:description """Polypropylene."""@en;
+  dcterms:description """Polypropyleen"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/polypropyleneSLA> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "polypropyleneSLA";
-  skos:prefLabel "polypropyleneSLA"@en;
-  dcterms:description "Polypropylene SLA."@en;
+  skos:prefLabel "Polypropylene SLA"@en;
+  skos:prefLabel "Polypropyleen SLA"@nl;
+  dcterms:description """Polypropylene SLA."""@en;
+  dcterms:description """Polypropyleen SLA"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/prestressedConcrete> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "prestressedConcrete";
-  skos:prefLabel "prestressedConcrete"@en;
-  dcterms:description "Prestressed concrete."@en;
+  skos:prefLabel "Prestressed concrete"@en;
+  skos:prefLabel "Voorgespannen beton"@nl;
+  dcterms:description """Prestressed concrete."""@en;
+  dcterms:description """Voorgespannen beton"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/pvc> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "pvc";
-  skos:prefLabel "pvc"@en;
-  dcterms:description "PVC."@en;
+  skos:prefLabel "PVC"@en;
+  skos:prefLabel "PVC"@nl;
+  dcterms:description """PVC."""@en;
+  dcterms:description """PVC"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/sideroCement> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "sideroCement";
-  skos:prefLabel "sideroCement"@en;
-  dcterms:description "Sidero cement."@en;
+  skos:prefLabel "Sidero cement"@en;
+  skos:prefLabel "Sidero cement"@nl;
+  dcterms:description """Sidero cement."""@en;
+  dcterms:description """Sidero cement"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/stainlessSteel> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "stainlessSteel";
-  skos:prefLabel "stainlessSteel"@en;
-  dcterms:description "Stainless steel."@en;
+  skos:prefLabel "Stainless steel"@en;
+  skos:prefLabel "Roestvrij staal"@nl;
+  dcterms:description """Stainless steel."""@en;
+  dcterms:description """Roestvrij staal"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/steel> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "steel";
-  skos:prefLabel "steel"@en;
-  dcterms:description "Steel."@en;
+  skos:prefLabel "Steel"@en;
+  skos:prefLabel "Staal"@nl;
+  dcterms:description """Steel."""@en;
+  dcterms:description """Staal"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/stoneware> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "stoneware";
-  skos:prefLabel "stoneware"@en;
-  dcterms:description "Stoneware."@en;
+  skos:prefLabel "Stoneware"@en;
+  skos:prefLabel "Grès"@nl;
+  dcterms:description """Stoneware."""@en;
+  dcterms:description """Grès"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/sulfurConcrete> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "sulfurConcrete";
-  skos:prefLabel "sulfurConcrete"@en;
-  dcterms:description "Sulfur concrete."@en;
+  skos:prefLabel "Sulfur concrete"@en;
+  skos:prefLabel "Zwavelbeton"@nl;
+  dcterms:description """Sulfur concrete."""@en;
+  dcterms:description """zwavelbeton is circulair (i.e. te hergebruiken en niet af te voeren)"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue/unknown> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-MaterialTypeValue>;
   skos:notation "unknown";
-  skos:prefLabel "unknown"@en;
-  dcterms:description "Unknown."@en;
+  skos:prefLabel "Unknown"@en;
+  skos:prefLabel "Onbekend"@nl;
+  dcterms:description """Unknown."""@en;
+  dcterms:description """Onbekend"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

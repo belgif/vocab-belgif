@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-DocumentMediaTypeValue"@en;
   dcterms:description "Classification of document media types."@en;
+  dcterms:description "Classificatie van document mediatypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -20,7 +21,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "JPEG";
   skos:prefLabel "JPEG"@en;
-  dcterms:description "JPEG document."@en;
+  skos:prefLabel "JPEG"@nl;
+  dcterms:description """JPEG document."""@en;
+  dcterms:description """Te gebruiken wanneer het bestand van het type “JPEG” is."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -28,7 +31,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "PDF";
   skos:prefLabel "PDF"@en;
-  dcterms:description "PDF document."@en;
+  skos:prefLabel "PDF"@nl;
+  dcterms:description """PDF document."""@en;
+  dcterms:description """Te gebruiken wanneer het bestand van het type “PDF” is."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -36,7 +41,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "PNG";
   skos:prefLabel "PNG"@en;
-  dcterms:description "PNG document."@en;
+  skos:prefLabel "PNG"@nl;
+  dcterms:description """PNG document."""@en;
+  dcterms:description """Te gebruiken wanneer het bestand van het type “PNG” is."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
@@ -44,7 +51,9 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-DocumentMediaTypeValue>;
   skos:notation "TIFF";
   skos:prefLabel "TIFF"@en;
-  dcterms:description "TIFF document."@en;
+  skos:prefLabel "TIFF"@nl;
+  dcterms:description """TIFF document."""@en;
+  dcterms:description """Te gebruiken wanneer het bestand van het type “TIFF” is."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

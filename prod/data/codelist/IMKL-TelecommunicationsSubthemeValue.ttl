@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-TelecommunicationsSubthemeValue"@en;
   dcterms:description "Classification of telecommunication subthemes."@en;
+  dcterms:description "Classificatie van telecommunication subthema's."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,24 +20,30 @@
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue/electronicCommunication> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "electronicCommunication";
-  skos:prefLabel "electronicCommunication"@en;
-  dcterms:description "E.g. cables used to transport data."@en;
+  skos:prefLabel "Electronic communication"@en;
+  skos:prefLabel "Elektronische communicatie"@nl;
+  dcterms:description """E.g. cables used to convey data."""@en;
+  dcterms:description """Bijv. kabels die gebruikt worden om data te transporteren"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue/telecommunicationDistribution> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "telecommunicationDistribution";
-  skos:prefLabel "telecommunicationDistribution"@en;
-  dcterms:description "Cabling for local distribution of radio, TV, data and telephone signals up to the user's connection point(s)."@en;
+  skos:prefLabel "Telecommunication distribution"@en;
+  skos:prefLabel "Telecommunicatie distributie"@nl;
+  dcterms:description """Cabling for local distribution of radio, TV, data and telephone signals up to the user's connection point(s)."""@en;
+  dcterms:description """Leiding voor het lokaal distribueren van radio-, tv-, data-  en telefoniesignalen tot bij het aansluitpunt van de gebruiker(s)"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue/telecommunicationMainline> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
   skos:notation "telecommunicationMainline";
-  skos:prefLabel "telecommunicationMainline"@en;
-  dcterms:description "Cabling carrying radio,TV, data and telephone signals over long distances to the distribution network."@en;
+  skos:prefLabel "Telecommunication mainline"@en;
+  skos:prefLabel "Telecommunicatie hoofdlijn"@nl;
+  dcterms:description """Cabling carrying radio,TV, data and telephone signals over long distances to the distribution network."""@en;
+  dcterms:description """Leiding voor het vervoeren van radio-, tv-, data-  en telefoniesignalen over lange afstanden tot aan het distributienet"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

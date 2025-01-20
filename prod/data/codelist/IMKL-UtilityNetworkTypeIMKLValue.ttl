@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue> a skos:ConceptScheme;
   dcterms:title "IMKL-UtilityNetworkTypeIMKLValue"@en;
   dcterms:description "Classification of utility network types."@en;
+  dcterms:description "Classificatie van utility networktypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,8 +20,11 @@
 <https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue/crossTheme> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-UtilityNetworkTypeIMKLValue>;
   skos:notation "crossTheme";
-  skos:prefLabel "crossTheme"@en;
-  dcterms:description "Mixed Networks. For use in case of, for example, a UtilityNetwork with Duct and Pipe objects containing cables or pipes of different themes."@en;
+  skos:prefLabel "Mixed Networks. For use in case of, for example, a UtilityNetwork with Duct and Pipe objects containing cables or pipes of different themes."@en;
+  skos:prefLabel "Gemengde netten. Voor gebruik in geval van een UtilityNetwork met Duct en Pipe objecten."@nl;
+  dcterms:description """Mixed Networks. For use in case of, for example, a UtilityNetwork with Duct and Pipe objects containing cables or pipes of different themes."""@en;
+  dcterms:description """Gemengde netten. 
+Voor gebruik in geval van bijvoorbeeld een UtilityNetwork met Duct en Pipe objecten waarin kabels of leidingen zitten van verschillende thema’s."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   

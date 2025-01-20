@@ -1,17 +1,18 @@
-@prefix rov: <http://www.w3.org/ns/regorg#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+﻿@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix schemas: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue> a skos:ConceptScheme;
   dcterms:title "IMKL-ProtectedAreaTypeValue"@en;
   dcterms:description "Classification of protected area types."@en;
+  dcterms:description "Classificatie van protected areatypes."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2024-09-26"^^xsd:date;
+  dcterms:modified "2025-01-17"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
@@ -19,40 +20,50 @@
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue/drinkingWaterExtractionArea> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "drinkingWaterExtractionArea";
-  skos:prefLabel "drinkingWaterExtractionArea"@en;
-  dcterms:description "Area in which a water company extracts groundwater for the production of drinking water."@en;
+  skos:prefLabel "Drinking water extraction area"@en;
+  skos:prefLabel "Drinkwaterwingebied"@nl;
+  dcterms:description """Area in which a water company extracts groundwater for the production of drinking water."""@en;
+  dcterms:description """Gebied waarin een watermaatschappij grondwater oppompt voor de productie van drinkwater."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue/geothermalInstallation> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "geothermalInstallation";
-  skos:prefLabel "geothermalInstallation"@en;
-  dcterms:description "Area in which a large geothermal plant occurs."@en;
+  skos:prefLabel "Geothermal installation"@en;
+  skos:prefLabel "Geothermische installatie"@nl;
+  dcterms:description """Area in which a large geothermal plant occurs."""@en;
+  dcterms:description """Gebied waarin een grote geothermische installatie voorkomt."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue/infiltrationArea> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "infiltrationArea";
-  skos:prefLabel "infiltrationArea"@en;
-  dcterms:description "Area intended for the infiltration of water into the soil."@en;
+  skos:prefLabel "Infiltration area"@en;
+  skos:prefLabel "Infiltratiegebied"@nl;
+  dcterms:description """Area intended for the infiltration of water into the soil."""@en;
+  dcterms:description """Gebied bestemd voor de infiltratie van water in de grond."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue/otherProtectedArea> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "otherProtectedArea";
-  skos:prefLabel "otherProtectedArea"@en;
-  dcterms:description "Area protected for another reason."@en;
+  skos:prefLabel "Other protected area"@en;
+  skos:prefLabel "Ander beschermd gebied"@nl;
+  dcterms:description """Area protected for another reason."""@en;
+  dcterms:description """Het gebied is om een andere reden beschermd."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
 <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue/undergroundGasStorage> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-ProtectedAreaTypeValue>;
   skos:notation "undergroundGasStorage";
-  skos:prefLabel "undergroundGasStorage"@en;
-  dcterms:description "Area used for underground gas storage."@en;
+  skos:prefLabel "Underground gas storage"@en;
+  skos:prefLabel "Ondergrondse gasopslag"@nl;
+  dcterms:description """Area used for underground gas storage."""@en;
+  dcterms:description """Gebied gebruikt voor de ondergrondse opslag van gas."""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
