@@ -9,8 +9,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-		<rdf4j.version>4.3.14</rdf4j.version>
-		<dw.version>4.0.10</dw.version>
+		<rdf4j.version>4.3.15</rdf4j.version>
+		<dw.version>4.0.11</dw.version>
 	</properties>
 	<name>Vocab Belgif</name>
 	<description>Belgif.be vocabulary server</description>
