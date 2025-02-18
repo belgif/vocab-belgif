@@ -6,16 +6,16 @@
 @prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue> a skos:ConceptScheme;
-  dcterms:title "IMKL-OilGasChemicalsProductTypeIMKLValue"@en;
+  dcterms:title "IMKL-OilGasChemicalsProductTypeIMKLValue"@en, "IMKL-OilGasChemicalsProductTypeIMKLValue"@nl;
   dcterms:description "Classification of oil, gas, chemicals product types."@en;
   dcterms:description "Classificatie van oil, gas, chemicals producten"@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2025-01-17"^^xsd:date;
+  dcterms:modified "2025-02-13"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en, "Vlaams Datanutsbedrijf"@nl .
 
 <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/accetone> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
@@ -57,9 +57,9 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1,2> a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1_2> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
-  skos:notation "butadiene1,2";
+  skos:notation "butadiene1_2";
   skos:prefLabel "Butadiene 1,2 (C4H6)"@en;
   skos:prefLabel "Butadieen 1,2 (C4H6)"@nl;
   dcterms:description """Butadiene 1,2 (C4H6)."""@en;
@@ -67,9 +67,9 @@
   schemas:startDate "2024-01-01"^^xsd:date;
   schemas:endDate "9999-12-31"^^xsd:date .
   
-<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1,3> a skos:Concept;
+<https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue/butadiene1_3> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-OilGasChemicalsProductTypeIMKLValue>;
-  skos:notation "butadiene1,3";
+  skos:notation "butadiene1_3";
   skos:prefLabel "Butadiene 1,3 (C4H6)"@en;
   skos:prefLabel "Butadieen 1,3 (C4H6)"@nl;
   dcterms:description """Butadiene 1,3 (C4H6)."""@en;

@@ -6,16 +6,16 @@
 @prefix rov: <http://www.w3.org/ns/regorg#> .
 
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue> a skos:ConceptScheme;
-  dcterms:title "IMKL-TelecommunicationsSubthemeValue"@en;
+  dcterms:title "IMKL-TelecommunicationsSubthemeValue"@en, "IMKL-TelecommunicationsSubthemeValue"@nl;
   dcterms:description "Classification of telecommunication subthemes."@en;
   dcterms:description "Classificatie van telecommunication subthema's."@nl;
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2025-01-17"^^xsd:date;
+  dcterms:modified "2025-02-13"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
-<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en .
+<https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en, "Vlaams Datanutsbedrijf"@nl .
 
 <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue/electronicCommunication> a skos:Concept;
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsSubthemeValue>;
