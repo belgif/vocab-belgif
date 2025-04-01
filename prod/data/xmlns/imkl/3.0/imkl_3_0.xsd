@@ -63,7 +63,7 @@
                             <appinfo>
                                 <targetElement>imkl:VerticalPositionDetail</targetElement>
                             <reversePropertyName>
-                                imkl:inNetwork</reversePropertyName>
+                                    imkl:inNetwork</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -73,7 +73,7 @@
                             <appinfo>
                                 <targetElement>imkl:StandardCoverageDetail</targetElement>
 								<reversePropertyName>
-                                imkl:inNetwork</reversePropertyName>
+                                    imkl:inNetwork</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -83,7 +83,7 @@
                             <appinfo>
                                 <targetElement>imkl:ProtectedArea</targetElement>
                             <reversePropertyName>
-                                imkl:inNetwork</reversePropertyName>
+                                    imkl:inNetwork</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -93,7 +93,7 @@
                             <appinfo>
                                 <targetElement>imkl:Document</targetElement>
                                 <reversePropertyName>
-                                imkl:inNetwork</reversePropertyName>
+                                    imkl:inNetwork</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -103,7 +103,7 @@
                             <appinfo>
                                 <targetElement>imkl:Annotation</targetElement>
                         <reversePropertyName>
-                                imkl:inNetwork</reversePropertyName>
+                                    imkl:inNetwork</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -155,7 +155,7 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                                 <reversePropertyName>
-                                us-net-common:utilityFacilityReference</reversePropertyName>
+                                    us-net-common:utilityFacilityReference</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -287,7 +287,7 @@
                             <appinfo>
                                 <targetElement>imkl:DepthDetail</targetElement>
 								<reversePropertyName>
-                                imkl:on</reversePropertyName>
+                                    imkl:on</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -299,7 +299,7 @@
                             <appinfo>
                                 <targetElement>imkl:Document</targetElement>
                         <reversePropertyName>
-                                imkl:refersTo</reversePropertyName>
+                                    imkl:refersTo</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -309,7 +309,7 @@
                             <appinfo>
                                 <targetElement>imkl:Annotation</targetElement>
                                 <reversePropertyName>
-                                imkl:associatedWith</reversePropertyName>
+                                    imkl:associatedWith</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -402,7 +402,7 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                                                 <reversePropertyName>
-                                imkl:protectedArea</reversePropertyName>
+                                    imkl:protectedArea</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -463,10 +463,10 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                                     <reversePropertyName>
-                                imkl:documentation</reversePropertyName>
+                                    imkl:documentation</reversePropertyName>
                             </appinfo>
                         </annotation>
-                    </element>                    
+                    </element>
                 </sequence>
             </extension>
         </complexContent>
@@ -477,7 +477,7 @@
         <complexContent>
             <extension base="imkl:DocumentType">
                 <sequence>
-                    <element name="refersTo" minOccurs="0" maxOccurs="unbounded">
+                    <element name="refersTo" minOccurs="1" maxOccurs="unbounded">
                         <annotation>
                             <appinfo>
                                 <reversePropertyName>imkl:documentation</reversePropertyName>
@@ -545,7 +545,7 @@
                     <appinfo>
                         <targetElement>imkl:CoverageDetail</targetElement>
                         <reversePropertyName>
-                        imkl:on</reversePropertyName>
+                            imkl:on</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
@@ -556,7 +556,7 @@
                     <appinfo>
                         <targetElement>imkl:Document</targetElement>
                     <reversePropertyName>
-                        imkl:refersTo</reversePropertyName>
+                            imkl:refersTo</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
@@ -565,10 +565,11 @@
                     <appinfo>
                         <targetElement>imkl:Annotation</targetElement>
                         <reversePropertyName>
-                        imkl:associatedWith</reversePropertyName>
+                            imkl:associatedWith</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
+            <element name="inSharedContainer" type="boolean" minOccurs="0" />
         </sequence>
     </group>
 
@@ -643,7 +644,7 @@
                     <appinfo>
                         <targetElement>imkl:UtilityNetwork</targetElement>
 								<reversePropertyName>
-                        imkl:elements</reversePropertyName>
+                            imkl:elements</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
@@ -653,7 +654,7 @@
                     <appinfo>
                         <targetElement>imkl:Document</targetElement>
                       <reversePropertyName>
-                        imkl:refersTo</reversePropertyName>
+                            imkl:refersTo</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
@@ -662,7 +663,7 @@
                     <appinfo>
                         <targetElement>imkl:Annotation</targetElement>
                         <reversePropertyName>
-                        imkl:associatedWith</reversePropertyName>
+                            imkl:associatedWith</reversePropertyName>
                     </appinfo>
                 </annotation>
             </element>
@@ -711,7 +712,7 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                             <reversePropertyName>
-                                imkl:verticalPositionDetail</reversePropertyName>
+                                    imkl:verticalPositionDetail</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -752,7 +753,7 @@
                             <appinfo>
                                 <targetElement> imkl:UtilityNetwork</targetElement>
                             <reversePropertyName>
-                                imkl:verticalPositionDetail</reversePropertyName>
+                                    imkl:verticalPositionDetail</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -801,7 +802,7 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                             <reversePropertyName>
-                                imkl:standardCoverageDetail</reversePropertyName>
+                                    imkl:standardCoverageDetail</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
@@ -836,7 +837,7 @@
                             <appinfo>
                                 <targetElement>imkl:UtilityNetwork</targetElement>
                                     <reversePropertyName>
-                                imkl:annotation</reversePropertyName>
+                                    imkl:annotation</reversePropertyName>
                             </appinfo>
                         </annotation>
                     </element>
