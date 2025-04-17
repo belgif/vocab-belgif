@@ -85,25 +85,45 @@
 				</tr>
 			</thead>
 			<tbody>
-			<#list v.sameAs as s>
+			<#list v.sameAs as val>
+				<#assign link = val>
+				<#if val?starts_with("http://data.europa")>
+					<#assign link = "https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=" + val>
+				</#if>
 				<tr><td>OWL sameAs</td>
-					<td rel="owl:sameAs" resource="${s}"><a href="${s}">${s}</a></td></tr>
+					<td rel="owl:sameAs" resource="${val}"><a href="${link}">${val}</a></td></tr>
 			</#list>
 			<#list v.exactMatches as val>
+				<#assign link = val>
+				<#if val?starts_with("http://data.europa")>
+					<#assign link = "https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=" + val>
+				</#if>
 				<tr><td>Exact</td>
-					<td rel="skos:exactMatch" resource="${val}"><a href="${val}">${val}</a></td></tr>
+					<td rel="skos:exactMatch" resource="${val}"><a href="${link}">${val}</a></td></tr>
 			</#list>
 			<#list v.closeMatches as val>
+				<#assign link = val>
+				<#if val?starts_with("http://data.europa")>
+					<#assign link = "https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=" + val>
+				</#if>
 				<tr><td>Close</td>
-					<td rel="skos:closeMatch" resource="${val}"><a href="${val}">${val}</a></td></tr>
+					<td rel="skos:closeMatch" resource="${val}"><a href="${link}">${val}</a></td></tr>
 			</#list>
 			<#list v.broadMatches as val>
+				<#assign link = val>
+				<#if val?starts_with("http://data.europa")>
+					<#assign link = "https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=" + val>
+				</#if>
 				<tr><td>Broader</td>
-					<td rel="skos:broadMatch" resource="${val}"><a href="${val}">${val}</a></td></tr>
+					<td rel="skos:broadMatch" resource="${val}"><a href="${link}">${val}</a></td></tr>
 			</#list>
 			<#list v.narrowMatches as val>
+				<#assign link = val>
+				<#if val?starts_with("http://data.europa")>
+					<#assign link = "https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=" + val>
+				</#if>
 				<tr><td>Narrower</td>
-					<td rel="skos:exactMatch" resource="${val}"><a href="${val}">${val}</a></td></tr>
+					<td rel="skos:exactMatch" resource="${val}"><a href="${link}">${val}</a></td></tr>
 			</#list>
 			</body>
 			</table>
