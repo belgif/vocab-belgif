@@ -12,7 +12,7 @@
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2025-02-13"^^xsd:date;
+  dcterms:modified "2025-04-18"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en, "Vlaams Datanutsbedrijf"@nl .
@@ -21,7 +21,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsCableMaterialTypeIMKLValue>;
   skos:notation "coaxial";
   skos:prefLabel "Coaxial"@en;
-  skos:prefLabel "Coaxial"@nl;
+  skos:prefLabel "Coaxkabel"@nl;
   dcterms:description """Coaxial cable."""@en;
   dcterms:description """Coax kabel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;

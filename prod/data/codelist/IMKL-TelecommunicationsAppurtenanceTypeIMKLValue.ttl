@@ -12,7 +12,7 @@
   dcterms:creator <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   dcterms:rightsHolder <https://org.belgif.be/id/CbeRegisteredEntity/0795547478>;
   owl:versionInfo "3.0";
-  dcterms:modified "2025-02-13"^^xsd:date;
+  dcterms:modified "2025-04-18"^^xsd:date;
   dcterms:source <https://github.com/belgif/ICEGthema-imkl> .
 
 <https://org.belgif.be/id/CbeRegisteredEntity/0795547478> rov:legalName "Vlaams Datanutsbedrijf"@en, "Vlaams Datanutsbedrijf"@nl .
@@ -31,7 +31,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "spliceClosure";
   skos:prefLabel "Splice closure"@en;
-  skos:prefLabel "Splice closure"@nl;
+  skos:prefLabel "Mof"@nl;
   dcterms:description """Splice closure."""@en;
   dcterms:description """Mof, splitspunt op kabel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
@@ -51,7 +51,7 @@
   skos:inScheme <https://vocab.belgif.be/auth/IMKL-TelecommunicationsAppurtenanceTypeIMKLValue>;
   skos:notation "termination";
   skos:prefLabel "Termination"@en;
-  skos:prefLabel "Termination"@nl;
+  skos:prefLabel "Huisaansluiting"@nl;
   dcterms:description """Home connection, split point on cable."""@en;
   dcterms:description """Huisaansluiting, splitspunt op kabel"""@nl;
   schemas:startDate "2024-01-01"^^xsd:date;
