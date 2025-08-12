@@ -10,7 +10,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
 		<rdf4j.version>4.3.16</rdf4j.version>
-		<dw.version>4.0.14</dw.version>
+		<dw.version>4.0.15</dw.version>
 	</properties>
 	<name>Vocab Belgif</name>
 	<description>Belgif.be vocabulary server</description>
