@@ -13,13 +13,13 @@
 <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@fr .
 <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@de .
 <https://org.belgif.be/id/CbeRegisteredEntity/0314595348/statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@en .
-<http://vocab.belgif.be/auth/refnis2025> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version 2025-04-17" .
+<http://vocab.belgif.be/auth/refnis2025> <http://www.w3.org/2002/07/owl#versionInfo> "Draft version 2025-08-12" .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/license> <http://statbel.fgov.be/en/statistics/opendata/licence/> .
 <http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data licentie"@nl .
 <http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel licence open data"@fr .
 <http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data license"@en .
 <http://statbel.fgov.be/en/statistics/opendata/licence/> <http://purl.org/dc/terms/title> "Statbel open data lizenz"@de .
-<http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/modified> "2025-04-17T11:13:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/modified> "2025-08-12T10:13:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/source> <https://economie.fgov.be/en/themes/enterprises/crossroads-bank-enterprises/services-administrations/tables-codes> .
 <http://vocab.belgif.be/auth/refnis2025> <http://purl.org/dc/terms/source> <https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie> .
 <http://vocab.belgif.be/auth/refnis2025/1000> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/refnis2025> .
