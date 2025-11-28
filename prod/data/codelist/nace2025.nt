@@ -2,14 +2,24 @@
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/title> "NACE-BEL 2025"@nl .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/title> "NACE-BEL 2025"@fr .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/title> "NACE-BEL 2025"@en .
-<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/title> "NACE-BEL 2025"@de .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/description> "Statistische nomenclatuur van de Economische activiteiten in de Europese Gemeenschap (Belgische versie)"@nl .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/description> "Nomenclature statistique des activités économiques dans la Communauté européenne (la version belge)"@fr .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/description> "Statistical classification of economic activities in the European Community (Belgian version)"@en .
-<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/description> "Statistical classification of economic activities in the European Community (Belgian version)"@de .
+<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/description> "Statistische Systematik der Wirtschaftszweige in der Europäischen Gemeinschaft (belgische Fassung)"@de .
 <http://vocab.belgif.be/auth/nace2025> <http://www.w3.org/2002/07/owl#versionInfo> "Draft 2025-02-19" .
 <http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/modified> "2025-02-19T14:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/license> <http://statbel.fgov.be/en/statistics/opendata/licence/> .
+<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/title> "NACE-BEL 2025"@de .
+<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/creator> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> .
+<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/rightsHolder> <https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@nl .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@fr .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@de .
+<https://org.belgif.be/id/CbeRegisteredEntity/0314595348#statbel> <http://www.w3.org/ns/regorg#legalName> "Statbel"@en .
+<http://vocab.belgif.be/auth/nace2025> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://creativecommons.org/licenses/by/4.0/> <http://purl.org/dc/terms/title> "CC-BY 4.0"@nl .
+<https://creativecommons.org/licenses/by/4.0/> <http://purl.org/dc/terms/title> "CC-BY 4.0"@fr .
+<https://creativecommons.org/licenses/by/4.0/> <http://purl.org/dc/terms/title> "CC-BY 4.0"@en .
+<https://creativecommons.org/licenses/by/4.0/> <http://purl.org/dc/terms/title> "CC-BY 4.0"@de .
 <http://vocab.belgif.be/auth/nace2025/A> <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://vocab.belgif.be/auth/nace2025> .
 <http://vocab.belgif.be/auth/nace2025> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://vocab.belgif.be/auth/nace2025/A> .
 <http://vocab.belgif.be/auth/nace2025/A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
