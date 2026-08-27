@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<rdf4j.version>6.0.0</rdf4j.version>
-		<dw.version>5.0.2</dw.version>
+		<dw.version>5.0.1</dw.version>
         <maven.compiler.release>21</maven.compiler.release>
     </properties>
 	<name>Vocab Belgif</name>

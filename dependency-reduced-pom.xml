@@ -4,7 +4,7 @@
   <groupId>be.belgif</groupId>
   <artifactId>lod-vocab</artifactId>
   <name>Vocab Belgif</name>
-  <version>1.8.1</version>
+  <version>1.8.2</version>
   <description>Belgif.be vocabulary server</description>
   <url>https://vocab.belgif.be</url>
   <licenses>
@@ -23,7 +23,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>3.5.0</version>
         <configuration>
           <archive>
             <manifest>
